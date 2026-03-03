@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "28262eab-561b-4ea6-ad69-2290a441ab6d",
+  "name": "Demo - Network Service Scanning",
+  "description": "Detects attempts to discover services running on remote hosts. Adversaries may perform port scans or vulnerability scans to identify services that may be vulnerable to remote software exploitation.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "942e74a8-8ebf-4a9a-b749-a02858c18f3c",
+      "name": "Demo - Network Service Scanning",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "DDI Team",
+  "team": "DDI",
+  "date": "2025/05/20",
+  "lastUpdate": "2025-06-05T05:19:56.000Z"
+}

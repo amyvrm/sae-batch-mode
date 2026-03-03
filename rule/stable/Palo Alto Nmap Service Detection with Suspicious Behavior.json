@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0aa1fdae-719f-44fe-abef-0808b7f0ffd4",
+  "name": "Palo Alto Nmap Service Detection with Suspicious Behavior",
+  "description": "Detects Palo Alto Nmap Service Detection with suspicious behavior.",
+  "filterSets": [
+    [
+      {
+        "id": "9eb3b5a8-8c17-5a3f-93d9-9a508c288f32",
+        "name": "Nmap Service Detection",
+        "highlight": true
+      },
+      {
+        "id": "6cd3d77c-990c-56d2-9b47-401541afc008",
+        "name": "Nmap Active Directory Enumeration Via NTLM",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9eb3b5a8-8c17-5a3f-93d9-9a508c288f32",
+        "name": "Nmap Service Detection",
+        "highlight": true
+      },
+      {
+        "id": "3c88cae4-170f-50a7-997e-7f5f2063fcb9",
+        "name": "Nmap Aggressive Option Print Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "9eb3b5a8-8c17-5a3f-93d9-9a508c288f32.fileName contains 6cd3d77c-990c-56d2-9b47-401541afc008.fileName"
+    ],
+    [
+      "9eb3b5a8-8c17-5a3f-93d9-9a508c288f32.fileName contains 3c88cae4-170f-50a7-997e-7f5f2063fcb9.fileName"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2025/05/07",
+  "lastUpdate": "2025-05-22T08:11:42.000Z"
+}

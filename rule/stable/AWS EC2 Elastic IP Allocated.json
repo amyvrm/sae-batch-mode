@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6f7aca3d-60c3-4130-bada-d0aae66a1533",
+  "name": "AWS EC2 Elastic IP Allocated",
+  "description": "Detects the allocation of a new Elastic IP, which could indicate resource provisioning or potential abuse for persistence and evasion.",
+  "filterSets": [
+    [
+      {
+        "id": "98166515-e81a-4c86-ba94-9d3c467f51d5",
+        "name": "AWS EC2 Elastic IP Allocated",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/03/20",
+  "lastUpdate": "2025-06-17T10:36:27.000Z"
+}

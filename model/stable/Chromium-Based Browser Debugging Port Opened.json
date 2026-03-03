@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dbb6abdd-41e6-47de-81f4-23c5d02ab840",
+  "name": "Chromium-Based Browser Debugging Port Opened",
+  "description": "Detects Chromium-based browsers is launched with the remote debugging port set.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "207a4eef-8733-4302-b5ce-90a88b32c343",
+      "name": "Chromium-Based Browser Debugging Port Opened",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1539",
+    "mitre.t1606.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Bahaa Yamany & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2024/11/20",
+  "lastUpdate": "2025-02-13T22:39:45.000Z"
+}

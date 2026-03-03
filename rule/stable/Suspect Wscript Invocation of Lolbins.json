@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7a61c5be-afb4-46a2-9c74-128fd888bbe7",
+  "name": "Suspect Wscript Invocation of Lolbins",
+  "description": "Detection of Wscript invoking a lolbin in a suspect manner",
+  "filterSets": [
+    [
+      {
+        "id": "23c2e75b-7092-4f0a-a0aa-3e3db74207d5",
+        "name": "Suspect Wscript Invocation of Lolbins",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/02/07",
+  "lastUpdate": "2025-02-19T11:13:12.000Z"
+}

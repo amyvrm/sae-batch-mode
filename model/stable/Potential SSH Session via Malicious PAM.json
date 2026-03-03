@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "63971c6c-68dc-48f7-ab90-e490e40bab01",
+  "name": "Potential SSH Session via Malicious PAM",
+  "description": "Detects signs of Plague malware activity targeting Linux systems by modifying Pluggable Authentication Modules (PAM). The malware injects a rogue PAM module to intercept SSH credentials, manipulate session variables, and erase forensic traces. It survives system updates and operates stealthily by avoiding detection through standard logging mechanisms.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "dbb9fe4d-5905-4b64-819b-959008f8e39d",
+      "name": "Potential SSH Session via Malicious PAM",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1556.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mary Joy Ramos & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/08/04",
+  "lastUpdate": "2025-09-12T07:20:00.000Z"
+}

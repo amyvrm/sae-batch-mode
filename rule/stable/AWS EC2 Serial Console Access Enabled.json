@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19b7d4ef-8a7d-4622-bf5e-18eade0b7c65",
+  "name": "AWS EC2 Serial Console Access Enabled",
+  "description": "This rule detects attempts to enable AWS EC2 serial console access.",
+  "filterSets": [
+    [
+      {
+        "id": "13eabcff-e773-4243-9622-9a80b2141b80",
+        "name": "AWS EC2 Serial Console Access Status Retrieval Detection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ad2343bf-e8cf-4402-bdd9-674e3b5f92c0",
+        "name": "AWS EC2 Serial Console Access Enablement Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/06/13",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

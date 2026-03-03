@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "503d795e-a5f5-4594-b1f7-5cfc5608aba2",
+  "name": "AWS IAM User Group Membership Modified",
+  "description": "This model detects changes in the group memberships of IAM users within AWS. The alert indicates that a user has been added to a group, which may signify changes in permissions or access levels. This event may indicate a potential attempt for privilege escalation.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "453e63c8-ded9-46ad-9867-066c4cc118a6",
+      "name": "AWS IAM User Added to New Group",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1069.003",
+    "mitre.t1098"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2022/09/09",
+  "lastUpdate": "2025-09-02T10:47:42.000Z"
+}

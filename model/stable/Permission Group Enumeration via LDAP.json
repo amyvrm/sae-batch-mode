@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "42b792f7-2bac-4e65-8fcd-b747f6d3f460",
+  "name": "Permission Group Enumeration via LDAP",
+  "description": "Network activity involving LDAP, which is indicative of Permission Group Discovery, has been observed. This activity may suggest an attempt to gather information about permission groups within a network.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f8b604b4-a81f-48a9-b293-2b77fb5b2b51",
+      "name": "Permission Group Enumeration via LDAP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1069.001",
+    "threat.hacktool"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/03/20",
+  "lastUpdate": "2025-03-20T08:20:09.000Z"
+}

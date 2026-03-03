@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1bed74eb-4162-4ba0-82e2-d1414870dcd9",
+  "name": "Attack Detected By Other Signature",
+  "description": "Fortinet detection - Attack detected by other signature",
+  "filterSets": [
+    [
+      {
+        "id": "7f469d2c-5e06-4cae-b238-cad9aac19780",
+        "name": "Attack Detected By Other Signature",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

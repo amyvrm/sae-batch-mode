@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e1cea429-4207-4bb8-9597-ba6ccd3abd9f",
+  "name": "Cloud Resources and Services Enumerated in Container",
+  "description": "Detects cloud services and resources enumeration attempt in container.",
+  "filterSets": [
+    [
+      {
+        "id": "c0a7e319-b42f-4384-a4d9-a45deea42fd9",
+        "name": "Request for Security Token from AWS Metadata Service in Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e1da271b-96c6-4100-823b-4261619e2572",
+        "name": "Request to List Security Groups via AWS Metadata Service in Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "18d2b3a8-35f4-49b6-aec2-c4d5669cbda1",
+        "name": "Request to List Cloud Roles via AWS Metadata Service in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/08/22",
+  "lastUpdate": "2025-12-11T09:30:08.000Z"
+}

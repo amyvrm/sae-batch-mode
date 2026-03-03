@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fe2f21a4-4027-4bf7-8ee5-c57f082be967",
+  "name": "Rename File with Possible Ransom Extension via SMB",
+  "description": "Detect Ransomware Rename File with Possible Ransom Extension via SMB",
+  "filterSets": [
+    [
+      {
+        "id": "151908e1-8678-4494-b975-f44826ea942d",
+        "name": "Rename file with possible ransom extension via SMB",
+        "highlight": true,
+        "maxAmount": 90
+      }
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 90,
+    "withinSeconds": 90,
+    "dedupSeconds": 0
+  },
+  "author": "Jackson Chang",
+  "team": "LWE",
+  "date": "2022/12/23",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

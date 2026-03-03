@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "720e02b3-ad25-4ea3-9e02-33cbd270355a",
+  "name": "Potential DLL Injection via AccCheckConsole",
+  "description": "The tool allows a user to provide a DLL that can contain a custom 'verification routine'. An attacker can build such DLLs and pass it via the CLI, which would then be loaded in the context of the 'AccCheckConsole' utility.",
+  "filterSets": [
+    [
+      {
+        "id": "19a5a102-6127-4692-a41e-118280639b17",
+        "name": "Potential DLL Injection via AccCheckConsole",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/10/10",
+  "lastUpdate": "2025-11-21T07:20:02.000Z"
+}

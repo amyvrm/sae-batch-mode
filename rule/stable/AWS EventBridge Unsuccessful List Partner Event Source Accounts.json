@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "def50ca1-9341-435a-baaa-5875c7fffaa0",
+  "name": "AWS EventBridge Unsuccessful List Partner Event Source Accounts",
+  "description": "Detects unsuccessful listing of partner event source accounts, which may reveal an attacker\u2019s attempt to understand external sources of events linked to the account for further abuse or mapping.",
+  "filterSets": [
+    [
+      {
+        "id": "13cb367c-ed74-42b5-9568-0857179f1b7e",
+        "name": "AWS EventBridge Unsuccessful List Partner Event Source Accounts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-07-31T08:55:45.000Z"
+}

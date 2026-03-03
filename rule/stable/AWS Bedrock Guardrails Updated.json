@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "22711e7a-6746-4ac4-844e-830850b09785",
+  "name": "AWS Bedrock Guardrails Updated",
+  "description": "Updates to the AWS Bedrock guardrails detected.",
+  "filterSets": [
+    [
+      {
+        "id": "0e3a0f37-acac-484c-83c7-fe4c20e66899",
+        "name": "AWS Bedrock Guardrails Updated",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

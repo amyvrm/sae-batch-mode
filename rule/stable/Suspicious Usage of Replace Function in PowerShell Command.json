@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a830b069-8c2e-453a-9248-333882aaee6f",
+  "name": "Suspicious Usage of Replace Function in PowerShell Command",
+  "description": "Detection of suspicious usage of the Replace function in PowerShell commands",
+  "filterSets": [
+    [
+      {
+        "id": "eb841fca-db50-4e46-a130-29d39519fdcd",
+        "name": "Suspicious Usage of Replace Function in PowerShell Command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6257737b-e088-43d2-83c6-056327ba5b83",
+        "name": "Suspicious Usage of Replace Function in PowerShell Command - AMSI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/07/11",
+  "lastUpdate": "2024-07-16T09:09:41.000Z"
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "56c03554-53a2-4eb6-a7e3-521969d45915",
+  "name": "Azure IAM Over Privileged RBAC Administrator Role Assigned To A User",
+  "description": "This model detects successful assignment of over-privileged Azure IAM RBAC Administrator role to a user which may indicate an attacker trying to escalate privileges to manage access policies and roles across resources to further compromise the Azure environment.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "585515a8-d1b2-461b-a6db-a4da01bc1a6b",
+      "name": "Azure IAM Over Privileged RBAC Administrator Role Assigned To A User",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2024/06/02",
+  "lastUpdate": "2025-07-16T07:28:13.000Z"
+}

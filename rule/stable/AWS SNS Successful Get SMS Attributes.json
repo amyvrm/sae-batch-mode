@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "517641f9-4b4c-405f-ac4d-3e09773297c0",
+  "name": "AWS SNS Successful Get SMS Attributes",
+  "description": "A successful attempt to get SMS attributes for sending messages was observed.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS SNS Successful Get SMS Attributes",
+        "id": "b8f699d1-9e67-4bd2-a6aa-505cde3487a3",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2023/11/22",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "381248f1-3e21-429a-92db-9be5d2092d0c",
+  "name": "AWS ECS Container Enumeration From The Cluster Through AWS Console Successful",
+  "description": "Detected enumeration of container from the AWS cluster through AWS Console.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "enable": true,
+  "rules": [
+    {
+      "id": "07ae8da6-e9b7-426a-acc6-01cb786d9b53",
+      "name": "AWS ECS Container Enumeration From The Cluster",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 8,
+  "globalModel": true,
+  "silent": false,
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/06",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

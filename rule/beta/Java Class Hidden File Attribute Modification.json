@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c8b18e86-4dad-48e7-bf94-9fc4841b4cce",
+  "name": "Java Class Hidden File Attribute Modification",
+  "description": "Microsoft Detection for Java Class Hidden File Attribute Modification.",
+  "filterSets": [
+    [
+      {
+        "id": "a3466a50-6e1e-4e48-b45b-a8834a035f2c",
+        "name": "Java Class Hidden File Attribute Modification",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/07/01",
+  "lastUpdate": "2025-07-07T02:52:32.000Z"
+}

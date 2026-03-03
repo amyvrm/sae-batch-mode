@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7b074941-f714-4328-823e-3aa8fdbb8a42",
+  "name": "Suspicious Attachment from New Account Shows Similarity to Other Verified Malicious Attachments Detected by Retro Scan",
+  "description": "Suspicious attachments sent from new email accounts that are similar to multiple, verified malicious email attachments may indicate additional attack attempts. [Delayed alert: Batch process detection]",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "c76d6b94-728d-4a7b-82a4-602168660d48",
+      "name": "Suspicious Attachment from New Account Shows Similarity to Other Verified Malicious Attachments Detected by Retro Scan",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2021/08/11",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

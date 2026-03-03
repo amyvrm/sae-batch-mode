@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9bcba56b-938d-40ea-a589-3fff36c3aefd",
+  "name": "AWS SNS Successful Get Account Sending Enabled",
+  "description": "A successful attempt to get SMS Sandbox account status was observed.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS SNS Successful Get SMS Sandbox Account Status",
+        "id": "713390da-7b0c-4e2b-83e1-ca3c5f8ea62b",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2023/11/22",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

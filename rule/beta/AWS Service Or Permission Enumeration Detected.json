@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f811e338-6d5b-11ec-90d6-0242ac120003",
+  "name": "AWS Service Or Permission Enumeration Detected",
+  "description": "Multiple attempts to access AWS API call in Cloudtrail logs were denied, possibly indicating AWS service or permission reconnaissance.",
+  "filterSets": [
+    [
+      {
+        "id": "14c8571b-2039-420c-8711-601589a68ffa",
+        "name": "AWS API Call Access Denied Via AssumedRole",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/01/05",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ce2853cd-7033-4abe-9f7e-e82a9d245c5e",
+  "name": "Reverse Socks Proxy via SSH - Mac",
+  "description": "Detects reverse SSH connection initiation",
+  "filterSets": [
+    [
+      {
+        "id": "6591dcca-7e89-4b9b-b138-7eabd78991e8",
+        "name": "Reverse Socks Proxy via SSH - Mac",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Jiaxiang Wang",
+  "team": "MacTRT",
+  "date": "2023/01/11",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

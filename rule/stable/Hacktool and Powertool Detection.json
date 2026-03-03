@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4aaddb95-8089-45b8-beda-b21040a20b71",
+  "name": "Hacktool and Powertool Detection",
+  "description": "Hacktool and Powertool which may be used for security testing or malicious intent detected on an endpoint",
+  "filterSets": [
+    [
+      {
+        "id": "78c4a866-2b0b-4430-a364-ebc1e4e6e05e",
+        "name": "Hacking Tool Detection - Not Blocked",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "46794905-6912-4850-8eb4-d2f5b28ee54a",
+        "name": "File Detection for ProcessHacker PowerTool",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a665ee2c-1568-466c-8a99-4744e02b180e",
+        "name": "Hacking Tool Detection - Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "fullPath": {
+      "78c4a866-2b0b-4430-a364-ebc1e4e6e05e": "fullPath",
+      "46794905-6912-4850-8eb4-d2f5b28ee54a": "fullPath",
+      "a665ee2c-1568-466c-8a99-4744e02b180e": "fullPath"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/02/20",
+  "lastUpdate": "2024-03-15T03:35:55.000Z"
+}

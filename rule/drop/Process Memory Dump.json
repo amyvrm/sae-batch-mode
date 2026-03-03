@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1942ec20-f182-460f-ba0d-22a06bf5a1f3",
+  "name": "Process Memory Dump",
+  "description": "Microsoft Detection for Process Memory Dump",
+  "filterSets": [
+    [
+      {
+        "id": "a934da35-bb23-4dca-8c7f-d254a7f8fc3e",
+        "name": "Process Memory Dump",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/04/29",
+  "lastUpdate": "2025-07-28T20:43:16.000Z"
+}

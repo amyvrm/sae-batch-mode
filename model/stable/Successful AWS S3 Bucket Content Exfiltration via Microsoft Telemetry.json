@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a521ef92-e6d0-410d-8ae4-d2ff4276f17c",
+  "name": "Successful AWS S3 Bucket Content Exfiltration via Microsoft Telemetry",
+  "description": "Detects AWS S3 bucket content exfiltration attempts via Microsoft telemetry.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "eff53541-4939-4a4f-90a1-4a8ba6a3fba5",
+      "name": "Successful AWS S3 Bucket Content Exfiltration via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/08/14",
+  "lastUpdate": "2025-08-19T07:43:46.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f6abc047-efec-4333-8454-4dd7ab0ee945",
+  "name": "Possible Lateral Movement from Malicious Script",
+  "description": "Identifies use of cmd.exe to run a potentially malicious script (r.exe). The activity could suggest potential reconnaissance or lateral movement within a network.",
+  "filterSets": [
+    [
+      {
+        "id": "78db455f-8f90-4229-a489-b55bd21d3553",
+        "name": "Possible Lateral Movement from Malicious Script",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Bien Joshua Philip De Leon",
+  "team": "AMEA-IR",
+  "date": "2024/12/10",
+  "lastUpdate": "2025-08-14T05:30:31.000Z"
+}

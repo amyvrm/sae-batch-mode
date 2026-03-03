@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a1c065b2-fd6b-47ec-b94f-cc5a84694183",
+  "name": "Suspicious Forge Business Partner With Low Confidence Domain Url",
+  "description": "Suspicious Forge Business Partner With Low Confidence Domain Url",
+  "filterSets": [
+    [
+      {
+        "id": "15314515-fea0-4917-a300-9ff3558582eb",
+        "name": "Forge Business Partner With Low Confidence Domain Url",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Zachary Lee",
+  "team": "Jaguar",
+  "date": "2020/10/20",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

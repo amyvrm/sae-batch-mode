@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "24a0a9ae-3d0e-4ccc-bb69-a1eec981544a",
+  "name": "AWS Configuration Recorder Stopped",
+  "description": "This model identifies when the configuration recorder stops, which may hinder tracking of AWS resource changes. This interruption could compromise security and compliance.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "3dbd129f-3c13-41ca-ae2c-f1ea5231d4ec",
+      "name": "AWS Configuration Recorder Stopped",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nikki Madayag & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/02/12",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aab049e6-674a-4dae-a9d5-b64850828958",
+  "name": "Change on Restricted Admin Mode Registry",
+  "description": "Key changes executed on Restricted Admin Mode Registry",
+  "filterSets": [
+    [
+      {
+        "id": "28ac00d6-22d9-4a3c-927f-bbd770104573",
+        "name": "Restricted Admin Mode Registry Value Tampering - ProcCreation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Rafael Pereira",
+  "team": "US-IR",
+  "date": "2025/10/01",
+  "lastUpdate": "2026-01-27T15:45:18.000Z"
+}

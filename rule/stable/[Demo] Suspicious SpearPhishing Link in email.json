@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cdeb2d15-a330-4ab0-b3ec-3f1c69e5e960",
+  "name": "Demo - Suspicious SpearPhishing Link in email",
+  "description": "Suspicious SpearPhishing Link in email",
+  "filterSets": [
+    [
+      {
+        "id": "1bbc3d45-9365-4002-8225-21fcd860fb07",
+        "name": "Demo - Spearphishing Link Addressed By RetroScan",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Vincent Lee",
+  "team": "Jaguar",
+  "date": "2023/01/09",
+  "lastUpdate": "2024-12-19T03:38:48.000Z"
+}

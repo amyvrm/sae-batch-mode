@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "26105eb8-752d-45bf-9f1c-aa0620a5fe24",
+  "name": "Zip TLD Redirection via HTTP",
+  "description": "Network activity involving HTTP traffic associated with ZIP TLD redirection was observed on the network.",
+  "filterSets": [
+    [
+      {
+        "id": "cdbad228-00e0-5fc7-952a-a6f953b30225",
+        "name": "Zip Tld Moved HTTP (Response) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/05/21",
+  "lastUpdate": "2025-06-03T04:17:39.000Z"
+}

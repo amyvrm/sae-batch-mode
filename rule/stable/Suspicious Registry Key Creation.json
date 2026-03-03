@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3f81b9db-3519-46ea-8b9f-d37c018ecff1",
+  "name": "Suspicious Registry Key Creation",
+  "description": "Detection of a registry key creation that is potentially malicious",
+  "filterSets": [
+    [
+      {
+        "id": "583a8d07-cbe4-4a4a-a42f-e89fa1988dea",
+        "name": "Suspicious Registry Key Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh & Yusuf Ahmed",
+  "team": "EU-IR",
+  "date": "2024/12/12",
+  "lastUpdate": "2025-01-03T13:14:12.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "baae4aaa-ec04-4036-b74d-6ceb4f489a15",
+  "name": "Possible Metasploit Connection",
+  "description": "Identified possible Metasploit-related network traffic",
+  "filterSets": [
+    [
+      {
+        "id": "9a1a7231-745c-4f04-ad9d-a50fe6c436a1",
+        "name": "Possible Metasploit Connection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "lastUpdate": "2024-07-03T07:00:20.000Z"
+}

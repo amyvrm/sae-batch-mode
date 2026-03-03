@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c02706ca-ad73-4ada-867d-adc78ae9c168",
+  "name": "WebDAV File Download Activity via HTTP",
+  "description": "Network activity involving HTTP related to WebDAV was observed, indicating a successful file download operation.",
+  "filterSets": [
+    [
+      {
+        "id": "e20f03b9-cbbc-5b79-9114-ff1eec46e8ce",
+        "name": "Webdav Successful File Download HTTP (Response)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/05/13",
+  "lastUpdate": "2025-06-03T03:45:53.000Z"
+}

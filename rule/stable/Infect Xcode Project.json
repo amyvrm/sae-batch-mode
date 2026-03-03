@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "51ae5678-119c-4424-bb2e-41872955012f",
+  "name": "Infect Xcode Project",
+  "description": "Infect xcode project by malware",
+  "filterSets": [
+    [
+      {
+        "id": "9b32c6dc-d6b0-4e69-81b8-4f0c07932d87",
+        "name": "Infect Xcode Project",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/10/10",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

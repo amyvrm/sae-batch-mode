@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0c544515-1f9b-4e79-a4a6-c71c9473c452",
+  "name": "Failed Logon Activity Monitoring",
+  "description": "McAfee detection for failed domain user logon attempts due to invalid passwords and successful logons following multiple failed attempts helps identify potential brute force attacks or unauthorized access attempts. These rules aid in monitoring account security and detecting suspicious authentication patterns.",
+  "filterSets": [
+    [
+      {
+        "id": "fac3ff10-1f27-48b0-86c2-d41677e0250c",
+        "name": "Windows Security Auditing - Domain User Failed Logon Due To Invalid Password",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3866d18c-03cd-4a59-b923-fbdc56c5254e",
+        "name": "Windows Security Auditing - Domain User Logon After Multiple Failed Attempts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc|McAfee"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2026/02/10",
+  "lastUpdate": "2026-02-10T13:36:05.000Z"
+}

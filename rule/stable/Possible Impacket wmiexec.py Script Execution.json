@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c8f9896e-284a-4426-a7ba-032f92d6952f",
+  "name": "Possible Impacket wmiexec.py Script Execution",
+  "description": "This detection identifies Impacket wmiexec.py script execution. Impacket is a typical tool used by attackers to execute commands on remote hosts. This rule detects behaviors occurring on the host where the command was executed.",
+  "filterSets": [
+    [
+      {
+        "id": "0f55a768-a6ee-4d73-862b-857ecacb1884",
+        "name": "Possible Impacket wmiexec.py Script Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 10800,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Toru Yamashige",
+  "team": "JP-IR",
+  "date": "2024/08/14",
+  "lastUpdate": "2024-09-19T14:19:58.000Z"
+}

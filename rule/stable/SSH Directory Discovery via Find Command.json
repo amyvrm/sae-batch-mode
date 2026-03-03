@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01916c3c-a748-73c5-a2cf-7052b4906820",
+  "name": "SSH Directory Discovery via Find Command",
+  "description": "The find command was used to discover the .ssh directory.",
+  "filterSets": [
+    [
+      {
+        "id": "5a5ea8c8-cd37-4819-8df3-6f2276ddc3af",
+        "name": "SSH Directory Discovery via Find Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/08/19",
+  "lastUpdate": "2024-09-04T19:10:33.000Z"
+}

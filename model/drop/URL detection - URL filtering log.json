@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9a4b1162-62af-49b7-a2bf-d6d104ee4ca4",
+  "name": "URL detection - URL filtering log",
+  "description": "Palo Alto Networks detection for URL filtering log",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "21807112-abd6-4075-b3cc-0fc4379af25f",
+      "name": "URL detection - URL filtering log",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-04-02T10:15:14.000Z"
+}

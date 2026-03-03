@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f010dbfc-570d-4b43-8340-dd8b18b5b7a0",
+  "name": "AWS IAM SSH Public Key Deletion Activity",
+  "description": "Identifies when an SSH public key is deleted from an IAM user's account.",
+  "filterSets": [
+    [
+      {
+        "id": "9acc5335-2062-4dc3-a1dc-f7c0b1781ba9",
+        "name": "AWS IAM SSH Public Key Deletion Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

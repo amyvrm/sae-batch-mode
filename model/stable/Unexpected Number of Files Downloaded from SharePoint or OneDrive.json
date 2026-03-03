@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d28e140e-8193-49e4-b00f-98ac607a59ee",
+  "name": "Unexpected Number of Files Downloaded from SharePoint or OneDrive",
+  "description": "A user downloaded a suspiciously large number of files from SharePoint or OneDrive, which may indicate a compromised account. Immediate investigation is recommended to confirm the legitimacy of this activity and mitigate potential data leakage.",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "fd98314a-a9b9-4e2f-bfaa-3cc9f1ecd995",
+      "name": "Unexpected Number of Files Downloaded from SharePoint or OneDrive",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 4000,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "xca"
+    ]
+  ],
+  "tags": [
+    "mitre.t1537"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Clark Shao",
+  "team": "Jaguar",
+  "date": "2024/12/03",
+  "lastUpdate": "2025-10-13T03:23:20.000Z"
+}

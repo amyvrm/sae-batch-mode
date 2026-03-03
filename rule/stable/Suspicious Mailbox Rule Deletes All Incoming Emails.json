@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f6449ae0-21b5-4944-b4fc-3a7c81c26df8",
+  "name": "Suspicious Mailbox Rule Deletes All Incoming Emails",
+  "description": "A suspicious mailbox rule was created that deletes all email messages. [Delayed alert: Batch process detection]",
+  "filterSets": [
+    [
+      {
+        "id": "c8f90f9f-7489-54dc-9fbc-07c3308685f0",
+        "name": "Suspicious Mailbox Rule Deletes All Incoming Emails",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "aad"
+    ]
+  ],
+  "author": "Johnny Tu",
+  "team": "Jaguar",
+  "date": "2023/04/27",
+  "lastUpdate": "2023-11-06T03:32:24.000Z"
+}

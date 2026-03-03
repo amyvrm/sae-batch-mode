@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "44350699-e821-4974-8cb9-e1d5196d41f1",
+  "name": "Disabling Protected Process Light (PPL)",
+  "description": "Disabling Protected Process Light (PPL), a security feature for the Local Security Authority (LSA) process.",
+  "filterSets": [
+    [
+      {
+        "id": "f66f8a46-0b97-4f34-90c2-80354054eb1e",
+        "name": "Disabling Protected Process Light (PPL)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-09-22T09:24:18.000Z"
+}

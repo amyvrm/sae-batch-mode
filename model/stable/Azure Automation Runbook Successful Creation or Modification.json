@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "79483411-59c9-4e11-8595-5f7bd39900d1",
+  "name": "Azure Automation Runbook Successful Creation or Modification",
+  "description": "Detects successful creation or modification of an Azure Automation Runbook",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "939388fd-fc1c-4f0a-858f-73d7ba6491ae",
+      "name": "Azure Automation Runbook Successful Creation or Modification",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.009"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ashish Verma and Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/11/19",
+  "lastUpdate": "2025-12-10T09:44:40.000Z"
+}

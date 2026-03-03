@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "334fb097-d577-4743-aefd-b422cce655ac",
+  "name": "MacOS Paste Data From Clipboard",
+  "description": "Paste data from clipboard",
+  "filterSets": [
+    [
+      {
+        "id": "5e534c00-28fb-4ad9-9718-23a8219d89bb",
+        "name": "Clipboard Data - MacOS",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Steven Du",
+  "team": "MacTRT",
+  "date": "2021/08/11",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

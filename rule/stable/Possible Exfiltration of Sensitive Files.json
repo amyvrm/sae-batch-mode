@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8811d7c1-7b9a-4af4-9c3a-29b0ead4d15b",
+  "name": "Possible Exfiltration of Sensitive Files",
+  "description": "Possible Exfiltration of Sensitive Files",
+  "filterSets": [
+    [
+      {
+        "id": "a8648f87-d5d6-5cc4-947a-e7de93f8b3bf",
+        "name": "Sensitive Files Upload to Personal Cloud",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "901deaa0-919b-528b-9000-f05b9615f6ed",
+        "name": "Transfer Sensitive Files to Removable Storage",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "ddr"
+    ]
+  ],
+  "author": "ddr",
+  "team": "ddr",
+  "date": "2024/12/11",
+  "lastUpdate": "2025-01-09T05:15:23.000Z"
+}

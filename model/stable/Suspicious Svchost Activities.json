@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e0854dba-5997-11ef-b864-0242ac120002",
+  "name": "Suspicious Svchost Activities",
+  "description": "Detects potentially malicious activities involving the 'svchost' process. 'svchost' is a Windows system process that hosts multiple services to optimize resource use. Attackers can misuse this to evade detection by running unauthorized code or creating backdoors.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "86ff7185-3f7a-49b4-8f52-9bcc8b0166d5",
+      "name": "Suspicious Svchost Activities",
+      "score": 4
+    },
+    {
+      "id": "c860aa7e-8b59-11ea-bc55-0242ac130003",
+      "name": "Malware Detection on Endpoint or Server",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "sao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218",
+    "mitre.t1218.005",
+    "mitre.t1059",
+    "mitre.t1059.001",
+    "mitre.t1140",
+    "mitre.t1204.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/08/13",
+  "lastUpdate": "2025-02-20T17:13:02.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f41fbd36-5032-4e4e-b21c-53cab0e57b45",
+  "name": "External IDS",
+  "description": "SonicWall Detection - External IDS %s",
+  "filterSets": [
+    [
+      {
+        "id": "e07bced3-f1e2-4f32-abe7-10da416123d2",
+        "name": "External IDS",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bc76cdd6-8fee-492e-9e07-2a866c977fe3",
+  "name": "Cobalt Strike and Qakbot Detections",
+  "description": "Found detections for Cobalt Strike and Qakbot which is a potential indicator of being used by ransomware as delivery.",
+  "filterSets": [
+    [
+      {
+        "id": "0a049540-52f6-446f-97f2-495e519d0000",
+        "name": "File Detection for Qakbot",
+        "highlight": true
+      },
+      {
+        "id": "7fb4d6f0-81ed-402a-9d3b-fb2b43ea28e0",
+        "name": "File Detection for Cobalt and Cobeacon",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0a049540-52f6-446f-97f2-495e519d0000",
+        "name": "File Detection for Qakbot",
+        "highlight": true
+      },
+      {
+        "id": "d79f6fde-c93a-492b-8f6b-37c1433d0f1b",
+        "name": "Possible Cobalt Strike Connection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0a049540-52f6-446f-97f2-495e519d0000",
+        "name": "File Detection for Qakbot",
+        "highlight": true
+      },
+      {
+        "id": "78506ced-9b8b-4fa8-9810-769f5788062b",
+        "name": "Cobalt Strike Beacon Request Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0a049540-52f6-446f-97f2-495e519d0000",
+        "name": "File Detection for Qakbot",
+        "highlight": true
+      },
+      {
+        "id": "a47dbcf8-b54e-4108-8641-60b4a94c7ec6",
+        "name": "Cobalt Strike Server Response Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0a049540-52f6-446f-97f2-495e519d0000",
+        "name": "File Detection for Qakbot",
+        "highlight": true
+      },
+      {
+        "id": "ec62bf36-a577-48fc-a17c-d2a948d19770",
+        "name": "Cobalt Strike Malleable C2 Profile Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0a049540-52f6-446f-97f2-495e519d0000",
+        "name": "File Detection for Qakbot",
+        "highlight": true
+      },
+      {
+        "id": "cb00fe0e-22ba-4dd7-9596-20aa812d12ea",
+        "name": "Cobalt Strike Malleable C2 Profile Response Traffic",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 86400,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "pdi",
+      "xns"
+    ],
+    [
+      "sao",
+      "pao",
+      "stp",
+      "ptp",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Angelo Deveraturda",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2024-04-08T06:54:04.000Z"
+}

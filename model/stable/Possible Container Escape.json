@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e284b3d5-e251-42e3-9564-028afbad61a6",
+  "name": "Possible Container Escape",
+  "description": "Escape attempt to host detected.",
+  "riskLevel": "high",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "06f8caec-09da-4d67-928d-ce17e4531d2e",
+      "name": "Possible Container Escape",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1611"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/02/22",
+  "lastUpdate": "2024-05-24T09:37:13.000Z"
+}

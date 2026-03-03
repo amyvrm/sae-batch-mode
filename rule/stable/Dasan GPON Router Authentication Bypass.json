@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8a240f1d-c8bd-40ed-8330-618dfa18f5d6",
+  "name": "Dasan GPON Router Authentication Bypass",
+  "description": "Check Point Security detection for Dasan GPON Router Authentication Bypass",
+  "filterSets": [
+    [
+      {
+        "id": "cc03751c-d42c-59a1-ad54-330a83dc760a",
+        "name": "Dasan GPON Router Authentication Bypass",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/12/11",
+  "lastUpdate": "2026-01-15T01:45:40.000Z"
+}

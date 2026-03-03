@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "1.0",
+  "id": "360944c2-45b5-4858-b3fd-0df8e516c448",
+  "name": "Discovery Command Execution - BETA",
+  "description": "Detects Discovery Command Execution.",
+  "filterSets": [
+    [
+      {
+        "id": "fc4d4798-68fd-4c45-8ce5-df004355c174",
+        "name": "Account Discovery via AdFind",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7a91a331-47f8-4441-9731-3125a76abc18",
+        "name": "Automated Active Directory Reconnaissance",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "440fac86-5e0b-5601-8f93-5ce1f09df7ba",
+        "name": "Behavior Monitoring Detection - Bypassing lockscreen using IFEO",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8103bba1-347a-5eb6-9315-179f3c6cb4a7",
+        "name": "Behavior Monitoring Detection - Pyramid",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "265eef02-6d79-4705-96e9-3fa04b404240",
+        "name": "BloodHound Ingestor Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "63636e2b-b8ca-4ce1-9346-c95772e09a99",
+        "name": "Bypass Powershell Execution Policy on Local Machine",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b19ee111-88bd-421c-8798-be3a5c1d06e8",
+        "name": "Disable Windows Network Level Authentication via Registry Modification",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "88173a48-4a4a-44ee-b107-d9e1f052de83",
+        "name": "Domain Trust Discovery via AdFind",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2d3c2a05-62a6-46cf-849e-5909288b0b6a",
+        "name": "Domain Trusts Discovery via Nltest",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "76fdb610-4616-5e59-8aed-ef0ca75a42e2",
+        "name": "File Detected as NBTSCAN",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e609a16f-2571-4fc6-9ffb-8771bdc4e0dd",
+        "name": "Gets the NetBIOS Remote Machine Name Table Via Nbtscan Tool",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a86ae7a8-5e68-4dd5-9f4e-d2a632f8a64f",
+        "name": "Image File Execution Options Injection on Accessibility Features",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ff61a8fd-fe58-4238-9b1c-2b0fbd66f053",
+        "name": "Internal Network Scanning via Famatech Scanner Tools",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b6d33ae3-b1e5-4491-8c83-04c12800dd1a",
+        "name": "Local Admin Discovery via PowerView",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f9aafe1c-673a-4360-88e1-4149bdbfce98",
+        "name": "Network Scanning Tools Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ebe18787-4a15-4d65-9d74-82899130b764",
+        "name": "Network Scanning Using SoftPerfect Network Scanner",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "dc031c49-7e71-4b30-a568-d0ec67c2cb03",
+        "name": "RDP Setting Modification Via Reg.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "33ed15f6-c849-4342-a7da-46cbb668d3bb",
+        "name": "System Discovery via SharpView",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "43b8faed-25c6-485e-a275-7569cdcc1c25",
+        "name": "User Enumeration via PowerView",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "879c0446-76d0-4b15-a96e-eaf53e4e2213",
+        "name": "WMI Reconnaissance List Remote Services",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f334640e-f276-4ac3-bb18-9c3ec256fe2f",
+        "name": "WMI Reconnaissance Users",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "74f37032-61d1-4211-8643-2cd5c416e380",
+        "name": "Possible File Created by Secretsdump or CrackMapExec Tool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pdi",
+      "xes",
+      "xns"
+    ]
+  ],
+  "author": "Shota Hioki, Toru Yamashige",
+  "team": "JP-MDR",
+  "date": "2023/09/19",
+  "lastUpdate": "2024-09-23T08:12:48.000Z"
+}

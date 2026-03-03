@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "101aa5fa-10b9-411a-9592-c9440062f05f",
+  "name": "Suspicious Download After Metasploit Connection",
+  "description": "Detects download of executable file after metasploit connection",
+  "filterSets": [
+    [
+      {
+        "id": "9a1a7231-745c-4f04-ad9d-a50fe6c436a1",
+        "name": "Possible Metasploit Connection",
+        "highlight": true
+      },
+      {
+        "id": "d9eb61f2-3d77-4f3c-98f1-3cb7eca17615",
+        "name": "Suspicious Executable Downloaded Over HTTP",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "9a1a7231-745c-4f04-ad9d-a50fe6c436a1.src equals d9eb61f2-3d77-4f3c-98f1-3cb7eca17615.dst"
+    ],
+    [
+      "9a1a7231-745c-4f04-ad9d-a50fe6c436a1.dst equals d9eb61f2-3d77-4f3c-98f1-3cb7eca17615.dst"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Carl Jayson Pelina",
+  "team": "CSG",
+  "date": "2024/10/01",
+  "lastUpdate": "2024-10-24T06:13:18.000Z"
+}

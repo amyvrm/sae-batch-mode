@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "585df99c-6d32-43d6-b417-f5e855792cc0",
+  "name": "Illegal IPsec  Peer",
+  "description": "SonicWall Detection - IPsec packet from or to an illegal host",
+  "filterSets": [
+    [
+      {
+        "id": "91a342c2-7e14-415a-b3b4-bf3651a3776f",
+        "name": "Illegal IPsec  Peer",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

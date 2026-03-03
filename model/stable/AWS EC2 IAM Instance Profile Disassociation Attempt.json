@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fcc6ba94-6e00-464b-8332-654b5d6c8055",
+  "name": "AWS EC2 IAM Instance Profile Disassociation Attempt",
+  "description": "Detects actions that remove an IAM instance profile from an EC2 instance, potentially disrupting security controls and access management. This could indicate an attempt to evade monitoring, modify instance permissions, or escalate privileges.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "98bb79fb-1964-47cb-b33d-08ce22c52182",
+      "name": "AWS EC2 IAM Instance Profile Disassociation Attempt",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/07/26",
+  "lastUpdate": "2025-08-22T09:27:18.000Z"
+}

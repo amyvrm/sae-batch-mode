@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e4e0e1b8-e52f-4e49-841d-be2946de76c2",
+  "name": "Infected File Detected By The Fortigate Unit And Passed",
+  "description": "Fortinet detection - Infected file detected by the FortiGate unit and passed",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "451e39df-2590-4d7d-b57e-4f7963d02c1b",
+      "name": "Infected File Detected By The Fortigate Unit And Passed",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-01-06T03:41:40.000Z"
+}

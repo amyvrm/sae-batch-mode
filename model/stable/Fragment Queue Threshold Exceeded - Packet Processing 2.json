@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5a09a41a-3ef2-41cb-bbd9-9367e7403b92",
+  "name": "Fragment Queue Threshold Exceeded - Packet Processing 2",
+  "description": "Cisco detection for the Secure Firewall ASA drops the fragmented packets when the fragment database threshold, that is 2/3 of the queue size per interface, has exceeded.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f4592a42-7838-41be-b27d-93a9e5f158c3",
+      "name": "Fragment Queue Threshold Exceeded - Packet Processing 2",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "tags": [
+    "mitre.t1498"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-04T02:55:04.000Z"
+}

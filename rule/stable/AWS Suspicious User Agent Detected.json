@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f599877a-5b73-11ee-8c99-0242ac120002",
+  "name": "AWS Suspicious User Agent Detected",
+  "description": "AWS Suspicious User Agent Detected.",
+  "filterSets": [
+    [
+      {
+        "id": "3512df9a-5acb-11ee-8c99-0242ac120002",
+        "name": "AWS Suspicious User Agent Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

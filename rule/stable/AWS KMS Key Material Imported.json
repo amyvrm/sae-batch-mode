@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3883d3c7-4216-4b65-9f0c-12820d182d6d",
+  "name": "AWS KMS Key Material Imported",
+  "description": "Monitors the import of key material into a customer managed KMS key, which may indicate external control over encryption.",
+  "filterSets": [
+    [
+      {
+        "id": "437f4494-5dba-43fb-8f84-320b79f268e1",
+        "name": "AWS KMS Key Material Imported",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-14T05:47:04.000Z"
+}

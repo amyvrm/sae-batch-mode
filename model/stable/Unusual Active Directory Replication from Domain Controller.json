@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dd7ce89e-5913-4698-b338-40157d43d640",
+  "name": "Unusual Active Directory Replication from Domain Controller",
+  "description": "An account has unexpectedly initiated replication from the Domain Controller which may indicate credential leakage.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "a6fb5e2a-194e-4089-832f-612cdf42b5ed",
+      "name": "Unusual Active Directory Replication from Domain Controller",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "opa"
+    ]
+  ],
+  "tags": [
+    "mitre.t1003",
+    "mitre.t1003.006"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2024/03/30",
+  "lastUpdate": "2025-01-02T07:38:03.000Z"
+}

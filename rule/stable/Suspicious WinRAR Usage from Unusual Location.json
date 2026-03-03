@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f8744469-9ddb-4a74-9edd-67d5aaa059ad",
+  "name": "Suspicious WinRAR Usage from Unusual Location",
+  "description": "Detects suspicious usage of WinRAR from an unusual location.",
+  "filterSets": [
+    [
+      {
+        "id": "d1cdc387-bf50-4651-9c07-2082563965be",
+        "name": "Suspicious WinRAR Execution from Unusual Location",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a8232223-272e-4409-9ae9-7547c072d9f0",
+        "name": "Suspicious File Created via WinRAR from Unusual Location",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/07/22",
+  "lastUpdate": "2025-04-02T03:40:10.000Z"
+}

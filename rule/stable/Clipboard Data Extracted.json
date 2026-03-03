@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "877e7c9b-6ac6-4821-b335-5b488f794a65",
+  "name": "Clipboard Data Extracted",
+  "description": "Microsoft Events Detects clipboard data extraction attempts.",
+  "filterSets": [
+    [
+      {
+        "id": "64869d3d-f494-4c89-97ac-ed7757417b03",
+        "name": "Clipboard Data Extracted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-27T09:17:05.000Z"
+}

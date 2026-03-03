@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3b02f32e-b196-4c93-acbf-1b5fc584d08c",
+  "name": "Early Indicator of a Ransomware Attack Related to Defense Evasion",
+  "description": "Multiple detections of defense evasion components before a possible ransomware attack",
+  "filterSets": [
+    [
+      {
+        "id": "5a2e9dd5-fd3a-482d-8daf-43083ae14a00",
+        "name": "Safeboot Setting via Bcdedit",
+        "highlight": true
+      },
+      {
+        "id": "f5c5d796-f91f-4a1a-910a-97063908333c",
+        "name": "Clear Windows Event Logs",
+        "highlight": true
+      },
+      {
+        "id": "de207540-7bc3-4ed9-ad7d-b189828b836f",
+        "name": "Enabling Windows Remote Symlinks via Fsutil",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "5a2e9dd5-fd3a-482d-8daf-43083ae14a00.endpointHostName equals f5c5d796-f91f-4a1a-910a-97063908333c.endpointHostName",
+      "5a2e9dd5-fd3a-482d-8daf-43083ae14a00.endpointHostName equals de207540-7bc3-4ed9-ad7d-b189828b836f.endpointHostName"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Arjun Baltazar",
+  "team": "CSG",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e0674bcc-3fce-11ef-9454-0242ac120002",
+  "name": "Suspicious Linux Access Control Modification",
+  "description": "Detects the modification of access control (nologin, passwd) files in a Linux environment.",
+  "filterSets": [
+    [
+      {
+        "id": "b1082676-3fce-11ef-9454-0242ac120002",
+        "name": "Linux File Access Control Modification",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/07/11",
+  "lastUpdate": "2025-01-22T19:14:24.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f9ea77a9-ccad-494c-a8d5-abd75252e8df",
+  "name": "Possible Ransomware Tool Execution via PSExec",
+  "description": "Possible use of a potentially-renamed psexec to run the Cicada3301 ransomware tool.",
+  "filterSets": [
+    [
+      {
+        "id": "271cf44e-e1db-4ddf-b317-bc91161af49b",
+        "name": "Possible Ransomware Tool Execution via PSExec",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gabriel Cardoso",
+  "team": "US-IR",
+  "date": "2025/07/01",
+  "lastUpdate": "2025-08-04T07:35:40.000Z"
+}

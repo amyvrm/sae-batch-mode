@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2d8f826d-c9af-430f-93dd-985faa7ea38d",
+  "name": "Suspicious Script Execution",
+  "description": "Monitor Suspicious Powershell, vbscript or jscript Script Execution",
+  "filterSets": [
+    [
+      {
+        "id": "c1df02b2-5dac-4026-9bda-1d7a4c857cb3",
+        "name": "JavaScript or VBScript Command Execution via MSHTA",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "32714883-7093-4d7f-89cb-5511cb906739",
+        "name": "Powershell Fileless Script Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ec8caeec-b33d-4b8b-bb12-61be557b3774",
+        "name": "Masquerading Scripting",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "598e3b4a-5ee1-4c4a-8825-f620d38f2e6b",
+        "name": "Suspicious PowerShell Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "lastUpdate": "2024-01-09T03:13:03.000Z"
+}

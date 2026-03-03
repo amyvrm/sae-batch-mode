@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2b6a107c-a5b1-4fee-aab9-185caa2f94c5",
+  "name": "Hacktool Outbound Traffic to Internet",
+  "description": "Rclone outgoing traffic have been identified in the network. Review if the usage of rclone is valid.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b702daef-42ce-4ef9-a7db-200a2476e398",
+      "name": "Hacktool Outbound Traffic to Internet",
+      "score": 30
+    }
+  ],
+  "threshold": {
+    "targetScore": 30,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1567.002",
+    "mitre.t1567"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/04/14",
+  "lastUpdate": "2025-06-11T05:23:10.000Z"
+}

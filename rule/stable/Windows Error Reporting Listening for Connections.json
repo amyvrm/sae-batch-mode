@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f40c48f7-02a0-431f-ba84-632069cf5ab0",
+  "name": "Windows Error Reporting Listening for Connections",
+  "description": "Windows Error Reporting scheduled to run and listening for connections.",
+  "filterSets": [
+    [
+      {
+        "id": "233d5f82-79f3-4757-8fd3-f87bb8ff2f9c",
+        "name": "Windows Error Reporting Accepts Connection",
+        "highlight": true
+      },
+      {
+        "id": "2c791d74-b609-4dab-accf-0d950b85a9e5",
+        "name": "Windows Error Reporting Scheduled to Run",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/03/09",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

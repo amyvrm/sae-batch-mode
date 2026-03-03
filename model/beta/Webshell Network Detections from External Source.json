@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "41e8bc6b-d073-489b-85c3-0fb7cdd11528",
+  "name": "Webshell Network Detections from External Source",
+  "description": "Webshell network traffic from an external IP address to an internal IP address has been detected.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "86913da2-d546-404c-8177-a85727697f97",
+      "name": "Webshell Network Detections from External Source",
+      "score": 30
+    }
+  ],
+  "threshold": {
+    "targetScore": 30,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1505.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/04/09",
+  "lastUpdate": "2025-05-26T05:35:08.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "84b4902b-440b-4674-bbb7-b0e810f3957b",
+  "name": "AWS IAM Login MFA Deactivated For A Root",
+  "description": "Detects AWS IAM login events where multi-factor authentication (MFA) is deactivated for the root user. Alerts administrators to potential security vulnerabilities. Indicates a security issue, allowing unauthorised access to sensitive AWS resources.",
+  "riskLevel": "critical",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "b836d8a5-3c44-44c1-9012-5cb6b81cc8e5",
+      "name": "AWS IAM Login MFA Deactivated For A Root",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1556.006"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "David Agni & Sunil Bharti",
+  "team": "Cloud One",
+  "lastUpdate": "2025-09-12T08:03:37.000Z"
+}

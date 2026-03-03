@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c8976214-1ca8-4ac3-ac2d-18465aaeff47",
+  "name": "Suspicious Discovery Activity in Container",
+  "description": "Detects User ID and Temp Directory Creation for Exploitation.",
+  "filterSets": [
+    [
+      {
+        "id": "a6d173a1-7d2d-40df-811a-c8647bcb7dfe",
+        "name": "Current User Identifier Discovery",
+        "highlight": true
+      },
+      {
+        "id": "c650ed82-abca-43e0-9807-580e24757669",
+        "name": "Linux Temporary Directory Creation In Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2023/07/28",
+  "lastUpdate": "2023-11-02T21:36:40.000Z"
+}

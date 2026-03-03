@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f18db5d7-7445-4e81-97e5-c2aed100b3eb",
+  "name": "WScript Invocation of Curl",
+  "description": "WScript invocation of Curl coupled with possible discovery commands.",
+  "filterSets": [
+    [
+      {
+        "id": "f76213e6-b8cf-4193-8e58-67c1463fa17d",
+        "name": "WScript Invocation of Curl",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/10/25",
+  "lastUpdate": "2023-10-26T17:44:46.000Z"
+}

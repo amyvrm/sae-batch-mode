@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0820c93e-dc02-4dc9-98c2-23e2b7d344c9",
+  "name": "Usage of Renamed Rundll32 Binary to Potentially Evade Security Monitoring",
+  "description": "Detection of the usage of a renamed Rundll32 binary, which can be done as a means to evade security monitoring",
+  "filterSets": [
+    [
+      {
+        "id": "36bdbc16-2b27-4f06-91d3-8e8f605878f5",
+        "name": "Usage of Renamed Rundll32 Binary to Potentially Evade Security Monitoring",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/07/15",
+  "lastUpdate": "2025-08-29T06:52:39.000Z"
+}

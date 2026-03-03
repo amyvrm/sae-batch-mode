@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b1cb4e6f-c8d6-4b5d-9be5-f66a56a16a57",
+  "name": "Disabling Protected Process Light (PPL)",
+  "description": "Disabling Protected Process Light (PPL), a security feature for the Local Security Authority (LSA) process.",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "44350699-e821-4974-8cb9-e1d5196d41f1",
+      "name": "Disabling Protected Process Light (PPL)",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1112",
+    "mitre.t1003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-09-22T09:24:18.000Z"
+}

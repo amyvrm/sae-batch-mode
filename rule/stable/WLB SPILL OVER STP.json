@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cfa0e58b-62de-4c5c-ba4b-cded2545329e",
+  "name": "WLB SPILL OVER STP",
+  "description": "SonicWall Detection - WLB Spill-over started, configured threshold exceeded",
+  "filterSets": [
+    [
+      {
+        "id": "f11acb8d-f5cc-485a-8b71-9baf0991b3f7",
+        "name": "WLB SPILL OVER STP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

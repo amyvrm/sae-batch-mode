@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1a43599d-4672-44f8-bd2b-7c0464ed45b9",
+  "name": "Execution Of File Or Folder Discovery Commands",
+  "description": "Detect Execution Of File Or Folder Discovery Commands",
+  "filterSets": [
+    [
+      {
+        "id": "2644d739-9f0e-4873-b7d2-a341df564658",
+        "name": "Directory Discovery Via Pwd",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/06/07",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

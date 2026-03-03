@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4987bd79-637b-4a70-b549-28630a1c9feb",
+  "name": "AWS SageMaker Successful Presigned Domain URL Creation Detected",
+  "description": "Detects successful creation of presigned domain URLs in AWS SageMaker.",
+  "filterSets": [
+    [
+      {
+        "id": "8b0c2a49-eed6-4aef-9adf-124b7cf5dcf4",
+        "name": "AWS SageMaker Successful Presigned Domain URL Creation Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/28",
+  "lastUpdate": "2025-01-21T13:11:52.000Z"
+}

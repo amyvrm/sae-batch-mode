@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "688a36d9-de5c-41dc-bc3c-a0ec5c112a60",
+  "name": "AWS IAM Successful Creation of a Role",
+  "description": "Detects the successful creation of a new IAM role, which may be part of normal operations but is important to monitor, as in worst-case scenarios it could indicate an attacker creating a backdoor account to maintain persistent unauthorized access in the AWS environment.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "3e9b7544-87cf-4716-98c6-63450e36a671",
+      "name": "AWS IAM Successful Creation of a Role",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1136.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2023/07/26",
+  "lastUpdate": "2025-09-08T06:00:50.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ce839ac3-8336-4466-b88f-7a0dc8c969a3",
+  "name": "Downloading with a Base64 Encoded Commandline",
+  "description": "Detects base-64 encoded powershell command attempting to download file.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "af99d276-f854-48ac-ab24-4c43936226e3",
+      "name": "Downloading with a Base64 Encoded Commandline",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1027"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Alyssa Ramos",
+  "team": "SAE Threat Expert",
+  "date": "2025/10/02",
+  "lastUpdate": "2025-10-02T21:27:32.000Z"
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "46c6d9af-a8b5-402f-98a1-cad0a49671ef",
+  "name": "Execution and Persistence via PHP, PowerShell, CMD, and Registry Run Keys in AppData",
+  "description": "Detects Interlock RAT behavior including automated and interactive discovery, and persistence via Registry Run key referencing PHP in AppData\\Roaming",
+  "filterSets": [
+    [
+      {
+        "id": "3fac96ea-ce04-4f5a-8517-eeacd7b6a8f0",
+        "name": "Initial Execution via PowerShell and PHP in AppData",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6b645d70-5a89-414a-a12e-cb1e57125154",
+        "name": "Potential Malicious Discovery, Reconnaissance and Persistence via PHP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Bien Joshua Philip De Leon & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/11/28",
+  "lastUpdate": "2026-01-12T07:15:54.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7a40e125-f95c-4997-ab79-7499a67ca683",
+  "name": "AWS SageMaker Successful Presigned Domain URL Creation Detected",
+  "description": "The event indicates the successful creation of presigned domain URLs in Amazon SageMaker, which grant temporary access to domain resources. Such URLs can be exploited to bypass standard access controls, posing potential security risks to AI infrastructure.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "4987bd79-637b-4a70-b549-28630a1c9feb",
+      "name": "AWS SageMaker Successful Presigned Domain URL Creation Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078.004",
+    "atlas.aml.t0012"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/28",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

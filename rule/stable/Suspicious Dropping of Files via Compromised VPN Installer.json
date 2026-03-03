@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "918c9574-725e-47b1-b78c-aae652be6578",
+  "name": "Suspicious Dropping of Files via Compromised VPN Installer",
+  "description": "Malicious files being dropped upon execution of Compromised VPN Installer",
+  "filterSets": [
+    [
+      {
+        "id": "2e9d8832-5e62-48cc-beed-3d3b7a426b40",
+        "name": "Suspicious Dropping of Files via Compromised VPN Installer",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros and Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/01/23",
+  "lastUpdate": "2025-03-19T09:17:32.000Z"
+}

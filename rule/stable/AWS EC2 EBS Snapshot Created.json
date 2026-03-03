@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f5996f4c-5b73-11ee-8c99-0242ac120002",
+  "name": "AWS EC2 EBS Snapshot Created",
+  "description": "AWS EC2 EBS Snapshot Created.",
+  "filterSets": [
+    [
+      {
+        "id": "35130178-5acb-11ee-8c99-0242ac120002",
+        "name": "AWS EC2 EBS Snapshot Created",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

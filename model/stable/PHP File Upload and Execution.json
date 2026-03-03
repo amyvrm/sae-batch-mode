@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01912d82-6ac5-7eba-a7c2-f58dd8523554",
+  "name": "PHP File Upload and Execution",
+  "description": "A PHP file is uploaded and executed. Adversaries may attempt to upload PHP files containing suspicious code or webshell payloads to compromise a target system.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "01912d76-099f-76f4-ad95-4a6f08ef41e0",
+      "name": "Identified Suspicious PHP Code and Webshell Payload",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "6d4b606f-4076-43cd-a97e-a1b22bd70796",
+      "name": "Possible Post-Exploitation Activities Detected",
+      "score": 1,
+      "sequence": 2
+    },
+    {
+      "id": "8e7a2c64-9aad-4c6b-b858-1d796e2ec1af",
+      "name": "System Information Discovery via Apache HTTP Server Process",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1033",
+    "mitre.t1059",
+    "mitre.t1059.004",
+    "mitre.t1071",
+    "mitre.t1071.001",
+    "mitre.t1190",
+    "mitre.t1204",
+    "mitre.t1204.002",
+    "mitre.t1546.004",
+    "mitre.t1570"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/08/07",
+  "lastUpdate": "2024-09-09T19:11:23.000Z"
+}

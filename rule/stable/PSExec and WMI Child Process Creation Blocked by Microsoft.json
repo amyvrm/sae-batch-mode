@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "faea23a0-1da0-437a-9d1b-35fc3bbd53f3",
+  "name": "PSExec and WMI Child Process Creation Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that blocks process creations originating from PSExec and WMI commands which are commonly used for remote execution and lateral movement activities.",
+  "filterSets": [
+    [
+      {
+        "id": "08ce4e25-68a6-4655-9893-f13b9e5cbffb",
+        "name": "PSExec and WMI Child Process Creation Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-14T08:49:59.000Z"
+}

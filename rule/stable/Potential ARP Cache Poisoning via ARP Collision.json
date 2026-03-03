@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1156f063-0217-427d-83f1-bff2ba3e9100",
+  "name": "Potential ARP Cache Poisoning via ARP Collision",
+  "description": "Cisco detection for the Secure Firewall ASA received an ARP packet, and the MAC address in the packet differs from the ARP cache entry.",
+  "filterSets": [
+    [
+      {
+        "id": "99281ba7-8e09-5b34-b9a4-4033397d9a70",
+        "name": "Potential ARP Cache Poisoning via ARP Collision",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-03T09:21:48.000Z"
+}

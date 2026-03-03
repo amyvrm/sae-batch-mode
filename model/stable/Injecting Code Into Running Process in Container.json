@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c0f0618-9015-472d-9131-e78572cf4c33",
+  "name": "Injecting Code Into Running Process in Container",
+  "description": "Injection code into the address space of a process is common defense-evasion technique which used in malware-fileless attacks.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "2fa07406-a484-4965-a842-9cd83dc806c7",
+      "name": "Code Injection into Running Process in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055.008",
+    "mitre.t1055.009"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2023/10/10",
+  "lastUpdate": "2024-04-22T09:37:49.000Z"
+}

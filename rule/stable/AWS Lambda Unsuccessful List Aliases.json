@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aa5c3e14-27b2-11ee-be56-0242ac120002",
+  "name": "AWS Lambda Unsuccessful List Aliases",
+  "description": "Detected AWS Lambda Unsuccessful List Aliases.",
+  "filterSets": [
+    [
+      {
+        "id": "ca9592a8-d574-4679-baee-5460d3f5d45e",
+        "name": "AWS Lambda Unsuccessful List Aliases",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/10",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

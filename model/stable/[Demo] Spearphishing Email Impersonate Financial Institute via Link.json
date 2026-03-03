@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "94308711-fe67-59f7-87c7-9d885b51e006",
+  "name": "[Demo] Spearphishing Email Impersonate Financial Institute via Link",
+  "description": "A suspicious URL associated with impersonated financial institutions was detected in an email message.",
+  "riskLevel": "high",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "22c12c47-8ed3-5ed7-99a1-72040902c95b",
+      "name": "[Demo] Spearphishing Email Impersonate Financial Institute via Link",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 1500,
+    "dedupSeconds": 1500
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2024/12/10",
+  "lastUpdate": "2025-01-20T05:12:50.000Z"
+}

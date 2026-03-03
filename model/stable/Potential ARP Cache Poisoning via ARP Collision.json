@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2556fe53-e473-46ff-8b24-c6ef3936b3a6",
+  "name": "Potential ARP Cache Poisoning via ARP Collision",
+  "description": "Cisco detection for the Secure Firewall ASA received an ARP packet, and the MAC address in the packet differs from the ARP cache entry.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1156f063-0217-427d-83f1-bff2ba3e9100",
+      "name": "Potential ARP Cache Poisoning via ARP Collision",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "tags": [
+    "mitre.t1016"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-04T02:55:04.000Z"
+}

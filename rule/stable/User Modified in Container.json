@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "12c07aef-96aa-460c-aec2-d852ef7a29ce",
+  "name": "User Modified in Container",
+  "description": "User deleted or created.",
+  "filterSets": [
+    [
+      {
+        "id": "525c1f11-40ff-5a62-b495-d03cab71849b",
+        "name": "User Modification in the Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ed252bb8-fa7b-4e57-b41a-949b98e12480",
+        "name": "User Created in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/03/25",
+  "lastUpdate": "2025-06-24T12:49:25.000Z"
+}

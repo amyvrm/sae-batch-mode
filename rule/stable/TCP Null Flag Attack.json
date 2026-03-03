@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e3d19154-b381-45a9-86eb-98f2b37c6784",
+  "name": "TCP Null Flag Attack",
+  "description": "SonicWall Detection - TCP Null Flag dropped",
+  "filterSets": [
+    [
+      {
+        "id": "c7bdddaa-1747-47a6-98ad-25556df05d33",
+        "name": "TCP Null Flag Attack",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

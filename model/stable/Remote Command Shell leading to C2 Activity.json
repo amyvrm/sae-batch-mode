@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fcc08f51-d408-4141-88f1-1dd018733f2d",
+  "name": "Remote Command Shell leading to C2 Activity",
+  "description": "Network activity associated with a remote command shell has been identified utilizing TCP protocol which may indicate an attempt to connect to an external Command-and-Control (C2) server. This activity indicates potential unauthorized command execution or control over the network.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "5df2cbc0-d81d-4315-8dd6-76a7ae2117dd",
+      "name": "Remote Command Shell Activity via TCP",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "b8f3dfc6-7071-4dc5-abb6-aa9bd1b95a45",
+      "name": "[Heuristic Attribute] Command and Control - Application Layer Protocol",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1210",
+    "threat.hacktool",
+    "mitre.t1190",
+    "mitre.t1059.003",
+    "mitre.t1505.003",
+    "mitre.t1102",
+    "mitre.t1059.004",
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2025/03/25",
+  "lastUpdate": "2025-04-02T01:30:38.000Z"
+}

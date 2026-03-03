@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "494f1082-ab7e-11ef-9cd2-0242ac120002",
+  "name": "Suspicious Jenkins Groovy Script Executed",
+  "description": "Detects a request to a Jenkins Groovy endpoint that executes a script, potentially leveraging the script console for unauthorized actions or malicious payloads.",
+  "filterSets": [
+    [
+      {
+        "id": "5aad8cb2-ab7b-11ef-9cd2-0242ac120002",
+        "name": "Jenkins Groovy Script Executed via Script Console",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/11/25",
+  "lastUpdate": "2025-01-22T19:14:24.000Z"
+}

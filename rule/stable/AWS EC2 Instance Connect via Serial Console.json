@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b4c3d83c-9c9d-4460-b0b3-2fd9507d523a",
+  "name": "AWS EC2 Instance Connect via Serial Console",
+  "description": "This rule detects attempts to push an SSH public key to a specified EC2 instance to establish a serial console connection to the instance using SSH.",
+  "filterSets": [
+    [
+      {
+        "id": "e9ca2995-dbdb-4c7d-b1ee-07e26aad1b84",
+        "name": "AWS EC2 Instance Connect Attempt via Serial Console",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/06/13",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

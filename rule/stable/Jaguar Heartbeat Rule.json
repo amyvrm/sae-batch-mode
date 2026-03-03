@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "id": "65a9014a-2484-4a0e-9ed3-7a7482ab79e5",
+  "name": "Jaguar Heartbeat Rule",
+  "description": "Jaguar Heartbeat Rule",
+  "filterSets": [
+    [
+      {
+        "id": "37701770-8896-4306-853b-9dc6467a4735",
+        "name": "(T0000) Jaguar Heartbeat Filter",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

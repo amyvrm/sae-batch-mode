@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3ef70103-aaa3-4213-b2c2-b589f2692bfa",
+  "name": "Spawning of EOL Microsoft Software Components via Excel.exe",
+  "description": "Detects Excel.exe spawning End-of-Life Microsoft software components for possible attack.",
+  "filterSets": [
+    [
+      {
+        "id": "81979b5f-8be8-44af-92ae-5e0434228c73",
+        "name": "Spawning of EOL Microsoft Software Components via Excel.exe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/06/05",
+  "lastUpdate": "2024-08-12T07:37:17.000Z"
+}

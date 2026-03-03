@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c769d909-c2d6-4eed-9e88-78ca7f502074",
+  "name": "Possible DCSync Attack",
+  "description": "A network request to dump domain controller secrets via DCSync technique was detected",
+  "filterSets": [
+    [
+      {
+        "id": "bbba31e9-922b-4efc-b01d-5576fb63ce59",
+        "name": "Possible DCSync Request",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-03-30T04:57:51.000Z"
+}

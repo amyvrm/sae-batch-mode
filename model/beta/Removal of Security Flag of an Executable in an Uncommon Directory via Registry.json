@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "845806b9-69f0-4b5e-88e0-556f04b28715",
+  "name": "Removal of Security Flag of an Executable in an Uncommon Directory via Registry",
+  "description": "Registry Modification that made the system recognizing the associated file as trusted or is not actively blocking its execution",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "269d69d3-df08-4c99-b7d8-aaca88c7fcdb",
+      "name": "Removal of Security Flag of an Executable in an Uncommon Directory via Registry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1112"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/12/12",
+  "lastUpdate": "2024-12-12T14:38:45.000Z"
+}

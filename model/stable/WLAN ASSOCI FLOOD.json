@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2db1f11b-529d-4cd2-8957-06cc569ebca8",
+  "name": "WLAN ASSOCI FLOOD",
+  "description": "SonicWall Detection for Association Flood from WLAN station",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "61ff058a-ce68-40d5-bd33-a4501deede00",
+      "name": "WLAN ASSOCI FLOOD",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christian Jason Geollegue",
+  "team": "Third Party Operations",
+  "date": "2024/12/05",
+  "lastUpdate": "2025-09-02T10:21:52.000Z"
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cfcbe292-a391-11ef-b864-0242ac120002",
+  "name": "Suspicious File Download in TMP Directory",
+  "description": "Detects the use of curl or wget to download files into the /tmp directory in linux and check for post-exploitation activities",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3719812c-a390-11ef-b864-0242ac120002",
+      "name": "Suspicious File Download in TMP Directory",
+      "score": 2
+    },
+    {
+      "id": "cd639f05-522c-4a28-b5d7-ddfa2057c824",
+      "name": "[Heuristic Attribute] Possible Post-Exploitation Activities",
+      "score": 1
+    },
+    {
+      "id": "dba27a34-d1f6-11ef-9cd2-0242ac120002",
+      "name": "Suspicious Process Launched From TMP Directory",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105",
+    "mitre.t1546.004",
+    "mitre.t1071.001",
+    "mitre.t1204.002",
+    "mitre.t1059.004",
+    "mitre.t1570"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 8,
+  "globalModel": true,
+  "silent": false,
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/11/15",
+  "lastUpdate": "2025-05-13T15:44:28.000Z"
+}

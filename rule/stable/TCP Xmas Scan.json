@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "98eeeafd-e361-4539-82e6-465c6400fd65",
+  "name": "TCP Xmas Scan",
+  "description": "SonicWall Detection - Probable TCP XMAS scan detected",
+  "filterSets": [
+    [
+      {
+        "id": "e43ac5fa-08ba-4dc8-90a9-c8e0928f4369",
+        "name": "TCP Xmas Scan",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

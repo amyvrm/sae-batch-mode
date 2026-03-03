@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "db582f59-4f2e-4b2f-8480-0ad7ad3b4dd2",
+  "name": "SpecialAccounts Modification to Hide Username in Welcome Screen",
+  "description": "Detects registry modification event of SpecialAccounts to add user and set data to 0 in order to hide the username in the welcome screen.",
+  "filterSets": [
+    [
+      {
+        "id": "e1a5024c-0258-4626-942d-dce43abb0a2a",
+        "name": "SpecialAccounts Modification to Hide Username in Welcome Screen",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/06/10",
+  "lastUpdate": "2025-06-17T10:53:41.000Z"
+}

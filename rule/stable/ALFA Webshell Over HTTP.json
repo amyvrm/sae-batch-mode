@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "17a155f3-b875-4a5b-aa36-6bb9cd62e69c",
+  "name": "ALFA Webshell Over HTTP",
+  "description": "Check Point Security detection for ALFA Webshell Over HTTP",
+  "filterSets": [
+    [
+      {
+        "id": "6dc03226-7864-5b8f-91a2-22cefa3d250b",
+        "name": "ALFA Webshell Over HTTP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/12/11",
+  "lastUpdate": "2026-01-15T01:11:52.000Z"
+}

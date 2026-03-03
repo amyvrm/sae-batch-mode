@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "46be786d-2b6e-420a-89fa-c2c9a8a70b71",
+  "name": "Trusted Domain Discovery via LDAP",
+  "description": "Network activity involving LDAP associated with Trusted Domain Discovery has been observed. This may indicate an attempt to gather information on trusted domains within a network environment.",
+  "filterSets": [
+    [
+      {
+        "id": "e5662a12-51e0-5f3a-bd5e-22335a8e5d6d",
+        "name": "Trusted Domain Discovery LDAP (Request) - Inbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-03-17T06:56:19.000Z"
+}

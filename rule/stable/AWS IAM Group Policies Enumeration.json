@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "394f63c3-53d6-4fc3-a590-daff3d4ae02d",
+  "name": "AWS IAM Group Policies Enumeration",
+  "description": "Monitors enumeration of inline policies embedded in IAM groups, which could indicate legitimate group management activities or reconnaissance attempts to understand account group permissions structure and policy configurations for potential privilege escalation attacks.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS IAM Group Policies Enumeration",
+        "id": "1165d3d9-a501-47aa-a8d5-6f30b35dae83",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T11:20:55.000Z"
+}

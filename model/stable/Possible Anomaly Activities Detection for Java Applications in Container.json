@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3a508645-8f81-4ca9-9e01-927a5ed6c1a2",
+  "name": "Possible Anomaly Activities Detection for Java Applications in Container",
+  "description": "Suspicious activities detected within a container, initiated by Java applications.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "575474d8-2e45-4b26-b81c-6d43b75847d9",
+      "name": "Java Running Unix Shell in Container",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "02b2dc4e-648d-4255-a81f-61f422d2c817",
+      "name": "Unusual Activity Within Container Environment",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 120,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1613",
+    "mitre.t1059.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/07/31",
+  "lastUpdate": "2024-08-19T07:08:52.000Z"
+}

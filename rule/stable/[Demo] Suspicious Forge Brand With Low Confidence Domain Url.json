@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "46deed73-540b-5b25-9a00-7d1d5be16e94",
+  "name": "[Demo] Suspicious Forge Brand With Low Confidence Domain Url",
+  "description": "Suspicious Forge Brand With Low Confidence Domain Url",
+  "filterSets": [
+    [
+      {
+        "id": "6f5b141a-61ab-5090-9ad5-c1c20dd352a4",
+        "name": "(Demo) Possible Forged Brand Attack via Link",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1500,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2024/12/10",
+  "lastUpdate": "2025-01-20T05:12:50.000Z"
+}

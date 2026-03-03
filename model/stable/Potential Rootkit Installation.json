@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "820eae95-979d-49c4-bd60-ff69f332222a",
+  "name": "Potential Rootkit Installation",
+  "description": "Detect Execution of Rundll32.exe with SmartFilter.inf, Indicating Potential Rootkit Installation",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "09d76f0a-a758-4233-9ad7-0da412d42142",
+      "name": "Potential Rootkit Installation",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218.011"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mary Joy Ramos & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/01/21",
+  "lastUpdate": "2025-05-13T07:21:03.000Z"
+}

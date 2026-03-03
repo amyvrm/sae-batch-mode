@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a2ac2db4-1ed1-4d6c-88ab-216426b5e372",
+  "name": "Possible PowerShell Botnet Activities",
+  "description": "Identifies PowerShell execution patterns linked to Prometei\u2019s lateral movement, persistence, and command execution.",
+  "filterSets": [
+    [
+      {
+        "id": "a2b3f4be-abc5-4315-a0f9-704f95190af9",
+        "name": "Possible PowerShell Botnet Activities",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes"
+    ],
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2025-03-24T10:42:02.000Z",
+  "author": "Bahaa Yamany & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2025/02/20"
+}

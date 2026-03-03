@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "423f16c8-bcfc-48cb-adb5-90da1da99713",
+  "name": "Possible In-Memory Execution via MSBuild as SYSTEM",
+  "description": "Certain attacker groups execute MSBuild with SYSTEM privileges to inject malicious code into the memory of legitimate processes, effectively installing backdoors.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "91ac948e-ab8f-42ba-b98a-4cf478ac7a9e",
+      "name": "Possible In-Memory Execution via MSBuild as SYSTEM",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1127.001",
+    "mitre.t1059.001",
+    "mitre.t1055"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yoshihiro Nakaya",
+  "team": "JP-IR",
+  "date": "2024/04/16",
+  "lastUpdate": "2024-05-02T09:08:11.000Z"
+}

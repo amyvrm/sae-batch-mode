@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "589d6bba-c075-4490-80e9-7d31f502db16",
+  "name": "Ransomware File Detected in Cloud Storage",
+  "description": "By storing ransomware in cloud storage, attackers can use it for distribution to attack targets.",
+  "filterSets": [
+    [
+      {
+        "id": "de4c06e2-f34d-4ed1-96fe-3fc39a0fa7de",
+        "name": "Ransomware File Detected in Cloud Storage",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "sfc"
+    ]
+  ],
+  "author": "Yoshihiro Nakaya",
+  "team": "JP-IR",
+  "date": "2024/06/10",
+  "lastUpdate": "2024-06-14T09:37:06.000Z"
+}

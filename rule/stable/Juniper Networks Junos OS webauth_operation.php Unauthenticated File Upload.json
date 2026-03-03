@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "74097eec-57ed-41ee-8c99-0242ac120002",
+  "name": "Juniper Networks Junos OS webauth_operation.php Unauthenticated File Upload",
+  "description": "Detects any file upload request to webauth_operation.php for Juniper Networks Junos OS. Such traffic has been known to be utilized in attacks exploiting a remote code execution vulnerability.",
+  "filterSets": [
+    [
+      {
+        "id": "ab399047-7cd2-4605-9532-9cef67f18f45",
+        "name": "Juniper Networks Junos OS webauth_operation.php Unauthenticated File Upload",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2023/09/20",
+  "lastUpdate": "2024-05-14T07:14:32.000Z"
+}

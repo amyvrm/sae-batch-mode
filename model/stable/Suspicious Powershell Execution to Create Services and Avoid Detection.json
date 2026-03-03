@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7baaa808-1471-4359-9e4e-0d3157fec128",
+  "name": "Suspicious Powershell Execution to Create Services and Avoid Detection",
+  "description": "A Powershell script executes malicious command that creates services, disables Windows Defender, and modifies RDP Services.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8b5240dd-0511-4340-8cc4-ada08d69d0d7",
+      "name": "Suspicious Powershell Execution to Create Services and Avoid Detection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001",
+    "mitre.t1059.001",
+    "mitre.t1036.004",
+    "mitre.t1112"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/10/10",
+  "lastUpdate": "2024-11-26T02:19:00.000Z"
+}

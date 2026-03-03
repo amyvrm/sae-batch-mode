@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0ae7d03d-e97a-4cbc-8f92-a6dd79660fba",
+  "name": "AWS STS Incoming Cross-Account Role Assumption Without MFA And ExternalID",
+  "description": "This model detected a successful incoming cross-account role assumption without MFA from an external AWS account, which might indicate an attacker trying to gain unauthorized access to the AWS environment from another account, potentially leading to data exfiltration, privilege escalation, or further malicious activities within the target account.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "65e795ed-5213-4985-bc44-ea05172c97fb",
+      "name": "AWS STS Incoming Cross-Account Role Assumption Without MFA And ExternalID",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1119",
+    "mitre.t1078.004"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

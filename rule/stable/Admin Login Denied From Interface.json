@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "af5f5ffa-af23-405a-b336-03e450a309b1",
+  "name": "Admin Login Denied From Interface",
+  "description": "SonicWall Detection - Administrator login denied from %s; logins disabled from this interface",
+  "filterSets": [
+    [
+      {
+        "id": "0fc0c336-be6c-4ee6-b6a3-9b238b9c2f04",
+        "name": "Admin Login Denied From Interface",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

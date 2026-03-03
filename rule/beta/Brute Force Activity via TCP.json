@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c36f416b-7a81-438d-b62b-59b71f71f8c3",
+  "name": "Brute Force Activity via TCP",
+  "description": "Network activity involving TCP, associated with the use of Ncrack/Hydra Brute Force Tool, was observed.",
+  "filterSets": [
+    [
+      {
+        "id": "c28bf926-7c44-55c4-ae0b-47c5865c92b9",
+        "name": "Ncrack/Hydra Brute Force Tool TCP (Request)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/06/17",
+  "lastUpdate": "2025-06-18T10:31:59.000Z"
+}

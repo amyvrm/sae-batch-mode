@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4d4a9d67-df7b-45f8-83e8-041463c123a8",
+  "name": "ESXCLI Command Executed",
+  "description": "Detects when the ESXCLI command is executed.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2ce058a3-56c3-4ef6-a55f-f38a875343f5",
+      "name": "ESXCLI Discovery Command Executed",
+      "score": 1
+    },
+    {
+      "id": "cfb0e0a0-63a1-4a65-9747-489047bca125",
+      "name": "ESXi Account Creation via ESXCLI",
+      "score": 1
+    },
+    {
+      "id": "e1a7d474-7750-4f71-a86b-13c769abe189",
+      "name": "ESXi Admin Permissions Assigned To Account via ESXCLI",
+      "score": 1
+    },
+    {
+      "id": "c5ac81e1-09b5-43f6-a9b5-70403bad05a5",
+      "name": "ESXi Syslog Configuration Change via ESXCLI",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.004",
+    "mitre.t1074",
+    "mitre.t1112",
+    "mitre.t1033",
+    "mitre.t1007",
+    "mitre.t1562.001",
+    "mitre.t1562.003",
+    "mitre.t1098",
+    "mitre.t1136"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nora Bowden & Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/05/21",
+  "lastUpdate": "2024-07-09T16:09:48.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "575474d8-2e45-4b26-b81c-6d43b75847d9",
+  "name": "Java Running Unix Shell in Container",
+  "description": "Java executed unix shell in the container.",
+  "filterSets": [
+    [
+      {
+        "id": "7338bb6a-6c57-4c39-9851-a22ff0fe6d58",
+        "name": "Java Initiated Unix Shell Process in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/07/31",
+  "lastUpdate": "2024-08-19T07:08:52.000Z"
+}

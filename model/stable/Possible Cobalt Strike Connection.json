@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "85c752b8-93c2-4450-81eb-52ec6161088e",
+  "name": "Possible Cobalt Strike Connection",
+  "description": "A network traffic possibly related to Cobalt Strike was identified.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "3a5c4f10-376f-463d-85c8-6306e3ef3fd0",
+      "name": "Possible Cobalt Strike Connection",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "pdi",
+      "ptp",
+      "stp",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "attack.g0009",
+    "attack.s0154"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "silent": false,
+  "globalModel": true,
+  "author": "Alvin Nieto",
+  "team": "SAE Threat Expert",
+  "date": "2022/04/07",
+  "lastUpdate": "2024-04-08T06:09:26.000Z"
+}

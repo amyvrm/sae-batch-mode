@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ebac2d32-c439-4da4-a315-aa629b216c59",
+  "name": "Archived File Uploaded",
+  "description": "Data Exfiltration by Archived File Uploaded",
+  "filterSets": [
+    [
+      {
+        "id": "4adb56b8-efe6-49fe-ba92-84c9ff3d9643",
+        "name": "Archive File Upload Via HTTP Or FTP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "PeiChi Cheng",
+  "team": "ddi",
+  "date": "2020/06/15",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

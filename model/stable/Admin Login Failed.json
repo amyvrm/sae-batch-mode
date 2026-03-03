@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "14ffcee1-5dae-4e6a-be33-2c40abee9bda",
+  "name": "Admin Login Failed",
+  "description": "Fortinet detection - Admin login failed",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "54d191bf-48da-4f74-b4eb-dcaec45bd970",
+      "name": "Admin Login Failed",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-12T05:48:57.000Z"
+}

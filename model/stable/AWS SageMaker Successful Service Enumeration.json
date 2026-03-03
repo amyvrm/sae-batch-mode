@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81899685-546c-4f3b-87fc-1f21401d5f29",
+  "name": "AWS SageMaker Successful Service Enumeration",
+  "description": "This model detected successful enumeration of Amazon SageMaker service indicating an attacker trying to collect information on resources And permissions on SageMaker service to carry out further attacks.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "074cfe45-38df-4929-a3b6-1013e4f4cde1",
+      "name": "AWS SageMaker Successful Code Repository Enumeration",
+      "score": 1
+    },
+    {
+      "id": "6673d904-5d86-405e-9427-ad1a8f689cdc",
+      "name": "AWS SageMaker Successful Endpoints Enumeration",
+      "score": 1
+    },
+    {
+      "id": "bd7acd7e-95d0-411d-8f9d-dde1c5eab8c8",
+      "name": "AWS SageMaker Successful Notebook Enumeration",
+      "score": 1
+    },
+    {
+      "id": "8b0b0ef4-6ed1-4e2c-88ee-d07220b7b103",
+      "name": "AWS SageMaker Successful Pipeline Enumeration",
+      "score": 1
+    },
+    {
+      "id": "524b8693-8c3b-4dd7-81ed-9f0f370da68b",
+      "name": "AWS SageMaker Successful Jobs Enumeration",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 120,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1526",
+    "atlas.aml.t0007"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/17",
+  "lastUpdate": "2026-01-19T02:05:18.000Z"
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2667f1ff-8e78-4882-adea-2080940f18e7",
+  "name": "Cronjob Deletion Event in Container",
+  "description": "Cronjob has been deleted in container.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "0dfeae99-7239-4b07-8749-9e037af2f1f6",
+      "name": "Cronjob Deltion Activity in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1200,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1565.001",
+    "mitre.t1496"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/07/31",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

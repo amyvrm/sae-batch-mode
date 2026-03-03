@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "80cc59c3-769c-484a-81bd-2b5f73413789",
+  "name": "Possible SID History Injection - High-Privilege SID with Same Domain",
+  "description": "A high-privilege Microsoft Security Identifier (SID) with the same domain as the current SID was found in the history of an Active Directory object, indicating a possible SID history injection attack. (This rule can be triggered only if Active Directory Connector is installed on the Domain Controller.)",
+  "filterSets": [
+    [
+      {
+        "id": "8539e17b-4ef9-5a16-a622-19c5467961f0",
+        "name": "Possible SID History Injection - High-Privilege SID with Same Domain",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "opa"
+    ]
+  ],
+  "author": "Johnny Tu",
+  "team": "Jaguar",
+  "date": "2022/12/21",
+  "lastUpdate": "2023-11-21T07:50:34.000Z"
+}

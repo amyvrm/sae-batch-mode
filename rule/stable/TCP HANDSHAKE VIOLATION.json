@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2fc56415-8a4e-4773-8402-a1bf2ed9e132",
+  "name": "TCP HANDSHAKE VIOLATION",
+  "description": "SonicWall Detection - TCP handshake violation detected; TCP connection dropped",
+  "filterSets": [
+    [
+      {
+        "id": "10ce036a-a6b7-4db9-bde9-4c4a3e052f2b",
+        "name": "TCP HANDSHAKE VIOLATION",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

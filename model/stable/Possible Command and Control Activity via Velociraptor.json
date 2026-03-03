@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7c607729-95ed-4c61-926a-7cd0031721f7",
+  "name": "Possible Command and Control Activity via Velociraptor",
+  "description": "Execution of Velociraptor DFIR tool which can be abused for C2 communication.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "04ee3845-a5b1-48d1-a5b7-0977343479d2",
+      "name": "Possible Command and Control Activity via Velociraptor",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1219"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mahmoud Soheem & Sherif Magdy",
+  "team": "MENA-IR",
+  "date": "2025/08/29",
+  "lastUpdate": "2025-12-29T13:49:53.000Z"
+}

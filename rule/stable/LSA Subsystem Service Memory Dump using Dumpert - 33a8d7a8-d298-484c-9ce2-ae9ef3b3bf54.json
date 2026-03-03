@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "33a8d7a8-d298-484c-9ce2-ae9ef3b3bf54",
+  "name": "LSASS Memory Dump using Dumpert",
+  "description": "Dump LSASS Memory using direct system calls and API unhooking via Dumpert",
+  "filterSets": [
+    [
+      {
+        "id": "9558e92f-e1cf-4b4c-b5bf-cd9e1a5fff8b",
+        "name": "LSASS Memory Dump using Dumpert",
+        "highlight": true
+      },
+      {
+        "id": "5864479d-0200-4b49-884e-8b03ffc639ad",
+        "name": "Dump LSASS Memory via Direct System Calls And Api Unhooking",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Alvin Bacani",
+  "team": "CSG",
+  "date": "2024/06/01",
+  "lastUpdate": "2025-02-11T06:51:53.000Z"
+}

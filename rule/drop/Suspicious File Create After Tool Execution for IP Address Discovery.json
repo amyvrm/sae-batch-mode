@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8c8e580a-bbbc-4888-b3f2-76b8ff4338f2",
+  "name": "Suspicious File Create After Tool Execution for IP Address Discovery",
+  "description": "Detects file created after tool execution which is being used for scanning opened ports and reachable IP addresses",
+  "filterSets": [
+    [
+      {
+        "id": "ce226e9c-2f19-4887-b784-a938adbf2733",
+        "name": "Suspicious File Create After Tool Execution for IP Address Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 10,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2024/10/30",
+  "lastUpdate": "2025-09-08T07:17:48.000Z"
+}

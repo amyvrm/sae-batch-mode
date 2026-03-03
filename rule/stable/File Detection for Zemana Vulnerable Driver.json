@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "25bf6b76-b1df-45f5-8f58-2d75b01a388f",
+  "name": "File Detection for Zemana Vulnerable Driver",
+  "description": "Detects Zemana Vulnerable Driver that can be abused for security products termination.",
+  "filterSets": [
+    [
+      {
+        "id": "fe823801-d536-4bc0-855b-4896ac7387ca",
+        "name": "File Detection for Zemana Vulnerable Driver",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "filePath": {
+      "fe823801-d536-4bc0-855b-4896ac7387ca": "filePath"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "pdi",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/03/20",
+  "lastUpdate": "2024-04-01T00:16:25.000Z"
+}

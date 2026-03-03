@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2280dd5a-2db4-4f08-93b7-8f05205a7dd5",
+  "name": "AWS Bedrock Unauthorized Model Customization Attempt Detected",
+  "description": "Detects unauthorized attempts to customize Amazon Bedrock models by monitoring for attempts to modify model configurations or settings. This rule identifies actions taken by users or roles that lack proper permissions for model customization, helping to prevent unauthorized alterations to model behavior or performance. It ensures that only authorized entities can modify model settings, preserving the integrity of your model configurations.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "365e4ced-aa5a-4c16-ac26-eac21f54f779",
+      "name": "AWS Bedrock Unauthorized Model Customization Attempt Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "tags": [
+    "atlas.aml.t0018.000",
+    "mitre.t1059.009"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/13",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

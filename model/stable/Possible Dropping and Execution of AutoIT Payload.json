@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bb697369-44fc-468b-a77d-643c27e28457",
+  "name": "Possible Dropping and Execution of AutoIT Payload",
+  "description": "Detects the dropping of the DarkGate payload and its execution through PowerShell.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "49d8e411-b603-423c-a686-40dab27c38d5",
+      "name": "Possible Dropping of AutoIT Loader In Temp Directory",
+      "score": 20
+    },
+    {
+      "id": "fb6c361b-4896-4d96-a5a2-d3fb3b5f8fe4",
+      "name": "Deobfuscation of Payload on PowerShell via AutoIT",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 30,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059",
+    "mitre.t1055",
+    "mitre.t1140"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "lastUpdate": "2025-06-11T08:56:40.000Z"
+}

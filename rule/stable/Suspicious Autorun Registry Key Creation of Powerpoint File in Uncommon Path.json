@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2bd8a11c-d08d-423f-9b93-b2a370f0f5cd",
+  "name": "Suspicious Autorun Registry Key Creation of Powerpoint File in Uncommon Path",
+  "description": "Detects suspicious autorun registry key creation of PowerPoint in uncommon path that is being used for wineloader malware in APT29 Phishing Campaign.",
+  "filterSets": [
+    [
+      {
+        "id": "cef92fee-574f-4d47-af2d-6843d7f6a996",
+        "name": "Suspicious Autorun Registry Key Creation of Powerpoint in Uncommon Path",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/04/21",
+  "lastUpdate": "2025-05-29T06:49:11.000Z"
+}

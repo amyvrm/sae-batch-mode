@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d2ed731c-ee96-4412-b296-f86444af745a",
+  "name": "Tunnel Creation via Telebit",
+  "description": "Detects network tunnel creation using tmate, which may be used for command and control communication, and data exfiltration",
+  "filterSets": [
+    [
+      {
+        "id": "a58e6636-496f-4b01-b2f3-76ed692812a7",
+        "name": "DNS Query Request to Telebit Tunnel Services",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "61df892e-b058-48c3-b56d-10394e83ce39",
+        "name": "Possible Tunnel Creation via Telebit",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Mahmoud Soheem & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/02/24",
+  "lastUpdate": "2025-03-07T07:54:28.000Z"
+}

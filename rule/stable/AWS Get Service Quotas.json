@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4fa791d-ffd3-4d28-8f5e-a1c11314e907",
+  "name": "AWS Get Service Quotas",
+  "description": "Detects attempts to enumerate or query AWS service quotas, which may indicate cloud environment discovery or preparation for large-scale resource usage.",
+  "filterSets": [
+    [
+      {
+        "id": "fd964440-8659-48da-988b-138a184bab2a",
+        "name": "AWS Get Service Quotas",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2026/01/22",
+  "lastUpdate": "2026-02-11T08:35:44.000Z"
+}

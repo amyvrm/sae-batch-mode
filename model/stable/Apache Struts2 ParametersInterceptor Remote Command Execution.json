@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4d7a89b6-ef9e-4ef7-b4e3-4b335f7f8ae7",
+  "name": "Apache Struts2 ParametersInterceptor Remote Command Execution",
+  "description": "Check Point Security detection for Apache Struts2 ParametersInterceptor Remote Command Execution",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "dd954572-d0ac-4bad-a6fb-97cc3488a9fc",
+      "name": "Apache Struts2 ParametersInterceptor Remote Command Execution",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/12/11",
+  "lastUpdate": "2026-01-15T01:11:52.000Z"
+}

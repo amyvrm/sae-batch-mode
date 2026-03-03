@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "af99d276-f854-48ac-ab24-4c43936226e3",
+  "name": "Downloading with a Base64 Encoded Commandline",
+  "description": "Detects base-64 encoded powershell command attempting to download file.",
+  "filterSets": [
+    [
+      {
+        "id": "36d85c44-01ae-11ef-86d8-0242ac120002",
+        "name": "Downloading with a Base64 Encoded Commandline",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Alyssa Ramos",
+  "team": "SAE Threat Expert",
+  "date": "2025/10/02",
+  "lastUpdate": "2025-10-02T18:30:11.000Z"
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6c9c2c0d-c997-4de0-b036-2cbb2cfc8e82",
+  "name": "Possible RDP Server Connections from Internet",
+  "description": "Remote Desktop (RDP) connections have been observed on the network from public IP address to internal hosts. Review if the connections are valid.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3a0e2389-cc8a-42a3-9a68-bb020442eb7d",
+      "name": "Possible RDP Server Connections from Internet",
+      "score": 30
+    }
+  ],
+  "threshold": {
+    "targetScore": 30,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/05/16",
+  "lastUpdate": "2025-09-04T09:15:57.000Z"
+}

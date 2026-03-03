@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5cdf3790-7662-4352-a9ff-e6f6fd77fb20",
+  "name": "TCP-Flooding Machine Blacklisted",
+  "description": "SonicWall Detection - TCP-Flooding machine %s blacklisted",
+  "filterSets": [
+    [
+      {
+        "id": "efad50ae-7d6c-439f-892f-8d6e9d6649ba",
+        "name": "TCP-Flooding Machine Blacklisted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

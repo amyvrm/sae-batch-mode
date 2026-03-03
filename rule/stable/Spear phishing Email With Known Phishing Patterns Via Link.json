@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "728aa2aa-5ad1-4fb8-aaf8-bae5695d16a7",
+  "name": "Spear phishing Email With Known Phishing Patterns Via Link",
+  "description": "A suspicious URL associated with known phishing subject and URL was detected in an email message",
+  "filterSets": [
+    [
+      {
+        "id": "05442a46-6caf-4978-abec-b5ea338429e9",
+        "name": "Spear Phishing Link Addressed By LinearRegressionModel",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "RungChi Chen",
+  "team": "Jaguar",
+  "date": "2021/02/18",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

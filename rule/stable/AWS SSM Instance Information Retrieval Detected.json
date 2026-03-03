@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e09e54e3-92ea-4b4c-b4e0-2e857cf3bfc8",
+  "name": "AWS SSM Instance Information Retrieval Detected",
+  "description": "This rule signals the retrieval of instance information using AWS Systems Manager (SSM).",
+  "filterSets": [
+    [
+      {
+        "id": "e1ab7f9b-8b61-4cb1-95bd-6c5781faae30",
+        "name": "AWS SSM Instance Information Retrieval Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/05/15",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

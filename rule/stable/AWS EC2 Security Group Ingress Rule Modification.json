@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "baae9797-c50e-401a-ba67-5eb3f589ce88",
+  "name": "AWS EC2 Security Group Ingress Rule Modification",
+  "description": "Ingress rule modifications detected, which may alter network access controls and increase exposure to unauthorized connections.",
+  "filterSets": [
+    [
+      {
+        "id": "0e584eec-d522-4262-a266-3b3e26bd6104",
+        "name": "AWS EC2 Security Group Ingress Rule Modification",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

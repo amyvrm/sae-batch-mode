@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cd7cb417-5fa7-4ea5-bfea-c7874e92f962",
+  "name": "Driver File Creation in Public Directory",
+  "description": "A driver file (.sys) was created in a public directory (C:\\Users\\Public). This behavior may indicate staging of a malicious driver for privilege escalation or defense evasion via BYOVD attacks.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "31daba62-8945-4c36-a6b9-8f3c92ea81e1",
+      "name": "Driver File Creation in Public Directory",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes",
+      "sao",
+      "pao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1068",
+    "mitre.t1014"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/02/09",
+  "lastUpdate": "2026-02-11T08:15:08.000Z"
+}

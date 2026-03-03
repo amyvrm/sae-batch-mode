@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3dbd129f-3c13-41ca-ae2c-f1ea5231d4ec",
+  "name": "AWS Configuration Recorder Stopped",
+  "description": "This rule identifies when the configuration recorder stops, which may hinder tracking of AWS resource changes. This interruption could compromise security and compliance.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Config Delivery Channel Deletion Detected",
+        "id": "bd91fb22-3823-440a-ac4a-4030ee3b4150",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "name": "AWS Config Recorder Stopping Detected",
+        "id": "22bc5f1b-b31a-4004-87bf-c4df4fb371d4",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/02/12",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

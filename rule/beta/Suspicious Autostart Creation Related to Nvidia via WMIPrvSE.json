@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "247e9c2e-755b-4f82-8709-0f327364ffa3",
+  "name": "Suspicious Autostart Creation Related to Nvidia via WMIPrvSE",
+  "description": "Detects suspicious autostart creation via WMIPrvSE related to Nvidia Open CL Binary which will load suspicious file.",
+  "filterSets": [
+    [
+      {
+        "id": "34eae763-c809-4f39-9de6-185f0bcc0de7",
+        "name": "Suspicious Autostart Creation Related to Nvidia via WMIPrvSE.",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/06/02",
+  "lastUpdate": "2025-06-10T06:04:49.000Z"
+}

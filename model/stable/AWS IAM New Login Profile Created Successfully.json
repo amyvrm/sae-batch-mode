@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "455e3179-51e3-4dde-87d0-0819be41210a",
+  "name": "AWS IAM New Login Profile Created Successfully",
+  "description": "A successful attempt to create new login profile for IAM user was detected .  By using this method, an adversary might be able to gain the same permissions ranging from no privilege  to full administrator access.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "0c7fe927-9b8d-4182-a91b-930e0d65318d",
+      "name": "AWS IAM Create Login Profile Attempt Successful",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078.004",
+    "mitre.t1098.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/09/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

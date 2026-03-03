@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f2282c61-c20b-4bc3-b269-95141447c846",
+  "name": "Hosting a Web Service via Microsoft Dev Tunnel",
+  "description": "Identifying the invocation of the devtunnel host command, which establishes a tunnel that may facilitate command and control or data exfiltration activities",
+  "filterSets": [
+    [
+      {
+        "id": "4f336851-549a-443f-891b-e019080d76cb",
+        "name": "Hosting a Web Service via Microsoft Dev Tunnel",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/01/15",
+  "lastUpdate": "2026-01-26T00:34:59.000Z"
+}

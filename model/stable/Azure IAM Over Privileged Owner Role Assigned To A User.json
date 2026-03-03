@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "93c72c00-0e78-4922-a6ae-a1bbdfb0612f",
+  "name": "Azure IAM Over Privileged Owner Role Assigned To A User",
+  "description": "This model detects successful assignment of over privileged Azure IAM Owner role to a user which may indicate an attacker trying to gain full control over all resources within the Azure subscription by escalating its privileges.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "f5946113-9747-4c44-beb8-f108e1cf7f6e",
+      "name": "Azure IAM Over Privileged Owner Role Assigned To A User",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2024/06/02",
+  "lastUpdate": "2025-07-16T07:28:13.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "46ac750a-fb93-46f2-97ce-e2ed816ba784",
+  "name": "[Heuristic Attribute] Obfuscated Files or Commands",
+  "description": "Detects possible obfuscated files or commands. Attackers may use obfuscation to make payloads harder to detect or analyze",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f8a7f705-68c4-4a15-82c9-f5151f6ae4c5",
+      "name": "[Heuristic Attribute] Obfuscated Files or Commands",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "pao",
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1027"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Inno Endriga",
+  "team": "TAD Service Ops",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

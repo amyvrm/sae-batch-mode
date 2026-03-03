@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "91b90973-a8c2-4446-8c41-134af37a670e",
+  "name": "Possible Windows Update Stack Privilege Escalation",
+  "description": "Adversaries may attempt to exploit the Windows Update Stack to escalate privileges. This activity is commonly associated with possible privilege escalation attacks where attackers exploit vulnerabilities in the Windows Update mechanism.",
+  "filterSets": [
+    [
+      {
+        "id": "940443e1-5788-4605-8177-4a822a2ee231",
+        "name": "Possible Windows Update Stack Privilege Escalation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/05/02",
+  "lastUpdate": "2025-05-08T06:56:38.000Z"
+}

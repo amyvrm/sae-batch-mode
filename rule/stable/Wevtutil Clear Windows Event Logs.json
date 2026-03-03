@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ab59681a-7821-4da8-b429-edac6ac68830",
+  "name": "Wevtutil Clear Windows Event Logs",
+  "description": "Microsoft Detection for Wevtutil Clear Windows Event Logs",
+  "filterSets": [
+    [
+      {
+        "id": "a3eea034-91e5-43f3-9504-6b35c1c6c04b",
+        "name": "Wevtutil Clear Windows Event Logs",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/05/28",
+  "lastUpdate": "2025-08-07T03:42:53.000Z"
+}

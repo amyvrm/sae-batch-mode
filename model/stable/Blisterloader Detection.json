@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "022b1f55-22fb-4956-b523-4dd44d9a4f42",
+  "name": "Blisterloader Detection",
+  "description": "Blisterloader Detections are commonly associated with ransomware activity.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "5231c95e-9119-4918-92b7-2db99697b73b",
+      "name": "Blisterloader Detection",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218.011"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/08/04",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

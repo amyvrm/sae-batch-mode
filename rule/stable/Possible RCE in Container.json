@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7eedce61-1644-41f0-999f-09d59650e554",
+  "name": "Possible RCE in Container",
+  "description": "Possible remote code execution using netcat.",
+  "filterSets": [
+    [
+      {
+        "id": "7dd3ed1d-e9f2-5a76-9178-45e52f8c99a1",
+        "name": "Remote Code Execution in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/01/31",
+  "lastUpdate": "2024-07-08T12:39:54.000Z"
+}

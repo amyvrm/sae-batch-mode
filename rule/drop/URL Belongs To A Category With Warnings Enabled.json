@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "58986864-3ff5-459c-b617-5a5a4167f405",
+  "name": "URL Belongs To A Category With Warnings Enabled",
+  "description": "Fortinet detection - URL belongs to a category with warnings enabled",
+  "filterSets": [
+    [
+      {
+        "id": "e8907a2a-90aa-4478-af1f-efcf667082b4",
+        "name": "URL Belongs To A Category With Warnings Enabled",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

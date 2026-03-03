@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6ff1e147-f33e-4c7b-9590-d39f0e531068",
+  "name": "Potential TCP SYN Flood",
+  "description": "Cisco detection for Potential TCP SYN Flood.",
+  "filterSets": [
+    [
+      {
+        "id": "965263b6-f4c5-5599-bcdf-b7fa30cc46a3",
+        "name": "Potential TCP SYN Flood",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-03T09:21:48.000Z"
+}

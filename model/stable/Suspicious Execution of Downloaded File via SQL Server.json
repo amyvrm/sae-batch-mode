@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6ac3a11c-14be-4eb0-b56e-ae2db762feaf",
+  "name": "Suspicious Execution of Downloaded File via SQL Server",
+  "description": "A suspicious file execution was triggered after file download via potentially compromised SQL Server",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0e355b4e-c20c-4ac4-bde1-93e46eceff99",
+      "name": "Suspicious Execution of Downloaded File via SQL Server",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1190"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Gaspar Jr Monoten",
+  "team": "TAD Service Ops",
+  "date": "2024/02/16",
+  "lastUpdate": "2024-03-19T02:36:47.000Z"
+}

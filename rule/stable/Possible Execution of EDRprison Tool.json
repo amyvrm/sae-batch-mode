@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1d812c6c-2864-4cad-8004-24185baf4490",
+  "name": "Possible Execution of EDRprison Tool",
+  "description": "Possible execution of EDRPrison files which can be used to disable EDR systems",
+  "filterSets": [
+    [
+      {
+        "id": "aca1b727-0339-4ff3-b9a6-935a7d961ab9",
+        "name": "Possible Execution of EDRPrison Tool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-03-28T04:27:56.000Z"
+}

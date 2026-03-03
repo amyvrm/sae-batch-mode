@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0b1a1ba3-f48c-4317-ac5c-2b688a8aa9db",
+  "name": "AWS RDS Unsuccessful Enumeration Attempt",
+  "description": "Detected unsuccessful AWS RDS enumeration which might indicate an attacker trying to collect information about critical database details, credentials, configurations, data content, and performance metrics which might help attackers to successfully breach databases in RDS.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "name": "AWS RDS Unsuccessful Describe DB Snapshots",
+      "id": "4b209bd4-89e0-4a13-bce1-5dafe59f5f70",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Unsuccessful Describe DB Cluster Snapshots",
+      "id": "cb8aebe3-7902-46a9-9aed-1b82402e9703",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Unsuccessful Describe DB Clusters",
+      "id": "6d782737-1cce-485e-9808-d3bf1a7c6e20",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Unsuccessful Describe DB Cluster Endpoints",
+      "id": "6bde440c-e734-4dfd-b084-be7f64e7d64d",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Unsuccessful Describe DB Instances",
+      "id": "687d579e-922b-49e1-b2e1-c305756322e9",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Unsuccessful Describe DB Security Group",
+      "id": "5e328435-1828-49ca-adb5-61c4a5e77288",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580",
+    "mitre.t1526"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/22",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

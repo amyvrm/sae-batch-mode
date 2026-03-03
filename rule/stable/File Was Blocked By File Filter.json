@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6d7d3373-4cd2-47c7-a335-c1fd2a12e709",
+  "name": "File Was Blocked By File Filter",
+  "description": "Fortinet detection - File was blocked by file filter",
+  "filterSets": [
+    [
+      {
+        "id": "f8676ba7-8bc4-485c-b896-f8bfc71fba43",
+        "name": "File Was Blocked By File Filter",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

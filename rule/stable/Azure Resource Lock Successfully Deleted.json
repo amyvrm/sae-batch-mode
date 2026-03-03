@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8ae57aad-06b0-4e1e-a563-f4cbc0ce5b3b",
+  "name": "Azure Resource Lock Successfully Deleted",
+  "description": "Detects deletion of Azure resource locks, which may indicate attempts to remove protections on critical resources before unauthorized or destructive actions.",
+  "filterSets": [
+    [
+      {
+        "id": "37d300f0-d8c6-46bd-9300-9b7e3aaf7c2a",
+        "name": "Azure Resource Lock Successfully Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Arun Shaji and Kim Folloso",
+  "team": "SAE Threat Expert",
+  "date": "2025/12/05",
+  "lastUpdate": "2025-12-10T03:46:00.000Z"
+}

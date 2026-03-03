@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c1420688-ba09-41b5-bfb9-55f1e03db191",
+  "name": "TCP Null Scan",
+  "description": "SonicWall Detection - Probable TCP NULL scan detected",
+  "filterSets": [
+    [
+      {
+        "id": "2415044e-cb89-424a-90e2-fafca3529b6f",
+        "name": "TCP Null Scan",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

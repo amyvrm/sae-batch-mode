@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "616c8032-23c4-4418-b5f5-06e91f5b2220",
+  "name": "ShadowDumper LSA Subsystem Service Injection via Remote Thread Creation",
+  "description": "Shadow Dumper is a powerful tool used to dump LSASS memory, often needed in penetration testing and red teaming. It uses multiple advanced techniques to dump memory, allowing to access sensitive data in LSASS memory.",
+  "filterSets": [
+    [
+      {
+        "id": "d5e6350f-9ff4-4ce2-b4c5-8331f404acff",
+        "name": "ShadowDumper LSASS Injection via Remote Thread Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2024-12-02T17:28:45.000Z",
+  "author": "Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2024/11/13"
+}

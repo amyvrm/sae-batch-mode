@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "477ad011-a691-4ff1-baa6-12852056d6ff",
+  "name": "AWS EC2 Network ACL Creation",
+  "description": "Detects the creation of a new Network ACL, which defines traffic control rules for a VPC subnet.",
+  "filterSets": [
+    [
+      {
+        "id": "fa48118c-05dc-425d-b041-5a8e3e37e4f2",
+        "name": "AWS EC2 Network ACL Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

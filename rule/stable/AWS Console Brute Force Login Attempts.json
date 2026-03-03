@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8341912c-21f2-4ab0-87c4-a5f63acd8987",
+  "name": "AWS Console Brute Force Login Attempts",
+  "description": "Detects brute force login attempts on AWS console login page.",
+  "filterSets": [
+    [
+      {
+        "id": "266b7ece-94da-4dee-847e-2f269018ef3c",
+        "name": "AWS Repeated Failed Login Attempts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "31faf7f0-f95c-4735-b1bb-784bf946983c",
+  "name": "Suspicious Hidden Powershell Download Event",
+  "description": "Detects potential malicious hidden powershell download event through a BunnyCDN (.b-cdn.net) domain which is recently being leveraged and utilized by InfoStealers such as LummaStealer to download and execute malicious payload which could lead to system compromise.",
+  "filterSets": [
+    [
+      {
+        "id": "d7a0129e-1cb0-45f6-9e99-37a037e3859e",
+        "name": "Possible Malicious Powershell Download Event",
+        "highlight": true
+      },
+      {
+        "id": "2c20bc2a-4a09-426e-8937-3ec2286dda7a",
+        "name": "Schedule BITS Job Via Powershell",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "d7a0129e-1cb0-45f6-9e99-37a037e3859e.processCmd equals 2c20bc2a-4a09-426e-8937-3ec2286dda7a.processCmd",
+      "d7a0129e-1cb0-45f6-9e99-37a037e3859e.objectRawDataStr equals 2c20bc2a-4a09-426e-8937-3ec2286dda7a.objectRawDataStr"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/10/31",
+  "lastUpdate": "2024-11-27T05:04:17.000Z"
+}

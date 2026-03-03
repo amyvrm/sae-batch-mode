@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f19400e0-38eb-4ff8-befd-cfebc224b491",
+  "name": "FTP PORT BOUNCE ATTACK",
+  "description": "SonicWall Detection - FTP PASV response bounce attack dropped",
+  "filterSets": [
+    [
+      {
+        "id": "eabb0909-4222-4aa0-8b02-eaabe748349c",
+        "name": "FTP PORT BOUNCE ATTACK",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

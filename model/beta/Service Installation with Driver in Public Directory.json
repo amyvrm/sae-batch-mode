@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b2c0f02f-56fc-4400-af21-498a56e5e094",
+  "name": "Service Installation with Driver in Public Directory",
+  "description": "A Windows service was installed with an ImagePath pointing to a driver file (.sys) in a public directory (C:\\Users\\Public). This behavior may indicate malicious driver installation for privilege escalation or defense evasion via BYOVD attacks.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8680c0e3-a809-4dd4-864b-e4cdfbb726cb",
+      "name": "Service Installation with Driver in Public Directory",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes",
+      "sao",
+      "pao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1068",
+    "mitre.t1543.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/02/09",
+  "lastUpdate": "2026-02-11T09:21:22.000Z"
+}

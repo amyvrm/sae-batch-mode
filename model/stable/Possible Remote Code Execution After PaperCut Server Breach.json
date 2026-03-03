@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c6779bf8-3cc4-11ee-be56-0242ac120002",
+  "name": "Possible Remote Code Execution After PaperCut Server Breach",
+  "description": "Detected authentication bypass vulnerability in PaperCut NG due to improper access control. An attacker can leverage this vulnerability to execute code remotely in the context of SYSTEM to fully compromise the Papercut NG server.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c67787da-3cc4-11ee-be56-0242ac120002",
+      "name": "PaperCut NG Authentication Bypass Vulnerability",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "19222352-9d4b-44df-b8e2-536ed65821b2",
+      "name": "Code Execution after Exploitation of Papercut Application",
+      "score": 2,
+      "sequence": 2
+    },
+    {
+      "id": "5ba59d2c-5784-11ee-8c99-0242ac120002",
+      "name": "PaperCut NG Authentication Bypass Detected From Server Logs",
+      "score": 1,
+      "sequence": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/08/17",
+  "lastUpdate": "2024-05-20T03:27:01.000Z"
+}

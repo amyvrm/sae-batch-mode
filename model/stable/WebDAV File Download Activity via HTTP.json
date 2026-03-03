@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cc093663-6b80-4663-80b4-ccb243104b33",
+  "name": "WebDAV File Download Activity via HTTP",
+  "description": "Network activity involving HTTP related to WebDAV was observed, indicating a successful file download operation.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c02706ca-ad73-4ada-867d-adc78ae9c168",
+      "name": "WebDAV File Download Activity via HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "threat.backdoor",
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/05/13",
+  "lastUpdate": "2025-06-03T03:45:53.000Z"
+}

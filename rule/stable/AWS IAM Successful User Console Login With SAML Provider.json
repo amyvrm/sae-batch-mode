@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3442a4d7-9b7b-46dc-8bee-62658d58e3fd",
+  "name": "AWS IAM Successful User Console Login With SAML Provider",
+  "description": "Detects a successful console login via a SAML identity provider, which may be a legitimate user action but is important to monitor, as in worst-case scenarios it could indicate an attacker exploiting misconfigured federation or stolen credentials to gain unauthorized access to AWS resources.",
+  "filterSets": [
+    [
+      {
+        "id": "4575e345-ebda-4d2f-b8f5-e7799560df14",
+        "name": "AWS IAM Successful User Console Login With SAML Provider",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/22",
+  "lastUpdate": "2025-08-22T08:41:48.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8d3888de-c40e-4d8e-9ded-5537bcb9f681",
+  "name": "File detection - Microsoft MSOFFICE",
+  "description": "Palo Alto File detection - Microsoft MSOFFICE",
+  "filterSets": [
+    [
+      {
+        "id": "eb634d6a-ff72-4929-b076-2dbb117e62fc",
+        "name": "File detection - Microsoft MSOFFICE",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

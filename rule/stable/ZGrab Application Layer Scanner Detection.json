@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b671668f-b12c-48c9-859c-affb777c6556",
+  "name": "ZGrab Application Layer Scanner Detection",
+  "description": "Palo Alto Networks detection for ZGrab Application Layer Scanner Detection. This signature indicates that an attacker is trying to collect information about the network by using the ZGrab Scanner.",
+  "filterSets": [
+    [
+      {
+        "id": "eb9b4779-a399-5e65-a41b-6e2e61a5e251",
+        "name": "ZGrab Application Layer Scanner Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2025/05/28",
+  "lastUpdate": "2025-05-30T05:17:52.000Z"
+}

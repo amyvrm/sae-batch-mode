@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4e484492-ca60-4431-afcb-11f519ae94b5",
+  "name": "Detected Unathorized Modification of BitLocker CLSID Key",
+  "description": "Detects registry value changes, key deletions, or accesses against the COM CLSID under HKECU\\SOFTWARE\\Classes\\CLSID\\{A7A63E5C-3877-4840-8727-C1EA9D7A4D50}, which may indicate COM hijacking or persistence activity.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "361176b3-52b2-4625-82bf-13ca2a1f8cd1",
+      "name": "Possible Unathorized Modification of BitLocker CLSID Key",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Rafael Pereira",
+  "team": "US-IR",
+  "date": "2025/12/08",
+  "lastUpdate": "2026-01-30T03:02:08.000Z"
+}

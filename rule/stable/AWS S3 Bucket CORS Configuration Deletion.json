@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b6c5ae33-13ac-4c26-844c-f797408897ce",
+  "name": "AWS S3 Bucket CORS Configuration Deletion",
+  "description": "Deletion of a bucket\u2019s CORS configuration may impact cross-origin access and could indicate an attempt to restrict or manipulate external access.",
+  "filterSets": [
+    [
+      {
+        "id": "2b54885d-03fa-4731-a15b-27a7da687b4e",
+        "name": "AWS S3 Bucket CORS Configuration Deletion",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8a9e327e-ca26-4843-ad5b-12ed5e75f72d",
+  "name": "AWS GuardDuty Successful Enumeration Attempt",
+  "description": "This model identifies successful attempts to enumerate GuardDuty detectors, configurations, and findings, potentially indicating reconnaissance activity.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "77274014-b5f3-48fe-9c91-97fb521901be",
+      "name": "AWS GuardDuty Successful Enumeration Attempt",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 10800,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christopher Ordonez & Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-08-01T07:06:38.000Z"
+}

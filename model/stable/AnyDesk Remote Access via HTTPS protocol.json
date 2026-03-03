@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d356e6c3-8a94-4127-9484-42d94f8c9dc1",
+  "name": "AnyDesk Remote Access via HTTPS protocol",
+  "description": "Remote access software using AnyDesk detected via HTTPS protocol",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2e553d5c-ac2a-403d-8f34-7e89b15b141e",
+      "name": "AnyDesk Remote Access via HTTPS protocol",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "tags": [
+    "mitre.t1219"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "CSG",
+  "date": "2024/02/29",
+  "lastUpdate": "2024-06-26T07:11:25.000Z"
+}

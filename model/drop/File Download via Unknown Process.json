@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5fbce05c-a923-48eb-a00b-c6a8850d248d",
+  "name": "File Download via Unknown Process",
+  "description": "An unrecognized process was observed downloading and creating an executable file. This activity may indicate a typical software installation or potential malicious activity.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "edf2f944-78e7-4e3b-9989-29ba7c300288",
+      "name": "File Download via Unknown Process",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Benson Sy",
+  "team": "SAE Threat Expert",
+  "date": "2025/08/15",
+  "lastUpdate": "2025-12-12T07:39:11.000Z"
+}

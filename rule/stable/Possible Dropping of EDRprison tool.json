@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "146f184a-2f1d-44b8-a650-44b5f46dcddd",
+  "name": "Possible Dropping of EDRprison Tool",
+  "description": "Possible dropping of EDRPrison files which can be used to disable EDR systems",
+  "filterSets": [
+    [
+      {
+        "id": "c094d380-0353-413a-a322-e5960514bd39",
+        "name": "Possible Dropping of EDRprison Tool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-03-28T04:27:56.000Z"
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "59ed48cf-f2cc-4487-a3e2-222cf9ae0717",
+  "name": "Potential Ransomware Activity Techniques",
+  "description": "Detects indicative behaviors of Warlock ransomware such as specific file extensions, ransom note placement, and process tree characteristics.",
+  "filterSets": [
+    [
+      {
+        "id": "243107d3-2fd2-43be-a72b-586f15726703",
+        "name": "Potential Ransomware Activity Techniques",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Bien Joshua Philip De Leon & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2025/10/09",
+  "lastUpdate": "2025-11-14T05:53:42.000Z"
+}

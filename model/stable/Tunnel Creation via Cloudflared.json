@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6d3b39c4-e135-4ccc-9004-07471d478a7f",
+  "name": "Tunnel Creation via Cloudflared",
+  "description": "Detects network tunnel creation using Cloudflared, which may be used for command and control communication, and data exfiltration",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "99f4585f-adc3-4224-a1a4-399fe04e24b2",
+      "name": "Tunnel Creation via Cloudflared",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1071.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mahmoud Soheem & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/02/26",
+  "lastUpdate": "2026-01-12T12:49:46.000Z"
+}

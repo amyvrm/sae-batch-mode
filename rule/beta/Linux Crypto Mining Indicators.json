@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d2a16b56-ddd4-4f77-80b1-da03b10622e7",
+  "name": "Linux Crypto Mining Indicators",
+  "description": "Detects command line parameters or strings often used by crypto miners.",
+  "filterSets": [
+    [
+      {
+        "id": "ed1ffa24-71c6-4736-af4b-5d66a30a00fa",
+        "name": "Linux Crypto Mining Indicators",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2025-02-25T16:16:00.000Z",
+  "author": "Sherif Magdy",
+  "team": "MENA-IR",
+  "date": "2025/02/25"
+}

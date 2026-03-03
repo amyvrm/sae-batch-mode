@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8c220d1b-15a1-426c-9e82-36189cabfa85",
+  "name": "Suspicious powershell parameters",
+  "description": "Suspicious powershell parameters detected by Machine Learning and Expert rule",
+  "filterSets": [
+    [
+      {
+        "id": "0413d324-816e-4b75-b55c-a849d386a12b",
+        "name": "Uncommon Powershell Parameters Used in Command Line",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds"
+    ]
+  ]
+}

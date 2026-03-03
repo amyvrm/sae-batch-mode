@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7d0a76fa-d033-49c6-957f-7557ecb408d4",
+  "name": "Suspicious Dll Sideloading from Compromised VPN Installer",
+  "description": "Suspicious DLL being sideloaded from the compromised VPN Installer",
+  "filterSets": [
+    [
+      {
+        "id": "0d7b5a46-4e19-4815-aa21-f4be97731217",
+        "name": "Suspicious Dll Sideloading from Compromised VPN Installer",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros and Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/01/24",
+  "lastUpdate": "2025-03-05T02:59:58.000Z"
+}

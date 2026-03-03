@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "50f0a22e-f123-48ee-a2fa-2cc18eda48c5",
+  "name": "Certificate Authentication without Recent History in Active Directory (on-premises)",
+  "description": "Certificate authentication by an account with no recent certificate usage history was detected in Active Directory (on-premises), which indicates possible account compromise.",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "6ab5bfbc-83d3-4ac8-ab66-8e48cfb33865",
+      "name": "Certificate Authentication without Recent History in Active Directory (on-premises)",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "opa"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078.002"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Hazel Kao",
+  "team": "Jaguar",
+  "date": "2025/11/13",
+  "lastUpdate": "2026-02-13T02:54:29.000Z"
+}

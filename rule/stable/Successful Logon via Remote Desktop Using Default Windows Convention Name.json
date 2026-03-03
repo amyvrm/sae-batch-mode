@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19fedbfc-70b0-48dc-81da-ba14fc42d025",
+  "name": "Successful Logon via Remote Desktop Using Default Windows Convention Name",
+  "description": "Successful logon via Remote Desktop from a host using the windows default convention name has been detected.",
+  "filterSets": [
+    [
+      {
+        "id": "b6094dff-24bf-4ff1-a573-41eb161fd3fa",
+        "name": "Successful Logon via Remote Desktop Using Default Windows Convention Name",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/05",
+  "lastUpdate": "2024-03-21T16:36:00.000Z"
+}

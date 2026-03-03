@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "59e92b43-26f8-4d24-9b02-da69145e631d",
+  "name": "Possible RDP via Outlook",
+  "description": "Identifies the download of an RDP file as an attachment, followed by an outbound RDP connection, which could indicate a rogue RDP session.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b8d20c75-6469-45e5-822c-df43bfb3e0a5",
+      "name": "Possible Connection to Rouge RDP Server",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.001",
+    "mitre.t1204.002",
+    "mitre.t1135"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mahmoud Soheem & Bahaa Yamany & Ahmed Hussein",
+  "team": "MENA-IR",
+  "date": "2024/11/11",
+  "lastUpdate": "2025-03-07T10:42:26.000Z"
+}

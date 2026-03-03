@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3dc8117f-4bd9-4a0a-be04-962e514627d2",
+  "name": "AWS IAM Assume Role Trust Policy Updated",
+  "description": "Modifies the trust relationship policy of an IAM role, potentially altering which principals can assume it.",
+  "filterSets": [
+    [
+      {
+        "id": "e70fd541-da30-47b4-91c9-ad2cded05ad7",
+        "name": "AWS IAM Assume Role Trust Policy Updated",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

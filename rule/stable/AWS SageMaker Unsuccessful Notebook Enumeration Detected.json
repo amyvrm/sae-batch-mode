@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ca8eb722-08ef-474c-82a1-2f1462119b91",
+  "name": "AWS SageMaker Unsuccessful Notebook Enumeration Detected",
+  "description": "Detects unsuccessful enumeration of notebooks in AWS SageMaker service, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "dde533e6-948e-4542-b1b6-0d703f992520",
+        "name": "AWS SageMaker Unsuccessful Notebook Enumeration Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/17",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

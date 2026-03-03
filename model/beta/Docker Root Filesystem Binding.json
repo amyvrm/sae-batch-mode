@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4ab58466-dda1-438d-bf7c-2acd868a204f",
+  "name": "Docker Root Filesystem Binding",
+  "description": "Detects the root directory of a host system mounted to a new container.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "2789b3a1-a68d-4c6d-871e-b48e0bfb947d",
+      "name": "Docker Root Filesystem Binding",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1610"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/03/21",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

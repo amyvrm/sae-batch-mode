@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2fa2c0b1-5c65-4c50-ac6e-190f189f4cb8",
+  "name": "Possible Malicious URL File Remote Code Execution",
+  "description": "Adversaries may exploit Web Distributed Authoring and Versioning (WEBDAV) with URL vulnerability to execute remote code on a victim's system. This tactic can be used for gaining remote access and control.",
+  "filterSets": [
+    [
+      {
+        "id": "b01946c0-a4dc-45d0-bd6c-747154689ffc",
+        "name": "Web Distributed Authoring and Versioning Remote Code Execution Vulnerability",
+        "highlight": true
+      },
+      {
+        "id": "5a4096fc-a8f9-4060-a08d-35137c174a88",
+        "name": "Suspicious File Access of Executable Binary in UNC Path",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/06/10",
+  "lastUpdate": "2025-06-16T20:20:37.000Z"
+}

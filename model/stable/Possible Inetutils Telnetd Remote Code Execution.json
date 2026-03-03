@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "71e8f48d-e96c-40fa-8e3c-51cc0af35472",
+  "name": "Possible Inetutils Telnetd Remote Code Execution",
+  "description": "Detects potential exploitation of the Inetutils telnetd service indicative of a remote code execution attempt on an endpoint. It correlates the rule signaling telnetd RCE behavior to flag a likely attack chain targeting the legacy Telnet service. Successful exploitation can grant attackers remote command execution and system control, making early detection critical to prevent compromise and lateral movement.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b8983aaa-4d59-4ac1-ab80-89d95dc05151",
+      "name": "Possible Inetutils Telnetd Remote Code Execution",
+      "score": 1
+    },
+    {
+      "id": "f5cdfd96-e7d9-4e2a-8f25-96ee281baa3b",
+      "name": "Telnetd GNU InetUtils Authentication Bypass Vulnerability",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1059.004",
+    "cve.2026.24061"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2026/01/27",
+  "lastUpdate": "2026-02-05T17:46:21.000Z"
+}

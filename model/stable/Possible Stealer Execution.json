@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b3a59913-69ee-4cb2-b081-90cecef344ab",
+  "name": "Possible Stealer Execution",
+  "description": "The payload is injected into the vbc.exe process, this behavior was observed by a set of samples related to Lummac Stealer",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "ade7feb7-48de-423b-9389-c1e183eee2fc",
+      "name": "Possible Stealer Execution",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2024/04/29",
+  "lastUpdate": "2026-01-21T15:19:11.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "24815ac4-57e9-41ee-8c99-0242ac120002",
+  "name": "TerraMaster TOS WebNasIPS WapNasIPS Usage",
+  "description": "Detects usage of the webNasIPS or wapNasIPS endpoint in Terramaster TOS products.",
+  "filterSets": [
+    [
+      {
+        "id": "ad0b428e-98f5-4315-92d1-6af0615e7f21",
+        "name": "TerraMaster_TOS WebNasIPS_WapNasIPS Usage",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2023/09/20",
+  "lastUpdate": "2024-05-14T07:14:32.000Z"
+}

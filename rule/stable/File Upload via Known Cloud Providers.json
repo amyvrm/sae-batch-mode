@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2f0fe86d-782e-45db-8bea-8ec4eda44a3a",
+  "name": "File Upload via Known Cloud Providers",
+  "description": "Detects uploading files to known cloud providers. Adversaries may exfiltrate data to a cloud storage service rather than over their primary command and control channel",
+  "filterSets": [
+    [
+      {
+        "id": "89fcb25c-651c-4c1d-98f8-00925b1b05e4",
+        "name": "File Upload via Known Cloud Providers",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/25",
+  "lastUpdate": "2024-10-28T20:41:18.000Z"
+}

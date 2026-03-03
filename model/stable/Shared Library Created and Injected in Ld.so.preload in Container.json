@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "47bb8e9d-1638-4f11-8932-f6204a7c914f",
+  "name": "Shared Library Created and Injected in Ld.so.preload in Container",
+  "description": "Shared library created and ld.so.preload updated. Can indicate code injection or privilege escalation within the containerized environment.",
+  "riskLevel": "high",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "8029aa00-126b-491a-9aec-ea5387631a62",
+      "name": "Shared Library Created and Injected in Ld.so.preload in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1574"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/10/13",
+  "lastUpdate": "2025-01-16T10:17:09.000Z"
+}

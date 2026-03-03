@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "214640b3-3841-4699-b0fd-672522bcd077",
+  "name": "Windows Defender Context Menu Removal",
+  "description": "Remove the \"Scan with Microsoft Defender\" option that appears when a user right-clicks on a file, folder, or drive.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "4f21b2c5-70ee-4b71-bd45-e5dbeb299933",
+      "name": "Windows Defender Context Menu Removal",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1112"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/11/13",
+  "lastUpdate": "2025-12-01T09:49:06.000Z"
+}

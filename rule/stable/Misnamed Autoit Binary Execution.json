@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8dbcf60d-4f23-4c56-950b-3b348617f13a",
+  "name": "Misnamed Autoit Binary Execution",
+  "description": "Detects when an executable is extracted from a large archive, subsequently drops AutoIt scripts, and proceeds to execute them. (Possible infostealer behavior)",
+  "filterSets": [
+    [
+      {
+        "id": "60c38521-0cd9-4179-adc1-60011efaf14b",
+        "name": "Execution of Misnamed Binary",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/01/23",
+  "lastUpdate": "2025-02-18T07:42:53.000Z"
+}

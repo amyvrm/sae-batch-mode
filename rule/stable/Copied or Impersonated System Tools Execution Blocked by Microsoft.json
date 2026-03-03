@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "130cde8b-456b-4dfc-a30c-2f51f5f2da19",
+  "name": "Copied or Impersonated System Tools Execution Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that blocks execution of duplicated or impersonated Windows system tools to prevent abuse of legitimate-looking binaries by malicious actors.",
+  "filterSets": [
+    [
+      {
+        "id": "5ebdff17-8653-4eb9-aa55-6a228b4886c6",
+        "name": "Copied or Impersonated System Tools Execution Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-21T03:31:42.000Z"
+}

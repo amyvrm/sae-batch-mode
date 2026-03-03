@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bc77acaf-7936-4bcb-b481-8c6489f9d22c",
+  "name": "Fileless Detection of a Commonly Abused Red Team Tool",
+  "description": "Detection of a fileless cobaltstrike beacon, detected by the predictive machine learning engine.",
+  "filterSets": [
+    [
+      {
+        "id": "c9a7b344-0cd0-43fc-87bf-e67eb27f4ecd",
+        "name": "Fileless Detection of a Commonly Abused Red Team Tool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "sao",
+      "pao"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/11/25",
+  "lastUpdate": "2026-01-05T14:19:25.000Z"
+}

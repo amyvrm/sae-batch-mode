@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a81dfd04-61bb-4494-b8d9-7be5fdbdbcd9",
+  "name": "NGioweb Botnet CnC Web Communication",
+  "description": "Detection for NGioweb botnet network traffic that reports affected endpoint to the Command and Control server",
+  "filterSets": [
+    [
+      {
+        "id": "37fd5586-0e36-41d0-aba7-83f89d1fe2aa",
+        "name": "NGioweb Botnet CnC Web Communication",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "28b4ae7d-53e6-4cce-8069-a7a1de1def5b",
+        "name": "Ngioweb Network Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "38e47a24-25d9-4b9a-b378-431c5a2487d0",
+        "name": "Ngioweb Runtime",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "pdi",
+      "sds",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-06-21T05:14:40.000Z"
+}

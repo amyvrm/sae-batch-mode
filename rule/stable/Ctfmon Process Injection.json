@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "866ed364-d68d-4ea0-8a60-149f240ddc89",
+  "name": "Ctfmon Process Injection",
+  "description": "Detection of process injection using ctfmon.exe",
+  "filterSets": [
+    [
+      {
+        "id": "9b6e06f9-871f-47af-8148-9b667a285b74",
+        "name": "Ctfmon Process Injection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/03/06",
+  "lastUpdate": "2024-03-11T11:35:59.000Z"
+}

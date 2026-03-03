@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cced5c46-9d3f-4533-995a-e6f2e9a4185b",
+  "name": "Suspicious Dropping of Vulnerable Kingsoft Antivirus Drivers",
+  "description": "Detects suspicious dropping of Kingsoft Antivirus drivers which is capable of terminating security agent processes and services.",
+  "filterSets": [
+    [
+      {
+        "id": "0a768dc2-a356-4566-9010-4a26c1a0f0f8",
+        "name": "Suspicious Dropping of Vulnerable Kingsoft Antivirus Drivers",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-03-19T09:17:49.000Z"
+}

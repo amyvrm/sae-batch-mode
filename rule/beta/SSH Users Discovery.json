@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ec19b6b2-bb92-41a9-b877-66b19660b33d",
+  "name": "SSH Users Discovery",
+  "description": "Detects SSH users discovery",
+  "filterSets": [
+    [
+      {
+        "id": "5a5ea8c8-cd37-4819-8df3-6f2276ddc3af",
+        "name": "SSH Directory Discovery via Find Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Josh Morrison",
+  "team": "Cloud One",
+  "date": "2022/12/30",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e49ec27a-c2ac-45fb-9e47-401433364ad5",
+  "name": "Suspicious PowerShell Command Line",
+  "description": "Microsoft Detection for Suspicious PowerShell Command Line",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "cdd51b85-c55d-41b5-a1bb-dc628d165d00",
+      "name": "Suspicious PowerShell Command Line",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 900,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/04/29",
+  "lastUpdate": "2025-07-28T20:43:16.000Z"
+}

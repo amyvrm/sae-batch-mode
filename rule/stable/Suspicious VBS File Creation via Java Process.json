@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "42af3d3b-782a-4754-970f-07f3b05616ee",
+  "name": "Suspicious VBS File Creation via Java Process",
+  "description": "Detects the creation of a VBS file via a Java process in Windows",
+  "filterSets": [
+    [
+      {
+        "id": "f0d8d756-5123-40bb-8e09-1c200e108124",
+        "name": "Suspicious VBS File Creation via Java Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2024-09-12T19:37:32.000Z"
+}

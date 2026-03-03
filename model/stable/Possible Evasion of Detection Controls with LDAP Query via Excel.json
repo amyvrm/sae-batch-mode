@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ad132bc9-b529-4b49-ba69-77383bb96b9e",
+  "name": "Possible Evasion of Detection Controls with LDAP Query via Excel",
+  "description": "Detects discovery activity using ldap query via excel to bypass detection controls.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d8889a31-f7b1-4beb-ae08-9d9e6f011f77",
+      "name": "Possible Evasion of Detection Controls with LDAP Query via Excel",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1087"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mahmoud Soheem & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/10/12",
+  "lastUpdate": "2025-12-29T15:17:38.000Z"
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7520ef2b-ccd3-4a34-ad6a-41eceebf71dc",
+  "name": "Possible Data Exfiltration via S5cmd",
+  "description": "Suspicious data upload to cloud resources using s5cmd",
+  "filterSets": [
+    [
+      {
+        "id": "32a76a90-ae3f-4202-8860-32d3e12d41a9",
+        "name": "Possible Data Exfiltration via S5cmd",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/09/12",
+  "lastUpdate": "2025-09-23T08:45:29.000Z"
+}

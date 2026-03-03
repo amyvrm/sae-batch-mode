@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "06e2f919-96f1-4cfd-a00f-a4722e549c49",
+  "name": "UAC bypass via CMSTP",
+  "description": "An attempt to bypass UAC to elevate privileges on the user systems",
+  "filterSets": [
+    [
+      {
+        "id": "438ca6bc-915d-4e53-8cf2-c55678c264e5",
+        "name": "UAC bypass via CMSTP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-01-10T05:40:49.000Z"
+}

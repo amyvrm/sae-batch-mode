@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "598e9d68-d14c-4258-bcd0-caca45df7aff",
+  "name": "Establishing Persistence via Scheduled Task Creation",
+  "description": "Detects the creation of a scheduled task named \"Skype Updater\" used to maintain persistence by executing a Visual Basic Script.",
+  "filterSets": [
+    [
+      {
+        "id": "b867a125-8554-4a98-896e-20d39c3ced2d",
+        "name": "Establishing Persistence via Scheduled Task Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Lance Albert Mendoza & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2025/09/17",
+  "lastUpdate": "2025-09-17T02:55:17.000Z"
+}

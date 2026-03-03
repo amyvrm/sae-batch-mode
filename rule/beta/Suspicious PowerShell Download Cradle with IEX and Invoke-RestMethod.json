@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19f5cf06-6385-4689-894d-30f5393efd9f",
+  "name": "Suspicious PowerShell Download Cradle with IEX and Invoke-RestMethod",
+  "description": "Detects PowerShell commands using Invoke-RestMethod (IRM) and Invoke-Expression (IEX) to download and execute payloads, a technique commonly leveraged by malware and threat actors for initial-stage payload delivery.",
+  "filterSets": [
+    [
+      {
+        "id": "dada6ec2-1149-4cff-b0c1-2c033b349aea",
+        "name": "Suspicious PowerShell Download Cradle with IEX and Invoke-RestMethod",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/12/09",
+  "lastUpdate": "2025-12-11T06:42:42.000Z"
+}

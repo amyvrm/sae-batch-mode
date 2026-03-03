@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "53bd0d3e-10e5-4248-bced-65e95ef1a813",
+  "name": "Suspicious Autostart Creation Related to Microsoft via WMIPrvSE",
+  "description": "Detects suspicious autostart creation via WMIPrvSE related to Microsoft Update Health Tools which will load suspicious file.",
+  "filterSets": [
+    [
+      {
+        "id": "e2fabec3-902e-4873-a2da-cc7dfd6c9cec",
+        "name": "Suspicious Autostart Creation Related to Microsoft via WMIPrvSE",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/06/02",
+  "lastUpdate": "2025-06-10T08:53:25.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ba6c1bba-1504-4435-a379-d93032e482b2",
+  "name": "AWS SSM Parameter Store Get Parameters",
+  "description": "Detects queries to AWS Systems Manager Agent (SSM) to extract parameter names and values from parameter store that generally contains sensitive data and might indicate an attacker trying to exfiltrate sensitive info like database passwords , connection urls , credentials , keys etc.",
+  "filterSets": [
+    [
+      {
+        "id": "25543730-e8e5-4bfa-add6-df9e29b94e65",
+        "name": "AWS SSM Parameter Store Get Parameters",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 86400,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/06",
+  "lastUpdate": "2025-10-15T07:53:18.000Z"
+}

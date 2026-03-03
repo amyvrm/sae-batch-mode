@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4a23c0ee-70e1-4fcb-aca4-27283b0fbcec",
+  "name": "Suspicious Process Execution via HFS",
+  "description": "Identified suspicious process executions via the HFS (HTTP File Server) binary.",
+  "filterSets": [
+    [
+      {
+        "id": "04f2de5e-87d3-45ad-9a8c-0ce7750adfb7",
+        "name": "Suspicious Process Execution via HFS",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/07/05",
+  "lastUpdate": "2024-07-22T17:36:45.000Z"
+}

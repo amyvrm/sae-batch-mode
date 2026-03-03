@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3e9b7544-87cf-4716-98c6-63450e36a671",
+  "name": "AWS IAM Successful Creation of a Role",
+  "description": "Detects the successful creation of a new IAM role, which may be part of normal operations but is important to monitor, as in worst-case scenarios it could indicate an attacker creating a backdoor account to maintain persistent unauthorized access in the AWS environment.",
+  "filterSets": [
+    [
+      {
+        "id": "58cf02f4-067e-4ceb-9a2b-3ad1c3e8a643",
+        "name": "AWS IAM Successful Creation of a Role",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/22",
+  "lastUpdate": "2025-08-22T08:41:48.000Z"
+}

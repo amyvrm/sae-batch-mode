@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3a5c4f10-376f-463d-85c8-6306e3ef3fd0",
+  "name": "Possible Cobalt Strike Connection",
+  "description": "Identified possible Cobaltsrike-related network traffic",
+  "filterSets": [
+    [
+      {
+        "id": "d79f6fde-c93a-492b-8f6b-37c1433d0f1b",
+        "name": "Possible Cobalt Strike Connection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "78506ced-9b8b-4fa8-9810-769f5788062b",
+        "name": "Cobalt Strike Beacon Request Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a47dbcf8-b54e-4108-8641-60b4a94c7ec6",
+        "name": "Cobalt Strike Server Response Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ec62bf36-a577-48fc-a17c-d2a948d19770",
+        "name": "Cobalt Strike Malleable C2 Profile Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cb00fe0e-22ba-4dd7-9596-20aa812d12ea",
+        "name": "Cobalt Strike Malleable C2 Profile Response Traffic",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "pdi",
+      "ptp",
+      "stp",
+      "xns"
+    ]
+  ],
+  "author": "Alvin Nieto",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2024-04-08T06:54:04.000Z"
+}

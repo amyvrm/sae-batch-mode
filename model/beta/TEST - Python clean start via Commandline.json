@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5a36aefc-244e-41e9-92e5-dd87c757d880",
+  "name": "TEST - Python clean start via Commandline",
+  "description": "Detects the creation python process creation with -Es parameter.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "15e2fc4f-1a00-4290-a32e-d3312c0f22ac",
+      "name": "TEST - Python clean start via Commandline",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/03/18",
+  "lastUpdate": "2025-05-07T06:22:43.000Z"
+}

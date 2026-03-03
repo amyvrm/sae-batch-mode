@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ba660bb4-6d8a-4ba0-86b5-d3792c588686",
+  "name": "Suspicious AnyDesk Installation leading to Privilege Escalation",
+  "description": "Detects suspicious AnyDesk download and installation that leads to account creation with elevated privileges from a potential malicious script.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "17fc6015-615c-49cf-92ca-f7511001821a",
+      "name": "New User Creation and Adding to Local Administrator Group",
+      "score": 1
+    },
+    {
+      "id": "3727f261-b864-405e-ac43-2f9fa51aab86",
+      "name": "Remote Access Tool - Downloading and Installation of AnyDesk via PowerShell Script",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1136.001",
+    "mitre.t1136.002",
+    "mitre.t1078.003",
+    "mitre.t1564.002",
+    "mitre.t1059.001",
+    "mitre.t1219"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/09/16",
+  "lastUpdate": "2024-09-25T01:38:37.000Z"
+}

@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5b3b8c5f-922e-4fef-b0aa-65e239e00017",
+  "name": "AWS EC2 Successful Enumeration Attempt",
+  "description": "Detected successful EC2 resources discovery indicating an attacker trying to enumerate EC2 resources.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "d468b473-ab42-48d6-a1fc-f127c46a34f2",
+      "name": "AWS EC2 Successful Specified Subnets Discovery",
+      "score": 1
+    },
+    {
+      "id": "ed34019d-da6a-456d-864a-8c736f5d9a8b",
+      "name": "AWS EC2 Successful Specified Host Described",
+      "score": 1
+    },
+    {
+      "id": "c743c28e-d3ae-11ed-afa1-0242ac120002",
+      "name": "AWS EC2 Successful Describe Instances",
+      "score": 1
+    },
+    {
+      "id": "7018abe8-0162-4c63-b24a-0269c818b1f4",
+      "name": "AWS EC2 Successful Specified Key Pair Discover",
+      "score": 1
+    },
+    {
+      "id": "13547e96-2458-4752-bc19-8f33ee94204e",
+      "name": "AWS EC2 Successful Specified Route Tables Discovery",
+      "score": 1
+    },
+    {
+      "id": "48a98203-9601-4ad7-8115-e9672092b26c",
+      "name": "AWS EC2 Successful Specified Security Groups Discovery",
+      "score": 1
+    },
+    {
+      "id": "4a704803-b31f-4324-b675-29472a43e83a",
+      "name": "AWS EC2 Successful Specified Snapshots Discovery",
+      "score": 1
+    },
+    {
+      "id": "515c58cd-41c0-474b-8f19-dceabdf9b0cd",
+      "name": "AWS EC2 Successful Specified Volumes Discovery",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 1000,
+    "dedupSeconds": 1000
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1082"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2025-09-04T09:31:24.000Z"
+}

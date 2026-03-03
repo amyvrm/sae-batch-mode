@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9581db4f-956e-4a6b-ba56-c4300e744b2f",
+  "name": "Active Server Page Extended ASPX File",
+  "description": "Palo Alto File detection - Active Server Page Extended ASPX File",
+  "filterSets": [
+    [
+      {
+        "id": "74e19fb7-78e6-4499-b0cc-e6379765d920",
+        "name": "Active Server Page Extended ASPX File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c743d72e-d3ae-11ed-afa1-0242ac120002",
+  "name": "AWS EC2 Possible Remote Code Execution Using SendCommand",
+  "description": "This model detects command execution by a user through aws cli using sendcommand on an EC2 Instance.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "c743e99e-d3ae-11ed-afa1-0242ac120002",
+      "name": "AWS Systems Manager SendCommand API Call",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580",
+    "mitre.t1210"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/04/05",
+  "lastUpdate": "2025-08-29T02:45:03.000Z"
+}

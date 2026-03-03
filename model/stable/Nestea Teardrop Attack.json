@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d4fbfe5f-4fd9-405e-ba9a-29904bf04b2d",
+  "name": "Nestea Teardrop Attack",
+  "description": "SonicWall Detection for Nestea/Teardrop attack dropped",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "93ac903e-48d4-4dcb-9a74-96cc5acd2fbd",
+      "name": "Nestea Teardrop Attack",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christian Jason Geollegue",
+  "team": "Third Party Operations",
+  "date": "2024/12/05",
+  "lastUpdate": "2025-09-02T10:21:52.000Z"
+}

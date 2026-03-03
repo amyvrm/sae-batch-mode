@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "70dee310-fb8a-495a-b098-1bc8077e0c2c",
+  "name": "Powershell WebClient Download after AMSI Bypass",
+  "description": "Detects powershell webclient download activitiy after performing AMSI Bypass",
+  "filterSets": [
+    [
+      {
+        "id": "c254e8ee-70c1-4c51-909d-968ebcdb4aaf",
+        "name": "Powershell AMSI Scan Bypass",
+        "highlight": true
+      },
+      {
+        "id": "1676d856-72c7-43d0-bf6f-ee79394dd97a",
+        "name": "Unconventional PowerShell Download Parameters",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c254e8ee-70c1-4c51-909d-968ebcdb4aaf",
+        "name": "Powershell AMSI Scan Bypass",
+        "highlight": true
+      },
+      {
+        "id": "d8233a3f-6a6e-452c-8492-8da403025ce6",
+        "name": "Suspicious File Download via Powershell AMSI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/03/21",
+  "lastUpdate": "2024-04-01T00:16:25.000Z"
+}

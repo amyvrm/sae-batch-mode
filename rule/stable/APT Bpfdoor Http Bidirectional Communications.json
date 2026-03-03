@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ca11e391-858c-4a6a-aa98-44fa3e4d240c",
+  "name": "APT Bpfdoor Http Bidirectional Communications",
+  "description": "Network activity involving inbound and outbound HTTP, which is a associated with BPFDoor, was detected",
+  "filterSets": [
+    [
+      {
+        "id": "8159a6fe-c76c-5386-adc6-0dc14c80e46b",
+        "name": "APT Bpfdoor HTTP (Request) - Inbound",
+        "highlight": true
+      },
+      {
+        "id": "ccad5931-434d-5dd7-8480-5a98065a8414",
+        "name": "APT Bpfdoor HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2025/08/25",
+  "lastUpdate": "2025-11-19T07:13:34.000Z"
+}

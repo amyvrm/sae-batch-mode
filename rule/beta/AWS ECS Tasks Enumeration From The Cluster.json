@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e64d2ae7-8811-455d-a2d1-04b8df893540",
+  "name": "AWS ECS Tasks Enumeration From The Cluster",
+  "description": "This Rule detects enumeration of tasks from the AWS cluster.",
+  "filterSets": [
+    [
+      {
+        "id": "7fa829f2-90cc-4d3e-853f-3d97eadb5d10",
+        "name": "AWS ECS Tasks Enumeration From The Cluster",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/06",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

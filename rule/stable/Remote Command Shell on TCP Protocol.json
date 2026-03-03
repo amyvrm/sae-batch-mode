@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8db558bb-45dc-4bca-87a9-1da0f449e4a6",
+  "name": "Remote Command Shell on TCP Protocol",
+  "description": "Network activity involving TCP, which is associated with remote command shell, was detected.",
+  "filterSets": [
+    [
+      {
+        "id": "4fde568a-8cce-455c-aabb-5f0dcdc24529",
+        "name": "Remote Command Shell on TCP Protocol",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Bersamira",
+  "team": "DDI",
+  "date": "2025/08/07",
+  "lastUpdate": "2025-08-07T05:46:00.000Z"
+}

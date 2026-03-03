@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "id": "10dbe375-dee3-46c8-8545-bf380546f73c",
+  "name": "Malicious File Downloaded by a User via HTTP",
+  "description": "Microsoft and Trend Micro Combined Detection for Malicious File Downloaded by a User via HTTP",
+  "scope": "endpoint",
+  "riskLevel": "high",
+  "rules": [
+    {
+      "id": "f85e0b0e-65e6-46ca-a366-f8dbd7483ff3",
+      "name": "Suspicious File Download Activity Identified via Microsoft Telemetry",
+      "score": 1
+    },
+    {
+      "id": "fa58c2bd-33c2-4b2d-99d3-bc6f641b42c9",
+      "name": "Malware-Related Network Traffic via HTTP Request",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 8000,
+    "dedupSeconds": 8000
+  },
+  "condition": [
+    [
+      "f85e0b0e-65e6-46ca-a366-f8dbd7483ff3.requests contains fa58c2bd-33c2-4b2d-99d3-bc6f641b42c9.hostName"
+    ],
+    [
+      "f85e0b0e-65e6-46ca-a366-f8dbd7483ff3.endpointHostName contains fa58c2bd-33c2-4b2d-99d3-bc6f641b42c9.interestedHost"
+    ],
+    [
+      "f85e0b0e-65e6-46ca-a366-f8dbd7483ff3.src contains fa58c2bd-33c2-4b2d-99d3-bc6f641b42c9.interestedIp"
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "tlc|Microsoft",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/07/17",
+  "lastUpdate": "2025-11-05T04:18:28.000Z"
+}

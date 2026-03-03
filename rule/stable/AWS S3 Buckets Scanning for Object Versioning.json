@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "35271edb-6720-44cc-ab5d-28e5b221a995",
+  "name": "AWS S3 Buckets Scanning for Object Versioning",
+  "description": "Detected AWS S3 Buckets Scanning for Object Versioning.",
+  "filterSets": [
+    [
+      {
+        "id": "6fe16572-70c2-4351-aed2-7e0adcbfcce0",
+        "name": "AWS S3 Buckets Scanning for Object Versioning",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

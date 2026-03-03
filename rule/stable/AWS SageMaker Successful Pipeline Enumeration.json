@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8b0b0ef4-6ed1-4e2c-88ee-d07220b7b103",
+  "name": "AWS SageMaker Successful Pipeline Enumeration",
+  "description": "Detects successful enumeration of pipelines in AWS SageMaker service, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "25b72c92-7ecf-4367-9bd0-b2b3427bdeab",
+        "name": "AWS SageMaker Successful Pipeline Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/17",
+  "lastUpdate": "2026-01-19T02:05:18.000Z"
+}

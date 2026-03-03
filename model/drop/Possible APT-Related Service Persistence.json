@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c17c2104-2026-4229-b2d0-ab85d442c104",
+  "name": "Possible APT-Related Service Persistence",
+  "description": "Detection for creating Service Persistence for Earth Estries.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0a806e42-cf8e-45ca-ade5-0347438ad32a",
+      "name": "Suspicious DLL Loading via MsiExec",
+      "score": 2
+    },
+    {
+      "id": "72a75ed7-99ee-4a93-8afb-b3decc939eb7",
+      "name": "Creation of APT-Related Service Persistence",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1001",
+    "mitre.t1007"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gerardo III Jonieca & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/13",
+  "lastUpdate": "2025-11-11T08:26:35.000Z"
+}

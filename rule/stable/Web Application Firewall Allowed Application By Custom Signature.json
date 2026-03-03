@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9bbeb3bb-b76c-4d97-8dff-47009a188b2f",
+  "name": "Web Application Firewall Allowed Application By Custom Signature",
+  "description": "Fortinet detection - Web application firewall allowed application by custom signature",
+  "filterSets": [
+    [
+      {
+        "id": "b4409089-35a6-4e69-a149-eeb36555abbc",
+        "name": "Web Application Firewall Allowed Application By Custom Signature",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

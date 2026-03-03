@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3d6a8fb3-5379-4c4d-9b16-48caa8bdeaee",
+  "name": "Safe Mode Reboot Attempt Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that prevents processes from triggering a reboot into Safe Mode where security defenses might be disabled.",
+  "filterSets": [
+    [
+      {
+        "id": "0dc4635c-b9db-402b-831c-06fe8ed009c7",
+        "name": "Safe Mode Reboot Attempt Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-14T08:49:59.000Z"
+}

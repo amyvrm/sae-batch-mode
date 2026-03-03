@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "95177f81-c043-4728-ab7e-29e1cf00a432",
+  "name": "AMSI Script Identified by Microsoft",
+  "description": "Microsoft Detection for AMSI Script Identified by Microsoft",
+  "filterSets": [
+    [
+      {
+        "id": "9d4d6e52-7fb3-4b1c-94ba-2edc658b1778",
+        "name": "AMSI Script Identified by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/05/28",
+  "lastUpdate": "2025-06-24T10:20:04.000Z"
+}

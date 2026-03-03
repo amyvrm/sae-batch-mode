@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cbcd20f3-2093-475d-91c9-7aa609e3ec70",
+  "name": "SSH Connection via Plink from a Misnamed AutoIT Script",
+  "description": "Detects potential reverse SSH tunnel event via Plink (PuTTy Link) from a suspicious AutoIT script which could lead to system compromise if file is not expected or known.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "19224a3a-753f-44c1-9831-3664b663bdea",
+      "name": "SSH Connection via Plink from a Misnamed AutoIT Script",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.004",
+    "mitre.t1572",
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/09/24",
+  "lastUpdate": "2024-10-24T05:21:28.000Z"
+}

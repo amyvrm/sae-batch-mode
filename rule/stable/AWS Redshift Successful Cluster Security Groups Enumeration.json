@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2ce3e3a4-f2d0-4f1d-b6c2-1cd2e38f80d8",
+  "name": "AWS Redshift Successful Cluster Security Groups Enumeration",
+  "description": "Detects attempts to list Redshift cluster security groups, which may indicate reconnaissance for security misconfigurations.",
+  "filterSets": [
+    [
+      {
+        "id": "e0130f7f-f8f2-45e6-9618-775c8a8756ed",
+        "name": "AWS Redshift Successful Cluster Security Groups Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

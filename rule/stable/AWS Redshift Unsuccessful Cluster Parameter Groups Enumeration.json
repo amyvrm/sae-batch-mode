@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ff07a071-d36c-456c-b42d-ec235672ab4d",
+  "name": "AWS Redshift Unsuccessful Cluster Parameter Groups Enumeration",
+  "description": "Detects unsuccessful enumeration of Redshift cluster parameter groups, which may indicate reconnaissance.",
+  "filterSets": [
+    [
+      {
+        "id": "aca5cf81-c50e-4f16-a203-c8d6cef9386c",
+        "name": "AWS Redshift Unsuccessful Cluster Parameter Groups Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

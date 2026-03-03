@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "95606fc2-a84f-4da2-8dc6-cfba59527c36",
+  "name": "AWS IAM Create New Access Key",
+  "description": "Detected the creation of new access key for an IAM user which might indicate an attacker trying to persist in the AWS env and might use this key to further carry out other attacks in the account.",
+  "filterSets": [
+    [
+      {
+        "id": "ea9733c7-26d3-4255-9776-3540587d5a7a",
+        "name": "AWS IAM Create New Access Key",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/09/16",
+  "lastUpdate": "2025-10-15T07:53:18.000Z"
+}

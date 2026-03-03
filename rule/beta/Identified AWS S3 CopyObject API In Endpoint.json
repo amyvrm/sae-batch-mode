@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ac2a3b1f-0ca9-4048-885d-f625dc95e1ec",
+  "name": "Identified AWS S3 CopyObject API In Endpoint",
+  "description": " Detects the AWS api call to upload or download a malicious object. Adversaries may abuse AWS S3 service to deliver a malware attack.",
+  "filterSets": [
+    [
+      {
+        "id": "3ebb5eb7-d88f-474a-b8c7-4ce7e13ebc5b",
+        "name": "Identified AWS S3 CobyObject API In Endpoint",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/06/15",
+  "lastUpdate": "2024-06-24T08:41:58.000Z"
+}

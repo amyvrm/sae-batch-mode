@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "41bd2d55-6d2d-437b-8c61-ad6d2e363236",
+  "name": "Possible Persistence via Mandatory User Profile File",
+  "description": "An NTUSER.MAN file was created within a user profile directory. This file type represents a mandatory user profile that takes precedence over NTUSER.DAT during logon. Attackers can abuse this mechanism to achieve persistence by placing a malicious NTUSER.MAN file that loads attacker-controlled registry settings whenever the user logs in.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e4d757c9-7980-42e2-984a-2e80eaf1f874",
+      "name": "Possible Persistence via Mandatory User Profile File",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1547.001",
+    "mitre.t1112"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Peligey Rufus & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2026/01/26",
+  "lastUpdate": "2026-02-09T00:41:29.000Z"
+}

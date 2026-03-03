@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ee68badf-a04b-4a41-9a0e-97b6a1c146bd",
+  "name": "Persistence via Wmiexec Hacking Tool Usage",
+  "description": "Detects command execution related to the Impacket WMIExec utility to obtain persistence.",
+  "filterSets": [
+    [
+      {
+        "id": "2070aca7-b71f-4c8d-9fd2-f99538a3e1a8",
+        "name": "Autorun Registry Key Creation via Wmiexec Script Usage",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fac83acc-6199-49d2-b26e-06f9ee2eef7c",
+        "name": "Scheduled Task Creation via Wmiexec Script Usage",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e38d9c7d-61cc-4351-a20b-9279c42882ab",
+        "name": "User Account Creation via Wmiexec Script Usage",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "sao"
+    ]
+  ],
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2024/06/26",
+  "lastUpdate": "2024-07-26T08:22:42.000Z"
+}

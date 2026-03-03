@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2f47c59a-e075-4d3a-894c-e347465d84e0",
+  "name": "Suspicious PowerShell Cmdlets In AMSI Log",
+  "description": "Detects Cmdlet names from PowerView of the PowerSploit exploitation framework.",
+  "filterSets": [
+    [
+      {
+        "id": "5075f0c6-5003-4237-a988-dcdd238f30ed",
+        "name": "Suspicious PowerShell Cmdlets In AMSI Log",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/11/17",
+  "lastUpdate": "2024-12-05T15:15:20.000Z"
+}

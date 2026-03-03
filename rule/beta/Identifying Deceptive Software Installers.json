@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "df59fd4f-bc42-4488-8dc1-03a30b91e6fb",
+  "name": "Identifying Deceptive Software Installers",
+  "description": "Detects suspicious activities related to fake software installers that distribute malware",
+  "filterSets": [
+    [
+      {
+        "id": "c668adae-f6e5-4ad4-97ba-3c0289d8e921",
+        "name": "Identifying Deceptive Software Installers",
+        "highlight": false
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Bien Joshua Philip De Leon & Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2025/01/20",
+  "lastUpdate": "2025-08-14T05:00:05.000Z"
+}

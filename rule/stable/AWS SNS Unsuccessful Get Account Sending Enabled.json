@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7e470c1a-e01f-470a-bec3-2c514e6ae46c",
+  "name": "AWS SNS Unsuccessful Get Account Sending Enabled",
+  "description": "An unsuccessful attempt to get SMS Sandbox account status was observed.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS SNS Unsuccessful Get SMS Sandbox Account Status",
+        "id": "1ea53fe1-f6b4-46bc-8f16-dc56572dd0ef",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2023/11/21",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

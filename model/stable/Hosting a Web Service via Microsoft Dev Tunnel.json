@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "563cb53b-73f0-40d7-be73-8fc2f923ad5b",
+  "name": "Hosting a Web Service via Microsoft Dev Tunnel",
+  "description": "Identifying the invocation of the devtunnel host command, which establishes a tunnel that may facilitate command and control or data exfiltration activities",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f2282c61-c20b-4bc3-b269-95141447c846",
+      "name": "Hosting a Web Service via Microsoft Dev Tunnel",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1041"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/01/15",
+  "lastUpdate": "2026-02-09T00:40:32.000Z"
+}

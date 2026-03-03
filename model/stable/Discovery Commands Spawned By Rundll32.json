@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "06012bc6-160e-4232-b9ae-7c2a46576c03",
+  "name": "Discovery Commands Spawned By Rundll32",
+  "description": "Detection of suspect discovery commands from rundll32",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c0d177db-5fbe-4653-b3b9-4f941c6c6d93",
+      "name": "Discovery Commands Spawned By Rundll32",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1082",
+    "mitre.t1482"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/01/03",
+  "lastUpdate": "2025-02-14T07:40:54.000Z"
+}

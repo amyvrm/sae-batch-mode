@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "998f7102-8ebc-4cb9-9337-f9ba942f548c",
+  "name": "Exfiltration over PowerShell to Webhook",
+  "description": "This detection identifies potential data exfiltration activities via PowerShell scripting in a Windows environment. PowerShell commands, such as 'Invoke-WebRequest' and 'Invoke-RestMethod', are commonly seen during the exfiltration phase of an attack where data is sent to external webhooks or cloud services. The script monitors the usage of these commands in conjunction with keywords like 'webhook', 'discordapp.com', and 'telegram.org' to identify potential misuse. If such activity is detected, it could indicate an attacker attempting to send sensitive data to external recipients. This behavior warrants further investigation to determine the legitimacy of the activity.",
+  "filterSets": [
+    [
+      {
+        "id": "a660d019-3cd0-468c-bb74-6cb5105a0e16",
+        "name": "Exfiltration over PowerShell to Webhook",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/12/01",
+  "lastUpdate": "2025-12-22T16:26:32.000Z"
+}

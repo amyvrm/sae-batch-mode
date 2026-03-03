@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "60b2ea7e-f15b-4bf7-abde-0ad449bbfbe3",
+  "name": "Clfs.SYS Loaded by Process in Unusual Location",
+  "description": "Detects the loading of Clfs.sys by a process running from a potentially suspicious location. Clfs.sys is commonly exploited in various CVEs targeting the Common Log File System.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8aaba3ff-a232-41c4-af4b-4063e994e8dd",
+      "name": "Clfs.SYS Loaded by Process in Unusual Location",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1649"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gabriel Cardoso",
+  "team": "US-IR",
+  "date": "2025/09/09",
+  "lastUpdate": "2025-09-10T19:43:03.000Z"
+}

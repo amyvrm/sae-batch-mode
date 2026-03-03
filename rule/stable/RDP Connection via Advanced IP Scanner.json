@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5a1b33dc-5334-46f0-8ea7-501ddc6bcc9a",
+  "name": "RDP Connection via Advanced IP Scanner",
+  "description": "Suspicious remote desktop connection using the Advanced IP Scanner RDP functionality.",
+  "filterSets": [
+    [
+      {
+        "id": "2fc4df66-5d37-478f-8b92-2099eb1bc548",
+        "name": "RDP Connection via Advanced IP Scanner",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/08/15",
+  "lastUpdate": "2025-08-27T03:16:52.000Z"
+}

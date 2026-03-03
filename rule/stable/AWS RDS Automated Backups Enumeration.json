@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9dc4a5d5-61ae-4c72-bf8a-7bad6c295609",
+  "name": "AWS RDS Automated Backups Enumeration",
+  "description": "Detects attempts to list automated backups of RDS instances, which may indicate reconnaissance for exfiltrating database backups.",
+  "filterSets": [
+    [
+      {
+        "id": "776ac0b7-a2f4-4685-a11d-945e2c498e82",
+        "name": "AWS RDS Automated Backups Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/03/10",
+  "lastUpdate": "2025-07-28T08:21:42.000Z"
+}

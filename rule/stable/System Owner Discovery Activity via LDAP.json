@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "51c91803-74e3-4e22-9195-92a7cfc43c44",
+  "name": "System Owner Discovery Activity via LDAP",
+  "description": "Network activity involving LDAP, associated with the behavior of discovering System Owner or User Accounts.",
+  "filterSets": [
+    [
+      {
+        "id": "ee2e2788-0ead-53fa-ab53-4fb17a803e3c",
+        "name": "System Owner Discovery LDAP (Request) - Inbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-03-17T07:12:55.000Z"
+}

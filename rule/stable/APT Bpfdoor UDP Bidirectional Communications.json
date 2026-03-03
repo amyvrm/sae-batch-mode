@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aaa26582-c8ea-4e97-89dd-3d8132c516c9",
+  "name": "APT Bpfdoor UDP Bidirectional Communications",
+  "description": "Network activity involving inbound and outbound UDP, which is a associated with BPFDoor, was detected",
+  "filterSets": [
+    [
+      {
+        "id": "20d565ac-8eb7-5791-886d-883fd12116cd",
+        "name": "APT Bpfdoor UDP - Inbound",
+        "highlight": true
+      },
+      {
+        "id": "b4531f45-1e9a-5f8e-b8be-a865ad10f96d",
+        "name": "APT Bpfdoor UDP - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2025/08/25",
+  "lastUpdate": "2025-11-25T06:51:19.000Z"
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "77d7998d-8cef-4c3e-b766-9b0913e5e0e4",
+  "name": "ADLOAD PUA installing MitmProxy certificates",
+  "description": "MitmProxy certificates are drooped to special location, and are installed as trusted certificate",
+  "filterSets": [
+    [
+      {
+        "id": "d24639d8-3332-4b50-b426-63a75177653a",
+        "name": "Drop Mitmproxy Certificate",
+        "highlight": true
+      },
+      {
+        "id": "bcab4528-4501-4eba-8498-481499a1d093",
+        "name": "Insert Mitmproxy Certificate",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Steven Du",
+  "team": "MacTRT",
+  "date": "2021/01/11",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

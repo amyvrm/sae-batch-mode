@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "id": "381866f5-f746-468d-b562-84af2a81e605",
+  "name": "Malicious Command Injection Via Deep Security Agent",
+  "description": "Detects potentially suspicious OS command injection via deep security agent",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "33925f41-aa88-49c0-8435-f27ea5c12891",
+      "name": "Malicious Remote Manual Scan Command Injection Via Deep Security Agent",
+      "score": 10
+    },
+    {
+      "id": "8add41ce-6937-435a-83bb-5735bb961915",
+      "name": "Possible Unauthorized Access on Remote Host Via SMB Client NamedPipe",
+      "score": 1
+    },
+    {
+      "id": "83ba0be0-28a1-49bd-adeb-441494ae3bb0",
+      "name": "Execution of Remote System Discovery Command",
+      "score": 1
+    },
+    {
+      "id": "96585e88-2d02-47c5-84ac-fe26c203bbb4",
+      "name": "Process Discovery",
+      "score": 1
+    },
+    {
+      "id": "dd4398df-8445-4229-a181-25e854ac3c2a",
+      "name": "Execution of System Information Discovery Command",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 11,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1613"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/06/11",
+  "lastUpdate": "2025-10-30T06:54:31.000Z"
+}

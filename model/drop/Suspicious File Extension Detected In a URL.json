@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ec7d02e9-d5dd-43ff-aff4-b8b2b70020de",
+  "name": "Suspicious File Extension Detected In a URL",
+  "description": "Detects suspicious file extensions on high-risk labeled URLs based on Palo Alto URL category.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "03b061db-c678-4961-bcaf-464ea3a4ee7a",
+      "name": "Suspicious File Extension Detected In a URL",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [
+    "mitre.t1204",
+    "mitre.t1204.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2025/05/07",
+  "lastUpdate": "2025-06-24T02:18:54.000Z"
+}

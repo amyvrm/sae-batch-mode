@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f55bc96a-ce43-4e93-8fa8-8f044dfe2f5a",
+  "name": "Possible Sensitive Files Access for Impact",
+  "description": "Possible Collection of Sensitive Files",
+  "filterSets": [
+    [
+      {
+        "id": "360162be-6527-58da-8d34-f462a306b26f",
+        "name": "Multiple Sensitive Files Modification",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ba065572-2e79-5992-8932-1bdbfc3c0e19",
+        "name": "Multiple Sensitive Files Deletion",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "ddr"
+    ]
+  ],
+  "author": "ddr",
+  "team": "ddr",
+  "date": "2024/12/11",
+  "lastUpdate": "2025-01-09T05:15:23.000Z"
+}

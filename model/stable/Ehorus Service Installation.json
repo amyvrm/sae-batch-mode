@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "231eafa1-43f6-4d3e-89a0-2b5dfd0064bc",
+  "name": "Ehorus Service Installation",
+  "description": "Ehorus is a remote admin tool. It can be abused by an attacker to remotely control the victim's environment.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0d121981-51e4-43ec-8e31-37a1fc292746",
+      "name": "Ehorus Service Installation",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1219"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Bahaa Yamany & Jack Walsh",
+  "team": "MENA-IR",
+  "date": "2023/10/02",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

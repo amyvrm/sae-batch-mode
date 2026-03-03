@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "722642d8-d396-4e10-b2dd-0135cf9ef81a",
+  "name": "Active Directory Reconnaissance via ADRecon",
+  "description": "Attempts to recon Active Directory using ADRecon.ps1",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0545e7a4-c173-481a-9e19-2aab84e0603c",
+      "name": "Active Directory Reconnaissance via ADRecon",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1087"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Toru Yamashige",
+  "team": "JP-IR",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

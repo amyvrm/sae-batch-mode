@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ac754e4e-436a-4dce-b9aa-59d3f4e0948a",
+  "name": "Possible C2 Channel Communication via Known Chat Application",
+  "description": "Detects possible C2 communication via known chat application. Adversaries may leverage known chat application APIs for C2 operations and data exfiltration via embedding their malicious communications within legitimate web protocols to avoid detection",
+  "filterSets": [
+    [
+      {
+        "id": "0fe90672-395d-4624-b57f-9a99ee185090",
+        "name": "Possible C2 Channel via Chat Application Script",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/25",
+  "lastUpdate": "2025-10-01T07:09:57.000Z"
+}

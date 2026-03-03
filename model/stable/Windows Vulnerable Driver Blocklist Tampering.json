@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d181eb76-f396-4de5-a821-0e4cf6085ecd",
+  "name": "Windows Vulnerable Driver Blocklist Tampering",
+  "description": "Detects when the Windows Vulnerable Driver Blocklist is disabled via the windows registry.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "78da51db-ce82-46e0-bf1c-ea6e5be512a2",
+      "name": "Windows Vulnerable Driver Blocklist Tampering",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2026/01/06",
+  "lastUpdate": "2026-01-30T20:46:45.000Z"
+}

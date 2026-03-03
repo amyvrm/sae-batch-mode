@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "097e40a0-0a5e-4842-afff-78f471c24dc0",
+  "name": "Suspicious Network Activity in Container",
+  "description": "Detects suspicious network activity.",
+  "filterSets": [
+    [
+      {
+        "id": "b3507f7c-57af-5a16-80b2-d3dad465a361",
+        "name": "Suspicious Network Activity in the Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ebabd4a7-70a6-5a71-a9e0-3b46be91ad4b",
+        "name": "Possible IRC in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/02/22",
+  "lastUpdate": "2023-10-10T08:55:11.000Z"
+}

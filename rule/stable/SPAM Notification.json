@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9c6b0b98-5d4c-4de4-bb1a-98d42d041154",
+  "name": "SPAM Notification",
+  "description": "Fortinet detection - SPAM notification",
+  "filterSets": [
+    [
+      {
+        "id": "6abcf62a-9d07-472c-be99-00a54b80be70",
+        "name": "SPAM Notification",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

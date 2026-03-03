@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0e355b4e-c20c-4ac4-bde1-93e46eceff99",
+  "name": "Suspicious Execution of Downloaded File via SQL Server",
+  "description": "A suspicious file execution was triggered after file download via potentially compromised SQL Server",
+  "filterSets": [
+    [
+      {
+        "id": "0a7c708a-08f8-41b3-85a6-0d239480a924",
+        "name": "File Dropping of Sqlservr.exe in Uncommon Folder",
+        "highlight": true
+      },
+      {
+        "id": "e2e03e8d-5b5d-400c-a11c-ba0a8c2310be",
+        "name": "Temporary Binary File Execution via Powershell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0a7c708a-08f8-41b3-85a6-0d239480a924",
+        "name": "File Dropping of Sqlservr.exe in Uncommon Folder",
+        "highlight": true
+      },
+      {
+        "id": "d68e6ed0-ffe8-4057-ac24-3c003287bb77",
+        "name": "WMI Execute Local Or Remote Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "0a7c708a-08f8-41b3-85a6-0d239480a924.parentPid equals d68e6ed0-ffe8-4057-ac24-3c003287bb77.parentPid"
+    ],
+    [
+      "0a7c708a-08f8-41b3-85a6-0d239480a924.parentPid equals e2e03e8d-5b5d-400c-a11c-ba0a8c2310be.parentPid"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Gaspar Jr Monoten",
+  "team": "TAD Service Ops",
+  "date": "2024/02/16",
+  "lastUpdate": "2024-02-29T03:07:02.000Z"
+}

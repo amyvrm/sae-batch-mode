@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "50b4fd75-d57a-41bf-b7ec-5f644cbbadcf",
+  "name": "AWS EventBridge Cross Account Target Has Been Set",
+  "description": "Detects the creation or update of an AWS EventBridge rule target that sets a cross-account event bus as a destination, which might indicate an attacker trying to perform reconnaissance on the events, exfiltration to attacker controlled account or lateral movement to other victim AWS accounts",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "1f26d9ab-a3cd-4e20-b8e1-edbefe7c9309",
+      "name": "AWS EventBridge Cross Account Target Has Been Set",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1048"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-08-07T09:31:17.000Z"
+}

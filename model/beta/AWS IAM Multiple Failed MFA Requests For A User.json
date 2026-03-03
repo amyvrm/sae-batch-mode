@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "10fb4c71-f0db-42e3-acaa-cf3fd077f5dc",
+  "name": "AWS IAM Multiple Failed MFA Requests For A User",
+  "description": "This model detects multiple failed Multi-Factor Authentication (MFA) requests for a user, indicating potential security risks or authentication challenges. This can lead to unauthorized access attempts or compromised user credentials, impacting the security of AWS resources and user accounts.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "65b05172-04c3-4680-9831-4dbfe1ab5a1f",
+      "name": "AWS IAM Multiple Failed MFA Requests For A User",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1110"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

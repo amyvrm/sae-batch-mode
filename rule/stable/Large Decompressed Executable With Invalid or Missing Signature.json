@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "67e9d45a-0014-4835-82e0-6e300df9b0b8",
+  "name": "Large Decompressed Executable With Invalid or Missing Signature",
+  "description": "Detects decompression of unsigned executables with large sizes.",
+  "filterSets": [
+    [
+      {
+        "id": "97287aa0-5cbc-45fe-aa4f-c3d324385831",
+        "name": "Large Decompressed Executable With Invalid or Missing Signature",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/01/23",
+  "lastUpdate": "2025-02-18T07:42:53.000Z"
+}

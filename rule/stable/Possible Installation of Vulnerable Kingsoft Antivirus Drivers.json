@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ecc814a1-853a-47dd-8ef3-2476cc6417fc",
+  "name": "Possible Installation of Vulnerable Kingsoft Antivirus Drivers",
+  "description": "Detects suspicious installation of Kingsoft Antivirus drivers which is capable of terminating security agent processes and services.",
+  "filterSets": [
+    [
+      {
+        "id": "9ff28203-924a-466c-8e48-f16b26489814",
+        "name": "Possible Installation of Vulnerable Kingsoft Antivirus Drivers",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-03-19T09:17:49.000Z"
+}

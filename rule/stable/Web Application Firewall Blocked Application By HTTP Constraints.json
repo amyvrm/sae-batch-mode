@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ac89c2af-2db9-4ce8-9f16-805728e16707",
+  "name": "Web Application Firewall Blocked Application By HTTP Constraints",
+  "description": "Fortinet detection - Web application firewall blocked application by HTTP constraints",
+  "filterSets": [
+    [
+      {
+        "id": "86146009-96e2-43ba-b38b-0a4a178221a6",
+        "name": "Web Application Firewall Blocked Application By HTTP Constraints",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

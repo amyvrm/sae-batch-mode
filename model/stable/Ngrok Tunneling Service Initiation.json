@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c3ea0267-c873-4f3f-8822-ea7df39883a9",
+  "name": "Ngrok Tunneling Service Initiation",
+  "description": "Ngrok tunneling services connection after configuring it. These services may be used by attackers to bypass firewalls or NAT restrictions and establish covert communication channels with compromised hosts",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "23ea82e2-26fe-4cfe-bccd-9fedbfa26f51",
+      "name": "Ngrok Process After Configuration",
+      "score": 1
+    },
+    {
+      "id": "182cbba4-6bd4-42af-9204-da9329d76a85",
+      "name": "Ngrok Connection After Configuration",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1572",
+    "mitre.t1021.001",
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/03/11",
+  "lastUpdate": "2025-08-19T07:37:42.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ce9b4abb-1bb5-4801-813f-99369f2edf83",
+  "name": "Azure Activity Log Alert Filter Deleted",
+  "description": "Detects successful deletion of Azure Activity Log based security alert filter which may indicate an attacker deliberately disabling security monitoring to evade detection",
+  "filterSets": [
+    [
+      {
+        "id": "68d7ca3f-cd0c-4851-8ca1-288cb1d476e0",
+        "name": "Azure Activity Log Alert Filter Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Nathaniel Ragasa",
+  "team": "SAE Threat Expert",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-23T02:21:40.000Z"
+}

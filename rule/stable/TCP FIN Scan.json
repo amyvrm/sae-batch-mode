@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e388a324-25f1-450f-bdf3-590e9342d6d9",
+  "name": "TCP FIN Scan",
+  "description": "SonicWall Detection - Probable TCP FIN scan detected",
+  "filterSets": [
+    [
+      {
+        "id": "ed3c59c3-da7a-4b42-9a81-6e6b270ada38",
+        "name": "TCP FIN Scan",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

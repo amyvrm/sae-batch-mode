@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e91c5dd2-e278-4232-a6b4-d0492e9e38d2",
+  "name": "AWS SSM Successful Automation Execution Enumeration",
+  "description": "Detects attempts to enumerate automation executions, which may indicate privilege escalation or unauthorized automation activity.",
+  "filterSets": [
+    [
+      {
+        "id": "fecaed21-1e11-47f2-a60f-335af077ac26",
+        "name": "AWS SSM Successful Automation Execution Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

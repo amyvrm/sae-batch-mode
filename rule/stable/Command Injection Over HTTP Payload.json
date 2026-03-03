@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fe7949fa-d0b1-4daa-9b7f-f6f56ca4e9fe",
+  "name": "Command Injection Over HTTP Payload",
+  "description": "Check Point Security detection for Command Injection Over HTTP Payload",
+  "filterSets": [
+    [
+      {
+        "id": "9fb72461-7d8c-53a7-a7c8-6dc5f5efce61",
+        "name": "Command Injection Over HTTP Payload",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/12/11",
+  "lastUpdate": "2026-01-15T01:11:52.000Z"
+}

@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5a234740-2ad1-11ee-be56-0242ac120002",
+  "name": "AWS S3 Successful Resource Enumeration Attempt",
+  "description": "Detected possible successful enumeration of AWS S3 bucket which can lead to information exposure, unauthorized access, data leakage, account compromise, and operational disruption.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "51ad80a4-2ab7-11ee-be56-0242ac120002",
+      "name": "AWS S3 Successful Bucket Listing",
+      "score": 1
+    },
+    {
+      "id": "51ad82d4-2ab7-11ee-be56-0242ac120002",
+      "name": "AWS S3 Successful Get Bucket ACL",
+      "score": 1
+    },
+    {
+      "id": "51ad8f9a-2ab7-11ee-be56-0242ac120002",
+      "name": "AWS S3 Successful Get Bucket Logging Status",
+      "score": 1
+    },
+    {
+      "id": "51adae26-2ab7-11ee-be56-0242ac120002",
+      "name": "AWS S3 Successful Get Public Access Configuration",
+      "score": 1
+    },
+    {
+      "id": "35271edb-6720-44cc-ab5d-28e5b221a995",
+      "name": "AWS S3 Buckets Scanning for Object Versioning",
+      "score": 1
+    },
+    {
+      "id": "ab8e087b-0595-465d-ae59-45968ad36d3b",
+      "name": "AWS S3 Get Bucket Encryption",
+      "score": 1
+    },
+    {
+      "id": "9fdc929f-2b3f-4ae2-ab87-217560661c1f",
+      "name": "AWS S3 Get Bucket Location",
+      "score": 1
+    },
+    {
+      "id": "1bf68a51-c95a-4236-9c1d-57c57c2f4205",
+      "name": "AWS S3 Object Sync",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/26",
+  "lastUpdate": "2025-09-29T02:40:33.000Z"
+}

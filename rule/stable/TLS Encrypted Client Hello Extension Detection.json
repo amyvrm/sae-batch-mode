@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e1b8926b-8aa5-4b62-8156-b42e63eadd46",
+  "name": "TLS Encrypted Client Hello Extension Detection",
+  "description": "Palo Alto Vulnerability detection - TLS Encrypted Client Hello Extension Detection",
+  "filterSets": [
+    [
+      {
+        "id": "602869dd-5b62-4091-8c74-9e772695b00e",
+        "name": "TLS Encrypted Client Hello Extension Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

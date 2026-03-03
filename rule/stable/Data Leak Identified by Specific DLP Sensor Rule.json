@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5f10b97a-9cc9-4ddf-a4d4-6be8bd2d7e54",
+  "name": "Data Leak Identified by Specific DLP Sensor Rule",
+  "description": "Fortinet detection - Data leak detected by specified DLP sensor rule",
+  "filterSets": [
+    [
+      {
+        "id": "95af5eb2-2c3e-4656-9289-17070f82b461",
+        "name": "Data Leak Identified by Specific DLP Sensor Rule",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-10-15T03:54:22.000Z"
+}

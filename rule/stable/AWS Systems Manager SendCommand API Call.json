@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c743e99e-d3ae-11ed-afa1-0242ac120002",
+  "name": "AWS Systems Manager SendCommand API Call",
+  "description": "Detects AWS Systems Manager SendCommand API Call.",
+  "filterSets": [
+    [
+      {
+        "id": "eb2529b2-4f9a-4392-b94b-125ce3c24fd2",
+        "name": "AWS Systems Manager SendCommand API Call",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/04/05",
+  "lastUpdate": "2025-08-22T09:27:18.000Z"
+}

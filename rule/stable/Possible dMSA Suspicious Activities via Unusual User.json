@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5688f10e-4a4c-47fe-af07-2c236611abe6",
+  "name": "Possible dMSA Suspicious Activities via Unusual User",
+  "description": "Detects the suspicious activities for a delegated Managed Service Account by an unusual subject account. Attackers can abuse the dMSA account migration feature to elevate privileges.",
+  "filterSets": [
+    [
+      {
+        "id": "d69e65fb-769f-4baa-9b98-f64572f17476",
+        "name": "Possible dMSA Creation via Unusual User",
+        "highlight": true
+      },
+      {
+        "id": "8f842463-7286-4f79-a5cc-e589de420889",
+        "name": "Possible dMSA Modification via Unusual User",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Mahmoud Soheem & Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/05/27",
+  "lastUpdate": "2025-06-02T10:52:25.000Z"
+}

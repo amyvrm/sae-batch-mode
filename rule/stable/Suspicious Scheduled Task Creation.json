@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "62aeaf7c-4344-4430-8dea-e7ef721bfe17",
+  "name": "Scheduled Task Creation via Command Line",
+  "description": "Detect schtasks.exe creation via command line with specific conditions or by suspicious binary files.",
+  "filterSets": [
+    [
+      {
+        "id": "998ddc59-f808-4317-806b-67331ce1bc50",
+        "name": "Scheduled Task Created by Commonly Abused Binary",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "76e558d5-0684-431a-9b75-c95212d1862c",
+        "name": "Identified Scheduled Task Creation With System Privilege and Executed Onlogon",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "author": "Peggy Mai",
+  "team": "LWE",
+  "date": "2022/04/07",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dcd046c4-4b90-4da2-843f-c3a89c216490",
+  "name": "Possible Local Account Enumeration via Net.exe",
+  "description": "This CrowdStrike alert indicates that an attempt to enumerate local accounts was made using the net.exe command with groups or user options, which may be associated with suspicious or unauthorized activity.",
+  "filterSets": [
+    [
+      {
+        "id": "a3ab8ee2-42eb-4e08-acba-9a25d34628f6",
+        "name": "Possible Local Account Enumeration via Net.exe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/08",
+  "lastUpdate": "2025-08-12T06:43:13.000Z"
+}

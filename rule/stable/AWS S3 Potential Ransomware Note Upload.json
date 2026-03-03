@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "515632ee-c9c6-4c55-8f93-4b35e9da5e79",
+  "name": "AWS S3 Potential Ransomware Note Upload",
+  "description": "Possible ransomware note upload detected in an S3 bucket, potentially signaling a ransomware attack.",
+  "filterSets": [
+    [
+      {
+        "id": "ea8cc9a0-497a-446a-97a7-80b74a69475b",
+        "name": "AWS S3 Potential Ransomware Note Upload",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

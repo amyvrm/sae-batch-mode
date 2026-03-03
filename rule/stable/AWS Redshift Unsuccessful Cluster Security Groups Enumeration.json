@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bc7f5201-f025-48d2-b4d4-5771ca789bf4",
+  "name": "AWS Redshift Unsuccessful Cluster Security Groups Enumeration",
+  "description": "Detects unsuccessful attempts to list Redshift cluster security groups, which may indicate reconnaissance for security misconfigurations.",
+  "filterSets": [
+    [
+      {
+        "id": "4994c33c-9776-4c36-8740-4679e258fbbb",
+        "name": "AWS Redshift Unsuccessful Cluster Security Groups Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "092eb09f-4650-47bc-a4ff-923c27fd7054",
+  "name": "AWS SageMaker Successful Code Repository Creation Detected",
+  "description": "Detects successful creation of a code repository in AWS SageMaker.",
+  "filterSets": [
+    [
+      {
+        "id": "2308de51-bcdb-4c9b-bb24-e0990d6d4fa0",
+        "name": "AWS SageMaker Successful Code Repository Creation Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/28",
+  "lastUpdate": "2025-01-21T13:11:52.000Z"
+}

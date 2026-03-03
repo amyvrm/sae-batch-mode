@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "897aabbc-12de-4bc9-b987-175c144ad434",
+  "name": "AWS Unsuccessful EKS Access Policy Enumeration Attempt",
+  "description": "Detects unsuccessful requests for describing access entries in AWS EKS.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "2642a016-b647-47e4-9e79-ede662258096",
+      "name": "AWS Unsuccessful EKS Access Policy Description Requested",
+      "score": 1
+    },
+    {
+      "id": "5d90bc59-02a5-4ad8-a66c-2f3e7237b9c4",
+      "name": "AWS Unsuccessful EKS List Access Policy",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1613"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "David Agni & Sunil Bharti",
+  "team": "Cloud One",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

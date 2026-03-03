@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a255fc9e-47da-40ba-a266-c87e38dc1c84",
+  "name": "AWS S3 Bucket Listing",
+  "description": "Detects AWS S3 Bucket Listing",
+  "filterSets": [
+    [
+      {
+        "id": "05e06cee-c8fa-4ce9-9114-fed6eb5a70fc",
+        "name": "AWS S3 Bucket Listing",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/11/03",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

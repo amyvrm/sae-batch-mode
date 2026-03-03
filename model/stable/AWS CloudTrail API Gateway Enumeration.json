@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8de7c3c6-2c64-4439-905e-0a1407b0b6d0",
+  "name": "AWS CloudTrail API Gateway Enumeration",
+  "description": "Detect potential API Gateway enumeration attempts by monitoring the GetRestApis API call commonly used by attackers during reconnaissance to list all available REST APIs in an AWS account. ",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "1e619320-b93f-4d22-89be-2f9009620ddf",
+      "name": "AWS CloudTrail API Gateway Enumeration",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-08-04T16:22:25.000Z"
+}

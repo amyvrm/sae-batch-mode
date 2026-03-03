@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b1ed3515-d532-4714-bbca-d2d05ca7e2e7",
+  "name": "Suspicious QR Code in Attachment",
+  "description": "The detection identified an image containing a QR code with a phishing URL during the email delivery phase.",
+  "filterSets": [
+    [
+      {
+        "id": "4a233202-f861-4258-8d79-565d9465e6ee",
+        "name": "Suspicious QR Code in Attachment",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Johnson Jao",
+  "team": "Jaguar",
+  "date": "2024/06/07",
+  "lastUpdate": "2024-06-07T09:09:57.000Z"
+}

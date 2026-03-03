@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7d637f8e-3e4b-41d6-826d-5f3545eadb4a",
+  "name": "AWS CloudTrail Failed Signin Attempts",
+  "description": "Detects Failed Signin Attempts based on AWS CloudTrail logs",
+  "filterSets": [
+    [
+      {
+        "id": "0b24d069-f416-418a-bb4c-462f04c46be6",
+        "name": "AWS IAM User Failed Login Attempt",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "4691cbe4-11bc-4377-beac-ad93a60990fb",
+        "name": "AWS Root User Failed Login Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2022/09/09",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

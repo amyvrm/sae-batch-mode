@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1f92532e-a63f-4323-b101-3878bc6ba170",
+  "name": "Suspicious Powershell Downloading via Postgres Process",
+  "description": "Detects Powershell Downloading via Postgres Process",
+  "filterSets": [
+    [
+      {
+        "id": "013350f2-c5c4-497d-a4fe-3762614912ba",
+        "name": "Suspicious Powershell Downloading via Postgres Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2025/10/13",
+  "lastUpdate": "2025-11-11T09:50:19.000Z"
+}

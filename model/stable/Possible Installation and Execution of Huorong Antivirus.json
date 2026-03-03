@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1da63bd8-f9e1-4417-b45d-31aeff2aaaa1",
+  "name": "Possible Installation and Execution of Huorong Antivirus",
+  "description": "Detects suspicious installation and execution of Huorong Antivirus which is capable of terminating security agent processes and services.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "a7eeb53e-75e9-4d02-850f-6c2edce23efe",
+      "name": "Suspicious Process Loading Image via Huorong Antivirus",
+      "score": 1
+    },
+    {
+      "id": "f21c50fc-bec9-479a-8d35-b03098a1760e",
+      "name": "Suspicious Creation of Huorong Antivirus-Related Files",
+      "score": 1
+    },
+    {
+      "id": "8efa0b84-2abc-4e88-95ba-36a1df2f0cc3",
+      "name": "Suspicious Execution of Huorong Antivirus-related Processes",
+      "score": 1
+    },
+    {
+      "id": "4d6e4c4e-82a7-4b28-8089-90259d7f0130",
+      "name": "Suspicious Installation of Huorong Antivirus",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Gerardo III Jonieca & Shaun Eris Galura",
+  "team": "AMEA-IR",
+  "date": "2025/03/06",
+  "lastUpdate": "2025-03-17T04:41:26.000Z"
+}

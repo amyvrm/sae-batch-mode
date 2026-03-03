@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1e3ed805-59a1-42ba-a130-8496158e6c56",
+  "name": "Suspicious Information Exfiltration via HTTP",
+  "description": "An act of gathering private information was detected via HTTP.",
+  "filterSets": [
+    [
+      {
+        "id": "3be662ba-d25d-52ca-b03d-31bd575dd001",
+        "name": "Atera Rmm HTTP (Request) - Inbound",
+        "highlight": true
+      },
+      {
+        "id": "1ab69377-60c8-552f-9185-3530ef484908",
+        "name": "Atera Rmm HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "3be662ba-d25d-52ca-b03d-31bd575dd001.peerIp equals 1ab69377-60c8-552f-9185-3530ef484908.peerIp"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/11/21",
+  "lastUpdate": "2024-12-11T11:10:06.000Z"
+}

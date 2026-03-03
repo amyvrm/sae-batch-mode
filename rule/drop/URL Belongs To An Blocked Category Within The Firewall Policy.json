@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "45a94be3-f3a2-4e97-a0ac-cd7cfdf3a1e5",
+  "name": "URL Belongs To An Blocked Category Within The Firewall Policy",
+  "description": "Fortinet detection - URL belongs to an blocked category within the firewall policy",
+  "filterSets": [
+    [
+      {
+        "id": "dcf6a724-59f0-4ee7-b038-d738b3509769",
+        "name": "URL Belongs To An Blocked Category Within The Firewall Policy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

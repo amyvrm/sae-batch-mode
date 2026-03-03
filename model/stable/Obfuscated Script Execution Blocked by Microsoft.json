@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4adba3a7-755d-4f21-8f3c-d118bf2020e2",
+  "name": "Obfuscated Script Execution Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that blocks execution of potentially obfuscated scripts including PowerShell, JavaScript, and VBScript that may contain hidden malicious code",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "96900f18-2999-4402-8264-781001e689e3",
+      "name": "Obfuscated Script Execution Blocked by Microsoft",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1027",
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2026-02-02T08:25:37.000Z"
+}

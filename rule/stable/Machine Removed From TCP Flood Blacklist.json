@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7e0511b3-d1c9-4f71-adb1-3e3711519be1",
+  "name": "Machine Removed From TCP Flood Blacklist",
+  "description": "SonicWall Detection - Machine %s removed from TCP flood blacklist",
+  "filterSets": [
+    [
+      {
+        "id": "6369d7ea-6f58-48d4-bece-0c8fddb7a3b8",
+        "name": "Machine Removed From TCP Flood Blacklist",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

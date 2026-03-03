@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f9a31f02-a89d-4c0a-90dc-9303b7a9e5fe",
+  "name": "Suspicious Cronjob and Privileged Container Creation Request via Docker API",
+  "description": "Detects Cronjob and Privileged Container Creation Request via Docker API",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "13cf831a-c92b-479d-8b25-a30069c5e042",
+      "name": "Privileged Container Creation Request via Docker API",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "4e7c4855-e2b1-426d-ac86-15e0e46787f7",
+      "name": "Cronjob Creation via Docker API",
+      "score": 1,
+      "sequence": 2
+    },
+    {
+      "id": "34f1eebb-a858-4a93-a6ff-9dfa37f2a9ea",
+      "name": "Docker Root Filesystem Binding via Docker API",
+      "score": 1,
+      "sequence": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 600,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1610",
+    "mitre.t1053.003",
+    "mitre.t1611"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/09",
+  "lastUpdate": "2025-10-01T07:09:57.000Z"
+}

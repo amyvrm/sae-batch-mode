@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ae98a5d4-58ff-454e-af4f-b7b03495c8c6",
+  "name": "AWS IAM Group Creation and Policy Attachment",
+  "description": "Instances where a new IAM group is created detected, followed by a policy attachment, which could indicate an attempt to escalate privileges. This alert highlights potential unauthorized access modifications that may lead to elevated permissions. If exploited, it can result in excessive privilege assignments, unauthorized resource control, or security policy violations.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "8bbf7a41-9d44-48d7-9623-ae51e1a5f6eb",
+      "name": "AWS IAM Group Creation",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "a3e2d907-359b-4d0c-b0be-8e9f0b72ef7d",
+      "name": "AWS IAM Policy Attached To A Group",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098",
+    "mitre.t1098.003",
+    "mitre.t1078.004"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/19",
+  "lastUpdate": "2025-09-12T08:03:37.000Z"
+}

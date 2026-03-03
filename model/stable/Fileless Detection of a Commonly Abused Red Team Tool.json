@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "25935e10-c664-45d1-88cc-739360426f0d",
+  "name": "Fileless Detection of a Commonly Abused Red Team Tool",
+  "description": "Detection of a fileless cobaltstrike beacon, detected by the predictive machine learning engine.",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "bc77acaf-7936-4bcb-b481-8c6489f9d22c",
+      "name": "Fileless Detection of a Commonly Abused Red Team Tool",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "sao",
+      "pao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Jack Walsh",
+  "team": "AIM",
+  "date": "2025/11/25",
+  "lastUpdate": "2026-01-05T14:19:25.000Z"
+}

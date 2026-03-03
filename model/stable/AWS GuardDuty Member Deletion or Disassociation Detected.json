@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81ccc22d-682c-43b3-a6f1-5002b54e2f5e",
+  "name": "AWS GuardDuty Member Deletion or Disassociation Detected",
+  "description": "This model detects when GuardDuty members are deleted or disassociated. It may indicate attempts to alter monitoring settings or avoid detection. This could lead to reduced monitoring effectiveness and increased risk of undetected threats.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "aeb13fda-e7d0-4a6e-b3ef-d5558940a02b",
+      "name": "AWS GuardDuty Member Deletion or Disassociation Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098",
+    "mitre.t1562"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Nikki Madayag & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/02/12",
+  "lastUpdate": "2025-05-13T06:49:38.000Z"
+}

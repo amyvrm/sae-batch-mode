@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5f00ea13-2cdf-4d8c-badd-922d1bedf639",
+  "name": "System Directory Modification in Container",
+  "description": "Detects unexpected changes to system folders in containers.",
+  "filterSets": [
+    [
+      {
+        "id": "c327409f-be18-5469-aee4-a0048d4cc614",
+        "name": "Binary Directory Modification in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/06/21",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

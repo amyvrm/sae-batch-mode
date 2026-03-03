@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a357b1d4-3800-4486-b50e-220f6dcb40d0",
+  "name": "Restricted Admin Mode Registry Changes",
+  "description": "Key changes executed on Restricted Admin Mode Registry",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "aab049e6-674a-4dae-a9d5-b64850828958",
+      "name": "Change on Restricted Admin Mode Registry",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Rafael Pereira",
+  "team": "US-IR",
+  "date": "2025/10/01",
+  "lastUpdate": "2026-01-27T15:45:18.000Z"
+}

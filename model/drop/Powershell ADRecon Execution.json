@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b218512b-40a3-4712-849d-435db8e9d903",
+  "name": "Powershell ADRecon Execution",
+  "description": "Detects the execution of ADRecon.ps1, a tool used for gathering and reporting information about Active Directory environments. This tool is known to be actively used by FIN7 for reconnaissance purposes.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6bcca1bd-d6cb-4d60-a84b-5018f806b006",
+      "name": "Powershell ADRecon Execution",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/11/19",
+  "lastUpdate": "2026-01-19T01:54:27.000Z"
+}

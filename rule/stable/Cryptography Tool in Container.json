@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1130d140-f394-4b04-90a2-7ad8fde4eb12",
+  "name": "Cryptography Tool in Container",
+  "description": "Misuse or vulnerabilities in these tools can result in security risks.",
+  "filterSets": [
+    [
+      {
+        "id": "f9908960-dbcc-4a7d-a757-722382f5d11b",
+        "name": "Cryptography Tool Executed in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/06/27",
+  "lastUpdate": "2026-01-20T09:00:45.000Z"
+}

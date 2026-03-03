@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "37b2237c-8059-4943-b06c-bd82d5b5ed9d",
+  "name": "Enabling RDP Service via reg.exe Command Execution",
+  "description": "Detects the execution of reg.exe and subsequent command line arguments for enabling RDP service",
+  "filterSets": [
+    [
+      {
+        "id": "181bd564-1181-4baf-b15e-7a63aa2a62c6",
+        "name": "Enabling RDP Service via reg.exe Command Execution",
+        "highlight": true
+      },
+      {
+        "id": "82b6b06d-c1e6-4787-a4a5-4f16002b8895",
+        "name": "RDP Settings Modification via reg.exe Command Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2025/02/19",
+  "lastUpdate": "2025-05-16T02:20:28.000Z"
+}

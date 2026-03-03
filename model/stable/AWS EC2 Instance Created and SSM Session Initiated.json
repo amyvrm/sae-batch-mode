@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c75d6811-a278-484d-87e1-f5dd530acdba",
+  "name": "AWS EC2 Instance Created and SSM Session Initiated",
+  "description": "This model detects the initiation of an AWS Systems Manager (SSM) session on an EC2 instance, indicating a remote session to manage the instance. It alerts that an administrator or user has established a connection for remote management. This event could impact system integrity and security, potentially allowing remote access or malicious activities on the instance.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "c510c134-1a40-4ae4-b551-03b9b5f19fae",
+      "name": "AWS EC2 Instance Creation",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "0b1334d7-b7b1-4111-9ec6-449139ecf75f",
+      "name": "AWS SSM Session Started for Instance",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1526",
+    "mitre.t1078.004",
+    "mitre.t1021.007",
+    "mitre.t1021.008"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "lastUpdate": "2025-08-22T08:41:48.000Z"
+}

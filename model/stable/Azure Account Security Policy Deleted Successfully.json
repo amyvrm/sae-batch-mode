@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ab5260cc-7110-4074-9515-99cc25faee37",
+  "name": "Azure Account Security Policy Deleted Successfully",
+  "description": "Detects successful deletion of an Azure account security policy which may indicate an attacker deliberately removing critical security controls",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "53e64581-53cc-4192-be19-6dc58a56b370",
+      "name": "Azure Account Security Policy Deleted Successfully",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma and Nathaniel Ragasa",
+  "team": "SAE Threat Expert",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-26T06:31:30.000Z"
+}

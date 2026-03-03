@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8de57585-fc99-4139-acc3-e958455f3b8a",
+  "name": "Network C2 traffic",
+  "description": "Network detection of reoccurring C2 traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "4c9a9576-73cf-4c5e-afc6-182f3b7fac79",
+        "name": "Malware C2 traffic detected (high confidence)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "lastUpdate": "2023-06-21T05:14:40.000Z"
+}

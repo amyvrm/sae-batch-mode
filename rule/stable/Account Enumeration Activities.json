@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3166c03b-e710-4c30-b7c2-ad8d9d083b38",
+  "name": "Account Enumeration Activities",
+  "description": "Adversaries may attempt to get a listing of domain accounts. This information can help adversaries determine which domain accounts exist to aid in follow-on behavior.",
+  "filterSets": [
+    [
+      {
+        "id": "e5c62672-ddc5-547b-9e4e-f4d2c5f42f0e",
+        "name": "Identified Remote Account Discovery Over LDAP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c6bbdabc-3dbe-4958-a158-82e201b02621",
+        "name": "Identified SAM Account Enumeration Over LDAP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b40ba0b3-04df-4ce4-9442-dacf03579cba",
+        "name": "Identified Domain Account Discovery Over LDAP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "65592f92-73d5-4ab8-8e09-9e5f22bb7652",
+        "name": "Remote Account Discovery Over LDAP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-02-28T13:38:42.000Z"
+}

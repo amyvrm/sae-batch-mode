@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "90e80c8e-85ed-4cfa-8be0-1ef0e4795b3c",
+  "name": "Fortinet Web-Filter Failed To Scan The Indicator",
+  "description": "Fortinet detection - Fortinet web-filter failed to scan the indicator",
+  "filterSets": [
+    [
+      {
+        "id": "9afb0c40-a3dd-4bf1-8231-112d20428184",
+        "name": "Fortinet Web-Filter Failed To Scan The Indicator",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e4175e0a-06c0-4fb9-b049-821de3edb582",
+  "name": "Possible Cobalt Strike Beacon Loading In Memory",
+  "description": "Detects possible loading of Cobalt strike in memory which is commonly used by APT groups.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "dd9a324b-8574-426f-a1b0-47efe1182f20",
+      "name": "Possible Cobalt Strike Beacon Loading In Memory",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Gerardo III Jonieca & Bien Joshua Philip De Leon",
+  "team": "AMEA-IR",
+  "date": "2024/10/25",
+  "lastUpdate": "2025-02-14T03:40:20.000Z"
+}

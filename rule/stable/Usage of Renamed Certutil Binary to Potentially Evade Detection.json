@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ddf2d2a5-7d8a-4310-a19c-eb5806795abc",
+  "name": "Usage of Renamed Certutil Binary to Potentially Evade Detection",
+  "description": "Detection of the usage of a renamed Certutil binary, which can be done as a means to evade detection",
+  "filterSets": [
+    [
+      {
+        "id": "23539cee-7160-4466-857a-a7a28738dbb1",
+        "name": "Usage of Renamed Certutil Binary to Potentially Evade Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2025/11/14",
+  "lastUpdate": "2026-01-19T03:45:23.000Z"
+}

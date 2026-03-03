@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3727f261-b864-405e-ac43-2f9fa51aab86",
+  "name": "Remote Access Tool - Downloading and Installation of AnyDesk via PowerShell Script",
+  "description": "Detects AnyDesk download event via Powershell Script that might be abused and use for malicious purposes as well to gain persistence on the machine.",
+  "filterSets": [
+    [
+      {
+        "id": "8f0e5bec-0750-4f8a-adfb-ad6259bb96a7",
+        "name": "AnyDesk Download via Powershell Script",
+        "highlight": true
+      },
+      {
+        "id": "0bede64a-0888-4378-82e9-5bc5449d5175",
+        "name": "Suspicious RAT (AnyDesk) Installation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/07/17",
+  "lastUpdate": "2024-07-18T05:11:19.000Z"
+}

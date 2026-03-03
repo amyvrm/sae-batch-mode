@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "id": "63446eeb-6582-40bf-9754-0930a4d2ce31",
+  "name": "Anomalous Internal Network Activities After C&C Events",
+  "description": "Anomalous internal network activities were observed after C&C events were detected.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "ecf5c94e-3aa6-43fb-9385-906753c05e6a",
+      "name": "Suspicious Command and Control Connection",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "e3c78150-c168-4f6d-962a-3d6c06b4c208",
+      "name": "Anomalous Internal Network Activities",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1074",
+    "mitre.t1110",
+    "mitre.t1021",
+    "mitre.t1210",
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Liang Seng Koh",
+  "team": "XNA",
+  "date": "2022/08/19",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

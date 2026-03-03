@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "94cf94d3-a937-4bb3-a4f9-913ad9d44b93",
+  "name": "Linux Service Creation Monitor in Container",
+  "description": "This model detects Linux service creation in containers for early suspicion detection.",
+  "riskLevel": "low",
+  "scope": "container",
+  "enable": true,
+  "rules": [
+    {
+      "id": "2be75f88-84f4-44f1-9519-8dd40dd6b915",
+      "name": "Linux Service Created in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1037",
+    "mitre.t1543.002",
+    "mitre.t1037.004"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/10/11",
+  "lastUpdate": "2024-01-31T21:52:25.000Z"
+}

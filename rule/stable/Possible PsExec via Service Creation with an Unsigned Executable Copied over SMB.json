@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0cdad833-8b30-42a9-bbd0-1ccd8b52c8f7",
+  "name": "Possible PsExec via Service Creation with an Unsigned Executable Copied over SMB",
+  "description": "New service created with image path pointing to unsigned executable copied over SMB.",
+  "filterSets": [
+    [
+      {
+        "id": "2735312c-7586-4957-a0e4-1d6d49c24a57",
+        "name": "Service Execution with Unsigned Binary in Noteworthy location",
+        "highlight": true
+      },
+      {
+        "id": "0d478d65-6fcd-4f22-933f-c1a92493dd86",
+        "name": "SMB Executable File Transfer",
+        "highlight": true
+      },
+      {
+        "id": "05937a23-be83-40ae-8eaa-a5b80ebc0aeb",
+        "name": "Binary File Transfer via SMB",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "0d478d65-6fcd-4f22-933f-c1a92493dd86.objectFilePath equals 2735312c-7586-4957-a0e4-1d6d49c24a57.objectFilePath"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "lastUpdate": "2025-02-12T09:14:22.000Z",
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2024/07/14"
+}

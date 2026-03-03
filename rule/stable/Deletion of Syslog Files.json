@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "23cde974-ed3c-409f-b83c-8d1bf59fd81a",
+  "name": "Deletion of Syslog Files",
+  "description": "Detects the deletion of syslog files from the machine.",
+  "filterSets": [
+    [
+      {
+        "id": "ea5c005c-9a70-4ee5-905b-e5d4b1c86a8f",
+        "name": "Deletion of Syslog Files",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "pds",
+      "sds"
+    ]
+  ],
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2025/09/08",
+  "lastUpdate": "2025-09-30T19:46:45.000Z"
+}

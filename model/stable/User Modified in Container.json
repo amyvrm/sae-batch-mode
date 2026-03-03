@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "91be0bac-6714-4dfc-80ad-400ace0392fe",
+  "name": "User Modified in Container",
+  "description": "Suspicious account operation detected.",
+  "riskLevel": "low",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "12c07aef-96aa-460c-aec2-d852ef7a29ce",
+      "name": "User Modified in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/03/25",
+  "lastUpdate": "2025-06-26T18:14:48.000Z"
+}

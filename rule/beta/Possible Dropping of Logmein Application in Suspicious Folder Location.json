@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4cbbde6c-360a-4f33-9724-cdeeae05b1a3",
+  "name": "Possible Dropping of Logmein Application in Suspicious Folder Location",
+  "description": "Detects dropping of legitimate Logmein application used in DLL sideloading in suspicious folder location",
+  "filterSets": [
+    [
+      {
+        "id": "7dac0e41-c7fc-408d-8b5c-c6cd21ec25fa",
+        "name": "Possible Dropping of Logmein Application in Suspicious Folder Location",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2025/05/22",
+  "lastUpdate": "2025-06-20T02:50:11.000Z"
+}

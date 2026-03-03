@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "728c63c9-d20d-4a7a-83ae-4140a7827003",
+  "name": "Suspicious C2 File Download via HTTP",
+  "description": "A C2 connection linked to a ransomware was used to download files via HTTP.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e0b72616-d797-493a-926a-ca1787397f9e",
+      "name": "Suspicious C2 File Download via HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 900,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "silent": false,
+  "globalModel": true,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/11/11",
+  "lastUpdate": "2024-12-11T10:42:25.000Z"
+}

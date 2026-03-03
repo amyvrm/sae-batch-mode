@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e5a58654-637b-4b3c-97e6-30d19aaba832",
+  "name": "AWS IAM Administrator Access Policy Attached To A Group",
+  "description": "Detects AWS IAM Administrator Access Policy Attachment to a Group.",
+  "filterSets": [
+    [
+      {
+        "id": "4fe17b78-a39f-4311-a2aa-2b6590060eb9",
+        "name": "AWS IAM Administrator Access Policy Attached To A Group",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/09/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

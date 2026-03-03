@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "50967b7e-18ab-4436-801f-b72c9be7475a",
+  "name": "AWS Bedrock Unauthorized Model Invocation Detected",
+  "description": "Detects unauthorized invocation of AWS Bedrock models.",
+  "filterSets": [
+    [
+      {
+        "id": "e7d8ed9e-da01-4115-aa0e-3e70006cc374",
+        "name": "AWS Bedrock Unauthorized Model Invocation Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/14",
+  "lastUpdate": "2025-01-21T13:11:52.000Z"
+}

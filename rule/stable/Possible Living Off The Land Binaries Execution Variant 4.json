@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e26e7af2-1358-483e-ba58-1a9f9a133a64",
+  "name": "Possible Living Off The Land Binaries Execution Variant 4",
+  "description": "Living Off the Land Binaries are binaries of a non-malicious nature, local to the operating system, that have been utilised and exploited by cyber criminals and crime groups to camouflage their malicious activity.",
+  "filterSets": [
+    [
+      {
+        "id": "ef27d70a-e4d8-4191-abb4-7c16739069eb",
+        "name": "Abnormal Network Connection of Notepad",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8ffa254d-0404-4eb3-930c-dd2f0fa7f5e6",
+        "name": "Certutil Execution - Encoding",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d346e1dd-c00c-4914-960c-358d9156e6f5",
+        "name": "Install Certificate via Certutil",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "99e67422-1984-498d-b5a6-3c24388edda8",
+        "name": "Account Discovery",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "530a0b92-34ca-4f6f-855e-6822fc5e7c06",
+        "name": "Suspicious DnsCmd Execution via Plugin",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d20f8c5f-1458-4143-ac7a-c6939fb3e9c4",
+        "name": "Suspicious Dnscmd Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ea97584c-03df-4117-b941-262eb81f5c7c",
+        "name": "Copying Of Locked Database Files Via Volume Shadow Copy Services",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1d4361a5-b771-4971-a50e-bc517384a38e",
+        "name": "Copy File Using Esentutl",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ccca5009-689d-44c6-8a95-f867204497da",
+        "name": "UAC Bypass Via Event Viewer",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "969ec77d-8d0f-4a0f-9e9b-a3667e854133",
+        "name": "LOLBAS Execution - Expand",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "566de579-3a75-43e3-9208-502e17302985",
+        "name": "Password Searching In Files Via Powershell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8421468c-13b8-4c2a-b4f9-20120508e593",
+        "name": "Security Software Discovery - Sysmon Service",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "18fa57bd-2ef4-4d30-be07-31e851d834d7",
+        "name": "Private Key Searching In Files Via Command Prompt",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1f56e1d1-e792-4371-80f1-fd2003f9e513",
+        "name": "Password Searching In Files Via Command Prompt",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f510cd49-147b-4b19-adf9-a3aedeb461c2",
+        "name": "Indirect Command Execution via ForFiles",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1a8ad89c-fa9a-429f-b248-45546dc4ba83",
+        "name": "PE File Execution via Tracker.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "39825c54-b275-4ccf-adaa-df552255c1a6",
+        "name": "Potential Signed Binary Proxy Execution via Rundll32",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9b0ee248-70f2-44b3-b47e-5da362bc35ca",
+        "name": "Execution via Rundll32 and URL.dll",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ca85edef-b767-4ff8-82be-3648cd01afe2",
+        "name": "JavaScript Command Execution Via Rundll32",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "46656aca-fa68-4da7-b796-ab3074e78f12",
+        "name": "Process Execution via Rundll32 and Pcwutl.dll",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "310e2216-1eb8-4162-a8cd-e16afb6a64e6",
+        "name": "Script Execution Via te.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3be9b5c3-bcec-44ce-b1dd-24cfff18b195",
+        "name": "Suspicious Execution via Print.exe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/11/06",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

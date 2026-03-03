@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e9e4b4cc-799b-4276-8956-87610023795a",
+  "name": "Suspicious DNS Beaconing Activity",
+  "description": "Detects suspicious DNS queries known from Cobalt Strike beacons.",
+  "filterSets": [
+    [
+      {
+        "id": "47d44533-86ab-4140-8d01-3c4921150951",
+        "name": "Suspicious DNS Beaconing Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2024-12-02T17:13:06.000Z",
+  "author": "Bahaa Yamany & Jack Walsh",
+  "team": "MENA-IR",
+  "date": "2024/11/12"
+}

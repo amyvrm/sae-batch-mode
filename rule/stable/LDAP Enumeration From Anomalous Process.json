@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a5a1d7cd-8fdd-4bcb-ab8b-cce9985ec940",
+  "name": "LDAP Enumeration From Anomalous Process",
+  "description": "Detection of LDAP connections from an Anomalous process",
+  "filterSets": [
+    [
+      {
+        "id": "091eb8b2-4a22-4756-8f42-dbbb5656fcb8",
+        "name": "LDAP Enumeration From Anomalous Process",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a9b06dd9-ec1b-4b13-a1fd-d8aff012d1a9",
+        "name": "Behavior Monitoring of LDAP Enumeration From Anomalous Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/12/07",
+  "lastUpdate": "2023-12-21T05:53:06.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "61ea23cc-d790-42fd-a5cd-a408c4cace4d",
+  "name": "AWS Organization Unsuccessful List Accounts",
+  "description": "AWS api to list organization accounts",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Organization Unsuccessful List Accounts",
+        "id": "05c55504-3527-4c35-b9df-dbb25e05f030",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/22",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cb840438-7e09-4e7e-97f5-81163f5f4e3d",
+  "name": "Script Engine Execution from Unusual Parent Process via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection identifying when mshta.exe is launched by uncommon or high-risk parent processes such as system services or server processes. This may indicate living-off-the-land execution or malicious process chaining.",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "710556ed-cf4a-431d-bb68-175c25513cb0",
+      "name": "Script Engine Execution from Unusual Parent Process via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218.005"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/10",
+  "lastUpdate": "2026-01-14T22:47:08.000Z"
+}

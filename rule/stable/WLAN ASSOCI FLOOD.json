@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "61ff058a-ce68-40d5-bd33-a4501deede00",
+  "name": "WLAN ASSOCI FLOOD",
+  "description": "SonicWall Detection - Association Flood from WLAN station",
+  "filterSets": [
+    [
+      {
+        "id": "71f9d7c8-2341-4d35-b679-25c42787a4e7",
+        "name": "WLAN ASSOCI FLOOD",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

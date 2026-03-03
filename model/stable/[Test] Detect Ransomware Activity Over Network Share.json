@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "id": "56c25293-1469-4a0c-92b3-69b2866bd739",
+  "name": "[Test] Detect Ransomware Activity Over Network Share",
+  "description": "Detected malicious file extension rename activities over network share which are an indicator of ransomware attack.",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1ed6ec62-ef91-42a2-9391-19b2d37b7ab5",
+      "name": "[Test] Suspicious File Extension Rename Activity Over Network Share",
+      "score": 8
+    },
+    {
+      "id": "1928d699-f3e5-41da-b2af-1d67378a0333",
+      "name": "[Test] File Extension Rename Activity Over Network Share - Low Confident",
+      "score": 2
+    },
+    {
+      "id": "4cc6d18b-6d14-4501-89b8-ad75fee1dc18",
+      "name": "[Test] Ransomware Detection",
+      "score": 8
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1486",
+    "mitre.t1080"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-05-13T04:41:04.000Z"
+}

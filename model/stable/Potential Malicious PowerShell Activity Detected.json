@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bd9b867b-2a7e-4af2-9df5-e2545a67a4c8",
+  "name": "Potential Malicious PowerShell Activity Detected",
+  "description": "This model identifies and flags suspicious PowerShell activity that may signify malicious intent. By monitoring for unusual execution patterns, it aids in the early detection and prevention of potential security breaches.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "eb9e49d5-62b4-478d-944c-298ad1c6f0e1",
+      "name": "Suspicious PowerShell Activity Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1055"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "date": "2024/06/18",
+  "team": "Cloud One",
+  "author": "Sunil Bharti",
+  "lastUpdate": "2024-06-26T12:11:29.000Z"
+}

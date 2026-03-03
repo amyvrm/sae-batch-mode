@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5d239378-e52f-11ee-bd3d-0242ac120002",
+  "name": "Possible Pikabot Techniques",
+  "description": "Pikabot may have been executed to the affected endpoints",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "62f2874c-e529-11ee-bd3d-0242ac120002",
+      "name": "Possible Pikabot Techniques",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218.011"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/03/18",
+  "lastUpdate": "2024-09-19T13:14:55.000Z"
+}

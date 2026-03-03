@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a40a2e3e-7263-4029-8c73-088fafd5d8f4",
+  "name": "PowerShell Base64 Decoding Command Execution Identified via Microsoft Telemetry",
+  "description": "Microsoft detection for PowerShell processes executing Base64 decoded commands, which is a common obfuscation technique used by attackers to hide malicious payloads and evade security controls. It detects suspicious process execution events where Base64 decoding functions are invoked, indicating potential malware deployment or unauthorized command execution.",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "370b869b-8a49-448c-ae2a-5a9fcbac941f",
+      "name": "PowerShell Base64 Decoding Command Execution Identified via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059",
+    "mitre.t1027",
+    "mitre.t1140"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/05",
+  "lastUpdate": "2025-11-11T15:20:53.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "28408732-cc17-4fc1-bf53-4acfd77a2dd8",
+  "name": "Anti-Spam Couldnt Determine The Legitimacy Of The Email",
+  "description": "Fortinet detection - FortiGuard error message. Anti-Spam couldn't determine the legitimacy of the email",
+  "filterSets": [
+    [
+      {
+        "id": "57c5036f-9f7d-483c-89cb-52b4e2c65685",
+        "name": "Anti-Spam Couldnt Determine The Legitimacy Of The Email",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

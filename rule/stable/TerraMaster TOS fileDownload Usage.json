@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "24815d76-57e9-41ee-8c99-0242ac120002",
+  "name": "TerraMaster TOS fileDownload Usage",
+  "description": "Detects usage of the fileDownload endpoint with an arbitrary path in Terramaster TOS products.",
+  "filterSets": [
+    [
+      {
+        "id": "432b00ca-485c-447c-825a-6ae84fdb48e1",
+        "name": "TerraMaster_TOS_fileDownload_Usage",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2023/09/20",
+  "lastUpdate": "2024-05-14T07:14:32.000Z"
+}

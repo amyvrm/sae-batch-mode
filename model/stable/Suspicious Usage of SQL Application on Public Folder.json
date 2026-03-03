@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e83890c2-c3be-4274-ad6b-24ac0947b87d",
+  "name": "Suspicious Usage of SQL Application on Public Folder",
+  "description": "Detects suspicious file execution and creation on Users\\\\Public folder via sqlservr.exe.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1e660873-94dd-46a7-8bea-33e6d347bd9a",
+      "name": "Suspicious File Creation on Public Folder via SQL Process",
+      "score": 1
+    },
+    {
+      "id": "419c9083-0a41-4005-b7cb-6a63605716dd",
+      "name": "Suspicious Execution on Public Folder via SQL Process",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Renzell David Barros & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/04/25",
+  "lastUpdate": "2025-12-01T10:06:44.000Z"
+}

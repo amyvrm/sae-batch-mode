@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4cc6d18b-6d14-4501-89b8-ad75fee1dc18",
+  "name": "[Test] Ransomware Detection",
+  "description": "Detect indicate of ransomware infection and Ransom Note from real-time scan was detected on an endpoint.",
+  "filterSets": [
+    [
+      {
+        "id": "08f6c868-b334-4606-b64c-40a67a9ccc7a",
+        "name": "Ransomware Detection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "52aa76d2-a3d5-4723-97a1-c231859d7a59",
+        "name": "Ransom Note Detection (Real-time Scan)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-05-13T04:41:04.000Z"
+}

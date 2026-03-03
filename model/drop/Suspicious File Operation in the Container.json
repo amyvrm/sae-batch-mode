@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4ee3141e-da89-4ad6-a1e8-2238b56bef37",
+  "name": "Suspicious File Operation in the Container",
+  "description": "Detects unexpected attribute changes or changes to configuration files the in container.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "enable": true,
+  "rules": [
+    {
+      "id": "d7c8fd12-2c6c-47ff-8ba8-b262cd26405a",
+      "name": "File Modification in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/07/19",
+  "lastUpdate": "2023-09-18T04:02:58.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f80f9e02-d37b-4a58-9c3c-6798749c8a29",
+  "name": "AWS Redshift Successful Cluster Snapshots Enumeration",
+  "description": "Detects enumeration of Redshift cluster snapshots, which could be used to identify backup data.",
+  "filterSets": [
+    [
+      {
+        "id": "fb9fe5fd-eb0c-48b9-82b4-a9744541c331",
+        "name": "AWS Redshift Successful Cluster Snapshots Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

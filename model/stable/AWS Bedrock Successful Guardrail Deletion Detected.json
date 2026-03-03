@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "219f339f-778e-48a0-bcac-4bb84e37e0d0",
+  "name": "AWS Bedrock Successful Guardrail Deletion Detected",
+  "description": "This model alerts when someone has deleted guardrails in Amazon Bedrock. This indicates someone trying to evade defenses which warn of potential security breaches or policy violations that could disrupt AI model settings or expose sensitive data.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "9e38f9af-deb5-4189-b126-e8133e7c8249",
+      "name": "AWS Bedrock Successful Guardrail Deletion Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.008",
+    "atlas.aml.t0015"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

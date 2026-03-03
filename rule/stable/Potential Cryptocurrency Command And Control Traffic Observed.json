@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c35657c-bfbe-44c5-81ea-42e8d5411837",
+  "name": "Potential Cryptocurrency Command And Control Traffic Observed",
+  "description": "Detected Malware Command And Control Traffic",
+  "filterSets": [
+    [
+      {
+        "id": "1941a393-902f-4a29-b803-4e4f59c9ecff",
+        "name": "Identified Potential Outbound Network Activity To Cryptocurrency Mining Pool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jon Laurin",
+  "date": "2022/05/18"
+}

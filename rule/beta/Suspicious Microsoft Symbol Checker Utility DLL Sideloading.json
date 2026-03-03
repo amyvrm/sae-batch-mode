@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "447282c5-332e-46f7-a9e4-3616edc9e76a",
+  "name": "Suspicious Microsoft Symbol Checker Utility DLL Sideloading",
+  "description": "Detects suspicious Microsoft Symbol Checker utility (symchk.exe) DLL Sideloading of file - symbolcheck.dll.",
+  "filterSets": [
+    [
+      {
+        "id": "681947be-241f-4461-8771-400894076f54",
+        "name": "Suspicious Microsoft Symbol Checker Utility DLL Sideloading",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/11/03",
+  "lastUpdate": "2025-11-27T09:47:49.000Z"
+}

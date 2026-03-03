@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "17d26ae8-ad36-44a1-9ab1-97e5611c8ddc",
+  "name": "TitanPlus Installation",
+  "description": "Detection of TitanPlus being installed onto a machine",
+  "filterSets": [
+    [
+      {
+        "id": "de075daf-ef06-4925-9557-be27c184240c",
+        "name": "TitanPlus Installation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "81e852be-d953-40de-add4-9c68eef69eee",
+        "name": "TitanPlus Installation - Process Create",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/12/17",
+  "lastUpdate": "2025-01-30T07:12:28.000Z"
+}

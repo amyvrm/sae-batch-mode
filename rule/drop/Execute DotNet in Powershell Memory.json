@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dd88d98c-3cad-4ce6-822e-6b8c6cbfdfd9",
+  "name": "Execute Unsigned DotNet in Powershell Memory",
+  "description": "Unsigned dotnet executable was loaded in powershell memory.",
+  "filterSets": [
+    [
+      {
+        "id": "e395ff06-cc36-4af9-b552-5fc7592c9293",
+        "name": "Execute Unsigned DotNet in Powershell Memory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "lastUpdate": "2024-02-27T10:35:18.000Z"
+}

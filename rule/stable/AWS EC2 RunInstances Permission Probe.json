@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9e037fbc-3443-457e-b1f2-b651ab086426",
+  "name": "AWS EC2 RunInstances Permission Probe",
+  "description": "Detects EC2 RunInstances API calls that return DryRunOperation, indicating permission testing prior to launching instances.",
+  "filterSets": [
+    [
+      {
+        "id": "36b8d4ed-f45d-4909-951a-fb669b8650f7",
+        "name": "AWS EC2 RunInstances Permission Probe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2026/01/22",
+  "lastUpdate": "2026-02-11T08:35:44.000Z"
+}

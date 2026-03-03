@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5cbc5d15-5ccd-40d9-bd92-a6cba151f1d0",
+  "name": "Anomalous Initial Access Behaviors",
+  "description": "Anomalous initial access behavioral activities over defined threshold were detected.",
+  "filterSets": [
+    [
+      {
+        "id": "c546f1c3-446a-4565-bf26-acb9a0aac66f",
+        "name": "SSL Suspicious Inbound Connection Attempts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Liang Seng Koh",
+  "team": "XDR-NA",
+  "date": "2022/08/19",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

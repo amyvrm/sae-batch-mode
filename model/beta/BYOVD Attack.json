@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "44e38dbb-709e-44b8-8dc6-7b1acb5e57a8",
+  "name": "BYOVD Attack",
+  "description": "Low prevalence and unsigned process trying to abuse driver.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "812da7f3-c298-4ab3-a087-43792f5cd9fd",
+      "name": "BYOVD Attack",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1068",
+    "mitre.t1543.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sam Hsieh",
+  "team": "AEGIS",
+  "date": "2025/05/29",
+  "lastUpdate": "2025-08-20T05:43:27.000Z"
+}

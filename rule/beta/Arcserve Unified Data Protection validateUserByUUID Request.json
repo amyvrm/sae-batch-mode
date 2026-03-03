@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b6761706-9d52-4026-8836-4884c4e988fa",
+  "name": "Arcserve Unified Data Protection validateUserByUUID Request",
+  "description": "A request to establish an administrator session by using the UUID of the Arcserve UDP WebService has been observed over HTTP(s). This UUID is obtainable by a known authentication bypass vulnerability.",
+  "filterSets": [
+    [
+      {
+        "id": "c542f897-d620-4d34-874f-16351e663bef",
+        "name": "Arcserve Unified Data Protection validateUserByUUID Request",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2024/06/17",
+  "lastUpdate": "2024-06-17T19:36:10.000Z"
+}

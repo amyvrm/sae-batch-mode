@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "524b8693-8c3b-4dd7-81ed-9f0f370da68b",
+  "name": "AWS SageMaker Successful Jobs Enumeration",
+  "description": "Detects successful enumeration of jobs in AWS SageMaker service, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "40324d64-b572-428a-b22f-caf969f52de5",
+        "name": "AWS SageMaker Successful Jobs Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/17",
+  "lastUpdate": "2026-01-19T02:05:18.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b6ee342f-a21e-4397-9b95-42aa29e840fc",
+  "name": "Suspicious Email with Redirect Link Detected by Retro Scan",
+  "description": "A link that redirected to phishing or malware site was detected in an email message by Retro Scan. [Delayed alert: Batch process detection]",
+  "filterSets": [
+    [
+      {
+        "id": "3b945749-ff65-48ad-9980-76ae6e44e131",
+        "name": "Suspicious Email with Redirect Link Detected by Retro Scan",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Jim W Hsu",
+  "team": "Jaguar",
+  "date": "2021/02/17",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

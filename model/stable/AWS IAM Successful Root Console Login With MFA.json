@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ccc7ac9a-1e8a-4b55-a3ad-da5075fb8a00",
+  "name": "AWS IAM Successful Root Console Login With MFA",
+  "description": "This model identifies successful root console logins to AWS accounts with Multi-Factor Authentication (MFA), demonstrating adherence to security best practices and minimizing the risk of unauthorized access. Root accounts with MFA enabled significantly enhance security posture, mitigating the potential for credential compromise and unauthorized activities.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "26de4392-49fe-49c1-9f25-e0a7ccb83fd3",
+      "name": "AWS IAM Successful Root Console Login With MFA",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

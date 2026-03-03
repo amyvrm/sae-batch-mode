@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dca86f9e-cf8a-11ed-afa1-0242ac120002",
+  "name": "AWS Cloudwatch Log Group or Stream Deleted",
+  "description": "AWS Cloudwatch Log Group or Stream Deleted",
+  "filterSets": [
+    [
+      {
+        "id": "8a7211ac-a06e-4bf2-b4d1-11d681c4aed0",
+        "name": "AWS Cloudwatch Delete Log Stream",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e2cc31c2-8653-4750-81e4-8e6de277a4b1",
+        "name": "AWS Cloudwatch Delete Log Group",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/03/31",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

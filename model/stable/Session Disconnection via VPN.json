@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9d2f9a00-a720-41ad-bd70-34fded4400b4",
+  "name": "Session Disconnection via VPN",
+  "description": "Cisco detection for an indication of when and why the longest idle user is disconnected. Group name, username, IP address, session type (for example, IPsec or UDP), duration (connection duration in hours, minutes, and seconds), bytes transmitted, bytes received, and reason for disconnection (User Requested).",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2eb31454-d8e9-4bba-bb1f-f15c605da113",
+      "name": "Session Disconnection via VPN",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-04T02:55:04.000Z"
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7fa204e0-8118-4b3b-844e-96d6223ea98c",
+  "name": "Suspicious Behavior via Potential Masqueraded File from Unusual Location",
+  "description": "Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools.",
+  "filterSets": [
+    [
+      {
+        "id": "95f03056-ed76-4a83-a363-17b5322567c3",
+        "name": "Potential Masqueraded File Created from Unusual Location",
+        "highlight": true
+      },
+      {
+        "id": "9bc33f98-3bc8-428d-9ad8-6ae13ca2f5e3",
+        "name": "Potential Masqueraded File Execution from Unusual Location",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "95f03056-ed76-4a83-a363-17b5322567c3.objectFilePath contains 9bc33f98-3bc8-428d-9ad8-6ae13ca2f5e3.objectFilePath"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva & Jack Walsh",
+  "team": "US-IR",
+  "date": "2025/03/19",
+  "lastUpdate": "2025-10-30T07:06:08.000Z"
+}

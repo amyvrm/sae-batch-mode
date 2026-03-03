@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2eac0082-7d7b-4331-82f2-b3dd0aa4f733",
+  "name": "Azure Resource Group Successfully Deleted",
+  "description": "Azure Resource Group Successfully Deleted",
+  "filterSets": [
+    [
+      {
+        "id": "145cd41e-c4e3-4476-b6b2-7716eaab42f3",
+        "name": "Azure Resource Group Successfully Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/27",
+  "lastUpdate": "2025-12-03T08:25:35.000Z"
+}

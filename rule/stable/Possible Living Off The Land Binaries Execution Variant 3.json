@@ -1,0 +1,194 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0652dfa3-f7dd-44e2-b206-12647fb3b078",
+  "name": "Possible Living Off The Land Binaries Execution Variant 3",
+  "description": "Living Off the Land Binaries are binaries of a non-malicious nature, local to the operating system, that have been utilised and exploited by cyber criminals and crime groups to camouflage their malicious activity.",
+  "filterSets": [
+    [
+      {
+        "id": "544bbab1-2241-4f4d-8dc1-a069857cd050",
+        "name": "LOLBAS SQLDumper Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6c271c7c-6e08-4729-873e-67e585a25542",
+        "name": "LOLBAS Findstr Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "17068088-b734-4832-a22e-ef9712637bc7",
+        "name": "LOLBAS Microsoft Testing Tool Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a7f5cef8-37a5-4e3f-8392-27bec8f0e493",
+        "name": "LOLBAS Old PowerShell Execution In MSSQL Server",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "15e27285-fa5c-4036-b7e3-b9e24498f8e7",
+        "name": "LOLBAS Tracker Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7f33f0b4-03a5-4f5d-8551-0db9f2ddecf1",
+        "name": "LOLBAS Cmdkey Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f2c47a6e-48f0-4fad-baee-5ea8284ffa96",
+        "name": "LOLBAS Execution Of C Sharp Program Executor",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e8c3353a-e5ff-4321-805e-a545fd7e2a5f",
+        "name": "LOLBAS Manage-BDE Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f53160e9-6f40-4c21-9dbd-16ea189b24c2",
+        "name": "LOLBAS Rundll32 Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "67485936-c963-47db-9df1-78f1350718a4",
+        "name": "LOLBAS Bitsadmin Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5fae9bf9-f77c-49c5-8e85-ee61e832cde3",
+        "name": "LOLBAS Extexport Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "344e273a-22e2-4dcd-92ea-b3e219a310a9",
+        "name": "LOLBAS Forfiles Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "95c45676-20c8-4b08-a948-48e7625a6da6",
+        "name": "LOLBAS Ftp Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "22d6137c-b964-4f74-bb0b-3ebdfef9ef33",
+        "name": "LOLBAS Execution - Extrac32.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "969ec77d-8d0f-4a0f-9e9b-a3667e854133",
+        "name": "LOLBAS Execution - Expand",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "66b25926-0fd9-4ebb-ac19-0f887eafba0d",
+        "name": "LOLBAS Execution - C sharp program executor",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7b0bca14-ccde-424e-8fa4-098fce25820b",
+        "name": "LOLBAS Execution - Extexport",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fdcb91ea-045e-4d43-81fb-6772744b8fb2",
+        "name": "LOLBAS Execution - Extrac32",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ed7ece50-f07a-47fd-a645-67253ff67c9b",
+        "name": "LOLBAS CertOC Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1b9e0725-7720-43b6-9d5a-9a2a56402136",
+        "name": "LOLBAS Execute SettingSyncHost.exe as LOLBin",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b1f89937-05ab-4f62-9572-0bd8b7264bc4",
+        "name": "LOLBAS Stordiag Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "180f4553-66ac-4c78-a546-f25630b5f7d2",
+        "name": "LOLBAS Esentutl Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8db51659-f877-45b5-971d-b8217fddad08",
+        "name": "LOLBAS Execution - Diskshadow.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9a449ec3-c438-42e9-8935-7082f5a165b3",
+        "name": "LOLBAS Possible Credential Dumping via Createdump",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes",
+      "sao",
+      "pao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/11/06",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8a8dff6c-a9db-4534-a8ca-200e158a2bd8",
+  "name": "IIS Worker Process Creating User Account",
+  "description": "Detects the creation of a user account by an IIS worker process, which may indicate webserver compromise.",
+  "filterSets": [
+    [
+      {
+        "id": "7a722769-fcb4-4e23-a295-19930e555b9f",
+        "name": "IIS Worker Process Creating User Account",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2025/11/17",
+  "lastUpdate": "2025-11-26T02:28:43.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3c319e85-24d6-4008-8c3b-3acdc9f822d8",
+  "name": "Execution of Python Script Prevented by CrowdStrike",
+  "description": "This CrowdStrike alert indicates that an attempt to execute a Python script was prevented, typically by blocking the execution of Python with the '.py' extension, which may be associated with suspicious or unauthorized activity.",
+  "filterSets": [
+    [
+      {
+        "id": "1ad17248-c207-4800-8e51-f71a01fd88e0",
+        "name": "Execution of Python Script Prevented by CrowdStrike",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/08",
+  "lastUpdate": "2025-08-12T06:43:13.000Z"
+}

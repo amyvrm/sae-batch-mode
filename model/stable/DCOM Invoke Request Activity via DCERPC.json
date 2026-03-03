@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8a7e7d40-392f-41f2-b112-64741396b759",
+  "name": "DCOM Invoke Request Activity via DCERPC",
+  "description": "Network activity indicative of a DCOM Invoke Request, utilizing DCERPC, has been observed. This activity is related to the invocation requests processed in a distributed computing environment.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "32e75737-974d-40fe-9f54-79a57d860b5f",
+      "name": "DCOM Invoke Request Activity via DCERPC",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.003",
+    "threat.pua"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2025/05/14",
+  "lastUpdate": "2025-05-14T03:19:01.000Z"
+}

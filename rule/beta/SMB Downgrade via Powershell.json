@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6cbfff67-ccf4-4df9-b447-dc80b97cfdf0",
+  "name": "SMB Downgrade via Powershell",
+  "description": "SMB downgrade using powershell command Set-SmbServerConfiguration. Used by Prometei Botnets.",
+  "filterSets": [
+    [
+      {
+        "id": "462d383e-b8fa-447e-9b19-82c8ed514ceb",
+        "name": "SMB Downgrade via Powershell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Alvin Bacani",
+  "team": "CSG",
+  "date": "2024/11/12",
+  "lastUpdate": "2024-11-12T06:14:55.000Z"
+}

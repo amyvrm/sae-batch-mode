@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0f357550-f2a3-4e00-b948-6ac2fb59a504",
+  "name": "Excessive communication attempts",
+  "description": "Network detection of excessive communication attempts.",
+  "filterSets": [
+    [
+      {
+        "id": "1a3444fe-73cd-4d5d-8a93-1bdf06aba475",
+        "name": "Excessive communication attempts (possible bruteforce)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "lastUpdate": "2023-06-21T05:14:40.000Z"
+}

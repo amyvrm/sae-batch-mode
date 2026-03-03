@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e5dbc8f9-59cd-47fe-b0e8-e059c1cf1c05",
+  "name": "Suspicious PowerShell Invoke-RestMethod with Recon Commands",
+  "description": "Invoke-RestMethod (IRM) paired with system discovery commands, indicating reconnaissance data collection for potential exfiltration.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "5291f2f6-e7a3-4b5a-8f24-e8f4fb047562",
+      "name": "Suspicious PowerShell Invoke-RestMethod with Recon Commands",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Ahmed Kamal & Yusuf Madkdour",
+  "team": "MENA-IR",
+  "date": "2025/12/09",
+  "lastUpdate": "2026-02-11T00:29:51.000Z"
+}

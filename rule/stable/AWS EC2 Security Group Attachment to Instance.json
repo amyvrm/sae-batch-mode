@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4b51ae9-b7b1-4193-a909-986935c19d2e",
+  "name": "AWS EC2 Security Group Attachment to Instance",
+  "description": "Attachment of a security group to a running EC2 instance was observed.",
+  "filterSets": [
+    [
+      {
+        "id": "38a2829e-e036-4515-a8b9-de02558cace4",
+        "name": "AWS EC2 Security Group Attachment to Instance",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

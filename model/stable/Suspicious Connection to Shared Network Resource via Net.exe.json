@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "52fcac4b-32dc-449b-8785-41472c82307f",
+  "name": "Suspicious Connection to Shared Network Resource via Net.exe",
+  "description": "Detects account and group discovery using Net.exe leading to shared resource mapping also via Net.exe.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "52587d86-6c09-446a-bb4d-d9d71df3e9ab",
+      "name": "Account and Group Discovery via Net.exe",
+      "score": 1
+    },
+    {
+      "id": "90bca288-81eb-aaaa-a59b-93f9189bc321",
+      "name": "Show Mapped Drives And Devices",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1087",
+    "mitre.t1087.001",
+    "mitre.t1069"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/09/18",
+  "lastUpdate": "2024-12-05T05:42:31.000Z"
+}

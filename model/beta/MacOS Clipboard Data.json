@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fbecf467-42ee-4914-a2db-4be1394abc13",
+  "name": "MacOS Paste Data From Clipboard",
+  "description": "Paste data from clipboard",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "334fb097-d577-4743-aefd-b422cce655ac",
+      "name": "MacOS Paste Data From Clipboard",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1115"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": true,
+  "author": "Steven Du",
+  "team": "MacTRT",
+  "date": "2021/08/11",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

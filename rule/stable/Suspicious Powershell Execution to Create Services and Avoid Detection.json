@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8b5240dd-0511-4340-8cc4-ada08d69d0d7",
+  "name": "Suspicious Powershell Execution to Create Services and Avoid Detection",
+  "description": "A Powershell script executes malicious command that creates services, disables Windows Defender, and modifies RDP Services.",
+  "filterSets": [
+    [
+      {
+        "id": "864c794b-5aad-473b-a56d-018f08ac52a1",
+        "name": "Disabling of Windows Defender via PowerShell",
+        "highlight": true
+      },
+      {
+        "id": "50062e21-0e3d-4828-995d-0d6aee71a06c",
+        "name": "RDP Services Modification in Registry via Powershell",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "864c794b-5aad-473b-a56d-018f08ac52a1.processPid equals 50062e21-0e3d-4828-995d-0d6aee71a06c.processPid"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/10/10",
+  "lastUpdate": "2024-11-26T02:19:00.000Z"
+}

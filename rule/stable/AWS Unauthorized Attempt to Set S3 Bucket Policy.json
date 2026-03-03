@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "af75dd88-b432-4551-8d37-0193e9cd22bd",
+  "name": "AWS Unauthorized Attempt to Set S3 Bucket Policy",
+  "description": "Detects successful modification AWS S3 Bucket Policy",
+  "filterSets": [
+    [
+      {
+        "id": "e12935b1-4757-4089-8a18-243c9d997f69",
+        "name": "AWS Unauthorized Attempt to Set S3 Bucket Policy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/04/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

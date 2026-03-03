@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6d3feed0-2fea-4c70-8a04-f5aa526e36f3",
+  "name": "Possible Account Compromise - Impossible Travel",
+  "description": "User account has two successful sign-in attempts originating from geographically distant locations occurring within a time period that is too short to complete travel between the first location to the second, indicating a possible account compromise.",
+  "filterSets": [
+    [
+      {
+        "id": "c1245687-9ff7-551e-b647-6353022d2252",
+        "name": "Possible Account Compromise - Impossible Travel",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "aad"
+    ]
+  ],
+  "author": "Kai-Min Tu",
+  "team": "Jaguar",
+  "date": "2024/03/14",
+  "lastUpdate": "2024-03-20T04:36:15.000Z"
+}

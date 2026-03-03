@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d8e59be2-ea40-4c2f-a8d4-846083b19d6a",
+  "name": "Gzip Encoded PowerShell",
+  "description": "Detection of gzip encoded powershell commonly associated with cobalt strike beacons",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8ec31e34-1524-4143-a7df-aa3ff6655390",
+      "name": "Gzip Encoded PowerShell",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1140",
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2024/04/29",
+  "lastUpdate": "2024-05-17T01:21:20.000Z"
+}

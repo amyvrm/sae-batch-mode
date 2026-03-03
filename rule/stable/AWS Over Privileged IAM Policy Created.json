@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "067d5d62-9bb5-11ec-b909-0242ac120002",
+  "name": "AWS Over Privileged IAM Policy Created",
+  "description": "Detects creation of Over privileged IAM Policy",
+  "filterSets": [
+    [
+      {
+        "id": "e4609c3a-7d20-4e11-95ac-7644018ca520",
+        "name": "AWS Over Privileged IAM Policy Created",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/03/07",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

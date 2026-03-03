@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "186e5ebb-09c1-43ab-b481-53ee0321e080",
+  "name": "Potential APT-Related Command and Control Connection",
+  "description": "Detects execution of potential process that is link to AgentTesla to establish C2.",
+  "filterSets": [
+    [
+      {
+        "id": "aa9bc272-8b56-4d1d-9f1a-288f1f11b2fa",
+        "name": "Potential APT-Related Command and Control Connection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "06cbef6c-b070-4941-a02c-af135c1553f7",
+        "name": "Potential APT-Related DNS Query",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2024/11/11",
+  "lastUpdate": "2025-11-11T08:26:35.000Z"
+}

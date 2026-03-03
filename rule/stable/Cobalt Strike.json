@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ea77f2c1-3b81-48bb-864a-184b0fa03b3e",
+  "name": "Cobalt Strike Detections",
+  "description": "Found detections for Cobalt Strike which is a potential indicator of being used by ransomware as delivery.",
+  "filterSets": [
+    [
+      {
+        "id": "7fb4d6f0-81ed-402a-9d3b-fb2b43ea28e0",
+        "name": "File Detection for Cobalt and Cobeacon",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d79f6fde-c93a-492b-8f6b-37c1433d0f1b",
+        "name": "Possible Cobalt Strike Connection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c53a6d43-21c3-4955-b104-4e0e60ede847",
+        "name": "CobaltStrike Behavior Detection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "78506ced-9b8b-4fa8-9810-769f5788062b",
+        "name": "Cobalt Strike Beacon Request Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a47dbcf8-b54e-4108-8641-60b4a94c7ec6",
+        "name": "Cobalt Strike Server Response Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ec62bf36-a577-48fc-a17c-d2a948d19770",
+        "name": "Cobalt Strike Malleable C2 Profile Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cb00fe0e-22ba-4dd7-9596-20aa812d12ea",
+        "name": "Cobalt Strike Malleable C2 Profile Response Traffic",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 86400,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sao",
+      "sds",
+      "pdi",
+      "pds",
+      "pao",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "author": "Ronjay Caragay",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2024-04-08T06:54:04.000Z"
+}

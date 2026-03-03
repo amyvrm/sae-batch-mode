@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eff53541-4939-4a4f-90a1-4a8ba6a3fba5",
+  "name": "Successful AWS S3 Bucket Content Exfiltration via Microsoft Telemetry",
+  "description": "Detects successful AWS S3 bucket content exfiltration attempts via Microsoft telemetry.",
+  "filterSets": [
+    [
+      {
+        "id": "f7c757df-115a-4fd1-8db0-34235076c641",
+        "name": "MDE Network Activity - AWS S3 Bucket Content Download Attempt via AWS CLI",
+        "highlight": true
+      },
+      {
+        "id": "71ad2812-c75c-4d4b-9475-7adede3cc683",
+        "name": "MDE File Activity - AWS S3 Bucket Content Downloaded via AWS CLI",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "f7c757df-115a-4fd1-8db0-34235076c641.processCmd contains 71ad2812-c75c-4d4b-9475-7adede3cc683.processCmd"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/08/14",
+  "lastUpdate": "2025-08-14T11:14:38.000Z"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "698fdb7a-bcc5-41f1-be69-ab34433df482",
+  "name": "Windows Network Sniffing",
+  "description": "Microsoft Detection for Windows Network Sniffing",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f214dd63-1cae-46d8-845e-598a96fdaeb4",
+      "name": "Windows Network Sniffing",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 900,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/03",
+  "lastUpdate": "2025-08-26T03:04:21.000Z"
+}

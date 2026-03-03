@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2fbd178d-7448-4ee5-80d4-d705b6fffef5",
+  "name": "Office Applications Executable Content Creation Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that blocks Office applications from creating executable content on disk to prevent malicious code execution through macros or other embedded content.",
+  "filterSets": [
+    [
+      {
+        "id": "33bf31cf-8c35-4000-a68a-38b91243d5ae",
+        "name": "Office Applications Executable Content Creation Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-21T03:31:42.000Z"
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "02fd02bb-99df-471c-b3b7-3df264a56313",
+  "name": "Printer Driver Added Remotely Over SMB Or TCP",
+  "description": "Addition Of Printer Driver Over SMB Or TCP",
+  "filterSets": [
+    [
+      {
+        "id": "71c351c1-b4f8-42dd-927a-20b0f2287099",
+        "name": "PrintNightmare Microsoft Windows Print Spooler Vulnerability Exploit Detection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5b302755-b33a-4763-b031-8a70b1f95561",
+        "name": "PrintNightmare Windows Print Spooler Vulnerability Network Security Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "stp",
+      "xcs",
+      "ptp"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/07/19",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

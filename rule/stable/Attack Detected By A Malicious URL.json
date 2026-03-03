@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ff1febd5-430b-4847-9534-3532ea5e31c4",
+  "name": "Attack Detected By A Malicious URL",
+  "description": "Fortinet detection - Attack detected by a malicious URL",
+  "filterSets": [
+    [
+      {
+        "id": "8a611410-c500-45c5-b7ba-bd882c8b5d8f",
+        "name": "Attack Detected By A Malicious URL",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-03-24T01:49:14.000Z"
+}

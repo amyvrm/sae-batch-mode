@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "51e4d44c-7b12-4b87-b6b6-bbc080d21ef7",
+  "name": "Suspicious Activity in the Container",
+  "description": "Suspicious actions detected.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "enable": true,
+  "rules": [
+    {
+      "id": "097e40a0-0a5e-4842-afff-78f471c24dc0",
+      "name": "Suspicious Network Activity in Container",
+      "score": 1
+    },
+    {
+      "id": "ae34d438-bcff-4e39-9b64-1743f30eb4aa",
+      "name": "Suspicious Activity in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 1200,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1053.003",
+    "mitre.t1059.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/02/22",
+  "lastUpdate": "2023-10-10T08:55:11.000Z"
+}

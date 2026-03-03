@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7cc11c85-d906-42a9-82a7-272430077ab0",
+  "name": "AWS Bedrock Knowledge Base Cross-Account S3 Data Source Configuration Updated",
+  "description": "Detects when a cross-account S3 data source in AWS Bedrock Knowledge Base is updated.",
+  "filterSets": [
+    [
+      {
+        "id": "db0b6db4-753a-4eee-affc-4dabde7054b3",
+        "name": "AWS Bedrock Knowledge Base Cross-Account S3 Data Source Configuration Updated",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/08",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

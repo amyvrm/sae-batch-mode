@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c5e94efc-7b9b-49e9-90c8-b2ab11ef2643",
+  "name": "Suspicious Creation of Powerpoint File in Uncommon Path",
+  "description": "Detects suspicious creation of PowerPoint Files in uncommon path that is being used for wineloader malware in APT29 Phishing Campaign.",
+  "filterSets": [
+    [
+      {
+        "id": "c1d5c141-a8f7-45e1-ac01-dfb496e47e67",
+        "name": "Suspicious Creation of Powerpoint File in Uncommon Path",
+        "highlight": true
+      },
+      {
+        "id": "92445dbd-8da4-4ed5-bfc4-e57ba77f461e",
+        "name": "Suspicious Creation of DLL File used in Phishing Campaign",
+        "highlight": true
+      },
+      {
+        "id": "c5f410e1-3347-495e-b3ea-158207a72d9e",
+        "name": "Suspicious Creation of Powerpoint Dll File in Uncommon Path",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2025/04/21",
+  "lastUpdate": "2025-05-29T06:49:11.000Z"
+}

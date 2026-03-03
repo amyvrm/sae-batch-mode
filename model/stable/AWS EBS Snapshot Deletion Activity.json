@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "830b5af6-1ace-4ae9-8286-7bf921db4c18",
+  "name": "AWS EBS Snapshot Deletion Activity",
+  "description": "Deletion of Amazon EBS snapshots may indicate routine cleanup, cost optimization, or an attempt to remove recovery points as part of disruptive behavior by an attacker. This activity can impact data availability and limit the ability to recover from incidents or conduct effective investigations.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "a8896021-0d42-47a8-a745-ea123e17838b",
+      "name": "AWS EBS Snapshot Deletion Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1490",
+    "mitre.t1485"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-29T15:07:44.000Z"
+}

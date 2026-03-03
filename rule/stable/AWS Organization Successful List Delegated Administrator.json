@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d06f6253-5928-42b4-ab96-8f12159946f7",
+  "name": "AWS Organization Successful List Delegated Administrator",
+  "description": "AWS api to list organization delegated administrator",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Organization Successful List Delegated Administrator",
+        "id": "b38fea24-af06-4564-b589-b8090b706f92",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/20",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

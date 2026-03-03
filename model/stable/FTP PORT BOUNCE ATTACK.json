@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "888116d1-8e17-4b3d-90a5-94a261b58b01",
+  "name": "FTP PORT BOUNCE ATTACK",
+  "description": "SonicWall Detection for FTP PASV response bounce attack dropped",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f19400e0-38eb-4ff8-befd-cfebc224b491",
+      "name": "FTP PORT BOUNCE ATTACK",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christian Jason Geollegue",
+  "team": "Third Party Operations",
+  "date": "2024/12/05",
+  "lastUpdate": "2025-09-02T10:21:52.000Z"
+}

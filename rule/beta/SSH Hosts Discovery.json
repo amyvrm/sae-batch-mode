@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "34ace7d3-6fc6-4802-ae54-c508324d39fd",
+  "name": "SSH Hosts Discovery",
+  "description": "Detects SSH hosts discovery",
+  "filterSets": [
+    [
+      {
+        "id": "03647fdf-c289-40c5-8c71-51c5e2e851a0",
+        "name": "Read Access On SSH Known Hosts",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6682ff7d-6faf-4b93-abfc-4faf04818457",
+        "name": "Read Access On Unix Bash History",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "587ec7fc-1883-4077-ba25-706bdbe9e54b",
+        "name": "View SSH Config File via Cat Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Josh Morrison",
+  "team": "Cloud One",
+  "date": "2022/12/30",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

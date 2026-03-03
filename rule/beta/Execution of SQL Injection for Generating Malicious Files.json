@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d13e88f8-35a6-4922-87f4-a97f11661b43",
+  "name": "Execution of SQL Injection for Generating Malicious Files",
+  "description": "Detects SQL Injection for generating malicious files.",
+  "filterSets": [
+    [
+      {
+        "id": "086813e6-619a-4ff4-a831-e76a0ee83faa",
+        "name": "Execution of SQL Injection for Generating Malicious Files",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/11/03",
+  "lastUpdate": "2025-11-27T09:47:49.000Z"
+}

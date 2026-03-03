@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "82500a21-dddc-47b3-b3a6-96b24bff1d31",
+  "name": "Suspicious Invocation of Rundll32.exe from the Downloads Folder",
+  "description": "Detection of a suspect invocation of rundll32.exe from the downloads folder, which may be indicative of an infection",
+  "filterSets": [
+    [
+      {
+        "id": "f7fa0530-de1d-44fa-b801-0e9e67e20cf8",
+        "name": "Suspicious Invocation of Rundll32.exe From The Downloads Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/10/08",
+  "lastUpdate": "2025-11-14T09:05:16.000Z"
+}

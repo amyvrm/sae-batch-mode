@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "49d8e411-b603-423c-a686-40dab27c38d5",
+  "name": "Possible Dropping of AutoIT Loader In Temp Directory",
+  "description": "Detects attempts to drop and execute the DarkGate Loader in the C:\temp folder.",
+  "filterSets": [
+    [
+      {
+        "id": "d1413718-743e-4817-802c-7e0d54a30ed6",
+        "name": "Possible Dropping of AutoIT Loader In Temp Directory",
+        "highlight": true
+      },
+      {
+        "id": "03665881-6347-486e-b2ef-91c5c4c40801",
+        "name": "Possible Dropping of AutoIT Script In Temp Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Lance Albert Mendoza & Shaun Eris Galura",
+  "team": "AMEA-IR",
+  "date": "2024/11/12",
+  "lastUpdate": "2025-06-11T08:51:01.000Z"
+}

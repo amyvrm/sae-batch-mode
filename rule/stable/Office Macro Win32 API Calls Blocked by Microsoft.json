@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d5e843a1-4c5a-421d-a302-053abff72c30",
+  "name": "Office Macro Win32 API Calls Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that prevents Office macro code from invoking Win32 API calls to block shellcode execution and direct in-memory attacks.",
+  "filterSets": [
+    [
+      {
+        "id": "6828813d-2e6b-4ea9-b8c3-6d136787a34d",
+        "name": "Office Macro Win32 API Calls Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-14T08:49:59.000Z"
+}

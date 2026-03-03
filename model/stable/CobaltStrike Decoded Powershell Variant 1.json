@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "882195b1-c177-422c-a4cb-abd30fc1808a",
+  "name": "CobaltStrike Decoded Powershell Variant 1",
+  "description": "Detection of decoded cobaltstrike powershell stager",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f012f089-1df0-4acb-bd26-f9616f999058",
+      "name": "CobaltStrike Decoded Powershell Variant 1",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1140"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/03/12",
+  "lastUpdate": "2024-03-19T10:36:49.000Z"
+}

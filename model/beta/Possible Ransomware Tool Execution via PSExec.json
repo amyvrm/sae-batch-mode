@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7a302f6d-b11d-42ab-addc-2f70ec4041da",
+  "name": "Possible Ransomware Tool Execution via PSExec",
+  "description": "Possible use of a potentially-renamed psexec to run the Cicada3301 ransomware tool.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f9ea77a9-ccad-494c-a8d5-abd75252e8df",
+      "name": "Possible Ransomware Tool Execution via PSExec",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1569",
+    "mitre.t1569.002",
+    "attack.s0029"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gabriel Cardoso",
+  "team": "US-IR",
+  "date": "2025/07/01",
+  "lastUpdate": "2025-08-04T07:35:40.000Z"
+}

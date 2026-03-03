@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "73639044-ef3c-4472-95d0-782d895e0a59",
+  "name": "File Meta - New Executable File",
+  "description": "A newly observed executable file was written to disk. This may indicate software installation, but could also be a potentially malicious activity such as malware dropper execution.",
+  "filterSets": [
+    [
+      {
+        "id": "6f9ee535-68dd-43a9-8ffc-3c02aef3de55",
+        "name": "File Meta - New Executable File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Benson Sy",
+  "team": "SAE Threat Expert",
+  "date": "2025/09/01",
+  "lastUpdate": "2025-09-05T01:26:03.000Z"
+}

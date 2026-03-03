@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "02b9c179-b86a-46c1-bf78-964de36fb8e6",
+  "name": "Possible Installation of Windows Service Related to Ransomware",
+  "description": "Detects installation of windows service related to Ransomware. Commonly associated with Crypto24 ransomware.",
+  "filterSets": [
+    [
+      {
+        "id": "2da0f6d6-91d0-400f-8435-6e211666d9e6",
+        "name": "Possible Installation of Windows Service Related to Ransomware",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Krisford Macalalad & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/07/13",
+  "lastUpdate": "2025-11-11T16:00:16.000Z"
+}

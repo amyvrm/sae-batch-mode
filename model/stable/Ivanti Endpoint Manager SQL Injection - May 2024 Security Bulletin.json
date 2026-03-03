@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a2954630-2686-4caf-b2d7-72b71bca0125",
+  "name": "Ivanti Endpoint Manager SQL Injection - May 2024 Security Bulletin",
+  "description": "There was an attempt to exploit an Ivanti Endpoint Manager SQL Injection Vulnerability listed in the May 2024 Security bulletin of Ivanti.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "ef96c55f-e50d-4335-bc49-c737d7e16398",
+      "name": "Ivanti Endpoint Manager SQL Injection - May 2024 Security Bulletin",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1210"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2024/07/12",
+  "lastUpdate": "2024-07-22T09:09:53.000Z"
+}

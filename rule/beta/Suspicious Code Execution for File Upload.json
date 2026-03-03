@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f24c0d55-155d-4c1d-9ccb-9f347b7acf11",
+  "name": "Suspicious Code Execution for File Upload",
+  "description": "Detects suspicious codes that handles file uploads, which could be used as a backdoor.",
+  "filterSets": [
+    [
+      {
+        "id": "ab2e8f2d-1c07-4307-8d45-c98de3477673",
+        "name": "Suspicious Code Execution for File Upload",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Shaun Galura & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/06/05",
+  "lastUpdate": "2025-08-13T06:38:36.000Z"
+}

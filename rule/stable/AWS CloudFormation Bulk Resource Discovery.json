@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ff9538c2-8fa3-420e-8648-b69ad82fe230",
+  "name": "AWS CloudFormation Bulk Resource Discovery",
+  "description": "Detects comprehensive enumeration of all resources within CloudFormation stacks, which could indicate systematic reconnaissance of deployed infrastructure for attack surface mapping.",
+  "filterSets": [
+    [
+      {
+        "id": "5d1ea30b-4179-4449-9220-69f3e909e865",
+        "name": "AWS CloudFormation Bulk Resource Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1200,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/09/05",
+  "lastUpdate": "2025-09-05T05:08:42.000Z"
+}

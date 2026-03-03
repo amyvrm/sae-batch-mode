@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6bc13f2d-0e0a-460b-a4bd-1aa92fa80043",
+  "name": "File Reported Infected By Outbreak Prevention (Notice)",
+  "description": "Fortinet detection - File reported infected by Outbreak Prevention (notice)",
+  "filterSets": [
+    [
+      {
+        "id": "ef2e4a8a-ac14-4905-9300-ed95fd397d21",
+        "name": "File Reported Infected By Outbreak Prevention (Notice)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

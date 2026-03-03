@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b4904215-b4d9-4d6b-8d53-870eb7ea8d4c",
+  "name": "Identified TOR Network Traffic",
+  "description": "TOR is an anonymity and privacy network which is resistant to both active and passive eavesdropping and traffic analysis",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3072db28-c5d4-4ce0-b8c8-d71d1c182583",
+      "name": "TOR Network Traffic",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1573",
+    "mitre.t1090.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2022/08/23",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

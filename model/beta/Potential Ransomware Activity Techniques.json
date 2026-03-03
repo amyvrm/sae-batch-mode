@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ba24da16-4c94-41f1-87dc-152750e33401",
+  "name": "Potential Ransomware Activity Techniques",
+  "description": "Detects indicative behaviors of Warlock ransomware such as specific file extensions, ransom note placement, and process tree characteristics.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "59ed48cf-f2cc-4487-a3e2-222cf9ae0717",
+      "name": "Potential Ransomware Activity Techniques",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1543",
+    "mitre.t1486"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Bien Joshua Philip De Leon & Mary Joy Ramos",
+  "team": "AIM",
+  "date": "2025/10/09",
+  "lastUpdate": "2025-11-13T09:36:08.000Z"
+}

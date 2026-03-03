@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "id": "972ded9a-3528-4e85-a231-cda907af2fbe",
+  "name": "Dridex Traffic Detected",
+  "description": "Dridex communication was detected on the network.",
+  "filterSets": [
+    [
+      {
+        "id": "9d78cada-3ace-4275-bfd6-e0fc6c6ee404",
+        "name": "Dridex HTTP Request Made By Malware Infection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "lastUpdate": "2023-06-21T05:14:40.000Z"
+}

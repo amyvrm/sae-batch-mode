@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "167e1ff9-5698-447e-aa79-8442b34ad774",
+  "name": "Suspicious Domain and System Admin Enumerator via LDAP",
+  "description": "Network activity involving LDAP, which contains a suspicious Admin Enumerator was detected.",
+  "filterSets": [
+    [
+      {
+        "id": "513afc4c-adc2-4a8f-96db-27c7e74619a2",
+        "name": "Suspicious Domain and System Admin Enumerator via LDAP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T18:18:41.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e114c115-67b9-4907-8cda-43e7b39d9c45",
+  "name": "Possible EDRSilencer Hacking Tool Usage",
+  "description": "This hacking tool is used to block the outbound traffic of running EDR processes using Windows Filtering Platform (WFP) APIs.",
+  "filterSets": [
+    [
+      {
+        "id": "5e32e31c-d46f-4d48-a87e-97fa0fa9c428",
+        "name": "Possible EDRSilencer Hacking Tool Usage",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/07/22",
+  "lastUpdate": "2024-08-13T17:08:06.000Z"
+}

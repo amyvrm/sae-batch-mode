@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9c01b292-07d3-4709-83bd-586f765eb6cb",
+  "name": "Failed Logon Activity Monitoring",
+  "description": "McAfee detection for failed domain user logon attempts due to invalid passwords and successful logons following multiple failed attempts helps identify potential brute force attacks or unauthorized access attempts. These rules aid in monitoring account security and detecting suspicious authentication patterns.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0c544515-1f9b-4e79-a4a6-c71c9473c452",
+      "name": "Failed Logon Activity Monitoring",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc|McAfee"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078",
+    "mitre.t1078.002"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2026/02/10",
+  "lastUpdate": "2026-02-10T13:36:07.000Z"
+}

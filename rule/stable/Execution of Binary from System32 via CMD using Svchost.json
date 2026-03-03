@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "45bdcb6c-5cf6-4dab-b562-e0c9866248f1",
+  "name": "Execution of Binary from System32 via CMD using Svchost",
+  "description": "Suspicious behavior of Svchost executing files in Windows System32 Folder via CMD",
+  "filterSets": [
+    [
+      {
+        "id": "eede60b0-d75e-4bcd-a273-0d024465d75b",
+        "name": "Execution of Binary from System32 via CMD using Svchost",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/10/31",
+  "lastUpdate": "2024-12-03T06:44:48.000Z"
+}

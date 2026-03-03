@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c303aa2f-f751-4a62-9b1f-4371d4656a4a",
+  "name": "Detection of Metasploit Meterpreter Payload",
+  "description": "An identified Metasploit Meterpreter payload over the network was detected.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e733a9c3-ddb7-498a-a1ab-579093c5e5ef",
+      "name": "Detection for Metasploit Meterpreter",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "pao",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1588.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jose Baena Cobos",
+  "team": "Cloud One",
+  "date": "2023/05/22",
+  "lastUpdate": "2024-03-12T09:47:09.000Z"
+}

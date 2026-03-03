@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4ba3f037-f06a-47f3-aea0-2f8baaaf18c1",
+  "name": "MS Exchange CreateAttachmentFromUri Suspicious JSON Object",
+  "description": "This rule detects the usage of a JSON object in Microsoft Exchange Server traffic which can lead to information disclosure from the targeted exchange server.",
+  "filterSets": [
+    [
+      {
+        "id": "276b8eca-16ce-4b53-a9dc-039cd481101a",
+        "name": "MS Exchange CreateAttachmentFromUri Suspicious JSON Object Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2023/11/03",
+  "lastUpdate": "2024-05-14T07:14:32.000Z"
+}

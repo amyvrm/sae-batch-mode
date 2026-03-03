@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9ec3b2fc-3e41-4daa-8ca4-a9c5d05438a8",
+  "name": "Gootloader Post Execution Activity",
+  "description": "Detection of decoded powershell commands that are associated with Gootloader",
+  "filterSets": [
+    [
+      {
+        "id": "cf704f1a-27d6-44f5-93ba-72bc080e3c7d",
+        "name": "Gootloader Decoded Powershell 4",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/04/04",
+  "lastUpdate": "2024-04-17T09:36:28.000Z"
+}

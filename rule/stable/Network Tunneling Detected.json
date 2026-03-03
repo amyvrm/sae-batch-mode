@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1960f4c7-bfb9-42ea-9eb9-f7657bb96b1d",
+  "name": "Network Tunneling Detected",
+  "description": "Network detection for various tunneling tools",
+  "filterSets": [
+    [
+      {
+        "id": "121bb0d2-c47a-4e74-9978-e0032cc7a566",
+        "name": "Fast Reverse Proxy Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9a6bf855-53fb-4928-9a24-d381e9d169b6",
+        "name": "Tunneling Traffic Detected",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fce1395c-b854-4a23-8fd9-bf761f296b68",
+        "name": "DNS Tunneling Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3a650466-bc3c-451e-a6e6-4a31adb229a7",
+        "name": "Proxy Traffic Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2022/04/08",
+  "lastUpdate": "2023-11-02T18:41:49.000Z"
+}

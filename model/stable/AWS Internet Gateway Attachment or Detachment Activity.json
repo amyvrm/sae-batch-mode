@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "470bc01a-4569-4acc-8ed8-5ed804f98d66",
+  "name": "AWS Internet Gateway Attachment or Detachment Activity",
+  "description": "Observed activity involving the attachment or detachment of an Internet Gateway to/from a VPC. These operations directly impact network connectivity to and from the internet. While such actions may be part of legitimate infrastructure changes, they can also be used by attackers to exfiltrate data or disrupt access. Monitoring these changes is important, especially when performed outside of change windows or by unexpected identities.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "62138aa6-12ee-4523-b7f9-ea9a7966bc84",
+      "name": "AWS Internet Gateway Attachment or Detachment Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1578"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-29T15:07:44.000Z"
+}

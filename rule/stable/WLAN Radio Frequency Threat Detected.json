@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "185089c9-5d38-4558-a9b3-7a21fdfe0a37",
+  "name": "WLAN Radio Frequency Threat Detected",
+  "description": "SonicWall Detection - WLAN radio frequency threat detected",
+  "filterSets": [
+    [
+      {
+        "id": "d19b9b14-dcea-475b-b9aa-a8bc41cf5e9a",
+        "name": "WLAN Radio Frequency Threat Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

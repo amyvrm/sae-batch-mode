@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "87e3d825-0307-4450-a036-8a99ec4046cf",
+  "name": "MiniDumpWriteDump via COM Services DLL",
+  "description": "Detects attempted use of comsvcs.dll to dump memory using MiniDump function.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c6b3dc9d-ee12-4e32-bfff-c56c644afe86",
+      "name": "MiniDumpWriteDump via COM Services DLL",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1003.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/04/24",
+  "lastUpdate": "2025-07-14T01:53:47.000Z"
+}

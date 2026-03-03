@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b519f21d-b3d7-4963-991e-202113e5ddfd",
+  "name": "AWS CloudWatch Log Group and Stream Creation Activity",
+  "description": "A new CloudWatch log group and log stream were created, which could be part of routine logging or a sign of suspicious activity. Attackers may use this tactic to redirect or manipulate logs, making it harder to detect their actions. It's important to review this event, especially if it comes from an unexpected user or is linked to changes in log configurations.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "4bf8c37c-a4f3-4e52-be59-3f64ecf05736",
+      "name": "AWS CloudWatch Log Group and Stream Creation Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.008"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-08-04T16:22:25.000Z"
+}

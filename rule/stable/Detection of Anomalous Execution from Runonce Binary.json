@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "02a39af4-3fb0-4290-97ef-a470a49d5be5",
+  "name": "Detection of Anomalous Execution from Runonce Binary",
+  "description": "Detection of anomalous activity spawned by runonce.exe, which is not expected to perform such behaviour.",
+  "filterSets": [
+    [
+      {
+        "id": "f7288c07-7515-49b7-8f4c-b1fdfdd382a1",
+        "name": "Detection of Anomalous Execution from Runonce Binary",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/04/08",
+  "lastUpdate": "2025-05-08T06:52:09.000Z"
+}

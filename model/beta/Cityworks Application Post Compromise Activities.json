@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "id": "00a5a8e8-ba74-4a6c-aadf-b80b37bc9e79",
+  "name": "Cityworks Application Post Compromise Activities",
+  "description": "Aims to detect post-compromise activities related to the exploitation of the Cityworks vulnerability (CVE-2025-0944). It focuses on identifying suspicious actions such as file manipulation, web shell deployment, and command execution within Cityworks directories. These activities are indicative of a threat actor maintaining persistence and further exploiting the compromised system.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f24c0d55-155d-4c1d-9ccb-9f347b7acf11",
+      "name": "Suspicious Code Execution for File Upload",
+      "score": 20
+    },
+    {
+      "id": "db48903b-31ad-406b-8459-6532d3657435",
+      "name": "Possible Downloading of Backdoor via Powershell",
+      "score": 20
+    },
+    {
+      "id": "a2220cb7-12d5-42a8-a411-28c203ccfd5a",
+      "name": "Possible File Staging Related to Cityworks Directories",
+      "score": 20
+    }
+  ],
+  "threshold": {
+    "targetScore": 20,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1074",
+    "mitre.t1083",
+    "mitre.t1059.003",
+    "mitre.t1071.001",
+    "mitre.t1105",
+    "cve.2025.0994"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Shaun Galura & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/06/05",
+  "lastUpdate": "2025-08-13T06:38:36.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8d6f1c56-cc07-11ed-afa1-0242ac120002",
+  "name": "Network Discovery Attempt from Internal IP",
+  "description": "Port scanning was detected on the network coming from inside the network.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "a3a987b6-5821-469d-8982-059d8fe87484",
+      "name": "Network Discovery Attempt from Internal IP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1046"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jose Baena Cobos",
+  "team": "Cloud One",
+  "date": "2023/04/27",
+  "lastUpdate": "2024-11-15T14:13:16.000Z"
+}

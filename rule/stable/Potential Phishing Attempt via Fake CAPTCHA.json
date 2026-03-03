@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0d5d22cd-ff62-4341-8090-f102709fe85a",
+  "name": "Potential Phishing Attempt via Fake CAPTCHA",
+  "description": "Detects phishing attempts leveraging fake CAPTCHA verification messages to trick users into executing malicious scripts or visiting compromised websites",
+  "filterSets": [
+    [
+      {
+        "id": "d712518c-144a-43e8-b0ea-d14d867fd94b",
+        "name": "Potential Phishing Attempt via Fake CAPTCHA",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "05e98f99-4a3c-4962-ad22-04d5f66d1e31",
+        "name": "Suspicious PowerShell execution via Fake CAPTCHA",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Bahaa Yamany & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2025/02/19",
+  "lastUpdate": "2025-03-21T12:48:01.000Z"
+}

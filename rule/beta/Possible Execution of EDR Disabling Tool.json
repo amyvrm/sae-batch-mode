@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c773e8f1-7718-4524-8107-5172439af8f2",
+  "name": "Possible Execution of EDR Disabling Tool",
+  "description": "Detects execution of possible EDRSilencer tool that can disable EDR systems",
+  "filterSets": [
+    [
+      {
+        "id": "aa8f36e0-311a-4973-bedf-8f2bf4e856a7",
+        "name": "Possible Execution of EDR Disabling File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2025/05/09",
+  "lastUpdate": "2025-06-10T15:15:26.000Z"
+}

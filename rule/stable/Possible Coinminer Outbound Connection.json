@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "37c050ed-3121-40bd-a2c0-bbd80e3f3e7e",
+  "name": "Possible Coinminer Outbound Connection",
+  "description": "Detects an outbound connection of a suspicious executable indicative of coinminer activity.",
+  "filterSets": [
+    [
+      {
+        "id": "52ef3972-287b-42e1-82cf-af1e168cea1b",
+        "name": "Possible Coinminer Outbound Connection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/03/24",
+  "lastUpdate": "2025-05-27T15:53:15.000Z"
+}

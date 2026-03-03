@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2b90ac50-50c7-4144-92d9-85f383136540",
+  "name": "AWS CloudFormation Stack Enumeration Activity",
+  "description": "Detects attempts to enumerate CloudFormation stacks and their metadata, including stack status, parameters, outputs, and tags, which could indicate reconnaissance of infrastructure deployment patterns.",
+  "filterSets": [
+    [
+      {
+        "id": "8bae0ef7-2a00-4491-b6aa-17c15451ec7f",
+        "name": "AWS CloudFormation Stack Enumeration Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1200,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/09/05",
+  "lastUpdate": "2025-09-05T05:08:42.000Z"
+}

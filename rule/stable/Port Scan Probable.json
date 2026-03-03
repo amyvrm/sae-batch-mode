@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "db3d3555-d8b0-4c7d-a819-6fbe65ecf2ef",
+  "name": "Port Scan Probable",
+  "description": "SonicWall Detection - Probable port scan detected",
+  "filterSets": [
+    [
+      {
+        "id": "45d2e684-a4fd-4289-85ce-fdecea84bd03",
+        "name": "Port Scan Probable",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

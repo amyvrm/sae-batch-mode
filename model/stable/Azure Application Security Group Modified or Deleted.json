@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6a471cc6-b1ab-4aea-905e-e6a2b7c29388",
+  "name": "Azure Application Security Group Modified or Deleted",
+  "description": "Detects modification or deletion of an Azure Application Security Group that may weaken network isolation and enable lateral movement.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "75e0132c-2e9d-449e-9818-d347aeb99afb",
+      "name": "Azure Application Security Group Modified or Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.007"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/12/31",
+  "lastUpdate": "2026-01-28T18:17:30.000Z"
+}

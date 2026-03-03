@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "97d41e64-6d5d-4def-9e7d-ba67cc1b61b6",
+  "name": "Possible dMSA Suspicious Activities via Unusual User - Simulation",
+  "description": "Detects the suspicious activities for a delegated Managed Service Account by an unusual subject account. Attackers can abuse the dMSA account migration feature to elevate privileges.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "5688f10e-4a4c-47fe-af07-2c236611abe6",
+      "name": "Possible dMSA Suspicious Activities via Unusual User",
+      "score": 1
+    },
+    {
+      "id": "cb18d6ba-52e4-49b8-b367-999f65dc4b89",
+      "name": "Group Managed Service Account Password Retrieval",
+      "score": 1
+    },
+    {
+      "id": "bb0b9214-4041-49d2-880f-835b7a5b3236",
+      "name": "Delegated Managed Service Account Password Retrieved",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078.002"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Simon",
+  "team": "Cloud One",
+  "date": "2025/09/25",
+  "lastUpdate": "2025-11-14T08:18:37.000Z"
+}

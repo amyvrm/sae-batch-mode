@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aaeed300-c0ab-4234-beef-cf6f43f75536",
+  "name": "DNS Activity Related to Angry IP Scanner",
+  "description": "Network activity involving DNS, indicative of the use of Angry IP Scanner, has been observed.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e53890d8-737a-4638-a935-394f879937eb",
+      "name": "DNS Activity Related to Angry IP Scanner",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "threat.pua",
+    "mitre.t1046"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2025/05/29",
+  "lastUpdate": "2025-06-02T00:30:07.000Z"
+}

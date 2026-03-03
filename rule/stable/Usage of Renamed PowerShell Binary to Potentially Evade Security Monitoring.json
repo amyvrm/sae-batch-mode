@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cd7051c6-bad7-419a-ad60-b5bac972d8d6",
+  "name": "Usage of Renamed PowerShell Binary to Potentially Evade Security Monitoring",
+  "description": "Detection of the usage of a renamed PowerShell binary, which can be done as  a means to evade detection",
+  "filterSets": [
+    [
+      {
+        "id": "7fdc82c6-5e6c-4d4d-8b47-7a99cec95533",
+        "name": "Usage of Renamed PowerShell Binary to Potentially Evade Security Monitoring",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "AIM",
+  "date": "2025/07/14",
+  "lastUpdate": "2025-09-05T03:08:59.000Z"
+}

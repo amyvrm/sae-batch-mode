@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d7f38af8-a6a5-407d-a29b-1146176880be",
+  "name": "Ransomware-like Files Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that uses advanced protection against ransomware by employing client and cloud heuristics to block files that resemble ransomware behavior unless they are prevalent, signed, or known good.",
+  "filterSets": [
+    [
+      {
+        "id": "ed03728d-2bb7-424d-a236-57f7c63485b9",
+        "name": "Ransomware-like Files Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-14T08:49:59.000Z"
+}

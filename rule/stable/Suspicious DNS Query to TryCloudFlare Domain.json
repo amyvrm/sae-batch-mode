@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "962c9c09-d3c1-4850-bbc4-62dc37ebc69d",
+  "name": "Suspicious DNS Query to TryCloudFlare Domain",
+  "description": "Suspicious DNS Query to TryCloudFlare Domain from Unusual Location",
+  "filterSets": [
+    [
+      {
+        "id": "5c3562f6-98d5-493e-864e-53b3ea3cd274",
+        "name": "Suspicious DNS Query to trycloudflare[.]com Domain",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 10,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/08/05",
+  "lastUpdate": "2025-04-02T03:40:10.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "074cfe45-38df-4929-a3b6-1013e4f4cde1",
+  "name": "AWS SageMaker Successful Code Repository Enumeration",
+  "description": "Detects successful enumeration of code repository in AWS SageMaker service, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "346174eb-80f4-47a9-a225-8591b57f42f4",
+        "name": "AWS SageMaker Successful Code Repository Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/17",
+  "lastUpdate": "2026-01-19T02:05:18.000Z"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e87626e7-9aa2-40f2-8bb3-8586a7b69cf1",
+  "name": "Detected Download Of Executables Or Scripts Using Curl Or Wget",
+  "description": "Detect Download Of Executables Or Scripts Using Curl Or Wget",
+  "filterSets": [
+    [
+      {
+        "id": "567f5a61-cea5-4628-93a7-a16d54bbf859",
+        "name": "Download Via Curl Or Wget",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b3616e5c-08c8-401e-9f31-846f5fddc3bd",
+        "name": "Script Download Via Curl/Wget",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/05/17",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

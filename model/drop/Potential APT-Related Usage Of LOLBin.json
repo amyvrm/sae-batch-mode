@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c35e2b8b-4179-42af-ac65-337294447bba",
+  "name": "Potential APT-Related Usage Of LOLBin",
+  "description": "Detection for LOLbin tools usage by Earth Estries to gather endpoint information and perform lateral movement to gain access to more compromised machines.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6a2dd992-1727-4d62-9015-9643489c1444",
+      "name": "Potential Post-exploitation Usage",
+      "score": 1
+    },
+    {
+      "id": "3fced4c6-3996-46b5-9b99-4a9ba7350d61",
+      "name": "Potential LOLBin Usage",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1570"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/01/01",
+  "lastUpdate": "2025-11-11T08:26:35.000Z"
+}

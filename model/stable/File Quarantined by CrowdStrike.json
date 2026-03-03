@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9160b996-7425-4f97-a361-5a0248369651",
+  "name": "File Quarantined by CrowdStrike",
+  "description": "This CrowdStrike alert indicates that a file was quarantined and isolated.",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "9bac9025-19a1-4c19-af10-b808dabff74a",
+      "name": "File Quarantined by CrowdStrike",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/08/11",
+  "lastUpdate": "2025-09-08T08:22:04.000Z"
+}

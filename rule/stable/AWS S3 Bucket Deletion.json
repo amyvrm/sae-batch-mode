@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "464ba165-6d48-4f20-8802-d97a82a4fc0f",
+  "name": "AWS S3 Bucket Deletion",
+  "description": "Detects the use of the S3 Delete Object or Delete Bucket API calls, which indicate attempts to delete individual objects or entire buckets from S3 storage.",
+  "filterSets": [
+    [
+      {
+        "id": "2b6eecb0-1f15-4472-87a9-9aa4e4fae61b",
+        "name": "AWS S3 Object Deletion",
+        "highlight": true
+      },
+      {
+        "id": "d4f9c77d-ac14-4647-a84d-24410d09fb2d",
+        "name": "AWS S3 Bucket Deletion",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/03/24",
+  "lastUpdate": "2025-09-04T09:31:24.000Z"
+}

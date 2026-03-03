@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1f0a322a-25a1-11ee-be56-0242ac120002",
+  "name": "Service Location Protocol Registration Request from Public IP",
+  "description": "Detects abnormal Service Location Protocol (SLP) registration requests from public IP addresses.",
+  "filterSets": [
+    [
+      {
+        "id": "f3595ca3-f64e-49f4-83ac-cdb200ee8701",
+        "name": "Service Location Protocol Registration Request from Public IP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Brandon Shores",
+  "team": "Cloud One",
+  "date": "2023/07/18",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

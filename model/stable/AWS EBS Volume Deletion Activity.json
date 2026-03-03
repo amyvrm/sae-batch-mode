@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c3e7aa8e-dd65-476a-8092-c2688b77b7a3",
+  "name": "AWS EBS Volume Deletion Activity",
+  "description": "Deletion of Amazon EBS volumes may indicate routine cleanup, cost optimization, or an attempt to remove data as part of disruptive behavior by an attacker. This activity can impact data availability and limit the ability to recover from incidents or conduct effective investigations.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "1d0e5267-2d92-4650-a7cd-7688bc783711",
+      "name": "AWS EBS Volume Deletion Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1485",
+    "mitre.t1490"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/28",
+  "lastUpdate": "2025-09-10T03:33:47.000Z"
+}

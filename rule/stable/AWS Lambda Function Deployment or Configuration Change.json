@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "96eeb307-b304-4531-b110-6006d0e71686",
+  "name": "AWS Lambda Function Deployment or Configuration Change",
+  "description": "Detects changes to Lambda function behavior that could alter automated workflows or event-driven execution.",
+  "filterSets": [
+    [
+      {
+        "id": "e7914a22-ed25-4caf-a49e-1fca748f2bf9",
+        "name": "AWS Lambda Function Code Updated",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2f96d6e2-abdf-49cd-9514-3c62f1fcba8c",
+        "name": "AWS Lambda Function Creation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9f4787a0-99fd-4c72-ae64-bc4ac831f709",
+        "name": "AWS Lambda Execution and Invocation Configuration Change",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "48644617-0e48-45f1-b121-5053d84b6384",
+  "name": "Masquerading Files",
+  "description": "Masquerading Files that may convince user to open an executable or embedded script.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0b27b7c4-be7d-489a-b38f-2d3918f69c90",
+      "name": "Masquerading Files",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/09/04",
+  "lastUpdate": "2024-10-16T08:40:34.000Z"
+}

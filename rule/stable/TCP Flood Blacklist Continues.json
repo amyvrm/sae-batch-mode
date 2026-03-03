@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "72db0d4d-0436-4fce-9efa-c48361a22566",
+  "name": "TCP Flood Blacklist Continues",
+  "description": "SonicWall Detection - TCP Flood Blacklist on IF %s continues",
+  "filterSets": [
+    [
+      {
+        "id": "ab195e4e-f3ca-4d18-a7d9-3d34aaf0e866",
+        "name": "TCP Flood Blacklist Continues",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

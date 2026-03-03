@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9a381be0-8e36-4f61-965e-8ab4f8f592c5",
+  "name": "AWS EC2 Security Group Creation",
+  "description": "A new EC2 security group was created, which may indicate a legitimate setup or an attempt to establish a backdoor.",
+  "filterSets": [
+    [
+      {
+        "id": "7a44a73f-e626-4fc7-a34e-63be4d8d80cb",
+        "name": "AWS EC2 Security Group Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

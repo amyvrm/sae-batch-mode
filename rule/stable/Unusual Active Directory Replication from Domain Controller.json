@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a6fb5e2a-194e-4089-832f-612cdf42b5ed",
+  "name": "Unusual Active Directory Replication from Domain Controller",
+  "description": "An account has unexpectedly initiated replication from the Domain Controller which may indicate credential leakage.",
+  "filterSets": [
+    [
+      {
+        "id": "d6d27926-1be1-5fcf-b935-870bbf104bd6",
+        "name": "Unusual Active Directory Replication from Domain Controller",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "opa"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2024/03/30",
+  "lastUpdate": "2025-01-02T07:38:03.000Z"
+}

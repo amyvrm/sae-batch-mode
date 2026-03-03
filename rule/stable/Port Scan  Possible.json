@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2dbfe6d7-69b9-4047-bd91-68a474e37068",
+  "name": "Port Scan  Possible",
+  "description": "SonicWall Detection - Possible port scan detected",
+  "filterSets": [
+    [
+      {
+        "id": "552a441c-066d-443a-8c33-9254486370c0",
+        "name": "Port Scan  Possible",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

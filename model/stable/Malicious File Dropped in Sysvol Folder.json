@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0b273468-ea25-4b78-9a17-38d56d186c89",
+  "name": "Malicious File Dropped in Sysvol Folder",
+  "description": "A malicious file was detected in the SYSVOL directory used by domain controllers to potentially persist or spread amlware in the environment",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b744b0a8-8be1-425b-a85d-3fe1b1ad139d",
+      "name": "Malicious File Dropped in Sysvol Folder",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1037"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2025/10/01",
+  "lastUpdate": "2025-12-09T16:23:37.000Z"
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2a7f5894-f743-4275-9235-9610b78e9a3e",
+  "name": "Rename File with Possible Ransom Extension via SMB",
+  "description": "Detect Ransomware Rename File with Possible Ransom Extension via SMB",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "fe2f21a4-4027-4bf7-8ee5-c57f082be967",
+      "name": "Rename File with Possible Ransom Extension via SMB",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1486",
+    "mitre.t1210"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Jackson Chang",
+  "team": "LWE",
+  "date": "2022/12/23",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

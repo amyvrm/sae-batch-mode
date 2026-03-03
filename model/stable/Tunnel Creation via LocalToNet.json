@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "64e8a0e6-45bb-4e1e-86a9-33348f6aedb2",
+  "name": "Tunnel Creation via LocalToNet",
+  "description": "Detects network tunnel creation using localtonet, which may be used for command and control communication, and data exfiltration",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3e40bca2-9948-4575-abfd-087f75fc8b09",
+      "name": "Tunnel Creation via LocalToNet",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1572"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2024/11/20",
+  "lastUpdate": "2025-02-20T15:14:45.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "51ad8f9a-2ab7-11ee-be56-0242ac120002",
+  "name": "AWS S3 Successful Get Bucket Logging Status",
+  "description": "Detected AWS S3 Successful Get Bucket Logging Status.",
+  "filterSets": [
+    [
+      {
+        "id": "b2d1b1e3-5c25-48dc-bb0d-d6a77f0c1054",
+        "name": "AWS S3 Successful Get Bucket Logging Status",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/10",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

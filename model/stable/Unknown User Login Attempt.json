@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a03e4a0d-68de-4cfb-9573-af0a88c0247a",
+  "name": "Unknown User Login Attempt",
+  "description": "SonicWall Detection for User login denied due to bad credentials",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "87f50b90-32f7-4a2b-ad43-727222321ecb",
+      "name": "Unknown User Login Attempt",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christian Jason Geollegue",
+  "team": "Third Party Operations",
+  "date": "2024/12/05",
+  "lastUpdate": "2025-03-06T07:40:02.000Z"
+}

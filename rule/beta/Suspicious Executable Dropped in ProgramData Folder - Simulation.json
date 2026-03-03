@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c880da9-cbc5-4d7a-a8bd-a8eac7f18822",
+  "name": "Suspicious Executable Dropped in ProgramData Folder - Simulation",
+  "description": "Detects suspicious executable file creation in ProgramData folder root.",
+  "filterSets": [
+    [
+      {
+        "id": "aa3817b8-52ab-4aa5-9364-054ecca5bebf",
+        "name": "Suspicious Executable Dropped in ProgramData Folder - Simulation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/07/01",
+  "lastUpdate": "2025-07-04T03:23:08.000Z"
+}

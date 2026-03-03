@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "id": "91120f0f-e8ff-4416-92c2-8a3a73899900",
+  "name": "AWS Potential Federated Console Access via SigninToken Abuse",
+  "description": "Detects a sequence where an attacker generates temporary federated credentials, uses them to request a SigninToken, and then performs a console login \u2014 all without MFA. This behavior simulates a browser session to gain interactive access to the AWS Console, bypassing standard login flows.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "157a4fdc-2f11-11ee-be56-0242ac120002",
+      "name": "AWS STS Successful Get Federation Token",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "05e752b2-eabb-4589-9efc-d865f38d3547",
+      "name": "AWS Temporary SigninToken Generated for Console Session",
+      "score": 1,
+      "sequence": 2
+    },
+    {
+      "id": "c5a730b0-06b0-41fb-99cb-0ed198642270",
+      "name": "AWS Console Access via Federated User Without MFA",
+      "score": 1,
+      "sequence": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.007",
+    "mitre.t1078.004",
+    "mitre.t1098.001",
+    "mitre.t1119",
+    "mitre.t1538",
+    "mitre.t1550.001",
+    "mitre.t1562",
+    "mitre.t1606"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-29T15:07:44.000Z"
+}

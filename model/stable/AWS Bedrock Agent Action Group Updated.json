@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "53dc76a4-1d70-40d3-b03d-7d35cae91609",
+  "name": "AWS Bedrock Agent Action Group Updated",
+  "description": "Modification in the action group detected in an Amazon Bedrock agent, which can impact the agent's behavior and security posture. Monitoring this call is critical for identifying unauthorized or unintended changes to agent configurations.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "fad0b14d-801d-4760-a32c-8d0e67801e2b",
+      "name": "AWS Bedrock Agent Action Group Updated",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.009"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/09/12",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

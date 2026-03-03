@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8b994d25-aefe-4dcf-8d37-55c4a521fe78",
+  "name": "Possible Execution of Vulnerable Kingsoft Antivirus Drivers",
+  "description": "Detects presence and usage of vulnerable Kingsoft Antivirus drivers which is capable of terminating security agent processes and services",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7ff871ae-f97a-41e1-800e-35a1e66bea7f",
+      "name": "Process Termination via Vulnerable Kingsoft Antivirus Drivers",
+      "score": 1
+    },
+    {
+      "id": "ecc814a1-853a-47dd-8ef3-2476cc6417fc",
+      "name": "Possible Installation of Vulnerable Kingsoft Antivirus Drivers",
+      "score": 1
+    },
+    {
+      "id": "cced5c46-9d3f-4533-995a-e6f2e9a4185b",
+      "name": "Suspicious Dropping of Vulnerable Kingsoft Antivirus Drivers",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001",
+    "threat.exploit"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-11-17T08:43:50.000Z"
+}

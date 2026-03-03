@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0",
+  "id": "06df007d-a2c6-4ee1-a6c4-23eb27e87250",
+  "name": "AWS SNS Unsuccessful Enumeration Attempt",
+  "description": "Detected unsuccessful enumeration of AWS SNS which might indicate attacker trying to collect info on topic and subscription details, access permissions, message filtering policies, and endpoint information. This data helps in planning which connected service to attack on.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "55e48fad-9936-43bd-b797-a7c15baf9312",
+      "name": "AWS SNS Unsuccessful Get SMS Attributes",
+      "score": 1
+    },
+    {
+      "id": "7e470c1a-e01f-470a-bec3-2c514e6ae46c",
+      "name": "AWS SES Unsuccessful Get Account Sending Enabled",
+      "score": 1
+    },
+    {
+      "id": "908d83aa-4ed0-438e-82b7-05150c5acefe",
+      "name": "AWS SNS Unsuccessful List Origination Number",
+      "score": 1
+    },
+    {
+      "id": "89cce4cb-5821-4700-a934-05b7a2ff9d72",
+      "name": "AWS SNS Unsuccessful List Subscription",
+      "score": 1
+    },
+    {
+      "id": "a2d71c5f-bde4-4678-9a54-c5ac51fa4d85",
+      "name": "AWS SNS Unsuccessful List Topics",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580",
+    "mitre.t1526"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/21",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

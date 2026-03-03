@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7931fb88-90de-4a5d-98d2-2c76cc9c729c",
+  "name": "Suspicious Tool in Container",
+  "description": "Detects suspicious tool download or execution.",
+  "filterSets": [
+    [
+      {
+        "id": "55bce842-a187-571e-a15e-0531ceebbbc9",
+        "name": "Suspicious Tool in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/02/22",
+  "lastUpdate": "2024-12-02T21:55:34.000Z"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d99f9440-8d20-4cf7-99d1-3a9268b8ad2f",
+  "name": "Event Log Cleared - Simulation",
+  "description": "Microsoft Detection for Clearing Event Log",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "da5a000a-4a5c-4525-96cb-26ba2ec4c037",
+      "name": "Event Log Cleared",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/13",
+  "lastUpdate": "2025-07-28T20:43:16.000Z"
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "60267862-c4bd-432e-8fdc-c561ec6b5e69",
+  "name": "Suspicious File Execution via Possible Social Engineering Technique",
+  "description": "Detects suspicious file execution related to Filefix attack leading to interlock RAT",
+  "filterSets": [
+    [
+      {
+        "id": "eafe8d6a-78bf-4003-9013-8f78d3ca2476",
+        "name": "Suspicious File Execution via Possible Social Engineering Technique",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/07/16",
+  "lastUpdate": "2025-08-01T08:02:25.000Z"
+}

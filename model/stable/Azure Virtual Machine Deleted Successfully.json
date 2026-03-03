@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2f350bcc-1961-466c-820f-69914aa095b2",
+  "name": "Azure Virtual Machine Deleted Successfully",
+  "description": "Detects successful deletion of an Azure Virtual Machine which may indicate an attacker deliberately removing critical compute resources",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7136cd9f-80ed-4ef3-8bb8-6422d9652f7a",
+      "name": "Azure Virtual Machine Deleted Successfully",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1485",
+    "mitre.t1489"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma and Nathaniel Ragasa",
+  "team": "SAE Threat Expert",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-26T06:31:30.000Z"
+}

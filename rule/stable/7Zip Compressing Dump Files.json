@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3bf1f608-f084-4c6b-91f7-3fbd8a9bd1d2",
+  "name": "7Zip Compressing Dump Files",
+  "description": "Detects a suspicious 7zip execution that involves a file with a dmp/dump extension which could be indicate possible collection",
+  "filterSets": [
+    [
+      {
+        "id": "c8930067-1d2c-42cb-9db1-aa82bb843939",
+        "name": "7Zip Compressing Dump Files",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2024/11/14",
+  "lastUpdate": "2025-05-14T06:32:56.000Z"
+}

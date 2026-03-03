@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e75b5f04-6e07-4e0a-bb96-a9dc49af56ae",
+  "name": "File Upload via File Transfer Tools",
+  "description": "Adversaries may exfiltrate files after the collection stage via known file transfer tools to avoid dettection",
+  "filterSets": [
+    [
+      {
+        "id": "49e5bf4d-59dc-485a-a5cf-731fba11489a",
+        "name": "Data Upload via Curl",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "850d4572-c8a9-43cd-a45f-6255f911ad67",
+        "name": "File Upload via Wget",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "441c36cf-c44d-4cc5-a31f-607816c6c9ac",
+        "name": "File Upload via Ncat",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/25",
+  "lastUpdate": "2025-01-09T08:12:51.000Z"
+}

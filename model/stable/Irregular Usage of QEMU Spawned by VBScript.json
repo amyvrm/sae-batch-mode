@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2276a69a-4017-4ec7-9b6c-5f994db97813",
+  "name": "Irregular Usage of QEMU Spawned by VBScript",
+  "description": "Detection of irregular usage of QEMU being created by a VBScript",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "40370de4-a180-4c9f-aa84-1b79e8b39371",
+      "name": "Irregular Usage of QEMU Spawned by VBScript",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/06/06",
+  "lastUpdate": "2026-01-29T07:09:33.000Z"
+}

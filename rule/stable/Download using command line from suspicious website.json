@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9838c5a6-978f-4f6c-9e38-ac8a76b9ab21",
+  "name": "Download using command line from suspicious website",
+  "description": "Curl or wget from suspicious or malicious website (based on category)",
+  "filterSets": [
+    [
+      {
+        "id": "d362fb69-165c-4c0b-85d6-3498fda0570a",
+        "name": "Curl or Wget from Public IP",
+        "highlight": true
+      },
+      {
+        "id": "32d169a5-6646-429b-b605-0a0880a7b1ca",
+        "name": "Detection of suspicious or malicious URL categories",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "pdi",
+      "sds",
+      "pds",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2021/12/14",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

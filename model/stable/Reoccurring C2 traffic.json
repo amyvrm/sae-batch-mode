@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "94a2c60d-d485-4619-acf2-f778f4467c0d",
+  "name": "Reoccurring C2 traffic",
+  "description": "Detect a high number of reoccurring C2 traffic in the network.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8de57585-fc99-4139-acc3-e958455f3b8a",
+      "name": "Network C2 traffic",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2022/09/26",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e8be4675-36e8-4662-b2a1-34ded9a734a7",
+  "name": "APT Bpfdoor Icmp TCP Bidirectional Communications",
+  "description": "Network activity involving inbound and outbound ICMP, which is a associated with BPFDoor, was detected",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2207150a-fa68-40b9-aced-17792d0b8cc8",
+      "name": "APT Bpfdoor Icmp TCP Bidirectional Communications",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1027.011",
+    "mitre.t1071.001",
+    "mitre.t1548.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2025/08/25",
+  "lastUpdate": "2026-01-13T05:59:28.000Z"
+}

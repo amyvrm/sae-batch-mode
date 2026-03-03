@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "846abb22-7c0f-4267-8739-1ac07a2d7d7c",
+  "name": "AWS EventBridge Successful List Event Sources",
+  "description": "Detects listing of EventBridge event sources, which may indicate a reconnaissance attempt by an attacker to identify available service integrations or third-party sources configured in the account.",
+  "filterSets": [
+    [
+      {
+        "id": "27bba792-9c0f-4d60-9459-65f5e6903ae1",
+        "name": "AWS EventBridge Successful List Event Sources",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-07-31T08:55:45.000Z"
+}

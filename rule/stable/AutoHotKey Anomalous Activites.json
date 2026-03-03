@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ab99c9c9-a35d-4630-9e8d-1e0d5da753e4",
+  "name": "AutoHotKey Anomalous Activites",
+  "description": "Detection of AutoHotKey anomalous activites, that may relate to DarkGate",
+  "filterSets": [
+    [
+      {
+        "id": "b9ab3f18-9029-47ee-b971-d496293733b3",
+        "name": "AutoHotKey Invocation from Powershell",
+        "highlight": true
+      },
+      {
+        "id": "e991f152-d01a-457f-ae3b-0c7df7656ef9",
+        "name": "AutoHotKey Anomalous File Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/03/21",
+  "lastUpdate": "2024-04-01T15:09:17.000Z"
+}

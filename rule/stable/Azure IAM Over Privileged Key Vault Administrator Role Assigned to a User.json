@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d9e8ece7-f95a-4015-badc-6a70dda44778",
+  "name": "Azure IAM Over Privileged Key Vault Administrator Role Assigned to a User",
+  "description": "Detects the assignment of an over-privileged key vault administrator to a user within Azure IAM",
+  "filterSets": [
+    [
+      {
+        "id": "d8a870ef-c29e-48d5-82e4-62079905d2e3",
+        "name": "Azure IAM Role Assigned To A User",
+        "highlight": true
+      },
+      {
+        "id": "e1f1cbc9-674e-4b7d-a7d8-611002375d47",
+        "name": "Azure IAM Over Privileged Key Vault Administrator Role Assignment Operation Started",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "d8a870ef-c29e-48d5-82e4-62079905d2e3.correlationId equals e1f1cbc9-674e-4b7d-a7d8-611002375d47.correlationId"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/10/10",
+  "lastUpdate": "2025-11-28T06:35:17.000Z"
+}

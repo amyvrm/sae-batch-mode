@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2855d8fe-dac2-4961-a06c-65c025053426",
+  "name": "Possible BatLoader Activities",
+  "description": "Detects the decryption of encrypted package from a potential trojanized installer file and extraction of archive via tar for potential BatLoader activities",
+  "filterSets": [
+    [
+      {
+        "id": "a1495a31-a5f1-47a2-b3d3-92856ac74223",
+        "name": "Decrypting Potential Trojanized Installer File Packages",
+        "highlight": true
+      },
+      {
+        "id": "610ec65a-ffc8-41cf-a68c-e5f1873ed665",
+        "name": "Extraction of File from Archive via Tar",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "pdi"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/05/06",
+  "lastUpdate": "2024-05-08T06:53:36.000Z"
+}

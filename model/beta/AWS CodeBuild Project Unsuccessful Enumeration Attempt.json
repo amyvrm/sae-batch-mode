@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "76c59d41-e02d-4747-8cc1-3d70d52cc851",
+  "name": "AWS CodeBuild Project Unsuccessful Enumeration Attempt",
+  "description": "Detected possible enumeration of AWS CodeBuild projects which might indicate an attacker trying to get confidential information like secret environment variables, git repo, service roles, configurations etc. which could potentially lead to unauthorized access, data exposure, or compromise of the CodeBuild project's integrity, posing risks to the overall security of the AWS environment.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "708a8fe8-952c-4b07-8f5c-1252a9bcac23",
+      "name": "AWS Codebuild Unsuccessful List Projects",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "2d0b0a56-2b9d-40a5-a132-6fa34350982c",
+      "name": "AWS Codebuild Unsuccessful Get Projects",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

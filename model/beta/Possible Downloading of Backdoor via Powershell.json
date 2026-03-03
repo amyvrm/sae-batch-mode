@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "683c35c7-5129-4b11-a441-28e8f5b87c1d",
+  "name": "Possible Downloading of Backdoor via Powershell",
+  "description": "Detects PowerShell commands used to download multiple backdoors from a remote server.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "db48903b-31ad-406b-8459-6532d3657435",
+      "name": "Possible Downloading of Backdoor via Powershell",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1105",
+    "mitre.t1608.001",
+    "cve.2025.0994"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Shaun Galura & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/06/05",
+  "lastUpdate": "2025-08-13T06:38:36.000Z"
+}

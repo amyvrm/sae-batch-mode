@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8a61bb22-ad03-4c73-8101-4a76303f15a8",
+  "name": "Malicious RDP Backdoor Disguised as Windows Update",
+  "description": "Detects download of Kalambur backdoor disguised as Microsoft Windows Update.",
+  "filterSets": [
+    [
+      {
+        "id": "96d2e5d8-04a4-4220-8900-05fb542daab4",
+        "name": "Malicious RDP Backdoor Disguised as Windows Update",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/02/25",
+  "lastUpdate": "2025-06-23T15:47:37.000Z"
+}

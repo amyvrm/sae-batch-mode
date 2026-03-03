@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "63b8000e-0f23-4a61-80e2-69f76d6e0aaf",
+  "name": "Kernel Driver Installed from an Unusual Location",
+  "description": "A registry key for kernel driver from an unusual localtion was created.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "defaultEnabled": false,
+  "rules": [
+    {
+      "id": "8fee1cf2-da24-43a4-ac04-14c3e9048d0c",
+      "name": "Kernel Driver Installed from an Unusual Location",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1014",
+    "mitre.t1112",
+    "mitre.t1543.003",
+    "mitre.t1574.011"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mahmoud Zohdy & Lucas Silva",
+  "team": "MENA-IR",
+  "date": "2023/09/18",
+  "lastUpdate": "2025-04-02T03:40:10.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "86913da2-d546-404c-8177-a85727697f97",
+  "name": "Webshell Network Detections from External Source",
+  "description": "Webshell network traffic from an external IP address to an internal IP address has been detected.",
+  "filterSets": [
+    [
+      {
+        "id": "0c7aa5d7-743a-4cba-8c59-7548241bff62",
+        "name": "Webshell Network Detections from External Source",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/04/09",
+  "lastUpdate": "2025-05-26T05:35:08.000Z"
+}

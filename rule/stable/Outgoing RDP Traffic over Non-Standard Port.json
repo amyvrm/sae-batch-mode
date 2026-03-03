@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5217e7c4-7db2-4766-b8d2-00a1cd62c08f",
+  "name": "Outgoing RDP Traffic over Non-Standard Port",
+  "description": "RDP Traffic from an internal host to an internet IP address has triggered the DDI rule Port-Protocol Mismatches on Non-Standard Port.",
+  "filterSets": [
+    [
+      {
+        "id": "0f0ccced-d3ab-44d5-9690-79c1bc1d2711",
+        "name": "Outgoing RDP Traffic over Non-Standard Port",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2024/07/22",
+  "lastUpdate": "2024-08-22T07:38:49.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ccde017f-7b51-4cf1-9402-5bfdf5368380",
+  "name": "File detection - Unknown Binary File",
+  "description": "Palo Alto File detection - Unknown Binary File",
+  "filterSets": [
+    [
+      {
+        "id": "72ef75b1-e330-42ae-8e1e-cf58973a4dea",
+        "name": "File detection - Unknown Binary File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

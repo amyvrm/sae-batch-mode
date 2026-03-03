@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1d0ff8ca-deab-11ed-b5ea-0242ac120002",
+  "name": "AWS ECS Command Execution In A Container",
+  "description": "This Rule detects AWS ECS Container Enumeration From The Cluster.",
+  "filterSets": [
+    [
+      {
+        "id": "b7253402-107b-4df9-8b24-b959ceff3ff6",
+        "name": "AWS ECS Command Execution In A Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/04/19",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

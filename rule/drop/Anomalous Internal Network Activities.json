@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e3c78150-c168-4f6d-962a-3d6c06b4c208",
+  "name": "Anomalous Internal Network Activities",
+  "description": "Anomalous internal activities over defined threshold were detected.",
+  "filterSets": [
+    [
+      {
+        "id": "5ae3f509-5c8f-4d33-aeec-1e79e58d6b0e",
+        "name": "FTP Suspicious Data Collection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c3ceb137-c17d-4ea1-ac73-c0be5754cf50",
+        "name": "FTP Suspicious Logon Attempts",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a36b5b10-a213-42c3-b82c-13d63e28d078",
+        "name": "RDP Suspicious Connection Attempts",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "55513e16-6fd4-4985-8d34-008c407758df",
+        "name": "SMB Suspicious Connection Attempts",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "965a6376-2daa-400e-82c4-87301775175d",
+        "name": "SSL Suspicious Connection Attempts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Liang Seng Koh",
+  "team": "XDR-NA",
+  "date": "2022/08/19",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

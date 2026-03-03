@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "12b4543c-7fb0-4bf6-bc24-8ffc8a55de46",
+  "name": "Account Attempted to Upload File Containing Malicious URL to Collaboration Application",
+  "description": "An account attempted to upload a file containing a malicious URL and triggered file quarantine, which may indicate lateral movement after account compromise.",
+  "filterSets": [
+    [
+      {
+        "id": "2a8620bb-8ef8-4cc9-8667-adba5caae606",
+        "name": "Account Attempted to Upload File Containing Malicious URL to Collaboration Application",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sca"
+    ]
+  ],
+  "author": "Kai-Min Tu",
+  "team": "Jaguar",
+  "date": "2024/03/13",
+  "lastUpdate": "2024-12-16T06:50:11.000Z"
+}

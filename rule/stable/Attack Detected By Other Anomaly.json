@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "38697a61-65ba-435e-9adc-f45fee59576e",
+  "name": "Attack Detected By Other Anomaly",
+  "description": "Fortinet detection - Attack detected by other anomaly",
+  "filterSets": [
+    [
+      {
+        "id": "fdb8aab8-25c9-438d-96a0-5f439d1f0d09",
+        "name": "Attack Detected By Other Anomaly",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

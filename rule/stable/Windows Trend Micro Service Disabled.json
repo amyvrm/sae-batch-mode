@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d1a356c6-da9c-11ef-9cd2-0242ac120002",
+  "name": "Windows Trend Micro Service Disabled",
+  "description": "Detects a command that stops or disables the agent via command line or powershell in Microsoft Windows.",
+  "filterSets": [
+    [
+      {
+        "id": "9cc941c1-f1f2-4717-b733-baadb2f913df",
+        "name": "Disabling of Trend Micro Services - Windows Process",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cbe93e9c-da8a-11ef-9cd2-0242ac120002",
+        "name": "Windows Trend Micro Deep Security Service Configuration Modification via PowerShell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d8484fd6-9766-4234-8ea3-dd7f2eaf8a96",
+        "name": "Disabling of Trend Micro Services - AMSI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "sao"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2025/01/24",
+  "lastUpdate": "2025-08-27T11:24:03.000Z"
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9a954b13-46c2-4e21-9248-9dec7476115a",
+  "name": "Account Discovery via Csvde.EXE",
+  "description": "Detects the execution of 'csvde.exe' in order to export organizational Active Directory structure.",
+  "filterSets": [
+    [
+      {
+        "id": "4672f4d9-a0ec-4151-98f3-4a222bba8092",
+        "name": "Account Discovery via Csvde.EXE",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "29e81f9d-7dc3-45fb-a00a-471a16db729c",
+        "name": "Active Directory Structure Export Via Csvde.EXE",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva & Aaron Emdy",
+  "team": "US-IR",
+  "date": "2024/06/24",
+  "lastUpdate": "2025-03-10T21:39:08.000Z"
+}

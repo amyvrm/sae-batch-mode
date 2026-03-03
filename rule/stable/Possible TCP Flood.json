@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8cb3862e-cd45-4004-a768-f6293fcdb185",
+  "name": "Possible TCP Flood",
+  "description": "SonicWall Detection - Possible TCP Flood on IF %s",
+  "filterSets": [
+    [
+      {
+        "id": "32886e5f-54ac-48b9-91e8-ae7a18859ee7",
+        "name": "Possible TCP Flood",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

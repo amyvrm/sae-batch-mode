@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "98000332-09f7-43f3-98e0-9916ce8e4bab",
+  "name": "Anomalous Command and Control (C&C) Behaviors",
+  "description": "Anomalous Command and Control (C&C) behavioral activities over defined threshold were detected.",
+  "filterSets": [
+    [
+      {
+        "id": "d600654a-1f29-48d6-a69b-93bbb0980667",
+        "name": "SMB Suspicious Outbound Connection Attempts",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "4fa182a5-608e-48b7-aa6f-f1ed4aa7bf05",
+        "name": "SSL Suspicious Outbound Connection Attempts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Liang Seng Koh",
+  "team": "XDR-NA",
+  "date": "2022/08/19",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

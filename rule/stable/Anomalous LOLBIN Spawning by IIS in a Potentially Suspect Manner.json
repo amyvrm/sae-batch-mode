@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c99198c-2298-4e39-9a93-1a8b9665de82",
+  "name": "Anomalous LOLBIN Spawning by IIS in a Potentially Suspect Manner",
+  "description": "Detection of anomalous processes being invoked by the IIS process",
+  "filterSets": [
+    [
+      {
+        "id": "be7d230a-f0fe-416b-bbee-e5bd3032684a",
+        "name": "Anomalous LOLBIN Spawning by IIS in a Potentially Suspect Manner",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/11/07",
+  "lastUpdate": "2026-01-13T04:18:23.000Z"
+}

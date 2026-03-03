@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fcd1a38e-7c6e-4937-a1d8-1230dbf909a1",
+  "name": "Possible DLL Side loading via Legitimate Bluetooth Application",
+  "description": "Suspicious DLL Side loading is being performed via legitimate bluetooth application.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6c480428-6fc5-4baa-b48b-a0d5bf4df5de",
+      "name": "Unusual Path for Legitimate Bluetooth Application",
+      "score": 1
+    },
+    {
+      "id": "4264110c-e3d9-40e0-b982-e8df04a8f92b",
+      "name": "Bluetooth Driver Loaded in Uncommon Path",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1574.001",
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Renzell David Barros & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/11/21",
+  "lastUpdate": "2025-10-09T11:17:10.000Z"
+}

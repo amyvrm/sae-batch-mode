@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c6b3dc9d-ee12-4e32-bfff-c56c644afe86",
+  "name": "MiniDumpWriteDump via COM Services DLL",
+  "description": "Detects attempted use of comsvcs.dll to dump memory using MiniDump function.",
+  "filterSets": [
+    [
+      {
+        "id": "97c01c28-d01b-4356-b81c-4a824d5d5ca4",
+        "name": "MiniDumpWriteDump via COM Services DLL",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/04/24",
+  "lastUpdate": "2025-05-14T10:18:40.000Z"
+}

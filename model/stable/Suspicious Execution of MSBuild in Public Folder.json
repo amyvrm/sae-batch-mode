@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3c54e097-f7f6-4105-8642-f22d39114d41",
+  "name": "Suspicious Execution of MSBuild in Public Folder",
+  "description": "Detects Suspicious Execution of MSBuild in Users Public folder",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "098c97f2-5993-4ffa-85b9-b9784765784d",
+      "name": "Suspicious Execution of MSBuild in Public Folder",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1127.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/01/17",
+  "lastUpdate": "2025-06-10T04:48:35.000Z"
+}

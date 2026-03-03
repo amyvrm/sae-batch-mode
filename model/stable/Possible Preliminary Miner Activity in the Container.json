@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a0e40686-b3e2-4176-9d44-7959df143074",
+  "name": "Possible Preliminary Miner Activity in the Container",
+  "description": "Preliminary Miner related activity detected.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "eb163f1d-7674-4493-bdd0-34aa3abf227a",
+      "name": "Security Changes in the Container",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "c8976214-1ca8-4ac3-ac2d-18465aaeff47",
+      "name": "Suspicious Path Deployment Activity in Container",
+      "score": 1,
+      "sequence": 3
+    },
+    {
+      "id": "0dfeae99-7239-4b07-8749-9e037af2f1f6",
+      "name": "Cronjob Deletion Activity in Container",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001",
+    "mitre.t1070.004",
+    "mitre.t1053.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2023/07/28",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

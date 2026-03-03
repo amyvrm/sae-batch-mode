@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "505862f9-a1eb-4930-b020-3dd35cd8c0fa",
+  "name": "Privilege Escalation via PSScheduledJob Scheduled Task",
+  "description": "Adversary is elevating privileges to SYSTEM using Invoke-CommandAs Powershell module. Detection depends on pipe creation and specific strings in AMSI execution.",
+  "filterSets": [
+    [
+      {
+        "id": "d0702dca-6fac-49d5-a605-3bfebaf8b015",
+        "name": "Potential Privilege Escalation via PowerShell Scheduled Job ",
+        "highlight": true
+      },
+      {
+        "id": "ce3ece1b-b156-4f9b-8f58-9f9ac13640a5",
+        "name": "Potential Privilege Escalation via Invoke-CommandAs PowerShell Module",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "d0702dca-6fac-49d5-a605-3bfebaf8b015.processCmd equals ce3ece1b-b156-4f9b-8f58-9f9ac13640a5.parentCmd"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/05/01",
+  "lastUpdate": "2025-06-16T15:11:18.000Z"
+}

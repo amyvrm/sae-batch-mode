@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d69d7d32-2a41-4422-a120-97c79a458983",
+  "name": "Usage of Renamed WinRar to Potentially Bypass Security Monitoring",
+  "description": "Detection of a renamed WinRAR file that may be used to bypass security monitoring.",
+  "filterSets": [
+    [
+      {
+        "id": "941e4ef0-2194-4777-9b23-0a60bb9b4075",
+        "name": "Usage of Renamed WinRar to Potentially Bypass Security Monitoring",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/06",
+  "lastUpdate": "2024-06-07T09:39:51.000Z"
+}

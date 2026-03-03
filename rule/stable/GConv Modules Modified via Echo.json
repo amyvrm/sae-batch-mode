@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "47231a69-3475-4f5a-a983-5a8d8bb2b24f",
+  "name": "GConv Modules Modified via Echo",
+  "description": "gconv-modules modified via echo command. Attacker might use modified gconv-modules to exploit a local privilege escalation vulnerability in polkit's pkexec utility (CVE-2021-4034).",
+  "filterSets": [
+    [
+      {
+        "id": "7b7a8abc-a108-468b-b3ca-1f040bb7edea",
+        "name": "Gconv Modules Modified via Echo",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/06/28",
+  "lastUpdate": "2024-07-17T04:09:35.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0c6e2aec-14b9-4b23-90de-fa04a5542fbd",
+  "name": "AWS Cost Explorer Unsuccessful Describe Budget",
+  "description": "AWS Event that lists the budgets that are associated with an account.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Cost Explorer Unsuccessful Describe Budget",
+        "id": "5559c767-9736-47d4-9ce1-8366a3ac6c61",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

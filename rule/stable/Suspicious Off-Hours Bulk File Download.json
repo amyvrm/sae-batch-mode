@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5b07956c-2b54-4c60-96b0-44a86f8ccbb3",
+  "name": "Suspicious Off-Hours Bulk File Download",
+  "description": "A user bulk downloaded files during non-business hours from collaboration applications, which may indicate suspicious activity.",
+  "filterSets": [
+    [
+      {
+        "id": "2a8b4c7d-1e3f-4a5b-9c8d-7e6f5a4b3c2d",
+        "name": "Off-Hour Bulk Download Anomaly Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xca"
+    ]
+  ],
+  "author": "Charles C Chuang",
+  "team": "Jaguar",
+  "date": "2026/01/06",
+  "lastUpdate": "2026-01-20T13:43:28.000Z"
+}

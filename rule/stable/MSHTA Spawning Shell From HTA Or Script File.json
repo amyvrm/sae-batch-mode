@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e22a22fe-c875-4e79-9e36-bbad3667dafe",
+  "name": "MSHTA Spawning Shell From HTA Or Script File",
+  "description": "MSHTA spawns shell from HTA file, JavaScript or VBScript.",
+  "filterSets": [
+    [
+      {
+        "id": "06fabeaa-f08b-418a-acb8-b769b49c1a4f",
+        "name": "Mshta Execute HTA File",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c1df02b2-5dac-4026-9bda-1d7a4c857cb3",
+        "name": "JavaScript or VBScript Command Execution via MSHTA",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2021/05/10",
+  "lastUpdate": "2025-12-29T17:04:58.000Z"
+}

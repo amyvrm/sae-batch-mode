@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dfc83274-089c-485b-b429-9ef56dcec2e9",
+  "name": "Kubernetes Resources Discovery in Container",
+  "description": "Kubernetes resources enumeration within container detected.",
+  "filterSets": [
+    [
+      {
+        "id": "a117ae90-ae50-4bfa-80ec-5518339ab4b1",
+        "name": "Kubernetes Namespaces Discovery in Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6e18abf0-3d34-4824-8771-aabb92ab3e71",
+        "name": "Kubernetes Pod Discovery in Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7a63f9b3-fc17-480d-984d-543fd7d8c41a",
+        "name": "Kubernetes Secrets Discovery in Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "14e84d20-e990-42f9-b724-2315d3daafc6",
+        "name": "Kubernetes Node Enumeration in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/08/11",
+  "lastUpdate": "2023-09-14T09:35:00.000Z"
+}

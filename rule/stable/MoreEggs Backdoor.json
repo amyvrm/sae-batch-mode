@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9f5096d5-4a5f-4a3c-9c86-806d57f0443b",
+  "name": "More Eggs Backdoor",
+  "description": "More Eggs Backdoor",
+  "filterSets": [
+    [
+      {
+        "id": "7c533ec7-9846-4fe9-871b-9bd7e2a95e2c",
+        "name": "More Eggs Backdoor",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2023/07/31",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

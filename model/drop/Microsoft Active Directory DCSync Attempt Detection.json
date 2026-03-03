@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5a966c95-ffe2-4c50-8dcf-15f780f0f4a1",
+  "name": "Microsoft Active Directory DCSync Attempt Detection",
+  "description": "Palo Alto Vulnerability detection - Microsoft Active Directory DCSync Attempt Detection",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f5649f54-b139-4acd-a920-0118adc96785",
+      "name": "Microsoft Active Directory DCSync Attempt Detection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-09-05T08:46:50.000Z"
+}

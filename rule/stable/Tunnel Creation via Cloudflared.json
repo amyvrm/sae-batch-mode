@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "99f4585f-adc3-4224-a1a4-399fe04e24b2",
+  "name": "Tunnel Creation via Cloudflared",
+  "description": "Detects network tunnel creation using Cloudflared, which may be used for command and control communication, and data exfiltration",
+  "filterSets": [
+    [
+      {
+        "id": "5c3562f6-98d5-493e-864e-53b3ea3cd274",
+        "name": "Suspicious DNS Query to trycloudflare[.]com Domain",
+        "highlight": true
+      },
+      {
+        "id": "06984b8d-21e5-40fe-b4db-9f4c2fb451d0",
+        "name": "Possible Tunneling Attempt via Cloudflared",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Mahmoud Soheem & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/02/26",
+  "lastUpdate": "2026-01-12T12:49:46.000Z"
+}

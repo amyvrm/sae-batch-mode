@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fad0b14d-801d-4760-a32c-8d0e67801e2b",
+  "name": "AWS Bedrock Agent Action Group Updated",
+  "description": "Modification in the action group detected in AWS Bedrock agent.",
+  "filterSets": [
+    [
+      {
+        "id": "592d291b-e19f-479b-b1b1-5a4d2f1ea473",
+        "name": "AWS Bedrock Agent Action Group Updated",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/09/12",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

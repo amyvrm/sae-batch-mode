@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "54f3bb47-54c4-4126-800d-6165a497d978",
+  "name": "COVENANT-Related HTTP Network Activity",
+  "description": "Network activity involving HTTP, which is associated with COVENANT, has been observed. This activity may indicate the use of COVENANT frameworks or tools. Further analysis of network patterns and payloads is recommended to determine the nature and purpose of this traffic.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8866d79d-61c1-4de3-aed3-eea563f95aa6",
+      "name": "COVENANT-Related HTTP Network Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "threat.hacktool",
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-01-09T03:04:50.000Z"
+}

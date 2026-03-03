@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b2db3b6f-643a-4412-8ccb-987c22cf82ba",
+  "name": "AWS Bedrock Unsuccessful DataSource Enumeration Detected",
+  "description": "Detects unsuccessful enumeration of datasources in AWS Bedrock services, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "a04f5d52-e417-4d6f-92fd-2603c3f7367e",
+        "name": "AWS Bedrock Unsuccessful DataSource Enumeration Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/15",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

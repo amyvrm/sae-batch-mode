@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d8889a31-f7b1-4beb-ae08-9d9e6f011f77",
+  "name": "Possible Evasion of Detection Controls with LDAP Query via Excel",
+  "description": "Detects discovery activity using ldap query via excel to bypass detection controls.",
+  "filterSets": [
+    [
+      {
+        "id": "3a93e54a-cadc-4600-bc90-621c06becb51",
+        "name": "Possible Evasion of Detection Controls with LDAP Query via Excel",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Mahmoud Soheem & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/10/12",
+  "lastUpdate": "2025-12-29T15:17:38.000Z"
+}

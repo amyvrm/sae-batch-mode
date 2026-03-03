@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7857c945-1e56-4ce2-a050-9263cb9774f9",
+  "name": "MS Exchange CreateAttachmentFromUri Suspicious JSON Object",
+  "description": "This rule detects the usage of a JSON object in Microsoft Exchange Server traffic which can lead to information disclosure from the targeted exchange server.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "4ba3f037-f06a-47f3-aea0-2f8baaaf18c1",
+      "name": "MS Exchange CreateAttachmentFromUri Suspicious JSON Object Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2023/11/03",
+  "lastUpdate": "2024-05-14T07:14:32.000Z"
+}

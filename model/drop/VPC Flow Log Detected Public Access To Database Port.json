@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "763c4929-fb63-4bd0-9d85-f671ea5ec8e3",
+  "name": "VPC Flow Log Detected Public Access To Database Port",
+  "description": "Detected access to sensitive database ports from public ip which might indicate an attacker trying to exfiltrate sensitive data from the database.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "16d52b16-ce32-477d-ae84-f8e751ac9853",
+      "name": "VPC Flow Log Detected Public Access To Database Port",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "vpc",
+      "tlc|aws|XDR for Cloud - AWS VPC Flow Logs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1530"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/06/24",
+  "lastUpdate": "2025-10-30T06:54:31.000Z"
+}

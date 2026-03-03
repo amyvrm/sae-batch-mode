@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "86990d40-63e7-4748-9c0b-c46461f66d98",
+  "name": "Anomalous Connection from OneDrive Binary",
+  "description": "Detection of an anomalous connection from a OneDrive binary",
+  "filterSets": [
+    [
+      {
+        "id": "5c904fc6-236f-4196-b7d5-53e681a4e5d4",
+        "name": "Anomalous Connection from OneDrive Binary",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/02/13",
+  "lastUpdate": "2025-04-21T04:32:17.000Z"
+}

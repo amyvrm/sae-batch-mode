@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9bac9025-19a1-4c19-af10-b808dabff74a",
+  "name": "File Quarantined by CrowdStrike",
+  "description": "This CrowdStrike alert indicates that a file was quarantined and isolated.",
+  "filterSets": [
+    [
+      {
+        "id": "d9b1a458-3b09-40d2-bad1-70bb0b86735a",
+        "name": "File Quarantined by CrowdStrike",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/08/11",
+  "lastUpdate": "2025-08-12T08:49:19.000Z"
+}

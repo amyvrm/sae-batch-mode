@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7bea07f0-3844-408d-b143-434f77bbba6a",
+  "name": "Possible Beacon Delivery via Interoperability",
+  "description": "Detection of Possible Cobalt Strike Beacon Delivery via the Metasploit Framework",
+  "filterSets": [
+    [
+      {
+        "id": "9a1a7231-745c-4f04-ad9d-a50fe6c436a1",
+        "name": "Possible Metasploit Connection",
+        "highlight": true
+      },
+      {
+        "id": "d79f6fde-c93a-492b-8f6b-37c1433d0f1b",
+        "name": "Possible Cobalt Strike Connection",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "9a1a7231-745c-4f04-ad9d-a50fe6c436a1.app equals d79f6fde-c93a-492b-8f6b-37c1433d0f1b.app"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2024/11/14",
+  "lastUpdate": "2025-03-27T02:19:20.000Z"
+}

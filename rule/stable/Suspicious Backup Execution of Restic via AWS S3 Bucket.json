@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "08c631b6-77e5-4bc6-abdb-95ec7ecfcd18",
+  "name": "Suspicious Backup Execution of Restic via AWS S3 Bucket",
+  "description": "Possible Data Exfiltration using Restic Application to AWS S3 Bucket",
+  "filterSets": [
+    [
+      {
+        "id": "d3e7f7fb-3115-4161-b6a1-ba85b869629b",
+        "name": "Suspicious Backup Execution of Restic via AWS S3 Bucket",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/05/07",
+  "lastUpdate": "2025-05-29T06:26:31.000Z"
+}

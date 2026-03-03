@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ece777c4-1080-4f2e-838e-7b825fe8f828",
+  "name": "Suspicious Regsvr32 Executing LNK File",
+  "description": "A .lnk file has been observed being executed by Register Server (Regsvr32) with encoded string in command line.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8d8e29ae-d0bc-4bc3-9158-8288c3752846",
+      "name": "Rules Detect Possible EMOTET Behaviors With PowerShell and Regsvr32",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 60,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218",
+    "mitre.t1218.010",
+    "mitre.t1218.010"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Taro Miyoshi",
+  "team": "JP-IR",
+  "date": "2022/08/24",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

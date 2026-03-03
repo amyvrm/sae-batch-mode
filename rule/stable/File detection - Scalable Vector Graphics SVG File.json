@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d2206eee-dc57-466d-a71a-53009f8746f0",
+  "name": "File detection - Scalable Vector Graphics SVG File",
+  "description": "Palo Alto File detection - Scalable Vector Graphics SVG File",
+  "filterSets": [
+    [
+      {
+        "id": "0b4bd4d4-bf4f-4821-a918-eb4457c7c3fd",
+        "name": "File detection - Scalable Vector Graphics SVG File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

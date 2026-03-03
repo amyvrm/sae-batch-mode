@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bed9faea-a619-11ed-afa1-0242ac120002",
+  "name": "AWS IAM Unsuccessful Service Enumeration Attempt",
+  "description": "Detected IAM Unsuccessful Service Enumeration Attempt",
+  "filterSets": [
+    [
+      {
+        "id": "8361b246-138a-4dac-aaff-d05aa9725960",
+        "name": "AWS IAM Unsuccessful Service Enumeration Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/01/19",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b1c94e90-c373-4d79-9a94-e63fb9113a33",
+  "name": "AWS S3 Object Upload Using Client-Side Encryption",
+  "description": "Identifies S3 object uploads using client-managed encryption, potentially impacting data visibility and access control.",
+  "filterSets": [
+    [
+      {
+        "id": "773bfd8a-2fa0-4df8-8afd-e34d4b7ed2b8",
+        "name": "AWS S3 Object Upload Using Client-Side Encryption",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-06-17T10:36:27.000Z"
+}

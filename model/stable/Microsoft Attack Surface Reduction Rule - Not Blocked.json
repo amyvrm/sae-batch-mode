@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a7c6b55a-57ed-41d9-a375-e0a5c5c81128",
+  "name": "Microsoft Attack Surface Reduction Rule - Not Blocked",
+  "description": "Microsoft Defender for Endpoint detected suspicious activity through Attack Surface Reduction rules which monitor and block potentially malicious behaviors on Windows systems",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "a489fae8-8e85-477d-8f95-6ab68169710d",
+      "name": "Microsoft Attack Surface Reduction Rule - Not Blocked",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/10/15",
+  "lastUpdate": "2026-02-02T08:25:37.000Z"
+}

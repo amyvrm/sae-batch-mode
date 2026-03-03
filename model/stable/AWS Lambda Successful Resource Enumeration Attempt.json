@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d6c3a9ce-09b7-11ee-be56-0242ac120002",
+  "name": "AWS Lambda Successful Resource Enumeration Attempt",
+  "description": "Detected successful suspicious enumeration of AWS Lambda resources which can result in information exposure leading to resource abuse, unauthorized access, malware deployment, and operational disruption.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "3ab1ee5a-0918-11ee-be56-0242ac120002",
+      "name": "AWS Lambda Get Function Details",
+      "score": 1
+    },
+    {
+      "id": "3ab1ecac-0918-11ee-be56-0242ac120002",
+      "name": "AWS Lambda Get Attached IAM Policy",
+      "score": 1
+    },
+    {
+      "id": "3ab1f29c-0918-11ee-be56-0242ac120002",
+      "name": "AWS Lambda Get Layer Details",
+      "score": 1
+    },
+    {
+      "id": "3ab1fb70-0918-11ee-be56-0242ac120002",
+      "name": "AWS Lambda List Aliases",
+      "score": 1
+    },
+    {
+      "id": "3ab201c4-0918-11ee-be56-0242ac120002",
+      "name": "AWS Lambda List Function By Version",
+      "score": 1
+    },
+    {
+      "id": "3ab20cc8-0918-11ee-be56-0242ac120002",
+      "name": "AWS Lambda List Function",
+      "score": 1
+    },
+    {
+      "id": "3ab21420-0918-11ee-be56-0242ac120002",
+      "name": "AWS Lambda List Layers",
+      "score": 1
+    },
+    {
+      "id": "3ab219c0-0918-11ee-be56-0242ac120002",
+      "name": "AWS Lambda List Tags",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 800,
+    "dedupSeconds": 800
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1526"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/06/12",
+  "lastUpdate": "2025-09-04T09:31:24.000Z"
+}

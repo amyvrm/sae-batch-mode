@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dca87f0c-cf8a-11ed-afa1-0242ac120002",
+  "name": "AWS Cloudwatch Log Group or Stream Described",
+  "description": "AWS Cloudwatch Log Group or Stream Described.",
+  "filterSets": [
+    [
+      {
+        "id": "996c3a3b-7a73-447f-a487-34b3db6da9cf",
+        "name": "AWS Cloudwatch Describe Log Stream",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2a2181ac-23bf-4d65-a88a-ed4d4b88e9d5",
+        "name": "AWS Cloudwatch Describe Log Group",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/03/31",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

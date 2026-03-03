@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b775be99-da21-4a07-a3a8-b0531be27e7c",
+  "name": "AWS Lambda Function Invocation Permission Added",
+  "description": "Detects when a Lambda function is granted permission to be invoked by another AWS service or account, which could enable unintended access.",
+  "filterSets": [
+    [
+      {
+        "id": "ac8f8704-b383-4a4f-bdf8-e7be759946b7",
+        "name": "AWS Lambda Function Invocation Permission Added",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

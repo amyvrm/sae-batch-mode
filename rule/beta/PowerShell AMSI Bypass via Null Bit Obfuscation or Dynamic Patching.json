@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "680bc6c7-bfa4-4cec-8945-24aaccdd5eb6",
+  "name": "PowerShell AMSI Bypass via Null Bit Obfuscation or Dynamic Patching",
+  "description": "Detects PowerShell commands attempting to bypass AMSI using null bit obfuscation and dynamic memory patching techniques.",
+  "filterSets": [
+    [
+      {
+        "id": "6d4651e7-acfd-409a-bb94-090774e3b9f5",
+        "name": "PowerShell AMSI Bypass via Null Bit Obfuscation or Dynamic Patching",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/11/14",
+  "lastUpdate": "2025-11-20T08:51:29.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8b551512-72d0-4f1c-a162-bbf15c283062",
+  "name": "SystemBC Registry Creation",
+  "description": "Registry creation events that are likely related to SystemBC",
+  "filterSets": [
+    [
+      {
+        "id": "d1cdadbc-96fe-41c2-9e90-e3fe000f5a12",
+        "name": "SystemBC Registry Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/08/11",
+  "lastUpdate": "2023-09-05T01:58:48.000Z"
+}

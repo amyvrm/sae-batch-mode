@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f5b1072a-862f-4f56-8d43-54a0ad599e2c",
+  "name": "Disguised Executable Download via Invoke-WebRequest",
+  "description": "Invoke-WebRequest was used to download a file disguised as an image or text file and save it as an executable, a common technique for bypassing security controls during payload delivery.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d012448a-4370-4161-9a65-a49fcab4cbbb",
+      "name": "Disguised Executable Download via Invoke-WebRequest",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yusuf Madkour & Peligey Rufus",
+  "team": "MENA-IR",
+  "date": "2026/02/04",
+  "lastUpdate": "2026-02-09T09:22:39.000Z"
+}

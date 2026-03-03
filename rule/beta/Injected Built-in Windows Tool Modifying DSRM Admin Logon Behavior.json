@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1d30a0e3-c476-429d-b41c-6dc74deb0fe0",
+  "name": "Injected Built-in Windows Tool Modifying DSRM Admin Logon Behavior",
+  "description": "Detects the creation or modification of the DSRM (Directory Services Restore Mode) admin logon behavior in the Windows registry by a possibly injected built-in Windows Tool. Can be used by an attacker to bypass or limit access as part of persistence or defense evasion techniques.",
+  "filterSets": [
+    [
+      {
+        "id": "5c8c8a5f-1b3e-4870-91a7-22df246abb6b",
+        "name": "Creation or Modification of DSRM Admin Logon Behavior via Commandline",
+        "highlight": true
+      },
+      {
+        "id": "1d50e32e-dc32-4e9e-8316-781a6a38a0db",
+        "name": "Possible Injected Built-in Windows Tool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "condition": [
+    [
+      "5c8c8a5f-1b3e-4870-91a7-22df246abb6b.processFilePath equals 1d50e32e-dc32-4e9e-8316-781a6a38a0db.objectFilePath"
+    ],
+    [
+      "5c8c8a5f-1b3e-4870-91a7-22df246abb6b.parentFilePath equals 1d50e32e-dc32-4e9e-8316-781a6a38a0db.processFilePath"
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Mohammed Malubay",
+  "team": "TAD Service Ops",
+  "date": "2024/01/09",
+  "lastUpdate": "2025-01-09T03:39:06.000Z"
+}

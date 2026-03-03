@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9adea417-e833-44ab-9afd-e15c80369f17",
+  "name": "Possible BYOVD For Defense Evasion",
+  "description": "Detection of exploiting a vulnerability of legitimate driver, which could disable the existing Anti-Virus products in order for an attacker to download/drop the various malicious tools",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f30a448c-c85c-4f8a-ae18-d99dda333207",
+      "name": "Disabling AV Security Product using Legitimate Driver",
+      "score": 10
+    },
+    {
+      "id": "4117e496-183f-42b6-908f-86e681aba799",
+      "name": "Execution of EDR Killer Software",
+      "score": 5
+    },
+    {
+      "id": "d6f6b3f3-3805-41f8-85e6-c36559c48931",
+      "name": "Suspicious Dropping of Vulnerable Drivers",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yosuke Akiho",
+  "team": "JP-IR",
+  "date": "2023/06/02",
+  "lastUpdate": "2025-05-22T00:34:47.000Z"
+}

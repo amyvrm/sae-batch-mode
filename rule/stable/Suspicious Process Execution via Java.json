@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "27f14364-e7fc-4b24-b844-e4b60a0de7ab",
+  "name": "Suspicious Process Execution via Java",
+  "description": "Detects Process Creation via Java Execution of JAR File, leading to execution of AutoHotKey",
+  "filterSets": [
+    [
+      {
+        "id": "39e04bb2-5b93-4cce-ac57-17c41d9a4cdd",
+        "name": "Suspicious Process Execution via Java",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Marc Lanzendorfer",
+  "team": "EU-IR",
+  "date": "2024/04/26",
+  "lastUpdate": "2024-05-28T11:07:48.000Z"
+}

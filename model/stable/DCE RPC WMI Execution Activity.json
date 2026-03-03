@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "deda6195-5e6b-454a-963e-96ff4b4e713d",
+  "name": "DCE RPC WMI Execution Activity",
+  "description": "Network activity involving Distributed Computing Environment Remote Procedure Call (DCE RPC), associated with Windows Management Instrumentation (WMI) execution, was observed.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "930cc0d9-03af-43ed-b578-4b4c8c91f49a",
+      "name": "DCE RPC WMI Execution Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1047",
+    "threat.pua",
+    "mitre.t1078.002",
+    "mitre.t1219"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/09/11",
+  "lastUpdate": "2025-09-18T02:52:16.000Z"
+}

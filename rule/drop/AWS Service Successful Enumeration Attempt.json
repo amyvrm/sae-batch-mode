@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "86f6954a-4c31-42c4-9cdd-adc9c34fd0c2",
+  "name": "AWS Service Successful Enumeration Attempt",
+  "description": "This rule detects possible successful Recon/Enumeration attempts across different aws services",
+  "filterSets": [
+    [
+      {
+        "id": "f7f476b3-f7ad-44d9-be2f-2686c73ccef4",
+        "name": "AWS Service Successful Enumeration Attempt",
+        "highlight": true,
+        "maxAmount": 12
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 12,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sct"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/11/11",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

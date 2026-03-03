@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dd9a324b-8574-426f-a1b0-47efe1182f20",
+  "name": "Possible Cobalt Strike Beacon Loading In Memory",
+  "description": "Detects possible loading of Cobalt strike in memory which is commonly used by APT groups.",
+  "filterSets": [
+    [
+      {
+        "id": "0a05140c-403e-414c-9252-6feb20050a25",
+        "name": "Possible Cobalt Strike Beacon Loading In Memory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Bien Joshua Philip De Leon",
+  "team": "AMEA-IR",
+  "date": "2024/10/25",
+  "lastUpdate": "2024-11-28T14:34:13.000Z"
+}

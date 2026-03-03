@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "18d94eb4-c9b8-46d7-89e3-d0b7a4a1e8f9",
+  "name": "Azure Vnet Traffic with Suspicious Reputation",
+  "description": "Detected Azure virtual network traffic possibly associated with spam or has a history of being compromised.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "fd28746a-d82e-457b-9f06-c3f5f98ef435",
+      "name": "Azure Vnet Traffic with Suspicious Reputation",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "azv"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/12",
+  "lastUpdate": "2025-11-27T15:11:26.000Z"
+}

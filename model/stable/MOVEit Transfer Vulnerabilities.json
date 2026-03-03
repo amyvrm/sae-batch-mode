@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "id": "859a4606-1075-11ee-be56-0242ac120002",
+  "name": "MOVEit Transfer Vulnerabilities",
+  "description": "MOVEit Transfer exploit activity has been detected on the network.",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "859a4994-1075-11ee-be56-0242ac120002",
+      "name": "MOVEit Transfer via MOVEitISAPI.dll Endpoint Access",
+      "score": 1
+    },
+    {
+      "id": "859a4b92-1075-11ee-be56-0242ac120002",
+      "name": "MOVEit Transfer via SQL Injection Vulnerability",
+      "score": 3
+    },
+    {
+      "id": "859a4d72-1075-11ee-be56-0242ac120002",
+      "name": "PhantomShell Webshell Traffic Detected",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2023/06/20",
+  "lastUpdate": "2024-05-14T07:14:32.000Z"
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7df2edc8-5e1c-49c0-b387-7ac6843612a5",
+  "name": "AWS S3 Bucket Replication Data Rule Created Or Changed",
+  "description": "Detected creation of a S3 bucket replication configuration or replaces an existing one which might indicate attacker attempting to exfiltrate confidential data to his environment.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "a255fc9e-47da-40ba-a266-c87e38dc1c84",
+      "name": "AWS S3 Bucket Listing",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "aa99874a-3ff6-11ee-be56-0242ac120002",
+      "name": "AWS S3 Get Bucket Replication Configuration",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "aa998ce0-3ff6-11ee-be56-0242ac120002",
+      "name": "AWS S3 Put Bucket Replication Configuration",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1526",
+    "mitre.t1530",
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/08/21",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

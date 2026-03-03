@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2401789a-7e94-4f36-b09e-9d2f557caddc",
+  "name": "Possible Phishing from a Suspicious Top Level Domain",
+  "description": "Palo Alto Vulnerability detection - Detects a possible phishing to websites with suspicious TLDs (top level domain), which are often flagged due to their frequent association with malicious activities.",
+  "filterSets": [
+    [
+      {
+        "id": "5ee1ef1a-878d-4fda-917c-25bb02088d75",
+        "name": "Possible Phishing from a Suspicious Top Level Domain",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "Third Party Operations",
+  "date": "2025/09/25",
+  "lastUpdate": "2025-10-02T10:18:18.000Z"
+}

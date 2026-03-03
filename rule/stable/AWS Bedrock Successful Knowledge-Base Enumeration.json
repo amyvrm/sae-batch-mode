@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b3d2db91-528e-45cf-a562-7ab122c68c89",
+  "name": "AWS Bedrock Successful Knowledge-Base Enumeration",
+  "description": "Detects successful enumeration of knowledge-base in AWS Bedrock services, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "a2a13c34-be6f-40f3-a528-ca693d8866f4",
+        "name": "AWS Bedrock Successful Knowledge-Base Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/15",
+  "lastUpdate": "2026-01-19T02:05:18.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2dfcbae5-6a78-44e6-8bce-6127d1515a65",
+  "name": "Domain Blocked By DNS Botnet CC(IP)",
+  "description": "Fortinet detection - Domain blocked by DNS botnet CC(IP)",
+  "filterSets": [
+    [
+      {
+        "id": "6acc80bc-7f45-4359-8326-d76b67f95c34",
+        "name": "Domain Blocked By DNS Botnet CC(IP)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

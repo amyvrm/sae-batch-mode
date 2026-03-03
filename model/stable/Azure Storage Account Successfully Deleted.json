@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9576b1c8-12b2-400b-abfb-368a06648d22",
+  "name": "Azure Storage Account Successfully Deleted",
+  "description": "This model detects successful deletion of an Azure storage account which may indicate an attacker trying to destroy critical data or disrupt services as part of a broader impact on the Azure environment.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "dc5825d8-34e7-41aa-a458-15c2c12d9f52",
+      "name": "Azure Storage Account Successfully Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1485"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2024/04/29",
+  "lastUpdate": "2025-05-09T07:17:46.000Z"
+}

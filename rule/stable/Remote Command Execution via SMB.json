@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "36934c9a-d6db-4d59-b352-c01ee74d2e0e",
+  "name": "Remote Command Execution via SMB",
+  "description": "Network activity involving SMB traffic associated with WINEXE Remote Command Execution (RCE) was observed, indicating potential exploitation behavior.",
+  "filterSets": [
+    [
+      {
+        "id": "9e01cadd-066b-58a7-98a5-94f743528c3f",
+        "name": "Remote Command Execution SMB  (Request) Variant 3 - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/05/20",
+  "lastUpdate": "2025-06-03T03:45:26.000Z"
+}

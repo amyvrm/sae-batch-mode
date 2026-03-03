@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a1977026-0f4c-4b41-bbd3-a8f93744808a",
+  "name": "Renamed AnyDesk Process Launched",
+  "description": "Detection of a Renamed AnyDesk Process Launched.",
+  "filterSets": [
+    [
+      {
+        "id": "80f0ad99-52ae-4ae7-b1e8-e2a199bac105",
+        "name": "Renamed AnyDesk Process Launched",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/06/06",
+  "lastUpdate": "2024-06-17T17:36:35.000Z"
+}

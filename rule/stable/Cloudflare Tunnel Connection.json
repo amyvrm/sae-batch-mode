@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "39f3fcb8-b134-4587-b96b-892ef4f43be2",
+  "name": "Cloudflare Tunnel Connection",
+  "description": "Cloudflare tunnel detected running on endpoint.",
+  "filterSets": [
+    [
+      {
+        "id": "ee4b04b1-26e6-469a-8e65-707c50edfbd1",
+        "name": "Cloudflare Tunnel Connection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0ad97291-66e8-4e4c-834b-11fe4e0c68d8",
+        "name": "Linux Cloudflare Tunnel Connection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bd362f1b-a86d-4e62-88cc-28137a5ad6b8",
+        "name": "Windows Cloudflare Tunnel Connection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao",
+      "stp",
+      "xcs",
+      "ptp"
+    ]
+  ],
+  "author": "Jose Baena Cobos",
+  "team": "Cloud One",
+  "date": "2023/09/18",
+  "lastUpdate": "2024-03-28T10:36:33.000Z"
+}

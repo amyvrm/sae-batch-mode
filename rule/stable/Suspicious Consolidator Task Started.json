@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19ff3349-485c-4a97-9baa-7e4dcef53108",
+  "name": "Suspicious Consolidator Task Started",
+  "description": "Adversaries may initiate a consolidator task which can be used to gather and aggregate data from various sources within a compromised environment. This activity is commonly observed in reconnaissance and lateral movement phases.",
+  "filterSets": [
+    [
+      {
+        "id": "bd25e8b1-f2d9-4944-9e90-182764ded456",
+        "name": "Suspicious Consolidator Task Started",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/11/14",
+  "lastUpdate": "2025-11-17T20:49:35.000Z"
+}

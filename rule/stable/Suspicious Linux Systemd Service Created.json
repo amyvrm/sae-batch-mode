@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8062b898-21c8-11ef-9262-0242ac120002",
+  "name": "Suspicious Linux Systemd Service Created",
+  "description": "Detects the creation of systemd services in a Linux environment.",
+  "filterSets": [
+    [
+      {
+        "id": "6eec45aa-1e00-11ef-9262-0242ac120002",
+        "name": "Linux Systemd Service Created",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/06/03",
+  "lastUpdate": "2024-07-11T15:09:50.000Z"
+}

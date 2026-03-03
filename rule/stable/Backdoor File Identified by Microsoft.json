@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "364ad77b-3e7a-4727-a74c-0fbebc36ecce",
+  "name": "Backdoor File Identified by Microsoft",
+  "description": "Microsoft Antivirus File Detection for Backdoor",
+  "filterSets": [
+    [
+      {
+        "id": "2c82c8f3-eb6b-47e5-a08d-6bede51bf815",
+        "name": "Backdoor File Identified by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mohammed Malubay",
+  "team": "Third Party Operations",
+  "date": "2025/07/28",
+  "lastUpdate": "2025-07-28T21:32:14.000Z"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9672af51-944e-4d62-8a55-2e1245480553",
+  "name": "Execution Of Process Discovery Commands",
+  "description": "Detect Execution of Process Discovery Commands",
+  "filterSets": [
+    [
+      {
+        "id": "c9b444ac-38c6-462e-8fcc-9ffb0e3d8f2f",
+        "name": "Process Discovery via PS command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "535c8a91-2d4f-4ca3-aa66-df47e42e537d",
+        "name": "List Processes via ps",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/06/07",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

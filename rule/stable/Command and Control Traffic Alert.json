@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "599825dc-6486-48ad-bad8-4737178b9f5e",
+  "name": "Command and Control Traffic Alert",
+  "description": "Palo Alto Networks detection for Command and Control Traffic",
+  "filterSets": [
+    [
+      {
+        "id": "aff5f719-0c11-5786-ba85-341e6febec9a",
+        "name": "Cobalt Strike Command and Control Traffic Alert",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a6360f67-37f9-504d-a094-c7d5a15e5471",
+        "name": "Malware Command and Control Traffic",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/20",
+  "lastUpdate": "2025-06-23T03:43:46.000Z"
+}

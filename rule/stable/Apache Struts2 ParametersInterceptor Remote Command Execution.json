@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dd954572-d0ac-4bad-a6fb-97cc3488a9fc",
+  "name": "Apache Struts2 ParametersInterceptor Remote Command Execution",
+  "description": "Check Point Security detection for Apache Struts2 ParametersInterceptor Remote Command Execution",
+  "filterSets": [
+    [
+      {
+        "id": "eca18060-ef0a-591d-b158-e0293afe95da",
+        "name": "Apache Struts2 ParametersInterceptor Remote Command Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/12/11",
+  "lastUpdate": "2026-01-15T01:11:52.000Z"
+}

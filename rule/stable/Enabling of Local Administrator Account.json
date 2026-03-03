@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b85455ec-720d-4046-b9ad-ae306c6cedee",
+  "name": "Enabling of Local Administrator Account",
+  "description": "Detects when a built-in Administrator account is enabled in Windows environment.",
+  "filterSets": [
+    [
+      {
+        "id": "43038c9a-3126-4b20-a80d-975e5a795fa4",
+        "name": "Enabling of Local Administrator Account",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Bien Joshua Philip De Leon",
+  "team": "AMEA-IR",
+  "date": "2025/06/19",
+  "lastUpdate": "2025-07-03T08:49:23.000Z"
+}

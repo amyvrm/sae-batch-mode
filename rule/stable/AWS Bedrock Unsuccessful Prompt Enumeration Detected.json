@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cd8e7af2-20a8-4aef-904c-6410f2aa97de",
+  "name": "AWS Bedrock Unsuccessful Prompt Enumeration Detected",
+  "description": "Detects unsuccessful enumeration of prompt in AWS Bedrock services, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "2e8919d0-1461-4090-8452-7723a57b9681",
+        "name": "AWS Bedrock Unsuccessful Prompt Enumeration Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/15",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

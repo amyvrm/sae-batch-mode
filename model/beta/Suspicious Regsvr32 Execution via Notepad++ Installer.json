@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a8d3e4f7-9b2c-4e1a-8f6d-3c5a7b9e2d4f",
+  "name": "Suspicious Regsvr32 Execution via Notepad++ Installer",
+  "description": "Detect execution of notepad++ dll via regsvr32. This activity is commonly associated with possible privilege escalation attacks where attackers exploit vulnerabilities in the Notepad installer mechanism.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f9375d0b-e2bc-4fd1-b457-9275ae61df28",
+      "name": "Suspicious Regsvr32 Execution via Notepad++ Installer",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1574.008",
+    "cve.2025.49144"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Simon Dulude",
+  "team": "Cloud One",
+  "date": "2025/08/27",
+  "lastUpdate": "2025-11-07T06:00:52.000Z"
+}

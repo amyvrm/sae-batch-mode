@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "72cb471e-fd7d-4d34-b5b4-cf4a14fa5b83",
+  "name": "Suspicious Script Execution Chain Activity via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection identifying unusual process chains where mshta.exe spawns system utilities or scripting interpreters. This may indicate script-based execution, post-exploitation, or reconnaissance attempts.",
+  "scope": "endpoint",
+  "riskLevel": "high",
+  "rules": [
+    {
+      "id": "6a1b5af0-339a-4261-8810-afec75ecd848",
+      "name": "Suspicious Script Execution Chain Activity via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218.005",
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/10",
+  "lastUpdate": "2026-01-15T00:27:37.000Z"
+}

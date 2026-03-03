@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "62ec1e78-e135-46d1-9459-c107ba8f90b2",
+  "name": "Remote Connection Using VNC",
+  "description": "Detects remote access connection using VNC Over RFB",
+  "filterSets": [
+    [
+      {
+        "id": "6a23d004-d3c3-56f1-b8b8-49b8ed62b031",
+        "name": "Remote Access Tool Vnc Vnc (Response)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3fb1a93c-60ee-5fdb-9524-2a2b1f54f2f2",
+        "name": "Remote Access Tool Realvnc Vnc (Response)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "96727a9c-12a6-5ae1-9c6c-fc6ecb2ed6ee",
+        "name": "Remote Access Tool Tightvnc Vnc (Response)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e395d171-d30e-593c-b0e5-7f293a39e748",
+        "name": "Remote Access Tool Ultravnc Vnc (Response)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Carl Jayson Pelina",
+  "team": "CSG",
+  "date": "2024/10/07",
+  "lastUpdate": "2024-10-15T04:12:50.000Z"
+}

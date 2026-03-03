@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "96b7fae3-64d0-4323-8034-7b66d718d20a",
+  "name": "Suspicious Account Creates New Mailbox Rule - Delete New Emails",
+  "description": "A suspicious account creates a new mailbox rule that moves all incoming emails to the deleted items folder.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "8acd5e18-ce86-4644-b789-d65903679271",
+      "name": "Suspicious Account Sign-In from Unfamiliar Location or Device",
+      "score": 1
+    },
+    {
+      "id": "6a308957-c45a-4cee-977c-b1a3605dabff",
+      "name": "New Mailbox Rule which Moves Incoming Messages to Deleted Items",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xca",
+      "aad"
+    ]
+  ],
+  "tags": [
+    "mitre.t1586.003",
+    "mitre.t1564.008"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2025/03/15",
+  "lastUpdate": "2025-06-23T09:18:33.000Z"
+}

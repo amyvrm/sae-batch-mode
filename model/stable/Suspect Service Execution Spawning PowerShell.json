@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4b23eabf-cbe3-4823-a3b6-476c3347de48",
+  "name": "Suspect Service Execution Spawning PowerShell",
+  "description": "Detection of encoded PowerShell being spawned by services, which is indicative of a possible SMB cobaltstrike beacon",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "526b471a-564c-4acf-ab92-b7785f92467f",
+      "name": "Suspect Service Execution Spawning PowerShell",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1570",
+    "mitre.t1021.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/07/15",
+  "lastUpdate": "2025-11-03T15:19:15.000Z"
+}

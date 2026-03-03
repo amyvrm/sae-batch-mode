@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1a3fffae-50ba-4801-bd85-5dfdcd6e94c4",
+  "name": "A User With Admin Privileges Has Successfully Logged Out",
+  "description": "Fortinet detection - A user with Admin privileges has successfully logged out",
+  "filterSets": [
+    [
+      {
+        "id": "56253500-7a51-40f0-81ce-8cf7ad749cf9",
+        "name": "A User With Admin Privileges Has Successfully Logged Out",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d7983ec7-255a-44b9-84d1-d5f8505a9852",
+  "name": "Microsoft Antivirus Matched with a File",
+  "description": "Microsoft Detection for when they found a file that matches their Database and found to be suspicious or malicious.",
+  "filterSets": [
+    [
+      {
+        "id": "59c18d37-f2c8-4159-8dd9-8c88b61ba82c",
+        "name": "Microsoft Antivirus Matched with a File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2025/07/22",
+  "lastUpdate": "2025-07-23T04:44:03.000Z"
+}

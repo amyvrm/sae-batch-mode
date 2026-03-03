@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "33352e3a-99c5-4a4f-a779-3464029c62c8",
+  "name": "SSH Keys Discovery",
+  "description": "Detects SSH key discovery",
+  "filterSets": [
+    [
+      {
+        "id": "0246a6ff-2f33-4022-8caf-9c102b278799",
+        "name": "Private SSH Key Discovery Via Find Command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2fcd7dd1-4cd9-4575-98ec-033d01d51c2b",
+        "name": "PEM File Discovery via Find Command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "587ec7fc-1883-4077-ba25-706bdbe9e54b",
+        "name": "View SSH Config File via Cat Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Josh Morrison",
+  "team": "Cloud One",
+  "date": "2022/12/30",
+  "lastUpdate": "2024-10-14T06:03:49.000Z"
+}

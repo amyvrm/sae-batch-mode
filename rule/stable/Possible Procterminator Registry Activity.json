@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a6719ce7-d259-439c-a95c-5b06d394ed54",
+  "name": "Possible Procterminator Registry Activity",
+  "description": "Detect registry activity related to fildds.sys under ProgramData for potential BYOVD technique used by ProcTerminator known for its potential persistence mechanism.",
+  "filterSets": [
+    [
+      {
+        "id": "c03c73fe-976f-4043-b82f-26f6b8301c8a",
+        "name": "Possible Procterminator Registry Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/06/24",
+  "lastUpdate": "2024-06-27T08:10:06.000Z"
+}

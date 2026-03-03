@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bdcf2939-2c0c-41d4-a8ab-00882a65d055",
+  "name": "Atypical Travel Pattern Observed in Login Activity",
+  "description": "User account has a successful sign-in attempt originating from a location that is unusual based on the known travel behavior of the user.",
+  "riskLevel": "high",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "12f1a16c-5248-40c2-bc32-e58f46d4a01f",
+      "name": "Atypical Travel Pattern Observed in Login Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aad",
+      "sca"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2026/02/03",
+  "lastUpdate": "2026-02-13T08:49:14.000Z"
+}

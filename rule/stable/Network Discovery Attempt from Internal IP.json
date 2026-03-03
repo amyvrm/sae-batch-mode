@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a3a987b6-5821-469d-8982-059d8fe87484",
+  "name": "Network Discovery Attempt from Internal IP",
+  "description": "Detect attempts to port scan from Pivate IP.",
+  "filterSets": [
+    [
+      {
+        "id": "a47f981d-d63a-45af-9c93-264d0d0b320a",
+        "name": "Network Discovery Attempt from Internal IP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Jose Baena Cobos",
+  "team": "Cloud One",
+  "date": "2023/04/27",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

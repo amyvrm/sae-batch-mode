@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "49a13b2e-b962-49b4-9810-b5694a07e85c",
+  "name": "Add Windows Capability via Powershell Script",
+  "description": "Detects usage of the 'Add-WindowsCapability' cmdlet to add Windows capabilities. Notable capabilities could be 'OpenSSH' and others.",
+  "filterSets": [
+    [
+      {
+        "id": "6e5da49c-d4b5-450b-bfa8-9488771f3f8b",
+        "name": "Add Windows Capability via Powershell Script",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/11/14",
+  "lastUpdate": "2025-11-20T08:51:29.000Z"
+}

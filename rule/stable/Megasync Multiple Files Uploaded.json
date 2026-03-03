@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1310c0f8-448a-4019-b492-5a7bd88a4b9f",
+  "name": "Megasync Multiple Files Uploaded",
+  "description": "Multiple files uploaded to MEGA site.",
+  "filterSets": [
+    [
+      {
+        "id": "60663e12-5639-4933-afef-6e0720d12c91",
+        "name": "Megasync File Upload",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 10,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2022/03/14",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "43c96ed1-0de0-4669-8f65-5a490dd114e6",
+  "name": "Suspicious Remote Access via Reverse Tunnel",
+  "description": "This rule identifies potentially malicious commands that establish unauthorized reverse tunnel connections.",
+  "filterSets": [
+    [
+      {
+        "id": "fd2b22b3-c2c0-4122-af2b-1078978ad7e1",
+        "name": "Suspicious Reverse Tunnel Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Shaun Galura",
+  "team": "AMEA IR",
+  "date": "2024/11/21",
+  "lastUpdate": "2025-03-18T06:11:05.000Z"
+}

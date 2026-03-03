@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19692278-00b8-4d60-90f2-edcacaed9d3d",
+  "name": "AWS Redshift Unsuccessful Enumeration Attempt",
+  "description": "Failed attempts to retrieve information about Redshift resources, such as clusters, snapshots, security groups, or subnet groups. These failures may result from insufficient permissions or an attacker probing for accessible resources. While legitimate users may encounter such failures due to misconfigured permissions, repeated or unexpected failures could indicate unauthorized reconnaissance attempts.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "ff07a071-d36c-456c-b42d-ec235672ab4d",
+      "name": "AWS Redshift Unsuccessful Cluster Parameter Groups Enumeration",
+      "score": 1
+    },
+    {
+      "id": "416b0464-4226-4aa3-95ca-921f92a07d42",
+      "name": "AWS Redshift Unsuccessful Snapshot Schedules Enumeration",
+      "score": 1
+    },
+    {
+      "id": "cf70ede7-5bfd-4d56-b78e-42c8f6637f52",
+      "name": "AWS Redshift Unsuccessful Events Enumeration",
+      "score": 1
+    },
+    {
+      "id": "a799404f-0c90-4183-be35-06164e9ec975",
+      "name": "AWS Redshift Unsuccessful Cluster Snapshots Enumeration",
+      "score": 1
+    },
+    {
+      "id": "e41ffb2d-77c8-44c0-b472-fe8be576c5ae",
+      "name": "AWS Redshift Unsuccessful Clusters Enumeration",
+      "score": 1
+    },
+    {
+      "id": "bc7f5201-f025-48d2-b4d4-5771ca789bf4",
+      "name": "AWS Redshift Unsuccessful Cluster Security Groups Enumeration",
+      "score": 1
+    },
+    {
+      "id": "8bb61f2e-877a-4953-b55f-5d04a4583848",
+      "name": "AWS Redshift Unsuccessful Cluster Subnet Groups Enumeration",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-23T08:52:30.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3646e6e1-be1a-44ad-b150-5559e9d113fc",
+  "name": "Zip TLD Redirection via HTTP",
+  "description": "Network activity involving HTTP traffic associated with ZIP TLD redirection was observed on the network.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "26105eb8-752d-45bf-9f1c-aa0620a5fe24",
+      "name": "Zip TLD Redirection via HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "threat.pua",
+    "mitre.t1071.001",
+    "mitre.t1095"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/05/21",
+  "lastUpdate": "2025-06-03T04:17:39.000Z"
+}

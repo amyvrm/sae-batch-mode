@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19139213-144b-4b76-bd9b-b26b1df78794",
+  "name": "Web Application Firewall Allowed Application By HTTP Constraints",
+  "description": "Fortinet detection - Web application firewall allowed application by HTTP constraints",
+  "filterSets": [
+    [
+      {
+        "id": "d85d86bf-c28f-4c8a-bce4-c39da53b0de5",
+        "name": "Web Application Firewall Allowed Application By HTTP Constraints",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

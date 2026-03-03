@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "625e1b29-96ee-4963-ac37-e71c8a6412e3",
+  "name": "ICMPv6 Flood Detected",
+  "description": "SonicWall Detection - Possible ICMPv6 flood attack detected",
+  "filterSets": [
+    [
+      {
+        "id": "dc947aed-978a-451c-a88e-afda3490e13e",
+        "name": "ICMPv6 Flood Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

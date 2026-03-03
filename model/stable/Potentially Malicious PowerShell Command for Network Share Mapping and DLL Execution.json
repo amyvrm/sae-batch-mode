@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "07493710-9294-42ac-927c-4aa4abd63be7",
+  "name": "Potentially Malicious PowerShell Command for Network Share Mapping and DLL Execution",
+  "description": "Detects the use of a command that maps a network share and executes a DLL from a remote location.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "eadb3abb-a2d1-4a2e-946f-a2583f308716",
+      "name": "Potentially Malicious PowerShell Command for Network Share Mapping and DLL Execution",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1110",
+    "mitre.t1110.003",
+    "mitre.t1021.002",
+    "mitre.t1059.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/07/16",
+  "lastUpdate": "2024-08-13T17:08:06.000Z"
+}

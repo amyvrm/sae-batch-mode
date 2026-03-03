@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2105e0eb-a975-44cd-ab62-7830cd2b4643",
+  "name": "WebDAV File Download Attempt via HTTP",
+  "description": "Network activity involving HTTP, associated with WebDAV file download attempts, was observed. This behavior indicates interaction with WebDAV protocols over HTTP, which may involve file retrieval operations.",
+  "filterSets": [
+    [
+      {
+        "id": "11de6077-969b-5140-b00c-81dad14a2029",
+        "name": "Webdav Unsuccessful File Download HTTP (Response)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/05/13",
+  "lastUpdate": "2025-06-19T05:37:06.000Z"
+}

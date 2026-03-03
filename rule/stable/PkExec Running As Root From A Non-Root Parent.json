@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "05175f43-8a19-4fef-a7fb-35dc59e7d367",
+  "name": "PkExec Running As Root From A Non-Root Parent",
+  "description": "This rule detects when pkexec is started with the highest privilege from an unprivileged process.",
+  "filterSets": [
+    [
+      {
+        "id": "4c5ab57d-41ba-4f89-88ce-e048e9eb8a2d",
+        "name": "Identified PkExec Run With Root Privileges",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2022/01/31",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "184c637a-e00e-457a-856e-253d42d9837c",
+  "name": "NP6 HPE Under A Packets Flood",
+  "description": "Fortinet detection - NP6 HPE under a packets flood",
+  "filterSets": [
+    [
+      {
+        "id": "42e078cb-495c-4ef0-a844-e3e49259c650",
+        "name": "NP6 HPE Under A Packets Flood",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

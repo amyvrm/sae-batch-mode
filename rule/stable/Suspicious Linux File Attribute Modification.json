@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8d016b90-3fcc-11ef-9454-0242ac120002",
+  "name": "Suspicious Linux File Attribute Modification",
+  "description": "Detects modification of file attributes in linux.",
+  "filterSets": [
+    [
+      {
+        "id": "ccaa44ac-9bd2-4673-b062-9ff6e55add21",
+        "name": "Set Execute Attribute Via Chmod",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/07/11",
+  "lastUpdate": "2025-01-22T19:14:24.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0e98c558-c1a4-438d-b0ba-e3ed46e0d47d",
+  "name": "AWS Redshift Successful Events Enumeration",
+  "description": "Monitors requests to retrieve Redshift cluster events, which attackers might use for reconnaissance.",
+  "filterSets": [
+    [
+      {
+        "id": "b4c7b7ad-5c07-4071-aa78-9a7a4ca39187",
+        "name": "AWS Redshift Successful Events Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

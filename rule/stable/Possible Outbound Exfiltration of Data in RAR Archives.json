@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0662a226-90b9-4129-b689-eb50ab3dc2f8",
+  "name": "Possible Outbound Exfiltration of Data in RAR Archives",
+  "description": "Detects the use of RAR archives in the context of outbound exfiltration of data",
+  "filterSets": [
+    [
+      {
+        "id": "fd301172-9c6e-43b1-aa33-42194d377318",
+        "name": "Possible Outbound Exfiltration of Data in RAR Archives",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/14",
+  "lastUpdate": "2024-07-08T20:10:56.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0d121981-51e4-43ec-8e31-37a1fc292746",
+  "name": "Ehorus Service Installation",
+  "description": "ehorus is a remote admin tool. It can be abused by an attacker to remotely control the victim's environment.",
+  "filterSets": [
+    [
+      {
+        "id": "8f85f151-59b8-46b3-9ace-5ab5a47e942a",
+        "name": "Ehorus Service Installation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Bahaa Yamany & Jack Walsh",
+  "team": "MENA-IR",
+  "date": "2023/10/02",
+  "lastUpdate": "2023-10-11T11:15:54.000Z"
+}

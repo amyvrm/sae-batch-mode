@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "851d7fd5-6e0b-426a-b465-9cdabdb4117a",
+  "name": "Suspicious Shortcut File Activities Over Network",
+  "description": "Adversaries may create shortcuts that can execute a program. The Shortcuts or symbolic links are used to reference other files or programs that will be executed when the shortcut is clicked.",
+  "filterSets": [
+    [
+      {
+        "id": "060e699d-95b1-426a-8ef5-b7862ebb0b13",
+        "name": "Suspicious Internet Shortcut Running Over Network Share",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e6b7796b-4912-4512-b68c-af4b7b87e67d",
+        "name": "Suspicious File Copy Over Network Share",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "de990ae5-8437-4c7a-b7dc-b8d1bb8497e7",
+        "name": "Identified Transfer Of Suspicious Files Over Network",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3d08bbab-4d3f-4656-865a-6616831ff91b",
+        "name": "Suspicious WebDav Client Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/07/02",
+  "lastUpdate": "2024-07-03T18:09:26.000Z"
+}

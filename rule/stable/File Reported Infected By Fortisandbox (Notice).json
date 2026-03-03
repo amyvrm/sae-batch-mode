@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "de8b3495-62ef-4611-bae8-2a3b3ab71d73",
+  "name": "File Reported Infected By Fortisandbox (Notice)",
+  "description": "Fortinet detection - File reported infected by FortiSandbox (notice)",
+  "filterSets": [
+    [
+      {
+        "id": "7878379e-0557-4295-a03e-faa3468b3d7f",
+        "name": "File Reported Infected By Fortisandbox (Notice)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

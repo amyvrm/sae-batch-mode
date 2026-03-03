@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "71f2e9d1-912e-4afa-a0d0-586fab0fa6cc",
+  "name": "Possible Active Directory Discovery via ShadowHound",
+  "description": "ShadowHound is a set of PowerShell scripts for Active Directory enumeration without the need for introducing known-malicious binaries like SharpHound",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "970771f0-2eae-4366-801d-f703f0507a1d",
+      "name": "Possible Active Directory Discovery via ShadowHound",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1082",
+    "mitre.t1654",
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2024/12/02",
+  "lastUpdate": "2025-02-27T11:12:43.000Z"
+}

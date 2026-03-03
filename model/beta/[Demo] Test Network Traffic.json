@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "50410328-103d-46db-96be-6f9021f6ba07",
+  "name": "Demo - Test Network Traffic",
+  "description": "Test model.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "72b33a70-092e-4308-9519-6409fa05ce39",
+      "name": "Demo - Test Network Traffic",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "bas.tmdemokit"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/11/09",
+  "lastUpdate": "2023-11-10T03:25:28.000Z"
+}

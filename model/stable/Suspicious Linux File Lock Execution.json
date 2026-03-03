@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0197ba64-3efa-11ef-9454-0242ac120002",
+  "name": "Suspicious Linux File Lock Execution",
+  "description": "Detects network execution of a file in the temporary folder.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "098a0692-3ef9-11ef-9454-0242ac120002",
+      "name": "Suspicious Linux File Lock Execution",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1222"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/07/10",
+  "lastUpdate": "2025-02-20T17:13:02.000Z"
+}

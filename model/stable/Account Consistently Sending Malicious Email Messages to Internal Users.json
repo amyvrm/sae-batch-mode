@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e6bdffe5-b051-419a-be1f-41aef86cf51a",
+  "name": "Account Consistently Sending Malicious Email Messages to Internal Users",
+  "description": "The account has consistently sent malicious emails to internal users for a duration exceeding three days.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "9ba0f0a8-af71-446c-a6d9-8b5a1ea3478e",
+      "name": "Account Consistently Sending Malicious Email Messages to Internal Users",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "aad",
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1586",
+    "mitre.t1586.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Baker Yang",
+  "team": "Jaguar",
+  "date": "2024/01/18",
+  "lastUpdate": "2024-07-05T03:08:32.000Z"
+}

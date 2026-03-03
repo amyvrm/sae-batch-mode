@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ff50effc-52fe-4a7d-b3f8-86e5caeebd4e",
+  "name": "Potential ws2ifsl UAF Privilege Escalation",
+  "description": "This model identifies potential manipulations of the Winlogon process, such as injecting malicious code into Winlogon.exe via the CreateRemoteThread technique or executing cmd.exe through Winlogon.exe. These activities can allow attackers to perform actions with elevated privileges or evade security measures. The model aims to detect and prevent such attacks, enhancing the overall security posture of the organization.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "bda87885-5933-4929-8592-4cef5bee49fc",
+      "name": "Cross-Process Injection via CreateRemoteThread in Winlogon",
+      "score": 10
+    },
+    {
+      "id": "fb3614e1-4baa-4a80-9d62-0d590f34d30f",
+      "name": "Suspicious Binary Execution by Winlogon",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 20,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055.001",
+    "mitre.t1546.008"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "silent": false,
+  "globalModel": true,
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/12/11",
+  "lastUpdate": "2025-02-25T01:30:07.000Z"
+}

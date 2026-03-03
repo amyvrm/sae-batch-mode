@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f392cda2-0d3f-450f-9ef7-6788c38b15de",
+  "name": "APT Bpfdoor Tcp Bidirectional Communications",
+  "description": "Network activity involving inbound and outbound TCP, which is a associated with BPFDoor, was detected",
+  "filterSets": [
+    [
+      {
+        "id": "f61705cd-3d23-571b-9439-fb32491a1d10",
+        "name": "APT Bpfdoor TCP - Inbound",
+        "highlight": true
+      },
+      {
+        "id": "1f3c1a32-06c9-5ccf-8db9-ae781bd3f565",
+        "name": "APT Bpfdoor TCP - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2025/08/25",
+  "lastUpdate": "2025-11-19T03:51:16.000Z"
+}

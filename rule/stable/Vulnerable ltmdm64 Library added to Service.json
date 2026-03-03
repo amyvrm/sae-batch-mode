@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "98e4f832-dbd7-40f4-beff-0703ccfdbc45",
+  "name": "Vulnerable ltmdm64 Library added to Service",
+  "description": "Adversaries may add a vulnerable version of the ltmdm64 library to a service. This tactic can be part of a broader strategy to gain persistence or escalate privileges by leveraging vulnerable software components within a system.",
+  "filterSets": [
+    [
+      {
+        "id": "1547ee33-25ae-48c0-898c-40e445e96c8b",
+        "name": "Vulnerable ltmdm64 Library added to Service",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/10/23",
+  "lastUpdate": "2025-11-17T08:51:59.000Z"
+}

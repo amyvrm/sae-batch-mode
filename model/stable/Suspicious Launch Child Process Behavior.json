@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2e51531c-980b-4e1d-998f-696f59bdecdf",
+  "name": "Suspicious Launch Child Process Behavior",
+  "description": "Suspicious request was detected contains the commands of exploit",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "978c429a-e62f-4d2a-854e-6c99921ca80f",
+      "name": "Suspicious Child Process Behavior",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Rafael Pereira",
+  "team": "US-IR",
+  "date": "2025/09/09",
+  "lastUpdate": "2025-12-10T06:23:34.000Z"
+}

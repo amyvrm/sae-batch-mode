@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "92559498-6135-455a-a70c-46a9006a125b",
+  "name": "CertUtil Remote Download",
+  "description": "Microsoft Detection for CertUtil Remote Download",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3e6f3e5d-ce68-447d-9f67-1bfe048c2ee1",
+      "name": "CertUtil Remote Download",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 900,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/03",
+  "lastUpdate": "2025-08-26T03:04:21.000Z"
+}

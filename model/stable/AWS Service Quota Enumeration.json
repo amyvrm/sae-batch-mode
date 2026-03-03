@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0e0a3d40-d270-453d-a811-20a10f2624bc",
+  "name": "AWS Service Quota Enumeration",
+  "description": "Detected possible enumeration of AWS service quotas using the ListServiceQuotas and GetServiceQuota API calls, which may indicate an attacker attempting to understand the capacity limits and scaling boundaries of the AWS account. By enumerating quotas across services, regions, and resource types, an adversary can determine how many compute instances, networking components, storage resources, or managed services can be provisioned without restriction.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "1a403121-a2fc-449f-8266-6a735d932ada",
+      "name": "AWS List Service Quotas",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "f4fa791d-ffd3-4d28-8f5e-a1c11314e907",
+      "name": "AWS Get Service Quotas",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1578.005"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2026/01/22",
+  "lastUpdate": "2026-02-11T08:35:44.000Z"
+}

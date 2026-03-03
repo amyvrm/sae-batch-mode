@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2207150a-fa68-40b9-aced-17792d0b8cc8",
+  "name": "APT Bpfdoor Icmp TCP Bidirectional Communications",
+  "description": "Network activity involving inbound and outbound ICMP, which is a associated with BPFDoor, was detected",
+  "filterSets": [
+    [
+      {
+        "id": "9642d565-5693-57f7-a477-fff140696a8f",
+        "name": "APT Bpfdoor Icmp TCP (Request) - Inbound",
+        "highlight": true
+      },
+      {
+        "id": "7430d433-6b0c-5493-8311-8ea60e5b0c31",
+        "name": "APT Bpfdoor Icmp TCP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2025/08/25",
+  "lastUpdate": "2025-11-19T07:16:49.000Z"
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81ed7542-3e7b-44df-b6dc-008bfe13dde4",
+  "name": "Deletion of Cronjob",
+  "description": "Cronjob has been deleted",
+  "filterSets": [
+    [
+      {
+        "id": "e2f058cd-88ee-42e5-8a51-fb7d622b27e5",
+        "name": "Deletion with sed Command",
+        "highlight": true
+      },
+      {
+        "id": "53571c0e-528e-46f8-b55f-1d5ba94609dd",
+        "name": "Crontab Read from Standard Input",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Josh Morrison",
+  "team": "Cloud One",
+  "date": "2022/10/06",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

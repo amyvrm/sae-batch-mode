@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "da5a000a-4a5c-4525-96cb-26ba2ec4c037",
+  "name": "Event Log Cleared",
+  "description": "Microsoft Detection for Event log cleared",
+  "filterSets": [
+    [
+      {
+        "id": "07e542d9-90f8-4d9a-8e4d-267e4939b155",
+        "name": "Event Log Cleared",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/13",
+  "lastUpdate": "2025-07-28T20:43:16.000Z"
+}

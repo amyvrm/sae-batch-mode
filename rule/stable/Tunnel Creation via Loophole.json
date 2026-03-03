@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "be67a5dc-1633-4d40-a668-61e8b3c3f8e3",
+  "name": "Tunnel Creation via Loophole",
+  "description": "Detects network tunnel creation using loophole, which may be used for command and control communication, and data exfiltration",
+  "filterSets": [
+    [
+      {
+        "id": "050e74a7-5685-450b-9961-992a7cc80c35",
+        "name": "DNS Query Request to Loophole Tunnel Services",
+        "highlight": true
+      },
+      {
+        "id": "928c1392-cc24-4a72-ad1e-0eb0e2ce4953",
+        "name": "Possible Tunnel Creation via Loophole",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Mahmoud Soheem & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/02/16",
+  "lastUpdate": "2025-11-25T09:47:51.000Z"
+}

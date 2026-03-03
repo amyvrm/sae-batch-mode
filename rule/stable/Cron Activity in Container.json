@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "40411a75-527d-461f-8f2c-2fe8d992fc68",
+  "name": "Cron Activity in Container",
+  "description": "Cron jobs were scheduled to run.",
+  "filterSets": [
+    [
+      {
+        "id": "4a0fa078-449e-5dc6-82a0-dbf58779457e",
+        "name": "Cron Activity in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/02/22",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

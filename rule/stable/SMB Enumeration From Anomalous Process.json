@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "911e8f86-db9f-43c9-a6c0-cf65fd686b41",
+  "name": "SMB Enumeration From Anomalous Process",
+  "description": "Detection of SMB connections from an Anomalous process",
+  "filterSets": [
+    [
+      {
+        "id": "c3686b3a-4dc4-49bb-afd1-8715389fe26d",
+        "name": "SMB Enumeration From Anomalous Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/10/31",
+  "lastUpdate": "2023-12-20T22:59:41.000Z"
+}

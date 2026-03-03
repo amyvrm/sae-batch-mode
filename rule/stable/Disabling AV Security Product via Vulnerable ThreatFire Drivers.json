@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2833b060-ddaf-4b3f-844e-360cfdc08ef6",
+  "name": "Disabling AV Security Product via Vulnerable ThreatFire Drivers",
+  "description": "Terminate security products exploiting vulnerable ThreatFire drivers.",
+  "filterSets": [
+    [
+      {
+        "id": "807a21aa-c725-4d53-9f05-68d1354d83a9",
+        "name": "Disabling AV Security Product via Vulnerable ThreatFire Drivers",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/07",
+  "lastUpdate": "2025-03-20T10:43:56.000Z"
+}

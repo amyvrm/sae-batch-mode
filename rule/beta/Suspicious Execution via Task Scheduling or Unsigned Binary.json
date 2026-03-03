@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9de3b153-9725-40ec-b07f-8561c2d6185f",
+  "name": "Suspicious Execution via Task Scheduling or Unsigned Binary",
+  "description": "Creation of Scheduled Task or unsigned process execution with binary file argument in suspicious directory.",
+  "filterSets": [
+    [
+      {
+        "id": "67ab4732-1b9c-4a57-8c1d-16eba959b04e",
+        "name": "Creation of Scheduled Task",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7cf7cf3f-49da-4cb4-a4e7-4561ba53c7d8",
+        "name": "Unsigned Process Execution with Binary File Argument in Suspicious Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Simon Dulude",
+  "team": "Cloud One",
+  "date": "2025/10/31",
+  "lastUpdate": "2025-12-22T02:21:33.000Z"
+}

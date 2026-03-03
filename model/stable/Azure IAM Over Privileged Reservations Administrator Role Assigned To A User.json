@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ac37614b-f664-42e7-b500-dc6dcb954fdd",
+  "name": "Azure IAM Over Privileged Reservations Administrator Role Assigned To A User",
+  "description": "This model detects successful assignment of over-privileged Azure IAM Reservations Administrator role to a user which may indicate an attacker trying to escalate privileges to manage Azure reservations and assign roles, enabling broader control over the environment to further compromise it.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "b5c8e042-7421-40d2-8b69-bc40de7a8b7f",
+      "name": "Azure IAM Over Privileged Reservations Administrator Role Assigned To A User",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2024/06/02",
+  "lastUpdate": "2025-07-17T10:20:02.000Z"
+}

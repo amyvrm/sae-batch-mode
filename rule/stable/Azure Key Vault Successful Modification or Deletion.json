@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3f7ddce8-917b-45f6-a1a2-04837261da02",
+  "name": "Azure Key Vault Successful Modification or Deletion",
+  "description": "Detects successful modification or deletion of an Azure Key Vault.",
+  "filterSets": [
+    [
+      {
+        "id": "7a32013d-ba31-40c4-9580-d00f845964cd",
+        "name": "Azure Key Vault Successful Modification or Deletion",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/10/10",
+  "lastUpdate": "2025-11-28T06:35:17.000Z"
+}

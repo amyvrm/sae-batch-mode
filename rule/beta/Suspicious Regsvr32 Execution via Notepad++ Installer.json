@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f9375d0b-e2bc-4fd1-b457-9275ae61df28",
+  "name": "Suspicious Regsvr32 Execution via Notepad++ Installer",
+  "description": "Detect execution of notepad++ dll via regsvr32. This activity is commonly associated with possible privilege escalation attacks where attackers exploit vulnerabilities in the Notepad installer mechanism.",
+  "filterSets": [
+    [
+      {
+        "id": "ca2ee7d9-7708-4827-8f33-39981e17b593",
+        "name": "Suspicious Regsvr32 Execution via Notepad++ Installer",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Simon Dulude",
+  "team": "Cloud One",
+  "date": "2025/08/27",
+  "lastUpdate": "2025-11-07T06:00:52.000Z"
+}

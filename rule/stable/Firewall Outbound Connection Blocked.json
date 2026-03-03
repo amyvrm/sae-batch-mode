@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9d2bfd4f-4da2-43dd-b5d3-84acdb63560c",
+  "name": "Firewall Outbound Connection Blocked",
+  "description": "Microsoft Events Detects outbound connections blocked by the firewall",
+  "filterSets": [
+    [
+      {
+        "id": "d50a408e-57cb-4a80-baa9-3cc4e823a13f",
+        "name": "Firewall Outbound Connection Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-27T09:17:05.000Z"
+}

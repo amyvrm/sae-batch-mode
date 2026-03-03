@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e01dac12-abce-4cf3-93e9-25c4d9ad08c5",
+  "name": "Suspicious Execution of Renamed VLC Application",
+  "description": "Detects suspicious execution of renamed VLC media player application which indicates possible attack.",
+  "filterSets": [
+    [
+      {
+        "id": "1fb5d70b-9279-411d-a04a-38ef31b01988",
+        "name": "Suspicious Execution of Renamed VLC Application",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2026/01/27",
+  "lastUpdate": "2026-01-27T09:19:31.000Z"
+}

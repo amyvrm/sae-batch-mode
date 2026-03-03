@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bda87885-5933-4929-8592-4cef5bee49fc",
+  "name": "Cross-Process Injection via CreateRemoteThread in Winlogon",
+  "description": "Adversaries may inject malicious code into the Winlogon process via the CreateRemoteThread technique. This can allow attackers to carry out actions with elevated privileges or evade security measures.",
+  "filterSets": [
+    [
+      {
+        "id": "4594960b-414e-4b16-a9d0-660dfbacb548",
+        "name": "Cross-Process Injection via CreateRemoteThread in Winlogon",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/12/11",
+  "lastUpdate": "2025-01-09T08:12:51.000Z"
+}

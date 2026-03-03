@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ebc1d4cd-a937-4acd-a2f6-237be544a82b",
+  "name": "Anomalous Exfiltration Behaviors",
+  "description": "Anomalous exfiltration behavioral activities over defined threshold were detected.",
+  "filterSets": [
+    [
+      {
+        "id": "0f171aa9-ab84-46d6-8c66-9acb20be496f",
+        "name": "FTP Suspicious Data Upload Attempts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Liang Seng Koh",
+  "team": "XDR-NA",
+  "date": "2022/08/19",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

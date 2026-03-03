@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1c75bf54-4dfd-4ebb-98b2-bbe41d6ad359",
+  "name": "Anomalous LOLBIN Spawning by IIS in a Potentially Suspect Manner",
+  "description": "Detection of anomalous processes being invoked by the IIS process",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "5c99198c-2298-4e39-9a93-1a8b9665de82",
+      "name": "Anomalous LOLBIN Spawning by IIS in a Potentially Suspect Manner",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1133"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/11/07",
+  "lastUpdate": "2026-01-13T07:01:03.000Z"
+}

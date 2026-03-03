@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f9bedfd5-2068-454a-ab7b-db5c808c9b1a",
+  "name": "Scheduled Task Creation Prevented by CrowdStrike",
+  "description": "This CrowdStrike alert indicates that an attempt to create a scheduled task was prevented, typically by blocking the execution of schtasks.exe with the '/create' command, which may be associated with suspicious or unauthorized activity.",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "0f210f4c-a66a-42f6-9d56-e415f0aa3665",
+      "name": "Scheduled Task Creation Prevented by CrowdStrike",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/08",
+  "lastUpdate": "2025-08-12T06:43:13.000Z"
+}

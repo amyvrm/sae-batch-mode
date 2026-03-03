@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "16d95281-a850-4706-897a-a31ed871a3e9",
+  "name": "Azure Monitor Diagnostics Configuration Successfully Deleted",
+  "description": "Detects successful deletion of an Azure Monitor Diagnostics Configuration.",
+  "filterSets": [
+    [
+      {
+        "id": "19370718-71c2-4db5-a216-cda062fcf1ee",
+        "name": "Azure Monitor Diagnostics Configuration Successfully Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/10/10",
+  "lastUpdate": "2025-11-28T06:35:17.000Z"
+}

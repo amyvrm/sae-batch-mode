@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "93557a2a-6f08-41bc-9375-74d0a68707a9",
+  "name": "Anomalous Usage of Node to Invoke a Script Leading to Outbound Communication",
+  "description": "Detection of anomalous usage of node.exe being used to invoke a script",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8401d9e3-14a3-43f0-9e25-7c53548a439f",
+      "name": "Anomalous Usage of Node to Invoke a Script Leading to Outbound Communication",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.007"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh & Cenen Enables",
+  "team": "EU-IR",
+  "date": "2025/08/27",
+  "lastUpdate": "2025-09-03T10:08:57.000Z"
+}

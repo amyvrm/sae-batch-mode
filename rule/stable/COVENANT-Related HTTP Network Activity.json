@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8866d79d-61c1-4de3-aed3-eea563f95aa6",
+  "name": "COVENANT-Related HTTP Network Activity",
+  "description": "Network activity involving HTTP, which is associated with COVENANT, has been observed. This activity may indicate the use of COVENANT frameworks or tools. Further analysis of network patterns and payloads is recommended to determine the nature and purpose of this traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "fc17c2cb-7e72-5c9f-9c7f-8351bcf661a0",
+        "name": "Covenant Default HTTP (Response) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d13ee2de-7242-535a-9458-3efea9264aa1",
+        "name": "Covenant Custom Profile HTTP (Response) Variant 2 - Inbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-01-09T03:04:50.000Z"
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1d7de272-6dd6-4986-a7f9-56eacca1e367",
+  "name": "ADRECON LDAP Query Activity",
+  "description": "Network activity involving LDAP, associated with ADRECON, indicating potential reconnaissance behavior. The activity was observed in both inbound and outbound network traffic.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "20c0b5c7-beb2-4ff1-b340-93ced3a52fe7",
+      "name": "ADRECON LDAP Query Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1016.001",
+    "mitre.t1590.001",
+    "threat.hacktool"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "clpId": [
+    "27fe9230-7c33-45b7-b591-6adb998a825d",
+    "2999a8c9-408a-4e91-9825-b15fb2b6dd6c"
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-02-28T04:14:11.000Z"
+}

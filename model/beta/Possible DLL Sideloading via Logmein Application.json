@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "10a9a605-2b0b-4511-87ed-2f8b025fb358",
+  "name": "Possible DLL Sideloading via Logmein Application",
+  "description": "Detects DLL sideloading via Logmein application leading to C2 Connection",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "37ae8cb9-7c50-464b-bf9f-bee397c6faa9",
+      "name": "Possible DLL Sideloading via Logmein Application",
+      "score": 2
+    },
+    {
+      "id": "4cbbde6c-360a-4f33-9724-cdeeae05b1a3",
+      "name": "Possible Dropping of Logmein Application in Suspicious Folder Location",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1574.001",
+    "mitre.t1055",
+    "mitre.t1211"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Jehhan Marcelo & Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2025/05/22",
+  "lastUpdate": "2025-06-20T02:50:11.000Z"
+}

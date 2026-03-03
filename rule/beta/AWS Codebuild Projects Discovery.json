@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a3df2c4e-49b2-4a45-833a-1cc657dee0db",
+  "name": "AWS CodeBuild Projects Discovery",
+  "description": "This rule detects any attempts to discover AWS CodeBuild projects.",
+  "filterSets": [
+    [
+      {
+        "id": "7e9021f8-911d-43eb-af28-28c746db841a",
+        "name": "AWS CodeBuild Projects Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/06",
+  "lastUpdate": "2026-01-13T08:29:17.000Z"
+}

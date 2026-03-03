@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ea6addfd-6310-4dcc-b3f1-e4474eafdfcb",
+  "name": "Microsoft SQL Server User Authentication Brute Force Attempt",
+  "description": "Palo Alto Networks detection for Microsoft SQL Server User Authentication Brute Force Attempt. This event indicates that someone is doing a brute force attack and try to authenticated to the MSSQL database server.",
+  "filterSets": [
+    [
+      {
+        "id": "49a5fadc-22ab-576b-bdcd-fce6325a5dd7",
+        "name": "Microsoft SQL Server User Authentication Brute Force Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2025/05/28",
+  "lastUpdate": "2025-05-30T05:17:52.000Z"
+}

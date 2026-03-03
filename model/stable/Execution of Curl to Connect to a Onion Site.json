@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "da2db830-eafe-49b5-850a-949e4f2fb855",
+  "name": "Execution of Curl to Connect to a Onion Site",
+  "description": "Detects the execution of the \"curl.exe\" command, referencing \"SOCKS\" and \".onion\" domains, which could be indicative of Kalambur backdoor activity.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "efc613e6-98b4-4f33-a27a-71bc064dbe76",
+      "name": "Execution of Curl to Connect to a Onion Site",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1090",
+    "mitre.t1573",
+    "mitre.t1071.001",
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/04/15",
+  "lastUpdate": "2025-06-11T12:20:54.000Z"
+}

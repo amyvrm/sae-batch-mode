@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4e9e919b-b28d-4c1f-9df5-e15ecd9f8f4e",
+  "name": "AWS S3 Data Upload Activity",
+  "description": "Detected data upload activity.",
+  "filterSets": [
+    [
+      {
+        "id": "9e9c5621-19ec-4ec0-bbeb-6672b0fed56c",
+        "name": "AWS S3 Multipart Upload",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "365a3ad5-4f28-4bff-8dcd-ad3768b768d5",
+        "name": "AWS S3 Object Upload",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-07-30T15:40:57.000Z"
+}

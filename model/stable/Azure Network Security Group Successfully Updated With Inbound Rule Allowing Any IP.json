@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7a91619d-45ef-4949-8939-be31e34d058b",
+  "name": "Azure Network Security Group Successfully Updated With Inbound Rule Allowing Any IP",
+  "description": "This model detects successful update of Azure network security group with an inbound rule allowing any IP which may indicate an attacker trying to expose cloud workloads to unauthorized access from the public internet.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "d29dd172-9880-4705-aebc-de05f95322dd",
+      "name": "Azure Network Security Group Successfully Updated With Inbound Rule Allowing Any IP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.007"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2024/06/26",
+  "lastUpdate": "2025-11-05T10:44:05.000Z"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "afbfe07b-1c5a-4118-945e-820d37bdcbb6",
+  "name": "Demo - Palo Alto URL Filtering Detection of EICAR Test File Download Attempt",
+  "description": "Detects Palo Alto firewall URL filtering events of attempted EICAR test file downloads.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3a6c0e51-4a5c-45b1-9371-6be2806a0e55",
+      "name": "Demo - Palo Alto URL Filtering Detection of EICAR Test File Download Attempt",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Marcus Pang",
+  "team": "SAE Threat Expert",
+  "date": "2025/09/01",
+  "lastUpdate": "2025-09-12T02:30:09.000Z"
+}

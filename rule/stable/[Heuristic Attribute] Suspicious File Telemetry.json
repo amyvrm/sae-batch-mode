@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.1",
+  "id": "1a90a23e-5b42-4a95-8f1f-2bf842ea80b2",
+  "name": "[Heuristic Attribute] Suspicious File Telemetry",
+  "description": "Detects suspicious file telemetry in an endpoint",
+  "filterSets": [
+    [
+      {
+        "id": "954b0586-5db9-4d49-bacd-8c83c286bce9",
+        "condition": {
+          "logsource.definition": [
+            "TELEMETRY_FILE"
+          ],
+          "level": [
+            "critical",
+            "high",
+            "medium"
+          ]
+        },
+        "exemption": {
+          "or": {
+            "tags": [
+              "bas.tmdemokit"
+            ],
+            "falsepositives": [
+              "Designed for non-heuristic detection."
+            ]
+          }
+        },
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "57dcd07c-18b7-4efb-b858-1ce4568acf5f",
+        "name": "Suspicious File Creation in Uncommon Folder",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "46d5cfda-6d68-4262-9ada-cb25b3a5374e",
+        "name": "Dropping of Executable File in Windows Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "objectFilePath": {
+      "954b0586-5db9-4d49-bacd-8c83c286bce9": "objectFilePath",
+      "57dcd07c-18b7-4efb-b858-1ce4568acf5f": "objectFilePath",
+      "46d5cfda-6d68-4262-9ada-cb25b3a5374e": "objectFilePath"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pao"
+    ]
+  ],
+  "author": "Inno Endriga",
+  "team": "TAD Service Ops",
+  "date": "2023/02/22",
+  "lastUpdate": "2025-04-25T02:25:18.000Z"
+}

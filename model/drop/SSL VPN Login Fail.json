@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f5b775ec-8dc7-4312-8c0f-3ae8d9e63e56",
+  "name": "SSL VPN Login Fail",
+  "description": "Fortinet detection - SSL VPN login fail",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b171a3b9-c8aa-484d-9dd7-5567dc60d2e2",
+      "name": "SSL VPN Login Fail",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-10-21T07:47:08.000Z"
+}

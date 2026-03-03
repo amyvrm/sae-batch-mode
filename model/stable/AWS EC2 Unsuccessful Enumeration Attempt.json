@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c1d3f846-1ef4-11ee-be56-0242ac120002",
+  "name": "AWS EC2 Unsuccessful Enumeration Attempt",
+  "description": "Detected unsuccessful EC2 resources discovery indicating an attacker trying to enumerate EC2 resources.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "c1d3d3fc-1ef4-11ee-be56-0242ac120002",
+      "name": "AWS EC2 Unsuccessful Describe Instances",
+      "score": 1
+    },
+    {
+      "id": "c1d3d514-1ef4-11ee-be56-0242ac120002",
+      "name": "AWS EC2 Unsuccessful Specified Host Described",
+      "score": 1
+    },
+    {
+      "id": "06ceefda-25e6-11ee-be56-0242ac120002",
+      "name": "AWS EC2 Unsuccessful Specified Key Pair Discovery",
+      "score": 1
+    },
+    {
+      "id": "c1d3d640-1ef4-11ee-be56-0242ac120002",
+      "name": "AWS EC2 Unsuccessful Specified Route Tables Discovery",
+      "score": 1
+    },
+    {
+      "id": "c1d3d74e-1ef4-11ee-be56-0242ac120002",
+      "name": "AWS EC2 Unsuccessful Specified Security Groups Discovery",
+      "score": 1
+    },
+    {
+      "id": "c1d3e270-1ef4-11ee-be56-0242ac120002",
+      "name": "AWS EC2 Unsuccessful Specified Snapshots Discovery",
+      "score": 1
+    },
+    {
+      "id": "c1d3f710-1ef4-11ee-be56-0242ac120002",
+      "name": "AWS EC2 Unsuccessful Specified Subnets Discovery",
+      "score": 1
+    },
+    {
+      "id": "c1d3fd14-1ef4-11ee-be56-0242ac120002",
+      "name": "AWS EC2 Unsuccessful Specified Volumes Discovery",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 1000,
+    "dedupSeconds": 1000
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1082"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/10",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

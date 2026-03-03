@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4114c793-7a98-4796-9051-53aba2531a94",
+  "name": "Stopping IIS via Iisreset.exe or Disabling Boot-Time Recovery Measures via BCDEdit",
+  "description": "Detects stopping the IIS (Internet Information Services) using iisreset.exe, a well-known tool used to handle IIS and Disabling the Boot-Time Windows recovery feature via BCDEdit",
+  "filterSets": [
+    [
+      {
+        "id": "711c9700-8d34-4eb6-990a-af40c038a723",
+        "name": "Termination of Internet Information Services",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d04ad199-e7af-4127-9013-d5e2e8c0940c",
+        "name": "Disable Boot-Time Recovery Measures via BCDEdit",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/02/16",
+  "lastUpdate": "2025-07-14T02:58:58.000Z"
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.1",
+  "id": "f8a7f705-68c4-4a15-82c9-f5151f6ae4c5",
+  "name": "[Heuristic Attribute] Obfuscated Files or Commands",
+  "description": "Detects possible obfuscated files or commands. Attackers may use obfuscation to make payloads harder to detect or analyze",
+  "filterSets": [
+    [
+      {
+        "id": "2a70ae81-bdca-4197-8e84-a1b9c20a2743",
+        "condition": {
+          "tags": [
+            "mitre.t1027",
+            "mitre.t1027.001",
+            "mitre.t1027.002",
+            "mitre.t1027.003",
+            "mitre.t1027.004",
+            "mitre.t1027.005",
+            "mitre.t1027.006"
+          ],
+          "level": [
+            "critical",
+            "high"
+          ],
+          "tmproducts": [
+            "pao",
+            "sao",
+            "sds",
+            "pds",
+            "xes"
+          ]
+        },
+        "exemption": {
+          "or": {
+            "tags": [
+              "bas.tmdemokit"
+            ],
+            "falsepositives": [
+              "Designed for non-heuristic detection."
+            ],
+            "filterid": [
+              "e7949e44-3212-4aff-a459-85c8162549ec",
+              "74b5b649-1667-4595-8ec9-3550a0993803"
+            ]
+          }
+        },
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "pao",
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Inno Endriga",
+  "team": "TAD Service Ops",
+  "date": "2023/02/01",
+  "lastUpdate": "2025-04-25T02:25:18.000Z"
+}

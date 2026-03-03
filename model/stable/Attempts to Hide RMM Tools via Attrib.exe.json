@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c32786ed-bcaf-454f-a43f-5085c11d1565",
+  "name": "Attempts to Hide RMM Tools via Attrib.exe",
+  "description": "Attempts to hide Remote Monitoring and Management(RMM) tools via attrib.exe",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0979f619-20b3-44da-ac3b-6e041eb8a0be",
+      "name": "Attempts to Hide RMM Tools via Attrib.exe",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1564"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/21",
+  "lastUpdate": "2025-05-08T05:12:05.000Z"
+}

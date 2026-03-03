@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "11386568-f3ce-451d-8050-00a289a7e691",
+  "name": "Interpreted Procs Inbound Network Activity in Container",
+  "description": "Interpreted program received inbound network activity. This behavior is uncommon for standard container operations.",
+  "filterSets": [
+    [
+      {
+        "id": "ecc90999-e4fe-4166-a4a8-316e897d3d9e",
+        "name": "Interpreted Procs Inbound Network Activity in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/07/23",
+  "lastUpdate": "2024-07-25T07:33:29.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f41b9aae-6ba5-4147-9289-b683634e010d",
+  "name": "File Properties Changed in Container",
+  "description": "Command executed to modify file attributes or ownership.",
+  "filterSets": [
+    [
+      {
+        "id": "8db9732f-f6a6-5fdd-9f32-cced77a0198c",
+        "name": "File Attribute Changed in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/09/20",
+  "lastUpdate": "2024-07-12T07:36:51.000Z"
+}

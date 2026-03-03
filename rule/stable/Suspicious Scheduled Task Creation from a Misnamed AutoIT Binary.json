@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "faddd518-7046-4388-82d9-28e16f0d3a76",
+  "name": "Suspicious Scheduled Task Creation from a Misnamed AutoIT Binary",
+  "description": "Detects potential malicious scheduled task creation from a suspicious misnamed AutoIT script which could lead to system compromise if not expected.",
+  "filterSets": [
+    [
+      {
+        "id": "60c38521-0cd9-4179-adc1-60011efaf14b",
+        "name": "Misnamed Executable",
+        "highlight": true
+      },
+      {
+        "id": "568d0a9e-f79f-4341-b15a-8a2b295e933a",
+        "name": "Suspicious Scheduled Task Creation via AutoIT3 Script",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "60c38521-0cd9-4179-adc1-60011efaf14b.processFilePath equals 568d0a9e-f79f-4341-b15a-8a2b295e933a.parentFilePath"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/10/17",
+  "lastUpdate": "2024-10-24T05:08:35.000Z"
+}

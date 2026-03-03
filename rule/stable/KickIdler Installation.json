@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ab3f4d89-9256-4c23-a7a0-c486378bca69",
+  "name": "KickIdler Installation",
+  "description": "Detection for the usage of KickIdler, a tool used to monitor user activity.",
+  "filterSets": [
+    [
+      {
+        "id": "ec90a3b7-285a-4853-8153-6017c2d9d917",
+        "name": "KickIdler Installation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b8b61eac-0694-4db6-af26-887c23007b2b",
+        "name": "KickIdler Process Creation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c5a279e5-ff25-4665-8ca9-ab94716df6b2",
+        "name": "KickIdler Registry Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/01/23",
+  "lastUpdate": "2024-02-02T15:07:07.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d0bc35fd-495a-4a14-9e55-9d1e7a434d66",
+  "name": "Jenkins Extra Columns Plugin Stored XSS Stage 2",
+  "description": "Jenkins Extra Columns Plugin Stored XSS Stage 2(CVE-2021-21630)",
+  "filterSets": [
+    [
+      {
+        "id": "87a5b3d2-97e0-4033-8f4f-63aeb5e31bfd",
+        "name": "Jenkins Extra Columns Plugin Stored XSS Stage 2",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2021/08/19",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

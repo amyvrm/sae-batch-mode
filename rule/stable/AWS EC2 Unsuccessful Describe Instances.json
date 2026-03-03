@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c1d3d3fc-1ef4-11ee-be56-0242ac120002",
+  "name": "AWS EC2 Unsuccessful Describe Instances",
+  "description": "Detected AWS EC2 Unsuccessful Describe Instances.",
+  "filterSets": [
+    [
+      {
+        "id": "e1404174-59aa-4af6-a00b-845223eb80d2",
+        "name": "AWS EC2 Unsuccessful Describe Instance",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/10",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

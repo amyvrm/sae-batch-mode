@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0c09b211-d784-4d51-a0eb-2739d60f60f9",
+  "name": "Potential Banking Stealing Behavior",
+  "description": "Golden Jaguar is a banking trojan which it is main objective is stealing information from financial institutions.",
+  "filterSets": [
+    [
+      {
+        "id": "2c122252-47f3-4039-a22e-abbefe26c460",
+        "name": "Potential Infostealer MSI File Creation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2a856f9d-439d-40b0-8edc-8952dd5c01ee",
+        "name": "Suspicious PowerShell Registry Run Key Masquerading as Legitimate Application",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "49662e5a-b08f-4326-bde3-1526688afca0",
+        "name": "Potential Infostealer VBS File Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2025/03/17",
+  "lastUpdate": "2025-08-14T05:58:23.000Z"
+}

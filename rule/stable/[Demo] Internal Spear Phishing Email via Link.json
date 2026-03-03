@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a67f3b97-ef2a-412d-b2bc-933ba326fd4a",
+  "name": "Demo - Internal Spear Phishing Email via Link",
+  "description": "Internal Spear Phishing Email via Link",
+  "filterSets": [
+    [
+      {
+        "id": "1b934ff1-a7e5-4a2e-9374-778f14f448ca",
+        "name": "Demo - Internal Spear Phishing Email Via Link",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1500,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Vincent Lee",
+  "team": "Jaguar",
+  "date": "2023/01/09",
+  "lastUpdate": "2025-01-20T05:12:50.000Z"
+}

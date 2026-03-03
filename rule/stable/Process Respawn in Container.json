@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8e4a96b9-bd05-4295-adcf-fc907410b80f",
+  "name": "Process Respawn in Container",
+  "description": "Detects the initiation of a persistent process in a container through process respawn.",
+  "filterSets": [
+    [
+      {
+        "id": "fcad5ba0-d5c7-4f3c-988f-a59ad7c072d1",
+        "name": "Process Respawned in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/11/22",
+  "lastUpdate": "2025-04-25T13:41:41.000Z"
+}

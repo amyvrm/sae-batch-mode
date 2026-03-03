@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "49f2f274-9183-487b-a38e-c8c37e32728d",
+  "name": "Attack Detected By ICMP Anomaly",
+  "description": "Fortinet detection for Attack detected by ICMP anomaly",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "752aab18-8cd7-4ffb-b065-72e1c2c4ee72",
+      "name": "Attack Detected By ICMP Anomaly",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-04-29T02:41:55.000Z"
+}

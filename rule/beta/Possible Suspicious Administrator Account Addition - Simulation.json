@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ac9e2bb4-f654-4240-8c12-7ca590959a1d",
+  "name": "Possible Suspicious Administrator Account Addition - Simulation",
+  "description": "Detects addition of an account to the administrator localgroup using net command through PowerShell.",
+  "filterSets": [
+    [
+      {
+        "id": "d71d95e1-2270-4e57-9494-ca6763c2332d",
+        "name": "Possible Suspicious Administrator Account Addition - Simulation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/07/01",
+  "lastUpdate": "2025-07-04T03:23:08.000Z"
+}

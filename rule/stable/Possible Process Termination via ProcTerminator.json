@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9f48de0a-29f8-46ba-9b1f-0795e60ac0ba",
+  "name": "Possible Process Termination via ProcTerminator",
+  "description": "Detects potential  process termination event made by ProcTerminator. ProcTerminator is a hacktool that terminates any processes using the '-p' parameter.",
+  "filterSets": [
+    [
+      {
+        "id": "6646b359-5662-4c0e-b579-5e739e259e55",
+        "name": "Possible Process Termination via ProcTerminator",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/06/24",
+  "lastUpdate": "2024-06-27T08:10:06.000Z"
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "db376e61-2f5e-4155-9f89-ce2b5f36163d",
+  "name": "Azure Account Security Policy Updated Successfully",
+  "description": "Detects successful update of an Azure account security policy which may indicate an attacker deliberately weakening security controls",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "ba0f0309-851a-4021-be69-401514ca55be",
+      "name": "Azure Account Security Policy Updated Successfully",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma and Nathaniel Ragasa",
+  "team": "SAE Threat Expert",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-26T06:31:30.000Z"
+}

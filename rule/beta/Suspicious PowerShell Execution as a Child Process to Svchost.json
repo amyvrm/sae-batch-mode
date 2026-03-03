@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3a35ca32-c024-4fb3-a1e3-1bf47a2df3b8",
+  "name": "Suspicious PowerShell Execution as a Child Process to Svchost",
+  "description": "Suspicious PowerShell code has been executed as child to svchost, possibly as a scheduled task",
+  "filterSets": [
+    [
+      {
+        "id": "461ed057-1b3a-4a7f-92e4-79c4327836f7",
+        "name": "Suspicious PowerShell Execution as a Child Process to Svchost",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/09/14",
+  "lastUpdate": "2025-10-07T02:28:56.000Z"
+}

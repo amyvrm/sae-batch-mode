@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "821a4e10-d8a0-4549-8e9a-7b546c50bfc2",
+  "name": "Suspicious OneNote Process Chain Activity via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection that identifies OneNote spawning mshta.exe, which in turn attempts to execute or download content using curl.exe. This behavior is consistent with malicious document-based delivery techniques where threat actors embed scripts or payload downloaders inside OneNote files.",
+  "scope": "endpoint",
+  "riskLevel": "high",
+  "rules": [
+    {
+      "id": "e15ae73f-6318-4492-a99f-84434d675300",
+      "name": "Suspicious OneNote Process Chain Activity via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218.005",
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/04",
+  "lastUpdate": "2026-01-15T00:27:37.000Z"
+}

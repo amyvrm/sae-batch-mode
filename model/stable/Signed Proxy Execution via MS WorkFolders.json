@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81ee15e6-c1ba-4273-b261-377cb2cf4991",
+  "name": "Signed Proxy Execution via MS WorkFolders",
+  "description": "Identifies the use of Windows Work Folders to execute a potentially masqueraded control.exe file in the current working directory. Misuse of Windows Work Folders could indicate malicious activity.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f6a6ee38-d7f9-4ddb-92b2-20836af52f4b",
+      "name": "Signed Proxy Execution via MS WorkFolders",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2024/01/24",
+  "lastUpdate": "2025-02-12T09:14:22.000Z"
+}

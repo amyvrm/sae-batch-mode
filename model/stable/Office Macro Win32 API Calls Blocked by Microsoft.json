@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c5a850ed-3110-4d53-9047-c438900eb8f9",
+  "name": "Office Macro Win32 API Calls Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that prevents Office macro code from invoking Win32 API calls to block shellcode execution and direct in-memory attacks.",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "d5e843a1-4c5a-421d-a302-053abff72c30",
+      "name": "Office Macro Win32 API Calls Blocked by Microsoft",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566",
+    "mitre.t1055",
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-20T10:25:16.000Z"
+}

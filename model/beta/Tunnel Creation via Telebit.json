@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "95f9d753-ca3e-4fab-84b9-ea653596925d",
+  "name": "Tunnel Creation via telebit",
+  "description": "Detects network tunnel creation using telebit, which may be used for command and control communication, and data exfiltration",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d2ed731c-ee96-4412-b296-f86444af745a",
+      "name": "Tunnel Creation via Telebit",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1071.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mahmoud Soheem & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/02/24",
+  "lastUpdate": "2025-02-27T08:13:48.000Z"
+}

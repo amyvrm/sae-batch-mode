@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eadb3abb-a2d1-4a2e-946f-a2583f308716",
+  "name": "Potentially Malicious PowerShell Command for Network Share Mapping and DLL Execution",
+  "description": "Detects the use of a command that maps a network share and executes a DLL from a remote location.",
+  "filterSets": [
+    [
+      {
+        "id": "a458a79e-dc00-4e3d-b964-f67a2c356bfa",
+        "name": "Potentially Malicious PowerShell Command for Network Share Mapping and DLL Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/07/16",
+  "lastUpdate": "2024-07-22T17:36:45.000Z"
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8fec6227-9bd2-4df5-83f7-92e055d3e538",
+  "name": "MSI Execution from Suspicious Directory",
+  "description": "Detects the execution of MSI files from suspicious directories such as C:\\Users\\Public\\. This behavior can indicate malicious activity, as attackers often use common directories to hide their payloads.",
+  "filterSets": [
+    [
+      {
+        "id": "d1fb499b-7c93-4c1e-97e2-bc754d4e79ff",
+        "name": "MSI Execution from Suspicious Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/03/17",
+  "lastUpdate": "2025-04-10T13:14:36.000Z"
+}

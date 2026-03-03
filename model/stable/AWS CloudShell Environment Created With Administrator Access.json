@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9e8594a5-5930-4de6-a497-a22f05750dc9",
+  "name": "AWS CloudShell Environment Created With Administrator Access",
+  "description": "Detects creation of cloudshell environment with administrator access which is important to monitor as it might also indicate an attacker trying to establish a environment from where it can further compromise the AWS account.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "30336823-adf3-4e28-8978-e06d52c872c1",
+      "name": "AWS CloudShell Environment Created With Administrator Access",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.009"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/09/17",
+  "lastUpdate": "2025-09-29T02:40:33.000Z"
+}

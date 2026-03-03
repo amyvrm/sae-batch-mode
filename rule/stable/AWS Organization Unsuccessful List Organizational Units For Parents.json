@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "29543fe6-a75c-4126-a715-4d404631ad62",
+  "name": "AWS Organization Unsuccessful List Organizational Units For Parents",
+  "description": "AWS api to list organizational units for parents",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Organization Unsuccessful List Organizational Units For Parents",
+        "id": "52b0e60f-be4d-4871-aec4-85212a53bc6f",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/22",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

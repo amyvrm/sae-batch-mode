@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "add15b76-c35c-42c8-bb81-07c0831e601c",
+  "name": "Volume Shadow Copy Removal via PowerShell",
+  "description": "Detects PowerShell commands that enumerate and remove volume shadow copies, typical in ransomware operations.",
+  "filterSets": [
+    [
+      {
+        "id": "02a90472-4366-4ce8-98b8-8f76642cbe81",
+        "name": "Volume Shadow Copy Removal via PowerShell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Bien Joshua Philip De Leon & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/11/25",
+  "lastUpdate": "2026-01-27T08:43:27.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "38cec275-0a24-458f-a461-e0fb5e93b864",
+  "name": "HTTP Request Anomalies Indicating Content-Type Mismatch",
+  "description": "Network activity involving HTTP, associated with mismatched content and content type, has been observed. This activity suggests a potential discrepancy between declared and actual content types in HTTP requests.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f4d798b1-eeab-4657-9583-491a8a0bf267",
+      "name": "HTTP Request Anomalies Indicating Content-Type Mismatch",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1090.002",
+    "threat.trojan"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Joshua Bersamira",
+  "team": "DDI",
+  "date": "2025/07/22",
+  "lastUpdate": "2025-08-11T11:40:53.000Z"
+}

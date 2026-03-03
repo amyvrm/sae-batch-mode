@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5d84ee53-13f8-4d58-a244-717557908382",
+  "name": "Execution via Trusted Signed Binaries",
+  "description": "Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries",
+  "filterSets": [
+    [
+      {
+        "id": "511909f0-0820-42c7-8b69-14d7d97c9aa1",
+        "name": "Executable Loaded via CertOC",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e89c44c4-8b13-4128-9c60-b932bbd16550",
+        "name": "Suspicious CommandLine Execution via AddinUtil",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e802f80c-2957-48d4-bceb-bb4581634292",
+        "name": "Suspicious Script Execution via WSL Bash",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a4684c07-b90f-4285-9217-87b5e76d71ea",
+        "name": "Suspicious Execution via Atbroker",
+        "highlight": true
+      },
+      {
+        "id": "44cdc792-c25f-4468-bdad-df3cbe3a7dcb",
+        "name": "Registry Change via Atbroker",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "sao"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/25",
+  "lastUpdate": "2025-08-21T23:18:59.000Z"
+}

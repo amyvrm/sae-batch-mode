@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dbb12f81-548e-47a6-8e22-98228da4bf95",
+  "name": "New Suspicious Mailbox Rule Deletes New Emails",
+  "description": "A suspicious mailbox rule was created that moves all incoming emails to the deleted items folder and marks them as read.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "0e9a03c3-2b4d-4179-be21-25121d9754fc",
+      "name": "New Suspicious Mailbox Rule Deletes New Emails",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xca"
+    ]
+  ],
+  "tags": [
+    "mitre.t1564.008"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2025/03/15",
+  "lastUpdate": "2025-04-04T04:24:10.000Z"
+}

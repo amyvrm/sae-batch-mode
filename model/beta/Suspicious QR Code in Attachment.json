@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f007f616-f8d0-452a-b4f5-212f672eff23",
+  "name": "Suspicious QR Code in Attachment",
+  "description": "The detection identified an image containing a QR code with a phishing URL during the email delivery phase. As the policy of email protection solution was set to Pass, the user received a potentially dangerous URL in their environment.",
+  "riskLevel": "high",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "b1ed3515-d532-4714-bbca-d2d05ca7e2e7",
+      "name": "Suspicious QR Code in Attachment",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Johnson Jao",
+  "team": "Jaguar",
+  "date": "2024/06/07",
+  "lastUpdate": "2024-06-12T17:34:57.000Z"
+}

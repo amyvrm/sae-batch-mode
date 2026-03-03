@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "08e36c28-3a8e-4a8e-b9c5-d0589bd7953e",
+  "name": "Dll Side Loading Activity",
+  "description": "Detects the side-loading of WWLIB.dll from a disguised executable masquerading as a Word document.",
+  "filterSets": [
+    [
+      {
+        "id": "90ae850e-0c68-4565-9d98-fb5ad0e90244",
+        "name": "Dll Side Loading Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/06/09",
+  "lastUpdate": "2025-08-04T06:23:01.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cbb27302-23e4-41f7-9203-7d98b5f0a5fa",
+  "name": "Data Exfiltration via HTTP",
+  "description": "Network activity involving HTTP, associated with Data Exfiltration, has been observed. This activity may indicate an unauthorized attempt to transfer data out of the network.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8ae40595-e105-4e5a-a003-2c820a5573f4",
+      "name": "Data Exfiltration via HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1041",
+    "threat.trojanspy"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/04/16",
+  "lastUpdate": "2025-04-21T09:44:10.000Z"
+}

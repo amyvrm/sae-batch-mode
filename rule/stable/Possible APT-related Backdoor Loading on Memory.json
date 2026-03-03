@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e12fff39-b5fc-4783-9abb-7676142177b7",
+  "name": "Possible APT-related Backdoor Loading on Memory",
+  "description": "Detects possible loading of APT-related Backdoor in memory which is commonly used by APT group Earth Alux.",
+  "filterSets": [
+    [
+      {
+        "id": "9b3e2e7f-0023-4264-9e21-09b6778bcc21",
+        "name": "Possible APT-related Backdoor Loading on Memory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Bien Joshua Philip De Leon",
+  "team": "AMEA-IR",
+  "date": "2024/10/31",
+  "lastUpdate": "2025-01-30T03:39:16.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ece0c005-65ef-4afd-bc6b-4a3ff80320b8",
+  "name": "Possible Installation of Vulnerable ITM System Co Mini Filter Driver",
+  "description": "Embargo ransomware observed technique of utilizing vulnerable drivers to deploy payload or hacktools.",
+  "filterSets": [
+    [
+      {
+        "id": "b1576419-8b66-42dd-9f4e-9faa807783bb",
+        "name": "Possible Installation of Vulnerable ITM System Co Mini Filter Driver",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/11/08",
+  "lastUpdate": "2024-12-10T16:02:43.000Z"
+}

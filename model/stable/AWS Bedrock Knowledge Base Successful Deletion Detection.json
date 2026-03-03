@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "be01a78d-6ae8-498a-8450-e88d75fdde70",
+  "name": "AWS Bedrock Knowledge Base Successful Deletion Detection",
+  "description": "Detected successful deletion attempts of an Amazon Bedrock knowledge base, potentially suggesting either a planned removal or an unauthorized action. The impact of this event includes the permanent loss of valuable information stored within the knowledge base, which can disrupt the AI model service.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "2ce76580-19e9-4977-9ac3-5c4325bb449b",
+      "name": "AWS Bedrock Knowledge Base Listing Detection",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "d352a043-e35b-46f8-af9a-c9eaf77c5ece",
+      "name": "AWS Bedrock Knowledge Base Successful Deletion Detection",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scm",
+      "sct",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1526",
+    "mitre.t1485"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/07/24",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

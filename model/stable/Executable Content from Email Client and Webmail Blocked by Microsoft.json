@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f1347f22-dc0c-462c-9a04-71583c54c52e",
+  "name": "Executable Content from Email Client and Webmail Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that blocks email opened within Microsoft Outlook or webmail providers from propagating executable files such as .exe and .dll, script files such as PowerShell (.ps1) and JavaScript (.js), and archive files such as .zip.",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "ee6d231b-dfb3-4e31-82db-cd6b3a6491e4",
+      "name": "Executable Content from Email Client and Webmail Blocked by Microsoft",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566",
+    "mitre.t1204"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2026-02-02T08:25:37.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "14af53a7-54c6-428b-860c-dc5b9c4e0347",
+  "name": "Azure Vnet Flow Log Public Access To Database Port",
+  "description": "Detected access to sensitive database ports from public ip which might indicate an attacker trying to exfiltrate sensitive data from the database.",
+  "filterSets": [
+    [
+      {
+        "id": "51340dff-5faf-42f2-b614-6a42c41ceaff",
+        "name": "Azure Vnet Flow Log Public Access To Database Port",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "azv"
+    ]
+  ],
+  "author": "Arun Shaji and Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/12",
+  "lastUpdate": "2026-02-03T09:34:48.000Z"
+}

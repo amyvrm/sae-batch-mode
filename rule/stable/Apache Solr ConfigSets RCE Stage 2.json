@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8bb6298f-8d26-418a-b803-1b6db73afd11",
+  "name": "Apache Solr ConfigSets RCE Stage 2",
+  "description": "Detected Exploitation of Apache Solr ConfigSets RCE Stage 2",
+  "filterSets": [
+    [
+      {
+        "id": "994a7939-3fc3-4665-917a-d7fefb29d4b5",
+        "name": "Apache Solr ConfigSets RCE Stage 2",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2021/04/12",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

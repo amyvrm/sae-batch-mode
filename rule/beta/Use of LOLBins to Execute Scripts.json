@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7c129164-6d5e-4dcd-963b-ee7ab863d651",
+  "name": "Use of LOLBins to Execute Scripts",
+  "description": "Microsoft Defender Telemetry where LOLBins are used to execute scripts",
+  "filterSets": [
+    [
+      {
+        "id": "31345864-64ea-437d-b489-5325033bf78c",
+        "name": "Use of LOLBins to Execute Scripts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/09/02",
+  "lastUpdate": "2025-09-02T02:54:55.000Z"
+}

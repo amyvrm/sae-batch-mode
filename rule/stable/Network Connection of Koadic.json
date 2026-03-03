@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7db84d87-7b00-4c53-a06e-4785db746293",
+  "name": "Network Connection of Koadic",
+  "description": "Network Connection of Koadic Tool used post exploitation",
+  "filterSets": [
+    [
+      {
+        "id": "ce396c03-228a-416e-a573-1819b980fcbc",
+        "name": "Network Connection Of Koadic Tool",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d45bceaa-136c-4a1b-b510-4ac589b9e6eb",
+        "name": "Koadic Traffic",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 900,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sao",
+      "sds",
+      "pdi",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-06-21T05:14:40.000Z"
+}

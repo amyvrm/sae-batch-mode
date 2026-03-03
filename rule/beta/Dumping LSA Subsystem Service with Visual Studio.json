@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0f9e9721-7549-4c80-8d11-f8df6d494106",
+  "name": "Dumping LSA Subsystem Service with Visual Studio",
+  "description": "Memory dump tool that comes with Microsoft Visual Studio that can be found on Visual Studio components folder or Installation folder.",
+  "filterSets": [
+    [
+      {
+        "id": "71d067a1-5783-4bea-aaab-55e29b0c782b",
+        "name": "Dumping LSA Subsystem Service with Visual Studio",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/08/11",
+  "lastUpdate": "2025-09-01T09:47:04.000Z"
+}

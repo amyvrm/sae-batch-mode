@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5851126d-5f66-444f-a69c-d16b9df24965",
+  "name": "Remote System Discovery Over LDAP - LI",
+  "description": "Detects Remote System Discovery Over LDAP via LI",
+  "filterSets": [
+    [
+      {
+        "id": "9eeb48e8-d38c-4705-893d-0bd3653d1832",
+        "name": "Remote System Discovery Over LDAP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2022/03/14",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

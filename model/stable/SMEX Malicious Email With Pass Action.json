@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9f4cea57-26c0-4d2c-bcf2-efb486b229fe",
+  "name": "SMEX Malicious Email With Pass Action",
+  "description": "Detection of malicious emails with an action set to Pass in Scan Mail for Exchange",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b776e5f4-be6c-4fa7-a735-3d9bdde53e19",
+      "name": "SMEX Malicious Email With Pass Action",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xsm"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2024/07/29",
+  "lastUpdate": "2026-01-13T06:17:10.000Z"
+}

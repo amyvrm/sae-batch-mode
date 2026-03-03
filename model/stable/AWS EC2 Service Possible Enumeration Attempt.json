@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "356592a5-b675-43dc-bc26-f4425f117d66",
+  "name": "AWS EC2 Service Possible Enumeration Attempt",
+  "description": "Detected successful EC2 service enumeration which might indicate an attacker trying to gather information about instances, configurations, and available resources in order to plan further privilege escalation or lateral movement within the AWS environment.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "e75fef94-d385-4f84-be79-c262a9425747",
+      "name": "AWS EC2 Possible Enumeration Of VPC",
+      "score": 1
+    },
+    {
+      "id": "39b57a82-4f80-11ed-bdc3-0242ac120002",
+      "name": "AWS EC2 Describe Security Group",
+      "score": 1
+    },
+    {
+      "id": "d468b473-ab42-48d6-a1fc-f127c46a34f2",
+      "name": "AWS EC2 Successful Specified Subnets Discovery",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580",
+    "mitre.t1087",
+    "mitre.t1526"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/09/17",
+  "lastUpdate": "2025-09-29T02:40:33.000Z"
+}

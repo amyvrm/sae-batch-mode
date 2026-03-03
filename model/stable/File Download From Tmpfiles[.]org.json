@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d2e4fa8f-4670-49ff-8acc-7c2e4b4aca5e",
+  "name": "File Download From Tmpfiles[.]org",
+  "description": "Detection of a file being downloaded from tmpfiles[.]org which is a notorious file sharing site used by threat actors to host malicious files.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "a427d808-209a-423d-9830-ca27407ec2f6",
+      "name": "File Download From Tmpfiles[.]org",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/05/13",
+  "lastUpdate": "2024-06-07T15:14:43.000Z"
+}

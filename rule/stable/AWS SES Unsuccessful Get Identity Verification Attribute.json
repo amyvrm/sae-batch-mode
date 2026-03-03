@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8036168b-e754-493f-a7fb-342a1ec552a4",
+  "name": "AWS SES Unsuccessful Get Identity Verification Attribute",
+  "description": "An unsuccessful attempt to obtain the verification status and token of each identity provided was observed.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS SES Unsuccessful Get Identity Verification Attribute",
+        "id": "144b00b0-43dc-419c-b48a-c943cb5a431f",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

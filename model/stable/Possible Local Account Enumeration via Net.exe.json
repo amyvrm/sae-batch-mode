@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "986c5334-342a-4b30-9c67-25aa37347633",
+  "name": "Possible Local Account Enumeration via Net.exe",
+  "description": "This CrowdStrike alert indicates that an attempt to enumerate local accounts was made using the net.exe command with groups or user options, which may be associated with suspicious or unauthorized activity.",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "dcd046c4-4b90-4da2-843f-c3a89c216490",
+      "name": "Possible Local Account Enumeration via Net.exe",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/08",
+  "lastUpdate": "2025-08-12T06:43:13.000Z"
+}

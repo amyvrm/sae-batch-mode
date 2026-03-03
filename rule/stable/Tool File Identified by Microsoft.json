@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5dc53c21-fdfd-4fd0-bda2-12e8425c924c",
+  "name": "Tool File Identified by Microsoft",
+  "description": "Microsoft Antivirus File Detection for Tool",
+  "filterSets": [
+    [
+      {
+        "id": "6d4a0a70-c0ee-4da0-8a40-ceab314fd95d",
+        "name": "Tool File Identified by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mohammed Malubay",
+  "team": "Third Party Operations",
+  "date": "2025/07/28",
+  "lastUpdate": "2025-07-28T21:32:51.000Z"
+}

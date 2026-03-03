@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "73dbb4f4-7f6f-4825-9568-17f4e76d16e0",
+  "name": "DNS Query or Response Denial",
+  "description": "A UDP packet containing a DNS query or response was denied.",
+  "filterSets": [
+    [
+      {
+        "id": "83123628-3fe6-5114-8b5c-8e9d340c161f",
+        "name": "DNS Query/Response Denial",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/06",
+  "lastUpdate": "2026-02-11T03:25:20.000Z"
+}

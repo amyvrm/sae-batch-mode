@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "560110b1-5bd4-40c7-b9d4-5cc4f81b4837",
+  "name": "AWS CloudFormation Cross Stack Export Discovery",
+  "description": "Detects enumeration of CloudFormation stack exports, which may reveal cross-stack dependencies, shared resources, and infrastructure interconnections useful for lateral movement planning.",
+  "filterSets": [
+    [
+      {
+        "id": "a2a6c3d4-90b5-428d-8a49-79720a94a6b2",
+        "name": "AWS CloudFormation Cross Stack Export Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1200,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/09/05",
+  "lastUpdate": "2025-09-05T05:08:42.000Z"
+}

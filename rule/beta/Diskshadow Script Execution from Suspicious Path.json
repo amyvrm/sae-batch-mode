@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bfa275de-9a2d-491b-bead-b1f4b58d6be1",
+  "name": "Diskshadow Script Execution from Suspicious Path",
+  "description": "Detects execution of Diskshadow.exe in script mode (`/s`) where the referenced script file resides in potentially suspicious directories (e.g., Temp, ProgramData, AppData, Public). Adversaries may abuse Diskshadow for defense evasion, persistence, or credential access (such as NTDS.dit extraction) by executing crafted scripts from non-standard paths.",
+  "filterSets": [
+    [
+      {
+        "id": "562a0d4e-3485-42b1-bb8e-5b9aed50a8d7",
+        "name": "Diskshadow Script Execution from Suspicious Path",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gabriel Cardoso",
+  "team": "US-IR",
+  "date": "2025/09/09",
+  "lastUpdate": "2025-09-09T18:19:26.000Z"
+}

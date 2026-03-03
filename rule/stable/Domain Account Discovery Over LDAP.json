@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d1f3ba35-1ebc-4a25-b510-98646e951437",
+  "name": "Domain Account Discovery Over LDAP",
+  "description": "Detects Domain Account Discovery Over LDAP",
+  "filterSets": [
+    [
+      {
+        "id": "65592f92-73d5-4ab8-8e09-9e5f22bb7652",
+        "name": "Remote Account Discovery Over LDAP",
+        "highlight": true
+      },
+      {
+        "id": "b40ba0b3-04df-4ce4-9442-dacf03579cba",
+        "name": "Identified Domain Account Discovery Over LDAP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2022/03/14",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

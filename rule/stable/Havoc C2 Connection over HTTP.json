@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5d091a8f-aa53-45e1-8501-267861e9ee06",
+  "name": "Havoc C2 Connection over HTTP",
+  "description": "A network activity associated with Havoc was detected over HTTP.",
+  "filterSets": [
+    [
+      {
+        "id": "762d4423-77ae-5e8a-85ee-12c642a75a35",
+        "name": "Havoc HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2024/11/18",
+  "lastUpdate": "2024-11-22T19:59:32.000Z"
+}

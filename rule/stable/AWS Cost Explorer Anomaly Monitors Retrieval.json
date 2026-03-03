@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7068e395-177e-430f-b14f-a03ab04d55db",
+  "name": "AWS Cost Explorer Anomaly Monitors Retrieval",
+  "description": "Monitors retrieval of cost anomaly monitor definitions, which could indicate legitimate cost monitoring activities or reconnaissance attempts to understand account anomaly detection configurations and cost oversight mechanisms.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Cost Explorer Anomaly Monitors Retrieval",
+        "id": "c44e0ad5-25b6-47fd-ac1e-8d1fd9fd92a4",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T11:20:55.000Z"
+}

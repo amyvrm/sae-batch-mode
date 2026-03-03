@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "342cb800-bae5-41c2-a91f-62b8c57cb9b6",
+  "name": "Service Installation with Driver in User Directory via Command Line",
+  "description": "A service was installed via sc.exe or sc create command with a binPath pointing to a driver file (.sys) located in a user directory. This technique is commonly used in BYOVD (Bring Your Own Vulnerable Driver) attacks for privilege escalation or defense evasion.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "642f0510-e8ea-4079-b5bb-45ea6caaaa8b",
+      "name": "Service Installation with Driver in User Directory via Command Line",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1543.003",
+    "mitre.t1068"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yusuf Madkour & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2026/02/09",
+  "lastUpdate": "2026-02-11T08:13:36.000Z"
+}

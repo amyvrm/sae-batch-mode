@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3ab5df31-e1e5-4e01-87c9-9afb7f44be53",
+  "name": "SVCCTL Service Creation Activity via SMB2",
+  "description": "Network activity associated with SVCCTL, indicating the creation of a service via SMB2 protocol, was identified.",
+  "filterSets": [
+    [
+      {
+        "id": "b916f33f-4ebb-5946-ae0a-cc96af030531",
+        "name": "Svcctl Create Service SMB2 (Request)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b833ddc6-8104-5f8b-8a10-324187a6099a",
+        "name": "Svcctl Start Service SMB2 (Request)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2025/05/05",
+  "lastUpdate": "2025-05-22T07:32:53.000Z"
+}

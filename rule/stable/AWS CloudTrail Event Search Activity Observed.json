@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ca38bc0a-cde4-409e-af16-dfc20172b9d4",
+  "name": "AWS CloudTrail Event Search Activity Observed",
+  "description": "A CloudTrail event lookup was performed, which could indicate administrative review or potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "778e45a4-40a8-40ed-b427-f0b54015800b",
+        "name": "AWS CloudTrail Event Search Activity Observed",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-06-17T10:36:27.000Z"
+}

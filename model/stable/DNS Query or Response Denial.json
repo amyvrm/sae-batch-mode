@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5f1942f2-4279-46b2-a576-631b498af896",
+  "name": "DNS Query or Response Denial",
+  "description": "A UDP packet containing a DNS query or response was denied.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "73dbb4f4-7f6f-4825-9568-17f4e76d16e0",
+      "name": "DNS Query or Response Denial",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "tags": [
+    "mitre.t1498"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/06",
+  "lastUpdate": "2026-02-11T03:25:20.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "10ce81cc-4e3f-426a-b4d8-6d24a7d7fa69",
+  "name": "File Detection - CSV File",
+  "description": "Palo Alto File detection - CSV File",
+  "filterSets": [
+    [
+      {
+        "id": "65a1457d-f8c6-489e-834d-ecb611d2d2bd",
+        "name": "File Detection - CSV File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

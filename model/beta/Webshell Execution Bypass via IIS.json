@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "92254dfd-f7d6-4ca7-b966-33be063397c5",
+  "name": "Webshell Execution Bypass via IIS",
+  "description": "Detects potential webshell execution attempts that leverage Internet Information Services (IIS) to bypass traditional security controls.",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7667cb6e-6161-4cbf-836d-8c64b7453b2c",
+      "name": "Webshell Execution Bypass via IIS",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gerardo III Jonieca & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/11/13",
+  "lastUpdate": "2025-11-27T09:47:49.000Z"
+}

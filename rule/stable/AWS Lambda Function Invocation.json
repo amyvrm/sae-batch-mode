@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2133096f-ab77-4d7e-a646-48cacd05dd66",
+  "name": "AWS Lambda Function Invocation",
+  "description": "Detection of an AWS Lambda function being invoked, which may indicate automated execution or potential unauthorized activity.",
+  "filterSets": [
+    [
+      {
+        "id": "1755485c-6ee7-4636-954b-ae9031440993",
+        "name": "AWS Lambda Function Invocation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-06-17T10:36:27.000Z"
+}

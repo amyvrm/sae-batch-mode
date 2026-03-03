@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "70ad0d22-993c-425c-bdf8-b39c2cdb27ec",
+  "name": "Antiphishing Matched A Fortiguard Category Rule And Blocked The Request",
+  "description": "Fortinet detection - Antiphishing matched a Fortiguard category rule and blocked the request",
+  "filterSets": [
+    [
+      {
+        "id": "93a13859-7f58-4acc-b45e-eafd40b324ef",
+        "name": "Antiphishing Matched A Fortiguard Category Rule And Blocked The Request",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

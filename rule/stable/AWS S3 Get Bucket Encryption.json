@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ab8e087b-0595-465d-ae59-45968ad36d3b",
+  "name": "AWS S3 Get Bucket Encryption",
+  "description": "This rule detects bucket encryption configuration retrieval",
+  "filterSets": [
+    [
+      {
+        "id": "ebdd3f04-1ba9-4901-bf07-18f5cab1de34",
+        "name": "AWS S3 Get Bucket Encryption",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/09/17",
+  "lastUpdate": "2025-09-17T02:29:38.000Z"
+}

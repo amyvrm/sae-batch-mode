@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "29b50742-28d3-4cb4-a0b3-cb950f693593",
+  "name": "Multiple AWS S3 Object Deletion",
+  "description": "This model detects the use of the S3 Delete Object API call, which indicates an attempt to delete an object from an S3 bucket.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "6f028095-1fb5-4362-a428-cdaa8b9de307",
+      "name": "Multiple AWS S3 Object Deletion",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1567"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-18T06:34:46.000Z"
+}

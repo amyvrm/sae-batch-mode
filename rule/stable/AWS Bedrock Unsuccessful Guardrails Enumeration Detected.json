@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "87441780-87b2-49df-8b34-6c264eb0ae19",
+  "name": "AWS Bedrock Unsuccessful Guardrails Enumeration Detected",
+  "description": "Detects unsuccessful enumeration of guardrails in AWS Bedrock services, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "ff13770b-ad1e-41b9-a411-d617f6eb57e5",
+        "name": "AWS Bedrock Unsuccessful Guardrails Enumeration Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/15",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

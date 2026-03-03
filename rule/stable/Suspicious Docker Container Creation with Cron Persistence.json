@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0313886e-9ae4-11ef-b864-0242ac120002",
+  "name": "Suspicious Docker Container Creation with Cron Persistence",
+  "description": "Detects the creation of a privileged Docker container with host bindings and a cron-based persistence mechanism, indicating potential unauthorized access and sustained control over the host system.",
+  "filterSets": [
+    [
+      {
+        "id": "e817c860-9ae1-11ef-b864-0242ac120002",
+        "name": "Suspicious Docker Container Creation with Cron Persistence",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/11/04",
+  "lastUpdate": "2025-01-22T19:14:24.000Z"
+}

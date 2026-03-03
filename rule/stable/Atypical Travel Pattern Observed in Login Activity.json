@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "12f1a16c-5248-40c2-bc32-e58f46d4a01f",
+  "name": "Atypical Travel Pattern Observed in Login Activity",
+  "description": "User account has a successful sign-in attempt originating from a location that is unusual based on the known travel behavior of the user.",
+  "filterSets": [
+    [
+      {
+        "id": "612484be-4182-419f-ae16-67a886453c14",
+        "name": "Atypical Travel Pattern Observed in Login Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aad",
+      "sca"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2026/02/03",
+  "lastUpdate": "2026-02-13T08:49:14.000Z"
+}

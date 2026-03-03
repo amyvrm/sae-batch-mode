@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cb657ebc-bc91-4589-a89f-6949282370fb",
+  "name": "Possible Seatbelt Execution via dot NET",
+  "description": "Seatbelt is a tool which enumerate security porsture of the system. This detection indicates that Seatbelt might have been executed via dot NET.",
+  "filterSets": [
+    [
+      {
+        "id": "ce164d3a-1fce-4fda-92fc-bab1adfd29bc",
+        "name": "Possible Seatbelt Execution via dot NET",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Toru Yamashige",
+  "team": "JP-IR",
+  "date": "2024/03/11",
+  "lastUpdate": "2025-02-12T04:24:54.000Z"
+}

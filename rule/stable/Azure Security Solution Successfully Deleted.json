@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "82b764cd-ef23-4e65-ab79-d386fdfd6093",
+  "name": "Azure Security Solution Successfully Deleted",
+  "description": "Detects successful deletion of an Azure security solution which may indicate an attacker deliberately disabling security protections",
+  "filterSets": [
+    [
+      {
+        "id": "4c6dcb5b-d66c-442a-9732-904976a371b6",
+        "name": "Azure Security Solution Successfully Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Nathaniel Ragasa",
+  "team": "SAE Threat Expert",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-23T02:21:40.000Z"
+}

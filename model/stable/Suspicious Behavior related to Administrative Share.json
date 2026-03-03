@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4a04584e-664b-4dcd-abd1-863c78a58f20",
+  "name": "Suspicious Behavior related to Administrative Share",
+  "description": "Detecting behavior related to administrative share",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "4b436b74-64f4-492f-bca2-b07e01089ef0",
+      "name": "Suspicious Behavior related to Administrative Share",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055",
+    "mitre.t1570"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/11/09",
+  "lastUpdate": "2023-11-23T05:08:17.000Z"
+}

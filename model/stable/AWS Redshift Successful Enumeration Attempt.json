@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5ccc9493-8a15-4117-806e-926743da53e0",
+  "name": "AWS Redshift Successful Enumeration Attempt",
+  "description": "Successful attempts to gather information about Redshift resources, including clusters, snapshots, security groups, and subnet groups. Such activities may indicate reconnaissance efforts by an attacker trying to understand the environment.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "c14cce1d-7b32-4e78-80af-4e021dd71bfe",
+      "name": "AWS Redshift Successful Cluster Parameter Groups Enumeration",
+      "score": 1
+    },
+    {
+      "id": "63a65779-b3a9-4582-9da4-5e8bc114a815",
+      "name": "AWS Redshift Successful Snapshot Schedules Enumeration",
+      "score": 1
+    },
+    {
+      "id": "0e98c558-c1a4-438d-b0ba-e3ed46e0d47d",
+      "name": "AWS Redshift Successful Events Enumeration",
+      "score": 1
+    },
+    {
+      "id": "f80f9e02-d37b-4a58-9c3c-6798749c8a29",
+      "name": "AWS Redshift Successful Cluster Snapshots Enumeration",
+      "score": 1
+    },
+    {
+      "id": "16002d8b-a2bb-401c-8307-ca8a90661d5a",
+      "name": "AWS Redshift Successful Clusters Enumeration",
+      "score": 1
+    },
+    {
+      "id": "2ce3e3a4-f2d0-4f1d-b6c2-1cd2e38f80d8",
+      "name": "AWS Redshift Successful Cluster Security Groups Enumeration",
+      "score": 1
+    },
+    {
+      "id": "f8916574-e712-4a98-8d31-6ebc32b5eef6",
+      "name": "AWS Redshift Successful Cluster Subnet Groups Enumeration",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christopher Ordonez & Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-07-23T08:52:30.000Z"
+}

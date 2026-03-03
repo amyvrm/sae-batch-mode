@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1c80df93-c9f4-45c6-a77c-58574b67347e",
+  "name": "Remote Event Clearing via SMB2 Protocol",
+  "description": "Network activity involving the SMB2 protocol, indicative of an operation to clear event logs, has been observed.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3759b6ef-c875-4d6d-8050-f27ad54ada1e",
+      "name": "Remote Event Clearing via SMB2 Protocol",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1565.001",
+    "mitre.t1021.002",
+    "threat.pua"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-11T10:49:36.000Z"
+}

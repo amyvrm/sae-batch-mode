@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0155d4c6-f22b-41ed-b589-f0ae747a7f1a",
+  "name": "Possible HTTP Data Exfiltration Activity Detection",
+  "description": "Activity indicative of data exfiltration via HTTP, commonly associated with Ransomware attacks, was identified on the network.",
+  "filterSets": [
+    [
+      {
+        "id": "c1a11462-b7d8-5718-bf66-7308ef56f14f",
+        "name": "Rclone HTTP  (Request) - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c1a11462-b7d8-5718-bf66-7308ef56f14f",
+        "name": "Rclone HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Carl Jayson Pelina",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-06-17T10:19:03.000Z"
+}

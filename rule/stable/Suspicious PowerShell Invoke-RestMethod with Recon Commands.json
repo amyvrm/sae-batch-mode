@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5291f2f6-e7a3-4b5a-8f24-e8f4fb047562",
+  "name": "Suspicious PowerShell Invoke-RestMethod with Recon Commands",
+  "description": "Detects Invoke-RestMethod (IRM) paired with system discovery commands, indicating reconnaissance data collection for potential exfiltration.",
+  "filterSets": [
+    [
+      {
+        "id": "819e7f2f-8310-4f2b-8837-ce530b05566f",
+        "name": "Suspicious PowerShell Invoke-RestMethod with Recon Commands",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/12/09",
+  "lastUpdate": "2026-02-11T00:29:51.000Z"
+}

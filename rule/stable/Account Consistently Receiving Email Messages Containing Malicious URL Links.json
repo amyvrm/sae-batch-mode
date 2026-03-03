@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "84ef255f-fd88-4625-90f7-275f069184dd",
+  "name": "Account Consistently Receiving Email Messages Containing Malicious URL Links",
+  "description": "The account has consistently received emails containing malicious URL links for a duration exceeding three days.",
+  "filterSets": [
+    [
+      {
+        "id": "e3eb332b-6cc8-59c7-b611-73748d0133db",
+        "name": "Account Consistently Receiving Email Messages Containing Malicious URL Links",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "aad"
+    ]
+  ],
+  "author": "Baker Yang",
+  "team": "Jaguar",
+  "date": "2024/01/18",
+  "lastUpdate": "2024-02-15T02:08:02.000Z"
+}

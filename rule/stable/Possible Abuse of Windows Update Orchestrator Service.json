@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d4a751f2-0e44-4a56-a248-ed7854c2ba31",
+  "name": "Possible Abuse of Windows Update Orchestrator Service",
+  "description": "This filter identifies the potential abuse of the Windows Update Orchestrator Service (UsoSVC). Malicious actors may exploit this service to execute unauthorized actions or gain higher privileges on the victim machine. This kind of behavior is often associated with various cyber threats aimed at compromising system security. The CVE numbers are CVE-2019-1405 and CVE-2019-1322",
+  "filterSets": [
+    [
+      {
+        "id": "af233775-ee42-49c0-8115-347a503a8eb8",
+        "name": "Possible Abuse of Windows Update Orchestrator Service",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/12/11",
+  "lastUpdate": "2025-01-09T08:12:51.000Z"
+}

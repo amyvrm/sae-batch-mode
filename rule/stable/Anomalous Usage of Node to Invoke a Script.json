@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0fa9471b-e788-425b-83e6-6ae65eb64b17",
+  "name": "Anomalous Usage of Node to Invoke a Script",
+  "description": "Detection of anomalous usage of node.exe being used to invoke a script",
+  "filterSets": [
+    [
+      {
+        "id": "ec03721a-b123-4fa7-a1e2-7fd927d44bb6",
+        "name": "Anomalous Usage of Node to Invoke a Script",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh & Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/08/27",
+  "lastUpdate": "2025-09-01T06:31:57.000Z"
+}

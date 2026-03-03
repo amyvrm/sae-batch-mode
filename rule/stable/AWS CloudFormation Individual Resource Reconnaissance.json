@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c2a5cfac-07ed-4694-9f3b-d30039ecb2dd",
+  "name": "AWS CloudFormation Individual Resource Reconnaissance",
+  "description": "Detects targeted queries for specific CloudFormation stack resources, potentially indicating an attacker's focus on particular infrastructure components or sensitive resources.",
+  "filterSets": [
+    [
+      {
+        "id": "a753fccb-53d3-437a-b4f1-6d349aa01036",
+        "name": "AWS CloudFormation Individual Resource Reconnaissance",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1200,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/09/05",
+  "lastUpdate": "2025-09-05T05:08:42.000Z"
+}

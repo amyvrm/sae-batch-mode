@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "85ce8291-3494-4720-9179-4f7581e9dda5",
+  "name": "Suspicious Windows Update Service Child",
+  "description": "Detects the activity of a suspicious child spawning from Windows Update Service (WSUS) via wsusservice process, potential exploitaton of CVE-2025-59287",
+  "filterSets": [
+    [
+      {
+        "id": "2ea9c2eb-6f81-4ab4-8432-0fc4c1821cca",
+        "name": "Suspicious Windows Update Service Child via Wsusservice Process",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cdf9824a-337a-4e2c-8539-4164e38f6b03",
+        "name": "Suspicious Windows Update Service Child via W3wp Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Mahmoud Soheem & Ahmed Hussein",
+  "team": "MENA-IR",
+  "date": "2025/10/26",
+  "lastUpdate": "2025-11-04T07:54:37.000Z"
+}

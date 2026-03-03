@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5a17a118-b242-4fd2-81f1-9393b05550df",
+  "name": "Suspect Execution from Possibly Vulnerable Centerstage File Sharing Software",
+  "description": "Detection of suspect activities from a possibly vulnerable CenterStage File Sharing Software",
+  "filterSets": [
+    [
+      {
+        "id": "c1e4ef51-a87c-4608-ac3c-8d518dedcce4",
+        "name": "LOLBIN Spawning from Possibly vulnerable Centerstage File Sharing Software",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c17f6213-cb12-4c9e-ba89-0f2fc22888c3",
+        "name": "Anomalous File Created from Possibly Vulnerable Centerstage File Sharing Software",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fc6ac155-e8da-466b-9da3-454afb6066b4",
+        "name": "Irregular Process Creation from Possibly Vulnerable Centerstage File Sharing Software",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/04/22",
+  "lastUpdate": "2025-04-22T19:13:27.000Z"
+}

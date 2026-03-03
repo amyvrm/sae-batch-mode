@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dc0030ff-b1b6-4a8e-b08b-c3bed7622f3b",
+  "name": "Potential Data Exfiltration via DNS Response",
+  "description": "Detects potential data exfiltration over DNS response traffic, which indicates attackers may be encoding and transferring information via DNS responses, potentially leading to data leakage and evasion of network security controls.",
+  "filterSets": [
+    [
+      {
+        "id": "455d9504-24a0-5dc6-ba07-357fb7a609f6",
+        "name": "Potential Data Exfiltration via DNS Response",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/09/02",
+  "lastUpdate": "2025-09-04T06:44:04.000Z"
+}

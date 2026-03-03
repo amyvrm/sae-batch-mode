@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fac3a0c2-4de8-4f79-9884-d7ff60d1f5e6",
+  "name": "File Propagation Via SMB",
+  "description": "Remote File Copy via SMB detection",
+  "filterSets": [
+    [
+      {
+        "id": "b39b44d6-8aa6-4c93-944a-a518c5f220e0",
+        "name": "Remote File Copy Via SMB",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1f84206c-7f96-4b11-8e7b-b6f1d18378c0",
+        "name": "File Transfer Via SMB",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-03-30T04:57:51.000Z"
+}

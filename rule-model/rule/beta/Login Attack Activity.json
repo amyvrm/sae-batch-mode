@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ba6d0654-be40-4c9c-9a9f-e1a8800b3217",
+  "name": "Login Attack Activity",
+  "description": "McAfee detection for brute force login activity on Windows systems. These rules identify repeated failed login attempts which may indicate unauthorized access attempts or account compromise.",
+  "filterSets": [
+    [
+      {
+        "id": "ed49e5ee-d92a-4176-ac60-76f837e86c11",
+        "name": "Windows Security Auditing - Brute Force Login Attempt",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7f03a3f8-6ab1-4602-8cb0-67c8f3c2e752",
+        "name": "Windows Security Auditing - Multiple Failed Login Attempts on Local Host",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc|McAfee"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2026/02/10",
+  "lastUpdate": "2026-02-10T13:36:04.000Z"
+}

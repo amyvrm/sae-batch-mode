@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eea3be99-2b53-48b8-898b-4c2f2eec69b4",
+  "name": "Tunnel Creation via Burrow",
+  "description": "Detects network tunnel creation using Burrow, which may be used for command and control communication, and data exfiltration",
+  "filterSets": [
+    [
+      {
+        "id": "92a03912-a2ca-4615-bdd2-b3aec75ed3c3",
+        "name": "DNS Query Request to Burrow Tunnel",
+        "highlight": true
+      },
+      {
+        "id": "f10ee6cd-6f35-4868-98d8-d9e3b45f203a",
+        "name": "Possible Creation of Tunnel via Burrow",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Mahmoud Soheem & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/02/16",
+  "lastUpdate": "2025-10-30T05:35:09.000Z"
+}

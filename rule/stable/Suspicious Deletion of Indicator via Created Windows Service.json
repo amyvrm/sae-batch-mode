@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8135fe88-483e-4e20-8b7d-8d6b8569fc0b",
+  "name": "Suspicious Deletion of Indicator via Created Windows Service",
+  "description": "Detects suspicious deletion of indicators on a machine via created windows service.",
+  "filterSets": [
+    [
+      {
+        "id": "cd137149-ef6b-45e6-a847-7b7e4f9b29b4",
+        "name": "Suspicious Deletion of Indicator via Created Windows Service",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Krisford Macalalad & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/07/13",
+  "lastUpdate": "2025-11-11T16:00:16.000Z"
+}

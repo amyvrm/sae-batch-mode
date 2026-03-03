@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ca85f4ac-f9fd-4e2c-9e3e-1d3c19666a24",
+  "name": "Level.io Service Installation",
+  "description": "Level.io is a remote admin tool. It can be abused by an attacker to remotely control the victim's environment.",
+  "filterSets": [
+    [
+      {
+        "id": "bb3a9611-7109-4c32-9645-a99f2593ff1f",
+        "name": "Level.io Service Installation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/02/16",
+  "lastUpdate": "2024-02-26T18:35:29.000Z"
+}

@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e3424ea5-419f-4a9f-8393-450169f4bed9",
+  "name": "Possible Code Reflective Injection",
+  "description": "Adversaries may reflectively load code into a process in order to conceal the execution of malicious payloads. Reflective loading involves allocating then executing payloads directly within the memory of the process.",
+  "filterSets": [
+    [
+      {
+        "id": "fc435e72-5fe2-45c2-aec0-b80fef0d8967",
+        "name": "Possible DLL-Reflective Injection via PowerShell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1666f932-5f93-46aa-bffc-e7130d68de8f",
+        "name": "Reflective Loading of a .NET Assembly - AMSI",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3a8ddcf6-6194-4709-a945-1be551fc410e",
+        "name": "PowerShell Deobfuscation And Reflective Injection via Registry",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c3b3350d-9628-416a-91b7-0edefe7da7ed",
+        "name": "Reflective Loading of a .NET Assembly - Outbound Communicaton",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "58cc7802-72ac-4cdc-bb6a-8ccea0b0480d",
+        "name": "Code Execution of Reflective Injection Via PowerShell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2ed1baf5-846f-4ea4-808c-63a08497ba00",
+        "name": "Deobfuscation And Reflective Injection Via PowerShell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1a49a45a-de7f-4ed0-828b-a744922141ad",
+        "name": "Reflective Loading of a .NET Assembly",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "af8fa794-2df9-551c-8f40-7bb4cdb05138",
+        "name": "Behavior Monitoring Policy CS1155 - injection to windows process",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a77a7087-ef13-5b8b-974b-44821d6e3896",
+        "name": "Behavior Monitoring Policy CS1169 - Powershell using Invoke-ReflectivePEInjection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2a0d007c-6b60-515a-b335-02df5c31c40e",
+        "name": "Behavior Monitoring Policy FLS.IMJ.CS1112 - Metasploit EternalBlue - Reflective DLL Technique",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d110404d-efe6-4a1c-85a5-9f65ba889f78",
+        "name": "Suspicious Powershell Parameters From AMSI via WMI",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "034daf1c-5794-4d56-9446-bd9a1cce228c",
+        "name": "Suspicious Powershell Parameters From AMSI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/07/02",
+  "lastUpdate": "2025-03-13T03:50:24.000Z"
+}

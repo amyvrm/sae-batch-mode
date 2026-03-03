@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "db334fbd-7492-485f-bd58-7e72adfd95fa",
+  "name": "Suspicious Usage of Renamed Signed BOINC Binary",
+  "description": "Detection of suspicious execution of a renamed signed BOINC binary.",
+  "filterSets": [
+    [
+      {
+        "id": "0fd6a9f3-5e08-4a71-94e7-9c0b5e0ed054",
+        "name": "Renamed BOINC Executable",
+        "highlight": true
+      },
+      {
+        "id": "67dc22d0-bb90-4ac8-85d6-ad0fbf9da619",
+        "name": "Execution of Renamed BOINC Binary",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "TAD Service Ops",
+  "date": "2024/11/21",
+  "lastUpdate": "2025-01-20T08:14:41.000Z"
+}

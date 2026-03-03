@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a770c413-637d-4dc0-a038-1b681c0d74cc",
+  "name": "Suspicious Copying of Script to DAT File",
+  "description": "Detect suspicious copying of .txt OR .json file to a DAT file which indicates possible exfiltration via API.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1e417f1b-8155-447e-a1f6-9832a51446a3",
+      "name": "Suspicious Copying of Script to DAT File",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1567.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/08/18",
+  "lastUpdate": "2026-01-12T07:22:02.000Z"
+}

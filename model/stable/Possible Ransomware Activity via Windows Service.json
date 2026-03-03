@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6c8e3646-9dfb-4e5c-b89e-ef7167e16a27",
+  "name": "Possible Ransomware Activity via Windows Service",
+  "description": "Detects possible ransomware activity via windows service which is commonly associated with Crypto24 ransomware.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "72e3d4d3-ef51-4071-9186-00fd40e90596",
+      "name": "Possible Ransomware Encryption via Created Windows Service",
+      "score": 2
+    },
+    {
+      "id": "02b9c179-b86a-46c1-bf78-964de36fb8e6",
+      "name": "Possible Installation of Windows Service Related to Ransomware",
+      "score": 2
+    },
+    {
+      "id": "e4ab5eb9-68c3-4876-81a4-5463948c5372",
+      "name": "Possible Ransomware Deployment via Scheduled Task",
+      "score": 1
+    },
+    {
+      "id": "8135fe88-483e-4e20-8b7d-8d6b8569fc0b",
+      "name": "Suspicious Deletion of Indicator via Created Windows Service",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1022",
+    "mitre.t1543.003",
+    "mitre.t1070.004",
+    "mitre.t1053.005",
+    "mitre.t1112"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Krisford Macalalad & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/07/13",
+  "lastUpdate": "2025-11-11T16:00:16.000Z"
+}

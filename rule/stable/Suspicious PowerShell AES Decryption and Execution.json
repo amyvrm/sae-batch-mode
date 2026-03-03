@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2411875a-8fe3-4909-9089-3db463aad5cf",
+  "name": "Suspicious PowerShell AES Decryption and Execution",
+  "description": "Detects PowerShell commands using AES-CBC decryption with file-based payload, This behavior is associated with info stealer.",
+  "filterSets": [
+    [
+      {
+        "id": "2ff1cd36-9bf6-4ce6-956b-8654456970e9",
+        "name": "Suspicious PowerShell AES Decryption and Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/04/30",
+  "lastUpdate": "2025-06-16T03:55:13.000Z"
+}

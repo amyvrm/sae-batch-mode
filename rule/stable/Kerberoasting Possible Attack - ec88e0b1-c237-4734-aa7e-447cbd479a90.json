@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ec88e0b1-c237-4734-aa7e-447cbd479a90",
+  "name": "Possible Kerberoasting Attack",
+  "description": "A user account has requested a Kerberos service ticket with a weak encryption type for the first time in three days without any associated successful login records during the current day, which may indicate Kerberos ticket theft. (This model can be triggered only if Active Directory Connector is installed on the Domain Controller.)",
+  "filterSets": [
+    [
+      {
+        "id": "a549e218-d7a7-5922-870c-2a6d22c084e8",
+        "name": "Possible Kerberoasting Attack",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "opa"
+    ]
+  ],
+  "author": "Johnny Tu",
+  "team": "Jaguar",
+  "date": "2023/08/08",
+  "lastUpdate": "2025-02-12T10:36:42.000Z"
+}

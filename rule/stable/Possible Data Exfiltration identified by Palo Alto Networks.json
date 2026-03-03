@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8120ac0e-1a18-4c52-bb2f-2061fe36222d",
+  "name": "Possible Data Exfiltration identified by Palo Alto Networks",
+  "description": "Palo Alto Networks detection for possible data exfiltration attempts.",
+  "filterSets": [
+    [
+      {
+        "id": "f7dc3e8d-c2c0-5348-ba65-e89bdc8dab0e",
+        "name": "Data Exfiltration Traffic Alert",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cc1e306b-538f-514a-8731-1d141fe2df9b",
+        "name": "HTTP Data Exfiltration via FQDN Using Suspicious Domain",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/19",
+  "lastUpdate": "2025-06-23T03:43:46.000Z"
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7a69f15b-5eb9-446b-b4a0-e445abaef629",
+  "name": "Possible Suspicious Hidden PowerShell Command or Process",
+  "description": "A suspicious hidden PowerShell command or process may have been created, opened, or executed on an endpoint.",
+  "filterSets": [
+    [
+      {
+        "id": "cf6d34d6-bd0d-432b-a4c8-8dc04506652b",
+        "name": "Possible Suspicious Hidden AMSI PowerShell Command Process Executed",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "49009592-714d-4d5d-849b-52ca03e1b6e3",
+        "name": "Outbound Connection via Possible Suspicious Hidden PowerShell Command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6ef84f95-d78b-4966-8972-0111a510f3bb",
+        "name": "Possible Suspicious Hidden PowerShell Command Process Opened",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cb378126-50ec-11ee-be56-0242ac120002",
+        "name": "Possible Suspicious Hidden PowerShell Command Process Created",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Aaron Emdy",
+  "team": "US-IR",
+  "date": "2024/08/14",
+  "lastUpdate": "2025-03-10T09:09:35.000Z"
+}

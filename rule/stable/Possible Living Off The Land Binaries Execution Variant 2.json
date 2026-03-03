@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f58f33f8-15f3-4824-a073-740b5876093e",
+  "name": "Possible Living Off The Land Binaries Execution Variant 2",
+  "description": "Living Off the Land Binaries are binaries of a non-malicious nature, local to the operating system, that have been utilised and exploited by cyber criminals and crime groups to camouflage their malicious activity.",
+  "filterSets": [
+    [
+      {
+        "id": "74c220bc-af6f-4917-b73c-9b83b29a80eb",
+        "name": "External MSI Package Installation via Msiexec",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f53ed46c-09a3-4574-9764-57b001c65411",
+        "name": "MSIEXEC Downloads And Executes Files",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cb881faf-d1b1-48ed-93d4-8350662244e8",
+        "name": "Execute Remote Payload Via Msiexec",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f41f91ac-1293-4586-9baa-35dfb58dd22e",
+        "name": "MSI File Execution by Msiexec via AMSI",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "92bec5ac-1549-4129-926e-fe7418c5e79b",
+        "name": "Threat Hunting - Suspicious Behavior Of Mshta",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "af52c735-75ea-470d-b228-36d13704afeb",
+        "name": "Suspicious Mshta.exe Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "90303a19-e4d5-42c7-babd-124370d862da",
+        "name": "MSHTA Spawning Windows Shell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "24f96a02-bfd4-4796-9b1b-859228fb49db",
+        "name": "Mshta Launching A Powershell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "eed3a9b0-04b5-4a4b-840d-d76a076d7eaa",
+        "name": "Suspicious Bitsadmin Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6334b671-dbcf-446b-a1f5-660ceb93a45b",
+        "name": "Possible Beacon Download via BITSAdmin",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "212290bb-6633-4f45-aa3d-f67616800e70",
+        "name": "Execute Arbitrary PowerShell Code Via SyncAppvPublishingServer",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e58d4d93-4aaf-4089-b3e5-ffcc5de0539d",
+        "name": "PowerShell Code Execution Via SyncAppvPublishingServer",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e9c35fbd-1e5c-4800-a732-a7647cc028ea",
+        "name": "SyncAppvPublishingServe Signed With Powershell Command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "859bacd2-21e8-409b-8648-ea8cc0257687",
+        "name": "Download Via Certutil.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fb46372d-9ef7-4129-9e6e-e6f0aedc18ed",
+        "name": "PowerShell Script Code Injection Via SyncAppvPublishingServer.vbs",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes",
+      "sao",
+      "pao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/11/06",
+  "lastUpdate": "2024-11-18T21:06:35.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "739dbc8f-76b1-4e11-8a14-e702979bee8d",
+  "name": "Suspicious Authentication Activity via HTTP",
+  "description": "The module detected network activity involving a successful login over Hypertext Transfer Protocol (HTTP). This may indicate potential unauthorized access or abnormal authentication behavior based on outbound HTTP request patterns.",
+  "filterSets": [
+    [
+      {
+        "id": "f8b533da-6cd5-5cde-9397-1780d7c7c9ad",
+        "name": "Suspicious Login Success HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/12/02",
+  "lastUpdate": "2025-12-04T10:04:01.000Z"
+}

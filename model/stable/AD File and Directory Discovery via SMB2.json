@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19041e11-7465-4b39-9f61-6c321ac0c19b",
+  "name": "AD File and Directory Discovery via SMB2",
+  "description": "Network activity associated with AD File and Directory Discovery using the SMB2 protocol has been observed. This activity may indicate an attempt to gather information about files and directories on a network.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b85bd28a-a7e3-4124-9e4c-19bcc3e10d66",
+      "name": "AD File and Directory Discovery via SMB2",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "threat.pua",
+    "mitre.t1083"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "clpId": [
+    "27fe9230-7c33-45b7-b591-6adb998a825d",
+    "2999a8c9-408a-4e91-9825-b15fb2b6dd6c"
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-02-28T04:12:48.000Z"
+}

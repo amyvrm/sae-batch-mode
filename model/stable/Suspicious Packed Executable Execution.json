@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "682f24d5-f8d0-4e04-8a9d-16e845e24522",
+  "name": "Suspicious Packed Executable Execution",
+  "description": "Detects execution of potentially packed executables, which may indicate use of packer-as-a-service like Shanya",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "53f9bd33-d1b7-44c9-90a1-a84be0ecdbe0",
+      "name": "Suspicious Packed Executable Execution",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1620",
+    "mitre.t1574.001",
+    "mitre.t1204.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Bien Joshua Philip De Leon & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/12/24",
+  "lastUpdate": "2026-01-22T09:47:33.000Z"
+}

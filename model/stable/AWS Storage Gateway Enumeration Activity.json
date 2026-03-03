@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5494640e-8d59-460c-bc70-046003de7c7d",
+  "name": "AWS Storage Gateway Enumeration Activity",
+  "description": "An attempt to retrieve information about AWS Storage Gateways was detected. This activity is commonly performed for operational management but could also be used by an attacker to enumerate available storage resources. If unauthorized, it may indicate reconnaissance efforts to identify targets for data exfiltration or further access exploitation.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "d5988f4c-ab67-4092-97ee-f675975b6cf0",
+      "name": "AWS Storage Gateway Enumeration Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 10800,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-08-04T16:22:25.000Z"
+}

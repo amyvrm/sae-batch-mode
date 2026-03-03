@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c7be85c0-7aa3-430c-bdf2-240de2ae6fd4",
+  "name": "Suspicious Command and Control Agent Drop via Winrar Archive",
+  "description": "Detects dropping of Mythic C2 Agent via WinRAR zero-day vulnerability.",
+  "filterSets": [
+    [
+      {
+        "id": "93ad686f-8c84-4164-9a9c-fed64da138f4",
+        "name": "Suspicious Command and Control Agent Drop via Winrar Archive",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Shaun Galura & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/11/27",
+  "lastUpdate": "2025-12-02T06:52:55.000Z"
+}

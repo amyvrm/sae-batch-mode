@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6988f85b-e1bf-4e19-a23b-8a07ee5dab80",
+  "name": "Web Application Firewall Blocked Application By URL Access",
+  "description": "Fortinet detection - Web application firewall blocked application by URL access",
+  "filterSets": [
+    [
+      {
+        "id": "2a5851a1-b954-4fa0-ba30-4d5196643c97",
+        "name": "Web Application Firewall Blocked Application By URL Access",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

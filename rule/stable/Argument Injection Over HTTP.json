@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d18a13a3-e366-4913-b6a6-8a33ef55066b",
+  "name": "Argument Injection Over HTTP",
+  "description": "Check Point Security detection for Argument Injection Over HTTP",
+  "filterSets": [
+    [
+      {
+        "id": "79ad7bc6-aeb6-5f0c-b906-10b98f9befb9",
+        "name": "Argument Injection Over HTTP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/12/11",
+  "lastUpdate": "2026-01-15T01:11:52.000Z"
+}

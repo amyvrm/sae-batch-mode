@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01fb5fa3-684d-4d6c-8066-5bb078717273",
+  "name": "Possible Tunneling via Ligolo-ng",
+  "description": "Detects possible tunneling connection via Ligolo-ng which is commonly used by APT groups.",
+  "filterSets": [
+    [
+      {
+        "id": "24a57696-6638-46e2-aab1-d915b3bb3126",
+        "name": "Possible Tunneling via Ligolo-ng",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b472f15e-779a-48e5-8b9b-2ddea1012d4c",
+        "name": "Unix Possible Tunneling via Ligolo-ng",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Bien Joshua Philip De Leon",
+  "team": "AMEA-IR",
+  "date": "2024/10/31",
+  "lastUpdate": "2025-06-26T10:45:17.000Z"
+}

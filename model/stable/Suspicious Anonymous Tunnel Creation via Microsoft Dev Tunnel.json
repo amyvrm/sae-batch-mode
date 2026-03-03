@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9a5823bb-e0e1-4727-af52-dea466342f7a",
+  "name": "Suspicious Anonymous Tunnel Creation via Microsoft Dev Tunnel",
+  "description": "Detects the execution of the devtunnel host command with the --allow-anonymous flag, which establishes a network tunnel without requiring authentication. This behavior may be exploited by threat actors to enable unauthorized remote access, facilitate command and control (C2) communication, or support data exfiltration activities.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2e6eaa08-280c-4d6b-9284-07f430a6096e",
+      "name": "Suspicious Anonymous Tunnel Creation via Microsoft Dev Tunnel",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1041"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2026/01/18",
+  "lastUpdate": "2026-02-10T16:40:03.000Z"
+}

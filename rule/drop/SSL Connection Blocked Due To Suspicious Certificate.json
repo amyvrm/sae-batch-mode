@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fff36bf4-df48-49d9-9584-c4d1cce0aa9c",
+  "name": "SSL Connection Blocked Due To Suspicious Certificate",
+  "description": "Fortinet detection - SSL connection blocked due to suspicious certificate",
+  "filterSets": [
+    [
+      {
+        "id": "7b9fb1b9-34fb-47bd-9dc5-a59abcd636ec",
+        "name": "SSL Connection Blocked Due To Suspicious Certificate",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-03-19T01:35:38.000Z"
+}

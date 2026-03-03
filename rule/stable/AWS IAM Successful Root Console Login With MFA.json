@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "26de4392-49fe-49c1-9f25-e0a7ccb83fd3",
+  "name": "AWS IAM Successful Root Console Login With MFA",
+  "description": "detects successful root console logins to AWS accounts with MFA, ensuring enhanced security and reducing the risk of unauthorized access.",
+  "filterSets": [
+    [
+      {
+        "id": "5419e8f4-9ab5-4d9d-bb57-1e4a39263290",
+        "name": "AWS IAM Successful Root Console Login With MFA",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/04/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

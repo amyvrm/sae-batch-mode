@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e791413f-e103-4341-8ffd-c8d35f62212e",
+  "name": "Possible LSASSY Process Creation",
+  "description": "Detects process being created that is related to LSASSY tool.",
+  "filterSets": [
+    [
+      {
+        "id": "79015270-cc45-4180-a54f-eac9e8fedd45",
+        "name": "Possible LSASSY Process Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2024/10/31",
+  "lastUpdate": "2025-03-28T03:59:13.000Z"
+}

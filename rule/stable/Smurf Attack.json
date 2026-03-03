@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "265e9ce5-f845-4748-990e-d3a673acbfdb",
+  "name": "Smurf Attack",
+  "description": "SonicWall Detection - Smurf Amplification attack dropped",
+  "filterSets": [
+    [
+      {
+        "id": "e9b1ce82-af5d-4b50-a718-5e5e36be032a",
+        "name": "Smurf Attack",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

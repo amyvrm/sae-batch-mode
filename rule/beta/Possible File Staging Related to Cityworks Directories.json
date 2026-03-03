@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a2220cb7-12d5-42a8-a411-28c203ccfd5a",
+  "name": "Possible File Staging Related to Cityworks Directories",
+  "description": "Detects events that involves enumeration and staging of files to Cityworks directory which can potentially be used for data exfiltration on vulnerable Cityworks products.",
+  "filterSets": [
+    [
+      {
+        "id": "cfed65ec-28fa-45d0-b4bb-08708a505ba3",
+        "name": "Suspicious Enumeration Activity Related to Cityworks Application",
+        "highlight": true
+      },
+      {
+        "id": "3ec43867-6cf9-4c28-b5db-5a00bb9ccd23",
+        "name": "Suspicious Copying of Files to Cityworks Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Shaun Galura & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/06/05",
+  "lastUpdate": "2025-08-13T06:51:12.000Z"
+}

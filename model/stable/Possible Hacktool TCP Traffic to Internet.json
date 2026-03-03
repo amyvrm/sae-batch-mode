@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7268c781-32ea-49e5-b07e-85bdf367ea1b",
+  "name": "Possible Hacktool TCP Traffic to Internet",
+  "description": "Possible Remcos TCP traffic to the internet detected on the network. Review if the usage of remcos is valid.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1131604b-146a-4bd1-ba46-b51150c521fd",
+      "name": "Possible Hacktool TCP Traffic to Internet",
+      "score": 30
+    }
+  ],
+  "threshold": {
+    "targetScore": 30,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1090",
+    "mitre.t1105",
+    "mitre.t1113",
+    "mitre.t1125"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/04/15",
+  "lastUpdate": "2025-05-16T12:49:11.000Z"
+}

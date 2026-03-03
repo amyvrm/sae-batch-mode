@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "be2e5fff-5f0d-40b8-b943-a9d14f80efab",
+  "name": "File Reported Infected By FortiNDR (Warning)",
+  "description": "Fortinet detection - File reported infected by FortiNDR (warning)",
+  "filterSets": [
+    [
+      {
+        "id": "a0b15361-da0d-4ee4-a028-47bd1e5b33c3",
+        "name": "File Reported Infected By FortiNDR (Warning)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

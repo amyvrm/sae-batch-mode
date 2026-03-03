@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b266a274-b9cc-497d-b7fb-5173b13959bb",
+  "name": "File detection - WOFF File Format",
+  "description": "Palo Alto File detection - WOFF File Format",
+  "filterSets": [
+    [
+      {
+        "id": "da18af36-516a-4bf7-a124-ec8ac9daf7d0",
+        "name": "File detection - WOFF File Format",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "15fe2c44-982d-44bd-ada0-90ee6432bb63",
+  "name": "Possible NetExec Tool Execution",
+  "description": "Detects execution of NetExec tool to perform credential dumping and discovery which commonly associated with Lockbit ransomware.",
+  "filterSets": [
+    [
+      {
+        "id": "62fafd64-4ec5-409c-ae0d-84844550e5ca",
+        "name": "Possible NetExec Tool Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2024/10/15",
+  "lastUpdate": "2025-03-31T07:00:10.000Z"
+}

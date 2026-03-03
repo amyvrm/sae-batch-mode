@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7058bda2-2d1d-424a-ae5a-432f036bc290",
+  "name": "IIS Worker Process Exe File Execution",
+  "description": "IIS launches executable file.",
+  "filterSets": [
+    [
+      {
+        "id": "e8c8a647-a3dc-41ec-80c8-185f42f37440",
+        "name": "IIS - Execute Any Exe File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2021/05/10",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

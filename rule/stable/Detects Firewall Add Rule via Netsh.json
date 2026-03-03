@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9e9754c9-170b-48b1-8e91-25c51dd4b04e",
+  "name": "Detects Firewall Add Rule via Netsh",
+  "description": "Detects add local firewall settings using Netsh",
+  "filterSets": [
+    [
+      {
+        "id": "09a82418-0857-4297-9cc4-6f9fc0a1f2c9",
+        "name": "Firewall Add Rule via Netsh",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d7768f27-d247-4d4f-8e66-7ea35fda0c79",
+        "name": "Firewall Add Rule for RDP via Netsh",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds"
+    ]
+  ],
+  "author": "Kazuya Onuma",
+  "team": "JP-IR",
+  "date": "2021/01/06",
+  "lastUpdate": "2026-01-16T05:40:55.000Z"
+}

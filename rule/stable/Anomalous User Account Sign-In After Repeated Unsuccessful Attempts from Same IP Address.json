@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "45a15a23-6478-4d23-8ffb-df0d8584f9ee",
+  "name": "Anomalous User Account Sign-In After Repeated Unsuccessful Attempts from Same IP Address",
+  "description": "An anomalous sign-in of a user account after repeated unsuccessful attempts from the same IP address may indicate a compromised account. [Delayed alert: Batch process detection]",
+  "filterSets": [
+    [
+      {
+        "id": "f1fe2ed4-0ba3-5b22-87b1-1227b34ee46a",
+        "name": "Anomalous User Account Sign-In After Repeated Unsuccessful Attempts from Same IP Address",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "aad"
+    ]
+  ],
+  "author": "Ashlie Lin",
+  "team": "Jaguar",
+  "date": "2021/03/09",
+  "lastUpdate": "2023-11-06T03:32:24.000Z"
+}

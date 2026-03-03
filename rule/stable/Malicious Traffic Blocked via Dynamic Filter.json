@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4e487ee9-b1de-488d-beb7-1d50b829b8cd",
+  "name": "Malicious Traffic Blocked via Dynamic Filter",
+  "description": "Traffic from a domain name, which is on a blocklist in the dynamic filter database, was denied.",
+  "filterSets": [
+    [
+      {
+        "id": "87924925-fd9b-5d7c-9628-d3832f5a67de",
+        "name": "Malicious Traffic Blocked via Dynamic Filter",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/06",
+  "lastUpdate": "2026-02-11T03:25:20.000Z"
+}

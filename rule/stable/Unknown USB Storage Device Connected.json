@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "173146a8-c99b-4b06-a7dd-f3c4ad1698e6",
+  "name": "Unknown USB Storage Device Connected",
+  "description": "A new device was connected on the computer via USB at first time.",
+  "filterSets": [
+    [
+      {
+        "id": "bd2f8a8f-e66e-4cd0-ac1e-019adf391b19",
+        "name": "First seen External USB",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Rafael Pereira",
+  "team": "US-IR",
+  "date": "2025/04/04",
+  "lastUpdate": "2026-01-30T03:01:05.000Z"
+}

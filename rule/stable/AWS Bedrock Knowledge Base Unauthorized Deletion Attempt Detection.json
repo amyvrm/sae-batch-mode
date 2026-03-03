@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "20dcedf0-d0c5-4e31-9d7d-20c22eedce98",
+  "name": "AWS Bedrock Knowledge Base Unauthorized Deletion Attempt Detection",
+  "description": "Unauthorized deletion attempt of AWS Bedrock Knowledge Base detected.",
+  "filterSets": [
+    [
+      {
+        "id": "e8b0dc02-145c-494c-9f03-6088e43ebbc5",
+        "name": "AWS Bedrock Knowledge Base Unauthorized Deletion Attempt Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/07/24",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

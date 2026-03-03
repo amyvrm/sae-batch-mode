@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9540ed30-1fc5-4a13-aefd-9e4cfcfb1374",
+  "name": "Possible LSASSY File Creation",
+  "description": "Detects file being created that is related to LSASSY tool.",
+  "filterSets": [
+    [
+      {
+        "id": "b5ff4de2-796d-419e-97c7-94d8ee1f67ea",
+        "name": "Possible LSASSY File Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2024/10/31",
+  "lastUpdate": "2025-03-28T03:59:13.000Z"
+}

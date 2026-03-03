@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7503ed07-18ea-4eac-b5a4-671a37277e2c",
+  "name": "Database Program Spawned New Process in Container",
+  "description": "A database-related process spawns a new process different from itself.",
+  "filterSets": [
+    [
+      {
+        "id": "3e30b92a-cd78-47f6-a8ab-936a7b74dc83",
+        "name": "Database Program Spawned New Process in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2025/08/01",
+  "lastUpdate": "2025-08-06T07:15:59.000Z"
+}

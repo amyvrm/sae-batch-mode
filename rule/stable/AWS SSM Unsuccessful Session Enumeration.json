@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d1ae4e9a-07e9-4dae-b5ce-f138d9dc3a17",
+  "name": "AWS SSM Unsuccessful Session Enumeration",
+  "description": "Detects unsuccessful attempts to list active or past SSM sessions, which could indicate reconnaissance.",
+  "filterSets": [
+    [
+      {
+        "id": "2f881b32-3c06-4a50-a0a6-69ddba8da723",
+        "name": "AWS SSM Unsuccessful Session Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

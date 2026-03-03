@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6ab5bfbc-83d3-4ac8-ab66-8e48cfb33865",
+  "name": "Certificate Authentication without Recent History in Active Directory (on-premises)",
+  "description": "Certificate authentication by an account with no recent certificate usage history was detected in Active Directory (on-premises), which indicates possible account compromise.",
+  "filterSets": [
+    [
+      {
+        "id": "44906801-7cc6-5e9c-a19a-b8b8500c016e",
+        "name": "Certificate Authentication without Recent History in Active Directory (on-premises)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "opa"
+    ]
+  ],
+  "author": "Hazel Kao",
+  "team": "Jaguar",
+  "date": "2025/11/13",
+  "lastUpdate": "2026-02-13T02:54:29.000Z"
+}

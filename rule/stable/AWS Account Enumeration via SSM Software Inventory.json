@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "46f2fd4b-dfb8-43d6-b0da-c104bc7b7ccc",
+  "name": "AWS Account Enumeration via SSM Software Inventory",
+  "description": "Detects when a user collects inventory across all managed hosts to enumerate AWS account resources, such as instance configurations and associations",
+  "filterSets": [
+    [
+      {
+        "id": "65aa559f-8202-470b-9569-33df81137e90",
+        "name": "AWS Account Enumeration via SSM Software Inventory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/09/17",
+  "lastUpdate": "2025-09-17T02:29:38.000Z"
+}

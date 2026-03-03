@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "644dc74a-05ca-4649-a078-82369e377ac0",
+  "name": "Suspicious File Extension Rename Activity Over Network Share",
+  "description": "Detected suspicious file extension rename activities over network share which could be indicator of ransomware attack.",
+  "filterSets": [
+    [
+      {
+        "id": "02fcc302-1959-53ae-a569-634b4cfcbde2",
+        "name": "File Extension Rename Activity Over Network Share",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-03-12T10:40:07.000Z"
+}

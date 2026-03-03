@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1fafa4a2-8a65-4aa7-baaf-91382f697af3",
+  "name": "Bulk Data Removal in Container",
+  "description": "Identifies processes that are attempting to delete large amounts of data from the disk.",
+  "filterSets": [
+    [
+      {
+        "id": "0c95c0cb-a54e-46a1-8dc9-6df98770e9d3",
+        "name": "Bulk Data Removal in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2025/12/12",
+  "lastUpdate": "2026-01-20T09:00:45.000Z"
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "08bf447a-3567-498a-830c-109b9f50b510",
+  "name": "Suspicious Usage of AutoIt Scripts to Potentially Evade Detection",
+  "description": "Detection of suspicious usage of AutoIt scripts in an anomalous location, scheduled task creation, or enumeration commands.",
+  "filterSets": [
+    [
+      {
+        "id": "24a35942-f206-4155-bd3f-faee3923e4e6",
+        "name": "AutoIt Usage From an Anomalous Location",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1ac9eec7-c635-4670-9f58-cf6dbc287d2f",
+        "name": "AutoIt Scheduled Task Creation from Anomalous Location",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9335ccaf-6830-488c-b482-c96bd296c205",
+        "name": "AutoIt Anomalous Enumeration Commands",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sao",
+      "pao"
+    ]
+  ],
+  "author": "Jack Walsh & Lucas Silva",
+  "team": "EU-IR",
+  "date": "2024/08/01",
+  "lastUpdate": "2024-08-02T17:52:59.000Z"
+}

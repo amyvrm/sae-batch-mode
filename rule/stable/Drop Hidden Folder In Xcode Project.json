@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3ece1582-0abe-11eb-b768-787b8ad91447",
+  "name": "Drop Hidden Folder In Xcode Project",
+  "description": "Hidden folder was created in an Xcode Project folder",
+  "filterSets": [
+    [
+      {
+        "id": "8a79744a-0aa5-41eb-bcde-787b8ad91447",
+        "name": "Drop Hidden Folder In Xcode Project",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/10/10",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

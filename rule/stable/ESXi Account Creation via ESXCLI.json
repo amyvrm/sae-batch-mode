@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cfb0e0a0-63a1-4a65-9747-489047bca125",
+  "name": "ESXi Account Creation via ESXCLI",
+  "description": "Detects execution of esxcli command for system or network discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "cdc04f4b-8875-4755-a565-b03c9fbcb523",
+        "name": "ESXi Account Creation via ESXCLI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Nora Bowden & Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/05/21",
+  "lastUpdate": "2024-06-13T03:27:16.000Z"
+}

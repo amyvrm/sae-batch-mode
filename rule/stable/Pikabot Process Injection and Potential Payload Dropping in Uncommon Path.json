@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "72cf6e33-c02f-44ed-92b9-4e8737436089",
+  "name": "Pikabot Process Injection and Potential Payload Dropping in Uncommon Path",
+  "description": "Detects potential process injection of ctfmon.exe together with potential payload dropping / execution from a suspicious JAR File",
+  "filterSets": [
+    [
+      {
+        "id": "9b6e06f9-871f-47af-8148-9b667a285b74",
+        "name": "Ctfmon Process Injection",
+        "highlight": true
+      },
+      {
+        "id": "323e2d49-90fd-4a90-8f8e-e6878d31169b",
+        "name": "Suspicious Executable on Uncommon Path",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/04/24",
+  "lastUpdate": "2024-05-02T07:44:56.000Z"
+}

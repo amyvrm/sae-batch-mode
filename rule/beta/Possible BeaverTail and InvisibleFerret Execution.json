@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ebeb1466-918b-4152-a867-8513cbacedba",
+  "name": "Possible BeaverTail and InvisibleFerret Execution",
+  "description": "Detects unusual process executions indicative of BeaverTail and InvisibleFerret malware",
+  "filterSets": [
+    [
+      {
+        "id": "871a80ed-7855-458c-90d7-d61c93fc3e06",
+        "name": "Possible BeaverTail and InvisibleFerret Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2025-02-24T17:12:15.000Z",
+  "author": "Sherif Magdy",
+  "team": "MENA-IR",
+  "date": "2025/02/23"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4c9d4c92-0104-4a0b-a080-5c866c5da433",
+  "name": "AWS IAM List Attached User Policies",
+  "description": "Detected listing attached user policies",
+  "filterSets": [
+    [
+      {
+        "id": "9e2a2c75-abb8-4480-bb8e-6df7e2d6aaba",
+        "name": "AWS IAM List Attached User Policies",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/09/09",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

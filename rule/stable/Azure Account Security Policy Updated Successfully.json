@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ba0f0309-851a-4021-be69-401514ca55be",
+  "name": "Azure Account Security Policy Updated Successfully",
+  "description": "Detects successful update of an Azure account security policy which may indicate an attacker deliberately weakening security controls",
+  "filterSets": [
+    [
+      {
+        "id": "0feb8aca-a83a-4b24-a050-c9204b061b19",
+        "name": "Azure Account Security Policy Updated Successfully",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Nathaniel Ragasa",
+  "team": "SAE Threat Expert",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-23T02:21:40.000Z"
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bef0416b-9ba8-406a-a326-6d31e9ed3a94",
+  "name": "Privilege Escalation in Container",
+  "description": "Detects various privilege escalation attempts.",
+  "filterSets": [
+    [
+      {
+        "id": "de13bf82-779d-5658-b016-70795ada18d6",
+        "name": "Sudo Privilege Escalation in the Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "17ba5e61-9c41-555e-85c9-40db2b5482be",
+        "name": "Polkit Privilege Escalation in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/06/21",
+  "lastUpdate": "2025-07-29T02:52:34.000Z"
+}

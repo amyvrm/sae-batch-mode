@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "77ca9115-b3e3-45b2-8997-9518a2b5f5a4",
+  "name": "CrowdStrike Pattern Disposition - Process Prevented",
+  "description": "CrowdStrike detection for Prevented Process",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "8d2fd549-b63e-48b8-b65b-a8d7aa261b7d",
+      "name": "CrowdStrike Pattern Disposition - Process Prevented",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-27T09:17:05.000Z"
+}

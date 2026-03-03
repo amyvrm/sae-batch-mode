@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "37dbd43b-ece6-4661-a03a-02b1b888dd14",
+  "name": "TrustedPath UAC Bypass Pattern",
+  "description": "Detects indicators of a UAC bypass method by mocking directories which could lead to privilege escalation.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "21be1d4e-ba91-4f79-8de5-2786bf95ed64",
+      "name": "TrustedPath UAC Bypass Pattern",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1548.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/05/05",
+  "lastUpdate": "2025-05-09T06:56:09.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c743c28e-d3ae-11ed-afa1-0242ac120002",
+  "name": "AWS EC2 Successful Describe Instances",
+  "description": "Detected AWS EC2 Successful Describe Instances.",
+  "filterSets": [
+    [
+      {
+        "id": "7215062f-c8a7-425e-a08e-f30b825c0d3f",
+        "name": "AWS EC2 Successful Describe Instances",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/04/05",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

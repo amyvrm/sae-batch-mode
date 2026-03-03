@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e49a836b-2af9-4206-a7b1-a845666f1333",
+  "name": "Attack Pattern for rule 4125",
+  "description": "Detects attack pattern for DDI Rule 4125",
+  "filterSets": [
+    [
+      {
+        "id": "a722b1ed-b859-5726-8dac-e0a0b22a6a8c",
+        "name": "Mitel Audio RCE Exploit HTTP (Request) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a49508e1-095e-57e1-af6e-b19e10a40291",
+        "name": "Mitel Audio RCE Exploit HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Harshali Mugutrao",
+  "team": "Cloud One",
+  "date": "2022/12/22",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

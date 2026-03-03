@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5219c850-66b0-49d3-8fe3-ad2a184ad2bf",
+  "name": "AWS SageMaker Notebook Instance Created With Direct Internet Access",
+  "description": "This Model identifies the creation of a Amazon SageMaker Notebook instance with direct internet access enabled. Such instances can be vulnerable to threats from the internet, including malicious packages or unauthorized access that could lead to data exposure or lateral movement within the AWS account.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "7f3768de-0046-49b5-b8bd-e03a97d645b1",
+      "name": "AWS SageMaker Notebook Instance Created With Direct Internet Access",
+      "score": 1,
+      "sequence": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "atlas.aml.t0049"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S and Yash Verma",
+  "team": "Cloud One",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

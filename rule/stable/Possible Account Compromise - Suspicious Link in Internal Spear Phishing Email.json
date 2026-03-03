@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5fe839d5-0a63-4c30-b08f-0061a9339c61",
+  "name": "Possible Account Compromise - Suspicious Link in Internal Spear Phishing Email",
+  "description": "A suspicious URL associated with phishing attacks was detected in an internal email message, which may indicate a compromised account.",
+  "filterSets": [
+    [
+      {
+        "id": "94ba80fa-4548-44ea-b618-c1b30efa2048",
+        "name": "Possible Account Compromise - Suspicious Link in Internal Spear Phishing Email",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Marshall Chen",
+  "team": "Jaguar",
+  "date": "2020/11/05",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6e79d833-6fcd-498d-ad62-be030b07ef11",
+  "name": "Application Control Protocol Enforcement",
+  "description": "Fortinet detection - Application control protocol enforcement",
+  "filterSets": [
+    [
+      {
+        "id": "00176afc-f850-4065-afd3-56250c520445",
+        "name": "Application Control Protocol Enforcement",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

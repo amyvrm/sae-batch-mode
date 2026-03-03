@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a58de906-49a9-41ce-88cd-4c1d9883b881",
+  "name": "Windows RDP Event Logs Cleared",
+  "description": "Windows RDP event logs have been cleared. Adversaries may clear event logs to hide lateral movement evidence.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f82dba2b-7fe1-43d3-a1b9-ff41c110c528",
+      "name": "Windows RDP Event Logs Cleared",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1070.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/07/08",
+  "lastUpdate": "2026-01-15T12:12:03.000Z"
+}

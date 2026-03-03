@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2973a50a-c9e0-4a41-ae89-cfb3c3fceb75",
+  "name": "Possible BloodHound Process Execution",
+  "description": "Microsoft Detection for Possible BloodHound Process Execution",
+  "filterSets": [
+    [
+      {
+        "id": "3b65f851-e1e1-452a-96e7-76d8e54f1f07",
+        "name": "Possible BloodHound Process Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/13",
+  "lastUpdate": "2025-06-17T06:21:09.000Z"
+}

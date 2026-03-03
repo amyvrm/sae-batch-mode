@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c6305d88-3322-11ef-9454-0242ac120002",
+  "name": "Suspicious Process Execution via PowerShell",
+  "description": "Detects a process created via PowerShell in a hidden window.",
+  "filterSets": [
+    [
+      {
+        "id": "b5a77744-3322-11ef-9454-0242ac120002",
+        "name": "PowerShell Decoded Base64 Hidden WindowStyle Script Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/06/25",
+  "lastUpdate": "2025-01-22T19:14:24.000Z"
+}

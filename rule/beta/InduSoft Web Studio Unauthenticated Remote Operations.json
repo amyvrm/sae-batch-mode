@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "40e76158-4429-4f00-8e57-98c24d43a232",
+  "name": "InduSoft Web Studio Unauthenticated Remote Operations",
+  "description": "Detects unauthenticated remote operations targeting InduSoft Web Studio systems in Check Point SmartDefense environments, which may indicate exploitation attempts of known vulnerabilities.",
+  "filterSets": [
+    [
+      {
+        "id": "eb4041eb-4764-47cb-b3f4-e8985cb131d5",
+        "name": "InduSoft Web Studio Unauthenticated Remote Operations",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Sigma Protocol AI",
+  "team": "Third Party Operations",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-21T07:48:31.000Z"
+}

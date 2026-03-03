@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01b156ce-2308-422f-82fd-cc919237feec",
+  "name": "Suspicious Certutil File Download from Obfuscated Urls",
+  "description": "Detects use of certutil.exe to download executables from obfuscated .icu or .tech domains.",
+  "filterSets": [
+    [
+      {
+        "id": "c771f9f8-7ef8-46c2-9c84-22ed4ad36a12",
+        "name": "Suspicious Certutil File Download from Obfuscated Urls",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Shaun Galura & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/08/12",
+  "lastUpdate": "2025-08-12T08:19:00.000Z"
+}

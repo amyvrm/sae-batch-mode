@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "924bd931-ab4c-40f2-8f4b-237576bf24da",
+  "name": "New Binary Executed in Container",
+  "description": "A new binary has been executed and it is not included in the base image.",
+  "filterSets": [
+    [
+      {
+        "id": "5162f8bb-3f2d-4373-95fd-0c1f4ea43dfb",
+        "name": "New Binary Executed in Container - ECS",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "066278d7-cb10-4b13-9b8c-1e276f03efc4",
+        "name": "New Binary Executed in Container - K8S",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "eb26b185-c9b3-4de7-ae62-eeccecc31c51",
+        "name": "New Suspicious Binary Executed in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/03/06",
+  "lastUpdate": "2026-01-19T13:44:04.000Z"
+}

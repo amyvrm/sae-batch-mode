@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f3608b0a-cbc3-4647-8bfa-e59ba9dadc54",
+  "name": "Conhost Process Establishing External Network Connection",
+  "description": "Microsoft network detection for a suspicious outbound network connections initiated by the Windows Console Host process conhost.exe.",
+  "filterSets": [
+    [
+      {
+        "id": "d893f989-4689-4c29-a289-810be899d16b",
+        "name": "Conhost Process Establishing External Network Connection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/19",
+  "lastUpdate": "2025-09-24T02:24:53.000Z"
+}

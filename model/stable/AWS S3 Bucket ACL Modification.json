@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ba684eac-c832-4941-b17b-19a084a0d1bf",
+  "name": "AWS S3 Bucket ACL Modification",
+  "description": "Modification to an S3 bucket's ACL detected, which may introduce security risks by changing access permissions. Unauthorized changes could expose data publicly or grant unintended control, potentially leading to data exfiltration or privilege escalation. Frequent or unexpected ACL modifications should be reviewed to mitigate the risk of data leaks and unauthorized access.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "1de3a4ff-2934-43fb-b1f1-672e3057bcd7",
+      "name": "AWS S3 Bucket ACL Modification",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/03/20",
+  "lastUpdate": "2025-07-29T15:07:44.000Z"
+}

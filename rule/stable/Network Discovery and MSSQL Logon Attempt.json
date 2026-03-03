@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7d15c520-4bf0-4563-89b9-9aad12e7fff1",
+  "name": "Network Discovery and MSSQL Logon Attempt",
+  "description": "Identified TCP port scan and attempt to logon using MSSQL protocol",
+  "filterSets": [
+    [
+      {
+        "id": "d97b2618-4b89-41f4-b0de-19b52d0f3641",
+        "name": "TCP Port Scanning - Inbound",
+        "highlight": true
+      },
+      {
+        "id": "8470d129-d253-4fe8-a1af-7896a9ff47dd",
+        "name": "Attempted logon to MSSQL protocol",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "411abab5-2ace-45b4-aed4-3cedc3ff42e4",
+        "name": "TCP Port Scanning - Outbound",
+        "highlight": true
+      },
+      {
+        "id": "8470d129-d253-4fe8-a1af-7896a9ff47dd",
+        "name": "Attempted logon to MSSQL protocol",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "50de1cd8-673e-42c7-a845-28da44cf0fce",
+        "name": "Host Sweep",
+        "highlight": true
+      },
+      {
+        "id": "5bc9238e-a3a0-443d-b9f8-558b5c56212d",
+        "name": "MSSQL Login Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "pdi",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-06-21T05:14:40.000Z"
+}

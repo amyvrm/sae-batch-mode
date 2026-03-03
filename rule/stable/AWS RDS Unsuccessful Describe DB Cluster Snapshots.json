@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cb8aebe3-7902-46a9-9aed-1b82402e9703",
+  "name": "AWS RDS Unsuccessful Describe DB Cluster Snapshots",
+  "description": "AWS Event that retrieves information about DB cluster snapshots",
+  "filterSets": [
+    [
+      {
+        "name": "AWS RDS Unsuccessful Describe DB Cluster Snapshots",
+        "id": "b09c5a44-d435-4898-b9fd-c1cc3cede31d",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

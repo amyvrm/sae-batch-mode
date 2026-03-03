@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b7e8fc10-9449-4db3-89a1-39c6bac10a0d",
+  "name": "AWS SSM Successful Patch Group Enumeration",
+  "description": "Flags activity where an entity queries SSM patch groups, potentially for reconnaissance.",
+  "filterSets": [
+    [
+      {
+        "id": "4cf7335d-bc65-4578-9599-8f5683fa8c37",
+        "name": "AWS SSM Successful Patch Group Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "48683ed0-de2a-4ba1-be1d-5940970c3c84",
+  "name": "Suspicious JavaScript Execution via CMD",
+  "description": "Microsoft detection for CMD process that launch cscript.exe with minimized windows to execute JavaScript code. The rule focuses on detecting this behavior of using Windows Script Host to run malicious JavaScript payloads in a concealed manner.",
+  "filterSets": [
+    [
+      {
+        "id": "5a9abfe6-f83a-4aa0-8bce-e88e96a7949a",
+        "name": "Suspicious JavaScript Execution via CMD",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/05",
+  "lastUpdate": "2025-09-11T07:27:07.000Z"
+}

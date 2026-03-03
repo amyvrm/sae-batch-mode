@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0957fae3-83de-46d1-a6f6-0c4360d5a9d1",
+  "name": "AWS SES Successful Get Account",
+  "description": "A successful attempt to obtain information about the email-sending capabilities and status of an account was observed.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS SES Successful Get Account",
+        "id": "c68f5cf7-5fa9-4e44-a45a-062e3c47b86b",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

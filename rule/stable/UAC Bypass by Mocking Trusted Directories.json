@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "63153e94-36bc-4ebf-8eb2-d088edaab23b",
+  "name": "UAC Bypass by Mocking Trusted Directories",
+  "description": "Detects Mocking Trusted Directories To Bypass UAC",
+  "filterSets": [
+    [
+      {
+        "id": "e75df59e-f018-4a99-bd54-3e0ac5b04e77",
+        "name": "Bypass UAC by Mocking Trusted Directories",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Hans Tzou",
+  "team": "LWE",
+  "date": "2022/12/02",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

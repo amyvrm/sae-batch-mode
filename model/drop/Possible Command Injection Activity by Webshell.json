@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f88fea14-ae03-4d7c-931e-6e9f90e4bf56",
+  "name": "Possible Command Injection Activity by Webshell",
+  "description": "Attempts to execute system/O.S. commands after deployment of a webshell were detected on the network.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2993dcb2-3973-4379-8810-c8eab8374619",
+      "name": "Possible Command Injection by Webshell",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 1200,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1505.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "cc84073f-f727-484c-af3c-189f5a93d29a",
+      "name": "Isolate action",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/08/19",
+  "lastUpdate": "2025-10-30T06:54:31.000Z"
+}

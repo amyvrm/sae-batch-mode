@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1ec6f098-734a-4498-a188-882615b14fda",
+  "name": "Suspicious Ransomware Behavior - Linux",
+  "description": "A process performed a ransomware behavior to encrypt files in the system.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "281cbb55-a88f-41b0-a3c7-9f8f41a67bee",
+      "name": "Suspicious Ransomware Behavior - Linux",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1486"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Shawn Liou",
+  "team": "Walzer",
+  "date": "2025/07/11",
+  "lastUpdate": "2025-07-28T10:21:32.000Z"
+}

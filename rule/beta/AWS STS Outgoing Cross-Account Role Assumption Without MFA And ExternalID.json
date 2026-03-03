@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4781f266-f1da-43a3-ba8f-07388c2cc8b2",
+  "name": "AWS STS Outgoing Cross-Account Role Assumption Without MFA And ExternalID",
+  "description": "AWS STS Outgoing Cross-Account Role Assumption Without MFA And ExternalID",
+  "filterSets": [
+    [
+      {
+        "id": "850e9fee-2148-45f8-b7a4-d353a7a2d513",
+        "name": "AWS STS Outgoing Cross-Account Role Assumption Without MFA And ExternalID",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "39b57a82-4f80-11ed-bdc3-0242ac120002",
+  "name": "AWS EC2 Describe Security Group",
+  "description": "Detects AWS API Call To Describe EC2 Security Groups",
+  "filterSets": [
+    [
+      {
+        "id": "529eca5e-756a-4796-b797-4677aa672862",
+        "name": "AWS EC2 Describe Security Group",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/10/19",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

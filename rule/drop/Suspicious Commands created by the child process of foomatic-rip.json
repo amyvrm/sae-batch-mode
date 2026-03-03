@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e639627d-462d-4a76-beb6-27e8f9018c9b",
+  "name": "Suspicious Commands created by the child process of foomatic-rip",
+  "description": "The child process of foomatic-rip executes suspicious commands. This may indicate the exploitation of the CUPS vulnerability (CVE-2024-47176)",
+  "filterSets": [
+    [
+      {
+        "id": "0192444f-5b56-75e3-95b5-f1d119e8ac6f",
+        "name": "Suspicious Commands created by the child process of foomatic-rip",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 200,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/09/30",
+  "lastUpdate": "2025-06-23T16:19:21.000Z"
+}

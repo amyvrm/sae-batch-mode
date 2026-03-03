@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a37beb52-1d1b-48a2-856e-6017e92fdd15",
+  "name": "AWS SES Unsuccessful Get Account",
+  "description": "An unsuccessful attempt to obtain information about the email-sending capabilities and status of an account was observed.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS SES Unsuccessful Get Account",
+        "id": "416a8721-6bf7-4abe-9d0a-611819bcc1e2",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

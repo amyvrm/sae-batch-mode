@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "78b4c051-c075-4654-b4d7-dcc5195f5518",
+  "name": "HTTP or HTTPS Connection via Rundll32",
+  "description": "Connection through HTTP has been established from Rundll32 process",
+  "filterSets": [
+    [
+      {
+        "id": "b96a845f-c729-4071-a557-b8c607764029",
+        "name": "HTTP or HTTPS Connection via Rundll32",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2024/11/21",
+  "lastUpdate": "2024-12-04T12:16:57.000Z"
+}

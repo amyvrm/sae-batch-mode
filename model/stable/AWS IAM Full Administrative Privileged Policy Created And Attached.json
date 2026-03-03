@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c26cb92e-02b8-424a-9b47-b7e6880d74ed",
+  "name": "AWS IAM Full Administrative Privileged Policy Created And Attached",
+  "description": "Detected Creation of full Administrative Privileged IAM Policy and attached to a user, group or a role , which might give full administrator access to the AWS environment.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "067d5d62-9bb5-11ec-b909-0242ac120002",
+      "name": "AWS Over Privileged IAM Policy Created",
+      "score": 1
+    },
+    {
+      "id": "d1e20ab8-9bc7-11ec-b909-0242ac120002",
+      "name": "AWS IAM Policy Attached To User Or Role Or Group",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078",
+    "mitre.t1098.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/03/08",
+  "lastUpdate": "2025-09-12T08:03:37.000Z"
+}

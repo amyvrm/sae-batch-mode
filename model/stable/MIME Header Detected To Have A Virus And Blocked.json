@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3ab7eb48-c03e-4f51-a11d-a60cce86bb5a",
+  "name": "MIME Header Detected To Have A Virus And Blocked",
+  "description": "Fortinet detection - MIME header detected to have a virus and blocked",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "4d4181b5-7374-44be-8c56-0753baa7f6a9",
+      "name": "MIME Header Detected To Have A Virus And Blocked",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-08-26T20:35:33.000Z"
+}

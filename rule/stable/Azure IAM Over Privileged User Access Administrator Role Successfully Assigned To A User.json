@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7ab4bc7f-e4d8-42b4-9adf-8874532af97c",
+  "name": "Azure IAM Privileged User Access Administrator Role Successfully Assigned To A User",
+  "description": "Detects the assignment of an over-privileged user access administrator role to a user within Azure IAM",
+  "filterSets": [
+    [
+      {
+        "id": "d8a870ef-c29e-48d5-82e4-62079905d2e3",
+        "name": "Azure IAM Role Assigned To A User",
+        "highlight": true
+      },
+      {
+        "id": "de2b7167-98d0-4b6a-9354-b65d9b7076f0",
+        "name": "Azure IAM Over Privileged User Access Administrator Role Assignment Operation Started",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "d8a870ef-c29e-48d5-82e4-62079905d2e3.correlationId equals de2b7167-98d0-4b6a-9354-b65d9b7076f0.correlationId"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/06/02",
+  "lastUpdate": "2025-07-16T07:28:13.000Z"
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9853f1fd-15e7-477c-967d-b65ed0e6b619",
+  "name": "Possible CobaltStrike Decoded Powershell",
+  "description": "Detection of CobaltStrike decoded powershell.",
+  "filterSets": [
+    [
+      {
+        "id": "607f5953-44c8-491e-84c2-912651908253",
+        "name": "Possible CobaltStrike Decoded Powershell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/07/29",
+  "lastUpdate": "2024-08-15T10:11:08.000Z"
+}

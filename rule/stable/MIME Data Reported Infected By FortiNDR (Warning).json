@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b66539de-0b1d-4c0e-ad59-6fd6e3740f7d",
+  "name": "MIME Data Reported Infected By FortiNDR (Warning)",
+  "description": "Fortinet detection - MIME data reported infected by FortiNDR (warning)",
+  "filterSets": [
+    [
+      {
+        "id": "eea439eb-4f7d-4eb4-992d-77d21d09d4e4",
+        "name": "MIME Data Reported Infected By FortiNDR (Warning)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

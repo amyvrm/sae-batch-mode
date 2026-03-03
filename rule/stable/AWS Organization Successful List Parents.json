@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4d053f60-feb9-4787-a3eb-f3fe8cac3c52",
+  "name": "AWS Organization Successful List Parents",
+  "description": "AWS api to list organization parent",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Organization Successful List Parents",
+        "id": "a8d8898b-a9ed-4974-ab80-fc6db82ba638",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/20",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

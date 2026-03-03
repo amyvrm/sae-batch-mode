@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c482f440-dc54-49f2-9cba-3e1aac1a5186",
+  "name": "Driver Loaded from Suspicious Location",
+  "description": "A driver file (.sys) located in a suspicious temporary or world-writable directory (e.g., Temp folders, C:\\Users\\Public, C:\\ProgramData) was loaded into kernel memory. This behavior may indicate successful exploitation via BYOVD attacks or malicious driver execution.",
+  "filterSets": [
+    [
+      {
+        "id": "b485ea20-c39e-4868-be90-4e5b7c128d44",
+        "name": "Driver Loaded from Suspicious Location",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes",
+      "sao",
+      "pao"
+    ]
+  ],
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/02/09",
+  "lastUpdate": "2026-02-11T08:14:15.000Z"
+}

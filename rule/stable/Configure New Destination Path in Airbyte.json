@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5fb98e3a-6826-4f7f-abc6-3d4d44c4bffe",
+  "name": "Configure New Destination Path in Airbyte",
+  "description": "Airbyte was creating a new destination path over HTTP protocol, was detected",
+  "filterSets": [
+    [
+      {
+        "id": "64556c9d-b517-431f-adbf-52a556a924dd",
+        "name": "Configure New Destination Path in Airbyte",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Eric H Shih",
+  "team": "DDI",
+  "date": "2025/12/09",
+  "lastUpdate": "2025-12-09T10:24:06.000Z"
+}

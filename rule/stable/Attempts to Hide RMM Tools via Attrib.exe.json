@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0979f619-20b3-44da-ac3b-6e041eb8a0be",
+  "name": "Attempts to Hide RMM Tools via Attrib.exe",
+  "description": "Attempts to hide Remote Monitoring and Management(RMM) tools via attrib.exe",
+  "filterSets": [
+    [
+      {
+        "id": "107bbf6d-8b96-4a87-9fbd-a5ac6dd82f53",
+        "name": "Attempts to Hide RMM Tools via Attrib.exe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/21",
+  "lastUpdate": "2025-03-28T05:24:14.000Z"
+}

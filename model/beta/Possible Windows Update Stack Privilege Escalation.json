@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aa903475-17fd-4057-878e-8494695292f8",
+  "name": "Possible Windows Update Stack Privilege Escalation",
+  "description": "This model detects potential attempts to exploit the Windows Update Stack to escalate privileges. Such activities are commonly associated with attacks where adversaries leverage vulnerabilities in the Windows Update process to gain elevated access rights.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "91b90973-a8c2-4446-8c41-134af37a670e",
+      "name": "Possible Windows Update Stack Privilege Escalation",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "cve.2025.21204",
+    "mitre.t1068"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "silent": false,
+  "globalModel": true,
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/05/02",
+  "lastUpdate": "2025-05-08T07:14:39.000Z"
+}

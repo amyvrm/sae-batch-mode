@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f012f089-1df0-4acb-bd26-f9616f999058",
+  "name": "CobaltStrike Decoded Powershell Variant 1",
+  "description": "Detection of decoded cobaltstrike powershell stager",
+  "filterSets": [
+    [
+      {
+        "id": "b889a21f-5e03-4e7b-be6f-9fc091404389",
+        "name": "CobaltStrike Decoded Powershell Variant 1",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/03/12",
+  "lastUpdate": "2024-03-14T10:08:08.000Z"
+}

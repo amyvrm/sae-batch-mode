@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4b16764-4793-4472-b362-f34afc697e51",
+  "name": "AWS Organization Successful Describe Organization",
+  "description": "AWS api to query describe organization",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Organization Successful Describe Organization",
+        "id": "f25932de-386f-4603-a63e-5a0c3f72edf3",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/20",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "056d90a6-7fd6-4c8e-8249-2db805ece4ff",
+  "name": "Script Engine Executes Remote HTML Application via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection identifying mshta.exe execution with command lines referencing remote URLs (HTTP/HTTPS). This behavior is commonly used to download and execute scripts or payloads directly from external servers.",
+  "filterSets": [
+    [
+      {
+        "id": "a03c08ae-2667-4050-97d7-90f00073ec1a",
+        "name": "Script Engine Executes Remote HTML Application via Microsoft Telemetry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/10",
+  "lastUpdate": "2025-11-17T03:21:21.000Z"
+}

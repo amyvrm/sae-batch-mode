@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bc4ea45f-4c28-40b2-8e98-d0629dd6df24",
+  "name": "Suspicious File Dropped in USOShared Folder",
+  "description": "Detects suspicious file dropping in Update Session Orchestrator (USO) service folder which indicates possible sign of attack. This folder normally contains .etl files only.",
+  "filterSets": [
+    [
+      {
+        "id": "cb9fa338-62b7-4ef7-9f36-2efea81a6650",
+        "name": "Suspicious File Dropped in USOShared Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/12/08",
+  "lastUpdate": "2026-01-09T03:45:53.000Z"
+}

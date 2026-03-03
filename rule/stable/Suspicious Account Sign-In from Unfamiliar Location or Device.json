@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8acd5e18-ce86-4644-b789-d65903679271",
+  "name": "Suspicious Account Sign-In from Unfamiliar Location or Device",
+  "description": "A suspicious sign-in was detected for this account from an IP address, application, browser, or country not seen in the past seven days.",
+  "filterSets": [
+    [
+      {
+        "id": "4f763d61-2b82-5cb7-8a8f-5bf89bb299bc",
+        "name": "Suspicious Account Sign-In from Unfamiliar Location or Device",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "aad"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2025/04/30",
+  "lastUpdate": "2025-06-16T10:21:16.000Z"
+}

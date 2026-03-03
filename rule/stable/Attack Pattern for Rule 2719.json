@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "74c15759-2fcd-41cb-ad27-c59000af7566",
+  "name": "Attack Pattern for Rule 2719",
+  "description": "Detects attack pattern for DDI rule 2719",
+  "filterSets": [
+    [
+      {
+        "id": "b767ca65-1d2b-5a42-9bbd-742495137a85",
+        "name": "WebScript Injection - HTTP (Request)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Harshali Mugutrao",
+  "team": "Cloud One",
+  "date": "2022/09/02",
+  "lastUpdate": "2025-08-29T10:12:13.000Z"
+}

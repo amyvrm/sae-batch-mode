@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "32b38c0a-0dd7-4846-9e0f-fde1319af797",
+  "name": "SSH2 Login Attempt",
+  "description": "Palo Alto Vulnerability detection - SSH2 Login Attempt",
+  "filterSets": [
+    [
+      {
+        "id": "cd770404-5267-4a3f-b767-52be6aa3ca8b",
+        "name": "SSH2 Login Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-07-31T10:41:34.000Z"
+}

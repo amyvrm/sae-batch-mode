@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7a2b7b27-03f2-44e9-917a-e237132e9334",
+  "name": "HTTP and HTTPS Activity Associated with Ransomware",
+  "description": "Network activity over HTTP and HTTPS linked to CRILOCK and CAPHAW respectively was observed, indicating potential malicious behavior.",
+  "filterSets": [
+    [
+      {
+        "id": "1d245482-0d2a-5955-a351-f43ac4e4d249",
+        "name": "Caphaw Malicious Certificate HTTPS - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9e47136d-a38b-5c79-9e89-7c7af288ba80",
+        "name": "Crilock Ransomware HTTP (Request) Variant 2 - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Bersamira",
+  "team": "DDI",
+  "date": "2025/03/18",
+  "lastUpdate": "2025-04-04T03:14:04.000Z"
+}

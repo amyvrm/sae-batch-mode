@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1b3a037c-5343-4923-beae-ad00e7246c03",
+  "name": "Possible Token Manipulation via Invoke-GrabTheHash",
+  "description": "Detects the execution of Invoke-GrabTheHash script used for extracting password hashes from a compromised system. It leverages various techniques to capture these hashes, which can then be used for further attacks such as lateral movement or privilege escalation within a network.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "febeaede-fcba-42a5-910d-4c42bfd392f9",
+      "name": "Possible Token Manipulation via Invoke-GrabTheHash",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1087.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mary Joy Ramos & Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2024/10/31",
+  "lastUpdate": "2025-05-19T09:18:09.000Z"
+}

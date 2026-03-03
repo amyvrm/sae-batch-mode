@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "72505010-c2d5-49c2-8e5e-5ec7d71d0f7b",
+  "name": "File Decoded from Base64 or Hex via Legitimate Process",
+  "description": "Detects the execution of certutil with either the 'decode' or 'decodehex' flags to decode base64 or hex encoded files. This can be abused by attackers to decode an encoded payload before execution",
+  "filterSets": [
+    [
+      {
+        "id": "205346e7-ddaf-49c9-87c6-57b974800572",
+        "name": "File Decoded from Base64 or Hex via Legitimate Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/10/10",
+  "lastUpdate": "2026-01-19T01:54:27.000Z"
+}

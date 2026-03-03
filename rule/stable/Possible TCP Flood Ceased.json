@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "76a3aa63-9907-4c55-ac69-1faac2f463ad",
+  "name": "Possible TCP Flood Ceased",
+  "description": "SonicWall Detection - Possible TCP Flood on IF %s has ceased",
+  "filterSets": [
+    [
+      {
+        "id": "9d692948-562d-4353-a869-6ca12faa44b1",
+        "name": "Possible TCP Flood Ceased",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "abc25e27-376c-4ea8-9733-e78b19dfe17d",
+  "name": "CrowdStrike Pattern Disposition - File Detection and Quarantined",
+  "description": "CrowdStrike Alert for File Detection and Quarantined",
+  "filterSets": [
+    [
+      {
+        "id": "4e2cbce1-2d5a-4ceb-8692-ab8e1e947e8b",
+        "name": "CrowdStrike Pattern Disposition - File Detection and Quarantined",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-27T09:17:05.000Z"
+}

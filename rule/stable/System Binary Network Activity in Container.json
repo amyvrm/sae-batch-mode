@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "09f2e120-6c0a-4536-af44-c6c86075dffb",
+  "name": "System Binary Network Activity in Container",
+  "description": "Identifies network activity originating from system binary within container environment. This atypical behavior may indicate unauthorized data exfiltration or other malicious activity.",
+  "filterSets": [
+    [
+      {
+        "id": "ae327689-5811-5d8f-a01a-603bd673feee",
+        "name": "System Binary Network Activity in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/07/23",
+  "lastUpdate": "2026-01-20T09:00:45.000Z"
+}

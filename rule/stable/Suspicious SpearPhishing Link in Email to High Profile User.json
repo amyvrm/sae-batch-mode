@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fdd537c6-1c9f-4e85-b138-82c29df91aa6",
+  "name": "Suspicious SpearPhishing Link in Email to High Profile User",
+  "description": "Suspicious SpearPhishing Link in Email to High Profile User. [Delayed alert: Batch process detection]",
+  "filterSets": [
+    [
+      {
+        "id": "c694f355-e819-41bf-b6b7-feaa6321d0e8",
+        "name": "Spearphishing Link Addressed by RetroScan - High Profile User",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Ashlie Lin",
+  "team": "Jaguar",
+  "date": "2020/07/08",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

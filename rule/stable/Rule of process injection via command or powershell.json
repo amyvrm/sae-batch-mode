@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7a577218-c213-40f6-8c3d-dea9aff63362",
+  "name": "Process Injection via CMD or Powershell",
+  "description": "Detects process injection via CMD or Powershell.",
+  "filterSets": [
+    [
+      {
+        "id": "75906072-a904-46ce-9b85-f73d44cec502",
+        "name": "Possible Process Hollowing via Powershell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3344ff71-7f5c-492b-ad60-1e5723004bfb",
+        "name": "Process Injection To System32 Executable via CMD",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Manabu Iwata",
+  "team": "JP-IR",
+  "date": "2023/03/27",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e6a96b28-0bc4-438a-be0b-e1cc68f31730",
+  "name": "Drop and Install Android Remote Access Trojan",
+  "description": "Drop and install Android remote access trojan",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c4968da5-470a-4d87-9fae-ef8ef85b87dc",
+      "name": "Drop Android Payload to External Storage",
+      "score": 1
+    },
+    {
+      "id": "6bcecaea-e16f-45c9-90c7-a43b621662c6",
+      "name": "Detect Android Remote Access Trojan",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "ams"
+    ]
+  ],
+  "tags": [
+    "mitre.t1544",
+    "mitre.t1636.002",
+    "mitre.t1636.003",
+    "mitre.t1636.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 8,
+  "globalModel": true,
+  "silent": false,
+  "author": "Chunbo Song",
+  "team": "MTRT",
+  "date": "2023/03/19",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

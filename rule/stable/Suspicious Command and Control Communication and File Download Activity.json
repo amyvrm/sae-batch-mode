@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a31ca818-40ca-41fa-b923-0b60b2714a60",
+  "name": "Suspicious Command and Control Communication and File Download Activity",
+  "description": "Detects connection and file download from a command and control used by DPRK.",
+  "filterSets": [
+    [
+      {
+        "id": "d89acb42-db8b-4d7a-a487-0d58131fb1c1",
+        "name": "Suspicious Command and Control Connection Using Web Protocols Activity",
+        "highlight": true
+      },
+      {
+        "id": "4765309d-1cc8-4f54-b53d-a2edf4725814",
+        "name": "File Download from Suspicious Command and Control Server",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/01/21",
+  "lastUpdate": "2025-05-19T04:18:01.000Z"
+}

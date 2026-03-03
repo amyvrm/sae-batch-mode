@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f2506619-c4fd-4d72-a0dc-9f67cf0f4cbe",
+  "name": "Web Application Firewall Erased Application By Signature",
+  "description": "Fortinet detection - Web application firewall erased application by signature",
+  "filterSets": [
+    [
+      {
+        "id": "9ab66c6a-587f-4a2c-8bf6-6e76bbd840cb",
+        "name": "Web Application Firewall Erased Application By Signature",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

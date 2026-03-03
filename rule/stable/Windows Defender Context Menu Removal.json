@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4f21b2c5-70ee-4b71-bd45-e5dbeb299933",
+  "name": "Windows Defender Context Menu Removal",
+  "description": "Remove the \"Scan with Microsoft Defender\" option that appears when a user right-clicks on a file, folder, or drive.",
+  "filterSets": [
+    [
+      {
+        "id": "af553895-5407-46b8-b7e9-142f809f55bf",
+        "name": "Windows Defender Context Menu Removal via PowerShell or Reg.exe",
+        "highlight": true
+      },
+      {
+        "id": "8e9ddd67-2344-4641-85ad-2a9e5332be53",
+        "name": "Delete Defender Scan Shellex Context Menu Registry Key",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/11/13",
+  "lastUpdate": "2025-12-01T09:49:06.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7d57c8c6-bbab-4074-94ca-23f6de3fabe4",
+  "name": "AWS EBS Snapshot Copy Activity",
+  "description": "Monitors for copying of Amazon EBS snapshots, which could indicate an attempt to exfiltrate data or create unauthorized backups.",
+  "filterSets": [
+    [
+      {
+        "id": "c07635c9-6e3a-4e9a-b7b2-bd500578c80b",
+        "name": "AWS EBS Snapshot Copy Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/28",
+  "lastUpdate": "2025-09-08T06:00:50.000Z"
+}

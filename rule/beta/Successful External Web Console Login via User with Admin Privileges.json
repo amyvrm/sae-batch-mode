@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4197d07-569e-4139-9a94-f01456359df7",
+  "name": "Successful External Web Console Login via User with Admin Privileges",
+  "description": "Fortinet detection - A user with Admin privileges has successfully logged in from the internet",
+  "filterSets": [
+    [
+      {
+        "id": "9b91bf30-0337-42a4-b9c5-d7db8dfaf743",
+        "name": "Successful External Web Console Login via User with Admin Privileges",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/03/12",
+  "lastUpdate": "2025-06-10T08:44:56.000Z"
+}

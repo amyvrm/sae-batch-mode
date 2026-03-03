@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4a8fe4b7-d8ef-4845-9523-9b01c37db8bf",
+  "name": "Potential DNS Packet Anomaly via UDP",
+  "description": "Cisco detection for the label length exceeds bytes in a UDP DNS packet.",
+  "filterSets": [
+    [
+      {
+        "id": "079ce974-8d35-5b64-be25-e657d0f83c7a",
+        "name": "Potential DNS Packet Anomaly via UDP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-03T09:21:48.000Z"
+}

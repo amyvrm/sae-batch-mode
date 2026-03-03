@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d6e4eb9e-2384-4555-b62b-45c04b9c0998",
+  "name": "E-mail Attachment",
+  "description": "SonicWall Detection - Forbidden E-Mail attachment deleted",
+  "filterSets": [
+    [
+      {
+        "id": "bcb33c17-515a-40e3-bdac-c71c79a6db32",
+        "name": "E-mail Attachment",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

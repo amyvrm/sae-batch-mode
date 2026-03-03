@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "719394ec-8fc7-4db4-9ffe-92f004a464fc",
+  "name": "AWS GuardDuty Detector Disabled",
+  "description": "Detected disabling of AWS GuardDuty detector which might indicate an attacker trying to disable GuardDuty defenses to evade detection which might lead to further undetected security incidents and compromises, potentially disrupting operational workflows.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS GuardDuty Detector Disabled",
+        "id": "a746f6a5-15aa-47dd-86bd-ac08202ca934",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/01/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b3274ec2-165d-4a82-ac6b-78d9e55cc512",
+  "name": "Suspicious Dropping of FVEAPI.dll via Suspicious Processes",
+  "description": "Replacing of legitimate FVEAPI.dll through suspicious processes.",
+  "filterSets": [
+    [
+      {
+        "id": "278582c0-eede-4dbb-84fe-bb2a4ecbf760",
+        "name": "Suspicious Dropping of FVEAPI.dll via Suspicious Processes",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/04/24",
+  "lastUpdate": "2025-11-04T04:59:18.000Z"
+}

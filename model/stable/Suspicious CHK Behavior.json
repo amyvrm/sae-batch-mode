@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bd71a63a-4ece-4124-b456-db4b6afa036a",
+  "name": "Suspicious CHK Behavior",
+  "description": "Suspicious behavior identified related to CHK files in an attempt to evade detection.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "4da5464c-b7ed-4698-9430-6acace96fe90",
+      "name": "Suspicious CHK Behavior",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1074"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Lucas Silva & Jack Walsh",
+  "team": "US-IR",
+  "date": "2025/03/19",
+  "lastUpdate": "2025-05-26T06:38:53.000Z"
+}

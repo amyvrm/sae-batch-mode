@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8dc2b056-695a-462f-9d84-078a38f625a2",
+  "name": "Outbound Connection by Suspicious Process Command",
+  "description": "Process Command with Suspicious Parameters performing Outbound Connections",
+  "filterSets": [
+    [
+      {
+        "id": "4242d685-ece8-42d6-8f6d-6f6b96228358",
+        "name": "Outbound Connection by Suspicious Process Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Marc Lanzendorfer",
+  "team": "EU-IR",
+  "date": "2024/04/25",
+  "lastUpdate": "2024-05-27T18:06:51.000Z"
+}

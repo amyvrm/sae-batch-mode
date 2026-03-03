@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c414432d-e946-4502-9254-e5aa1a689f3c",
+  "name": "AWS S3 Potential Ransomware Activity via Bulk Download and Deletion",
+  "description": "Identifies potential ransomware behavior involving bulk download and subsequent deletion of S3 objects, indicating possible data exfiltration and destruction.",
+  "filterSets": [
+    [
+      {
+        "id": "658f8f32-6b6e-4fdb-b75d-382c89dc5bd4",
+        "name": "AWS S3 Potential Ransomware Activity via Bulk Download and Deletion",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-22T09:14:38.000Z"
+}

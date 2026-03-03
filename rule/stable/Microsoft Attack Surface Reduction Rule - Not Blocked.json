@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a489fae8-8e85-477d-8f95-6ab68169710d",
+  "name": "Microsoft Attack Surface Reduction Rule - Not Blocked",
+  "description": "Microsoft Defender for Endpoint detected suspicious activity through Attack Surface Reduction rules which monitor and block potentially malicious behaviors on Windows systems",
+  "filterSets": [
+    [
+      {
+        "id": "9f1a90db-ce2c-4d86-aa55-93a498e3d895",
+        "name": "Microsoft Attack Surface Reduction Rule - Not Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/10/15",
+  "lastUpdate": "2025-10-27T05:19:18.000Z"
+}

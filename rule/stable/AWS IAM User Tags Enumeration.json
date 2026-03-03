@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aaaa9598-8b8b-4b66-9149-5093b560e1cf",
+  "name": "AWS IAM User Tags Enumeration",
+  "description": "Monitors enumeration of IAM user tags, which could indicate legitimate user management activities or reconnaissance attempts to understand account user metadata and organizational structure for potential privilege escalation or lateral movement attacks.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS IAM User Tags Enumeration",
+        "id": "794bc05e-420a-490d-a909-03babe525c23",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T11:20:55.000Z"
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3a2f348b-e531-4b29-85b4-75741a09dd21",
+  "name": "Possible Pikabot Behavior",
+  "description": "Detects potential process injection of ctfmon.exe together with the suspicious invocation / execution of regsvr32 or rundll32 whigh might lead to malicious payload dropping",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "fce6bce7-7eec-4cc0-afe9-3cb7278683d7",
+      "name": "Pikabot Process Injection and Suspicious Invocation of Rundll32 or Regsvr32",
+      "score": 1
+    },
+    {
+      "id": "72cf6e33-c02f-44ed-92b9-4e8737436089",
+      "name": "Pikabot Process Injection and Potential Payload Dropping in Uncommon Path",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055",
+    "mitre.t1140",
+    "mitre.t1059",
+    "mitre.t1218.011",
+    "mitre.t1204.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/04/24",
+  "lastUpdate": "2024-09-26T16:12:51.000Z"
+}

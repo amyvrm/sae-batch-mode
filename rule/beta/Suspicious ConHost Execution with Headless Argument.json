@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fde13b5d-10d7-43b5-8022-78b3e7cf6555",
+  "name": "Suspicious ConHost Execution with Headless Argument",
+  "description": "Detection of a conhost process with headless argument leading to a possible malicious browser credential access.",
+  "filterSets": [
+    [
+      {
+        "id": "0018c9b9-4e3d-4e11-9e69-9230bf45b4aa",
+        "name": "Powershell Executed From Headless ConHost Process",
+        "highlight": true
+      },
+      {
+        "id": "873245d9-7155-4b25-8274-8639404b1fa6",
+        "name": "Suspicious Access to Browser Login Data",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "TAD Service Ops",
+  "date": "2024/11/21",
+  "lastUpdate": "2024-12-18T05:35:06.000Z"
+}

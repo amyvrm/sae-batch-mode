@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b851afe9-46d6-4953-bb32-5d9c3eb3a998",
+  "name": "Possible Info Stealer via DLL Side Loading",
+  "description": "Detects DLL side loading associated with the OpenVPN executable, which launches a Chromium-based browser with the remote debugging port set. This behavior is linked to information stealers, such as Lumma Stealer, and may indicate attempts to exfiltrate sensitive data.",
+  "filterSets": [
+    [
+      {
+        "id": "fa2c83ef-acca-49b0-89b5-1487421e6db8",
+        "name": "Possible Info Stealer via DLL Side Loading",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Ahmed Kamal & Mohamed Fahmy",
+  "team": "MENA-IR",
+  "date": "2025/12/14",
+  "lastUpdate": "2026-01-12T00:32:46.000Z"
+}

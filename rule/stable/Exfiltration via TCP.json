@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "828c83c2-3825-4251-89b0-6f5c059dac66",
+  "name": "Exfiltration via TCP",
+  "description": "A host is communicating and performing exfiltration via TCP.",
+  "filterSets": [
+    [
+      {
+        "id": "0582f397-2dd4-4a61-9ca3-385c2c0d6e6c",
+        "name": "Exfiltration via TCP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Arjun Baltazar",
+  "team": "CSG",
+  "date": "2024/01/10",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

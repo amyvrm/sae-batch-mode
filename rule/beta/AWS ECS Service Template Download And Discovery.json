@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1fca55cc-9ef7-4938-b771-b838365eb805",
+  "name": "AWS ECS Service Template Download And Discovery",
+  "description": "Detected AWS ECS Service Template Download And Discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "8f66af23-fd13-44e6-b40f-f7dd0cdd8bb6",
+        "name": "AWS ECS Service Template Download And Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/12/19",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

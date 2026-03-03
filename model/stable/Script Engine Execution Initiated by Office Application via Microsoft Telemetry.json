@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6e3f9469-12f5-4df5-97fd-a6b1391bcec5",
+  "name": "Script Engine Execution Initiated by Office Application via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection identifying when mshta.exe is launched by Microsoft Office applications (Word, Excel, PowerPoint, OneNote, Outlook). This may indicate document-based execution, macro abuse, or phishing-related activity.",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "4fc06a9f-1121-4ef9-a6f4-d5ee13eba29e",
+      "name": "Script Engine Execution Initiated by Office Application via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218.005",
+    "mitre.t1566.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/10",
+  "lastUpdate": "2026-01-14T22:47:08.000Z"
+}

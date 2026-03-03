@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "69ac234d-7bb7-4b84-894b-fcc48b5a64a1",
+  "name": "Malicious Domain Access Attempt via Dynamic Filter",
+  "description": "Cisco ASA Detection for Malicious Domain Access Attempt via Dynamic Filter.",
+  "filterSets": [
+    [
+      {
+        "id": "e15f1095-6132-5ccf-976a-340145ed64b2",
+        "name": "Malicious Domain Access Attempt via Dynamic Filter",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/06",
+  "lastUpdate": "2026-02-11T03:25:20.000Z"
+}

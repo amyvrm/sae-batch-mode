@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3b13c369-bda2-4566-92ff-ac12a633af23",
+  "name": "Possible Account Discovery via Invoke-SessionHunter",
+  "description": "Execution of Invoke-SessionHunter tool which identifies and extracts active user sessions on remote computers, and translates these into corresponding usernames.",
+  "filterSets": [
+    [
+      {
+        "id": "19622509-6685-4fd8-b45c-4a21e560fe34",
+        "name": "Possible Account Discovery via Invoke-SessionHunter",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Shaun Eris Galura & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/10/31",
+  "lastUpdate": "2025-04-25T05:18:23.000Z"
+}

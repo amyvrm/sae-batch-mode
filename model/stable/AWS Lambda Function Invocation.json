@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "298c2f1e-2d6c-4aec-8e99-debf755fa587",
+  "name": "AWS Lambda Function Invocation",
+  "description": "An AWS Lambda function invocation was detected, which may be part of normal operations or indicate unauthorized execution. Threat actors can exploit Lambda to run malicious code, exfiltrate data, or escalate privileges. Monitoring these events helps identify suspicious activity and mitigate potential abuse of serverless resources.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "2133096f-ab77-4d7e-a646-48cacd05dd66",
+      "name": "AWS Lambda Function Invocation",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1648"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-08-04T16:22:25.000Z"
+}

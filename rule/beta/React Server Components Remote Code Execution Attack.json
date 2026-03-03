@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1d675653-9313-4587-bbd2-a27dbadc99bf",
+  "name": "React Server Components Remote Code Execution Attack",
+  "description": "Detects React Server Components remote code execution attempts blocked by Check Point SmartDefense, specifically targeting CVE-2025-55182 vulnerabilities through POST requests to potentially compromised web servers",
+  "filterSets": [
+    [
+      {
+        "id": "5f78f677-0ea8-4402-9f06-3eca233afc2f",
+        "name": "React Server Components Remote Code Execution Attack",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Sigma Protocol AI",
+  "team": "Third Party Operations",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-21T08:21:25.000Z"
+}

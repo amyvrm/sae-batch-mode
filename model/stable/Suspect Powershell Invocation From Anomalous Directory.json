@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5fad2995-494b-4757-ba2d-c7038e94aa2b",
+  "name": "Suspect Powershell Invocation From Anomalous Directory",
+  "description": "Detection of suspicious process creation from an anomalous directory",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "76009eed-38b7-40c1-8296-580b899b02dd",
+      "name": "Suspect Powershell Invocation From Anomalous Directory",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "clpId": [
+    "e633ce78-b483-45b9-913b-d14b3d1ba74d"
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/01/04",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

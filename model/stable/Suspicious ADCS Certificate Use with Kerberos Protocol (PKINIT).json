@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dbd384ac-7c95-4043-aea7-5950faf1aa29",
+  "name": "Suspicious ADCS Certificate Use with Kerberos Protocol (PKINIT)",
+  "description": "Network activity involving Kerberos protocol, which is associated with ADCS Suspicious use of Certificate, was identified.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "01e521c8-6d72-4465-a518-8eb134f0244e",
+      "name": "Suspicious ADCS Certificate Use with Kerberos Protocol (PKINIT)",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1558.001",
+    "attack.s1071",
+    "threat.hacktool"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Aeron Lloyd Bacierto",
+  "team": "DDI",
+  "date": "2025/03/31",
+  "lastUpdate": "2025-03-31T08:48:13.000Z"
+}

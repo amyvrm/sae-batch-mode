@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8086dff9-8f57-4866-93ba-9ac1dd7524b5",
+  "name": "Possible Forged Sender with Urgent Intention",
+  "description": "An urgent email message from a possibly forged sender was received.",
+  "riskLevel": "high",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "392ad2eb-c887-4d2a-ad3a-747c7d2fd183",
+      "name": "Suspicious Forge Sender with Urgent Intention",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Zachary Lee",
+  "team": "Jaguar",
+  "date": "2020/09/22",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

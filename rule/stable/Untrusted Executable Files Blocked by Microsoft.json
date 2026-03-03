@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "994e8a98-b73c-4113-b04b-ff7ba9b4517e",
+  "name": "Untrusted Executable Files Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that blocks execution of executable files such as .exe, .dll, and .scr that do not meet established prevalence, age, or trusted list criteria using cloud-delivered protection mechanisms.",
+  "filterSets": [
+    [
+      {
+        "id": "c3ff5958-a5d4-4a8b-9a3b-65d4ee235531",
+        "name": "Untrusted Executable Files Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-14T08:49:59.000Z"
+}

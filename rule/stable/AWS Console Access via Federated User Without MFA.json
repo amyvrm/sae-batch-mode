@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c5a730b0-06b0-41fb-99cb-0ed198642270",
+  "name": "AWS Console Access via Federated User Without MFA",
+  "description": "Monitors successful AWS Management Console logins performed by federated users without MFA enforcement.",
+  "filterSets": [
+    [
+      {
+        "id": "cf495379-3b45-4707-9d28-3d7bb2b185e8",
+        "name": "AWS Console Access via Federated User Without MFA",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-14T05:47:04.000Z"
+}

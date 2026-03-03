@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "22458e30-a60b-4474-ba39-5339fa22ea9e",
+  "name": "AWS EC2 Instance Connect Attempt via Serial Console",
+  "description": "This model monitors attempts to push an SSH public key to a specified EC2 instance to establish a serial console connection to the instance using SSH, a potential pathway for lateral movement within networks. Alerts indicate administrative actions or troubleshooting. Monitoring helps prevent misuse of the serial console for unauthorized access or lateral movement, enhancing EC2 instance and cloud environment security.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "b4c3d83c-9c9d-4460-b0b3-2fd9507d523a",
+      "name": "AWS EC2 Instance Connect via Serial Console",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.009",
+    "mitre.t1580",
+    "mitre.t1021.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/09/02",
+  "lastUpdate": "2025-09-02T10:47:42.000Z"
+}

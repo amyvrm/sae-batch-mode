@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8f4d0f23-e3bf-4479-9452-211446a3bd45",
+  "name": "Identified Malicious File in Cloud Storage",
+  "description": "A malicious software was detected on the cloud storage. Attackers may upload malicious files to cloud storage with the intent to infect users and distribute malware more broadly.",
+  "filterSets": [
+    [
+      {
+        "id": "4e497204-7ddb-44a0-baad-9ccfed05f002",
+        "name": "Identified Malicious File in Cloud Storage",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "sfc"
+    ]
+  ],
+  "author": "Yoshihiro Nakaya",
+  "team": "JP-IR",
+  "date": "2025/07/25",
+  "lastUpdate": "2025-08-20T08:08:38.000Z"
+}

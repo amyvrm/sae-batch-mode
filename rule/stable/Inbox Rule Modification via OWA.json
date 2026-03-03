@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "120c7d4f-062a-4192-a00d-41d72650a6e5",
+  "name": "Inbox Rule Modification via OWA",
+  "description": "Network activity indicating the creation, modification, or update of email inbox rules was observed through Outlook Web Access (OWA), which may reflect automated rule changes or potential unauthorized configuration attempts.",
+  "filterSets": [
+    [
+      {
+        "id": "3167518d-fc82-4c11-b738-c25538a4ed92",
+        "name": "Email Inbox Rule Creation or Modification via OWA",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/12/08",
+  "lastUpdate": "2025-12-09T03:49:36.000Z"
+}

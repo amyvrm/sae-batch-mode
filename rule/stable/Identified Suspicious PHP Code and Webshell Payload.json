@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01912d76-099f-76f4-ad95-4a6f08ef41e0",
+  "name": "Identified Suspicious PHP Code and Webshell Payload",
+  "description": "Adversaries may attempt to upload PHP files containing suspicious code or webshell payloads to compromise a target system.",
+  "filterSets": [
+    [
+      {
+        "id": "0191296b-7ef6-7bb5-bbb4-9652bf681b37",
+        "name": "Identified Suspicious PHP Code and Webshell Payload",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/08/07",
+  "lastUpdate": "2024-09-04T19:10:33.000Z"
+}

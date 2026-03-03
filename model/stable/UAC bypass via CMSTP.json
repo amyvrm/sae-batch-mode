@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ec8c3a5f-75f0-4d5d-a27a-00ecd8f8c84f",
+  "name": "UAC bypass via CMSTP",
+  "description": "An attempt to bypass UAC to elevate privileges on the user systems",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "06e2f919-96f1-4cfd-a00f-a4722e549c49",
+      "name": "UAC bypass via CMSTP",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218.003",
+    "mitre.t1548.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-01-10T05:40:49.000Z"
+}

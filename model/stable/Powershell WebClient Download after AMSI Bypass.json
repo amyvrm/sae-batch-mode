@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ee09656a-dff8-4a65-80eb-bd7929d98e2e",
+  "name": "Powershell WebClient Download after AMSI Bypass",
+  "description": "Detects powershell webclient download activitiy after performing AMSI Bypass",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "70dee310-fb8a-495a-b098-1bc8077e0c2c",
+      "name": "Powershell WebClient Download after AMSI Bypass",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105",
+    "mitre.t1059.001",
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/03/21",
+  "lastUpdate": "2024-04-01T00:16:25.000Z"
+}

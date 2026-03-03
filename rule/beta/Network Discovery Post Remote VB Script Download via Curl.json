@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "15ae6585-2f87-4033-a2c8-ee567082ed5d",
+  "name": "Network Discovery Post Remote VB Script Download via Curl",
+  "description": "Detection of DarkGate utilising vbs scripts",
+  "filterSets": [
+    [
+      {
+        "id": "6e28d011-505e-4c11-8146-fbab3f0e7272",
+        "name": "Network Discovery Post Remote VB Script Download via Curl",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/09/21",
+  "lastUpdate": "2023-09-26T11:07:38.000Z"
+}

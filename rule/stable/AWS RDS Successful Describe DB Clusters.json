@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9789a496-2a14-4e13-957a-d80d81c898d4",
+  "name": "AWS RDS Successful Describe DB Clusters",
+  "description": "AWS Event that retrieves information about existing Amazon Aurora DB clusters and Multi-AZ DB clusters.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS RDS Successful Describe DB Clusters",
+        "id": "e27bc00a-4ca0-405c-adfc-e6dc5855ab22",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

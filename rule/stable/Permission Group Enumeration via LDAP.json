@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f8b604b4-a81f-48a9-b293-2b77fb5b2b51",
+  "name": "Permission Group Enumeration via LDAP",
+  "description": "Network activity involving LDAP, which is indicative of Permission Group Discovery, has been observed. This activity may suggest an attempt to gather information about permission groups within a network.",
+  "filterSets": [
+    [
+      {
+        "id": "7ac1d076-11bc-5c25-9b70-31eb2f6b3f4d",
+        "name": "Permission Group Discovery LDAP (Request) - Inbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-03-17T05:41:44.000Z"
+}

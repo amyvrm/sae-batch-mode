@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1b3d0fbd-6a55-4cf1-86dd-88a8c54830eb",
+  "name": "Potential APT-Related Activities",
+  "description": "Detection for DLL-Sideloading of Earth Baxia-related files.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "012c44af-6d64-4438-afcf-80405f55a585",
+      "name": "Possible DLL Hijacking of Msedge.dll",
+      "score": 20
+    },
+    {
+      "id": "0d4fb730-7bc3-4bbd-a53c-ffc7ec89dfd9",
+      "name": "Potential System DLL Sideloading from Non-System Locations",
+      "score": 20
+    }
+  ],
+  "threshold": {
+    "targetScore": 40,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1570",
+    "mitre.t1073"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AIM",
+  "date": "2025/08/15",
+  "lastUpdate": "2025-09-22T09:20:28.000Z"
+}

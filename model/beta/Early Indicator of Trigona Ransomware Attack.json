@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a2c8efab-625f-4ffa-bbb2-c155c10b0025",
+  "name": "Early Indicator of Trigona Ransomware Attack",
+  "description": "Multiple detections of components before a possible Trigona ransomware delivery were found on an endpoint.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "c8135d0d-f0d7-4d93-a29a-2bf9a334bcb3",
+      "name": "Mimikatz or LaZagne Detection",
+      "score": 1
+    },
+    {
+      "id": "1288958d-3062-4a75-91fc-51b2a49bc7d7",
+      "name": "Potential Credential Dumping via Mimikatz",
+      "score": 1
+    },
+    {
+      "id": "ea77f2c1-3b81-48bb-864a-184b0fa03b3e",
+      "name": "Cobalt Strike Detections",
+      "score": 2
+    },
+    {
+      "id": "e4546e23-d04f-4d3d-9955-75dac0db8c02",
+      "name": "Detection of Cobalt Strike Beacons",
+      "score": 2
+    },
+    {
+      "id": "152ceb38-e128-4eb4-9383-44730da36957",
+      "name": "Cobalt Strike Beacon Lateral Movement",
+      "score": 2
+    },
+    {
+      "id": "e8482398-fa3b-4aeb-855a-a62e95e939ca",
+      "name": "Internal Network Scanning",
+      "score": 1
+    },
+    {
+      "id": "ccbed083-b3e1-4420-b029-90d376b96bf2",
+      "name": "Network Scanning Using SoftPerfect Network Scanner",
+      "score": 1
+    },
+    {
+      "id": "8d1016bb-a3b6-4471-a0e2-0750c4122e34",
+      "name": "Network Scanning Tool Execution",
+      "score": 1
+    },
+    {
+      "id": "cf125a2c-fd61-4cc8-bdf0-982bab59095c",
+      "name": "Remote Access Application Connection",
+      "score": 2
+    },
+    {
+      "id": "f3c28949-e5bd-455d-855b-c74cb68464e7",
+      "name": "Zoho ManageEngine External Remote Service Vulnerability Exploitation",
+      "score": 3
+    },
+    {
+      "id": "c843792e-9081-442b-b2e3-0102d86e1306",
+      "name": "Attempt of Disabling Antivirus Software",
+      "score": 2
+    },
+    {
+      "id": "a8827bd4-d577-426e-a9ac-dbab291be462",
+      "name": "Possible Vulnerable Driver Creation",
+      "score": 2
+    },
+    {
+      "id": "f30a448c-c85c-4f8a-ae18-d99dda333207",
+      "name": "Disabling AV Security Product using Legitimate Driver",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 86400,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sao",
+      "pao",
+      "sds",
+      "pds"
+    ],
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "pdi",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1204.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Ronjay Caragay",
+  "team": "CSG",
+  "lastUpdate": "2024-04-08T03:32:30.000Z"
+}

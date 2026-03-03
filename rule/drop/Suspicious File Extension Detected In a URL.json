@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "03b061db-c678-4961-bcaf-464ea3a4ee7a",
+  "name": "Suspicious File Extension Detected In a URL",
+  "description": "Detects suspicious file extensions on high-risk labeled URLs based on Palo Alto URL category.",
+  "filterSets": [
+    [
+      {
+        "id": "d156e72f-eb89-4c8d-8900-68e52f9e8968",
+        "name": "Suspicious File Extension Detected In a URL",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2025/05/07",
+  "lastUpdate": "2025-06-24T02:18:54.000Z"
+}

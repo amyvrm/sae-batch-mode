@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dc473e37-5988-4f30-9883-d9c2f2e8c33f",
+  "name": "Identified Malcious API Calls Over Docker REST API",
+  "description": "adversaries may deploy a new container to execute processes associated with a particular image or deployment, such as processes that execute or download malware.",
+  "filterSets": [
+    [
+      {
+        "id": "aa31b49b-67c8-4b7a-b6bc-2e7a83e3dc30",
+        "name": "Identified Execution Of Container Over Docker REST API",
+        "highlight": true
+      },
+      {
+        "id": "d536b2a1-89a1-4e16-974f-297720524ea5",
+        "name": "Identified Start Or Restart Of Container Over Docker REST API",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "700383dd-5c59-4d78-b132-7e65fa93f60a",
+        "name": "Identified Upload File Into Container Over Docker REST API",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/05/30",
+  "lastUpdate": "2024-09-04T19:10:33.000Z"
+}

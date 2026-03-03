@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f641db56-769c-4c75-be97-3db192a4b83e",
+  "name": "AWS SSM Unsuccessful Patch Group Enumeration",
+  "description": "Flags unsuccessful activity where an entity queries SSM patch groups, potentially for reconnaissance.",
+  "filterSets": [
+    [
+      {
+        "id": "c366b796-904c-4140-ab3e-61a64a4bab48",
+        "name": "AWS SSM Unsuccessful Patch Group Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

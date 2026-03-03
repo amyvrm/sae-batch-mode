@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01e521c8-6d72-4465-a518-8eb134f0244e",
+  "name": "Suspicious ADCS Certificate Use with Kerberos Protocol (PKINIT)",
+  "description": "Network activity involving Kerberos protocol, which is associated with ADCS Suspicious use of Certificate, was identified.",
+  "filterSets": [
+    [
+      {
+        "id": "71a8890b-0cc1-53a5-bfe3-bf0210100278",
+        "name": "Adcs Suspicious Use Of Certificate Kerberos (Request)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Aeron Lloyd Bacierto",
+  "team": "DDI",
+  "date": "2025/02/25",
+  "lastUpdate": "2025-03-27T01:37:50.000Z"
+}

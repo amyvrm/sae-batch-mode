@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "695c4815-f56c-46ae-8b37-cfec2119fcd0",
+  "name": "Attack Pattern for Rule 1184",
+  "description": "Detects attack pattern for DDI rule 1184",
+  "filterSets": [
+    [
+      {
+        "id": "27e45a7b-6b03-5324-adaa-e22ad419af67",
+        "name": "Possible Directory Traversal Exploit Attempted Messagebody HTTP (Request) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6fc6cf3c-4cfd-5e9a-8e0e-50b16c09c0a1",
+        "name": "Possible Directory Traversal Exploit Attempted Messagebody HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Harshali Mugutrao",
+  "team": "NS",
+  "date": "2022/09/02",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

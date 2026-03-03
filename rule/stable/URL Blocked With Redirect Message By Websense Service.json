@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a653e080-3808-48e7-bb66-f23a13eec692",
+  "name": "URL Blocked With Redirect Message By Websense Service",
+  "description": "Fortinet detection - URL blocked with redirect message by Websense service",
+  "filterSets": [
+    [
+      {
+        "id": "4e8eb687-162a-4b23-a967-e29ee9f4fd05",
+        "name": "URL Blocked With Redirect Message By Websense Service",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

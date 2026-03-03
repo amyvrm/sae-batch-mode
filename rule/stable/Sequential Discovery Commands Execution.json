@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "1.0",
+  "id": "911255c1-f479-4833-b243-282f1e7785df",
+  "name": "Sequential Discovery Commands Execution",
+  "description": "Detects Sequential Discovery Commands Execution",
+  "filterSets": [
+    [
+      {
+        "id": "200bc35c-07ee-4aa0-b384-44655dfc9a0e",
+        "name": "Account Discovery on Local System via Net.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a1fd5676-408f-438c-99ef-a787d84c279b",
+        "name": "Force Enabling Windows Remote Management",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5be709c8-b17e-4b2b-bfdd-bdbe5e367ccb",
+        "name": "Disabling UAC Protection via Registry Modification",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "673ed6b3-b397-4987-b28a-8c4d6f217eaa",
+        "name": "Disable Limited User Account Access",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e41d5911-270e-4dcf-8cc0-42ebfd03179c",
+        "name": "Bypass UAC via LocalAccountTokenFilterPolicy Registry Modification",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ba28f723-625a-4959-8cb6-1e06e4f6f60a",
+        "name": "Enable System Firewall Rules",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "411abab5-2ace-45b4-aed4-3cedc3ff42e4",
+        "name": "TCP Port Scanning - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6bd817d5-8298-4a80-990a-0dd1b403aa44",
+        "name": "System Owner or User Discovery",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "36243b1a-cb14-427e-a9cc-947ce1042f65",
+        "name": "Creation of Local Account via Net.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0beeecb3-80a8-4301-b763-7d452b0abea6",
+        "name": "Add Account to Local Administrators Group",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3e2c5cc8-9b25-49e3-9274-66a0aed96c9f",
+        "name": "Execution of System Discovery Tools",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "4684d666-ab1f-48da-ae2a-fe1e7b86a378",
+        "name": "Listing Volume Shadow Copy via VSSAdmin",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "99e67422-1984-498d-b5a6-3c24388edda8",
+        "name": "Account Discovery",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2d34a1c4-3159-48ef-a611-613ac48c2365",
+        "name": "WMI Reconnaissance Software",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5b897d3f-0421-4981-9d87-c8120b8f2797",
+        "name": "TCP Port Sweep - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pdi",
+      "xes",
+      "xns"
+    ]
+  ],
+  "author": "Shota Hioki",
+  "team": "JP-MDR",
+  "date": "2023/09/19",
+  "lastUpdate": "2025-07-01T09:50:01.000Z"
+}

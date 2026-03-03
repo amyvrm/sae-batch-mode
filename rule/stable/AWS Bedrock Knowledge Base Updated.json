@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "adb3d561-8db2-4bf3-a835-69f5764b272d",
+  "name": "AWS Bedrock Knowledge Base Updated",
+  "description": "Updates to the AWS Bedrock Knowledge Base detected.",
+  "filterSets": [
+    [
+      {
+        "id": "6bac649e-6041-4edc-ad56-41bd7e96769d",
+        "name": "AWS Bedrock Knowledge Base Updated",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

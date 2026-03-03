@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1a4fd839-c6f0-4339-a57e-a1f0a6ef3d1f",
+  "name": "Possible DC Sync over DCE RPC",
+  "description": "Network activity involving DCE RPC, which is associated with possible DC sync attack was detected",
+  "filterSets": [
+    [
+      {
+        "id": "acc1e886-bb58-5369-a602-55b0aad566c9",
+        "name": "RPC Possible Dcsync DCE (Request) Variant 2 - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e3c43a37-6c3e-5301-8ef4-86bc7331bcf2",
+        "name": "RPC Possible Dcsync DCE (Request) Variant 2 - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "49446d5e-e566-5da4-96a4-519fada38934",
+        "name": "RPC Secretsdump Dcsync DCE (Request)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "CSG",
+  "date": "2024/06/25",
+  "lastUpdate": "2025-04-03T08:28:58.000Z"
+}

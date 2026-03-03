@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "id": "512ac692-2f5c-11ee-be56-0242ac120002",
+  "name": "AWS STS Successful Enumeration Attempt",
+  "description": "Detected successful STS resources enumeration indicating an attacker trying to enumerate STS resources can result in privilege escalation, data exposure, resource manipulation, financial losses, reputation damage, and compliance issues.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "157a4e6a-2f11-11ee-be56-0242ac120002",
+      "name": "AWS STS Successful Get Access Key Info",
+      "score": 1
+    },
+    {
+      "id": "157a4fdc-2f11-11ee-be56-0242ac120002",
+      "name": "AWS STS Successful Get Federation Token",
+      "score": 1
+    },
+    {
+      "id": "157a5162-2f11-11ee-be56-0242ac120002",
+      "name": "AWS STS Successful Get Session Info",
+      "score": 1
+    },
+    {
+      "id": "157a52f2-2f11-11ee-be56-0242ac120002",
+      "name": "AWS STS Successful GetCallerIdentity For User",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580",
+    "mitre.t1087",
+    "mitre.t1526"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/07/31",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

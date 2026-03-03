@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9c822669-81da-4672-932e-c7e6ca483668",
+  "name": "MIME Data Reported Infected By EMS Threat Feed (Notice)",
+  "description": "Fortinet detection - MIME data reported infected by EMS threat feed (notice)",
+  "filterSets": [
+    [
+      {
+        "id": "caf62a65-2f3a-4361-a087-092a967746c5",
+        "name": "MIME Data Reported Infected By EMS Threat Feed (Notice)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

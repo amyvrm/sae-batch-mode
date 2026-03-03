@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "513f5865-44ec-4277-93d0-478dd6140e9c",
+  "name": "CrowdStrike Pattern Disposition - Parent Process Prevented",
+  "description": "CrowdStrike detection for Parent Process Prevented",
+  "filterSets": [
+    [
+      {
+        "id": "6f411f88-a27d-43d5-80a4-1e8fa1ee7674",
+        "name": "CrowdStrike Pattern Disposition - Parent Process Prevented",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-27T09:17:05.000Z"
+}

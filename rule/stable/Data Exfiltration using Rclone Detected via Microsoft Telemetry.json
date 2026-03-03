@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e0ad7a70-632c-4fc3-beb7-c60bf3f20437",
+  "name": "Data Exfiltration using Rclone Detected via Microsoft Telemetry",
+  "description": "Detects data exfiltration attempts via Rclone using Microsoft telemetry.",
+  "filterSets": [
+    [
+      {
+        "id": "70beab84-a7e6-4143-8e49-5e91d41cd5ea",
+        "name": "Rclone Process Created via Microsoft Telemetry",
+        "highlight": true
+      },
+      {
+        "id": "635b0aa9-7d49-4dda-bb42-a44b154dd002",
+        "name": "Successful Rclone Connection via Microsoft Telemetry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/08/16",
+  "lastUpdate": "2025-08-18T04:59:05.000Z"
+}

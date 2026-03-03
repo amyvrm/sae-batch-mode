@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "68da7700-4f52-4137-bac7-76bf52c31ff8",
+  "name": "Suspicious DAT File Created in Potential Stage Directory",
+  "description": "This rule detects the creation or copy of suspicious DAT file in potential stage directories in an attempt to evade detection.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f0a508c7-4981-4ebb-a6e5-ad22ab23d358",
+      "name": "Suspicious DAT File Created in Potential Stage Directory",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1074"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lucas Silva & Jack Walsh",
+  "team": "US-IR",
+  "date": "2025/03/19",
+  "lastUpdate": "2025-06-26T06:44:03.000Z"
+}

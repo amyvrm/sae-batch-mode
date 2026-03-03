@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4511cdd2-c984-4be2-8870-45961aa9204f",
+  "name": "Possible AWS IAM User Enumeration From Endpoint",
+  "description": "Detects the AWS api call to list iam users from an endpoint which could be an enumeration for aws iam user",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "157a3740-2f11-11ee-be56-0242ac120002",
+      "name": "AWS IAM Successful List Users",
+      "score": 1
+    },
+    {
+      "id": "446ed27d-00f3-4b43-8377-47565f0b1652",
+      "name": "Identified IAM AWS ListUser API In Endpoint",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1087.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/06/15",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

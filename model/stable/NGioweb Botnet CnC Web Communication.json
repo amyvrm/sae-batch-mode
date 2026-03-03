@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e20ade88-e2b8-46e8-828f-cd8f0e8fffd9",
+  "name": "NGioweb Botnet C&C Web Communication",
+  "description": "NGioweb botnet network traffic that reports affected endpoints to the command and control server was detected.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "a81dfd04-61bb-4494-b8d9-7be5fdbdbcd9",
+      "name": "NGioweb Botnet CnC Web Communication",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "pdi",
+      "sds",
+      "pds",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1041"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Alvin Nieto",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2024-01-24T13:34:09.000Z"
+}

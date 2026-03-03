@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b8df2233-fa7d-449c-b0c5-1974b3d6c7f2",
+  "name": "Suspicious Execution of Powerpoint File in Uncommon Path",
+  "description": "Detects suspicious execution of PowerPoint Files in uncommon path that is being used for wineloader malware in APT29 Phishing Campaign.",
+  "filterSets": [
+    [
+      {
+        "id": "4319567b-a939-4028-987a-f86c110afd25",
+        "name": "Suspicious Loading of Unsigned Dll via Powerpoint in Uncommon Path",
+        "highlight": true
+      },
+      {
+        "id": "ca9aad1e-0b01-4bed-8fe7-96e31f403257",
+        "name": "Suspicious Outbound Connection via Powerpoint File in Uncommon Path",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2025/04/21",
+  "lastUpdate": "2025-05-29T06:49:11.000Z"
+}

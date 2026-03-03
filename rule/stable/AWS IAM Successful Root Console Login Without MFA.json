@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "316c00dd-18b6-4c75-9c69-864e78e47232",
+  "name": "AWS IAM Successful Root Console Login Without MFA",
+  "description": "Detects console login by root user without using MFA",
+  "filterSets": [
+    [
+      {
+        "id": "12c7bf26-2e2e-4408-9ddf-7333e57da9e7",
+        "name": "AWS IAM Successful Root Console Login Without MFA",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/04/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

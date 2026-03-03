@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ade7feb7-48de-423b-9389-c1e183eee2fc",
+  "name": "Possible Stealer Execution",
+  "description": "The payload is injected into the vbc.exe process, this behavior was observed by a set of samples related to Lummac Stealer",
+  "filterSets": [
+    [
+      {
+        "id": "7fa8848a-2963-4a94-8a9f-bc5acfafdfe1",
+        "name": "Possible Stealer Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2025/04/24",
+  "lastUpdate": "2025-11-19T08:07:44.000Z"
+}

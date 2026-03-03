@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b10a8828-972d-496f-95c8-6417f1713026",
+  "name": "Possible Apache OFBiz Authentication Bypass",
+  "description": "A possible attempt to exploit CVE-2023-51467(remote code execution), which affects Apache OFBiz, was detected on the network",
+  "filterSets": [
+    [
+      {
+        "id": "a9feebad-5ac7-5672-8e22-711a3463555e",
+        "name": "Apache OFBiz Authentication Bypass Vulnerability (CVE-2023-51467)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "751eee2e-1021-5204-99ea-79f2a811d671",
+        "name": "CVE-2023-51467- Apache Ofbiz Pre-Auth RCE Exploit HTTP (Response) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5155312d-2442-4bca-92ce-5db5347bc245",
+        "name": "CVE-2023-51467 Exploit - Authentication Bypass",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "pdi",
+      "xns",
+      "ptp",
+      "stp"
+    ]
+  ],
+  "lastUpdate": "2024-04-08T14:36:11.000Z"
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0b9f147d-d588-4cdb-b880-49e240cc2fc7",
+  "name": "Suspicious Invocation of Misnamed AutoIT Script",
+  "description": "Detects potential suspicious anomalous commands related to WMIC, Nltest and NET process from a possibly malicious misnamed AutoIT script",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "75d7366e-784a-4e01-8fe8-3c2e590c53c9",
+      "name": "Suspicious Invocation of Misnamed AutoIT Script",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.010",
+    "mitre.t1140",
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/10/10",
+  "lastUpdate": "2024-10-24T05:21:28.000Z"
+}

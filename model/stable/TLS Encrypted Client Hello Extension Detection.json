@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "58623af8-db7c-4038-bee3-b8b4748466a6",
+  "name": "TLS Encrypted Client Hello Extension Detection",
+  "description": "Palo Alto Vulnerability detection - TLS Encrypted Client Hello Extension Detection",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e1b8926b-8aa5-4b62-8156-b42e63eadd46",
+      "name": "TLS Encrypted Client Hello Extension Detection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-01-06T03:41:40.000Z"
+}

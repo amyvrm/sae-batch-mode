@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f6a6ee38-d7f9-4ddb-92b2-20836af52f4b",
+  "name": "Signed Proxy Execution via MS WorkFolders",
+  "description": "Identifies the use of Windows Work Folders to execute a potentially masqueraded control.exe file in the current working directory. Misuse of Windows Work Folders could indicate malicious activity.",
+  "filterSets": [
+    [
+      {
+        "id": "72fa1a48-3685-47ee-b108-749c5e7b15ba",
+        "name": "Signed Proxy Execution via MS WorkFolders",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "lastUpdate": "2025-02-12T09:14:22.000Z",
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2024/01/24"
+}

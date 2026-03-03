@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "989f6831-27d2-44ab-82bc-e7d03c68316b",
+  "name": "Safe Mode Reboot Attempt Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that prevents processes from triggering a reboot into Safe Mode where security defenses might be disabled.",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "3d6a8fb3-5379-4c4d-9b16-48caa8bdeaee",
+      "name": "Safe Mode Reboot Attempt Blocked by Microsoft",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-11-11T15:20:53.000Z"
+}

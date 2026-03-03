@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9f404e27-9acd-4cd8-9ee7-ee06b7c743dc",
+  "name": "Havoc C2 Connection over HTTP",
+  "description": "Network activity over HTTP associated with HAVOC was detected. Havoc is a modern, open-source Command and Control (C2) framework",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "5d091a8f-aa53-45e1-8501-267861e9ee06",
+      "name": "Havoc C2 Connection over HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "silent": false,
+  "globalModel": true,
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2024/12/12",
+  "lastUpdate": "2024-12-12T17:17:15.000Z"
+}

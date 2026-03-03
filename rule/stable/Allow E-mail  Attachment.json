@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "00c046b0-ad5f-44e2-816d-9531aaf9ad2e",
+  "name": "Allow E-mail  Attachment",
+  "description": "SonicWall Detection - Forbidden E-Mail attachment disabled",
+  "filterSets": [
+    [
+      {
+        "id": "75ce6991-b52e-4ba5-8d72-77abb28286fa",
+        "name": "Allow E-mail  Attachment",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

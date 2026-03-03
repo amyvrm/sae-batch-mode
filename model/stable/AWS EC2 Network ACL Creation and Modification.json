@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a113dbdf-75a3-4cce-b9de-88a7362005a3",
+  "name": "AWS EC2 Network ACL Creation and Modification",
+  "description": "Creation and modification of Network ACLs (NACLs), including new ACL creation, rule modifications, and changes in subnet associations, can impact network security. Unauthorized changes may allow unintended traffic flows or disrupt communication. Monitoring these activities helps detect misconfigurations or potential security threats.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "477ad011-a691-4ff1-baa6-12852056d6ff",
+      "name": "AWS EC2 Network ACL Creation",
+      "score": 1
+    },
+    {
+      "id": "9c52392a-45da-4f77-8441-b303f89de86d",
+      "name": "AWS EC2 Network ACL Entry Creation",
+      "score": 1
+    },
+    {
+      "id": "d4ef69eb-fa24-4381-a573-16f854db116a",
+      "name": "AWS EC2 Network ACL Association Replacement",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.007"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-09-12T08:03:37.000Z"
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c9ebc2a-3bf7-4a46-9456-e3dd999ef294",
+  "name": "Attempted Executable Download from Web server Root Directory and Directory Traversal via URI Path and Phpunit Remote Code Execution",
+  "description": "An attempt to download an executable from local web server and directory traversal via URI Path and Remote Code Execution were detected.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "69a7ae79-3c9f-439f-8c62-2eaa80c15958",
+      "name": "Attack Pattern for Rule 85",
+      "score": 1
+    },
+    {
+      "id": "f8a07240-f1d5-4047-8057-5ff6a1d92641",
+      "name": "Attack Pattern for Rule 4322",
+      "score": 1
+    },
+    {
+      "id": "c11e928f-d34d-4497-966c-ef57ca074990",
+      "name": "Attack Pattern for Rule 4332",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 30,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1189",
+    "mitre.t1190",
+    "mitre.t1203"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Harshali Mugutrao",
+  "team": "NS",
+  "date": "2022/09/08",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

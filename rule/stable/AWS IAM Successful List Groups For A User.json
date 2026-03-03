@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "10d4b912-ec50-4781-907c-15d61302cbb5",
+  "name": "AWS IAM Successful List Groups For A User",
+  "description": "This filter detects successful attempt to list all groups a specific IAM user belongs to.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS IAM Successful List Groups For A User",
+        "id": "90a9dc64-2298-4826-97b7-ec30663594c0",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T11:20:55.000Z"
+}

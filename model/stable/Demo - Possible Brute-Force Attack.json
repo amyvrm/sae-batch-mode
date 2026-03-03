@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f021820f-bbe5-46d4-b390-08a827d8fd48",
+  "name": "Demo - Possible Brute-Force Attack",
+  "description": "Detects systematic password guessing attempts to gain unauthorized access to accounts, either through repeated login attempts or against stolen credential data.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "358ba014-b516-4297-a48f-a8a2b3d58214",
+      "name": "Demo - Possible Brute-Force Attack",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "DDI Team",
+  "team": "DDI",
+  "date": "2025/05/20",
+  "lastUpdate": "2025-06-05T05:19:56.000Z"
+}

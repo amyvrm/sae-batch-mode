@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "95e72be7-8e82-487a-9d03-54a555485302",
+  "name": "Suspicious Script Launched",
+  "description": "Microsoft Detection for Suspicious Script Launched",
+  "filterSets": [
+    [
+      {
+        "id": "8412a062-6d72-451d-a33b-d616e2ffd897",
+        "name": "Suspicious Script Launched",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/05/28",
+  "lastUpdate": "2025-07-28T20:43:16.000Z"
+}

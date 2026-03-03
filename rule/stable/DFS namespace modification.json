@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81be02c5-4921-47ce-96d9-1efff3397a1e",
+  "name": "DFS namespace modification",
+  "description": "Attempt to create or delete DFS namespace.",
+  "filterSets": [
+    [
+      {
+        "id": "9c224f9d-b788-4d11-90b2-7aafa037599b",
+        "name": "DFS namespace modification",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2022-11-10T14:56:11.000Z"
+}

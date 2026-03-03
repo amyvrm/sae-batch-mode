@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3e6f3e5d-ce68-447d-9f67-1bfe048c2ee1",
+  "name": "CertUtil Remote Download",
+  "description": "Microsoft Detection for CertUtil Remote Download",
+  "filterSets": [
+    [
+      {
+        "id": "3d2ad383-37a4-4ab8-9551-b602a4ddabd1",
+        "name": "CertUtil Remote Download",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/03",
+  "lastUpdate": "2025-06-11T04:11:03.000Z"
+}

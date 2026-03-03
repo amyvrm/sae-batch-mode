@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "361176b3-52b2-4625-82bf-13ca2a1f8cd1",
+  "name": "Possible Unathorized Modification of BitLocker CLSID Key",
+  "description": "Detects Unathorized registry value changes, key deletions, or accesses against the COM CLSID.",
+  "filterSets": [
+    [
+      {
+        "id": "55a3b814-9d6c-4d9a-a3bc-36f4f1c8a29e",
+        "name": "Detect Access and Modification of BitLocker CLSID Key",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Rafael Pereira",
+  "team": "IR-US",
+  "date": "2025/12/08",
+  "lastUpdate": "2026-01-30T03:02:08.000Z"
+}

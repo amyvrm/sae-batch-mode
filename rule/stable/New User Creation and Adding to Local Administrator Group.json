@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "17fc6015-615c-49cf-92ca-f7511001821a",
+  "name": "New User Creation and Adding to Local Administrator Group",
+  "description": "Detects newly created user and adding it to the local administrators group and potentially hiding it to the windows home / login screen to possibly evade detection for potential malicious purposes",
+  "filterSets": [
+    [
+      {
+        "id": "36243b1a-cb14-427e-a9cc-947ce1042f65",
+        "name": "Creation of Local Account via Net.exe",
+        "highlight": true
+      },
+      {
+        "id": "0beeecb3-80a8-4301-b763-7d452b0abea6",
+        "name": "Add Account to Local Administrators Group",
+        "highlight": true
+      },
+      {
+        "id": "dd9d4777-458a-43c1-8879-10a7009b7f0b",
+        "name": "Set User as Hidden via Reg.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "36243b1a-cb14-427e-a9cc-947ce1042f65",
+        "name": "Creation of Local Account via Net.exe",
+        "highlight": true
+      },
+      {
+        "id": "0beeecb3-80a8-4301-b763-7d452b0abea6",
+        "name": "Add Account Into Local Administrators Group",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "0beeecb3-80a8-4301-b763-7d452b0abea6.processCmd equals 36243b1a-cb14-427e-a9cc-947ce1042f65.processCmd"
+    ],
+    [
+      "36243b1a-cb14-427e-a9cc-947ce1042f65.processCmd equals dd9d4777-458a-43c1-8879-10a7009b7f0b.processCmd"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/09/16",
+  "lastUpdate": "2025-07-01T09:50:01.000Z"
+}

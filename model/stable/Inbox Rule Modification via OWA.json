@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0ca58c0b-048e-49dd-9710-890cae0ded11",
+  "name": "Inbox Rule Modification via OWA",
+  "description": "Network activity indicating the creation, modification, or update of email inbox rules was observed through Outlook Web Access (OWA), which may reflect automated rule changes or potential unauthorized configuration attempts.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "120c7d4f-062a-4192-a00d-41d72650a6e5",
+      "name": "Inbox Rule Modification via OWA",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1564.008",
+    "mitre.t1137.005",
+    "mitre.t1098"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/12/08",
+  "lastUpdate": "2025-12-11T04:45:58.000Z"
+}

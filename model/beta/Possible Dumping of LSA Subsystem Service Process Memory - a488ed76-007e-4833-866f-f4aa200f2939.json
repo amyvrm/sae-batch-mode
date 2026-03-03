@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a488ed76-007e-4833-866f-f4aa200f2939",
+  "name": "Possible Dumping of LSASS Process Memory",
+  "description": "Possible dumping of Lsass Process Memory using signed legitimate processes and low prevalance processes, etc",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "81d8747c-089f-4451-8dd4-8a83f4fac9e6",
+      "name": "Possible Dumping of LSASS Process Memory",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1003.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Alvin Bacani",
+  "team": "CSG",
+  "lastUpdate": "2025-02-11T06:51:53.000Z"
+}

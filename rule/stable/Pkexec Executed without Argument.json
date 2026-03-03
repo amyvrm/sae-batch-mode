@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81a2c3b1-bc7b-4ddc-b0fa-c174e08acc55",
+  "name": "Pkexec Executed without Argument",
+  "description": "pkexec executed without any argument. Attacker may use this to perform privilege escalation.",
+  "filterSets": [
+    [
+      {
+        "id": "360a70b5-2735-4fd6-9de8-01c009f3b6c2",
+        "name": "Pkexec Executed without Argument",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/06/28",
+  "lastUpdate": "2024-07-17T04:09:35.000Z"
+}

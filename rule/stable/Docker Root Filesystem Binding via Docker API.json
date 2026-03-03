@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "34f1eebb-a858-4a93-a6ff-9dfa37f2a9ea",
+  "name": "Docker Root Filesystem Binding via Docker API",
+  "description": "Detects mounting the root directory of a host system to a container directory via Docker API.",
+  "filterSets": [
+    [
+      {
+        "id": "0f4a8b2c-c72a-4c10-a5ac-320ae2973e40",
+        "name": "Identified Creation Of Container With Root Filesystem Via Docker API",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/09",
+  "lastUpdate": "2025-10-01T07:09:57.000Z"
+}

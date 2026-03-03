@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "69a7ae79-3c9f-439f-8c62-2eaa80c15958",
+  "name": "Attack Pattern for Rule 85",
+  "description": "Detects attack pattern for DDI rule 85",
+  "filterSets": [
+    [
+      {
+        "id": "9571bcd0-a2c4-55ab-8fa7-618ef18e5c98",
+        "name": "Executable requested from root directory of web server - Inbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Harshali Mugutrao",
+  "team": "Cloud One",
+  "date": "2022/09/02",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

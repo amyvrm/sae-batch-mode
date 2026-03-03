@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3ea53ca8-29e9-4e9e-bbf9-24d2b871f327",
+  "name": "Possible Defense Evasion via Shimcache Clearance",
+  "description": "Detects attempts to clear the Shimcache (AppCompatCache), which can indicate malicious activity for evading execution history tracking.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "eedea24e-7c5d-430a-9dc1-4a4c0d77737e",
+      "name": "Possible Defense Evasion via Shimcache Clearance",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1070"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2024/11/20",
+  "lastUpdate": "2025-03-27T10:17:23.000Z"
+}

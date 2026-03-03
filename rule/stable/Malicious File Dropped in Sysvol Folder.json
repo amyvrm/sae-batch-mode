@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b744b0a8-8be1-425b-a85d-3fe1b1ad139d",
+  "name": "Malicious File Dropped in Sysvol Folder",
+  "description": "A malicious file was detected in the SYSVOL directory used by domain controllers to potentially persist or spread amlware in the environment",
+  "filterSets": [
+    [
+      {
+        "id": "3ab3e9c7-117a-493a-baea-43ff1070f4b8",
+        "name": "Malicious File Dropped in Sysvol Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2025/10/01",
+  "lastUpdate": "2025-11-21T07:36:24.000Z"
+}

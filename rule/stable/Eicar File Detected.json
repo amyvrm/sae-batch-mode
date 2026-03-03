@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5766f10e-65e4-476f-93f7-1b2cc7892814",
+  "name": "Eicar File Detected",
+  "description": "Palo Alto Vulnerability detection - Eicar File Detected",
+  "filterSets": [
+    [
+      {
+        "id": "1ce8eb69-d2e7-4916-a023-4cf1b462105f",
+        "name": "Eicar File Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-06-16T07:44:23.000Z"
+}

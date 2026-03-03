@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4ff96136-b532-4713-b19a-4b3925c7dcf3",
+  "name": "SPANK ATTACK",
+  "description": "SonicWall Detection - Spank attack multicast packet dropped",
+  "filterSets": [
+    [
+      {
+        "id": "6a97ce15-8bbc-465f-98a7-616fcd2fdf23",
+        "name": "SPANK ATTACK",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

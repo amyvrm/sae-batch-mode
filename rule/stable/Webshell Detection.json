@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c3f55aa2-847e-4dfb-9b99-95dd4b444b91",
+  "name": "Webshell Detection",
+  "description": "A webshell was detected in the network.",
+  "filterSets": [
+    [
+      {
+        "id": "71cdb665-cf86-4dd7-8c1b-994c1f3689c8",
+        "name": "Webshell Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "src": {
+      "71cdb665-cf86-4dd7-8c1b-994c1f3689c8": "src"
+    },
+    "dst": {
+      "71cdb665-cf86-4dd7-8c1b-994c1f3689c8": "dst"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Carl Jayson Pelina",
+  "team": "CSG",
+  "date": "2024/09/29",
+  "lastUpdate": "2025-01-14T01:59:35.000Z"
+}

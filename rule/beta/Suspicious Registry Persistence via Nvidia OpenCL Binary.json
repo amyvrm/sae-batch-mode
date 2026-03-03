@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c8092c5-4a7d-48b2-a8ab-939e0e7db22c",
+  "name": "Suspicious Registry Persistence via Nvidia OpenCL Binary",
+  "description": "Detects suspicious registry modification related to Nvidia Open CL Binary which will load suspicious file.",
+  "filterSets": [
+    [
+      {
+        "id": "1ace8d98-0b90-4cd7-8376-140431e248d3",
+        "name": "Suspicious Registry Persistence via Nvidia OpenCL Binary",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/06/02",
+  "lastUpdate": "2025-06-10T06:04:49.000Z"
+}

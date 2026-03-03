@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d7044ea1-c1ae-42a8-99a0-415fc90b3ab5",
+  "name": "Suspicious Service Execution of Possible DLL Sideloading via Logmein Application",
+  "description": "Detects suspicious service execution of DLL Sideloading via LogMeIn Application leading to C2 Connection",
+  "filterSets": [
+    [
+      {
+        "id": "93b066ae-961c-4d6d-96d9-8348bc53d272",
+        "name": "Suspicious Service Execution of Possible DLL Sideloading via Logmein Application",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2025/05/23",
+  "lastUpdate": "2025-06-19T02:54:14.000Z"
+}

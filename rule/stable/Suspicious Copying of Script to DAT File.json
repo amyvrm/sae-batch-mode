@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1e417f1b-8155-447e-a1f6-9832a51446a3",
+  "name": "Suspicious Copying of Script to DAT File",
+  "description": "Detect suspicious copying of .txt OR .json file to a DAT file which indicates possible exfiltration via API.",
+  "filterSets": [
+    [
+      {
+        "id": "4fca0d95-99cf-4366-9b3f-aeeb882bad11",
+        "name": "Suspicious Copying of Script to DAT File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/08/18",
+  "lastUpdate": "2026-01-12T07:22:02.000Z"
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ad948608-3a4a-47af-9c7f-57b79e0df6cd",
+  "name": "Download Suspicious File Via Python",
+  "description": "Adversaries can use these libraries to download and execute commands or other scripts as well as perform various malicious behaviors.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6bd7b105-5bb2-41de-b442-084bb94c4217",
+      "name": "Download Suspicious File Via Python",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.006"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/03/06",
+  "lastUpdate": "2024-08-27T10:04:26.000Z"
+}

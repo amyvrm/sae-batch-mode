@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8def2cb2-b865-4ded-b15d-a69c185ff9d8",
+  "name": "New Suspicious Mailbox Rule Moves New Emails to an RSS Folder",
+  "description": "A suspicious mailbox rule was created that moves all incoming emails to an RSS folder and marks them as read.",
+  "filterSets": [
+    [
+      {
+        "id": "3ac64fe9-2225-5c7a-b8ae-7f1dab5447b6",
+        "name": "New Suspicious Mailbox Rule Moves New Emails to an RSS Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "xca"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2025/03/15",
+  "lastUpdate": "2025-04-04T04:24:10.000Z"
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3b080420-373d-4648-8e78-e1a032cd5331",
+  "name": "Suspicious Client and Noteworthy Domain Detection",
+  "description": "A network interaction involving a newly registered domain and a suspicious client was identified, indicating potential evasion tactics.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "2c33d912-6cae-495f-a28f-2c4f6d6920f2",
+      "name": "Suspicious Client and Noteworthy Domain Detection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Arjun Baltazar",
+  "team": "DDI",
+  "date": "2025/03/13",
+  "lastUpdate": "2025-03-18T04:14:05.000Z"
+}

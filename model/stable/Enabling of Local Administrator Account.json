@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f429be5d-7702-4cee-a5a6-9300f9efa968",
+  "name": "Enabling of Local Administrator Account",
+  "description": "Detects when a built-in Administrator account is enabled in Windows environment.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b85455ec-720d-4046-b9ad-ae306c6cedee",
+      "name": "Enabling of Local Administrator Account",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078.003",
+    "mitre.t1136.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Evelyn Valenzuela & Bien Joshua Philip De Leon",
+  "team": "AMEA-IR",
+  "date": "2025/07/02",
+  "lastUpdate": "2025-11-18T07:05:27.000Z"
+}

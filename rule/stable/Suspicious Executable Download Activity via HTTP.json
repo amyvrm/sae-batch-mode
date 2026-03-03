@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "31d86e9d-0f9a-4751-bb2b-178fac955b65",
+  "name": "Suspicious Executable Download Activity via HTTP",
+  "description": "Network monitoring identified HTTP protocol usage for downloading suspicious executable files, indicating adversaries may be transferring malicious tools or remote management software to compromised hosts.",
+  "filterSets": [
+    [
+      {
+        "id": "72a7dad6-f9d7-45a8-ab2c-07607e254306",
+        "name": "Suspicious Executable Download via HTTP Protocol",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/12/08",
+  "lastUpdate": "2025-12-09T05:28:02.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fb41aba0-0ec9-45b1-bc9b-8785b411ac85",
+  "name": "Usage of Renamed MegaSync Binary to Potentially Evade Security Monitoring",
+  "description": "Detection of the usage of a renamed MegaSync binary, which can be done as a means to evade security monitoring",
+  "filterSets": [
+    [
+      {
+        "id": "676c03fe-6cf2-4eb5-b156-c1a78d44c2e8",
+        "name": "Usage of Renamed MegaSync Binary to Potentially Evade Security Monitoring",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/07/15",
+  "lastUpdate": "2025-08-26T13:17:17.000Z"
+}

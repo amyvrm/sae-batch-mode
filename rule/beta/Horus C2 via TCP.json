@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ac66fc4f-87c9-48c9-8805-8016ee9fb1e1",
+  "name": "Horus C2 via TCP",
+  "description": "Network activity involving inbound TCP communication, which is associated with the Horus Protector, was observed on the network.",
+  "filterSets": [
+    [
+      {
+        "id": "6bfab52a-918c-5bbf-baa1-280e556ff787",
+        "name": "Horus Protector C2 TCP (Response) - Inbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/06/04",
+  "lastUpdate": "2025-06-18T07:44:32.000Z"
+}

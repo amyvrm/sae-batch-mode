@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6c31b87c-658b-4f39-8740-d20111cf4b73",
+  "name": "Potential Compromised 3CXDesktopApp Beaconing Activity",
+  "description": "Detects potential beaconing activity to domains related to 3CX 3CXDesktopApp compromise.",
+  "filterSets": [
+    [
+      {
+        "id": "6fdf8750-1383-40aa-a7d6-f78f6fdeb6cc",
+        "name": "Potential Compromised 3CXDesktopApp Beaconing Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/01/04",
+  "lastUpdate": "2026-01-12T10:25:35.000Z"
+}

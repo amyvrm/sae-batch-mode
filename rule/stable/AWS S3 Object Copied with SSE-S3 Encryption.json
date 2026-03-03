@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2edd8c3d-96ca-42be-8a29-5940d95c084f",
+  "name": "AWS S3 Object Copied with SSE-S3 Encryption",
+  "description": "An S3 object was copied with SSE-S3 encryption, which could indicate data movement that needs verification for potential exfiltration risks.",
+  "filterSets": [
+    [
+      {
+        "id": "bdb09bc5-10fe-426c-9ba6-5f6100bc1800",
+        "name": "AWS S3 Object Copied with SSE-S3 Encryption",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 86400,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-08-06T08:03:27.000Z"
+}

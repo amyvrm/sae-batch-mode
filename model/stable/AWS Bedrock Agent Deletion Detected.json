@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aee59191-90ea-4612-ba6c-1b5fc394cb14",
+  "name": "AWS Bedrock Agent Deletion Detected",
+  "description": "Deletion of Amazon Bedrock agent detected, which could indicate potential unauthorized activity or misconfiguration. This alert emphasizes the need to address such events to ensure the integrity and availability of Amazon Bedrock agents and maintain a secure environment.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "eb84e02a-0482-4c26-b89d-a68f47322968",
+      "name": "AWS Bedrock Agent Deletion Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.009"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/09/10",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f5997e7e-5b73-11ee-8c99-0242ac120002",
+  "name": "AWS IAM User Name Or Path Updated",
+  "description": "AWS IAM User Name Or Path Updated.",
+  "filterSets": [
+    [
+      {
+        "id": "3512e3f0-5acb-11ee-8c99-0242ac120002",
+        "name": "AWS IAM User Name Or Path Updated",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

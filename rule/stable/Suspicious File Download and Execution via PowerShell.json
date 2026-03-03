@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8b00480e-3aa5-4aa4-9ecd-1bf0cdcc61ad",
+  "name": "Suspicious File Download and Execution via PowerShell",
+  "description": "Detects powershell download and execution of a file using DownloadFile and Start-Process functions.",
+  "filterSets": [
+    [
+      {
+        "id": "02375469-277d-40b3-96f5-40263a0a1144",
+        "name": "Suspicious File Download and Execution via PowerShell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/04/24",
+  "lastUpdate": "2025-05-14T10:18:40.000Z"
+}

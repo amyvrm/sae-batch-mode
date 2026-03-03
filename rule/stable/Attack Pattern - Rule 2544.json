@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "95a57c9a-5438-44bd-8f39-c6993cd28593",
+  "name": "Attack Pattern for rule 2544",
+  "description": "Detects attack pattern for DDI Rule 2544",
+  "filterSets": [
+    [
+      {
+        "id": "46563c34-4460-5f30-a413-29dab8627f3e",
+        "name": "Jaws Remote Code Execution Exploit HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "23979d9e-56cf-5a68-9f98-2a7a37074d42",
+        "name": "Jaws Remote Code Execution Exploit HTTP (Request) - Inbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Harshali Mugutrao",
+  "team": "Cloud One",
+  "date": "2022/12/06",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

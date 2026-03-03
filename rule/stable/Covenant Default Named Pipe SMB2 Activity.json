@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ba862d0d-24d6-4403-a86a-596cd644c9c5",
+  "name": "Covenant Default Named Pipe SMB2 Activity",
+  "description": "Network activity involving SMB2, associated with COVENANT, indicating potential use of default named pipes for SMB2 protocol communication.",
+  "filterSets": [
+    [
+      {
+        "id": "d5fb2d0b-dfda-5acc-b839-cc780e652962",
+        "name": "Covenant Default Named Pipe SMB2 (Request) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0a057039-3732-5be6-b876-4fc0407045c8",
+        "name": "Covenant Default Named Pipe SMB2 (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-09T03:15:04.000Z"
+}

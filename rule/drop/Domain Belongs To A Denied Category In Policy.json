@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dedb1990-e1ce-4d1c-bfd1-b8d2f027ae39",
+  "name": "Domain Belongs To A Denied Category In Policy",
+  "description": "Fortinet detection - Domain belongs to a denied category in policy",
+  "filterSets": [
+    [
+      {
+        "id": "c9dc0453-f335-468c-92ea-b1d9ffb7adf2",
+        "name": "Domain Belongs To A Denied Category In Policy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

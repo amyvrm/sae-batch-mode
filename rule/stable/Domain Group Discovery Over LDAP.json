@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "730b42a0-a642-4103-bce0-331c6954c6b4",
+  "name": "Domain Group Discovery Over LDAP",
+  "description": "Detects Domain Group Discovery Over LDAP",
+  "filterSets": [
+    [
+      {
+        "id": "783250c1-9388-550c-bb44-f882b6321dec",
+        "name": "Identified Remote Permission Groups Discovery Over LDAP",
+        "highlight": true
+      },
+      {
+        "id": "72026f32-0f28-4c69-ad92-5e34605507a6",
+        "name": "Identified Domain Account Discovery Over LDAP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2022/03/14",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

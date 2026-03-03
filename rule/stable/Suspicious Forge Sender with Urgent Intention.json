@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "392ad2eb-c887-4d2a-ad3a-747c7d2fd183",
+  "name": "Suspicious Forge Sender with Urgent Intention",
+  "description": "Suspicious Forge Sender with Urgent Intention",
+  "filterSets": [
+    [
+      {
+        "id": "cd9d27a9-f816-424f-aa1a-04fc60630c70",
+        "name": "Forge Sender With Urgent Intention",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Zachary Lee",
+  "team": "Jaguar",
+  "date": "2020/09/22",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

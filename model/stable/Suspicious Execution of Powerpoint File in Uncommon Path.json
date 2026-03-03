@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eef44e2f-23d9-4de5-bb35-fa032d3e6c0e",
+  "name": "Suspicious Execution of Powerpoint File in Uncommon Path",
+  "description": "Detects suspicious execution of PowerPoint Files in uncommon path that is being used for wineloader malware in APT29 Phishing Campaign.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2bd8a11c-d08d-423f-9b93-b2a370f0f5cd",
+      "name": "Suspicious Autorun Registry Key Creation of Powerpoint File in Uncommon Path",
+      "score": 1
+    },
+    {
+      "id": "c5e94efc-7b9b-49e9-90c8-b2ab11ef2643",
+      "name": "Suspicious Creation of Powerpoint File in Uncommon Path",
+      "score": 1
+    },
+    {
+      "id": "b8df2233-fa7d-449c-b0c5-1974b3d6c7f2",
+      "name": "Suspicious Execution of Powerpoint File in Uncommon Path",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1060",
+    "mitre.t1001",
+    "mitre.t1574"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2025/04/21",
+  "lastUpdate": "2025-07-07T08:12:05.000Z"
+}

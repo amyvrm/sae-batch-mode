@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2c9fbd91-dccd-48cc-953e-801db2a19218",
+  "name": "Suspicious DNS Query to Workers Domain",
+  "description": "Detection of a suspicious DNS query to a workers[.]dev domain",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c1acd168-7577-463d-891f-7b6a3436f58f",
+      "name": "Suspicious DNS Query to Workers Domain",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/01/19",
+  "lastUpdate": "2024-01-30T20:24:00.000Z"
+}

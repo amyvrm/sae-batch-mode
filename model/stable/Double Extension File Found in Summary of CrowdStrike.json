@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9e267f84-e280-4e7b-9598-3225cc3036f6",
+  "name": "Double Extension File Found in Summary of CrowdStrike",
+  "description": "This CrowdStrike alert indicates that a file with a double extension (e.g., '.txt.zip') was detected, which may be associated with suspicious or unauthorized activity. This is often used to bypass security measures by disguising the true nature of the file.",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "aecd8ac8-5111-4741-915e-db38952ab5ec",
+      "name": "Double Extension File Found in Summary of CrowdStrike",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/08",
+  "lastUpdate": "2025-08-12T06:43:13.000Z"
+}

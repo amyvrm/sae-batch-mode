@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6d940fa1-7296-475b-8867-9112ba4a3ab1",
+  "name": "Attack Detected By UDP Or TCP Anomaly",
+  "description": "Fortinet detection - Attack detected by UDP/TCP anomaly",
+  "filterSets": [
+    [
+      {
+        "id": "c64770d0-df3a-448b-abfe-35fda0e02706",
+        "name": "Attack Detected By UDP Or TCP Anomaly",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-09-02T09:44:54.000Z"
+}

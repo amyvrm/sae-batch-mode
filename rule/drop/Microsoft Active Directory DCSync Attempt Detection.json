@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f5649f54-b139-4acd-a920-0118adc96785",
+  "name": "Microsoft Active Directory DCSync Attempt Detection",
+  "description": "Palo Alto Vulnerability detection - Microsoft Active Directory DCSync Attempt Detection",
+  "filterSets": [
+    [
+      {
+        "id": "7632f043-c691-4deb-8fd4-0a9aa0e7f8f2",
+        "name": "Microsoft Active Directory DCSync Attempt Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-09-05T08:46:50.000Z"
+}

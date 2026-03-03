@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2a7db9db-9f06-4550-b6f1-0f0b00b4ce0f",
+  "name": "HTML Application File Startup Persistence",
+  "description": "Microsoft Detection for HTML Application File Startup Persistence",
+  "filterSets": [
+    [
+      {
+        "id": "b8028023-0fa7-4499-a017-aa16070ae7fe",
+        "name": "HTML Application File Startup Persistence",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/07/01",
+  "lastUpdate": "2025-07-07T02:52:32.000Z"
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f6429730-d9a9-423e-aba0-0c4ebbcfb441",
+  "name": "Suspicious Container Running via Exposed Docker API",
+  "description": "The Docker API could allow an attacker to make malicious activities remotely.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "41ff21bc-ec25-47e5-9e94-b3b28415a8d1",
+      "name": "Identified Docker Daemon API Misconfiguration",
+      "score": 1
+    },
+    {
+      "id": "7258e620-d40e-4d75-a0fa-d3fa02e72cae",
+      "name": "Shell Script Running in Container",
+      "score": 1
+    },
+    {
+      "id": "fcc5c690-47e8-458c-9c77-c5ab8f9bae4b",
+      "name": "Identified Creation Of Container Over Docker REST API",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1610",
+    "mitre.t1059.004",
+    "mitre.t1552.007"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/04/04",
+  "lastUpdate": "2024-06-13T13:40:18.000Z"
+}

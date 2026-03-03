@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "30336823-adf3-4e28-8978-e06d52c872c1",
+  "name": "AWS CloudShell Environment Created With Administrator Access",
+  "description": "Detects creation of cloudshell environment with administrator access which is important to monitor as it might also indicate an attacker trying to establish a environment from where it can further compromise the AWS account.",
+  "filterSets": [
+    [
+      {
+        "id": "0ebf4ff5-14b2-4746-a453-e963abc2bb7b",
+        "name": "AWS CloudShell Environment Created With Administrator Access",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/09/17",
+  "lastUpdate": "2025-09-17T02:29:38.000Z"
+}

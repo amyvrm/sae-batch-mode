@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b6457702-85a0-11ef-b864-0242ac120002",
+  "name": "Windows Trend Micro Deep Security Configuration Reset Command Identified",
+  "description": "Detects a command that removes activation information from the agent and deactivates it via command line or powershell in Microsoft Windows.",
+  "filterSets": [
+    [
+      {
+        "id": "d3833636-858e-11ef-b864-0242ac120002",
+        "name": "Windows Trend Micro Deep Security Configuration Reset via PowerShell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "aea648f0-858c-11ef-b864-0242ac120002",
+        "name": "Windows Trend Micro Deep Security Configuration Reset via CMD",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 700
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "sao"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/10/07",
+  "lastUpdate": "2025-01-22T19:13:46.000Z"
+}

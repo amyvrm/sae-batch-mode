@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f21c50fc-bec9-479a-8d35-b03098a1760e",
+  "name": "Suspicious Creation of Huorong Antivirus-Related Files",
+  "description": "Detects Suspicious Creation of Huorong Antivirus-related files which is capable of terminating security agent processes and services.",
+  "filterSets": [
+    [
+      {
+        "id": "2f25cc26-7b91-4af1-898e-fb3024fa8da7",
+        "name": "Suspicious Creation of Huorong Antivirus-Related Files",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Eris Galura",
+  "team": "AMEA-IR",
+  "date": "2025/03/04",
+  "lastUpdate": "2025-03-10T07:14:12.000Z"
+}

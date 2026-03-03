@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e4ab5eb9-68c3-4876-81a4-5463948c5372",
+  "name": "Possible Ransomware Deployment via Scheduled Task",
+  "description": "Detects suspicious usage of Scheduled task to deploy possible ransomware binary which is a common technique of Crypto24 ransomware group.",
+  "filterSets": [
+    [
+      {
+        "id": "56a57903-6dd0-4d65-8057-49b2642be434",
+        "name": "Possible Ransomware Deployment via Scheduled Task",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Krisford Macalalad & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/07/13",
+  "lastUpdate": "2025-11-11T16:00:16.000Z"
+}

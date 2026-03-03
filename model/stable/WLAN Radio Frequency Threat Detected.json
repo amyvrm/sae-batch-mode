@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "68477bd4-38d9-4cc6-9223-6930f6e40e97",
+  "name": "WLAN Radio Frequency Threat Detected",
+  "description": "SonicWall Detection for WLAN radio frequency threat detected",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "185089c9-5d38-4558-a9b3-7a21fdfe0a37",
+      "name": "WLAN Radio Frequency Threat Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christian Jason Geollegue",
+  "team": "Third Party Operations",
+  "date": "2024/12/05",
+  "lastUpdate": "2025-09-02T10:21:52.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ae3fc259-5745-4191-960b-6f5d018cf20a",
+  "name": "Privilege Escalation in Container",
+  "description": "Adversaries may use common approaches to take advantage of misconfigurations, process injection, and vulnerabilities.",
+  "riskLevel": "high",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "bef0416b-9ba8-406a-a326-6d31e9ed3a94",
+      "name": "Privilege Escalation in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1068",
+    "mitre.t1548.003",
+    "mitre.t1055.008"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/06/21",
+  "lastUpdate": "2024-04-22T09:38:04.000Z"
+}

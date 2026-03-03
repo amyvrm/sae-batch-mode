@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "98538ed3-92ba-4568-bf24-d0f6ce91ea10",
+  "name": "Suspicious Lnk File Dropped in Startup Folder via Winrar Archive",
+  "description": "Detects the creation of a .lnk (shortcut) file in the Windows Startup folder, a common persistence technique used by threat actors to ensure malware execution upon user login. This behavior is associated with malware delivery campaigns, including those leveraging CVE-2025-8088 to deploy the Mythic agent.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "a115d481-628c-4857-98e4-f501b46a2758",
+      "name": "Suspicious Lnk File Dropped in Startup Folder via Winrar Archive",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1547.001",
+    "mitre.t1036",
+    "cve.2025.8088"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Shaun Galura & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/11/27",
+  "lastUpdate": "2025-12-02T06:52:55.000Z"
+}

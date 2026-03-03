@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "256bcc91-c535-49f9-8071-93aa89af34d3",
+  "name": "Suspicious Registry Entry Creation for Persistence upon Execution of Installer",
+  "description": "Suspicious registry entry creation is created for persistence after executing an installer potentially obtained from a malicious source.",
+  "filterSets": [
+    [
+      {
+        "id": "9bfabbe7-e62c-4e98-9920-82fc58a1b4ce",
+        "name": "Suspicious Registry Entry Creation for Persistence upon Execution of Installer",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/18",
+  "lastUpdate": "2025-03-19T10:18:13.000Z"
+}

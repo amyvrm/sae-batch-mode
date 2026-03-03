@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "96f51995-f50a-4cbb-89db-f5d5cf93e76c",
+  "name": "ADLOAD PUA Using Mitmproxy",
+  "description": "ADLOAD PUA with relating server connection and mitmproxy certificate installation",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "77d7998d-8cef-4c3e-b766-9b0913e5e0e4",
+      "name": "ADLOAD PUA installing MitmProxy certificates",
+      "score": 3
+    },
+    {
+      "id": "05a57c6b-9bc8-4a3a-a819-4a9a5b9a89bf",
+      "name": "ADLOAD Server Connection",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 6,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1557"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Steven Du",
+  "team": "MacTRT",
+  "date": "2021/01/11",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

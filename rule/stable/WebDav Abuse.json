@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "59227c8d-ff4d-45db-9943-287c49c96cba",
+  "name": "WebDav Abuse",
+  "description": "Abusing WebDav to download and execute a payload",
+  "filterSets": [
+    [
+      {
+        "id": "4b20e03d-9664-462b-9e6e-09ebf8d1f8af",
+        "name": "WebDav Abuse - Process Creation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7e5e0de5-a67e-464a-ae44-b382945b40f9",
+        "name": "WebDav Abuse - File Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/09/08",
+  "lastUpdate": "2023-09-20T09:09:26.000Z"
+}

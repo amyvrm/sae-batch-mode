@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cafe939c-c94f-4bbc-a14a-53dbdb83c269",
+  "name": "Cross-Site Scripting Over HTTP",
+  "description": "Check Point Security detection for Cross-Site Scripting Over HTTP",
+  "filterSets": [
+    [
+      {
+        "id": "bf981282-1623-5106-97c8-9aa31da15288",
+        "name": "Cross-Site Scripting Over HTTP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/12/11",
+  "lastUpdate": "2026-01-15T01:45:40.000Z"
+}

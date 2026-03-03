@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "632d1fc8-d2bf-48cc-b8ad-ce7dddb672ce",
+  "name": "Suspicious IIS Module Installation from Uncommon User Folder",
+  "description": "Detects a suspicious IIS module installation from an uncommon user folder",
+  "filterSets": [
+    [
+      {
+        "id": "e5d51def-8147-4d86-8473-5d53d29f95f3",
+        "name": "Suspicious IIS Module Installation from Uncommon User Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2025/01/22",
+  "lastUpdate": "2025-04-10T15:41:19.000Z"
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "id": "17506149-8cf4-4c1e-a20f-009a126a69d6",
+  "name": "Enabling Automatic Login of Domain Administrator Account",
+  "description": "Modify Windows registry settings to configure automatic domain administrator login",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7d0254f0-568b-4762-b5d1-0e2631a516aa",
+      "name": "Enabling Automatic Login of Domain Administrator Account",
+      "score": 1
+    },
+    {
+      "id": "335278c7-c71b-4034-8b3a-8c63c1cadee1",
+      "name": "Enabling Automatic Administrator Login",
+      "score": 1
+    },
+    {
+      "id": "611e33a5-285b-4a33-850a-97542d0462ef",
+      "name": "Set Administrator as Default Username in Registry",
+      "score": 1
+    },
+    {
+      "id": "d8b4237d-df8a-4a26-9305-313cfa6ead0a",
+      "name": "Stored Plaintext Default Password in Registry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1112"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2025/06/20",
+  "lastUpdate": "2025-11-13T02:52:16.000Z"
+}

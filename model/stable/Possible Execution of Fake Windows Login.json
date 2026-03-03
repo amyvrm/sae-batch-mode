@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9ce32f05-657c-44fd-bdce-5768fa53c4eb",
+  "name": "Possible Execution Of Fake Windows Login",
+  "description": "Possible Dropping of Social Engineering tool used to harvest credentials",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "26b2f0e8-b70a-4405-90c0-e264ba168f24",
+      "name": "Possible Dropping Of Fake Windows Login",
+      "score": 1
+    },
+    {
+      "id": "7df1b724-4056-4979-8d04-8fbdcc6193af",
+      "name": "Possible Execution Of Fake Windows Login",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1589.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/12/09",
+  "lastUpdate": "2025-05-05T10:07:00.000Z"
+}

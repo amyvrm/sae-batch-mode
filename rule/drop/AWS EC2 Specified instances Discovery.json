@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dc6c8e7b-bc2e-4c81-8e46-cb4b0992a81f",
+  "name": "AWS EC2 Specified instances Discovery",
+  "description": "AWS EC2 Specified instances Discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "7d4cf3bc-d287-4ab6-aac3-1d5f7b3600d7",
+        "name": "AWS EC2 Specified instances Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

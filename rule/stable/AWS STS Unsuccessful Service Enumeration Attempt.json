@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "beda0c38-a619-11ed-afa1-0242ac120002",
+  "name": "AWS STS Unsuccessful Service Enumeration Attempt",
+  "description": "Detected STS Unsuccessful Service Enumeration Attempt",
+  "filterSets": [
+    [
+      {
+        "id": "c34ca05c-547c-4bc7-90f3-d0fb0b641ab1",
+        "name": "AWS STS Unsuccessful Service Enumeration Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/01/19",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

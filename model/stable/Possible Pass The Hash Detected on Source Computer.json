@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01914833-b27b-7a73-9d83-d7ab1dfd5aed",
+  "name": "Possible Pass the Hash Detected on Source Computer",
+  "description": "Possible Pass the Hash technique detected on source computer. Attacker may use Pass the Hash technique for lateral movement.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6b019305-0862-409f-ae7b-e0cee6c44d80",
+      "name": "Possible Credential Dumping via Mimikatz",
+      "score": 10
+    },
+    {
+      "id": "01913877-c91a-7c59-b4a0-01428191f630",
+      "name": "Identified Validation Of Credentials Event On Domain Controller",
+      "score": 5
+    },
+    {
+      "id": "01913873-e599-7039-b37b-0db1b3bb457a",
+      "name": "Logon Attempted via Explicit Credentials",
+      "score": 5
+    },
+    {
+      "id": "01913879-b231-7fd0-8dcb-b4775b9fea0f",
+      "name": "Successful Logon Via Alternate Credentials",
+      "score": 5
+    },
+    {
+      "id": "01913357-b1b3-7dd6-98c2-7ee89278b5b2",
+      "name": "Special Privileges Assigned To New Logon",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 20,
+    "withinSeconds": 100,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1550.002",
+    "mitre.t1078",
+    "mitre.t1078.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/08/12",
+  "lastUpdate": "2025-02-25T01:30:07.000Z"
+}

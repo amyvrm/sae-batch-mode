@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ebf8bb52-e640-4365-848c-4d8d765bd65f",
+  "name": "SQLMAP Activity via HTTP",
+  "description": "Network activity associated with the presence of SQLMAP, a known SQL injection tool, was observed utilizing HTTP protocols. This activity may indicate an attempt to exploit SQL vulnerabilities through inbound HTTP traffic.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e8a8a56e-1389-4de0-a579-b2bdd65f07d5",
+      "name": "SQLMAP Activity via HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "threat.hacktool"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2025/05/29",
+  "lastUpdate": "2025-07-01T08:11:57.000Z"
+}

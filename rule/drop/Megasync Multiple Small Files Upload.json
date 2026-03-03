@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a9eccdcc-4dfd-45f2-ba37-576c1c940744",
+  "name": "Megasync Multiple Small Files Upload",
+  "description": "Detects Megasync file upload, more than 100 files each larger than 5MB",
+  "filterSets": [
+    [
+      {
+        "id": "0d77d481-06c3-4ca5-9b8f-1061a4c44eca",
+        "name": "Megasync Small File Upload",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 100,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2022/03/14",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

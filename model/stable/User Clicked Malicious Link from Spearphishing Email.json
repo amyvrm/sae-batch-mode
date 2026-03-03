@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5d3e25f5-b3af-4d6a-96e8-b2c271651848",
+  "name": "User Clicked Malicious Link from Spearphishing Email",
+  "description": "Detects successful spearphishing attack where a user receives an email containing  a malicious link and subsequently accesses the suspicious domain. This model correlates SMTP traffic delivering the phishing email with HTTP connections to the same suspicious domain, indicating user execution of the malicious link.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "43e8aa04-7cd7-4907-9f2f-f3ffa7f867fb",
+      "name": "User Clicked Malicious Link from Spearphishing Email",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.003",
+    "mitre.t1598.003",
+    "mitre.t1566.002"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/12/08",
+  "lastUpdate": "2025-12-11T05:18:59.000Z"
+}

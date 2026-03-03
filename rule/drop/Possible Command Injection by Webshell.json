@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2993dcb2-3973-4379-8810-c8eab8374619",
+  "name": "Possible Command Injection by Webshell",
+  "description": "This rule will detect deployment of a webshell in a web server which allows attacker to execute O.S./system commands remotely.",
+  "filterSets": [
+    [
+      {
+        "id": "1ca0c894-8f00-4b10-a629-28277b15d8c5",
+        "name": "Identified Suspicious Command Injection Attack",
+        "highlight": true
+      },
+      {
+        "id": "8fcb1f60-e3f9-4b44-9fe6-bfa4656bbca6",
+        "name": "Newly Created File on a Web Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/02/07",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

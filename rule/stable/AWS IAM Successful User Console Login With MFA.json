@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3217b56c-aed6-408f-907a-5c61c86cb50e",
+  "name": "AWS IAM Successful User Console Login With MFA",
+  "description": "Detects successful user console logins in AWS IAM with Multi-Factor Authentication (MFA) enabled.",
+  "filterSets": [
+    [
+      {
+        "id": "53a00861-0b18-43ff-b1fa-1ac7085d797b",
+        "name": "AWS IAM Successful User Console Login With MFA",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni",
+  "team": "Cloud One",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

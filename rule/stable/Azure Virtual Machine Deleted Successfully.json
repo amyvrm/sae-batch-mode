@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7136cd9f-80ed-4ef3-8bb8-6422d9652f7a",
+  "name": "Azure Virtual Machine Deleted Successfully",
+  "description": "Detects successful deletion of an Azure Virtual Machine which may indicate an attacker deliberately removing critical compute resources",
+  "filterSets": [
+    [
+      {
+        "id": "4d0fe851-2e6c-4c9c-88c8-6d474f8dde2b",
+        "name": "Azure Virtual Machine Deleted Successfully",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Nathaniel Ragasa",
+  "team": "SAE Threat Expert",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-23T02:21:40.000Z"
+}

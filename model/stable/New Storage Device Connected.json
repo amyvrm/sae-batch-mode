@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b9a1b483-12e3-412b-ae01-1eba1af5c9d8",
+  "name": "New Storage Device Connected",
+  "description": "A new device was connected on the computer via USB at first time.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "173146a8-c99b-4b06-a7dd-f3c4ad1698e6",
+      "name": "Unknown USB Storage Device Connected",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1092"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Rafael Pereira",
+  "team": "US-IR",
+  "date": "2025/03/18",
+  "lastUpdate": "2026-01-30T03:01:05.000Z"
+}

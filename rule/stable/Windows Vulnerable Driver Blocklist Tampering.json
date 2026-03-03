@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "78da51db-ce82-46e0-bf1c-ea6e5be512a2",
+  "name": "Windows Vulnerable Driver Blocklist Tampering",
+  "description": "Detects when the Windows Vulnerable Driver Blocklist is disabled via the windows registry.",
+  "filterSets": [
+    [
+      {
+        "id": "18fd1f4e-f81d-41ca-ab77-729ba1176050",
+        "name": "Windows Vulnerable Driver Blocklist Disabled via Registry",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b82607cd-41c9-4377-b88d-7025d93a3ca9",
+        "name": "Vulnerable Driver Blocklist Registry Tampering via CLI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2026/01/06",
+  "lastUpdate": "2026-01-27T20:31:57.000Z"
+}

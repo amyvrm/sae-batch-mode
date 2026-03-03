@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "48965986-59fd-448b-8dee-ff6037914a27",
+  "name": "AWS IAM Successful Attachment of Policy to a User",
+  "description": "Detects a change in access permissions where an IAM policy was successfully attached to a specific IAM user. Attackers who gain valid credentials or abuse existing access may attach permissive policies to escalate their privileges and gain broader control over resources.",
+  "filterSets": [
+    [
+      {
+        "id": "8ef21eb9-324e-4a57-ae6e-fc0706f2ce71",
+        "name": "AWS IAM Successful Attachment of Policy to a User",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/22",
+  "lastUpdate": "2025-09-08T06:00:50.000Z"
+}

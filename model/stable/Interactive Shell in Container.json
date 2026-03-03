@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "11b44dd9-a5f4-4c8b-af81-1abfaaed26e8",
+  "name": "Interactive Shell in Container",
+  "description": "A shell served as the container's entry point, enabling terminal interaction.",
+  "riskLevel": "low",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "a7de9aac-4e60-4d33-a69a-1b9ca3bef8f4",
+      "name": "Interactive Shell in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1609"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2026/02/03",
+  "lastUpdate": "2026-02-04T07:59:20.000Z"
+}

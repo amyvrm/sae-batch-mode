@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "96ac4405-3ce1-49b4-89da-ca01e2303252",
+  "name": "Crystal Reports Web Viewer Information Disclosure",
+  "description": "Palo Alto Vulnerability detection - Crystal Reports Web Viewer Information Disclosure",
+  "filterSets": [
+    [
+      {
+        "id": "1918744e-c8b9-4842-bfcd-606ceb8a90cf",
+        "name": "Crystal Reports Web Viewer Information Disclosure",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

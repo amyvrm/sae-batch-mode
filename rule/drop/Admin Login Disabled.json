@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e5327c4d-0e68-4fc7-9d58-8186b8fdb28f",
+  "name": "Admin Login Disabled",
+  "description": "Fortinet detection - Admin login disabled",
+  "filterSets": [
+    [
+      {
+        "id": "3d66f381-51fe-41bb-aabb-27367f6e6c1f",
+        "name": "Admin Login Disabled",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-07-31T10:41:34.000Z"
+}

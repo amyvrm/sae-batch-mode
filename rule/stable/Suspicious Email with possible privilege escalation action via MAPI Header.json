@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6b598a17-4d1c-4d87-9fdc-1e206678fd37",
+  "name": "Suspicious Email - Privilege Escalation via MAPI Header",
+  "description": "Email received containing possible privilege escalation attempt associated with MAPI header vulnerability (CVE-2023-23397).",
+  "filterSets": [
+    [
+      {
+        "id": "aafc9c15-b8ab-536a-a711-e78f6d733347",
+        "name": "Suspicious Email - Privilege Escalation via MAPI Header",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Zachary Lee",
+  "team": "Jaguar",
+  "date": "2023/03/31",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

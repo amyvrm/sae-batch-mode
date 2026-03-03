@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8eeef75c-91e6-40aa-906c-f621a4c216d5",
+  "name": "Data Exfiltration using Rclone Detected via Microsoft Telemetry",
+  "description": "Detects data exfiltration attempts using Rclone via Microsoft telemetry.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e0ad7a70-632c-4fc3-beb7-c60bf3f20437",
+      "name": "Data Exfiltration using Rclone Detected via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/08/16",
+  "lastUpdate": "2025-08-19T07:43:46.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "390ffc8b-dd9b-4de2-a362-95f29e275af8",
+  "name": "Microsoft Defender Antivirus Tampering",
+  "description": "Detects disabling of Microsoft Defender through SC command-line utility.",
+  "filterSets": [
+    [
+      {
+        "id": "c2861638-a54e-4415-88bb-97926b20773d",
+        "name": "Microsoft Defender Antivirus Tampering",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/04/24",
+  "lastUpdate": "2025-05-14T10:18:40.000Z"
+}

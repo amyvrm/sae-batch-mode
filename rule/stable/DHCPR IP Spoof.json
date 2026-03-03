@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4d040515-9ae2-4899-ae4b-5ebd6c977e7b",
+  "name": "DHCPR IP Spoof",
+  "description": "SonicWall Detection - IP spoof detected on packet to Central Gateway, packet dropped",
+  "filterSets": [
+    [
+      {
+        "id": "bd4b0932-7e64-4b22-ac3d-7b3d21ce1979",
+        "name": "DHCPR IP Spoof",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

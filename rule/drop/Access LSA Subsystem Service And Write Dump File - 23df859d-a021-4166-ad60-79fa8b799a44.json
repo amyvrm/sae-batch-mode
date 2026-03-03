@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "23df859d-a021-4166-ad60-79fa8b799a44",
+  "name": "Access Lsass And Write Dump File",
+  "description": "A suspicious process opens Local Security Authority Subsystem Service (Lsass.exe) and writes to a .dmp file",
+  "filterSets": [
+    [
+      {
+        "id": "800af67d-d485-4f28-80cb-455ccf1575ce",
+        "name": "Suspicious Reading Of LSASS Memory",
+        "highlight": true
+      },
+      {
+        "id": "f12374ed-175b-463c-bee9-48c9a7114769",
+        "name": "Write *.dmp Dump File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "condition": [
+    [
+      "800af67d-d485-4f28-80cb-455ccf1575ce.processPid equals f12374ed-175b-463c-bee9-48c9a7114769.processPid",
+      "800af67d-d485-4f28-80cb-455ccf1575ce.parentPid equals f12374ed-175b-463c-bee9-48c9a7114769.parentPid",
+      "800af67d-d485-4f28-80cb-455ccf1575ce.processLaunchTime equals f12374ed-175b-463c-bee9-48c9a7114769.processLaunchTime",
+      "800af67d-d485-4f28-80cb-455ccf1575ce.processFilePath equals f12374ed-175b-463c-bee9-48c9a7114769.processFilePath"
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds"
+    ]
+  ],
+  "author": "hans_tzou",
+  "team": "LWE",
+  "date": "2022/05/27",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

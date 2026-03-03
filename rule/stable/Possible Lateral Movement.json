@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5f439223-bae0-40c5-9bdf-9d324cfc8a38",
+  "name": "Possible Lateral Movement",
+  "description": "Lateral Movement by Netcat execution ",
+  "filterSets": [
+    [
+      {
+        "id": "7e806aff-9b2e-416a-b12e-6a18e5e138df",
+        "name": "Network Utility Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes"
+    ]
+  ],
+  "lastUpdate": "2025-05-22T03:02:30.000Z"
+}

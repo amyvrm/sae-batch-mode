@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ac211822-2da6-45b7-92f7-926c7a67007c",
+  "name": "Application Control (IPS) (Block)",
+  "description": "Fortinet detection - Application control (IPS) (block)",
+  "filterSets": [
+    [
+      {
+        "id": "788c3b77-4046-49b8-812c-c681344b0125",
+        "name": "Application Control (IPS) (Block)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-11-07T13:45:44.000Z"
+}

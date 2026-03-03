@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9f845c57-d8ff-4b57-a9b2-df846dc55d0b",
+  "name": "ROGUE  AP OR  MITM  AP  FOUND",
+  "description": "SonicWall Detection - Found Rogue or MitM Access Point",
+  "filterSets": [
+    [
+      {
+        "id": "519fe866-7575-4f6d-ae8a-6d8cf9d48181",
+        "name": "ROGUE  AP OR  MITM  AP  FOUND",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

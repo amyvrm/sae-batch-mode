@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6f66af21-d0e5-4dbc-aaee-32d55c3893da",
+  "name": "Suspect Keywords Observed in AMSI Logging",
+  "description": "Detection of suspect keywords associated with malicious powershell use observed in AMSI logs",
+  "filterSets": [
+    [
+      {
+        "id": "43a0393d-48bd-459f-a499-608a393764d2",
+        "name": "Suspect Keywords Observed in AMSI Logging",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/11/25",
+  "lastUpdate": "2025-12-02T15:22:30.000Z"
+}

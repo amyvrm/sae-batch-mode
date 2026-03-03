@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "77ff8880-b855-4d4e-8d6e-2802f574317b",
+  "name": "Identified Malicious Shell Meterpreter Traffic Detected",
+  "description": "Detects Meterpreter bind and reverse tcp shell traffic",
+  "filterSets": [
+    [
+      {
+        "id": "6e3b80d7-9b7c-5d52-94a7-2c0ce8144e7f",
+        "name": "Identified Potentially Malicious Bind Tcp Shell Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "98751f28-69b1-5b3e-8ba9-f7125f665d01",
+        "name": "Identified Potential Malicious Reverse TCP Shell Traffic",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/02/27",
+  "lastUpdate": "2024-02-28T09:48:38.000Z"
+}

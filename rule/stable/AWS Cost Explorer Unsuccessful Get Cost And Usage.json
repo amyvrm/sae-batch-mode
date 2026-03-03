@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "16cd72b4-1f17-4ccf-9f26-cf8e817f64cb",
+  "name": "AWS Cost Explorer Unsuccessful Get Cost And Usage",
+  "description": "AWS Event that retrieves cost and usage metrics of an account",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Cost Explorer Unsuccessful Get Cost And Usage",
+        "id": "4cb3ff4f-d32c-4cd4-9e13-50c31ce8890b",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

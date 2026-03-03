@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "72f1c029-e0c6-4f09-9703-dd5a7f82bd5a",
+  "name": "AWS Roles And Instance Discovery",
+  "description": "Detects AWS Roles And Instance Discovery ",
+  "filterSets": [
+    [
+      {
+        "id": "9a6bd58d-93dd-43d0-9ea6-20a3fd6cfd01",
+        "name": "AWS IAM Policy Roles Listing Discovery",
+        "highlight": true
+      },
+      {
+        "id": "30ee3590-ea15-4c68-94c6-6629eab3b595",
+        "name": "AWS IAM Instance Profiles Listing Discovery",
+        "highlight": true
+      },
+      {
+        "id": "7215062f-c8a7-425e-a08e-f30b825c0d3f",
+        "name": "AWS EC2 Describe Instances",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/09/08",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

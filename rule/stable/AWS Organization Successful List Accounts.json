@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f8596b54-d73b-46cf-bd43-4a4265135116",
+  "name": "AWS Organization Successful List Accounts",
+  "description": "AWS api to list organization accounts",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Organization Successful List Accounts",
+        "id": "45d4ca17-128a-4be7-b857-0214778ab37d",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/20",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

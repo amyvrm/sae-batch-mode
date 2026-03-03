@@ -1,0 +1,5 @@
+# This file maps different email addresses to a single identity
+# Format: Proper Name <proper@email.com> Commit Name <commit@email.com>
+
+Amit Verma <amyvrm@gmail.com> amit_verma <amit_verma@trendmicro.com>
+Amit Verma <amyvrm@gmail.com> amit_verma <amyvrm@gmail.com>

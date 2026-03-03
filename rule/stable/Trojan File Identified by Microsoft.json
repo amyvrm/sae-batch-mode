@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6b7a1c1b-33dc-494f-a768-504f13d979df",
+  "name": "Trojan File Identified by Microsoft",
+  "description": "Microsoft Antivirus File Detection for Trojan",
+  "filterSets": [
+    [
+      {
+        "id": "453e2139-491c-4692-99be-668c9355ac4f",
+        "name": "Trojan File Identified by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mohammed Malubay",
+  "team": "Third Party Operations",
+  "date": "2025/07/28",
+  "lastUpdate": "2025-07-28T21:33:07.000Z"
+}

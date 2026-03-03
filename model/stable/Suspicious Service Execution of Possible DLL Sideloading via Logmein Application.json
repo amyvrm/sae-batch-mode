@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b6796efc-9342-4155-a9cf-8f77265dd5a9",
+  "name": "Suspicious Service Execution of Possible DLL Sideloading via Logmein Application",
+  "description": "Detects suspicious service execution of DLL Sideloading via LogMeIn Application leading to C2 Connection",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d7044ea1-c1ae-42a8-99a0-415fc90b3ab5",
+      "name": "Suspicious Service Execution of Possible DLL Sideloading via Logmein Application",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1211",
+    "mitre.t1574.001",
+    "mitre.t1055"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jehhan Marcelo & Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2025/05/23",
+  "lastUpdate": "2025-07-08T06:25:00.000Z"
+}

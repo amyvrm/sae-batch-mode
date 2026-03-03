@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "47bf5627-0c00-453f-ba52-ef172d0cffcc",
+  "name": "Windows Security Modified",
+  "description": "Endpoint security changes in registry or new used added via command line.",
+  "filterSets": [
+    [
+      {
+        "id": "0366ed46-caef-41af-801a-8418dfb134eb",
+        "name": "Windows LSA Protection Disabled",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "44febbc7-faf3-4137-bf69-ba3840bbaa74",
+        "name": "UseLogonCredential Change Value",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "36243b1a-cb14-427e-a9cc-947ce1042f65",
+        "name": "Creation of Local Account via Net.exe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2022/04/08",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

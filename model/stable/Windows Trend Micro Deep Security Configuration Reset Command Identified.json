@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0545f038-85a2-11ef-b864-0242ac120002",
+  "name": "Windows Trend Micro Deep Security Configuration Reset Command Identified",
+  "description": "Detects a command that removes activation information from the agent and deactivates it via command line or powershell in Microsoft Windows.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b6457702-85a0-11ef-b864-0242ac120002",
+      "name": "Windows Trend Micro Deep Security Configuration Reset Command Identified",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 700
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "sao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/10/08",
+  "lastUpdate": "2025-02-05T03:12:55.000Z"
+}

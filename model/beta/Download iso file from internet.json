@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cb299e5c-f5a2-4bec-8973-208742f253e8",
+  "name": "Download iso file from internet",
+  "description": "An ISO file is possibly downloaded from the internet via URLs. Adversaries may download ISO files to distribute malicious content or tools, aiming to bypass Mark of the Web. These ISO files can contain executable files or scripts that, once extracted and executed, might compromise the system.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c02f2ff0-e499-410d-949b-45ccb8579387",
+      "name": "Download iso file from internet",
+      "score": 2
+    },
+    {
+      "id": "cd639f05-522c-4a28-b5d7-ddfa2057c824",
+      "name": "[Heuristic Attribute] Possible Post-Exploitation Activities",
+      "score": 1
+    },
+    {
+      "id": "1704d63a-4bf3-4710-8839-158bfe0b79ac",
+      "name": "Heuristic Malware Detection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "silent": false,
+  "globalModel": true,
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/07/23",
+  "lastUpdate": "2025-08-06T23:02:27.000Z"
+}

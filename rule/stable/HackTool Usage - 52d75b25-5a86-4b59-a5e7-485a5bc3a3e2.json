@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "52d75b25-5a86-4b59-a5e7-485a5bc3a3e2",
+  "name": "Handlekatz Usage",
+  "description": "Detection of Handlekatz usage which is a tool used to dump credentials from memory, similar to Mimikatz",
+  "filterSets": [
+    [
+      {
+        "id": "655ebdd7-6496-45f5-bf3f-22826babd167",
+        "name": "Handlekatz File Creation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fe05f464-760c-41a9-ae46-ca6260694c86",
+        "name": "Handlekatz Process Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/11",
+  "lastUpdate": "2025-02-12T10:36:42.000Z"
+}

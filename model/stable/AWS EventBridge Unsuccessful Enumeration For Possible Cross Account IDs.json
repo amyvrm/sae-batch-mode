@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4ee89b98-6aed-48e6-93b5-906ec8bfe9c7",
+  "name": "AWS EventBridge Unsuccessful Enumeration For Possible Cross Account IDs",
+  "description": "Detects unsuccessful enumeration of AWS EventBridge event buses and their associated targets, which indicates an attacker may be mapping the event routing configuration in the event buses potentially to identify opportunities for cross-account event forwarding, data exfiltration, or establishing persistence.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "7196fd9a-d61b-4a4c-967e-01c5f4c0fb07",
+      "name": "AWS EventBridge Unsuccessful List Event Buses",
+      "score": 1
+    },
+    {
+      "id": "2c97ea3d-6b2e-49a9-8180-e09c97294772",
+      "name": "AWS EventBridge Unsuccessful List Event Bus Rules",
+      "score": 1
+    },
+    {
+      "id": "246258ed-abb6-4052-aa72-f8e4fc991c0d",
+      "name": "AWS EventBridge Unsuccessful List Event Sources",
+      "score": 1
+    },
+    {
+      "id": "def50ca1-9341-435a-baaa-5875c7fffaa0",
+      "name": "AWS EventBridge Unsuccessful List Partner Event Source Accounts",
+      "score": 1
+    },
+    {
+      "id": "dd714463-1051-4226-b5d4-2e14818aa146",
+      "name": "AWS EventBridge Unsuccessful List Partner Event Sources",
+      "score": 1
+    },
+    {
+      "id": "16041a07-173c-434b-8d5f-bfca62dad4f0",
+      "name": "AWS EventBridge Unsuccessful List Targets By Rule",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1087"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-08-07T09:31:17.000Z"
+}

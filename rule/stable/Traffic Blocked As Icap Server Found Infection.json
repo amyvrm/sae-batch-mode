@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "22f50b09-ffb8-4575-b6eb-0408b446632f",
+  "name": "Traffic Blocked As Icap Server Found Infection",
+  "description": "Fortinet detection - Traffic blocked as ICAP server found infection",
+  "filterSets": [
+    [
+      {
+        "id": "1df41bb3-b20d-40c2-a4ee-72718fe381fe",
+        "name": "Traffic Blocked As Icap Server Found Infection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2ae58279-d34e-49ca-86d9-2d993823e110",
+  "name": "AWS Customer Managed KMS Key Created",
+  "description": "Monitors the creation of customer managed KMS keys, which may be used for data encryption or access control operations.",
+  "filterSets": [
+    [
+      {
+        "id": "a52dcdc5-c06e-4423-ac86-e161d8b75145",
+        "name": "AWS Customer Managed KMS Key Created",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-14T05:47:04.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "32e75737-974d-40fe-9f54-79a57d860b5f",
+  "name": "DCOM Invoke Request Activity via DCERPC",
+  "description": "Network activity indicative of a DCOM Invoke Request, utilizing DCERPC, has been observed. This activity is related to the invocation requests processed in a distributed computing environment.",
+  "filterSets": [
+    [
+      {
+        "id": "8db3408b-8562-5754-8618-75a8ec271b39",
+        "name": "Invoke Request Activity Via Dcom DCE RPC (Request) - Inbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2025/05/08",
+  "lastUpdate": "2025-05-09T09:17:06.000Z"
+}

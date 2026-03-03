@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "20762640-0a72-11ee-be56-0242ac120002",
+  "name": "AWS IAM Create User",
+  "description": "Detected AWS IAM Create Useer.",
+  "filterSets": [
+    [
+      {
+        "id": "a3f57517-7c51-463d-9b14-79ea8faa5d58",
+        "name": "AWS IAM Create User",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/09/08",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

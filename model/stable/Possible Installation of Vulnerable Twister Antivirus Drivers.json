@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e4adfc34-a793-495e-96d5-83f1d152801d",
+  "name": "Possible Installation of Vulnerable Twister Antivirus Drivers",
+  "description": "Detects suspicious installation of Twister Antivirus which is capable of terminating security agent processes and services",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2b64e830-0721-410e-a3a6-f126487ccd3a",
+      "name": "Possible Installation of Vulnerable Twister Antivirus Drivers",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001",
+    "mitre.t1547.006",
+    "mitre.t1543.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Krisford Macalalad & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2024/10/04",
+  "lastUpdate": "2025-01-08T03:38:45.000Z"
+}

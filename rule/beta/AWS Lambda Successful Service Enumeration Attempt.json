@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6546e072-1984-11ee-be56-0242ac120002",
+  "name": "AWS Lambda Successful Service Enumeration Attempt",
+  "description": "Detected Lambda Successful Service Enumeration Attempt",
+  "filterSets": [
+    [
+      {
+        "id": "6b71386c-575d-4820-abde-1183b1559095",
+        "name": "AWS Lambda Successful Service Enumeration Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/03",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

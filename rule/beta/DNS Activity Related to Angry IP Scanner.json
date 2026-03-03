@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e53890d8-737a-4638-a935-394f879937eb",
+  "name": "DNS Activity Related to Angry IP Scanner",
+  "description": "Network activity involving DNS, indicative of the use of Angry IP Scanner, has been observed.",
+  "filterSets": [
+    [
+      {
+        "id": "7d2e24ae-1e31-5363-b7df-089edfa7b84a",
+        "name": "Presence Of Angry Ip Scanner DNS (Response) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "34372190-1b70-5e94-9405-ae6444461568",
+        "name": "Presence Of Angry Ip Scanner DNS (Response) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2025/05/29",
+  "lastUpdate": "2025-06-02T00:30:07.000Z"
+}

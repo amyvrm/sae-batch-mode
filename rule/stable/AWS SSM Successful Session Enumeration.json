@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "faa8e8b1-b63b-4878-98ae-295dc19f2ba5",
+  "name": "AWS SSM Successful Session Enumeration",
+  "description": "Detects attempts to list active or past SSM sessions, which could indicate reconnaissance.",
+  "filterSets": [
+    [
+      {
+        "id": "7314a2d2-dc50-49bb-a01c-d237dc0af566",
+        "name": "AWS SSM Successful Session Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

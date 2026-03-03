@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "56c836b8-1110-4009-8ece-76700bd1247a",
+  "name": "Possible Ransomware Infection",
+  "description": "svchost.exe launched without parameters followed by ransom note file creation.",
+  "filterSets": [
+    [
+      {
+        "id": "39b17506-25bb-4da9-bb01-acaf88784b13",
+        "name": "Execution of Svchost without Parameter",
+        "highlight": true
+      },
+      {
+        "id": "91f2ff5c-17bb-409f-83f1-5be2af9aeba1",
+        "name": "Possible Text File Ransom Note",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "condition": [
+    [
+      "91f2ff5c-17bb-409f-83f1-5be2af9aeba1.parentCmd equals 39b17506-25bb-4da9-bb01-acaf88784b13.processCmd"
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds"
+    ]
+  ],
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/07/23",
+  "lastUpdate": "2025-12-17T11:25:23.000Z"
+}

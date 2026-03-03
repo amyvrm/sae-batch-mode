@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "752aab18-8cd7-4ffb-b065-72e1c2c4ee72",
+  "name": "Attack Detected By ICMP Anomaly",
+  "description": "Fortinet detection - Attack detected by ICMP anomaly",
+  "filterSets": [
+    [
+      {
+        "id": "1b9c94dc-df6d-42bd-bfa6-5ef4552cab58",
+        "name": "Attack Detected By ICMP Anomaly",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-19T07:13:13.000Z"
+}

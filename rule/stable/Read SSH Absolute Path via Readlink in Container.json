@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d70aaa5e-e0b7-11ee-bd3d-0242ac120002",
+  "name": "Read SSH Absolute Path via Readlink in Container",
+  "description": "Detect an attempt to read absolute paths from symbolic links in a SSH folder.",
+  "filterSets": [
+    [
+      {
+        "id": "ca69360a-e0a6-11ee-bd3d-0242ac120002",
+        "name": "Read SSH Absolute Path via Readlink in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/03/12",
+  "lastUpdate": "2024-03-19T15:07:42.000Z"
+}

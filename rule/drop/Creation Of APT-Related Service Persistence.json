@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "72a75ed7-99ee-4a93-8afb-b3decc939eb7",
+  "name": "Creation of APT-Related Service Persistence",
+  "description": "Detection for creating Service Persistence for Earth Estries.",
+  "filterSets": [
+    [
+      {
+        "id": "6e82307a-aac7-430f-b5ef-d79aab644ccb",
+        "name": "Creation of APT-Related Service Persistence",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/13",
+  "lastUpdate": "2025-11-11T08:26:35.000Z"
+}

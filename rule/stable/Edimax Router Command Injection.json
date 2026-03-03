@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "554c1836-9e62-4434-977d-b99ea38d5dde",
+  "name": "Edimax Router Command Injection",
+  "description": "Check Point Security detection for Edimax Router Command Injection",
+  "filterSets": [
+    [
+      {
+        "id": "d404a7fb-11ef-5404-8f55-2aeb40600b87",
+        "name": "Edimax Router Command Injection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/12/11",
+  "lastUpdate": "2026-01-15T01:45:40.000Z"
+}

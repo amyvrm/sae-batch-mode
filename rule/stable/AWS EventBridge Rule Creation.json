@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "de55964e-fb47-4333-80a0-ee162cfe4011",
+  "name": "AWS EventBridge Rule Creation",
+  "description": "Detects creation of EventBridge rules that could be used to trigger resources such as Lambda functions or Step Functions.",
+  "filterSets": [
+    [
+      {
+        "id": "71380183-babe-47ec-b10c-10ba1227bd67",
+        "name": "AWS EventBridge Rule Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

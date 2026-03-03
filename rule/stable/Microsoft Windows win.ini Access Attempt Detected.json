@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b32eb3e6-3537-4818-a3d6-5ada62c43ac3",
+  "name": "Microsoft Windows win.ini Access Attempt Detected",
+  "description": "Palo Alto Vulnerability detection - Microsoft Windows win.ini Access Attempt Detected",
+  "filterSets": [
+    [
+      {
+        "id": "b2cbf5c0-0a45-44d7-816b-cdd7d4280b0d",
+        "name": "Microsoft Windows win.ini Access Attempt Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

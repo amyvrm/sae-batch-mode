@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "39444cff-c1f4-4972-a295-31655299659e",
+  "name": "AWS Cost Explorer Successful Get Usage Forecast",
+  "description": "AWS Event that retrieves usage forecast of the service",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Cost Explorer Successful Get Usage Forecast",
+        "id": "c6a8226c-822d-4b03-aa44-3b8bace81196",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

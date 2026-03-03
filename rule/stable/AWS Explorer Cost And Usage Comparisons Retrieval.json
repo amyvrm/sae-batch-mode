@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "25e738fa-a097-40b0-8e42-fd796b5ef7ab",
+  "name": "AWS Explorer Cost And Usage Comparisons Retrieval",
+  "description": "Monitors retrieval of cost and usage comparisons between two periods, which could indicate legitimate cost analysis activities or reconnaissance attempts to understand account spending patterns and usage trends for potential cost-based attacks.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Explorer Cost And Usage Comparisons Retrieval",
+        "id": "0f1380f3-4172-484f-b544-e679bc6307aa",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T11:20:55.000Z"
+}

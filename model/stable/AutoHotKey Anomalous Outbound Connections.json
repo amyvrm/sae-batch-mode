@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "44720437-970c-43b6-bfc5-2e010cc2db21",
+  "name": "AutoHotKey Anomalous Outbound Connections",
+  "description": "Detection of AutoHotKey anomalous activites, that may relate to DarkGate",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b75cba6e-abed-4f73-aa1b-43449c80e0f2",
+      "name": "AutoHotKey Anomalous Outbound Connections",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1140",
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/03/21",
+  "lastUpdate": "2024-04-04T10:36:56.000Z"
+}

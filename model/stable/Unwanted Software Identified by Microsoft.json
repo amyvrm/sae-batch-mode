@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0f7fed11-ccf1-4689-9834-934b5677de3b",
+  "name": "Unwanted Software Identified by Microsoft",
+  "description": "Microsoft Antivirus File Detection for Unwanted Software",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "8afc9399-214d-40fc-9afb-e14445b35e0d",
+      "name": "Unwanted Software Identified by Microsoft",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/06",
+  "lastUpdate": "2025-08-26T02:21:03.000Z"
+}

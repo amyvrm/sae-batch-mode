@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b62f5730-9785-4172-8647-021f533577a4",
+  "name": "AWS Bedrock Unauthorized Model Invocation Logs Deletion Attempt",
+  "description": "This rule identifies the unauthorized deletion attempt of AWS Bedrock model invocation logs.",
+  "filterSets": [
+    [
+      {
+        "id": "206dc99e-190c-46a6-9bde-d68b1e8021f6",
+        "name": "AWS Bedrock Unauthorized Model Invocation Logs Deletion Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/07/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

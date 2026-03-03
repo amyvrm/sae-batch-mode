@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6d963679-38c3-454a-9746-81809df06c7e",
+  "name": "Malicious File Download via AI Tool Ads for Information Theft",
+  "description": "Detects the download of malicious files from AI tool ads, used to deliver Redline Stealer malware.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0ffb13da-7ab3-4d5d-adf1-5046feea4bff",
+      "name": "Execution of Malicious File Download from AI-Themed Ads",
+      "score": 20
+    },
+    {
+      "id": "23551734-c1a7-4cb6-a5cb-85c193e568b2",
+      "name": "Suspicious Registry Modifications",
+      "score": 20
+    }
+  ],
+  "threshold": {
+    "targetScore": 40,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1203",
+    "mitre.t1059.001",
+    "mitre.t1140",
+    "mitre.t1547.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA IR",
+  "date": "2024/12/09",
+  "lastUpdate": "2024-12-26T08:16:04.000Z"
+}

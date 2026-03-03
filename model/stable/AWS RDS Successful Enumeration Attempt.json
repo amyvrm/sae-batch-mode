@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a9912811-2fce-4359-9924-b8083d12abde",
+  "name": "AWS RDS Successful Enumeration Attempt",
+  "description": "Detected successful AWS RDS enumeration which might indicate an attacker trying to collect information about critical database details, credentials, configurations, data content, and performance metrics which might help attackers to successfully breach databases in RDS.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "name": "AWS RDS Successful Describe DB Snapshots",
+      "id": "f8a519cd-cb86-4e0f-9a81-960d7dce558e",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Successful Describe DB Cluster Snapshots",
+      "id": "9eeb9d84-b999-4735-bc14-cd932bc00246",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Successful Describe DB Clusters",
+      "id": "9789a496-2a14-4e13-957a-d80d81c898d4",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Successful Describe DB Cluster Endpoints",
+      "id": "26e28275-204b-410e-a3e3-f7f57d40f20a",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Successful Describe DB Instances",
+      "id": "5f30d3c5-f089-4cfa-bd58-edd12e8ffd1d",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Successful Describe DB Security Group",
+      "id": "785a565a-233d-4b2f-ae7d-24993ed1808d",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Certificate Authority Certificates Enumeration",
+      "id": "6fde2401-5b1c-4846-a1dd-c2cd763827b5",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Account Attributes Enumeration",
+      "id": "a7c6b3c6-7655-4622-b27f-65e129a15475",
+      "score": 1
+    },
+    {
+      "name": "AWS RDS Automated Backups Enumeration",
+      "id": "9dc4a5d5-61ae-4c72-bf8a-7bad6c295609",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580",
+    "mitre.t1526"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/22",
+  "lastUpdate": "2025-07-28T08:21:42.000Z"
+}

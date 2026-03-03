@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b75595c1-e5d9-43e0-8969-8854608ca932",
+  "name": "Nginx Outbound Connection in Container",
+  "description": "Nginx container successfully established an outbound connection.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "ebc8f6ff-b795-4a2e-b7c3-66debb78ba7d",
+      "name": "Nginx Outbound Connection in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1200,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1095"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/02/20",
+  "lastUpdate": "2025-06-11T09:44:27.000Z"
+}

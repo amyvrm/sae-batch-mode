@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3fedf374-e6bd-41a4-8c81-1803e5ae9c3a",
+  "name": "Registry Modification to Disable Protected Process Light",
+  "description": "Disabling Protected Process Light (PPL), a security feature for the Local Security Authority (LSA) process which can lead to Credential Dumping",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7105c405-659f-4910-9697-a3b91bcacc18",
+      "name": "Registry Modification to Disable Protected Process Light",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1003",
+    "mitre.t1112"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-09-16T04:22:12.000Z"
+}

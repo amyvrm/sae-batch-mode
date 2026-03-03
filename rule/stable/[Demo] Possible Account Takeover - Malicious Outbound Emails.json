@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ac784fae-3418-5eeb-8e17-43d05d62e57b",
+  "name": "[Demo] Possible Account Takeover - Malicious Outbound Emails",
+  "description": "Account has sent one or more malicious emails, indicating a possible account takeover.",
+  "filterSets": [
+    [
+      {
+        "id": "a96da082-3d9a-4733-abbf-0f73bb7b2f59",
+        "name": "Possible Account Takeover - Malicious Outbound Emails",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 1500,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2024/12/17",
+  "lastUpdate": "2025-01-20T05:12:50.000Z"
+}

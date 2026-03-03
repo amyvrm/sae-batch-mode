@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e5ceea4f-4e18-459c-851d-1081d300625f",
+  "name": "Portable DWAgent Invoking LOLBINs",
+  "description": "Detection of DWAgent being used to invoke LOLBINs",
+  "filterSets": [
+    [
+      {
+        "id": "22720266-4137-4038-89e2-d41b508cbc06",
+        "name": "Portable DWAgent Invoking LOLBINs",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "AIM",
+  "date": "2025/11/21",
+  "lastUpdate": "2026-01-05T14:20:37.000Z"
+}

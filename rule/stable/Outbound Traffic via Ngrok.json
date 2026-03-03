@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e6856f7d-fb42-4b7b-886e-52c95527d821",
+  "name": "Outbound Traffic via Ngrok",
+  "description": "Detects the use of Ngrok, a utility used for port forwarding and tunneling, often used by threat actors to make local protected services publicly available.",
+  "filterSets": [
+    [
+      {
+        "id": "e438a45e-cbd6-4abb-9908-a05a7719dfd0",
+        "name": "Outbound Traffic via Ngrok",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/12",
+  "lastUpdate": "2024-03-22T15:07:20.000Z"
+}

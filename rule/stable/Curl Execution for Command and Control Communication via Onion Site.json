@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bc27e18e-7bc2-4740-b727-0da76a407c6b",
+  "name": "Curl Execution for Command and Control Communication via Onion Site",
+  "description": "Detects the execution of the \"curl.exe\" command that references \"SOCKS\" and \".onion\" domains, potentially signaling Kalambur backdoor activity.",
+  "filterSets": [
+    [
+      {
+        "id": "75cac16f-a5b1-4780-a74a-58aee6046592",
+        "name": "Curl Execution for Command and Control Communication via Onion Site",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/02/25",
+  "lastUpdate": "2025-06-23T15:46:09.000Z"
+}

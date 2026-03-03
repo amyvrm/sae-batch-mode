@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6f342905-acac-4a84-b8a9-94cc43ded866",
+  "name": "Detected Process Originating From TMP Directory",
+  "description": "Detect Processes Running from '/tmp' folder",
+  "filterSets": [
+    [
+      {
+        "id": "2b2f89be-7f82-476a-a444-5d2c5ebb24d5",
+        "name": "Unknown Process Launched From TMP Directory",
+        "highlight": true
+      },
+      {
+        "id": "567f5a61-cea5-4628-93a7-a16d54bbf859",
+        "name": "External Download Via Curl Or Wget",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "condition": [
+    [
+      "567f5a61-cea5-4628-93a7-a16d54bbf859.objectCmd contains 2b2f89be-7f82-476a-a444-5d2c5ebb24d5.objectFilePath"
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/08/14",
+  "lastUpdate": "2025-03-06T10:14:04.000Z"
+}

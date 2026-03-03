@@ -1,0 +1,31 @@
+{
+  "name": "Possible Inetutils Telnetd Remote Code Execution",
+  "description": "Detects inetutils telnetd spawning the system login program with the \"-f\" option, indicating forced authentication without password prompts. The behavior is suspicious because it can be used by attackers to bypass authentication and gain remote code execution via vulnerable telnetd instances. If exploited, it may allow unauthorized access and command execution on the host.",
+  "schemaVersion": "1.0",
+  "id": "b8983aaa-4d59-4ac1-ab80-89d95dc05151",
+  "filterSets": [
+    [
+      {
+        "id": "0bf43eec-030a-45ef-ab96-1f99842a5ab9",
+        "name": "Possible Inetutils Telnetd Remote Code Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2026/01/27",
+  "lastUpdate": "2026-02-03T06:30:00.000Z"
+}

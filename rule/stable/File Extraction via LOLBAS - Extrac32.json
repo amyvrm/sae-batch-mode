@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "86082bee-5ec7-439c-9bf5-e3f2ba736519",
+  "name": "File Extraction via LOLBAS - Extrac32",
+  "description": "Detection of the usage of the executable extrac32 to decompress a file located in the temporary directory.",
+  "filterSets": [
+    [
+      {
+        "id": "cca64bcc-3814-4045-ac20-6827ef35ec6c",
+        "name": "File Extraction via LOLBAS - Extrac32",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2024/11/20",
+  "lastUpdate": "2025-05-16T02:20:41.000Z"
+}

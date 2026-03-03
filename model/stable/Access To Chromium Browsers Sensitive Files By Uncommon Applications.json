@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6f493a46-a296-4d23-8dc1-82b4b08751d7",
+  "name": "Access To Chromium Browsers Sensitive Files By Uncommon Applications",
+  "description": "Detects file access requests to chromium based browser sensitive files by uncommon processes.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0eafcf32-a2d9-4c24-85f2-9edb73f96174",
+      "name": "Access To Chromium Browsers Sensitive Files By Uncommon Applications",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1555.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2024/09/24",
+  "lastUpdate": "2024-10-23T16:12:37.000Z"
+}

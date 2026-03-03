@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "56ae21a3-1126-4e61-93a7-c957643ac094",
+  "name": "Malicious CMD or PowerShell Running via On-Screen Keyboard",
+  "description": "Adversaries may establish persistence and elevate privileges by using an msi install or uninstall to drop dll. Later they can use osk.exe to run malicious cmd as SYSTEM.",
+  "filterSets": [
+    [
+      {
+        "id": "44b5901c-ff99-4a33-b24c-89dd714a825d",
+        "name": "Malicious CMD or PowerShell Running via On-Screen Keyboard",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/09/17",
+  "lastUpdate": "2024-10-18T05:32:01.000Z"
+}

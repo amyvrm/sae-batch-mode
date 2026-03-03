@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "782b96da-5dfe-438c-92e1-2700cc288d3e",
+  "name": "AWS SageMaker Notebook Instance Created or Updated With Root Access",
+  "description": "This rule identifies when a SageMaker Notebook instance is created or updated with root access enabled.",
+  "filterSets": [
+    [
+      {
+        "id": "8f42947b-ec1a-4009-8649-510a29046b80",
+        "name": "AWS SageMaker Notebook Instance Created With Root Access",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f7ce1b3b-5cab-47e3-be46-52d6b63b965c",
+        "name": "AWS SageMaker Notebook Instance Updated With Root Access",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/08/29",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

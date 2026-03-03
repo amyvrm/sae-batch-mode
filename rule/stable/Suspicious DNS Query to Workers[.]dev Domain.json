@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c1acd168-7577-463d-891f-7b6a3436f58f",
+  "name": "Suspicious DNS Query to Workers Domain",
+  "description": "Suspicious DNS Query to Workers Domain",
+  "filterSets": [
+    [
+      {
+        "id": "ba814fd1-762b-42a0-b617-16c2897311b1",
+        "name": "Suspicious DNS Query to Workers Domain",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 10,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/01/19",
+  "lastUpdate": "2024-01-30T20:24:00.000Z"
+}

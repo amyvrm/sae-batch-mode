@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eaddb459-5538-483f-ba3d-fb11fb5db87d",
+  "name": "Malicious Traffic via Blacklisted Domain",
+  "description": "Traffic from a domain, which is on a blocklist in the dynamic filter database, has appeared.",
+  "filterSets": [
+    [
+      {
+        "id": "24f87079-be71-5e5a-a0b2-a33eb6969768",
+        "name": "Malicious Traffic via Blacklisted Domain",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/06",
+  "lastUpdate": "2026-02-11T03:25:20.000Z"
+}

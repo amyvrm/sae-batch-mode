@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ee6d231b-dfb3-4e31-82db-cd6b3a6491e4",
+  "name": "Executable Content from Email Client and Webmail Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that blocks email opened within Microsoft Outlook or webmail providers from propagating executable files such as .exe and .dll, script files such as PowerShell (.ps1) and JavaScript (.js), and archive files such as .zip.",
+  "filterSets": [
+    [
+      {
+        "id": "5f3ff569-4f09-4ede-898b-c617ae8495ab",
+        "name": "Executable Content from Email Client and Webmail Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-21T03:31:42.000Z"
+}

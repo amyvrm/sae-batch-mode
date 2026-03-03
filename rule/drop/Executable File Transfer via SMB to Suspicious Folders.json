@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "600d673c-aea1-4363-84ad-ff1c985d9d97",
+  "name": "Executable File Transfer via SMB to Suspicious Folders",
+  "description": "Detects the transfer of executable files to suspicious directories such as C:\\Users\\Public\\ via SMB. This behavior may indicate lateral movement or the deployment of malicious payloads within a network.",
+  "filterSets": [
+    [
+      {
+        "id": "f7af89ae-4b5f-43c6-b206-7f536d495277",
+        "name": "Executable File Transfer via SMB to Suspicious Folders",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Ahmed Kamal & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/04/09",
+  "lastUpdate": "2025-06-17T15:25:01.000Z"
+}

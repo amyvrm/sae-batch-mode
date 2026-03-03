@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0d31cb79-74fb-47b7-9514-e7e107350b36",
+  "name": "Suspicious SpearPhishing Link in email",
+  "description": "Suspicious SpearPhishing Link in email",
+  "filterSets": [
+    [
+      {
+        "id": "be307a99-4986-4e6b-912a-bce283ab643d",
+        "name": "Spearphishing Link Addressed by RetroScan",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

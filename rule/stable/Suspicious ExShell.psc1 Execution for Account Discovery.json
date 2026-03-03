@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bab18314-3870-4d28-aede-045bd780b153",
+  "name": "Suspicious ExShell.psc1 Execution for Account Discovery",
+  "description": "Detects suspicious execution of Exshell.psc1, which is the Exchange Management Shell file from Microsoft Exchange to retreive information about a specific mailbox.",
+  "filterSets": [
+    [
+      {
+        "id": "d3e3a401-0ed9-4739-8ed4-6ca62b827bd7",
+        "name": "Suspicious ExShell.psc1 Execution for Account Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/05/08",
+  "lastUpdate": "2024-05-29T02:11:08.000Z"
+}

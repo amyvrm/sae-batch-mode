@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "edf17dd1-3b77-42ea-aa12-28dd97341eea",
+  "name": "Suspicious Modification of MSDTC Service via WinRM",
+  "description": "Detects suspicious modification of Microsoft Distributed Transaction Coordinator(MSDTC) via Windows Remote Management(WinRM) that might an indicator of possible compromised or lateral movement.",
+  "filterSets": [
+    [
+      {
+        "id": "5b06b806-b13e-4014-8778-617bff7a52c0",
+        "name": "Suspicious Modification of MSDTC Service via WinRM",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/07/23",
+  "lastUpdate": "2024-09-02T08:19:34.000Z"
+}

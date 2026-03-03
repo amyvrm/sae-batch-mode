@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7f8fc084-44a7-4016-9478-036132f07084",
+  "name": "AWS IAM Create/Update Full Administrative Privileged Inline Policy For a Group",
+  "description": "Detects AWS IAM Create or Update Full Administrative Privileged Inline Policy For a Group.",
+  "filterSets": [
+    [
+      {
+        "id": "40975de4-a910-4d50-9142-09882e1c4a2b",
+        "name": "AWS IAM Create/Update Over Privileged Inline Policy For a Group",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/10/28",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

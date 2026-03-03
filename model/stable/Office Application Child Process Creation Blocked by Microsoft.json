@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dbbd60af-a32b-48fd-8553-5b415cd596ce",
+  "name": "Office Application Child Process Creation Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that prevents Office applications such as Word, Excel, and PowerPoint from creating child processes to block macro-based attacks and exploit propagation.",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "93d5d6da-f6c0-4027-b806-ed52e68f6be8",
+      "name": "Office Application Child Process Creation Blocked by Microsoft",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.001",
+    "mitre.t1105",
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2026-02-02T08:25:37.000Z"
+}

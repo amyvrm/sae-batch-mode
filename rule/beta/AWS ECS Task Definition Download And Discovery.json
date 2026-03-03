@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a554314e-a044-4782-918a-5f0c3fc180e4",
+  "name": "AWS ECS Task Definition Download And Discovery",
+  "description": "Detected AWS ECS Task Definition Download And Discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "d53b817c-9cee-4efe-8d57-61c25c738b60",
+        "name": "AWS ECS Task Definition Download And Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/12/19",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

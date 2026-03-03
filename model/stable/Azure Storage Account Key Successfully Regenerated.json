@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "07809f08-c91f-4bd3-b961-f8fca1211dac",
+  "name": "Azure Storage Account Key Successfully Regenerated",
+  "description": "Detects the successful regeneration of an Azure Storage Account access key, which may indicate an attacker attempting to rotate credentials to maintain persistent access, disrupt legitimate operations, or obscure unauthorized usage.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "cfe450e4-d909-4b69-993f-5ce53e2caf31",
+      "name": "Azure Storage Account Key Successfully Regenerated",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.008"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/27",
+  "lastUpdate": "2025-12-10T09:44:40.000Z"
+}

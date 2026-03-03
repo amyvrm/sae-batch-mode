@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "da050197-15d1-4a38-8a1d-7473effa95f8",
+  "name": "Possible Dropping of Vulnerable Avast Driver",
+  "description": "Detects the deployment of the Avast anti-rootkit kernel driver, which has been leveraged by threat actors as a privilege escalation technique to terminate EDR/EPP processes.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2462f13f-ebaa-4abe-a1e3-05c3c0651dc1",
+      "name": "Possible Dropping of Vulnerable Avast Driver",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001",
+    "mitre.t1068"
+  ],
+  "playbooks": [
+    {
+      "id": "ac93f324-42ee-4947-bc73-22e9a726f3ae",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "NETWORK_ENRICHMENT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal & Ahmed Hussein",
+  "team": "MENA-IR",
+  "date": "2026/01/04",
+  "lastUpdate": "2026-01-26T00:35:33.000Z"
+}

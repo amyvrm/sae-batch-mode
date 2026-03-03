@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3e6161a5-96f8-49f9-b29c-3c3d1144e8a6",
+  "name": "AWS Bedrock Successful Model Invocation Detected",
+  "description": "Detects successful invocation of AWS Bedrock models.",
+  "filterSets": [
+    [
+      {
+        "id": "f442d14d-b77e-4c14-9435-5432a3554a87",
+        "name": "AWS Bedrock Successful Model Invocation Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/13",
+  "lastUpdate": "2025-01-21T13:11:52.000Z"
+}

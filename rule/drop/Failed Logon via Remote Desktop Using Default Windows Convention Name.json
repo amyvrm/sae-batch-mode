@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c68aef20-3909-4146-aa9e-b8eb98d18943",
+  "name": "Failed Logon via Remote Desktop Using Default Windows Convention Name",
+  "description": "Failed logon via Remote Desktop from a host using the windows default convention name has been detected.",
+  "filterSets": [
+    [
+      {
+        "id": "04f19928-011a-403a-8b0a-283e17b4b764",
+        "name": "Failed Logon via Remote Desktop Using Default Windows Convention Name",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/21",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

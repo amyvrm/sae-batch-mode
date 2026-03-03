@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4fc06a9f-1121-4ef9-a6f4-d5ee13eba29e",
+  "name": "Script Engine Execution Initiated by Office Application via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection identifying when mshta.exe is launched by Microsoft Office applications (Word, Excel, PowerPoint, OneNote, Outlook). This may indicate document-based execution, macro abuse, or phishing-related activity.",
+  "filterSets": [
+    [
+      {
+        "id": "558e4a15-c0e4-467e-838c-1aa24bc4865c",
+        "name": "Script Engine Execution Initiated by Office Application via Microsoft Telemetry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/10",
+  "lastUpdate": "2025-11-17T03:21:21.000Z"
+}

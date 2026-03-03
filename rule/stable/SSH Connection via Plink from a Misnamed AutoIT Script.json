@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19224a3a-753f-44c1-9831-3664b663bdea",
+  "name": "SSH Connection via Plink from a Misnamed AutoIT Script",
+  "description": "Detects potential reverse SSH tunnel event via Plink (PuTTy Link) from a suspicious AutoIT script which could lead to system compromise if file is not expected or known.",
+  "filterSets": [
+    [
+      {
+        "id": "60c38521-0cd9-4179-adc1-60011efaf14b",
+        "name": "Misnamed Executable",
+        "highlight": true
+      },
+      {
+        "id": "5f0e6137-71da-4a04-9403-7d7a5b3f598a",
+        "name": "Execution of Plink.exe to connect via SSH",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "60c38521-0cd9-4179-adc1-60011efaf14b.processCmd equals 5f0e6137-71da-4a04-9403-7d7a5b3f598a.parentCmd"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/10/11",
+  "lastUpdate": "2024-10-18T07:38:11.000Z"
+}

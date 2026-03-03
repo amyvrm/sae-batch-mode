@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6ebe70cc-3003-4347-ad0e-04dfce50b435",
+  "name": "Suspicious Modification of Windows Defender via SystemSettingsAdminFlows.exe",
+  "description": "Detects the usage of SystemSettingsAdminFlows.exe to disable or tamper with Windows Defender",
+  "filterSets": [
+    [
+      {
+        "id": "a470db29-049c-4e67-bae3-d43df76e8b09",
+        "name": "Suspicious Modification of Windows Defender via SystemSettingsAdminFlows.exe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2025/01/14",
+  "lastUpdate": "2025-02-18T06:39:56.000Z"
+}

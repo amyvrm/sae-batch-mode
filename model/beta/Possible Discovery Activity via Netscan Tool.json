@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8145ef56-0aad-49f6-98d8-ad6c0b6494c6",
+  "name": "Possible Discovery Activity via Netscan Tool",
+  "description": "An attempt to discover writable shares using netscan tool.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "bb0fccb3-c5d8-4758-9400-a09f2d2c9920",
+      "name": "Possible Discovery Activity via Netscan Tool",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1046"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mahmoud Soheem & Mercy Wafula",
+  "team": "MENA-IR",
+  "date": "2026/01/13",
+  "lastUpdate": "2026-01-13T14:48:07.000Z"
+}

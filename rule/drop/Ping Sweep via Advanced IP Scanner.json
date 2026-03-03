@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3a9bdbd5-54eb-4176-b753-a184c4e3f2e0",
+  "name": "Ping Sweep via Advanced IP Scanner",
+  "description": "Ping sweep via Advanced IP Scanner tool, was detected on the network via ICMP and HTTP.",
+  "filterSets": [
+    [
+      {
+        "id": "b09bf309-258d-56c3-9d02-beb236281eed",
+        "name": "ICMP Sweep ICMP (Request) - Inbound",
+        "highlight": true
+      },
+      {
+        "id": "f129a0e7-ef7e-5a8c-9963-ff0529e3cdb0",
+        "name": "Advanced Ip Scanner HTTP (Request)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1d8e3c7d-0d8a-501b-b217-a54ea9b764b8",
+        "name": "ICMP Sweep ICMP (Request) - Outbound",
+        "highlight": true
+      },
+      {
+        "id": "f129a0e7-ef7e-5a8c-9963-ff0529e3cdb0",
+        "name": "Advanced Ip Scanner HTTP (Request)",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "b09bf309-258d-56c3-9d02-beb236281eed.peerIp equals f129a0e7-ef7e-5a8c-9963-ff0529e3cdb0.peerIp"
+    ],
+    [
+      "1d8e3c7d-0d8a-501b-b217-a54ea9b764b8.peerIp equals f129a0e7-ef7e-5a8c-9963-ff0529e3cdb0.peerIp"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Cedric Trinidad",
+  "team": "DDI",
+  "date": "2024/12/06",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

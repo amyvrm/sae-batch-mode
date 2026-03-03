@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "id": "308ac74c-0bbd-41c0-ae1c-c7f600a00c76",
+  "name": "AWS Billing and Cost Management Service Unsuccessful Enumeration Attempt",
+  "description": "Detected unsuccessful enumeration of AWS Billing and Cost Management service which might indicate an attacker trying to collect info on targeted AWS account for pending details, resource usage, IDs, allocation tags, and basic resource info to check if the organization is worth targeting.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "name": "AWS Cost Explorer Unsuccessful Get Usage Forecas",
+      "id": "736c433d-1a82-4f03-8877-7629a8219c3c",
+      "score": 1
+    },
+    {
+      "name": "AWS Cost Explorer Unsuccessful Get Cost Forecas",
+      "id": "ad826609-a829-4968-b797-db94a68fc141",
+      "score": 1
+    },
+    {
+      "name": "AWS Cost Explorer Unsuccessful Describe Budge",
+      "id": "0c6e2aec-14b9-4b23-90de-fa04a5542fbd",
+      "score": 1
+    },
+    {
+      "name": "AWS Cost Explorer Unsuccessful Get Cost And Usage",
+      "id": "16cd72b4-1f17-4ccf-9f26-cf8e817f64cb",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580",
+    "mitre.t1538",
+    "mitre.t1526"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/22",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

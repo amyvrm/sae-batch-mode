@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4b42b34d-169a-44e0-9758-3093a62fa6e9",
+  "name": "Potential Ransomware DNS Communication",
+  "description": "A potential command and control (C&C) communication behavior associated with CRILOCK and CAPHAW attacks was observed via DNS traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "118399c7-80e4-523d-bc3d-3883c68347b6",
+        "name": "Possible Crilock DNS Response - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "de49b6ec-5fa3-5221-a4d9-34c4f8587cbb",
+        "name": "Possible Caphaw DNS Response - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d25cf98b-f926-5eab-ad45-66fdf623f57f",
+        "name": "Possible Crilock DNS Response - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9222fd0f-79f2-5054-8ba9-d28cf76c9ba8",
+        "name": "Possible Caphaw DNS Response - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Bersamira",
+  "team": "DDI",
+  "date": "2025/03/18",
+  "lastUpdate": "2025-04-04T03:14:04.000Z"
+}

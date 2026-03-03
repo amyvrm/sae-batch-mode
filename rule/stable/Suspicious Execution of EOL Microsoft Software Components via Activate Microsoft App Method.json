@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "308a8046-744c-44bd-9295-064185110181",
+  "name": "Suspicious Execution of EOL Microsoft Software Components via Activate Microsoft App Method",
+  "description": "Detects Activate Microsoft App method, one of Excel's Distributed Component Model (DCOM), to execute End-of-Life Microsoft software components.",
+  "filterSets": [
+    [
+      {
+        "id": "611fc458-e163-4ac7-bcb0-c9ce094b0c0f",
+        "name": "Suspicious Execution of EOL Microsoft Software Components via Activate Microsoft App Method",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/06/05",
+  "lastUpdate": "2024-08-12T07:37:17.000Z"
+}

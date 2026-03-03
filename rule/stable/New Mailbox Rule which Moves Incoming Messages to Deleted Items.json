@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6a308957-c45a-4cee-977c-b1a3605dabff",
+  "name": "New Mailbox Rule which Moves Incoming Messages to Deleted Items",
+  "description": "Detects an activity to create a mailbox rule that deletes incoming messages",
+  "filterSets": [
+    [
+      {
+        "id": "5db1c2c8-2bcf-411e-bce1-cdc420bac1b6",
+        "name": "New Mailbox Rule which Moves Incoming Messages to Deleted Items",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "xca"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2025/03/15",
+  "lastUpdate": "2025-03-21T09:14:04.000Z"
+}

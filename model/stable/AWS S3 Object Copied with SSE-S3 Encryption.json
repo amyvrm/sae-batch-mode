@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a29c4e05-f8b1-4067-9540-478474cd262e",
+  "name": "AWS S3 Object Copied with SSE-S3 Encryption",
+  "description": "An S3 object was copied using Server-Side Encryption with Amazon S3-managed keys (SSE-S3). While this is common for secure storage, repeated or unexpected copies within the account could indicate data staging for potential exfiltration. Review access logs and destination details to confirm if this action was legitimate.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "2edd8c3d-96ca-42be-8a29-5940d95c084f",
+      "name": "AWS S3 Object Copied with SSE-S3 Encryption",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 86400,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580",
+    "mitre.t1486"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-08-11T07:08:48.000Z"
+}

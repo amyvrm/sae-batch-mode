@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "68a8f934-a006-4931-af57-341c50ed8e07",
+  "name": "Possible Info Stealer via Uncompressing and Executing Batch Files",
+  "description": " Detects the uncompressing and execution of batch files associated with Lumma Stealer. These stealers exfiltrate browser credentials and cryptocurrency wallet information, posing significant security risks.",
+  "filterSets": [
+    [
+      {
+        "id": "82684b79-0a63-4dee-a2cb-96eb2cc8446e",
+        "name": "Possible Info Stealer via Uncompressing and Executing Batch Files",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/02/12",
+  "lastUpdate": "2025-04-10T14:42:03.000Z"
+}

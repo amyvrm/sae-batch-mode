@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "37ae8cb9-7c50-464b-bf9f-bee397c6faa9",
+  "name": "Possible DLL Sideloading via Logmein Application",
+  "description": "Detects DLL sideloading via Logmein application leading to C2 Connection",
+  "filterSets": [
+    [
+      {
+        "id": "1e2a431a-4365-4508-b075-476f87a1ddab",
+        "name": "Possible DLL Sideloading via Logmein Application",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2025/05/22",
+  "lastUpdate": "2025-06-20T02:50:11.000Z"
+}

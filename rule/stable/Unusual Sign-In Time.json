@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "455694c0-ceda-4e37-9bac-2cb81a12e31c",
+  "name": "Unusual Sign-In Time",
+  "description": "A user who typically signs in during a specific time period signed in at a time inconsistent with existing records",
+  "filterSets": [
+    [
+      {
+        "id": "9be789d1-796c-546d-bbb6-460a2820586e",
+        "name": "Unusual Sign-In Time",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "aad"
+    ]
+  ],
+  "author": "Baker Yang",
+  "team": "Jaguar",
+  "date": "2023/10/02",
+  "lastUpdate": "2023-11-21T06:08:23.000Z"
+}

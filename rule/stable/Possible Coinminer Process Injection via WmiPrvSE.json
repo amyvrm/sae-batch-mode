@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "183b7455-043d-4799-931d-2646b2b18259",
+  "name": "Possible Coinminer Process Injection via WmiPrvSE",
+  "description": "Detects process injection of a suspicious executable indicative of coinminer activity via WmiPrvSE.",
+  "filterSets": [
+    [
+      {
+        "id": "4ad3c724-ed7f-45ea-bf50-effe7092ab66",
+        "name": "Possible Coinminer Process Injection via WmiPrvSE",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/03/24",
+  "lastUpdate": "2025-05-27T15:53:15.000Z"
+}

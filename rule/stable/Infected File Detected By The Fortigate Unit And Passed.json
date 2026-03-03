@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "451e39df-2590-4d7d-b57e-4f7963d02c1b",
+  "name": "Infected File Detected By The Fortigate Unit And Passed",
+  "description": "Fortinet detection - Infected file detected by the FortiGate unit and passed",
+  "filterSets": [
+    [
+      {
+        "id": "6ff4ff60-c048-4113-bbfb-ef7c6f7f89e9",
+        "name": "Infected File Detected By The Fortigate Unit And Passed",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

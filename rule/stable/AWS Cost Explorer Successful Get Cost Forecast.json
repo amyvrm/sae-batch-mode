@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "82449e06-d4de-47af-9c8f-d39b92d3878b",
+  "name": "AWS Cost Explorer Successful Get Cost Forecast",
+  "description": "AWS Event that retreives cost spending of the service",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Cost Explorer Successful Get Cost Forecast",
+        "id": "6af4557f-ff93-4e35-bae1-c2b065756398",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

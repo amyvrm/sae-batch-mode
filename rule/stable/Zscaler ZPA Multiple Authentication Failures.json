@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7dc8e060-12f3-437a-85ae-34f143ce0ed5",
+  "name": "Zscaler ZPA Multiple Authentication Failures",
+  "description": "Detects multiple authentication failures from Zscaler Private Access (ZPA) indicating potential brute force attack.",
+  "filterSets": [
+    [
+      {
+        "id": "4741989c-d38c-44fe-922e-33c172ae5a18",
+        "name": "Zscaler ZPA Authentication Failure",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 10,
+    "withinSeconds": 600,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Zscaler"
+    ]
+  ],
+  "author": "Mohammed Malubay",
+  "team": "Third Party Operations",
+  "date": "2025/12/02",
+  "lastUpdate": "2025-12-05T01:25:57.000Z"
+}

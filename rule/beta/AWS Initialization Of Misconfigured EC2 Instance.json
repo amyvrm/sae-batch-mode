@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0c06a5d9-af58-4b72-a0a9-3e660902760d",
+  "name": "AWS Initialization Of Misconfigured EC2 Instance",
+  "description": "Detects Misconfigured EC2 Instance Initialization ",
+  "filterSets": [
+    [
+      {
+        "id": "e555218c-b9c8-45ed-a2cb-aa260bb39bd5",
+        "name": "AWS Key Pair Creation",
+        "highlight": true
+      },
+      {
+        "id": "d98f418a-5c5f-4fae-b424-66789618ab2c",
+        "name": "AWS EC2 Instance Creation",
+        "highlight": true
+      },
+      {
+        "id": "b964b227-2447-4f3d-808e-abf81a5ca91f",
+        "name": "AWS IAM Detach Role Policy",
+        "highlight": true
+      },
+      {
+        "id": "504c87a3-7be6-41d3-8a1a-5a3d0ea31b4b",
+        "name": "AWS IAM Policy Attached To A Role",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/09/08",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

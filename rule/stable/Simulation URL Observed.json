@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "18e5f8d6-e483-406f-a4d0-d8b574ee5e62",
+  "name": "Simulation URL Observed",
+  "description": "Detects testing URL for Palo Alto detection.",
+  "filterSets": [
+    [
+      {
+        "id": "775e2ba2-4483-4716-92d5-c47d8a7cb2f1",
+        "name": "Simulation URL Observed",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-14T04:46:07.000Z"
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7493b338-5cac-4e7a-8c87-e106c7e6c6e0",
+  "name": "AI Detection model - Potential Backdoor Installation",
+  "description": "Potential backdoor implant behavior involving unusual PowerShell parameters and uncommon Run:RunOnce registry entry creation - dynamic AI Model powered by NVIDIA Morpheus and LLM",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "134045d2-f80f-47ef-9e47-7f1571c7d64c",
+      "name": "External Trigger Rule",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "aad",
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1547.001",
+    "mitre.t1110",
+    "mitre.t1586.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "silent": false,
+  "globalModel": true,
+  "author": "AAD and SAE",
+  "team": "AAD and SAE",
+  "date": "2021/10/26",
+  "lastUpdate": "2025-09-10T02:57:57.000Z"
+}

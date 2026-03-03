@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c02f2ff0-e499-410d-949b-45ccb8579387",
+  "name": "Download iso file from internet",
+  "description": "Adversaries may download ISO files from the internet via URLs for distributing malicious content or tools and bypass Mark of the Web. These ISO files may contain executable files or scripts that, once extracted and executed, might compromise the system.",
+  "filterSets": [
+    [
+      {
+        "id": "6c0cd295-750e-46ab-b13b-17dba553742a",
+        "name": "Download iso file from internet",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/07/23",
+  "lastUpdate": "2025-08-06T23:02:27.000Z"
+}

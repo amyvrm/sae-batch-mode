@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2ce76580-19e9-4977-9ac3-5c4325bb449b",
+  "name": "AWS Bedrock Knowledge Base Listing Detection",
+  "description": "Identified the enumeration of knowledge bases and their information in AWS Bedrock.",
+  "filterSets": [
+    [
+      {
+        "id": "03d784a8-399b-454c-b7a7-dd99113f9097",
+        "name": "AWS Bedrock Knowledge Base Listing Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/07/24",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

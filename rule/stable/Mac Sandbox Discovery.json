@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "955f5526-de4d-44cf-97ea-33f1b755dd6b",
+  "name": "Mac Sandbox Discovery",
+  "description": "Check sandbox trail for possible sandbox evasion",
+  "filterSets": [
+    [
+      {
+        "id": "5f9e06f0-567c-4324-abcc-4a95a70cce9d",
+        "name": "Sandbox Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/11/25",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

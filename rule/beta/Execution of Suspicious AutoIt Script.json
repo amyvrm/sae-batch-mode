@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4458dae-f7b4-4459-9055-1c0a492b4d55",
+  "name": "Execution of Suspicious AutoIt Script",
+  "description": "Execution of suspicious or misnamed AutoIt script.",
+  "filterSets": [
+    [
+      {
+        "id": "60c38521-0cd9-4179-adc1-60011efaf14b",
+        "name": "Execution of Misnamed Binary",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "aeffca02-aa35-4ca2-a3bc-a3a16a70102d",
+        "name": "Possible Renamed AutoIt Executable",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2164461b-8fb2-40d8-b039-8a3c822e58b1",
+        "name": "Execution of AutoIt Script in Uncommon Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Simon Dulude",
+  "team": "Cloud One",
+  "date": "2025/10/31",
+  "lastUpdate": "2025-12-22T02:21:33.000Z"
+}

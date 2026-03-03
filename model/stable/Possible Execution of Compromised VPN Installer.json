@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2b5dedc9-5788-4efb-8921-a8223a0bb7c1",
+  "name": "Possible Execution of Compromised VPN Installer",
+  "description": "Multiple suspicious behaviors have been identified which is caused by a compromised VPN Installer",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7d0a76fa-d033-49c6-957f-7557ecb408d4",
+      "name": "Suspicious Dll Sideloading from Compromised VPN Installer",
+      "score": 1
+    },
+    {
+      "id": "17c166a3-67c4-4f1a-8347-32238163b80d",
+      "name": "Registry Entry Creation from Compromised VPN Installer for Persistence",
+      "score": 1
+    },
+    {
+      "id": "918c9574-725e-47b1-b78c-aae652be6578",
+      "name": "Suspicious Dropping of Files via Compromised VPN Installer",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1574.004",
+    "mitre.t1574.002",
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Renzell David Barros and Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/01/24",
+  "lastUpdate": "2025-03-05T02:59:58.000Z"
+}

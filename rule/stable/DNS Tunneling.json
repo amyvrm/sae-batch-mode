@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9404ce5f-1194-46e3-884e-45e080537479",
+  "name": "DNS Tunneling",
+  "description": "Network detection for DNS tunneling traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "56ff2358-a399-4324-92d0-24e7c5b2e993",
+        "name": "DNS Tunneling",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fce1395c-b854-4a23-8fd9-bf761f296b68",
+        "name": "DNS Tunneling Traffic",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sao",
+      "pdi",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2022/07/12",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

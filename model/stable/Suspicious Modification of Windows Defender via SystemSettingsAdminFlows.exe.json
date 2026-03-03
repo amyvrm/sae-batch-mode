@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9061ab96-c57d-486c-8478-55ff3b4eb318",
+  "name": "Suspicious Modification of Windows Defender via SystemSettingsAdminFlows.exe",
+  "description": "Detects the usage of SystemSettingsAdminFlows.exe to disable or tamper with Windows Defender",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6ebe70cc-3003-4347-ad0e-04dfce50b435",
+      "name": "Suspicious Modification of Windows Defender via SystemSettingsAdminFlows.exe",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2025/01/14",
+  "lastUpdate": "2025-09-01T19:56:46.000Z"
+}

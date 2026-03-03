@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2efe7593-4d17-4c97-9efd-3a11ae6ac9c3",
+  "name": "Regsvr32 Silent Execution From MS Office Application",
+  "description": "MS Office Application executed regsvr32 silently. This technique tends to be used by malicious email attachments.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0666bcb8-1f1d-46fb-aafa-d5deb83d07eb",
+      "name": "Regsvr32 Silent Execution From MS Office Application",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 60,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218",
+    "mitre.t1559"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Kentaro Yoshida",
+  "team": "JP-IR",
+  "date": "2022/04/14",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

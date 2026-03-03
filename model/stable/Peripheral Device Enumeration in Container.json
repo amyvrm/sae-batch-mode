@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "759bfdf2-3d5a-40db-acf7-2e1db959968f",
+  "name": "Peripheral Device Enumeration in Container",
+  "description": "Executing specific commands to gather information about connected peripheral devices.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "266d386b-9e92-481d-8eaa-5f51681e3085",
+      "name": "Peripheral Device Enumeration in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1200,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1120"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/02/05",
+  "lastUpdate": "2024-02-28T02:49:15.000Z"
+}

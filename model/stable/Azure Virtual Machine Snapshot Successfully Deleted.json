@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bc7d9381-5169-44b3-a472-e0245c726d52",
+  "name": "Azure Virtual Machine Snapshot Successfully Deleted",
+  "description": "Detects the successful regeneration of an Azure Storage Account access key, which may indicate an attacker attempting to rotate credentials to maintain persistent access, disrupt legitimate operations, or obscure unauthorized usage.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "8455595d-4529-4892-b155-f4cfedae076c",
+      "name": "Azure Virtual Machine Snapshot Successfully Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.008"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/27",
+  "lastUpdate": "2025-12-10T09:44:40.000Z"
+}

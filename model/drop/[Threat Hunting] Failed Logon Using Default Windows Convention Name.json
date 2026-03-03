@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8ad109e4-7a13-4c72-833f-6010394c97fb",
+  "name": "[Threat Hunting] Failed Logon Using Default Windows Convention Name",
+  "description": "Failed logon from a host using the windows default convention name has been detected.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "defaultEnabled": false,
+  "rules": [
+    {
+      "id": "c68aef20-3909-4146-aa9e-b8eb98d18943",
+      "name": "Failed Logon via Remote Desktop Using Default Windows Convention Name",
+      "score": 1
+    },
+    {
+      "id": "5093d487-ef47-4c5b-96f6-e64cdbbbaaa0",
+      "name": "Failed Logon via SMB Using Default Windows Convention Name",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2025/02/13",
+  "lastUpdate": "2025-10-30T06:54:31.000Z"
+}

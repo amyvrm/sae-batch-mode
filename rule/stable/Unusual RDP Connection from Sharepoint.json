@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4de80a20-d275-436f-bfa9-16a1ddcba687",
+  "name": "Unusual RDP Connection from Sharepoint",
+  "description": "Adversaries may use RDP to connect to other victim machines from a compromised Sharepoint server. This activity is commonly associated with lateral movement and may indicate an attempt to gain further access within the network.",
+  "filterSets": [
+    [
+      {
+        "id": "88eec2f2-a28d-4c95-a1b0-e3d90e9fd763",
+        "name": "Unusual RDP Connection from Sharepoint",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/09/25",
+  "lastUpdate": "2025-10-08T15:45:11.000Z"
+}

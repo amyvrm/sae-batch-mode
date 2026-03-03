@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "33925f41-aa88-49c0-8435-f27ea5c12891",
+  "name": "Malicious Remote Manual Scan Command Injection Via Deep Security Agent",
+  "description": "Detects potentially suspicious OS command injection via deep security agent",
+  "filterSets": [
+    [
+      {
+        "id": "910fa507-9f99-49f8-84a6-1fd1dd2e302a",
+        "name": "Malicious Remote Manual Scan Command Injection Via Deep Security Agent",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/11/24",
+  "lastUpdate": "2024-12-04T21:39:44.000Z"
+}

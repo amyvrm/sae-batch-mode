@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d9a02dcf-17f6-4fd4-9e0c-58bb3658ebe4",
+  "name": "Detect Fileless Process Execution Attack in Container",
+  "description": "Activities of running processes directly from memory or shared memory are common techniques which used for defense evasion and malware-fileless attacks.",
+  "riskLevel": "high",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "e4627b25-9352-43d3-aace-045eef1dd53c",
+      "name": "Process Execution From Memory in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.004",
+    "mitre.t1620"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2023/10/10",
+  "lastUpdate": "2025-01-21T02:05:28.000Z"
+}

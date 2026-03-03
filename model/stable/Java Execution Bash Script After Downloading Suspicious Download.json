@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "066b09f3-42dd-4544-81f0-791e7b8a336f",
+  "name": "Java Execution Bash Script After Downloading Suspicious Download",
+  "description": "Detect Bash Shell execution by exploiting Java based Web Application",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c8fde515-acc9-48cd-9b57-f4548301f642",
+      "name": "Script Download via Commandline Tools",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "e99e078c-6f1f-4f94-ade2-8c14a9ec9267",
+      "name": "Java Executing Bash Shell Script - Variant 2",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1071",
+    "mitre.t1059.004",
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/04/25",
+  "lastUpdate": "2024-10-28T02:07:01.000Z"
+}

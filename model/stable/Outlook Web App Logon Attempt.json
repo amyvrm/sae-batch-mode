@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9f0fda00-a7f0-4b95-aa53-a8d9955899b6",
+  "name": "Outlook Web App Logon Attempt",
+  "description": "A network module observed a user attempting to access the Outlook Web App via web protocols. This activity indicates a user-initiated authentication request over the network.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f019c388-4c39-4499-b237-14ac19c189c6",
+      "name": "Outlook Web App Logon Attempt",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078",
+    "mitre.t1114.002",
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/12/02",
+  "lastUpdate": "2025-12-10T13:46:50.000Z"
+}

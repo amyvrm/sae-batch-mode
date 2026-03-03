@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "03b03e22-5e01-4f5c-b01a-e86406c7bb79",
+  "name": "NetScan Execution from Possible Staging Directory",
+  "description": "Detection of netscan.exe being executed from a possible staging directory",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "905d5e24-3047-4eb1-8679-4447c659dafe",
+      "name": "NetScan Execution from Possible Staging Directory",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1046"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/03/11",
+  "lastUpdate": "2024-03-18T21:35:44.000Z"
+}

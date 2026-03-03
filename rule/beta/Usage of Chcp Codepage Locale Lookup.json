@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "831560d0-7bc3-4adf-b5c6-93977b67db4c",
+  "name": "Usage of Chcp Codepage Locale Lookup",
+  "description": "Detects use of chcp to look up the system locale value as part of host discovery",
+  "filterSets": [
+    [
+      {
+        "id": "aed230e5-7e66-4337-890e-92b7e836cbf5",
+        "name": "Usage of CHCP CodePage Locale Lookup",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros & Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2025/03/25",
+  "lastUpdate": "2025-03-28T03:25:47.000Z"
+}

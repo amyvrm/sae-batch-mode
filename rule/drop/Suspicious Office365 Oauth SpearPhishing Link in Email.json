@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "98df92b6-5c58-4b71-9bb9-660c818eb47c",
+  "name": "Suspicious Office365 Oauth SpearPhishing Link in Email",
+  "description": "Email detection with suspicious office365 Oauth SpearPhishing Link",
+  "filterSets": [
+    [
+      {
+        "id": "5818499e-6052-4f2d-999e-87f1c641cb2a",
+        "name": "Office365 Oauth Spearphishing Link",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Peter L Chang",
+  "team": "Jaguar",
+  "date": "2020/09/07",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

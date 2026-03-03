@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "69950eb4-283c-44b2-bb1d-957391827df7",
+  "name": "Docker Root Filesystem Binding via Docker Socket",
+  "description": "Detects the root directory of a host system mounted to a new container via docker socket.",
+  "filterSets": [
+    [
+      {
+        "id": "0cd70f25-fff1-43ed-92d7-9ae28b39ea5f",
+        "name": "Docker Root Filesystem Binding via docker.sock",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/19",
+  "lastUpdate": "2025-02-25T08:15:30.000Z"
+}

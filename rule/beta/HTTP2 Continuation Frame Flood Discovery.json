@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cb8a8097-e7a8-4b3c-8900-1227e7572a82",
+  "name": "HTTP2 Continuation Frame Flood Discovery",
+  "description": "Palo Alto Networks detection for HTTP2 Continuation Frame Flood Detection. This signature detects possible HTTP2 Continuation frame flood attack.",
+  "filterSets": [
+    [
+      {
+        "id": "4ae1c7a2-2966-56b7-bb2f-a485ad8432c0",
+        "name": "HTTP2 Continuation Frame Flood Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-13T00:35:50.000Z"
+}

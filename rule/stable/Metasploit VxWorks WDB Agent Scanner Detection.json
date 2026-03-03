@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e4d2163a-532f-4b72-bc7e-57a30d5ddf6b",
+  "name": "Metasploit VxWorks WDB Agent Scanner Detection",
+  "description": "Palo Alto Vulnerability detection - Metasploit VxWorks WDB Agent Scanner Detection",
+  "filterSets": [
+    [
+      {
+        "id": "a9967ad7-f261-4494-b327-40dcfb40dcda",
+        "name": "Metasploit VxWorks WDB Agent Scanner Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "Third Party Operations",
+  "date": "2025/09/25",
+  "lastUpdate": "2025-10-02T10:20:17.000Z"
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a4bce3ca-6666-436e-b33b-e39e6632b76d",
+  "name": "Potential Crushftp Lolbin Execution",
+  "description": "Detection of possible lolbin spawning by CrushFTP service",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f02c7f8b-6dc2-4142-be4c-6bc86f307b9f",
+      "name": "Potential Crushftp Lolbin Execution",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1059.003",
+    "mitre.t1190",
+    "cve.2025.31161"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/06/11",
+  "lastUpdate": "2025-11-18T07:40:57.000Z"
+}

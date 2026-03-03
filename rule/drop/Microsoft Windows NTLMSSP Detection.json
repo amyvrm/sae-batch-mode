@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e3d1906e-fcc3-4318-9952-c08493fb3373",
+  "name": "Microsoft Windows NTLMSSP Detection",
+  "description": "Palo Alto Vulnerability detection - Microsoft Windows NTLMSSP Detection",
+  "filterSets": [
+    [
+      {
+        "id": "1831987c-2767-4b53-a9a4-5cbbbc1fe5ef",
+        "name": "Microsoft Windows NTLMSSP Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-07-31T10:41:34.000Z"
+}

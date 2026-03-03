@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aa5c3bd0-27b2-11ee-be56-0242ac120002",
+  "name": "AWS Lambda Unsuccessful Get Function Details",
+  "description": "Detected AWS Lambda Unsuccessful Get Function Details.",
+  "filterSets": [
+    [
+      {
+        "id": "3c937b96-1b3c-43f9-ac10-a0d4886e8c18",
+        "name": "AWS Lambda Unsuccessful Get Function Details",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/10",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

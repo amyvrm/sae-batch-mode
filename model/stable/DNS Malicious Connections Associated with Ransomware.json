@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6815115d-2f99-4300-8ea3-ed85e9d9d720",
+  "name": "DNS Malicious Connections Associated with Ransomware",
+  "description": "Malicious Network activity linked to CAPHAW or CRILOCK was observed, indicating potential malicious behavior.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7a2b7b27-03f2-44e9-917a-e237132e9334",
+      "name": "HTTP and HTTPS Activity Associated with Ransomware",
+      "score": 2
+    },
+    {
+      "id": "4b42b34d-169a-44e0-9758-3093a62fa6e9",
+      "name": "Potential Ransomware DNS Communication",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "threat.trojan",
+    "threat.ransom",
+    "mitre.t1071.001",
+    "mitre.t1071.004",
+    "mitre.t1571"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Joshua Bersamira",
+  "team": "DDI",
+  "date": "2025/03/18",
+  "lastUpdate": "2025-04-10T09:43:07.000Z"
+}

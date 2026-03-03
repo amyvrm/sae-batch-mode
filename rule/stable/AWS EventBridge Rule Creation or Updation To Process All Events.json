@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "984f2f61-2e89-415a-b7ce-46f5d2bfb0e6",
+  "name": "AWS EventBridge Rule Creation or Updation To Process All Events",
+  "description": "Detects creation of EventBridge rules to send or receive all the events for the eventbus.",
+  "filterSets": [
+    [
+      {
+        "id": "6f40e1bd-b5c2-4be4-a18a-f6162f74d034",
+        "name": "AWS EventBridge Rule Creation or Updation To Process All Events",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-07-31T08:55:45.000Z"
+}

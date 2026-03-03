@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f8916574-e712-4a98-8d31-6ebc32b5eef6",
+  "name": "AWS Redshift Successful Cluster Subnet Groups Enumeration",
+  "description": "Identifies requests to enumerate Redshift cluster subnet groups, possibly for mapping network configurations.",
+  "filterSets": [
+    [
+      {
+        "id": "2b27fd80-93cd-4350-b67c-6bbe28917e69",
+        "name": "AWS Redshift Successful Cluster Subnet Groups Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

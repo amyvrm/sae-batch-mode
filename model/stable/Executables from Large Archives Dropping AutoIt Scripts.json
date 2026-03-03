@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7468f069-bbb5-48be-84a0-d44c374a370a",
+  "name": "Executables from Large Archives Dropping AutoIt Scripts",
+  "description": "Detects when an executable is extracted from a large archive, subsequently drops AutoIt scripts, and proceeds to execute them. (Infostealer behavior)",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "67e9d45a-0014-4835-82e0-6e300df9b0b8",
+      "name": "Large Decompressed Executable With Invalid or Missing Signature",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "8dbcf60d-4f23-4c56-950b-3b348617f13a",
+      "name": "Misnamed Autoit Binary Execution",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.010",
+    "mitre.t1027.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/01/23",
+  "lastUpdate": "2025-08-11T00:32:08.000Z"
+}

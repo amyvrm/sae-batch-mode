@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2e58e995-5dd8-4185-a0c4-a99fc1f10b3a",
+  "name": "Suspicious Mailbox Rule Deletes All Incoming Emails",
+  "description": "A suspicious mailbox rule was created that deletes all email messages. [Delayed alert: Batch process detection]",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "f6449ae0-21b5-4944-b4fc-3a7c81c26df8",
+      "name": "Suspicious Mailbox Rule Deletes All Incoming Emails",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "aad",
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1564.008",
+    "mitre.t1564"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Johnny Tu",
+  "team": "Jaguar",
+  "date": "2023/04/27",
+  "lastUpdate": "2024-07-05T03:08:32.000Z"
+}

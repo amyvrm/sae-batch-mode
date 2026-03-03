@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "16d52b16-ce32-477d-ae84-f8e751ac9853",
+  "name": "VPC Flow Log Detected Public Access To Database Port",
+  "description": "Detected access to sensitive database ports from public ip which might indicate an attacker trying to exfiltrate sensitive data from the database.",
+  "filterSets": [
+    [
+      {
+        "id": "90011e40-e092-4c3f-a862-b7a7e0991b8d",
+        "name": "VPC Flow Log Detected Public Access To Database Port",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "vpc",
+      "tlc|aws|XDR for Cloud - AWS VPC Flow Logs"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/06/24",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

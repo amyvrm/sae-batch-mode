@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "56be6db0-8b7f-4d05-a35a-87c7ff9499e6",
+  "name": "Possible DLL Sideloading via Bitdefender Submission Wizard Application",
+  "description": "Detects possible DLL sideloading via Bitdefender Submission Wizard Application which relates to exploited Notepad++ Update mechanism",
+  "filterSets": [
+    [
+      {
+        "id": "d46e425f-f5be-4b2e-bfe9-19a97a75656b",
+        "name": "Possible DLL Sideloading via Bitdefender Submission Wizard Application",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Jack Walsh & Lucas Silva",
+  "team": "AMEA-IR",
+  "date": "2026/02/04",
+  "lastUpdate": "2026-02-06T10:19:57.000Z"
+}

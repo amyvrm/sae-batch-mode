@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "83b910ff-ee1d-4d59-8cfb-e7ee590d70c6",
+  "name": "AWS Codebuild Successful Get Projects",
+  "description": "Detects successful retrieval of detailed information on a codebuild project.",
+  "filterSets": [
+    [
+      {
+        "id": "ede3f76d-0c85-4297-8315-244b8a1e1c12",
+        "name": "AWS Codebuild Successful Get Projects",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

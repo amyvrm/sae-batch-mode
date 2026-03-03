@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3bd4c54d-6df8-4639-a775-c290895f8e23",
+  "name": "Execution of SQL Manipulation Tool for File Transfer",
+  "description": "Detects usage of rundll.exe, which is used to insert copies of malicious files to the database server.",
+  "filterSets": [
+    [
+      {
+        "id": "6c22c922-497b-4f56-911d-333c618b371c",
+        "name": "Execution of SQL Manipulation Tool for File Transfer",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/11/03",
+  "lastUpdate": "2025-11-27T09:47:49.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "25eb0e8e-6b52-4200-a2cc-100c90223463",
+  "name": "Suspicious New Domain Connection Alert",
+  "description": "A network model flagged an HTTP connection to a newly registered domain initiated by a suspicious client. This activity could suggest an attempt to bypass detection mechanisms by exploiting the fresh domain reputation.",
+  "filterSets": [
+    [
+      {
+        "id": "55234d87-eda6-4e0b-9d6a-2d22dba05fa3",
+        "name": "New Domain Web Reputation Services Network Detection From a Suspicious Client",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi"
+    ]
+  ],
+  "author": "Arjun Baltazar",
+  "team": "DDI",
+  "date": "2025/03/13",
+  "lastUpdate": "2025-03-14T06:15:20.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "05e297f9-8e84-471f-87cd-d95a747afbef",
+  "name": "AWS Bedrock Model Customization Operation Successfully Executed",
+  "description": "Indicates that a model customization job in Amazon Bedrock was successfully initiated. This detection provides visibility into initiated customization tasks, verifying that authorized users or roles have executed model adjustments as intended. It helps ensure that model configurations and settings are modified only through approved operations, supporting model integrity and compliance.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "845ee5ac-2c9e-454a-8094-34b82e196564",
+      "name": "AWS Bedrock Model Customization Operation Successfully Executed",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "tags": [
+    "atlas.aml.t0018.000",
+    "mitre.t1059.009"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/13",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

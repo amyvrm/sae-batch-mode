@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9b4847f4-4ffc-4d0e-bc41-e009eb732a32",
+  "name": "Suspicious Anydesk Configuration to Enable Unattended Access",
+  "description": "Suspicious anydesk setting that can lead to unattended remote access.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d0f97abe-0cb5-4b03-b282-4578be86568f",
+      "name": "Suspicious Anydesk Configuration to Enable Unattended Access",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1219"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/09/15",
+  "lastUpdate": "2025-11-05T03:21:38.000Z"
+}

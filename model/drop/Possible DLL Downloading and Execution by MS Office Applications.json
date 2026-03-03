@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6a137762-91a4-4ce1-b299-cf4395913973",
+  "name": "DLL Execution by A Possible MS Office Macro Malware",
+  "description": "MS office application made a suspicious connection and executed a suspicious dll using system tool",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "789aaeff-74ae-43e7-86e4-7f206b4a783a",
+      "name": "Possible MS Office Macro Malware Executed Regsvr32",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218",
+    "mitre.t1559",
+    "mitre.t1574"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "anishimura",
+  "team": "JP-TRC",
+  "date": "2021/04/19",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

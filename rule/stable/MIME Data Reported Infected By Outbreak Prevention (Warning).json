@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c1a2eacb-8667-42cf-a008-79399ca9add9",
+  "name": "MIME Data Reported Infected By Outbreak Prevention (Warning)",
+  "description": "Fortinet detection - MIME data reported infected by Outbreak Prevention (warning)",
+  "filterSets": [
+    [
+      {
+        "id": "1e276d7c-0403-492a-a0f8-4bee60c06064",
+        "name": "MIME Data Reported Infected By Outbreak Prevention (Warning)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

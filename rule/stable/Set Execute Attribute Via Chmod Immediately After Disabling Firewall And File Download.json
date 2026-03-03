@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7f1b735d-2f77-4050-a8fd-b8d832358898",
+  "name": "Set Execute Attribute Via Chmod Immediately After Disabling Firewall And File Download",
+  "description": "Detect setting execute attribute via chmod immediately after disabling firewall and download file",
+  "filterSets": [
+    [
+      {
+        "id": "5ac7834e-e5e2-42f9-bae9-05b382c016a7",
+        "name": "Disabling Of Iptables Firewall",
+        "highlight": true
+      },
+      {
+        "id": "06b4e80d-48b2-488a-b7d1-567899777e9a",
+        "name": "Wget Execution",
+        "highlight": true
+      },
+      {
+        "id": "ccaa44ac-9bd2-4673-b062-9ff6e55add21",
+        "name": "Set Execute Attribute Via Chmod",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Kentaro Yoshida",
+  "team": "JP-IR",
+  "date": "2022/01/27",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

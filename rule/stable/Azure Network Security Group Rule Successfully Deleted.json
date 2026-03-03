@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "864150aa-85fb-4411-a1f7-361b53b010e3",
+  "name": "Azure Network Security Group Rule Successfully Deleted",
+  "description": "Detected deletion of security rule from azure network security group.",
+  "filterSets": [
+    [
+      {
+        "id": "e0001c72-6459-4c81-a807-7408d402bfc5",
+        "name": "Azure Network Security Group Rule Successfully Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/04/15",
+  "lastUpdate": "2025-05-05T12:49:23.000Z"
+}

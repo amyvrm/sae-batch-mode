@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "223bd3de-69a6-4bd6-a891-7662a2d4c1d4",
+  "name": "Anomalous Web Source Code File Created or Dropped in Container",
+  "description": "If web source code file are being created on a web server, it can potentially indicate creation of webshells. Using webshells, attackers maintain persistent access to systems.",
+  "filterSets": [
+    [
+      {
+        "id": "bea08a42-851d-487c-82af-84e7dfdde8d6",
+        "name": "Anomalous Web Source Code File Created or Dropped in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2023/07/31",
+  "lastUpdate": "2024-08-19T07:08:52.000Z"
+}

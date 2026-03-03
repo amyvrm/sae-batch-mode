@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01a5e8db-de25-4f9f-bcdb-a537c644bd1a",
+  "name": "AWS IAM User Policies Enumeration",
+  "description": "Monitors enumeration of inline policies embedded in IAM users, which could indicate legitimate user management activities or reconnaissance attempts to understand account permissions structure and user-specific policies for potential privilege escalation attacks.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS IAM User Policies Enumeration",
+        "id": "89b6c0ee-36ea-4156-9525-f11a2f57e88c",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T11:20:55.000Z"
+}

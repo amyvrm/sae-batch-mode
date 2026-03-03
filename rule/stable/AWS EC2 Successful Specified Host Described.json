@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ed34019d-da6a-456d-864a-8c736f5d9a8b",
+  "name": "AWS EC2 Successful Specified Host Described",
+  "description": "Detected AWS Successful EC2 specified Hosts Discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "5b55387e-f9a1-45f3-a6d4-42af868ce1c5",
+        "name": "AWS EC2 Successful Specified Host Described",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

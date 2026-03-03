@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fa1299d7-69c1-4e0b-96ed-7b7ac02325f5",
+  "name": "Spear Phishing Email Containing Malicious Attachment Observed by Microsoft",
+  "description": "Spear phishing email with attachment was detected as a malicious file by Microsoft.",
+  "filterSets": [
+    [
+      {
+        "id": "23e69fd2-3c5e-4766-8c84-10c9c701dbb3",
+        "name": "Spear Phishing Email Target High Profile User via Attachment",
+        "highlight": true
+      },
+      {
+        "id": "59c18d37-f2c8-4159-8dd9-8c88b61ba82c",
+        "name": "Microsoft Antivirus Matched with a File",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "23e69fd2-3c5e-4766-8c84-10c9c701dbb3.highlightedFileHashes contains 59c18d37-f2c8-4159-8dd9-8c88b61ba82c.objectFileHashSha1"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft",
+      "sjg",
+      "xms"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2025/07/17",
+  "lastUpdate": "2025-07-23T04:43:01.000Z"
+}

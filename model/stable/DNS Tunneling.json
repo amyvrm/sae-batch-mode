@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0ca3e777-5799-4dc2-9aa5-e5e4921530fb",
+  "name": "[Threat Hunting] DNS Tunneling",
+  "description": "Commands or other messages were sent from the endpoint to remote systems using the DNS protocol.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "9404ce5f-1194-46e3-884e-45e080537479",
+      "name": "DNS Tunneling",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sao",
+      "pdi",
+      "xes",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "David Agni",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2024-04-08T06:09:26.000Z"
+}

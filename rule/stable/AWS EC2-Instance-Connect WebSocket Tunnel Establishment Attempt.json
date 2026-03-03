@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1b37f900-29a5-4f74-a35f-89489f4ddad2",
+  "name": "AWS EC2-Instance-Connect WebSocket Tunnel Establishment Attempt",
+  "description": "Monitors for attempts to establish a WebSocket tunnel to an EC2 instance using EC2 Instance Connect, potentially bypassing security controls.",
+  "filterSets": [
+    [
+      {
+        "id": "549c6835-b93d-4957-a6e8-c211f25cfed3",
+        "name": "AWS EC2-Instance-Connect WebSocket Tunnel Establishment Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "adb65f17-dbb4-4a34-ae78-9bed62c9ba71",
+  "name": "Headless Process Launched via Conhost.exe",
+  "description": "Detects the launch of a child process via 'conhost.exe' with the '--headless' flag. The '--headless' flag hides the windows from the user upon execution.",
+  "filterSets": [
+    [
+      {
+        "id": "f58f105d-f0af-445e-b305-676eba581c9f",
+        "name": "Headless Process Launched via Conhost.exe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/08/28",
+  "lastUpdate": "2025-09-23T09:45:57.000Z"
+}

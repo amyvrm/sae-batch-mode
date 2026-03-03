@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b776e5f4-be6c-4fa7-a735-3d9bdde53e19",
+  "name": "SMEX Malicious Email With Pass Action",
+  "description": "Detection of malicious emails with an action set to Pass in Scan Mail for Exchange",
+  "filterSets": [
+    [
+      {
+        "id": "0b065fa2-7845-47bf-9989-0889b26924e7",
+        "name": "SMEX Malicious Email With Pass Action",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xsm"
+    ]
+  ],
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2024/07/29",
+  "lastUpdate": "2026-01-13T07:38:08.000Z"
+}

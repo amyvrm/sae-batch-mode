@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e0b8d0cb-73b0-40ea-bde1-378dba1260a3",
+  "name": "Possible Analysis Evasion through Process Discovery via PowerShell",
+  "description": "Detects PowerShell scripts that perform process discovery to identify analysis tools like ProcessMonitor, IDA Pro, and TCPView, commonly used by malware to evade detection by altering behavior when these tools are found",
+  "filterSets": [
+    [
+      {
+        "id": "878fce0c-879b-4dfd-a35c-aeecf9569068",
+        "name": "Possible Analysis Evasion through Process Discovery via PowerShell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2024/12/24",
+  "lastUpdate": "2025-02-13T13:10:40.000Z"
+}

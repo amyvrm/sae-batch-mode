@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0190c2ce-087c-78a5-b610-f0164ae26710",
+  "name": "Possible SSH Backdoor Creation",
+  "description": "Attacker may create SSH backdoor for persistence.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0190c293-74af-7586-9fcb-68c689ca9e33",
+      "name": "SSH Service Restart",
+      "score": 1
+    },
+    {
+      "id": "0190c292-3ca5-7669-9ce9-33a7079e3baa",
+      "name": "SSH Configuration File Modified",
+      "score": 1
+    },
+    {
+      "id": "0190c278-bfff-7c04-b20a-4f9c3d446d5b",
+      "name": "Identified Access of SSH Authorized Keys",
+      "score": 1
+    },
+    {
+      "id": "0190c26a-6856-7eda-86e8-ba996c8b7b88",
+      "name": "Authorized Key File Attribute Changed via Chmod",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1222.002",
+    "mitre.t1098.004",
+    "mitre.t1021.004",
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/07/17",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

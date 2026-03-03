@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bae574ee-5ad6-4612-a7da-2a528d70cbce",
+  "name": "AWS Lambda Event Trigger Configuration Change",
+  "description": "Detects changes to the behavior and invocation flow of AWS Lambda functions through creation, modification, or configuration of event-driven triggers. This includes setting up EventBridge rules, associating targets, and granting invocation permissions.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "96eeb307-b304-4531-b110-6006d0e71686",
+      "name": "AWS Lambda Function Deployment or Configuration Change",
+      "score": 1
+    },
+    {
+      "id": "de55964e-fb47-4333-80a0-ee162cfe4011",
+      "name": "AWS EventBridge Rule Creation",
+      "score": 1
+    },
+    {
+      "id": "b775be99-da21-4a07-a3a8-b0531be27e7c",
+      "name": "AWS Lambda Function Invocation Permission Added",
+      "score": 1
+    },
+    {
+      "id": "37f06140-dbf6-404f-a017-bdcbc91ed14f",
+      "name": "AWS EventBridge Target Association",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1546",
+    "mitre.t1648"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/07/26",
+  "lastUpdate": "2025-07-29T15:07:44.000Z"
+}

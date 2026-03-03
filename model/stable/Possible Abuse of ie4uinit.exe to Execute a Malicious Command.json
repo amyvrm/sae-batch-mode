@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5aa1cc8b-fd5e-47d9-8d30-4a3750d98c8a",
+  "name": "Possible Abuse of ie4uinit.exe to Execute a Malicious Command",
+  "description": "Detect use of ie4uinit.exe to execute commands from a specially crafted inf file",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0c82c220-480a-45ff-9da8-c363bf98ac81",
+      "name": "Possible Abuse of ie4uinit.exe to Execute a Malicious Command",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Evelyn Valenzuela & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2024/12/09",
+  "lastUpdate": "2025-11-12T09:28:54.000Z"
+}

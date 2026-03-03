@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2165b0f1-e512-46ae-8e4e-4d88ab16b3f9",
+  "name": "Fortigate Unit Blocked A Virus Command",
+  "description": "Fortinet detection - FortiGate unit blocked a virus command",
+  "filterSets": [
+    [
+      {
+        "id": "269cd6d0-69fd-4157-b420-c33052bfe5a1",
+        "name": "Fortigate Unit Blocked A Virus Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

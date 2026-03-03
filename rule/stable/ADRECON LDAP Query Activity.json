@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "20c0b5c7-beb2-4ff1-b340-93ced3a52fe7",
+  "name": "ADRECON LDAP Query Activity",
+  "description": "Network activity involving LDAP, associated with ADRECON, indicating potential reconnaissance behavior. The activity was observed in both inbound and outbound network traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "84c73924-c668-5c12-b131-803cb6e33b59",
+        "name": "Adrecon Query LDAP (Request) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bf51d094-230f-5217-80f9-7c71173440ff",
+        "name": "Adrecon Query LDAP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/02/23",
+  "lastUpdate": "2025-02-28T01:03:28.000Z"
+}

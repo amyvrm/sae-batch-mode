@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "642f0510-e8ea-4079-b5bb-45ea6caaaa8b",
+  "name": "Service Installation with Driver in User Directory via Command Line",
+  "description": "A service was installed via sc.exe or sc create command with a binPath pointing to a driver file (.sys) located in a user directory. This technique is commonly used in BYOVD (Bring Your Own Vulnerable Driver) attacks for privilege escalation or defense evasion.",
+  "filterSets": [
+    [
+      {
+        "id": "20409ef2-948d-4c2e-8302-623f41872d2d",
+        "name": "Service Installation with Driver in User Directory via Command Line",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Yusuf Madkour & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2026/02/09",
+  "lastUpdate": "2026-02-11T08:13:36.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3e1f0841-e76a-4604-9143-4df080bee38f",
+  "name": "Infected File Detected By The Fortigate Unit And Blocked",
+  "description": "Fortinet detection - Infected file detected by the FortiGate unit and blocked",
+  "filterSets": [
+    [
+      {
+        "id": "4ad5a446-b232-414b-8247-fb0dc92ad1a7",
+        "name": "Infected File Detected By The Fortigate Unit And Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7a6f2b37-e1ae-48c2-a39d-feef366799c8",
+  "name": "Possible Malicious DNS Tunneling",
+  "description": "Multiple detections of potentially malicious DNS tunneling network traffic have been observed.",
+  "riskLevel": "medium",
+  "defaultEnabled": false,
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c7b39d1f-6946-419e-ac97-fe7369174458",
+      "name": "Possible Malicious DNS Tunneling",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 10000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1071.004",
+    "mitre.t1572"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nora Bowden & Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-10-09T02:55:42.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5d90bc59-02a5-4ad8-a66c-2f3e7237b9c4",
+  "name": "AWS Unsuccessful EKS List Access Policy",
+  "description": "Detects unsuccessful listing the access policies associated with an access entry in EKS.",
+  "filterSets": [
+    [
+      {
+        "id": "aa4beebb-beb4-4b40-b972-926aee6c844e",
+        "name": "AWS Unsuccessful EKS List Access Policy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni",
+  "team": "Cloud One",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

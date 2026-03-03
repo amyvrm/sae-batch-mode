@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "db811e07-da2e-4e8f-ab68-0e173a9db9f1",
+  "name": "Lateral Movement Through Pass The Hash Identified",
+  "description": "This incident means pass the hash attempt was made for the authentication.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c5e79287-8ce9-45cc-9303-e2a6daf62bea",
+      "name": "Pass The Hash On Remote Host",
+      "score": 15
+    }
+  ],
+  "threshold": {
+    "targetScore": 15,
+    "withinSeconds": 30,
+    "dedupSeconds": 1440
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1550.002"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2021/09/29",
+  "lastUpdate": "2026-01-13T15:56:21.000Z"
+}

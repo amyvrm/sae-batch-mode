@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2722e980-08d2-4169-85b5-faf27a8ea2da",
+  "name": "Azure DNS Zone Modified or Deleted",
+  "description": "Detects modification or deletion of Azure DNS zones that could disrupt domain resolution, redirect traffic, or weaken service security.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "8676a7dd-d5f8-40f4-94eb-7aa25bae037f",
+      "name": "Azure DNS Zone Modified or Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1565.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/12/31",
+  "lastUpdate": "2026-01-28T18:17:30.000Z"
+}

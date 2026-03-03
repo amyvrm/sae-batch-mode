@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "358ba014-b516-4297-a48f-a8a2b3d58214",
+  "name": "Demo - Possible Brute-Force Attack",
+  "description": "Detects systematic password guessing attempts to gain unauthorized access to accounts, either through repeated login attempts or against stolen credential data.",
+  "filterSets": [
+    [
+      {
+        "id": "36c2aab1-e019-49fd-adc1-285f90de8c70",
+        "name": "Demo - Possible Brute-Force Attack",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gray Kao",
+  "team": "DDI",
+  "date": "2025/05/20",
+  "lastUpdate": "2025-06-04T10:42:06.000Z"
+}

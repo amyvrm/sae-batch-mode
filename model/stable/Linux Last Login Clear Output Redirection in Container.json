@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b54053a6-d4e6-11ee-a506-0242ac120002",
+  "name": "Linux Last Login Clear Output Redirection in Container",
+  "description": "Detects the clearing of lastlog by output redirection within a containerized environment, highlighting potential defense evasion tactics.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "f69c0194-d4e4-11ee-a506-0242ac120002",
+      "name": "Linux Last Login Clear Output Redirection in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1070.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/02/26",
+  "lastUpdate": "2024-03-14T14:08:47.000Z"
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a36c826e-6dde-4d66-9560-3af431171944",
+  "name": "Malicious RDP Backdoor Disguised as Windows Update",
+  "description": "Detects the download of the Kalambur backdoor and command and control communication through an onion site.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8a61bb22-ad03-4c73-8101-4a76303f15a8",
+      "name": "Malicious RDP Backdoor Disguised as Windows Update",
+      "score": 10
+    },
+    {
+      "id": "bc27e18e-7bc2-4740-b727-0da76a407c6b",
+      "name": "Curl Execution for Command and Control Communication via Onion Site",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 20,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1105",
+    "mitre.t1094"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/02/25",
+  "lastUpdate": "2025-06-23T15:46:09.000Z"
+}

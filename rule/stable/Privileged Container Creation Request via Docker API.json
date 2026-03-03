@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "13cf831a-c92b-479d-8b25-a30069c5e042",
+  "name": "Privileged Container Creation Request via Docker API",
+  "description": "Detects Docker containers that are created with potentially risky options such as PID host or privileged mode via Remote API.",
+  "filterSets": [
+    [
+      {
+        "id": "26c71371-3f56-4a41-b49f-220365349adf",
+        "name": "Creation Of Container in Privileged mode via Remote API",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/09",
+  "lastUpdate": "2025-10-01T07:09:57.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0d2a62ea-d26f-4efe-9a5b-c68f50a8c92a",
+  "name": "Suspicious Com Hijacking via Inprocserver32 Registry Modification",
+  "description": "Detects potential COM hijacking activity where the InprocServer32 registry value under a CLSID key is modified to point to a DLL file located in temporary file directory. This technique is commonly used by malware, including Mythic agent variants, to achieve stealthy persistence and execution.",
+  "filterSets": [
+    [
+      {
+        "id": "2e250813-91af-49a0-9d86-0ddac3bb7395",
+        "name": "Suspicious Com Hijacking via Inprocserver32 Registry Modification",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Shaun Galura & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/11/27",
+  "lastUpdate": "2025-12-02T06:52:55.000Z"
+}

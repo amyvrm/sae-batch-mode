@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e39076b4-1de2-4ec7-80eb-0d9a5e9b2b7e",
+  "name": "Office Communication Application Child Process Creation Blocked",
+  "description": "Microsoft attack surface reduction rule that prevents Office communication applications like Outlook from creating child processes to block potential exploit chains initiated through email or messaging applications.",
+  "filterSets": [
+    [
+      {
+        "id": "ef07520b-04a0-42d0-9f82-12da501e1c0a",
+        "name": "Office Communication Application Child Process Creation Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-21T03:31:42.000Z"
+}

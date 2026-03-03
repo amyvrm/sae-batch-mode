@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9124bd53-86b2-40b6-a107-fbe495a49402",
+  "name": "AWS ECR Authorization Token Request Detected",
+  "description": "This rule indicates an authentication attempt for accessing container images stored in ECR repositories.",
+  "filterSets": [
+    [
+      {
+        "id": "2c809490-ef4d-40f1-ad1d-b9ca604e3e18",
+        "name": "AWS ECR Authorization Token Request Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/05/15",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

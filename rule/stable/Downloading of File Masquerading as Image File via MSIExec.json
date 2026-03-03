@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "67e8de8b-54ca-4be9-ae47-4a583db7f7c9",
+  "name": "Downloading of File Masquerading as Image File via MSIExec",
+  "description": "Detects the downloading of a file that masquerades as an image file but is actually an executable, using MSIExec.",
+  "filterSets": [
+    [
+      {
+        "id": "93f1d344-5384-47df-bd3c-04e1024fd762",
+        "name": "Downloading of File Masquerading as Image File via MSIExec",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-27T09:17:05.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cdd51b85-c55d-41b5-a1bb-dc628d165d00",
+  "name": "Suspicious PowerShell Command Line",
+  "description": "MDE Detection for Suspicious PowerShell command line",
+  "filterSets": [
+    [
+      {
+        "id": "99a29342-844d-474f-ae29-5f3f71992073",
+        "name": "Suspicious PowerShell Command Line",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/04/29",
+  "lastUpdate": "2025-07-28T20:43:16.000Z"
+}

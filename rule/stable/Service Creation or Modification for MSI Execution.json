@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eaad3174-7f9b-4512-8d3b-64cf20552603",
+  "name": "Service Creation or Modification for MSI Execution",
+  "description": "Detects the creation or modification of Windows services where the service action contains an MSI file. This behavior is often associated with APT groups for privilage escalation or defense evasion.",
+  "filterSets": [
+    [
+      {
+        "id": "009ede89-6997-46f6-a458-7c4c9bc84a1b",
+        "name": "Service Creation or Modification for MSI Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/03/17",
+  "lastUpdate": "2025-04-10T13:14:36.000Z"
+}

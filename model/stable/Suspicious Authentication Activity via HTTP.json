@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0e8db5e6-c9dc-4b47-b2e1-58dbd7d3b2a6",
+  "name": "Suspicious Authentication Activity via HTTP",
+  "description": "The module detected network activity involving a successful login over Hypertext Transfer Protocol (HTTP). This may indicate potential unauthorized access or abnormal authentication behavior based on outbound HTTP request patterns.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "739dbc8f-76b1-4e11-8a14-e702979bee8d",
+      "name": "Suspicious Authentication Activity via HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078.001",
+    "threat.hacktool"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/12/02",
+  "lastUpdate": "2025-12-10T14:18:16.000Z"
+}

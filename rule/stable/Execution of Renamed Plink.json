@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8599e100-7bf5-4f21-afe7-5dbd49ecacbf",
+  "name": "Execution of Renamed Plink",
+  "description": "Detection of a plink process being created that has been renamed to potentially evade detection.",
+  "filterSets": [
+    [
+      {
+        "id": "8775f526-ec88-415f-b981-a6e98e92f072",
+        "name": "Execution of Renamed Plink",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/01/19",
+  "lastUpdate": "2024-01-24T11:37:03.000Z"
+}

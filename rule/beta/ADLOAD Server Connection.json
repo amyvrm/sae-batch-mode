@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "05a57c6b-9bc8-4a3a-a819-4a9a5b9a89bf",
+  "name": "ADLOAD Server Connection",
+  "description": "ADLOAD Server is connected",
+  "filterSets": [
+    [
+      {
+        "id": "1acd0711-8e3a-4b67-b91a-bb81d9e43658",
+        "name": "DNS Resolve for ADLOAD",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Steven Du",
+  "team": "MacTRT",
+  "date": "2021/01/11",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

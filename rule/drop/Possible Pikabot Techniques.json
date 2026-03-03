@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "62f2874c-e529-11ee-bd3d-0242ac120002",
+  "name": "Possible Pikabot Techniques",
+  "description": "Pikabot Techniques that are sourced from external and internal articles",
+  "filterSets": [
+    [
+      {
+        "id": "0ac7116c-dc93-11ee-a506-0242ac120002",
+        "name": "Possible Pikabot DLL Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/03/18",
+  "lastUpdate": "2024-09-19T13:14:55.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5f546949-6901-47c2-9956-ede091f8fcf4",
+  "name": "AWS SageMaker Unauthorized Presigned Domain URL Creation Detected",
+  "description": "Detects unauthorized creation of presigned domain URLs in AWS SageMaker, potentially indicating suspicious activity or a security breach.",
+  "filterSets": [
+    [
+      {
+        "id": "c8701f7d-ee51-4780-8886-3e1028d70fd6",
+        "name": "AWS SageMaker Unauthorized Presigned Domain URL Creation Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/28",
+  "lastUpdate": "2025-01-21T13:11:52.000Z"
+}

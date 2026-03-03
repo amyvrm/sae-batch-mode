@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ac3cf771-a5c8-4cd4-962a-d34e115cc21b",
+  "name": "Potential Data Exfiltration via SSHFS",
+  "description": "Potential Data Exfiltration via SSHFS was detected on an endpoint.",
+  "filterSets": [
+    [
+      {
+        "id": "0a78d114-635a-4845-8010-4859a2814cf4",
+        "name": "Potential Data Exfiltration via SSHFS",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/15",
+  "lastUpdate": "2024-03-22T15:07:20.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "21c201d6-a7ff-4ff3-a7bb-3d9e6a2d9a30",
+  "name": "Potential Obfuscated Ordinal Call via Rundll32",
+  "description": "Detects the execution of rundll32 with potential obfuscated ordinal calls. This behavior is often associated with various techniques used by adversaries to execute malicious code while evading detection.",
+  "filterSets": [
+    [
+      {
+        "id": "94da678e-b0c7-44d3-82b8-faeafa1e5e32",
+        "name": "Potential Obfuscated Ordinal Call via Rundll32",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gabriel Cardoso",
+  "team": "US-IR",
+  "date": "2025/09/09",
+  "lastUpdate": "2025-09-09T19:17:30.000Z"
+}

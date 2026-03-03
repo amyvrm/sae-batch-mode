@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3c246351-8d8f-44a5-b0bc-068d4a20d3a3",
+  "name": "Potential Network Denial via TCP",
+  "description": "An attempt was made to connect to an inside address but was denied by the security policy that is defined for the specified traffic type.",
+  "filterSets": [
+    [
+      {
+        "id": "b6b11266-ce5f-584c-84d7-b16d02fbb159",
+        "name": "Potential Network Denial via TCP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/06",
+  "lastUpdate": "2026-02-11T03:25:20.000Z"
+}

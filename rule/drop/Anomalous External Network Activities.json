@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2861f0fd-49dd-43f2-9f40-14c98373857b",
+  "name": "Anomalous External Network Activities",
+  "description": "Anomalous outbound network activities over defined threshold were detected.",
+  "filterSets": [
+    [
+      {
+        "id": "d600654a-1f29-48d6-a69b-93bbb0980667",
+        "name": "SMB Suspicious Outbound Connection Attempts",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "4fa182a5-608e-48b7-aa6f-f1ed4aa7bf05",
+        "name": "SSL Suspicious Outbound Connection Attempts",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0f171aa9-ab84-46d6-8c66-9acb20be496f",
+        "name": "FTP Suspicious Data Upload Attempts",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c546f1c3-446a-4565-bf26-acb9a0aac66f",
+        "name": "SSL Suspicious Inbound Connection Attempts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Liang Seng Koh",
+  "team": "XDR-NA",
+  "date": "2022/08/19",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

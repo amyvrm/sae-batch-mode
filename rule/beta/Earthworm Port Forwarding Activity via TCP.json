@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6cbcc979-8916-4819-aec2-09c1a698d53d",
+  "name": "Earthworm Port Forwarding Activity via TCP",
+  "description": "Network activity involving port forwarding via TCP, associated with the Earthworm tool, was observed.",
+  "filterSets": [
+    [
+      {
+        "id": "6fdf4be7-4604-5b60-b0e9-134bdfffa19c",
+        "name": "Earthworm Port Forwarding TCP (Request)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/06/17",
+  "lastUpdate": "2025-06-20T02:41:09.000Z"
+}

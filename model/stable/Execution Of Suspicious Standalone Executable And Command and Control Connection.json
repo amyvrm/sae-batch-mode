@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "915d54e5-f658-4a14-b25c-a896d9ad9c6e",
+  "name": "Execution Of Suspicious Standalone Executable and Command and Control Connection",
+  "description": "A suspicious executable file was dropped locally and connected to a known command and control server.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1f95620d-8d93-4a47-a3c7-8844641dd780",
+      "name": "Dangerous Web Connection",
+      "score": 5
+    },
+    {
+      "id": "ccc035b9-6027-49a6-a316-2388be2e32f6",
+      "name": "Suspicious Execution Of Standalone Executable Files",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pdi",
+      "xes",
+      "pds",
+      "pao",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "SAE Threat Expert",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2023-12-06T05:29:54.000Z"
+}

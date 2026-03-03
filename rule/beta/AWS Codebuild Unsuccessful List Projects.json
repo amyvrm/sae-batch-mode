@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "708a8fe8-952c-4b07-8f5c-1252a9bcac23",
+  "name": "AWS Codebuild Unsuccessful List Projects",
+  "description": "Detects unsuccessful listing of codebuild projects.",
+  "filterSets": [
+    [
+      {
+        "id": "623fe885-b913-4c0d-82f0-60806aa9590b",
+        "name": "AWS Codebuild Unsuccessful List Projects",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

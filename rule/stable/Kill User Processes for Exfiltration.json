@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dcde834c-0172-11eb-a248-787b8ad91447",
+  "name": "Kill User Processes for Exfiltration",
+  "description": "Kill User Processes like browser for exfiltration",
+  "filterSets": [
+    [
+      {
+        "id": "42ac825c-08a0-4734-a6d6-9091b15486e9",
+        "name": "Kill User Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/09/25",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

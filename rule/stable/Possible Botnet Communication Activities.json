@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f79312e1-41f4-4535-acbd-e272d31f81c0",
+  "name": "Possible Botnet Communication Activities",
+  "description": "Detects outbound connections to known Prometei C2 domains and IPs used for communication and mining activities",
+  "filterSets": [
+    [
+      {
+        "id": "51fb0e84-8742-429e-91c2-de1c79735429",
+        "name": "Possible Botnet Outbound Communication",
+        "highlight": true
+      },
+      {
+        "id": "caef1128-2601-4c74-b093-a3f7de01df6e",
+        "name": "Botnet Commands for Remote System Control",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes"
+    ],
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2025-03-24T10:42:02.000Z",
+  "author": "Bahaa Yamany & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2025/02/20"
+}

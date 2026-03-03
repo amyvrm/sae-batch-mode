@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0097514a-5bb8-11ee-8c99-0242ac120002",
+  "name": "AWS EC2 Instance User Data Attribute Modified",
+  "description": "AWS EC2 Instance User Data Attribute Modified.",
+  "filterSets": [
+    [
+      {
+        "id": "0097497a-5bb8-11ee-8c99-0242ac120002",
+        "name": "AWS EC2 Instance User Data Attribute Modified",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

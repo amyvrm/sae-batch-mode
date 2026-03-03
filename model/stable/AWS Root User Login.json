@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ad210449-7c62-4bd5-bb13-e50e9b547ac6",
+  "name": "AWS Root User Login",
+  "description": "Detected Successful Signin attempts of the Root User.  Root user allows full access to all the resources and should not be used for everyday tasks.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "f6119ffd-9dc1-4e01-a5cb-0a7d1609826e",
+      "name": "AWS Root User Login",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 10
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|AWS|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1110"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "lastUpdate": "2025-06-27T07:15:43.000Z"
+}

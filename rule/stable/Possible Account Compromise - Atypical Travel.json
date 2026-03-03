@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "02731b15-742a-49a5-8967-7fef6ced99bc",
+  "name": "Possible Account Compromise - Atypical Travel",
+  "description": "User account has a successful sign-in attempt originating from a location that is unusual based on the known travel behavior of the user.",
+  "filterSets": [
+    [
+      {
+        "id": "a211be8b-b87f-5b40-8b2c-94b9d1d059e7",
+        "name": "Possible Account Compromise - Atypical Travel",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "aad"
+    ]
+  ],
+  "author": "Kai-Min Tu",
+  "team": "Jaguar",
+  "date": "2024/03/14",
+  "lastUpdate": "2024-03-20T04:36:35.000Z"
+}

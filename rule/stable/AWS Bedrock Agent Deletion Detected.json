@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eb84e02a-0482-4c26-b89d-a68f47322968",
+  "name": "AWS Bedrock Agent Deletion Detected",
+  "description": "Alerts on the deletion of AWS Bedrock agents, highlighting potential unauthorized activity or misconfiguration.",
+  "filterSets": [
+    [
+      {
+        "id": "aba96417-8667-4f0a-8fcb-d8d91ab78061",
+        "name": "AWS Bedrock Agent Deletion Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/09/10",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3d802173-efc2-4191-ac10-21f7a3b62585",
+  "name": "Connection Towards Unusual Cloud Storage Provider",
+  "description": "Detects connection attempts towards specific low prevalence cloud storage provider, which could be used for external data transfer or data exfiltration.",
+  "filterSets": [
+    [
+      {
+        "id": "ae86ac92-f3df-4c38-b22d-a1eb603567f0",
+        "name": "Connection Towards Unusual Cloud Storage Provider",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Marc Lanzendorfer",
+  "team": "EU-IR",
+  "date": "2024/04/24",
+  "lastUpdate": "2024-05-27T15:09:33.000Z"
+}

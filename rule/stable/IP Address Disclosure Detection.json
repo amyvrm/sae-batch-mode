@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2ea4e413-6fe5-4210-b592-6081c11e2970",
+  "name": "IP Address Disclosure Detection",
+  "description": "Palo Alto Vulnerability detection - IP Address Disclosure Detection",
+  "filterSets": [
+    [
+      {
+        "id": "9481b56b-c5b7-48a7-9285-fdc92c65c760",
+        "name": "IP Address Disclosure Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

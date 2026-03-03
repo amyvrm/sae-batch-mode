@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4a6bf273-61cc-4e5f-97ef-bbf3e77de1cd",
+  "name": "Suspicious Driver File Creation via Visual Studio Code Server",
+  "description": "Visual Studio Code Server (node.exe) created a .sys driver file. This behavior is unexpected for this process and may indicate potential misuse for unauthorized activity, such as rootkit deployment.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "21ba2137-05f0-4f52-b8bb-d0c5a87deac2",
+      "name": "Suspicious Driver File Creation via Visual Studio Code Server",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1014",
+    "mitre.t1068"
+  ],
+  "playbooks": [
+    {
+      "id": "ac93f324-42ee-4947-bc73-22e9a726f3ae",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "NETWORK_ENRICHMENT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/01/26",
+  "lastUpdate": "2026-02-04T11:21:42.000Z"
+}

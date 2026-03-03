@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "07226a2b-22ae-4317-894c-4b52ed6761e0",
+  "name": "Possible Account Discovery via Invoke-SessionHunter",
+  "description": "Execution of Invoke-SessionHunter tool which identifies and extracts active user sessions on remote computers, and translates these into corresponding usernames.E",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3b13c369-bda2-4566-92ff-ac12a633af23",
+      "name": "Possible Account Discovery via Invoke-SessionHunter",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1087",
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Shaun Eris Galura & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/10/31",
+  "lastUpdate": "2025-11-13T04:47:03.000Z"
+}

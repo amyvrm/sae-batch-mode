@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1d0e5267-2d92-4650-a7cd-7688bc783711",
+  "name": "AWS EBS Volume Deletion Activity",
+  "description": "Monitors for deletion of Amazon EBS volumes, which could indicate an attempt to disrupt data availability or cover malicious activity.",
+  "filterSets": [
+    [
+      {
+        "id": "9ea5b1ac-8863-4dd4-89ea-b4498138abc6",
+        "name": "AWS EBS Volume Deletion Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/28",
+  "lastUpdate": "2025-09-08T06:00:50.000Z"
+}

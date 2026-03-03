@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5b527d8a-821a-4aca-ba55-9c64e07e2bab",
+  "name": "AWS RDS Snapshot Successfully Restored",
+  "description": "This rule triggers when an AWS RDS snapshot has been successfully restored",
+  "filterSets": [
+    [
+      {
+        "id": "8deaac26-ad3b-490c-9eb1-bc0a8489999e",
+        "name": "AWS RDS Snapshot Successfully Restored",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/05/15",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

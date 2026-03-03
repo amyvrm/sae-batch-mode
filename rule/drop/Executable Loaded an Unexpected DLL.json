@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e7d99c49-61bc-4b92-bcb5-feb9d30a752e",
+  "name": "Executable Loaded an Unexpected DLL",
+  "description": "Microsoft Detection for An executable loaded an unexpected dll",
+  "filterSets": [
+    [
+      {
+        "id": "561ff156-3768-403c-bba6-89a3bd82d1b4",
+        "name": "Executable Loaded an Unexpected DLL",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/13",
+  "lastUpdate": "2025-07-28T20:43:16.000Z"
+}

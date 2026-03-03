@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4b90d2e-30ec-4d12-a12c-48005e3370ed",
+  "name": "Potential APT-Related Command and Control Connection",
+  "description": "Detects execution of potential process that is link to AgentTesla to establish C2.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "186e5ebb-09c1-43ab-b481-53ee0321e080",
+      "name": "Potential APT-Related Command and Control Connection",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1112"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2024/11/11",
+  "lastUpdate": "2025-11-11T08:26:35.000Z"
+}

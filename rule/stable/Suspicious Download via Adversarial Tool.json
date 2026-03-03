@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fae38294-f499-4fc6-84aa-a943c56a8d2b",
+  "name": "Suspicious Download via Adversarial Tool",
+  "description": "A C2 connection of an adversarial tool was possibly breached to download suspicious files via HTTP",
+  "filterSets": [
+    [
+      {
+        "id": "8ebd8c32-fe66-5e96-93e3-0825f2cc1c57",
+        "name": "Sliver HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/10/25",
+  "lastUpdate": "2024-11-08T03:38:31.000Z"
+}

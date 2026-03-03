@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2d0074e3-123b-4aca-ac33-27411641fdcd",
+  "name": "Suspicious Connection to Mega",
+  "description": "A suspicious connection to download a file from Mega, a cloud storage service, was observed.",
+  "filterSets": [
+    [
+      {
+        "id": "c21c4ee9-1f72-4337-b726-76d71f2211a2",
+        "name": "DNS Resolve Megaupload",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1f4d2372-84dc-4843-805e-8e37aa347a23",
+        "name": "SSL Connect To Megaupload",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a8b40af4-cce7-4571-b024-db9fbcff09e3",
+        "name": "Suspicious Access To MegaUpload Via HTTPS",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8dcb86b7-a498-4246-b80f-c07febea283b",
+        "name": "Executable File Downloaded From Megaupload Via HTTP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "PeiChi Cheng",
+  "team": "ddi",
+  "date": "2020/06/15",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

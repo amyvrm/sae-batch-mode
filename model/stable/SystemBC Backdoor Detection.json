@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dd50eb06-806e-4f22-ac0a-552c24eb8d53",
+  "name": "SystemBC Backdoor Detection",
+  "description": "SystemBC Backdoor Detection",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8b551512-72d0-4f1c-a162-bbf15c283062",
+      "name": "SystemBC Registry Creation",
+      "score": 5
+    },
+    {
+      "id": "f0ba5201-8293-4f69-b4ca-8d527d143b1c",
+      "name": "SystemBC Powershell Detection",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1112",
+    "mitre.t1059",
+    "mitre.t1140"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/08/30",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

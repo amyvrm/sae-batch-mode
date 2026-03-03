@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "99a8cff7-eeb6-4e89-9055-5076ac5ffd87",
+  "name": "AWS IAM Successful Creation of a User",
+  "description": "Detects the successful creation of a new IAM user, which may be part of normal operations but is important to monitor, as in worst-case scenarios it could indicate an attacker creating a backdoor account to maintain persistent unauthorized access in the AWS environment.",
+  "filterSets": [
+    [
+      {
+        "id": "861a658a-afc3-4244-8689-d8922aa7836b",
+        "name": "AWS IAM Successful Creation of a User",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/22",
+  "lastUpdate": "2025-09-08T06:00:50.000Z"
+}

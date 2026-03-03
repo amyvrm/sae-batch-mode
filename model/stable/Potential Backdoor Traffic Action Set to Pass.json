@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4cef50ec-c8bd-4c23-8c05-24be05700fce",
+  "name": "Potential Backdoor Traffic Action Set to Pass",
+  "description": "BPFDoor traffic filter hit successfully with action set to pass",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "5440c6b5-47e3-42b5-bd45-0794a55fb9c1",
+      "name": "Potential Backdoor Traffic Action Set to Pass",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "ptp",
+      "stp",
+      "xcs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1027.011",
+    "mitre.t1548.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2025/05/29",
+  "lastUpdate": "2026-01-12T17:20:22.000Z"
+}

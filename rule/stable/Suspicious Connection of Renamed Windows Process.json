@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7bf96288-df99-41a9-9cd4-5981425406ca",
+  "name": "Suspicious Connection of Renamed Windows Process",
+  "description": "Detects internet connection of renamed windows process which indicates possible compromise.",
+  "filterSets": [
+    [
+      {
+        "id": "706a224f-1e7d-4993-8a3b-07ee4b65b6b7",
+        "name": "Suspicious Connection of Renamed Windows Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/04/22",
+  "lastUpdate": "2025-06-02T07:05:50.000Z"
+}

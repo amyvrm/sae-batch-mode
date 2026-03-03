@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c76d4aab-2328-4649-9cd6-921b2504e44b",
+  "name": "Potential DNS Packet Anomaly via UDP",
+  "description": "Cisco detection for the label length exceeds bytes in a UDP DNS packet.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "4a8fe4b7-d8ef-4845-9523-9b01c37db8bf",
+      "name": "Potential DNS Packet Anomaly via UDP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "tags": [
+    "mitre.t1498"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-04T02:55:04.000Z"
+}

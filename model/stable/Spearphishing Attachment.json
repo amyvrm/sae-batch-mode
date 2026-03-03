@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "af95c7b3-1169-48e2-abab-439d72db2ffe",
+  "name": "Spearphishing Attachment",
+  "description": "A suspicious attachment associated with phishing attacks was detected in an email message. [Delayed alert: Batch process detection]",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "6b6db77b-bb15-4304-a4f6-becab420d617",
+      "name": "Spearphishing Attachment",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Johnny Tu",
+  "team": "Jaguar",
+  "date": "2022/01/28",
+  "lastUpdate": "2024-05-13T00:34:30.000Z"
+}

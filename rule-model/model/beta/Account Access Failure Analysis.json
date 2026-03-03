@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f171d551-b3df-4ab2-a6b5-d8b8747ec0df",
+  "name": "Account Access Failure Analysis",
+  "description": "McAfee detection for failed logon attempts on Windows systems due to invalid domain usernames. These rules help identify potential unauthorized access or brute force attacks targeting domain accounts.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "74afde4c-c80b-41ea-b247-3664750a3ec8",
+      "name": "Account Access Failure Analysis",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc|McAfee"
+    ]
+  ],
+  "tags": [
+    "mitre.t1110"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2026/02/10",
+  "lastUpdate": "2026-02-10T13:36:07.000Z"
+}

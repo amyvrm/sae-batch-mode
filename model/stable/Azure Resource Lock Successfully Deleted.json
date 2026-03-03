@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6ddc0707-5c07-4f12-9fb8-3bc074ec7f00",
+  "name": "Azure Resource Lock Successfully Deleted",
+  "description": "Detects deletion of Azure resource locks, which may indicate attempts to remove protections on critical resources before unauthorized or destructive actions.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "8ae57aad-06b0-4e1e-a563-f4cbc0ce5b3b",
+      "name": "Azure Resource Lock Successfully Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Arun Shaji and Kim Folloso",
+  "team": "SAE Threat Expert",
+  "date": "2025/12/05",
+  "lastUpdate": "2025-12-11T02:43:11.000Z"
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3078b3de-f996-433f-859c-a7d2d929092f",
+  "name": "Possible Deobfuscation And Reflective Injection Via Powershell",
+  "description": "The process of loading and executing obfuscated or encrypted code dynamically, which is a common technique for hiding the true purpose of the script. This can be used for legitimate purposes, like protecting intellectual property, but it can also be used for malicious purposes, such as hiding malware.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "9330e30d-ab6d-411b-9887-0508a3dea92a",
+      "name": "Possible Deobfuscation And Reflective Injection From AMSI",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055.009",
+    "mitre.t1055",
+    "mitre.t1059",
+    "mitre.t1059.001",
+    "mitre.t1140"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/07/09",
+  "lastUpdate": "2025-10-30T07:45:26.000Z"
+}

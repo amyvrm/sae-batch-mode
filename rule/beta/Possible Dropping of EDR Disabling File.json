@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9d189233-9ff2-454e-b43b-d1afffe6052c",
+  "name": "Possible Dropping of EDR Disabling File",
+  "description": "Detects dropping of possible EDRSilencer tool that can disable EDR systems",
+  "filterSets": [
+    [
+      {
+        "id": "1f84fc0a-881e-4e9f-8333-dee285821e2e",
+        "name": "Possible Dropping of EDR Disabling File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2025/05/09",
+  "lastUpdate": "2025-06-10T15:15:26.000Z"
+}

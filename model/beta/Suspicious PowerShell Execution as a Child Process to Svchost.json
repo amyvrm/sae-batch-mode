@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6ba8b650-e900-47b3-8e32-ac099ea2d45a",
+  "name": "Suspicious PowerShell Execution as a Child Process to Svchost",
+  "description": "Suspicious PowerShell code has been executed as child to svchost, possibly as a scheduled task",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3a35ca32-c024-4fb3-a1e3-1bf47a2df3b8",
+      "name": "Suspicious PowerShell Execution as a Child Process to Svchost",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/09/14",
+  "lastUpdate": "2025-10-07T02:28:56.000Z"
+}

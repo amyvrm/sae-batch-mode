@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d805db14-783b-40bb-9568-0319530511e8",
+  "name": "Suspicious File Access via SMB",
+  "description": "Network activity involving SMB, which contains a suspicious file access was detected.",
+  "filterSets": [
+    [
+      {
+        "id": "24c35565-0ad0-400d-b6c6-069211b56f82",
+        "name": "Suspicious File Access via SMB",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T18:19:22.000Z"
+}

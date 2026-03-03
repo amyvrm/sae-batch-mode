@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8e178b13-7a2f-4a06-b361-1666934c95c4",
+  "name": "Suspicious Scheduled Task Created",
+  "description": "Detection of a suspect task creation occurring which may be indicative of an oysterloader infection",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "9ab4c8af-6d06-4e8c-9696-4dd2b65fe8f0",
+      "name": "Suspicious Scheduled Task Created",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1085",
+    "mitre.t1053"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/07/03",
+  "lastUpdate": "2025-07-17T15:17:22.000Z"
+}

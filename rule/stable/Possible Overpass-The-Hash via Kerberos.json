@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6af67d87-376a-407c-83a8-a0b4013cd9e1",
+  "name": "Possible Overpass-The-Hash via Kerberos",
+  "description": "Network activity involving KERBEROS, commonly associated with the Mimikatz toolkit, indicates a potential Overpass-The-Hash attack technique attempt.",
+  "filterSets": [
+    [
+      {
+        "id": "1cf5870f-5d3d-5344-a112-5b7ee4fbd6b2",
+        "name": "Possible Overpass-The-Hash Technique Kerberos (Request)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/04/21",
+  "lastUpdate": "2025-06-19T05:46:50.000Z"
+}

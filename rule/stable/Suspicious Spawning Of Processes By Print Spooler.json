@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "812b1ac7-cb56-402b-ad86-cee04e5d1e6b",
+  "name": "Suspicious Spawning Of Processes By Print Spooler",
+  "description": "This rule detects if suspicious processes are spawned by the Print Spooler service.",
+  "filterSets": [
+    [
+      {
+        "id": "177cd314-06cd-4d26-baaa-d61a2bf1d910",
+        "name": "Suspicious Spawning Of Processes By Print Spooler",
+        "highlight": true
+      }
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/07/19",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5070bc83-f249-4ffa-8ae8-5098e4a56d0a",
+  "name": "Possible Installation of EDRprison Driver",
+  "description": "Possible Installation of EDRPrison driver which can be used to disable EDR systems",
+  "filterSets": [
+    [
+      {
+        "id": "5b76f794-ab49-4c51-b5a9-f5c2e41e35a6",
+        "name": "Possible Installation of EDRprison Driver",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-03-28T04:27:56.000Z"
+}

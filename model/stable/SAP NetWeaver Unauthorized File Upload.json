@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4b045315-a1ec-47e5-8039-cba67b7cf7da",
+  "name": "SAP NetWeaver Unauthorized File Upload",
+  "description": "An unauthorized file upload, identified as CVE-2025-31324, targeting SAP NetWeaver was observed.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "43f388f7-b0d5-4cf9-96b3-6e6ea3de5229",
+      "name": "SAP NetWeaver Unauthorized File Upload",
+      "score": 10
+    },
+    {
+      "id": "3a6d38d8-4c6f-4af7-9532-38bde66e8686",
+      "name": "SAP NetWeaver Anomalous Activity - Linux",
+      "score": 10
+    },
+    {
+      "id": "cd639f05-522c-4a28-b5d7-ddfa2057c824",
+      "name": "[Heuristic Attribute] Possible Post-Exploitation Activities",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 11,
+    "withinSeconds": 3600,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "stp",
+      "ptp",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1505.003",
+    "cve.2025.31324"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Simon Dulude",
+  "date": "2025/09/12",
+  "team": "Cloud One",
+  "lastUpdate": "2026-01-19T06:28:26.000Z"
+}

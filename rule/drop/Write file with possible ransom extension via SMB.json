@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9330592b-7abe-4227-8e86-f9deaa023a69",
+  "name": "Write File with Possible Ransom Extension via SMB",
+  "description": "Detect Ransomware Write File with Possible Ransom Extension via SMB",
+  "filterSets": [
+    [
+      {
+        "id": "c3b959ad-4809-47c2-b924-36e481e22ac4",
+        "name": "Write File with Possible Ransom Extension via SMB",
+        "highlight": true,
+        "maxAmount": 90
+      }
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 90,
+    "withinSeconds": 90,
+    "dedupSeconds": 0
+  },
+  "author": "ChunHsing Su",
+  "team": "LWE",
+  "date": "2023/01/19",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

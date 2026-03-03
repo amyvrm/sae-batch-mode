@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2dcfe2f1-dfef-49e9-90aa-69a198855184",
+  "name": "Azure Storage Account Successful Creation Or Updation With Public Access",
+  "description": "Detects successful creation or updation of an Azure storage account with public access",
+  "filterSets": [
+    [
+      {
+        "id": "40f2b0cf-f579-4b73-89b5-5defca51608f",
+        "name": "Azure Storage Account Successful Creation Or Updation",
+        "highlight": true
+      },
+      {
+        "id": "a5e41c5c-9320-47fa-9e55-2379724e16d1",
+        "name": "Azure Storage Account Creation Or Updation With Public Access Started",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "40f2b0cf-f579-4b73-89b5-5defca51608f.correlationId equals a5e41c5c-9320-47fa-9e55-2379724e16d1.correlationId"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/06/02",
+  "lastUpdate": "2025-07-16T07:28:13.000Z"
+}

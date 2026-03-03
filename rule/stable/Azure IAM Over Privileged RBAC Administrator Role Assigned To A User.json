@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "585515a8-d1b2-461b-a6db-a4da01bc1a6b",
+  "name": "Azure IAM Over Privileged RBAC Administrator Role Assigned To A User",
+  "description": "Detects the assignment of an over-privileged Role Based Access Control Administrator(RBAC) role to a user within Azure IAM",
+  "filterSets": [
+    [
+      {
+        "id": "d8a870ef-c29e-48d5-82e4-62079905d2e3",
+        "name": "Azure IAM Role Assigned To A User",
+        "highlight": true
+      },
+      {
+        "id": "6b9c5382-beb7-482c-9be7-513c0e56b98c",
+        "name": "Azure IAM Over Privileged RBAC Administrator Role Assignment Operation Started",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "d8a870ef-c29e-48d5-82e4-62079905d2e3.correlationId equals 6b9c5382-beb7-482c-9be7-513c0e56b98c.correlationId"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/06/02",
+  "lastUpdate": "2025-07-16T07:28:13.000Z"
+}

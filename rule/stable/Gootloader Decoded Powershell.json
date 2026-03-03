@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b5fe78aa-250a-405e-bfec-ca98b869663d",
+  "name": "Gootloader Decoded Powershell",
+  "description": "Gootloader Decoded Powershell",
+  "filterSets": [
+    [
+      {
+        "id": "5e38cb1f-e2aa-4c80-9d80-0b39b2473c23",
+        "name": "Gootloader Decoded Powershell 1",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9199ff04-1e3e-45fa-846b-7eeee8a5c490",
+        "name": "Gootloader Decoded Powershell 3",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/07/31",
+  "lastUpdate": "2024-03-14T14:08:04.000Z"
+}

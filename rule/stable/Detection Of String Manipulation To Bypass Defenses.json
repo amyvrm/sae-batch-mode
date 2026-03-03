@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2f939e3f-dc40-4350-81d8-1406b669af9e",
+  "name": "Detection Of String Manipulation To Bypass Defenses",
+  "description": "detection of possible crackmapexec string manupulation to bypass defense mechansims",
+  "filterSets": [
+    [
+      {
+        "id": "6579bfb4-0b0c-4b79-a751-51ffcdd8f6b4",
+        "name": "Detection Of String Manipulation To Bypass Defenses",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bc140729-c19f-419a-978d-70d8b237637d",
+        "name": "Behavior Monitoring Detection Of String Manipulation To Bypass Defenses",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh & Lucas Silva",
+  "team": "EU-IR",
+  "date": "2024/06/24",
+  "lastUpdate": "2024-07-08T20:10:52.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7c4e62f4-0c71-424c-b1fe-880ed8a40c91",
+  "name": "Suspicious Usage of Makecab via Wsmprovhost",
+  "description": "Detects suspicious usage of makecab command via wsmprovhost.exe which indicates possible data collection.",
+  "filterSets": [
+    [
+      {
+        "id": "e90efea0-5a42-424c-a8b0-5445ce444216",
+        "name": "Suspicious Usage of Makecab via Wsmprovhost",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/10/14",
+  "lastUpdate": "2025-10-14T10:45:44.000Z"
+}

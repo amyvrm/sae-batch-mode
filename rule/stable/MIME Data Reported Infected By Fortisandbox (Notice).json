@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4f142228-4d6e-4a84-9dc9-68cfaf21fcbe",
+  "name": "MIME Data Reported Infected By Fortisandbox (Notice)",
+  "description": "Fortinet detection - MIME data reported infected by FortiSandbox (notice)",
+  "filterSets": [
+    [
+      {
+        "id": "5afa46b0-4e60-46bc-bde8-14378fcfbb8d",
+        "name": "MIME Data Reported Infected By Fortisandbox (Notice)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

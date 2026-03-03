@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e74ba63d-72b6-45b8-925a-b51a126df41b",
+  "name": "CrowdStrike Pattern Disposition - Operation Blocked",
+  "description": "CrowdStrike Detection for Blocked Operation",
+  "filterSets": [
+    [
+      {
+        "id": "7ebc9287-54d2-4fcc-bf66-7fefe3d4e17c",
+        "name": "CrowdStrike Pattern Disposition - Operation Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/08",
+  "lastUpdate": "2025-08-12T06:43:13.000Z"
+}

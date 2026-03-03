@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "be587df3-59d0-4b2c-b025-a6e038cab0e8",
+  "name": "Possible Trojan C&C Communication",
+  "description": "A Trojan detected on an endpoint accessed a malicious domain using a common protocol.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1f95620d-8d93-4a47-a3c7-8844641dd780",
+      "name": "Dangerous Web Connection",
+      "score": 5
+    },
+    {
+      "id": "41108d29-d9b5-4cbc-a923-14088a4a3f88",
+      "name": "Generic Trojan Detection",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pdi",
+      "xes",
+      "pds",
+      "pao",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "SAE Threat Expert",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2024-01-24T13:34:09.000Z"
+}

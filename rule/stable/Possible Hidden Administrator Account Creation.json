@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b4073ece-2b49-4c7c-846a-02134fec214f",
+  "name": "Possible Hidden Administrator Account Creation",
+  "description": "Detects addition of an account to administrators group and hiding this account via registry modification of SpecialAccounts registry.",
+  "filterSets": [
+    [
+      {
+        "id": "89258ec5-701c-48b2-b03d-ff856af8c022",
+        "name": "Possible Suspicious Administrator Account Addition",
+        "highlight": true
+      },
+      {
+        "id": "f0c6cde3-37d0-4de0-b094-c930042c0997",
+        "name": "SpecialAccounts Modification to Hide Username in Welcome Screen via CommandLine",
+        "highlight": true
+      },
+      {
+        "id": "e1a5024c-0258-4626-942d-dce43abb0a2a",
+        "name": "SpecialAccounts Modification to Hide Username in Welcome Screen",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "89258ec5-701c-48b2-b03d-ff856af8c022.objectCmd contains e1a5024c-0258-4626-942d-dce43abb0a2a.objectRegistryValue",
+      "f0c6cde3-37d0-4de0-b094-c930042c0997.objectCmd contains e1a5024c-0258-4626-942d-dce43abb0a2a.objectRegistryValue"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/06/11",
+  "lastUpdate": "2025-06-17T10:53:41.000Z"
+}

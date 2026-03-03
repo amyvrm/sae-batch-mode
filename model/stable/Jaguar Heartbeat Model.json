@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b4fc7a55-5446-4d0f-ac74-24464fc76d18",
+  "name": "Jaguar Heartbeat Model",
+  "description": "Jaguar heartbeat Model",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "65a9014a-2484-4a0e-9ed3-7a7482ab79e5",
+      "name": "Jaguar Heartbeat Rule",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 10,
+  "globalModel": true,
+  "silent": false,
+  "clpId": [
+    "8e5a2856-63fc-4827-962d-3c9e508b9136",
+    "32dcc67a-c0b4-4be3-8123-3e6298d8afe6",
+    "d003cd06-8d14-4df4-bf7b-bf57706a8eed",
+    "35f2b8f8-d6f2-440e-bd9e-ef0e544476d8",
+    "dab7f0d6-eb36-431f-918c-ecfabecda1f3",
+    "e7b14e7a-1a96-455b-a41a-2718da59866e",
+    "815bf342-9ff2-4d3a-af46-c4f2f221e4cd",
+    "59062355-475f-4770-ac0e-8527957967f4",
+    "0c7d52ab-8f1f-4e95-bb3a-ae1fef438723",
+    "2c53ec8b-9e4f-4e1b-be62-6cd2f1b143d1",
+    "a7ef0a07-ff40-4cd0-a2e4-7ab367959ab9",
+    "e259bf86-8323-42f3-8224-ebaccdd2bf99",
+    "f8d989b3-3821-47d9-afaa-40ca6c90c234",
+    "16ec00fb-de4c-470b-ad28-19b3a7dada96",
+    "027b2ef0-ce67-4684-aa57-3e19d957e309",
+    "9cf014ed-c006-431a-ad4d-bc165030cfac",
+    "9e9b4651-fd1c-4bb8-9063-7735b52cd122",
+    "3b45d6c4-b85f-4fa6-ba25-57e759552b96"
+  ],
+  "author": "davidag",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2026-02-11T05:07:57.000Z"
+}

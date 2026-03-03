@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0faa6472-a91e-4b5c-a6ff-cd72c348bcfa",
+  "name": "Account Attempted to Upload File Containing Malicious URL to SharePoint",
+  "description": "An account attempted to upload a file containing a malicious URL and triggered file quarantine, which may indicate lateral movement after account compromise.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "7ca69f2d-e402-47c3-bb84-a568cb8972ee",
+      "name": "Account Attempted to Upload File Containing Malicious URL to SharePoint",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sca"
+    ]
+  ],
+  "tags": [
+    "mitre.t1586.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Kai-Min Tu",
+  "team": "Jaguar",
+  "date": "2024/03/14",
+  "lastUpdate": "2024-12-13T16:50:49.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b7b04671-a23d-45a6-8628-4ac2cf9eac88",
+  "name": "Execution of VBScript Files via Command line",
+  "description": "Detects the execution of VBScript file via the command line",
+  "filterSets": [
+    [
+      {
+        "id": "f16b0475-026e-436c-aa63-4cd198747e93",
+        "name": "Potentially Malicious VBScript Execution via Oracle Weblogic",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2024-09-12T19:37:32.000Z"
+}

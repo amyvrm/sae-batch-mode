@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "449dc87b-88e6-4609-bdf4-cadf825e9c06",
+  "name": "Azure Event Hub Successfully Deleted",
+  "description": "Detects the successful deletion of an Azure Event Hub, which may indicate an attacker attempting to evade logging or disrupt monitoring capabilities to remain undetected while performing further attacks.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "8f0fc889-2d44-491d-948e-991f07a3358b",
+      "name": "Azure Event Hub Successfully Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.008"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/27",
+  "lastUpdate": "2025-12-10T09:44:40.000Z"
+}

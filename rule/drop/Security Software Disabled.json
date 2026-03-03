@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0c97f199-3aeb-48d9-b393-39f0f79af504",
+  "name": "Security Software Disabled",
+  "description": "Microsoft Detection for Security Software Disabled",
+  "filterSets": [
+    [
+      {
+        "id": "71132248-6f66-4a92-849c-2bada92588c7",
+        "name": "Security Software Disabled",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/03",
+  "lastUpdate": "2025-07-28T20:43:16.000Z"
+}

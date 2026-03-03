@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2d7a7cf2-0a9a-41fa-a77c-d09b53ef23c0",
+  "name": "Connection Proxy Establishment Via Netsh",
+  "description": "Found a Connection Proxy Establishment Via Netsh Interface",
+  "filterSets": [
+    [
+      {
+        "id": "76fed4ba-7454-4f42-8300-ca4e38f61008",
+        "name": "Connection Proxy Establishment Via Netsh",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds"
+    ]
+  ],
+  "author": "Angelo Deveraturda",
+  "team": "SAE Threat Expert",
+  "date": "2020/11/18",
+  "lastUpdate": "2024-04-08T06:54:04.000Z"
+}

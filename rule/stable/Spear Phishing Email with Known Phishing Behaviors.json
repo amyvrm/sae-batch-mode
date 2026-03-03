@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d195bc9e-0062-445d-a6df-a8d06186bfea",
+  "name": "Spear Phishing Email with Known Phishing Behaviors",
+  "description": "A suspicious email exhibiting phishing behaviors was detected by a machine learning model. (The machine learning model learns patterns from known phishing emails and may generate high volume of alerts.)",
+  "filterSets": [
+    [
+      {
+        "id": "051401ef-1138-4be9-bcd7-bc4891f0e1b7",
+        "name": "Spear Phishing Mail Addressed By AutoRuleset",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Peter Y Tseng",
+  "team": "Jaguar",
+  "date": "2022/01/04",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

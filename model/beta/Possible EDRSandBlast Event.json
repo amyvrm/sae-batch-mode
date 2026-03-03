@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "abb5ac18-e2e5-4b32-b3ab-63ba5df6f4c9",
+  "name": "Possible EDRSandBlast Event",
+  "description": "Detects known vulnerable driver file creation related to EDRSandBlast and elavating it as a service which to disable kernel callbacks to evade EDR detections",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f431ec77-b606-4e63-90b4-49574e6ff339",
+      "name": "Possible EDRSandBlast Event",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1543.003",
+    "mitre.t1068",
+    "mitre.t1211",
+    "mitre.t1112"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/10/04",
+  "lastUpdate": "2025-06-10T06:12:35.000Z"
+}

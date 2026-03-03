@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "446ed27d-00f3-4b43-8377-47565f0b1652",
+  "name": "Identified IAM AWS ListUser API In Endpoint",
+  "description": "Detects the AWS api call to list iam users from an endpoint which could be an enumeration for aws iam users.",
+  "filterSets": [
+    [
+      {
+        "id": "51bf4ab4-ef33-4763-95d5-959981d95102",
+        "name": "Identified AWS IAM ListUser API In Endpoint",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/06/15",
+  "lastUpdate": "2024-06-24T08:41:58.000Z"
+}

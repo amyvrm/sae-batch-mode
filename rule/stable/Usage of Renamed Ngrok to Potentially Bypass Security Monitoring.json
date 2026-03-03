@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "584d5387-ede5-4e11-9f15-0775c30d6ed4",
+  "name": "Usage of Renamed Ngrok to Potentially Bypass Security Monitoring",
+  "description": "Detection of a renamed Ngrok file that may be used to bypass security monitoring.",
+  "filterSets": [
+    [
+      {
+        "id": "59d77d0d-3dfc-48cc-8417-ac64be41b699",
+        "name": "Usage of Renamed Ngrok to Potentially Bypass Security Monitoring",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0ee9b835-32ee-4a2e-b94d-225dd54a1bb2",
+        "name": "Process Creation of Renamed Ngrok to Potentially Bypass Security Monitoring",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/07",
+  "lastUpdate": "2024-06-14T11:10:03.000Z"
+}

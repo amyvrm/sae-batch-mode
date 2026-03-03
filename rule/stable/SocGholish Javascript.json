@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bae6d1cd-2e79-418c-962b-09cde57eb42c",
+  "name": "Detection of SocGholish Javascript",
+  "description": "Detection of SocGholish Javascript",
+  "filterSets": [
+    [
+      {
+        "id": "153d2cc8-ae17-423a-bf42-36004a509e65",
+        "name": "Detection of SocGholish Javascript",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/08/04",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

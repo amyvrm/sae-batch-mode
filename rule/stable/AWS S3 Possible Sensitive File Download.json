@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d6c39222-09b7-11ee-be56-0242ac120002",
+  "name": "AWS S3 Possible Sensitive File Download",
+  "description": "Detected AWS S3 Possible Sensitive File Download.",
+  "filterSets": [
+    [
+      {
+        "id": "ed4189e8-9e49-4a93-88d6-a5e9c274d7d9",
+        "name": "AWS S3 Possible Sensitive File Download",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/06/13",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fba2e7c2-1067-4cfc-b7c5-c22e85dda052",
+  "name": "Users Enumeration Activities Over LDAP",
+  "description": "Adversaries may attempt to get a listing of accounts and machine names. This information can help adversaries determine which domain accounts exist to aid in follow-on behavior.",
+  "filterSets": [
+    [
+      {
+        "id": "3ce1744d-5d55-4fe4-b1b5-8a998fa0b237",
+        "name": "Windows User Account Enumeration",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a1dee2b8-4421-4b71-b151-eecbbc81f5c2",
+        "name": "Identified Domain Trusts Enumeration Over LDAP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7d0678e7-2838-4eb1-a6f3-5fecb06eb4db",
+        "name": "Identified Windows Workstation Enumeration Over LDAP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-02-28T13:38:42.000Z"
+}

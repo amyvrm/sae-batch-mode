@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ceeaaf90-ea2f-11ef-9cd2-0242ac120002",
+  "name": "Suspicious Windows File Execution via AppData Temp Folder",
+  "description": "Detects the execution of binaries (.exe and .sct) from the Windows AppData Temp folder.",
+  "filterSets": [
+    [
+      {
+        "id": "dcafe3da-e97f-11ef-9cd2-0242ac120002",
+        "name": "Suspicious Execution of Binaries from Temp Directory",
+        "highlight": true
+      },
+      {
+        "id": "568f52be-e983-11ef-9cd2-0242ac120002",
+        "name": "Suspicious Script Execution from Temp Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2025/02/13",
+  "lastUpdate": "2025-10-01T07:09:57.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "26b2f0e8-b70a-4405-90c0-e264ba168f24",
+  "name": "Possible Dropping Of Fake Windows Login",
+  "description": "Possible Dropping of Social Engineering tool used to harvest credentials",
+  "filterSets": [
+    [
+      {
+        "id": "3ef12868-453c-46b5-a881-ebe2d3bcdae2",
+        "name": "Possible Dropping Of Fake Windows Login",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/12/09",
+  "lastUpdate": "2025-03-11T04:03:01.000Z"
+}

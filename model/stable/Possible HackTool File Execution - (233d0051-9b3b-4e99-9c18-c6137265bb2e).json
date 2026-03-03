@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "233d0051-9b3b-4e99-9c18-c6137265bb2e",
+  "name": "Possible LSASSY File Execution",
+  "description": "Detects Possible Execution of LSASSY tool.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "9540ed30-1fc5-4a13-aefd-9e4cfcfb1374",
+      "name": "Possible LSASSY File Creation",
+      "score": 1
+    },
+    {
+      "id": "e791413f-e103-4341-8ffd-c8d35f62212e",
+      "name": "Possible LSASSY Process Creation",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1003.001",
+    "mitre.t1082"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jehhan Marcelo & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2024/10/31",
+  "lastUpdate": "2025-05-06T10:32:39.000Z"
+}

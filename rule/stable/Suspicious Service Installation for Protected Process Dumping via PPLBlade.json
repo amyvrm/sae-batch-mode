@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "04de0499-10d3-4972-a69c-ba3634012ae5",
+  "name": "Suspicious Service Installation for Protected Process Dumping via PPLBlade",
+  "description": "Detects the registry key creation for the PPLBlade kernel driver, which is used to exploit Windows Protected Process Light (PPL) for malicious purposes. Adversaries may use the this to obtain protected LSASS process dumps.",
+  "filterSets": [
+    [
+      {
+        "id": "bf9b0da2-6571-4f1f-b084-a3e58d35f990",
+        "name": "Suspicious Service Installation for Protected Process Dumping via PPLBlade",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Yoshihiro Nakaya",
+  "team": "JP-IR",
+  "date": "2024/09/11",
+  "lastUpdate": "2024-09-30T17:09:42.000Z"
+}

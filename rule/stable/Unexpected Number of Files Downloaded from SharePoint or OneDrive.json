@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fd98314a-a9b9-4e2f-bfaa-3cc9f1ecd995",
+  "name": "Unexpected Number of Files Downloaded from SharePoint or OneDrive",
+  "description": "A user downloaded a suspiciously large number of files from SharePoint or OneDrive, which may indicate a compromised account. Immediate investigation is recommended to confirm the legitimacy of this activity and mitigate potential data leakage.",
+  "filterSets": [
+    [
+      {
+        "id": "3cf2b6a5-f49e-4523-b761-0e4ef03cfee0",
+        "name": "File Downloaded From Collaboration Application",
+        "highlight": true,
+        "maxAmount": 60
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 60,
+    "withinSeconds": 4000,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xca"
+    ]
+  ],
+  "author": "Clark Shao",
+  "team": "Jaguar",
+  "date": "2024/12/03",
+  "lastUpdate": "2025-01-22T09:11:31.000Z"
+}

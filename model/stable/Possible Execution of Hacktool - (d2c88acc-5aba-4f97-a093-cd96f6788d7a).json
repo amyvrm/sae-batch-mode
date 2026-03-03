@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d2c88acc-5aba-4f97-a093-cd96f6788d7a",
+  "name": "Possible Execution of Evil-WinRM Tool",
+  "description": "Detects possible usage of Evil-WinRM tool to start remote session",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1b777997-dc1b-4728-a938-f1b9b2e95859",
+      "name": "Possible Execution of Evil-WinRM Tool",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.006"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh & Kazuya Sugiura",
+  "team": "EU-IR & JP-MDR",
+  "date": "2025/11/27",
+  "lastUpdate": "2026-01-16T17:05:04.000Z"
+}

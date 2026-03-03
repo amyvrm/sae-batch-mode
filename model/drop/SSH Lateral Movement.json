@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "id": "62d071d9-5fe7-4d70-94a9-8956b4ec2638",
+  "name": "SSH Lateral Movement",
+  "description": "This incident means SSH lateral movment has been detected.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "33352e3a-99c5-4a4f-a779-3464029c62c8",
+      "name": "SSH Keys Discovery",
+      "score": 1
+    },
+    {
+      "id": "34ace7d3-6fc6-4802-ae54-c508324d39fd",
+      "name": "SSH Hosts Discovery",
+      "score": 1
+    },
+    {
+      "id": "ec19b6b2-bb92-41a9-b877-66b19660b33d",
+      "name": "SSH Users Discovery",
+      "score": 1
+    },
+    {
+      "id": "c6d49214-bb27-43a5-9289-372d175416da",
+      "name": "Shell Script SSH Lateral Movement",
+      "score": 4
+    }
+  ],
+  "threshold": {
+    "targetScore": 6,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.004"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Josh Morrison",
+  "team": "Cloud One",
+  "date": "2023/01/11",
+  "lastUpdate": "2024-06-14T14:21:59.000Z"
+}

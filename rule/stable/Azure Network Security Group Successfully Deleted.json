@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8f2d336d-92ca-45e2-a979-8d8a57f7963b",
+  "name": "Azure Network Security Group Successfully Deleted",
+  "description": "Detects successful deletion of an Azure Network Security Group which may indicate an attacker deliberately removing network access controls",
+  "filterSets": [
+    [
+      {
+        "id": "1db09e6d-c4ef-44dc-81e9-2e5c1fa944b4",
+        "name": "Azure Network Security Group Successfully Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Nathaniel Ragasa",
+  "team": "SAE Threat Expert",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-23T02:21:40.000Z"
+}

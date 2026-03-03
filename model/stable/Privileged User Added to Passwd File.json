@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0190a2e8-2913-7c88-ab34-960f11e81cfe",
+  "name": "Privileged User Added to Passwd File",
+  "description": "A user with User ID and Group ID both set to 0 is added to /etc/passwd.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0190a2e4-4ba3-70b5-951d-5e39b317209e",
+      "name": "Privileged User Added to Passwd File",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/07/11",
+  "lastUpdate": "2024-08-27T11:09:07.000Z"
+}

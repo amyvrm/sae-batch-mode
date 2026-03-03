@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8c5ec188-8eb1-447c-bca7-f7cc9193edba",
+  "name": "AWS EC2 Suspicious Instance Termination",
+  "description": "Detected Suspicious termination of EC2 Instance after EC2 Instance profile modification. Deleting an instance can remove valuable forensic artifacts and other evidence of suspicious behavior or damage crucial operations in an organisation or their customers.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "5d3fb489-e743-43ee-81d6-87c83154b54c",
+      "name": "AWS IAM Removes the specified IAM role from the specified EC2 instance profile",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "17584fc5-9437-4b58-aa6a-a3e4f01faa8d",
+      "name": "AWS IAM Adds the specified IAM role to the specified instance profile",
+      "score": 1,
+      "sequence": 2
+    },
+    {
+      "id": "082c2502-bb01-4669-9cc7-e5e116234ab9",
+      "name": "AWS EC2 terminate the specified instances",
+      "score": 1,
+      "sequence": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 1000,
+    "dedupSeconds": 1000
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1134.005",
+    "mitre.t1485"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

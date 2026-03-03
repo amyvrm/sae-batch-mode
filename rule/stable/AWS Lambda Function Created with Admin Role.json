@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "04cfe2e1-4054-4b02-8649-09682f5c6715",
+  "name": "AWS Lambda Function Created with Admin Role",
+  "description": "Detects the creation of an AWS Lambda function assigned an IAM role with administrative privileges, which may indicate privilege escalation or misconfiguration.",
+  "filterSets": [
+    [
+      {
+        "id": "44111d34-79c1-4e73-9334-399e78963054",
+        "name": "AWS Lambda Function Created with Admin Role",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

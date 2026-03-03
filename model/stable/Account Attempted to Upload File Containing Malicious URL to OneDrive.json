@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e0801b8a-8240-424b-a7bd-84df39f912cc",
+  "name": "Account Attempted to Upload File Containing Malicious URL to OneDrive",
+  "description": "An account attempted to upload a file containing a malicious URL and triggered file quarantine, which may indicate lateral movement after account compromise.",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "2ad30105-05c1-40ce-9af0-9c05bb4ee041",
+      "name": "Account Attempted to Upload File Containing Malicious URL to OneDrive",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sca"
+    ]
+  ],
+  "tags": [
+    "mitre.t1586.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Kai-Min Tu",
+  "team": "Jaguar",
+  "date": "2024/03/14",
+  "lastUpdate": "2025-02-21T11:21:24.000Z"
+}

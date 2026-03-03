@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d012448a-4370-4161-9a65-a49fcab4cbbb",
+  "name": "Disguised Executable Download via Invoke-WebRequest",
+  "description": "Invoke-WebRequest was used to download a file disguised as an image or text file and save it as an executable, a common technique for bypassing security controls during payload delivery.",
+  "filterSets": [
+    [
+      {
+        "id": "22f760f1-4ef9-4728-bbb3-7618e48643a3",
+        "name": "Disguised Executable Download via Invoke-WebRequest",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Yusuf Madkour & Peligey Rufus",
+  "team": "MENA-IR",
+  "date": "2026/02/04",
+  "lastUpdate": "2026-02-09T09:22:39.000Z"
+}

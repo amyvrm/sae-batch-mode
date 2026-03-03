@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0",
+  "id": "34a35bbd-1842-4ffe-97af-4bd1420af3b4",
+  "name": "Privilege Escalation via Windows Configuration Directory",
+  "description": "Adversaries may establish persistence and elevate privileges by using an installer to trigger the execution of malicious content during system intallation and uninstallation on backup directiry C:/Config.msi",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "60387959-9fa0-407b-9660-1e86ac1c891f",
+      "name": "Local Privilege Escalation via Windows Rollback Creation",
+      "score": 1
+    },
+    {
+      "id": "e3c8772b-7361-49da-ac80-9bc2f9f57af0",
+      "name": "Local Privilege Escalation via Windows Rollback Deletion",
+      "score": 1
+    },
+    {
+      "id": "56ae21a3-1126-4e61-93a7-c957643ac094",
+      "name": "Malicious CMD or PowerShell Running via On-Screen Keyboard",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1546.016",
+    "cve.2025.32714",
+    "cve.2023.34394",
+    "cve.2023.32177",
+    "cve.2023.32178",
+    "cve.2023.32179",
+    "cve.2024.3037",
+    "cve.2023.52092",
+    "cve.2023.52090",
+    "cve.2024.36358",
+    "cve.2023.52091",
+    "cve.2023.51636",
+    "cve.2023.52338",
+    "cve.2024.7249",
+    "cve.2023.42099",
+    "cve.2023.52093",
+    "cve.2023.52094",
+    "cve.2024.7238",
+    "cve.2024.7234",
+    "cve.2024.7227",
+    "cve.2024.32849",
+    "cve.2024.1867",
+    "cve.2024.7239",
+    "cve.2024.5928",
+    "cve.2024.0353",
+    "cve.2024.41183",
+    "cve.2024.7250",
+    "cve.2024.7252",
+    "cve.2024.7229",
+    "cve.2024.7230",
+    "cve.2024.7231",
+    "cve.2024.30033",
+    "cve.2024.7237",
+    "cve.2024.7232",
+    "cve.2024.26199",
+    "cve.2024.30377",
+    "cve.2024.7242",
+    "cve.2024.7233",
+    "cve.2024.8404",
+    "cve.2023.28134",
+    "cve.2023.3160",
+    "cve.2025.32714"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/09/17",
+  "lastUpdate": "2025-07-28T07:18:48.000Z"
+}

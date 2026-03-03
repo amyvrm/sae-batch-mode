@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4e4ab30-164d-4eff-ac85-5b3474899df5",
+  "name": "Active Directory Objects Enumeration Activities Over LDAP",
+  "description": "Detected remote activities to enumerate active directory objects such as groups, password policy over LDAP",
+  "filterSets": [
+    [
+      {
+        "id": "3d44b636-5d1e-4efa-9c51-f4bc9ff155ae",
+        "name": "Identified Password Policy Discovery Over LDAP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "783250c1-9388-550c-bb44-f882b6321dec",
+        "name": "Identified Remote Permission Groups Discovery Over LDAP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b8a28355-5117-42e3-87c9-52f30d7bc8ed",
+        "name": "Identified Subnet Discovery Over LDAP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-02-28T13:38:42.000Z"
+}

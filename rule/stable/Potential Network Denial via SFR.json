@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7f173555-c18b-4567-ab66-2d137de1ab12",
+  "name": "Potential Network Denial via SFR",
+  "description": "A packet has been denied by the module. Your connection is not successful for a certain flow that has been redirected to the module.",
+  "filterSets": [
+    [
+      {
+        "id": "90d41e98-6fd4-5a70-9088-3daa0fe07463",
+        "name": "Potential Network Denial via SFR",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/06",
+  "lastUpdate": "2026-02-11T03:25:20.000Z"
+}

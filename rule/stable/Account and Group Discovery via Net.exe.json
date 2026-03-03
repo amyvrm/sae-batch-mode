@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "52587d86-6c09-446a-bb4d-d9d71df3e9ab",
+  "name": "Account and Group Discovery via Net.exe",
+  "description": "Execution of Net.exe for Local or Group account discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "200bc35c-07ee-4aa0-b384-44655dfc9a0e",
+        "name": "Account Discovery on Local System via Net.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3bd95b43-0772-4f0b-89c4-8ef5ca947e74",
+        "name": "Account And Group Discovery Via Net",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/09/19",
+  "lastUpdate": "2024-12-05T05:42:31.000Z"
+}

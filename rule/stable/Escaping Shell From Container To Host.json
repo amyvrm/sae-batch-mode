@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6b6acdcb-5c62-43b5-907c-3ff8f7d241d2",
+  "name": "Escaping Shell From Container To Host",
+  "description": "Adversaries may break out of a container to gain access to the underlying host. This can allow an adversary access to other containerized resources from the host level or to the host itself. In principle, containerized resources should provide a clear separation of application functionality and be isolated from the host environment.",
+  "filterSets": [
+    [
+      {
+        "id": "36270873-5a90-4993-9d45-bead2d88eb13",
+        "name": "Escaping Shell From Container To Host",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/07/24",
+  "lastUpdate": "2024-08-27T08:40:11.000Z"
+}

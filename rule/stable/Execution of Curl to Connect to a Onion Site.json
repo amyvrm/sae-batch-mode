@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "efc613e6-98b4-4f33-a27a-71bc064dbe76",
+  "name": "Execution of Curl to Connect to a Onion Site",
+  "description": "Detects the execution of the \"curl.exe\" command, referencing \"SOCKS\" and \".onion\" domains, which could be indicative of Kalambur backdoor activity.",
+  "filterSets": [
+    [
+      {
+        "id": "6023a864-910b-489e-b861-32994405d6dc",
+        "name": "Execution of Curl to Connect to a Onion Site",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/04/15",
+  "lastUpdate": "2025-04-24T10:18:27.000Z"
+}

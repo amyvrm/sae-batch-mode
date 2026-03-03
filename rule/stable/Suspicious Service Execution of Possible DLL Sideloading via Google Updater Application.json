@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "89409557-d804-45cf-bbb0-1bffca34826c",
+  "name": "Suspicious Service Execution of Possible DLL Sideloading via Google Updater Application",
+  "description": "Detects suspicious service execution of DLL Sideloading via Google Updater File leading to C2 connection",
+  "filterSets": [
+    [
+      {
+        "id": "b8eb576f-0f9a-4954-b700-fb97b6513153",
+        "name": "Suspicious Service Execution of Possible DLL Sideloading via Google Updater Application",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/05/21",
+  "lastUpdate": "2025-06-12T07:16:19.000Z"
+}

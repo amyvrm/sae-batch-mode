@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "899567d9-03ec-4e5b-bbb6-2bfe6e4b70ee",
+  "name": "Possible Mimikatz DC Sync Activity",
+  "description": "Detection of Mimikatz DC Sync activity in Windows Event Logs",
+  "filterSets": [
+    [
+      {
+        "id": "51b67f98-b45b-4b13-b7cc-87beb96fb86b",
+        "name": "Possible Mimikatz DC Sync Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/04/08",
+  "lastUpdate": "2025-02-12T04:24:54.000Z"
+}

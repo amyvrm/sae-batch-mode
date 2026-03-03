@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cf125a2c-fd61-4cc8-bdf0-982bab59095c",
+  "name": "Remote Access Application Connection",
+  "description": "Detects Remote Access or Communication of Remote Administration Tools",
+  "filterSets": [
+    [
+      {
+        "id": "92ae38b3-e22a-45f8-87eb-9457c44ae5d0",
+        "name": "AnyDesk Connection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b73ede5b-37dd-40a5-8274-320b4bc44e23",
+        "name": "ConnectWise Control Usage",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "234907dd-8bac-4c2c-81b0-829dcfdba6f6",
+        "name": "Splashtop Connection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0c9d1b0d-3ca2-4865-b663-a7bc17af424f",
+        "name": "Teamviewer Remote Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2022/02/11",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

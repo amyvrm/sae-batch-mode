@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d90b0de9-380f-4553-92b2-ec22aa54902a",
+  "name": "AWS S3 Object Upload Using Custom Encryption",
+  "description": "This detection identifies objects uploaded to S3 with non-standard encryption settings. Custom encryption methods may indicate security-conscious operations or an attempt to bypass default AWS encryption mechanisms. If unauthorized, this could lead to data obfuscation, making monitoring and access control more challenging.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "1bf68a51-c95a-4236-9c1d-57c57c2f4205",
+      "name": "AWS S3 Object Sync",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "b1c94e90-c373-4d79-9a94-e63fb9113a33",
+      "name": "AWS S3 Object Upload Using Client-Side Encryption",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1530"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-07-23T08:52:30.000Z"
+}

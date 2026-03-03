@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1928d699-f3e5-41da-b2af-1d67378a0333",
+  "name": "[Test] File Extension Rename Activity Over Network Share - Low Confident",
+  "description": "Detected file extension rename activity over network share.",
+  "filterSets": [
+    [
+      {
+        "id": "e1c3dad7-31c2-46a9-8b7f-66f97dca9227",
+        "name": "File Rename Activity Over Network Share",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-05-13T04:41:04.000Z"
+}

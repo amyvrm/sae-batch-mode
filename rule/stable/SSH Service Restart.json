@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0190c293-74af-7586-9fcb-68c689ca9e33",
+  "name": "SSH Service Restart",
+  "description": "SSH service restarted. An attacker might restart the SSH service to reload the SSH configuration.",
+  "filterSets": [
+    [
+      {
+        "id": "0190b82b-5090-717b-8182-2e54358d805c",
+        "name": "SSH Service Restart",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/07/17",
+  "lastUpdate": "2024-09-04T19:10:33.000Z"
+}

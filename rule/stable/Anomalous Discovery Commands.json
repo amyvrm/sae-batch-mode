@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "49c8ba4a-8f64-4b95-bf45-33bfd0b166e0",
+  "name": "Anomalous Discovery Commands",
+  "description": "Detection of anomalousous discovery commands from unusual processes",
+  "filterSets": [
+    [
+      {
+        "id": "a518d423-bf05-4c7e-89e2-e44f380ba5a6",
+        "name": "Anomalous Discovery Commands",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/10/26",
+  "lastUpdate": "2023-10-27T15:09:15.000Z"
+}

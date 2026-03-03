@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3fba0638-1972-4f85-b9c8-a308f44410df",
+  "name": "User Account Removed from Local Group",
+  "description": "Microsoft Detection for User Account Removed from Local Group",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "6dd1a663-8c15-4a5a-ba9f-eb40653d7162",
+      "name": "User Account Removed from Local Group",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/07/01",
+  "lastUpdate": "2025-07-07T02:52:32.000Z"
+}

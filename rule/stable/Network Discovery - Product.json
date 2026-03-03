@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "badc791d-7c91-46f5-9441-a5f1933c10fa",
+  "name": "Network Discovery - Product",
+  "description": "Detect attempts to use port scanning",
+  "filterSets": [
+    [
+      {
+        "id": "d97b2618-4b89-41f4-b0de-19b52d0f3641",
+        "name": "TCP Port Scanning - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "411abab5-2ace-45b4-aed4-3cedc3ff42e4",
+        "name": "TCP Port Scanning - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2e976f56-bc5c-4ba6-aa1b-48370ba8f010",
+        "name": "Network Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 10,
+    "withinSeconds": 1800,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sds",
+      "pdi",
+      "pds",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-12-19T10:25:51.000Z"
+}

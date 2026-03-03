@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fcc5c690-47e8-458c-9c77-c5ab8f9bae4b",
+  "name": "Identified Creation Of Container Over Docker REST API",
+  "description": "adversaries may deploy a new container to execute processes associated with a particular image or deployment, such as processes that execute or download malware.",
+  "filterSets": [
+    [
+      {
+        "id": "8fbd05e5-0d03-4966-b28f-727850206ea5",
+        "name": "Identified Creation Of Container Over Docker REST API",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a7791fa0-bb53-4531-83fb-2618965f46a1",
+        "name": "Identified Creation Of Elevated Docker Container Over Docker REST API",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ],
+    [
+      "stp",
+      "xcs",
+      "ptp"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/03/21",
+  "lastUpdate": "2024-05-21T19:09:02.000Z"
+}

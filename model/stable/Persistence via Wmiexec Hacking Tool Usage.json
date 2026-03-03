@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7f4a2971-4fc1-4ee1-87d4-123b3393b299",
+  "name": "Persistence via Wmiexec Hacking Tool Usage",
+  "description": "Detects command execution related to the Impacket WMIExec utility to obtain persistence.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "ee68badf-a04b-4a41-9a0e-97b6a1c146bd",
+      "name": "Persistence via Wmiexec Hacking Tool Usage",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1047",
+    "mitre.t1060",
+    "mitre.t1053",
+    "mitre.t1136"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2024/06/26",
+  "lastUpdate": "2024-08-23T16:53:24.000Z"
+}

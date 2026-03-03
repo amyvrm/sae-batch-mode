@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "91edee3c-6784-4c0f-9328-ead33a692d04",
+  "name": "Cloudflare Tunnel Connection",
+  "description": "Detect Cloudflare tunnel",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "39f3fcb8-b134-4587-b96b-892ef4f43be2",
+      "name": "Cloudflare Tunnel Connection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1572"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jose Baena Cobos",
+  "team": "Cloud One",
+  "date": "2023/09/18",
+  "lastUpdate": "2025-07-20T15:55:10.000Z"
+}

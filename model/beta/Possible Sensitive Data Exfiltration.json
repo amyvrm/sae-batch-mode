@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fa53f8a3-ef36-455f-935a-cc56a20e8973",
+  "name": "Possible Sensitive Data Exfiltration",
+  "description": "Adversaries may exfiltrate sensitive data via file transfer tools to evade detection",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e75b5f04-6e07-4e0a-bb96-a9dc49af56ae",
+      "name": "File Upload via File Transfer Tools",
+      "score": 3
+    },
+    {
+      "id": "febe022f-b167-4521-bdc0-8090b8691e7f",
+      "name": "Possibly Malicious Collection Of Sensitive Credentials Files",
+      "score": 1
+    },
+    {
+      "id": "4ee71413-51b1-4afe-8002-e025c8bd5f77",
+      "name": "Possibly Malicious Collection Of Sensitive Cloud Providers Credentials Files",
+      "score": 1
+    },
+    {
+      "id": "dc912d52-9bf7-4127-a23c-9d2c4d7f9693",
+      "name": "AWS Dockerhub Credential Discovery",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1552.001",
+    "mitre.t1048.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/25",
+  "lastUpdate": "2025-10-30T07:43:02.000Z"
+}

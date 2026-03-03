@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eea94f0f-eeba-41c4-b74d-b77f82b78e20",
+  "name": "Suspicious Insecure Container Created via Docker",
+  "description": "Detects an Insecure Container Created via Docker.",
+  "filterSets": [
+    [
+      {
+        "id": "d111b5c9-6ec9-4958-a21a-d25d108e2c72",
+        "name": "Identified Docker Running A Unconfined Seccomp Profile",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5a44f8f5-aee0-4086-bd05-645b3b5a8edc",
+        "name": "Detached Docker Running A Privileged Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2023/09/26",
+  "lastUpdate": "2023-10-19T03:38:17.000Z"
+}

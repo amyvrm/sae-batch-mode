@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3e6a60c4-2034-485d-ac75-be33f0b0d900",
+  "name": "Suspicious Active Directory Enumeration via LDAP",
+  "description": "Detected an active directory enumeration over LDAP. This techniques are used by adversaries in discovery and lateral movements to collect the information about compromised network.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3166c03b-e710-4c30-b7c2-ad8d9d083b38",
+      "name": "Account Enumeration Activities",
+      "score": 1
+    },
+    {
+      "id": "816571ac-fd37-4150-8aa1-2ec9ddc3acb0",
+      "name": "Remote System Discovery Activities",
+      "score": 1
+    },
+    {
+      "id": "fba2e7c2-1067-4cfc-b7c5-c22e85dda052",
+      "name": "Users Enumeration Activities Over LDAP",
+      "score": 1
+    },
+    {
+      "id": "f4e4ab30-164d-4eff-ac85-5b3474899df5",
+      "name": "Active Directory Objects Enumeration Activities Over LDAP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1087.002",
+    "mitre.t1569.002",
+    "mitre.t1018",
+    "mitre.t1482",
+    "mitre.t1201",
+    "mitre.t1016"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "clpId": [
+    "27fe9230-7c33-45b7-b591-6adb998a825d",
+    "2999a8c9-408a-4e91-9825-b15fb2b6dd6c"
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-10-30T06:54:31.000Z"
+}

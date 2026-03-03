@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "381a486d-a6fc-48fe-8515-20b9c13a6f99",
+  "name": "AWS MFA Device Enabled for IAM User",
+  "description": "Detects when a virtual MFA device is enabled for an IAM user.",
+  "filterSets": [
+    [
+      {
+        "id": "4d38c7c2-493f-4ffd-be9e-9250b37f5056",
+        "name": "AWS MFA Device Enabled for IAM User",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-07-31T08:55:45.000Z"
+}

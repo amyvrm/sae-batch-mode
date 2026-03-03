@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4d4181b5-7374-44be-8c56-0753baa7f6a9",
+  "name": "MIME Header Detected To Have A Virus And Blocked",
+  "description": "Fortinet detection - MIME header detected to have a virus and blocked",
+  "filterSets": [
+    [
+      {
+        "id": "9fd24e52-1f5d-40f4-9c99-7249975ac29d",
+        "name": "MIME Header Identified to Have a Virus and Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2026-01-15T02:52:32.000Z"
+}

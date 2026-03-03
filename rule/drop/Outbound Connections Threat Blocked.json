@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "013eab2e-48c0-40d3-a9de-d4d81578f860",
+  "name": "Outbound Connections Threat Blocked",
+  "description": "Detects the outbound connections from Palo Alto Firewall.",
+  "filterSets": [
+    [
+      {
+        "id": "ad50f68d-f83c-4d39-9100-269f1e55aab0",
+        "name": "Outbound Connections Threat Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks|PAN-OS"
+    ]
+  ],
+  "author": "Rika Gregorio",
+  "team": "SAE",
+  "date": "2024/10/24",
+  "lastUpdate": "2025-05-20T10:42:22.000Z"
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "50c0810f-3e70-4e1a-8bfe-761e9376cb97",
+  "name": "Scheduled Task Creation from XML in Public Folder",
+  "description": "Detects the creation of scheduled tasks using an XML file in C:\\Users\\Public Folder, a tactic identified in an APT campaign for maintaining persistence or executing malicious commands",
+  "filterSets": [
+    [
+      {
+        "id": "ad38bc7e-0623-4bd8-bfb4-ddd14c5edc82",
+        "name": "Scheduled Task Creation from XML in Public Folder via Schtasks",
+        "highlight": true
+      },
+      {
+        "id": "46b9dcef-f2df-4702-b4b5-5a4ba6d686c9",
+        "name": "Scheduled Task Creation from XML in Public Folder via Powershell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/01/02",
+  "lastUpdate": "2025-02-13T13:38:16.000Z"
+}

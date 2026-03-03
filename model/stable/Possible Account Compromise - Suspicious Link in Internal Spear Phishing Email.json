@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "af25c0b9-d744-4bda-9f14-9aa7ddb5fde3",
+  "name": "Possible Account Compromise - Suspicious Link in Internal Spear Phishing Email",
+  "description": "A suspicious URL associated with phishing attacks was detected in an internal email message, which may indicate a compromised account.",
+  "riskLevel": "high",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "5fe839d5-0a63-4c30-b08f-0061a9339c61",
+      "name": "Possible Account Compromise - Suspicious Link in Internal Spear Phishing Email",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1534"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Marshall Chen",
+  "team": "Jaguar",
+  "date": "2020/11/05",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

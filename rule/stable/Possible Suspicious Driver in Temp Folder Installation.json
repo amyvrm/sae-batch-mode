@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "219d90ec-eddf-4579-a550-ed5f2114fc7c",
+  "name": "Possible Suspicious Driver in Temp Folder Installation",
+  "description": "Detects file and service registry creation for a .sys file in Temp folder.",
+  "filterSets": [
+    [
+      {
+        "id": "b5d5457c-feb2-4025-9081-6f69626f6b6c",
+        "name": "Possible Driver File Dropped in Temp Folder",
+        "highlight": true
+      },
+      {
+        "id": "5985e903-6a7e-480f-8ad8-74236ffda1f3",
+        "name": "Possible Suspicious Driver in Temp Folder Service Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "5985e903-6a7e-480f-8ad8-74236ffda1f3.objectRegistryData contains b5d5457c-feb2-4025-9081-6f69626f6b6c.objectFileName"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/06/20",
+  "lastUpdate": "2025-06-24T11:09:20.000Z"
+}

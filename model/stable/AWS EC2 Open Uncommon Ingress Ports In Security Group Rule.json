@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dea10d25-428a-4dc8-a863-0b35b3e729da",
+  "name": "AWS EC2 Open Uncommon Ingress Ports In Security Group Rule",
+  "description": "Detected addition of rule in security group containing open ingress traffic on uncommon ports.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "96363e99-ac0b-407c-8cd3-eaea5aeb7d3c",
+      "name": "AWS EC2 Open Uncommon Ingress Ports In Security Group Rule",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1518.001",
+    "mitre.t1562.007"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/10/19",
+  "lastUpdate": "2025-08-22T09:27:18.000Z"
+}

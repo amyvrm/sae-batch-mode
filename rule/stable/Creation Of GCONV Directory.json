@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a58d9c93-a92d-4b5d-bd99-b6ccaa6f689f",
+  "name": "Creation Of GCONV Directory",
+  "description": "This rule detects creation of GCONV directory, which is required for exploitation of CVE-2021-4034.",
+  "filterSets": [
+    [
+      {
+        "id": "c8953034-bf22-4c0f-988a-ee0acb1aaa1e",
+        "name": "Identified Creation Of GCONV_PATH Directory For CVE-2021-4034 Vulnerability Exploitation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2022/01/31",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

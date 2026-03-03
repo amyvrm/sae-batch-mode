@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f125b2d4-92d5-4ed9-b13a-20d893d56b97",
+  "name": "BETA - Rules Detect Possible EMOTET Behaviors With PowerShell and Regsvr32",
+  "description": "Regsvr32 anomaly execution technique used by Emotet Malware Family.",
+  "filterSets": [
+    [
+      {
+        "id": "13368c8d-c7f5-4ab5-9417-1fe77b3f13d7",
+        "name": "Regsvr32 Anomaly with EMOTET behaviors",
+        "highlight": true
+      },
+      {
+        "id": "75ffa742-919b-4ebb-acfd-484d3fabf3c1",
+        "name": "Base64 Deobfuscation - AMSI",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "13368c8d-c7f5-4ab5-9417-1fe77b3f13d7",
+        "name": "Regsvr32 Anomaly with EMOTET behaviors",
+        "highlight": true
+      },
+      {
+        "id": "2f2f40e3-c75d-4dcb-969f-f901748dfa01",
+        "name": "Encrypted/Compressed String in Command Line",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Taro Miyoshi",
+  "team": "JP-IR",
+  "date": "2022/06/14",
+  "lastUpdate": "2024-04-08T03:23:17.000Z"
+}

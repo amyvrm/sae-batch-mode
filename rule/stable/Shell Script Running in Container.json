@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7258e620-d40e-4d75-a0fa-d3fa02e72cae",
+  "name": "Shell Script Running in Container",
+  "description": "Adversaries may abuse Unix shell commands and scripts for execution.",
+  "filterSets": [
+    [
+      {
+        "id": "391dc951-19d7-4403-bd2d-13ef24d1e670",
+        "name": "Shell Script Running in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/04/04",
+  "lastUpdate": "2024-05-21T19:09:02.000Z"
+}

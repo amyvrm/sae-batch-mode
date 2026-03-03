@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "43f388f7-b0d5-4cf9-96b3-6e6ea3de5229",
+  "name": "SAP NetWeaver Unauthorized File Upload",
+  "description": "An attempt to exploit CVE-2025-31324 (arbitrary file upload), which affects SAP NetWeaver, was detected on the network.",
+  "filterSets": [
+    [
+      {
+        "id": "4e39b106-5aed-526f-9ecd-a5a87be05ecc",
+        "name": "Actively Exploited Vulnerability (CVE-2025-31324)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6cf71c6e-e994-5ffb-b768-d1fefdd6a6fc",
+        "name": "SAP NetWeaver Unrestricted File Upload Vulnerability",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Simon Dulude",
+  "team": "Cloud One",
+  "date": "2025/05/02",
+  "lastUpdate": "2025-09-12T08:20:57.000Z"
+}

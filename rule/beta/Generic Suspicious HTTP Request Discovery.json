@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81f4317a-940f-47b9-b7dd-ed8771311d66",
+  "name": "Generic Suspicious HTTP Request Discovery",
+  "description": "Palo Alto Networks detection for Generic Suspicious HTTP Request Detection. This signature detects invalid chunk body size in HTTP traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "65400988-f528-5b06-bf04-d994c1d079ad",
+        "name": "Generic Suspicious HTTP Request Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-10T09:45:33.000Z"
+}

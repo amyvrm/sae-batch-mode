@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3f8979ae-d82e-4ba4-a411-ca0999f9471b",
+  "name": "AWS Bedrock Successful Models Enumeration",
+  "description": "Detects successful enumeration of models in AWS Bedrock services, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "ac2c195b-f239-4497-b676-79ab1c800b25",
+        "name": "AWS Bedrock Successful Models Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/15",
+  "lastUpdate": "2026-01-19T02:05:18.000Z"
+}

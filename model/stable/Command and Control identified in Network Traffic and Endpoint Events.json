@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0",
+  "id": "73e132b3-ead0-46ae-8987-afe5a7a94169",
+  "name": "Command and Control identified in Network Traffic and Endpoint Events",
+  "description": "Palo Alto Networks and Trend Micro Detection for Matched URL found and with Suspicious Events",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "599825dc-6486-48ad-bad8-4737178b9f5e",
+      "name": "Command and Control Traffic Alert",
+      "score": 5
+    },
+    {
+      "id": "266b1109-6644-41d0-825b-63c7365a3801",
+      "name": "Lsass Access via Suspicious Powershell Parameters",
+      "score": 1
+    },
+    {
+      "id": "11b2c87d-c98b-4a40-b944-ba6e28d7a644",
+      "name": "Mshta Executing Suspicious Powershell",
+      "score": 1
+    },
+    {
+      "id": "74a69099-656a-4b6b-bef9-9787e33c4373",
+      "name": "Multiple Suspicious Obfuscation Techniques via Powershell",
+      "score": 1
+    },
+    {
+      "id": "dbf7ef6a-1b2a-42e5-93c4-3a8abe67a6bf",
+      "name": "Remote PowerShell Execution via WMI",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 6,
+    "withinSeconds": 4000,
+    "dedupSeconds": 4000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks",
+      "xes",
+      "sao",
+      "sds",
+      "pds",
+      "pao",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/20",
+  "lastUpdate": "2025-07-03T09:29:10.000Z"
+}

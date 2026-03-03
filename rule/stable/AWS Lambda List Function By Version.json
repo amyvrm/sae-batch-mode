@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3ab201c4-0918-11ee-be56-0242ac120002",
+  "name": "AWS Lambda List Function By Version",
+  "description": "Detected AWS Lambda List Function By Version",
+  "filterSets": [
+    [
+      {
+        "id": "1447304a-e124-4655-b449-98f54c86ba10",
+        "name": "AWS Lambda List Function By Version",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/06/12",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

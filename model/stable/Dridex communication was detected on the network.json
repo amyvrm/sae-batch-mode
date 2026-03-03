@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c2cc28b3-7a68-46df-afde-a0eb4fc10113",
+  "name": "Dridex Communication Was Detected On The Network",
+  "description": "Dridex HTTP Request Made By Malware Infection",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "972ded9a-3528-4e85-a231-cda907af2fbe",
+      "name": "Dridex HTTP Request",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1573",
+    "mitre.t1140",
+    "attack.s0384"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2022/08/22",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

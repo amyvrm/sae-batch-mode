@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c5115e7-3add-4660-898c-c97ad3d42187",
+  "name": "ZGrab Application Layer Scanner Detection",
+  "description": "Palo Alto Networks detection for ZGrab Application Layer Scanner Detection. This signature indicates that an attacker is trying to collect information about the network by using the ZGrab Scanner.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b671668f-b12c-48c9-859c-affb777c6556",
+      "name": "ZGrab Application Layer Scanner Detection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2025/05/28",
+  "lastUpdate": "2025-05-30T05:17:52.000Z"
+}

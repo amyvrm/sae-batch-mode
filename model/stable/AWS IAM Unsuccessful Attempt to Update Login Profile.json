@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "88bd49ab-154e-4e32-bb29-0f8887e67d39",
+  "name": "AWS IAM Unsuccessful Attempt to Update Login Profile",
+  "description": "An unsuccessful attempt to update the login profile for IAM user was detected.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "7bf4671d-362c-4179-a70a-fcab72386f5a",
+      "name": "AWS IAM Update Existing Login Profile Attempt Unsuccessful",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078.004",
+    "mitre.t1098.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/09/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

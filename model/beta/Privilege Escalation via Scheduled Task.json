@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "71def6be-ef6b-4464-a5b3-e7373aa83cf1",
+  "name": "Privilege Escalation via Scheduled Task",
+  "description": "Detects privilege escalation using Invoke-CommandAs Powershell module. This module abuses scheduled tasks to allow users to execute arbitrary commands as SYSTEM.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "505862f9-a1eb-4930-b020-3dd35cd8c0fa",
+      "name": "Privilege Escalation via PSScheduledJob Scheduled Task",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1053.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/05/01",
+  "lastUpdate": "2025-06-16T15:11:18.000Z"
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ec4f0e3f-8ec8-45e4-abf3-d7434180d00b",
+  "name": "Possible Directory Traversal and Sql Injection via Http",
+  "description": "Possible attempt at directory traversal exploit and network activity involving HTTP, which is associated with SQL Injection was detected.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c3b9729a-115a-4183-96a1-f3312265c195",
+      "name": "Possible SQL injection over HTTP",
+      "score": 1
+    },
+    {
+      "id": "f8a07240-f1d5-4047-8057-5ff6a1d92641",
+      "name": "Possible Directory Traversal Exploit Attempted URI Path Over HTTP",
+      "score": 1
+    },
+    {
+      "id": "97a3b0fc-ced9-4299-a15a-98c1efbbbf30",
+      "name": "Possible SQL injection and RCE exploit over HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "simon xiong",
+  "team": "Cloud One",
+  "date": "2023/07/12",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

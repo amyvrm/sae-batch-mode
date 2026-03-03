@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f85fb44c-21c6-11ef-9262-0242ac120002",
+  "name": "Suspicious Linux Service Start",
+  "description": "Detects the creation of new system services. Adversaries can leverage this capability to start services on systems for malicious purposes, such as maintaining persistence, executing malicious code, or escalating privileges.",
+  "filterSets": [
+    [
+      {
+        "id": "e6078438-1dfb-11ef-9262-0242ac120002",
+        "name": "Identified Attempts To Start A Linux Service",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/06/03",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

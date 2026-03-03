@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "157a3cc2-2f11-11ee-be56-0242ac120002",
+  "name": "AWS IAM Unsuccessful List Attached Group Policy",
+  "description": "Detected AWS IAM Unsuccessful List Attached Group Policy.",
+  "filterSets": [
+    [
+      {
+        "id": "70deb9af-ffcb-4508-99e2-9b84452eeb20",
+        "name": "AWS IAM Unsuccessful List Attached Group Policy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/30",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

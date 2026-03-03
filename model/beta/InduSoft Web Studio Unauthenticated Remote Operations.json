@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dee107b7-7eda-4bd8-9e1b-9cfa5400671a",
+  "name": "InduSoft Web Studio Unauthenticated Remote Operations",
+  "description": "Detects unauthenticated remote operations targeting InduSoft Web Studio systems in Check Point SmartDefense environments, which may indicate exploitation attempts of known vulnerabilities.",
+  "scope": "endpoint",
+  "riskLevel": "high",
+  "rules": [
+    {
+      "id": "40e76158-4429-4f00-8e57-98c24d43a232",
+      "name": "InduSoft Web Studio Unauthenticated Remote Operations",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1210"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Sigma Protocol AI",
+  "team": "Third Party Operations",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-21T07:48:31.000Z"
+}

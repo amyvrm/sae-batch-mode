@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cb673618-27e4-46d0-8255-ea82171a365f",
+  "name": "AWS SSM Public or Private Key Name Discovery",
+  "description": "This Rule detects AWS extraction of private or public keys.",
+  "filterSets": [
+    [
+      {
+        "id": "dcad6270-99e0-42d4-a04f-cd3fdfc884e1",
+        "name": "AWS SSM Public or Private Key Name Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/11/03",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "44397e16-e8a2-4d8e-9b8f-a7b76a8d79c5",
+  "name": "Suspicious Activities Over WebDav",
+  "description": "Adversaries may use WebDAV protocol to execute payloads hosted on network file shares.",
+  "filterSets": [
+    [
+      {
+        "id": "fddadf41-7ce8-4504-b26b-bc05c883f557",
+        "name": "Detect CMD or BAT Files Access Over WebDav",
+        "highlight": true
+      },
+      {
+        "id": "90ae1981-82ab-433f-b449-e7797fc8ae16",
+        "name": "Download Dll Over WebDav",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/01/25",
+  "lastUpdate": "2024-02-08T07:53:19.000Z"
+}

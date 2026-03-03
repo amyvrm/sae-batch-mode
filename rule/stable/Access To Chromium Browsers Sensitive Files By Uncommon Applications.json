@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0eafcf32-a2d9-4c24-85f2-9edb73f96174",
+  "name": "Access To Chromium Browsers Sensitive Files By Uncommon Applications",
+  "description": "Detects file access requests to chromium based browser sensitive files by uncommon processes.",
+  "filterSets": [
+    [
+      {
+        "id": "5b43a6bf-afae-4dd3-ad2b-2deeac6558ce",
+        "name": "Access To Chromium Browsers Sensitive Files By Uncommon Applications",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2024/09/24",
+  "lastUpdate": "2024-10-01T19:10:51.000Z"
+}

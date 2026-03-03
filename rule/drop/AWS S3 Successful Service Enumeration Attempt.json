@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "37c60256-97e1-11ed-a8fc-0242ac120002",
+  "name": "AWS S3 Successful Service Enumeration Attempt",
+  "description": "Detected S3 Successful Service Enumeration Attempt",
+  "filterSets": [
+    [
+      {
+        "id": "dec36ffe-3a91-4015-8bc9-bd3ea7d5fec0",
+        "name": "AWS S3 Successful Service Enumeration Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/01/19",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

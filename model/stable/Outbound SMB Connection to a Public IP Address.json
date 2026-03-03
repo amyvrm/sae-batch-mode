@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "674b3ab2-a5d1-45eb-9698-64227aab7f0e",
+  "name": "Outbound SMB Connection to a Public IP Address",
+  "description": "Microsoft network detection for identifying successful outbound SMB connections from internal systems to public IP addresses on port 445. It monitors for potentially unauthorized file sharing or lateral movement attempts targeting external systems.",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "cc36729f-0c5b-4aef-b42a-cdc98eec2a0f",
+      "name": "Outbound SMB Connection to a Public IP Address",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.002",
+    "mitre.t1105",
+    "mitre.t1041"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/19",
+  "lastUpdate": "2025-11-11T15:20:53.000Z"
+}

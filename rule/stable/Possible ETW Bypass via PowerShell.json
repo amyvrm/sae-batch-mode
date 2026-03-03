@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f5cd7b09-306d-4227-b125-ccc319eefba5",
+  "name": "Possible ETW Bypass via PowerShell",
+  "description": "Detects Usage of PowerShell to bypass Event Tracing for Windows.",
+  "filterSets": [
+    [
+      {
+        "id": "dd0d281d-d6b4-4ee9-a37d-86337e581036",
+        "name": "Possible ETW bypass via PowerShell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2026-01-05T11:44:57.000Z",
+  "author": "Bahaa Yamany & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2025/01/26"
+}

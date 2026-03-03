@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e64a98ec-3702-4762-a2aa-17618da33523",
+  "name": "IPSwitch IMAIL LDAP Buffer Overflow Attack",
+  "description": "Detects LDAP buffer overflow attempts targeting IPSwitch IMAIL servers in Check Point SmartDefense environments, which may indicate exploitation attempts against vulnerable mail server configurations.",
+  "scope": "endpoint",
+  "riskLevel": "high",
+  "rules": [
+    {
+      "id": "16f11a94-0c42-4dc9-901e-793ebbba5cdf",
+      "name": "IPSwitch IMAIL LDAP Buffer Overflow Attack",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1068"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Sigma Protocol AI",
+  "team": "Third Party Operations",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-21T07:48:31.000Z"
+}

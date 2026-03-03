@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "493bfc1b-deb9-43f5-9dd2-407f070a138a",
+  "name": "WScript Invocation of Timeout",
+  "description": "Detection of wscript invoking timeout",
+  "filterSets": [
+    [
+      {
+        "id": "d9045966-ce8c-4ef7-8fab-ca91f88186ed",
+        "name": "WScript Invocation of Timeout",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/12/11",
+  "lastUpdate": "2023-12-27T02:16:14.000Z"
+}

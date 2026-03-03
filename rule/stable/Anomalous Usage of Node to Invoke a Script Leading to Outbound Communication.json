@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8401d9e3-14a3-43f0-9e25-7c53548a439f",
+  "name": "Anomalous Usage of Node to Invoke a Script Leading to Outbound Communication",
+  "description": "Detection of anomalous usage of node.exe being used to invoke a script",
+  "filterSets": [
+    [
+      {
+        "id": "af18dcef-2453-4500-ad38-bf547584ebd5",
+        "name": "Anomalous Usage of Node to Invoke a Script Leading to Outbound Communication",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh & Cenen Enables",
+  "team": "EU-IR",
+  "date": "2025/08/27",
+  "lastUpdate": "2025-08-29T06:17:55.000Z"
+}

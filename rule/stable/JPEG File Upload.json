@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e92b02fd-1b25-4091-963f-7b9d647c2733",
+  "name": "JPEG File Upload",
+  "description": "Palo Alto File detection - JPEG File Upload",
+  "filterSets": [
+    [
+      {
+        "id": "6943d247-9fde-43b7-aabb-973e79eb4270",
+        "name": "JPEG File Upload",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

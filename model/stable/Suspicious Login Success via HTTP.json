@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f21a89f6-2c52-4f66-82da-b4e69b0b186c",
+  "name": "Suspicious Login Success via HTTP",
+  "description": "Network activity involving HTTP, which contains a suspicious login success was detected.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "19c0ae59-6ecc-4a83-9fbd-678230e011c8",
+      "name": "Suspicious Login Success via HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": false,
+  "silent": false,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T18:18:44.000Z",
+  "clpId": [
+    "a1c845c5-410a-40bb-aebe-f130f9393a23",
+    "3eae2813-cdb0-45ae-8b86-677f66c58708",
+    "7aefaf2a-26cf-4555-9091-785012728f7a",
+    "196ca037-13a8-4417-b1af-698029340bff",
+    "47bf430f-a0d0-4be7-bd32-6f5ee9474eef",
+    "018361ac-1acb-491e-b41f-a138e19acfe4",
+    "8264df7f-97a8-4773-bd65-96feaeb6d5b0",
+    "c99109bd-f5c6-426f-8bbe-7dcfc7f85ed7",
+    "a0aa0666-e0a1-4049-85b0-1f6fa3fdb8f3",
+    "26513ef5-f886-41a0-b746-028c9755b279",
+    "f6e5e328-fe75-4524-983d-b2bc6e24b60a",
+    "082be4c4-9dc7-4380-9c2f-becadae84131",
+    "8e94fc66-858a-4570-84e4-ddad13e86516",
+    "a021ed01-9971-48e0-860c-ee250d95e896",
+    "24876f6a-8262-4b55-9b88-0427bc177a6b",
+    "64cc21cd-023c-4b80-bce1-d4e5aad5effb",
+    "0cbb5e24-8a01-4899-869b-8d95161d1167"
+  ]
+}

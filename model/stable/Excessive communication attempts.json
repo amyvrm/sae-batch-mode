@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e1de9599-211b-4e40-ac67-b0a8ebe354c7",
+  "name": "Excessive Communication Attempts",
+  "description": "Detect excessive communication in the network, can indicate bruteforce.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0f357550-f2a3-4e00-b948-6ac2fb59a504",
+      "name": "Excessive communication attempts",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/02/10",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c6a92451-bee3-4c38-a84c-11bee51719b6",
+  "name": "Portable DWAgent Invoking LOLBINs",
+  "description": "Detection of DWAgent being used to invoke LOLBINs",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e5ceea4f-4e18-459c-851d-1081d300625f",
+      "name": "Portable DWAgent Invoking LOLBINs",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1219"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/11/21",
+  "lastUpdate": "2026-01-14T12:52:17.000Z"
+}

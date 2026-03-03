@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9dc79b3d-22b7-4d01-9f74-10d6053779e6",
+  "name": "Ransom Note Printing via Powershell",
+  "description": "Agenda ransomware has the capability of using connected printers to print Ransom note using powershell commands.",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b8a4573c-cb8f-4365-9672-c034eb423a64",
+      "name": "Ransom Note Printing via Powershell",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1486",
+    "threat.ransom",
+    "tmtif.g000017"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "date": "2024/05/21",
+  "team": "CSG",
+  "author": "Alvin Bacani",
+  "lastUpdate": "2024-06-11T07:27:05.000Z"
+}

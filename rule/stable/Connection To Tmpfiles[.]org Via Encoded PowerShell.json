@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cfddbcd5-c075-4575-8d9b-fb94dd2d2630",
+  "name": "Connection To Tmpfiles[.]org Via Encoded PowerShell",
+  "description": "Detection of a encoded powershell command referencing tmpfiles[.]org, which is a notorious file sharing site used by threat actors to host malicious files.",
+  "filterSets": [
+    [
+      {
+        "id": "0d36dc69-baa4-458e-ba4a-d62a7e6b2607",
+        "name": "Connection To Tmpfiles[.]org Via Encoded PowerShell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/05/13",
+  "lastUpdate": "2024-05-27T09:10:31.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "094614db-a1c2-4df6-8cb5-c8568595886e",
+  "name": "Trusted Domain Discovery via LDAP",
+  "description": "Network activity involving LDAP associated with Trusted Domain Discovery has been observed. This may indicate an attempt to gather information on trusted domains within a network environment.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "46be786d-2b6e-420a-89fa-c2c9a8a70b71",
+      "name": "Trusted Domain Discovery via LDAP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1482",
+    "threat.hacktool"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/03/20",
+  "lastUpdate": "2025-03-21T08:22:45.000Z"
+}

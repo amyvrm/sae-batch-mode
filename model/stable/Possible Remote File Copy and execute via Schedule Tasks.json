@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "43c520e9-bfa1-43bc-a056-da3863afba01",
+  "name": "Possible Remote File Copy and Execution via Scheduled Task",
+  "description": "A suspicious file was copied to a remote network share and executed using a scheduled task.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "639cb500-7767-4f29-855e-28fd4eaa12a3",
+      "name": "Remote Job Execution",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "pdi",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.002",
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "SAE Threat Expert",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2023-11-24T03:47:15.000Z"
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3c1e848e-aeb4-4943-8852-b1d2d9a92ffc",
+  "name": "Dropping Nircmd.exe for Privilege Escalation",
+  "description": "Detects dropping of Nircmd.exe and using it to execute a process with escalated priviledges while hiding the command prompt window.",
+  "filterSets": [
+    [
+      {
+        "id": "658d9eb3-c2d2-4534-a443-2c2dc67113a0",
+        "name": "File Dropping of NirCmd.exe",
+        "highlight": true
+      },
+      {
+        "id": "2cd66305-d0e2-4f27-b050-30d465676f7e",
+        "name": "Privilege Escalation Via Nircmd.exe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/03/07",
+  "lastUpdate": "2024-04-17T06:30:01.000Z"
+}

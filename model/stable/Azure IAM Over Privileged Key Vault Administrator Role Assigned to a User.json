@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b4e9cdf2-2f74-4aab-b63e-0f0863ac4076",
+  "name": "Azure IAM Over Privileged Key Vault Administrator Role Assigned to a User",
+  "description": "This model detects successful assignment of over-privileged Azure IAM Key Vault Administrator role to a user which may indicate an attacker trying to escalate privileges to create and manage all resources in the Azure account to further compromise it.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "d9e8ece7-f95a-4015-badc-6a70dda44778",
+      "name": "Azure IAM Over Privileged Key Vault Administrator Role Assigned to a User",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma and Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/10/10",
+  "lastUpdate": "2025-12-10T09:44:40.000Z"
+}

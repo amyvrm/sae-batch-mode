@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bcadd6ac-b574-4575-a0ec-db2615167e85",
+  "name": "Possible LDAP Domain Dump Execution",
+  "description": "Detects execution and creation of output files by hacktool LDAP Domain Dump which is utilized for reconnaissance against a compromised Active Directory domain.",
+  "filterSets": [
+    [
+      {
+        "id": "adbb85b0-25c4-4b70-9556-42389ba57b76",
+        "name": "Possible LDAP Domain Dump Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/10/24",
+  "lastUpdate": "2024-10-29T08:17:46.000Z"
+}

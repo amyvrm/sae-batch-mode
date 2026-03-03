@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ae34d438-bcff-4e39-9b64-1743f30eb4aa",
+  "name": "Suspicious Activity in Container",
+  "description": "Detects suspicious actions in the container.",
+  "filterSets": [
+    [
+      {
+        "id": "ddd0106a-dabc-5d6b-b429-58f5f3a2532d",
+        "name": "System Changes in the Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7dd3ed1d-e9f2-5a76-9178-45e52f8c99a1",
+        "name": "Suspicious Action in the Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ca651da4-fba9-5800-a094-3ad7ab5f19a3",
+        "name": "Log Manipulation in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 180,
+    "dedupSeconds": 180
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/02/22",
+  "lastUpdate": "2023-10-10T08:55:11.000Z"
+}

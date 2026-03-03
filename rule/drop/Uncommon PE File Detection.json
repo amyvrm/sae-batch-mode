@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8412f714-3ca8-47fb-bdc1-c1d34522d522",
+  "name": "Uncommon PE File Detection",
+  "description": "Uncommon PE File Detected By Data Stacking and Machine Learning Models",
+  "filterSets": [
+    [
+      {
+        "id": "8d5c386d-826c-4610-b549-9ad7f1463f1c",
+        "name": "Noteworthy PE File from the Path Confidence Service",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jake Wu",
+  "team": "SAE",
+  "date": "2020/09/24",
+  "lastUpdate": "2025-05-15T07:31:14.000Z"
+}

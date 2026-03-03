@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "918a4f6c-84c3-44d5-ac02-bb8a470405fd",
+  "name": "AeroAdmin Remote Desktop Software Session",
+  "description": "Detects the AeroAdmin remote desktop software process and DNS request, which may be used for command and control communication and data exfiltration",
+  "filterSets": [
+    [
+      {
+        "id": "62f4c7c7-440d-4adf-9078-011a6df05e9e",
+        "name": "AeroAdmin Remote Desktop Software Process",
+        "highlight": true
+      },
+      {
+        "id": "d6f3b980-6daf-421d-8863-adecc81d7241",
+        "name": "DNS Query Request to AeroAdmin Remote Desktop Software",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2024/11/19",
+  "lastUpdate": "2025-02-17T09:47:49.000Z"
+}

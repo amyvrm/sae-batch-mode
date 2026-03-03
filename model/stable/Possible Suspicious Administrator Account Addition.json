@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e02cb7c9-415f-4a0e-97d7-20b203169b25",
+  "name": "Possible Suspicious Administrator Account Addition",
+  "description": "Detects addition of an account to the administrator localgroup using net command through PowerShell.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f2e298e3-32ef-4776-afc7-a87b735c5ade",
+      "name": "Possible Suspicious Administrator Account Addition",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/06/10",
+  "lastUpdate": "2025-09-15T06:20:29.000Z"
+}

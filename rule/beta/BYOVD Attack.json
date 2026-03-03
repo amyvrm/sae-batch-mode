@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "812da7f3-c298-4ab3-a087-43792f5cd9fd",
+  "name": "BYOVD Attack",
+  "description": "Low prevalence and unsigned process trying to abuse driver.",
+  "filterSets": [
+    [
+      {
+        "id": "0aefb4b8-0868-5da7-994a-a8bcc7934ccb",
+        "name": "Behavior Monitoring Policy CS1181 - try to abuse drivers",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds"
+    ]
+  ],
+  "author": "Sam Hsieh",
+  "team": "AEGIS",
+  "date": "2025/05/29",
+  "lastUpdate": "2025-08-20T05:43:27.000Z"
+}

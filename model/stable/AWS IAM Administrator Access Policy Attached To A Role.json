@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aaed9a96-3f38-4634-86c4-06b2d3c8aafe",
+  "name": "AWS IAM Administrator Access Policy Attached To A Role",
+  "description": "The attachment of AdministratorAccess AWS managed policy to a role, giving full administrator access to the AWS environment, was observed.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "0cf0ccf3-826e-43fa-afdc-4eae3c213e73",
+      "name": "AWS IAM Administrator Access Policy Attached To A Role",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078.004",
+    "mitre.t1098.001",
+    "mitre.t1098.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/09/16",
+  "lastUpdate": "2025-09-12T08:03:37.000Z"
+}

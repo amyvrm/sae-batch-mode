@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aa9993d4-3ff6-11ee-be56-0242ac120002",
+  "name": "AWS VPC Describe Flow Logs",
+  "description": "This rule detects AWS VPC Describe Flow Logs.",
+  "filterSets": [
+    [
+      {
+        "id": "a72d6156-3cf6-11ee-be56-0242ac120002",
+        "name": "AWS VPC Describe Flow Logs",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/08/21",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "id": "14849327-2c35-473c-8b6f-aef0f7003ac0",
+  "name": "Zbot Communication",
+  "description": "Detection for Zbot network traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "4546deba-24a5-4c57-987a-23c880b3c4b5",
+        "name": "Zbot traffic",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "lastUpdate": "2023-06-21T05:14:40.000Z"
+}

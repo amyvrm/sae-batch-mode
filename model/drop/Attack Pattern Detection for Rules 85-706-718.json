@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "id": "495d7c00-ad74-4702-8a2d-3630424cf054",
+  "name": "Attempted Executable Download from Web server Root Directory and Suspicious File Detection",
+  "description": "An attempt to download an executable from local web server and suspicious files were detected via Virtual Analyzer or Email.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "69a7ae79-3c9f-439f-8c62-2eaa80c15958",
+      "name": "Attack Pattern for Rule 85",
+      "score": 1
+    },
+    {
+      "id": "2b00c7cf-eeab-4ba9-8997-2c477533440e",
+      "name": "Attack Pattern for Rule 706",
+      "score": 1
+    },
+    {
+      "id": "6751d822-30c9-4fbc-87f3-b43bcf8ad831",
+      "name": "Attack Pattern for Rule 718",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 30,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1189",
+    "mitre.t1566.001",
+    "mitre.t1566.001",
+    "mitre.t1570"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Harshali Mugutrao",
+  "team": "NS",
+  "date": "2022/09/08",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

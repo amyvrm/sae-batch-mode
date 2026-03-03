@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8c54cf5d-27e9-4089-a26a-a9d7e8bbcba5",
+  "name": "Usage of Extrac32 To Copy a System Binary to a New Location",
+  "description": "Detection of copying a system binary by extrac32 to a new location to a new location as a means to masquerade the binary",
+  "filterSets": [
+    [
+      {
+        "id": "04ebce0b-91cc-48b5-b549-794e9dfe1adc",
+        "name": "Usage of Extrac32 To Copy a System Binary to a New Location - File Create",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "66a6c3e0-13b2-4d47-a8ed-5c6925484b55",
+        "name": "Usage of Extrac32 To Copy a System Binary to a New Location - Process Create",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/07/23",
+  "lastUpdate": "2024-07-26T09:38:46.000Z"
+}

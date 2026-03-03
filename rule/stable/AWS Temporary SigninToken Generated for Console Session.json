@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "05e752b2-eabb-4589-9efc-d865f38d3547",
+  "name": "AWS Temporary SigninToken Generated for Console Session",
+  "description": "Monitors the import of key material into a customer managed KMS key, which may indicate external control over encryption.",
+  "filterSets": [
+    [
+      {
+        "id": "0e41cbdb-f3ba-40c8-8cd5-03ad3115bc12",
+        "name": "AWS Temporary SigninToken Generated for Console Session",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-14T05:47:04.000Z"
+}

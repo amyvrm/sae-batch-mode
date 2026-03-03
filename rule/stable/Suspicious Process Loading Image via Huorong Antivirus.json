@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a7eeb53e-75e9-4d02-850f-6c2edce23efe",
+  "name": "Suspicious Process Loading Image via Huorong Antivirus",
+  "description": "Detects suspicious process loading image via Huoring Antivirus which is capable of terminating security agent processes and services.",
+  "filterSets": [
+    [
+      {
+        "id": "38579981-ccbe-4c56-878f-a3be68bac8f1",
+        "name": "Suspicious Process Loading Image via Huorong Antivirus",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Eris Galura",
+  "team": "AMEA-IR",
+  "date": "2025/03/04",
+  "lastUpdate": "2025-03-10T07:14:12.000Z"
+}

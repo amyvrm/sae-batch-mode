@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ad8c353a-8bf2-4a44-8eee-7eb75ec3cf57",
+  "name": "File Properties Changed in Container",
+  "description": "Command executed to modify file attributes or ownership.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "f41b9aae-6ba5-4147-9289-b683634e010d",
+      "name": "File Properties Changed in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1222.002",
+    "mitre.t1548.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/09/20",
+  "lastUpdate": "2025-06-17T12:21:23.000Z"
+}

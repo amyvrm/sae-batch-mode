@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "68e259f5-8fd5-486d-95b7-1d4af4c35518",
+  "name": "Korplug Command and Control Traffic Discovery",
+  "description": "Palo Alto Networks detection for Korplug Command and Control Traffic Detection. This signature detects the command and control traffic from Korplug, which has been observed in Stately Taurus or Mustang Panda campaigns.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b5a376f0-2c4a-4ac6-9cb0-a4c4851b98f4",
+      "name": "Korplug Command and Control Traffic Discovery",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2025/11/06",
+  "lastUpdate": "2025-11-10T08:23:36.000Z"
+}

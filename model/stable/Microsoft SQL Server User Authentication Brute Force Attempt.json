@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "acedb88d-de64-4570-b608-564156b4a26a",
+  "name": "Microsoft SQL Server User Authentication Brute Force Attempt",
+  "description": "Palo Alto Networks detection for Microsoft SQL Server User Authentication Brute Force Attempt. This event indicates that someone is doing a brute force attack and try to authenticated to the MSSQL database server.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "ea6addfd-6310-4dcc-b3f1-e4474eafdfcb",
+      "name": "Microsoft SQL Server User Authentication Brute Force Attempt",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2025/05/28",
+  "lastUpdate": "2025-05-30T05:17:52.000Z"
+}

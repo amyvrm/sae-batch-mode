@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bb544cf3-1145-4050-a2be-8a9ea7eba691",
+  "name": "Successful Logon via SMB Using Default Windows Convention Name",
+  "description": "Successful logon via SMB from a host using the windows default convention name has been detected",
+  "filterSets": [
+    [
+      {
+        "id": "f47b83f3-dffd-43e0-8b9e-737cdc2857a7",
+        "name": "Successful Logon via SMB Using Default Windows Convention Name",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/05",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

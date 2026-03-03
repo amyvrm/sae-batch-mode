@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b75cba6e-abed-4f73-aa1b-43449c80e0f2",
+  "name": "AutoHotKey Anomalous Outbound Connections",
+  "description": "Detection of AutoHotKey anomalous activites, that may relate to DarkGate",
+  "filterSets": [
+    [
+      {
+        "id": "d10c6aa8-fc57-4d6b-8257-73932e793dd7",
+        "name": "AutoHotkey Anomalous Outbound Connection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/03/21",
+  "lastUpdate": "2024-04-01T15:09:17.000Z"
+}

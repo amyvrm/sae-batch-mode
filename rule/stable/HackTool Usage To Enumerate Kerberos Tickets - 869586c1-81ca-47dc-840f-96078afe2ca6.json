@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "869586c1-81ca-47dc-840f-96078afe2ca6",
+  "name": "Rubeus Usage To Enumerate Kerberos Tickets",
+  "description": "Detection of a known hacking tool - rubeus -  being used to generate a golden ticket",
+  "filterSets": [
+    [
+      {
+        "id": "12d0f874-7fa7-4214-b1e5-4fb3b016dba7",
+        "name": "Rubeus Usage To Enumerate Kerberos Tickets",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0fcb8b05-52f8-4c76-a5cb-59bc726e6bd0",
+        "name": "Rubeus Usage To Enumerate Active Directory Information",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/04/08",
+  "lastUpdate": "2025-02-12T04:24:54.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8bbf7a41-9d44-48d7-9623-ae51e1a5f6eb",
+  "name": "AWS IAM Group Creation",
+  "description": "Creation of a new IAM group detected, potentially indicating administrative activity or an attempt to modify access controls.",
+  "filterSets": [
+    [
+      {
+        "id": "5d7d9e18-7f73-42f7-a366-cec82aab0aaf",
+        "name": "AWS IAM Group Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/19",
+  "lastUpdate": "2025-06-17T10:36:27.000Z"
+}

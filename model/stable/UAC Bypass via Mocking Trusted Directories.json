@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "83ec0e66-1120-4a13-b917-262272011e81",
+  "name": "UAC Bypass via Mocking Trusted Directories",
+  "description": "Detects Mocking Trusted Directories To Bypass UAC",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "63153e94-36bc-4ebf-8eb2-d088edaab23b",
+      "name": "UAC Bypass by Mocking Trusted Directories",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1548.002",
+    "mitre.t1548.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Hans Tzou",
+  "team": "LWE",
+  "date": "2022/12/02",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

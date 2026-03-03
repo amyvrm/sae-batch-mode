@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5acbcc6d-c97b-4955-966b-af6fe6099b91",
+  "name": "Azure Policy Successful Modification or Deletion",
+  "description": "This model detects successful modification or deletion of an Azure Policy which may indicate an attacker trying to destroy critical data or disrupt services as part of a broader impact on the Azure environment.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "834ed63d-bfa4-4d70-8d84-d8705626eccd",
+      "name": "Azure Policy Successful Modification or Deletion",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.002",
+    "mitre.t1562.007"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ashish Verma and Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/10/10",
+  "lastUpdate": "2025-12-10T09:44:40.000Z"
+}

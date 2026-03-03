@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0ab24298-637b-4a76-b8c4-7344828f8e59",
+  "name": "AWS VPC DHCP Options Association Modified",
+  "description": "Change in DHCP options associated with a VPC, potentially altering DNS or network configurations.",
+  "filterSets": [
+    [
+      {
+        "id": "b762398a-b400-45e6-9c6e-a2a27a06e5b0",
+        "name": "AWS VPC DHCP Options Association Modified",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-14T05:47:04.000Z"
+}

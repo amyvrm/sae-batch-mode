@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2eb31454-d8e9-4bba-bb1f-f15c605da113",
+  "name": "Session Disconnection via VPN",
+  "description": "Cisco detection for an indication of when and why the longest idle user is disconnected. Group name, username, IP address, session type (for example, IPsec or UDP), duration (connection duration in hours, minutes, and seconds), bytes transmitted, bytes received, and reason for disconnection (User Requested).",
+  "filterSets": [
+    [
+      {
+        "id": "b854b3b4-f48e-563f-9cef-38d51929838b",
+        "name": "Session Disconnection via VPN",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-03T09:21:48.000Z"
+}

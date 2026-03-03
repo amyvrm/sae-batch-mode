@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c55324c7-c2ad-4c13-b2db-44fd11df2afc",
+  "name": "AWS List MFA Devices And Serial Numbers",
+  "description": "Detected AWS List MFA Devices And Serial Numbers Discovery",
+  "filterSets": [
+    [
+      {
+        "id": "fd5a0e25-c8f5-49ca-9421-cc56b49ec193",
+        "name": "AWS IAM List MFA Devices And Serial Numbers",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/18",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

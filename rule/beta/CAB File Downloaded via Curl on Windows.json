@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "76f296d5-bc53-4a4c-9a69-f430068cac3f",
+  "name": "CAB File Downloaded via Curl on Windows",
+  "description": "A CAB file was downloaded via curl execution on a windows machine.",
+  "filterSets": [
+    [
+      {
+        "id": "8a17760d-7ca8-4a1c-ae7b-6f552b15a5d1",
+        "name": "CAB File Downloaded via Curl on Windows",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Simon Dulude",
+  "team": "Cloud One",
+  "date": "2025/10/31",
+  "lastUpdate": "2025-12-22T02:21:33.000Z"
+}

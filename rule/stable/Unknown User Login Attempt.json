@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "87f50b90-32f7-4a2b-ad43-727222321ecb",
+  "name": "Unknown User Login Attempt",
+  "description": "SonicWall Detection - User login denied due to bad credentials",
+  "filterSets": [
+    [
+      {
+        "id": "d544e4ab-5204-4e8b-be1a-660d70ad83dd",
+        "name": "Unknown User Login Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

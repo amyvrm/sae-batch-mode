@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "40c83d5b-341b-464f-8859-cccd4932716a",
+  "name": "Possible C2 Channel Communication via Known Chat Application",
+  "description": "Detects possible C2 communication via known chat application. Adversaries may leverage known chat application APIs for C2 operations and data exfiltration via embedding their malicious communications within legitimate web protocols to avoid detection",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "ac754e4e-436a-4dce-b9aa-59d3f4e0948a",
+      "name": "Possible C2 Channel Communication via Known Chat Application",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1048.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/25",
+  "lastUpdate": "2025-10-01T07:09:57.000Z"
+}

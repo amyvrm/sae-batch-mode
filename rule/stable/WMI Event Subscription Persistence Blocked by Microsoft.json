@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "87b8c5d8-db15-4a3a-bed5-ced496d68cd8",
+  "name": "WMI Event Subscription Persistence Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that blocks malware from abusing WMI event subscriptions to maintain persistence on the system. This rule prevents attackers from using Windows Management Instrumentation events to execute malicious code automatically and remain undetected on compromised systems.",
+  "filterSets": [
+    [
+      {
+        "id": "d5baef18-5908-4e20-8207-bf8ce9b07418",
+        "name": "WMI Event Subscription Persistence Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-14T08:49:59.000Z"
+}

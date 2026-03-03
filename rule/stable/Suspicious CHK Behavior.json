@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4da5464c-b7ed-4698-9430-6acace96fe90",
+  "name": "Suspicious CHK Behavior",
+  "description": "Suspicious behavior identified related to CHK files in an attempt to evade detection.",
+  "filterSets": [
+    [
+      {
+        "id": "5f1259fb-8d02-45e5-b0a6-66f4a0d3e342",
+        "name": "Suspicious CHK File Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b6007761-7551-4aae-be27-426466d7103f",
+        "name": "Suspicious CHK File Creation in Uncommon Directories",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva & Jack Walsh",
+  "team": "US-IR",
+  "date": "2025/03/19",
+  "lastUpdate": "2025-05-26T06:38:53.000Z"
+}

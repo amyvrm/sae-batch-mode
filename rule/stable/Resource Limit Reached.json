@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5aed31cd-49f9-45ce-87a7-c8303cb23a95",
+  "name": "Resource Limit Reached",
+  "description": "Cisco detection for a configured resource usage or rate limit for the indicated resource was reached.",
+  "filterSets": [
+    [
+      {
+        "id": "4e9c0ddd-f781-543c-912f-99e0d349d815",
+        "name": "Resource Limit Reached",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-03T09:21:48.000Z"
+}

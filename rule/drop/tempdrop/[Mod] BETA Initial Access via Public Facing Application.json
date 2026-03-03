@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "id": "03c78905-4220-4f68-b1ac-134a1e4fca1a",
+  "name": "BETA Initial Access via Public Facing Application",
+  "description": "initial access via vulnerable public-facing application is detected in network",
+  "filterSets": [
+    [
+      {
+        "id": "f90d68d2-ab0b-4aaa-b80b-5461ab440f94",
+        "name": "Shellshock Exploit Detection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "dcb0dea2-3f79-44b4-a934-4941a7ab7235",
+        "name": "Exploit Network Traffic Detection",
+        "highlight": false
+      }
+    ],
+    [
+      {
+        "id": "71cdb665-cf86-4dd7-8c1b-994c1f3689c8",
+        "name": "Webshell Detection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ec268067-81ec-41ee-a5f7-c5b768137c12",
+        "name": "Web Vulnerability Scanner",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "306f93e4-7f56-427f-ab66-2197e843d061",
+        "name": "Identified Remote File Inclusion (RFI) Over HTTP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "22a7e233-6537-4e79-818a-609067593d5a",
+        "name": "Drupal Vulnerability Exploitation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ab7b267d-0cd4-41d1-a150-eca263f3ff72",
+        "name": "Apache Struts Vulnerability Exploitation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e1f32066-ab1b-41bb-b18f-0f77afce335e",
+        "name": "Vulnerability Scanner",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sds",
+      "pdi",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/05/20",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

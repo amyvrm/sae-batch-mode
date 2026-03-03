@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cec1fc62-70b4-46e3-a3a8-8a8c16837c63",
+  "name": "Possible SIP Brute Force via UDP",
+  "description": "Network activity indicative of a potential SIP Brute Force attack was observed utilizing UDP. This type of activity is commonly associated with unauthorized attempts to access SIP services.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "5ab62e89-f1e5-4676-976b-33eace6608f2",
+      "name": "Potential SIP Brute Force via UDP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1110.001",
+    "threat.pua"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2025/05/05",
+  "lastUpdate": "2025-06-17T10:49:43.000Z"
+}

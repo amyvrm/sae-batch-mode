@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7743fad3-8391-4a5c-91a1-01a3008106c5",
+  "name": "Wget Web Page Retrieval Attempt",
+  "description": "An attempt by Wget to retrieve a web page was detected. While this alone is not malicious, along side other activities it could indicate an attacker obtaining more information about the network.",
+  "filterSets": [
+    [
+      {
+        "id": "ab0dab4a-6232-47af-b276-440dbb3ad76f",
+        "name": "Wget Web Page Retrieval Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2024/04/16",
+  "lastUpdate": "2024-04-20T04:55:26.000Z"
+}

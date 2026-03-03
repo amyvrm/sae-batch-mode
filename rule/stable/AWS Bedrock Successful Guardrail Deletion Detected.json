@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9e38f9af-deb5-4189-b126-e8133e7c8249",
+  "name": "AWS Bedrock Successful Guardrail Deletion Detected",
+  "description": "This rule identifies the successful deletion of AWS Bedrock guardrail.",
+  "filterSets": [
+    [
+      {
+        "id": "3ecd4303-70ca-4a47-802a-db4e04dc2c42",
+        "name": "AWS Bedrock Successful Guardrail Deletion Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/07/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

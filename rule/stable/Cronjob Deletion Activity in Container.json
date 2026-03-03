@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0dfeae99-7239-4b07-8749-9e037af2f1f6",
+  "name": "Cronjob Deletion Activity in Container",
+  "description": "Cronjob has been deleted in container",
+  "filterSets": [
+    [
+      {
+        "id": "1ae0f558-4587-4dfa-8907-f919246d7a0e",
+        "name": "List Cron Jobs in Container",
+        "highlight": true
+      },
+      {
+        "id": "64c3f7ab-99de-4f29-8830-45b17fc6755e",
+        "name": "File Altered with Sed Command in Container",
+        "highlight": true
+      },
+      {
+        "id": "bc2d45c1-fa4c-402d-9aa1-dda239bdab1d",
+        "name": "Edit Cron Jobs From Standard Input in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/08/03",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

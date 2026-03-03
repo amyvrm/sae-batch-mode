@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3fced4c6-3996-46b5-9b99-4a9ba7350d61",
+  "name": "Potential LOLBin Usage",
+  "description": "Detection for Sysinternal tools to gather endpoint information and perform lateral movement to gain access to more compromised machines.",
+  "filterSets": [
+    [
+      {
+        "id": "e63eb86c-8f1b-4124-b7fe-155c57db3450",
+        "name": "Potential LOLBin Usage",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/01/01",
+  "lastUpdate": "2025-11-11T08:26:35.000Z"
+}

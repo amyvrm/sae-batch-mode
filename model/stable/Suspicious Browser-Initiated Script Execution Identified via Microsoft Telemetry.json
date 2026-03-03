@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dee47ac7-37ac-448c-b706-2b423b15e778",
+  "name": "Suspicious Browser-Initiated Script Execution Identified via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection identifying instances where a web browser launches command-line or scripting interpreters including PowerShell, CMD, WScript, CScript, or MSHTA. Such behavior is uncommon for legitimate browsing activity and may indicate malicious drive-by downloads, script injection, or abuse of browser-based execution chains.",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "eb9c54ab-2ac6-4c4f-8238-8d79325ad4f2",
+      "name": "Suspicious Browser-Initiated Script Execution Identified via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/17",
+  "lastUpdate": "2026-01-29T05:19:01.000Z"
+}

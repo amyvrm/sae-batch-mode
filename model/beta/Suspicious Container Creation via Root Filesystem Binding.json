@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e0b0b221-2538-4f62-b8b6-1c5085f30dc4",
+  "name": "Suspicious Container Creation via Root Filesystem Binding",
+  "description": "Detects new container deployment mounted to the root directory of a host system.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "3487cb0f-43b7-43af-81ab-40ece2263caf",
+      "name": "Suspicious Container Creation via Root Filesystem Binding",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1610"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/04",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

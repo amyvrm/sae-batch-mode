@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e1f6b8cf-8aa3-4250-9a74-651157213031",
+  "name": "Possible Collection of Sensitive Files",
+  "description": "Possible Collection of Sensitive Files",
+  "filterSets": [
+    [
+      {
+        "id": "fcafc237-6e83-561e-b5c7-0cf05efcee64",
+        "name": "Multiple Sensitive Files Compression",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "33a7d36b-6330-59de-8d54-e15b8cd9dc3c",
+        "name": "Move Multiple Sensitive Files to Central Location",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "ddr"
+    ]
+  ],
+  "author": "ddr",
+  "team": "ddr",
+  "date": "2024/12/11",
+  "lastUpdate": "2025-01-09T05:15:23.000Z"
+}

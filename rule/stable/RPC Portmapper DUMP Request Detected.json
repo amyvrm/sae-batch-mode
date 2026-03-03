@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ca4f1707-edcf-4553-9a2b-85cdc9d77a10",
+  "name": "RPC Portmapper DUMP Request Detected",
+  "description": "Palo Alto Networks detection for RPC Portmapper DUMP Request Detected. This alert indicates that an RPC Portmapper DUMP request has been detected. Responses to these requests provide a list of RPC services that are available on a Unix server and what ports they map to. These requests are often normal, but they may also be used by attackers to conduct reconnaissance on a server.",
+  "filterSets": [
+    [
+      {
+        "id": "eb6a3b45-c053-5b55-a84a-c3c719abb261",
+        "name": "RPC Portmapper DUMP Request Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2025/05/28",
+  "lastUpdate": "2025-05-30T05:17:52.000Z"
+}

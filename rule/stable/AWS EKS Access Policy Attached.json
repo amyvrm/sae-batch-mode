@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1cdcc2d7-684f-47cd-95a9-dbf5a143052d",
+  "name": "AWS EKS Access Policy Attached",
+  "description": "Detects the attachment of specific AWS EKS policies, indicating potential privilege escalation or unauthorized access provisioning.",
+  "filterSets": [
+    [
+      {
+        "id": "ab41fca0-b096-477e-bc97-2b3c84bcab47",
+        "name": "AWS EKS Access Policy Attached",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni",
+  "team": "Cloud One",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

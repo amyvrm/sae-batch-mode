@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0cf59587-451f-445b-9881-77a4d786295a",
+  "name": "Port Sweep via Advanced Port Scanner",
+  "description": "Port sweep via Advanced Port Scanner tool, was detected on the network via TCP and HTTP.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "244d2faa-7b38-424b-9562-97d61ebbf8eb",
+      "name": "Port Sweep via Advanced Port Scanner",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1046",
+    "mitre.t1018",
+    "threat.hacktool"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Aeron Lloyd Bacierto",
+  "team": "DDI",
+  "date": "2025/03/31",
+  "lastUpdate": "2025-03-31T08:18:32.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "15572989-dee9-4960-880c-279db9f3bf55",
+  "name": "Loading of Mscoree.dll in Uncommon Path",
+  "description": "Detects the loading of mscoree.dll in uncommon path via Applaunch",
+  "filterSets": [
+    [
+      {
+        "id": "aea91572-9370-443d-a513-69ce4d96b252",
+        "name": "Mscoree.dll Loaded By Applaunch in Uncommon Path",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/01/04",
+  "lastUpdate": "2024-02-12T04:07:16.000Z"
+}

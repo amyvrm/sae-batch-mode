@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dabb4b94-16a7-43af-bebe-cd600f6bce6b",
+  "name": "Suspicious Registry Modification to Disable UAC & NLA",
+  "description": "Detects suspicious scripts which modifies the registry to disable User Account Control (UAC), backdoor the Sticky Keys, Utilman, and other accessibility features with cmd.exe, and disable Network Level Authentication (NLA).",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "867396d1-57a7-4f78-acaf-dd284588d4d7",
+      "name": "Suspicious Registry Modification to Disable UAC & NLA",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1546.012",
+    "mitre.t1112",
+    "mitre.t1546.008"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/08/25",
+  "lastUpdate": "2024-09-05T08:08:09.000Z"
+}

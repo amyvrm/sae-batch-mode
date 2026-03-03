@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "84702f0b-4b81-4eb9-96ea-1394d9e77a00",
+  "name": "Possible Phishing from a Suspicious Top Level Domain",
+  "description": "Fortinet detection - Possible Phishing from a Suspicious Top Level Domain",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2401789a-7e94-4f36-b09e-9d2f557caddc",
+      "name": "Possible Phishing from a Suspicious Top Level Domain",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [
+    "mitre.t1189"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "John Paul Lim",
+  "team": "Third Party Operations",
+  "date": "2025/09/25",
+  "lastUpdate": "2025-10-02T10:18:18.000Z"
+}

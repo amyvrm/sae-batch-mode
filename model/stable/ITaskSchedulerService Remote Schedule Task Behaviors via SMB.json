@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "decb60e0-94d7-4f93-8022-6bb8dbd989f5",
+  "name": "ITaskSchedulerService Remote Schedule Task Behaviors via SMB",
+  "description": "Network activity involving the Server Message Block (SMB) protocol is indicative of ITaskSchedulerService being used for remote scheduled tasks via SMB.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "196dcc86-f350-446a-9017-67c24abc24b8",
+      "name": "ITaskSchedulerService Remote Schedule Task Behaviors via SMB",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "threat.pua",
+    "mitre.t1021.002",
+    "mitre.t1053.005",
+    "attack.s1071"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/05/14",
+  "lastUpdate": "2025-05-14T01:05:09.000Z"
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "id": "63ff3638-792d-4494-beb8-b2f212d2635d",
+  "name": "Atlassian Confluence Suspicious Command Execution",
+  "description": "Detect bash shell script execution by confluence java process",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c29fc9d8-d53e-4404-a81b-cc1d4b5f272f",
+      "name": "Possible Command Execution Via Exploiting Atlassian Confluence",
+      "score": 3
+    },
+    {
+      "id": "41028d79-fe8c-4749-95d9-605d20a62adb",
+      "name": "Java Execution Bash Script After Downloading Suspicious Download",
+      "score": 2
+    },
+    {
+      "id": "6b56698d-6e21-4b46-9e17-98a7fe50dee9",
+      "name": "Atlassian JIRA External Remote Service Exploitation",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1071",
+    "mitre.t1059.004",
+    "mitre.t1059",
+    "mitre.t1190",
+    "mitre.t1133"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/04/25",
+  "lastUpdate": "2024-06-13T13:40:18.000Z"
+}

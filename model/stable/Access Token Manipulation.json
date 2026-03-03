@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c1c7af00-09c3-11ee-be56-0242ac120002",
+  "name": "Behavior Monitoring Detection - Access Token Manipulation",
+  "description": "The process calls DuplicateToken() and CreateProcessWithToken().",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "4398fd5c-09bc-11ee-be56-0242ac120002",
+      "name": "Access Token Manipulation",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1134"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Peggy Mai",
+  "team": "LWE",
+  "date": "2023/06/14",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

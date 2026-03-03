@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "11e8b776-76c2-459e-a1a5-4b6db5b783a8",
+  "name": "AWS Bedrock Successful Agent Enumeration",
+  "description": "Detects successful enumeration of agents in AWS Bedrock services, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "6f18639a-bb3b-4512-9ea5-f718ba861d67",
+        "name": "AWS Bedrock Successful Agent Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/15",
+  "lastUpdate": "2026-01-19T06:10:43.000Z"
+}

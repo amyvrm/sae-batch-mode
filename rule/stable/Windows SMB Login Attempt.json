@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1a71f0e1-241f-478b-ba0c-3f9bcc9f8e43",
+  "name": "Windows SMB Login Attempt",
+  "description": "Palo Alto Vulnerability detection - Windows SMB Login Attempt",
+  "filterSets": [
+    [
+      {
+        "id": "9836149b-def1-4078-85eb-fe4df3206d1b",
+        "name": "Windows SMB Login Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

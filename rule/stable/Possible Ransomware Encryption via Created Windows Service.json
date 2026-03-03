@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "72e3d4d3-ef51-4071-9186-00fd40e90596",
+  "name": "Possible Ransomware Encryption via Created Windows Service",
+  "description": "Detects possible ransomware encryption via windows service commonly associated with Crypto24 ransomware group.",
+  "filterSets": [
+    [
+      {
+        "id": "aabbff2c-1e7d-4deb-9117-80679f2f4911",
+        "name": "Possible Ransomware Encryption via Created Windows Service",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Krisford Macalalad & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/07/13",
+  "lastUpdate": "2025-11-11T16:00:16.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a7de9aac-4e60-4d33-a69a-1b9ca3bef8f4",
+  "name": "Interactive Shell in Container",
+  "description": "A shell served as the container's entry point, enabling terminal interaction.",
+  "filterSets": [
+    [
+      {
+        "id": "5117c41c-454b-43ae-954d-57482ddbd459",
+        "name": "Interactive Shell in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2026/02/03",
+  "lastUpdate": "2026-02-03T10:06:57.000Z"
+}

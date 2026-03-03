@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9b4981bb-4eea-415f-8781-acf6d8d0f6a5",
+  "name": "AWS Bedrock Successful Datasource Enumeration",
+  "description": "Detects successful enumeration of data source in AWS Bedrock services, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "3d019bbc-7285-485d-ae8a-21a4ced80b24",
+        "name": "AWS Bedrock Successful DataSource Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/15",
+  "lastUpdate": "2026-01-19T06:11:19.000Z"
+}

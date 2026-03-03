@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19d99845-d6c5-417d-ac8c-90528d49538c",
+  "name": "Microsoft Windows Registry Read Attempt",
+  "description": "Palo Alto Networks detection for Microsoft Windows Registry Read Attempt. This alert indicates an attempt to read a windows registry remotely has been detected.",
+  "filterSets": [
+    [
+      {
+        "id": "a62db099-4a80-5c3c-9f68-1ea692d36452",
+        "name": "Microsoft Windows Registry Read Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/05",
+  "lastUpdate": "2026-02-05T06:48:20.000Z"
+}

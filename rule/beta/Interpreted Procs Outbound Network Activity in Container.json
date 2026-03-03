@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9906ac8f-246c-4dc0-bc14-d8686588b3b5",
+  "name": "Interpreted Procs Outbound Network Activity in Container",
+  "description": "Interpreted programs initiating outbound network activity from containers is unusual and may indicate data exfiltration or other malicious actions.",
+  "filterSets": [
+    [
+      {
+        "id": "81a1e0b8-dab6-44ee-9dac-59ed1a3a2fdb",
+        "name": "Interpreted Procs Outbound Network Activity in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/07/23",
+  "lastUpdate": "2024-07-25T07:33:29.000Z"
+}

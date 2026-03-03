@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "38aaca2c-ac11-44f3-a2e1-1da4ac8ed947",
+  "name": "Spearphishing Email with Known Phishkit URL Template via Link",
+  "description": "A suspicious URL associated with a known phishkit URL template was detected in an email message.",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "8bb5be46-3f62-4bf1-8a35-e8230c3be3fa",
+      "name": "Spearphishing Email With Known Phishkit Url Template Via Link",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Peter L Chang",
+  "team": "Jaguar",
+  "date": "2020/10/27",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

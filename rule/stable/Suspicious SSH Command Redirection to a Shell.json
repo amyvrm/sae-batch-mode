@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81996c66-85aa-11ef-b864-0242ac120002",
+  "name": "Suspicious SSH Command Redirection to a Shell",
+  "description": "Detects the execution of a suspicious SSH command that bypasses strict host key checking and automates authentication using network file download tools.",
+  "filterSets": [
+    [
+      {
+        "id": "ea8b52ea-6a37-11ef-b864-0242ac120002",
+        "name": "Suspicious SSH Command Redirection to a Shell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/09/04",
+  "lastUpdate": "2025-01-22T19:14:24.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6a1b5af0-339a-4261-8810-afec75ecd848",
+  "name": "Suspicious Script Execution Chain Activity via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection identifying unusual process chains where mshta.exe spawns system utilities or scripting interpreters. This may indicate script-based execution, post-exploitation, or reconnaissance attempts.",
+  "filterSets": [
+    [
+      {
+        "id": "0bce42b6-2e10-40d2-b1be-8423c10f3588",
+        "name": "Suspicious Script Execution Chain Activity via Microsoft Telemetry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/10",
+  "lastUpdate": "2025-11-17T03:21:21.000Z"
+}

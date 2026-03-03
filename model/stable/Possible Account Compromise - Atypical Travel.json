@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0509ef5a-6c02-464d-8692-4d5dbdc60b99",
+  "name": "Possible Account Compromise - Atypical Travel",
+  "description": "User account has a successful sign-in attempt originating from a location that is unusual based on the known travel behavior of the user.",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "02731b15-742a-49a5-8967-7fef6ced99bc",
+      "name": "Possible Account Compromise - Atypical Travel",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aad"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Kai-Min Tu",
+  "team": "Jaguar",
+  "date": "2024/03/14",
+  "lastUpdate": "2024-04-01T06:36:30.000Z"
+}

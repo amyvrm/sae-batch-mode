@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01916c39-25d1-7564-92ca-bd53309c72ae",
+  "name": "PEM File Discovery via Find Command",
+  "description": "Detects .pem File via find command.",
+  "filterSets": [
+    [
+      {
+        "id": "2fcd7dd1-4cd9-4575-98ec-033d01d51c2b",
+        "name": "PEM File Discovery via Find Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/08/19",
+  "lastUpdate": "2024-09-04T19:10:33.000Z"
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "af0703dd-c0e2-48f8-8d91-185de5d913bd",
+  "name": "Symbolic Links Abuse to Deliver Ransomware",
+  "description": "Detects File and Behavior related to LinkBasta - Abusing Symbolic Link to deliver ransomware",
+  "filterSets": [
+    [
+      {
+        "id": "5b93b5aa-c15b-512f-983c-984cf855a780",
+        "name": "Behavior Monitoring Detection - LinkBasta Parameters",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9ea9680b-7d9a-5821-a9d3-bdaa012aeb20",
+        "name": "File Detected as LINKBASTA",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pdi",
+      "pds",
+      "sts",
+      "pts",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Ronjay Caragay",
+  "team": "CSG",
+  "date": "2024/09/09",
+  "lastUpdate": "2024-10-15T15:11:24.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f6ce5586-0135-4e8f-9fb0-fddf6eaee38f",
+  "name": "Application Control Port Enforcement",
+  "description": "Fortinet detection - Application control port enforcement",
+  "filterSets": [
+    [
+      {
+        "id": "bb093667-12a5-44cb-8579-1de2de6e5544",
+        "name": "Application Control Port Enforcement",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

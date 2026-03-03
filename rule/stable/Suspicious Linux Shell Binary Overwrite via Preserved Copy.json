@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c121c07e-1d3e-11ef-9262-0242ac120002",
+  "name": "Suspicious Linux Shell Binary Overwrite via Preserved Copy",
+  "description": "A Linux shell binary file in /bin has been overwritten using a preserved copy, with symbolic links maintained during the copy process.",
+  "filterSets": [
+    [
+      {
+        "id": "d79a24ae-1d20-11ef-9262-0242ac120002",
+        "name": "Linux Shell Binary Overwrite via Preserved Copy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/05/28",
+  "lastUpdate": "2025-01-22T19:14:24.000Z"
+}

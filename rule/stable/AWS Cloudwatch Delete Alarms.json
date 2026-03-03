@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aa998178-3ff6-11ee-be56-0242ac120002",
+  "name": "AWS Cloudwatch Delete Alarms",
+  "description": "This rule detects AWS Cloudwatch Delete Alarms.",
+  "filterSets": [
+    [
+      {
+        "id": "a72d404a-3cf6-11ee-be56-0242ac120002",
+        "name": "AWS Cloudwatch Delete Alarms",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/08/21",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

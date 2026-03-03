@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4f7a7c4b-142c-4edc-92b0-827e2e10ad8a",
+  "name": "AWS EC2 Security Group Updated",
+  "description": "This rule detects events indicating the modification of EC2 Security Groups",
+  "filterSets": [
+    [
+      {
+        "id": "529eca5e-756a-4796-b797-4677aa672862",
+        "name": "AWS EC2 Describe Security Group",
+        "highlight": true
+      },
+      {
+        "id": "e4c3823a-f32b-4276-a9e0-ee9b96d56b5a",
+        "name": "AWS EC2 Open Uncommon Ingress Ports In Security Group Rule",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/06/13",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

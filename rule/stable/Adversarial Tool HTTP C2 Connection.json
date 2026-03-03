@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4138c4c-0089-47b0-928a-b1b7afd09ee6",
+  "name": "Adversarial Tool HTTP C2 Connection",
+  "description": "Adversarial Tool C2 connection via HTTP protocol",
+  "filterSets": [
+    [
+      {
+        "id": "965a3b8e-6cfb-581b-99a2-d5575e4e629a",
+        "name": "Base64 Encoded Cookie HTTP (Request) - Outbound",
+        "highlight": true
+      },
+      {
+        "id": "f1000627-785d-4aa4-a29c-0d6c405fd590",
+        "name": "Adversarial Tool C2 Connection Over HTTP",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "965a3b8e-6cfb-581b-99a2-d5575e4e629a.peerIp equals f1000627-785d-4aa4-a29c-0d6c405fd590.peerIp"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2024/10/24",
+  "lastUpdate": "2024-11-26T06:17:29.000Z"
+}

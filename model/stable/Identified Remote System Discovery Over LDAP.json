@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8168b4dc-346d-4165-a2b9-8946e1badb76",
+  "name": "Identified Remote System Discovery Over LDAP",
+  "description": "This incident means that Windows Remote System Discovery was observed using LDAP triggering IPS and LI modules.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "9ae3b01b-0496-419f-9109-efb725ec4888",
+      "name": "Remote System Discovery Over LDAP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1018"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 8,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2022/03/14",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

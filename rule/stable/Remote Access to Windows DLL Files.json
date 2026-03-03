@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a4525a07-71c4-4c5b-8ca8-dbd72316aa9b",
+  "name": "Remote Access to Windows DLL Files",
+  "description": "Network detection of remote access to phoneinfo.dll or msdaora.dll over HTTP/SMB.",
+  "filterSets": [
+    [
+      {
+        "id": "edc01898-eff0-4198-a4c4-bdb07fd02213",
+        "name": "Remote Access to Windows DLL Files",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/03/09",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

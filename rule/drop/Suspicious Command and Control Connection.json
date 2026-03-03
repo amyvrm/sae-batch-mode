@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7147ad69-0cb1-4305-86c6-94aa8901806f",
+  "name": "[DROP] Suspicious Command and Control Connection",
+  "description": "Detect suspicious connection of C2",
+  "filterSets": [
+    [
+      {
+        "id": "eef20eee-2dac-4379-8afa-f150b1b6b7e6",
+        "name": "Empire HTTP Request",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3e7d9f6c-b6e0-4992-bdd7-039c98a83795",
+        "name": "Suspicious HTTP Request Made By Malware Infection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d79f6fde-c93a-492b-8f6b-37c1433d0f1b",
+        "name": "Possible Cobalt Strike Connection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "02a9d414-6c88-431c-b297-41fe1bf0c2bf",
+        "name": "Possible Carbanak DNS Response",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-03-30T04:57:51.000Z"
+}

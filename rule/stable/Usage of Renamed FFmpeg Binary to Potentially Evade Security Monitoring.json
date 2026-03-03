@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d61414c2-d6a5-45ab-b4d0-3bc9269abc19",
+  "name": "Usage of Renamed FFmpeg Binary to Potentially Evade Security Monitoring",
+  "description": "Detects suspicious execution of a renamed FFmpeg application which can be used in masquerading and collection by performing covert screenshots and screen recording.",
+  "filterSets": [
+    [
+      {
+        "id": "35e40f19-5fda-4392-9622-d105c1085eca",
+        "name": "Usage of Renamed FFmpeg Binary to Potentially Evade Security Monitoring",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/08/04",
+  "lastUpdate": "2025-12-11T08:07:57.000Z"
+}

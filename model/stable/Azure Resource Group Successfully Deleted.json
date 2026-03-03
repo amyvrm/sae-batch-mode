@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3f3e2dea-5465-48b9-b527-2587c8b128b2",
+  "name": "Azure Resource Group Successfully Deleted",
+  "description": "Detects the successful deletion of an Azure Resource Group, which may indicate an attacker attempting to disrupt services, remove evidence, or degrade monitoring visibility.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "2eac0082-7d7b-4331-82f2-b3dd0aa4f733",
+      "name": "Azure Resource Group Successfully Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.008"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/27",
+  "lastUpdate": "2025-12-10T09:44:40.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cf70ede7-5bfd-4d56-b78e-42c8f6637f52",
+  "name": "AWS Redshift Unsuccessful Events Enumeration",
+  "description": "Monitors unsuccessful requests to retrieve Redshift cluster events, which attackers might use for reconnaissance.",
+  "filterSets": [
+    [
+      {
+        "id": "22abfd77-b232-4c8a-9b21-f64684b6e0e9",
+        "name": "AWS Redshift Unsuccessful Events Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

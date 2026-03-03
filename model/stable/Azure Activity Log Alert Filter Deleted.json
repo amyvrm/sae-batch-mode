@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bd114178-a5bd-4f6d-a9ae-e4543aca904a",
+  "name": "Azure Activity Log Alert Filter Deleted",
+  "description": "Detects successful deletion of Azure Activity Log based security alert filter which may indicate an attacker deliberately disabling security monitoring to evade detection",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "ce9b4abb-1bb5-4801-813f-99369f2edf83",
+      "name": "Azure Activity Log Alert Filter Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma and Nathaniel Ragasa",
+  "team": "SAE Threat Expert",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-26T06:31:30.000Z"
+}

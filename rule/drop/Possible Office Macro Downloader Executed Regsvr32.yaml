@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "",
+  "name": "Possible MS Office Macro Malware Executed Regsvr32",
+  "description": "Detects suspicious connection and regsvr32 execution by MS office applications",
+  "filterSets": [
+    [
+      {
+        "id": "d9d89462-509b-41a2-b7ea-a24d165220ce",
+        "name": "Suspicious Connection From MS Office",
+        "highlight": true
+      },
+      {
+        "id": "03b7cabe-583c-4eee-89d4-28b27825fd4b",
+        "name": "Suspicious Regsvr32 Silent Execution by Office Applications",
+        "highlight": true
+      },
+      {
+        "id": "608447d6-58de-4965-b5c1-de859c0fa398",
+        "name": "Common DLL Loaded Under Uncommon File Path",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sao"
+    ]
+  ],
+  "author": "anishimura",
+  "team": "JP-TRC",
+  "date": "2021/04/19",
+  "lastUpdate": "2021-04-19T0:00:00.000Z"
+}

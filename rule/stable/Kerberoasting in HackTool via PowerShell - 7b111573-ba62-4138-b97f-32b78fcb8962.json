@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7b111573-ba62-4138-b97f-32b78fcb8962",
+  "name": "Rubeus Kerberoasting via PowerShell",
+  "description": "PowerShell Rubeus command is used to perform kerberoasting",
+  "filterSets": [
+    [
+      {
+        "id": "50771a31-3b1e-4282-a0b1-74ad290e4e3d",
+        "name": "Rubeus Kerberoasting via PowerShell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6920a28f-195e-45fc-a423-73e00758e1a8",
+        "name": "Rubeus Kerberoasting via PowerShell using TGTDeleg",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds"
+    ]
+  ],
+  "author": "Alvin Nieto",
+  "team": "SAE Threat Expert",
+  "date": "2023/04/17",
+  "lastUpdate": "2025-02-11T14:03:13.000Z"
+}

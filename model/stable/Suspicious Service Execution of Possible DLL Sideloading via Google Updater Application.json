@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "30b05f7c-edf0-4fac-bfb7-e49a0953bb6c",
+  "name": "Suspicious Service Execution of Possible Dll Sideloading via Google Updater Application",
+  "description": "Detects suspicious service execution of DLL Sideloading via Google Updater File leading to C2 connection",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "89409557-d804-45cf-bbb0-1bffca34826c",
+      "name": "Suspicious Service Execution of Possible DLL Sideloading via Google Updater Application",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1574.001",
+    "mitre.t1055"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jehhan Marcelo & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/05/21",
+  "lastUpdate": "2025-07-08T06:17:32.000Z"
+}

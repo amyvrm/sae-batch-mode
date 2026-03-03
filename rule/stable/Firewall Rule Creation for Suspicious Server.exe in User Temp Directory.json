@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "70673643-6a80-44fc-8bc9-bcfccd8c3892",
+  "name": "Firewall Rule Creation for Suspicious Server.exe in User Temp Directory",
+  "description": "Detects the creation of a firewall rule allowing a suspicious file named server.exe in the %TEMP% directory, indicative of potential malicious activity.",
+  "filterSets": [
+    [
+      {
+        "id": "cbae4fd4-abbe-40ba-ac53-d875f795142f",
+        "name": "Firewall Rule Creation for Suspicious Server.exe in User Temp Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/05/15",
+  "lastUpdate": "2025-07-14T08:55:08.000Z"
+}

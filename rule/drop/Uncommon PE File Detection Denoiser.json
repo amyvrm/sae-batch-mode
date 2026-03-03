@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "667160bb-5498-4b0c-9302-f24504d1f6bf",
+  "name": "Uncommon PE File Detection Denoiser",
+  "description": "Denoising Rule for Uncommon PE File Detections",
+  "filterSets": [
+    [
+      {
+        "id": "8d5c386d-826c-4610-b549-9ad7f1463f1c",
+        "name": "Noteworthy PE File from the Path Confidence Service",
+        "highlight": false
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 10,
+    "withinSeconds": 60,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jake Wu",
+  "team": "FMR",
+  "date": "2020/09/24",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

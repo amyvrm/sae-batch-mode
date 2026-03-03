@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "98051690-cbfb-4519-b001-7fcd2b3f4c01",
+  "name": "Security Settings Changed in Container",
+  "description": "Command executed to modify security related settings.",
+  "filterSets": [
+    [
+      {
+        "id": "ae2de48d-76ae-5ef7-8e4f-f960cca657e8",
+        "name": "Selinux Config Changed in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/09/20",
+  "lastUpdate": "2024-06-14T07:38:10.000Z"
+}

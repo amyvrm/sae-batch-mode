@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "77cd009e-296c-4509-8cfe-61093218e956",
+  "name": "Malicious File Upload and Execution From tmp Directory",
+  "description": "Detected Execution of malicious File from tmp directory to gain the access on compromised machine.",
+  "filterSets": [
+    [
+      {
+        "id": "5d895e02-366f-4bef-bb45-ddb1e793cc9c",
+        "name": "Malicious File Execution From Tmp Directory Path",
+        "highlight": true
+      },
+      {
+        "id": "4bf4a830-6f3a-41a4-946b-13d3c436cc7f",
+        "name": "Malicious File Copied In Temp Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Suraj Sahu",
+  "team": "Cloud One",
+  "date": "2020/07/10",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

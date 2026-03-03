@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d8937b88-ec0a-461f-b4b9-fd3112e93abf",
+  "name": "AWS Bedrock Unauthorized Model Invocation Detected",
+  "description": "Detects successful invocations of Amazon Bedrock models, tracking when authorized users or roles access and utilize models. This rule helps ensure that model usage aligns with expected permissions, providing visibility into legitimate access and preventing unauthorized activities.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "50967b7e-18ab-4436-801f-b72c9be7475a",
+      "name": "AWS Bedrock Unauthorized Model Invocation Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "tags": [
+    "atlas.aml.t0040",
+    "mitre.t1059.009"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/14",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

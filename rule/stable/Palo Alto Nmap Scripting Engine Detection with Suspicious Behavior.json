@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f52e142c-7ad3-4548-88f1-a2c5658e3078",
+  "name": "Palo Alto Nmap Scripting Engine Detection with Suspicious Behavior",
+  "description": "Detects Palo Alto Nmap Scripting Engine Detection with suspicious behavior.",
+  "filterSets": [
+    [
+      {
+        "id": "06450dfe-ab58-4da6-a207-24c198f717b4",
+        "name": "Nmap Scripting Engine Detection",
+        "highlight": true
+      },
+      {
+        "id": "6cd3d77c-990c-56d2-9b47-401541afc008",
+        "name": "Nmap Active Directory Enumeration Via NTLM",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "06450dfe-ab58-4da6-a207-24c198f717b4",
+        "name": "Nmap Scripting Engine Detection",
+        "highlight": true
+      },
+      {
+        "id": "3c88cae4-170f-50a7-997e-7f5f2063fcb9",
+        "name": "Nmap Aggressive Option Print Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "06450dfe-ab58-4da6-a207-24c198f717b4.fileName contains 6cd3d77c-990c-56d2-9b47-401541afc008.fileName"
+    ],
+    [
+      "06450dfe-ab58-4da6-a207-24c198f717b4.fileName contains 3c88cae4-170f-50a7-997e-7f5f2063fcb9.fileName"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2025/05/07",
+  "lastUpdate": "2025-05-22T08:11:42.000Z"
+}

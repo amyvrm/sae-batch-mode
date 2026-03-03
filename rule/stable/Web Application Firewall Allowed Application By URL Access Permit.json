@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c224f140-7933-478d-bb13-b74383d8f9e4",
+  "name": "Web Application Firewall Allowed Application By URL Access Permit",
+  "description": "Fortinet detection - Web application firewall allowed application by URL access permit",
+  "filterSets": [
+    [
+      {
+        "id": "09dbecba-36e2-4430-bc2a-8efda1e072d8",
+        "name": "Web Application Firewall Allowed Application By URL Access Permit",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

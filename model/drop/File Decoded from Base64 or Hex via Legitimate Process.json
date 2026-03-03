@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b557c109-bb4e-4e06-b3cc-460810edf6ff",
+  "name": "File Decoded from Base64 or Hex via Legitimate Process",
+  "description": "Detects the execution of certutil with either the 'decode' or 'decodehex' flags to decode base64 or hex encoded files. This can be abused by attackers to decode an encoded payload before execution.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "72505010-c2d5-49c2-8e5e-5ec7d71d0f7b",
+      "name": "File Decoded from Base64 or Hex via Legitimate Process",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1027.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/11/14",
+  "lastUpdate": "2026-01-19T01:54:27.000Z"
+}

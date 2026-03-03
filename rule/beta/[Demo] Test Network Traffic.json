@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "72b33a70-092e-4308-9519-6409fa05ce39",
+  "name": "Demo - Test Network Traffic",
+  "description": "Test rule.",
+  "filterSets": [
+    [
+      {
+        "id": "1bcd0548-cc04-451a-933d-c2176295915c",
+        "name": "Demo - TCP Test Filter",
+        "highlight": true
+      },
+      {
+        "id": "8a9c2f22-c338-46aa-b333-6dd5867565a8",
+        "name": "Demo - UDP Test Filter",
+        "highlight": true
+      },
+      {
+        "id": "2228a53a-e37b-48c1-b74e-761157fd5560",
+        "name": "Comodo Antivirus Command Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/11/09",
+  "lastUpdate": "2023-11-10T03:25:28.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9b29cf9f-2217-4d6e-a3fc-3a439daffed0",
+  "name": "Discovery Command via Suspicious Executable File",
+  "description": "Identifies the discovery command through a suspicious executable file dropped by the Sql Server Service.",
+  "filterSets": [
+    [
+      {
+        "id": "0df83e90-256c-499f-bd82-a024abbe4bd7",
+        "name": "Discovery Command via Suspicious Executable File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/05/19",
+  "lastUpdate": "2025-08-12T08:01:42.000Z"
+}

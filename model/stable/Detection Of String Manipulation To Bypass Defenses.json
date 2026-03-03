@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6c186a00-2bb7-4eba-a1a2-d6f641372920",
+  "name": "Detection Of String Manipulation To Bypass Defenses",
+  "description": "detection of possible crackmapexec string manupulation to bypass defense mechansims",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2f939e3f-dc40-4350-81d8-1406b669af9e",
+      "name": "Detection Of String Manipulation To Bypass Defenses",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh & Lucas Silva",
+  "team": "EU-IR",
+  "date": "2024/06/24",
+  "lastUpdate": "2024-07-16T16:27:39.000Z"
+}

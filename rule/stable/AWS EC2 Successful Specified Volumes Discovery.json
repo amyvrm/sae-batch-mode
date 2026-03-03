@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "515c58cd-41c0-474b-8f19-dceabdf9b0cd",
+  "name": "AWS EC2 Successful Specified Volumes Discovery",
+  "description": "AWS EC2 Successful Specified Volumes Discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "e3ca3feb-9c95-478d-8409-e3114006601f",
+        "name": "AWS EC2 Successful Specified Volumes Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

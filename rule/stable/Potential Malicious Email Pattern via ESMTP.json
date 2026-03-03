@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aa0c89cc-b514-493d-9277-631f5488b073",
+  "name": "Potential Malicious Email Pattern via ESMTP",
+  "description": "Cisco ASA Detection for Potential Malicious Email Pattern via Esmtp.",
+  "filterSets": [
+    [
+      {
+        "id": "86e065c3-c7d0-5e9f-8111-fd6a223295ec",
+        "name": "Potential Malicious Email Pattern via ESMTP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/06",
+  "lastUpdate": "2026-02-11T03:25:20.000Z"
+}

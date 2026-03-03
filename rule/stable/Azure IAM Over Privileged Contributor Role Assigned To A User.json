@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f5d3b5f7-ff59-4eac-a3e7-7edf7de110fa",
+  "name": "Azure IAM Over Privileged Contributor Role Assigned To A User",
+  "description": "Detects the assignment of an over-privileged contributor role to a user within Azure IAM",
+  "filterSets": [
+    [
+      {
+        "id": "d8a870ef-c29e-48d5-82e4-62079905d2e3",
+        "name": "Azure IAM Role Assigned To A User",
+        "highlight": true
+      },
+      {
+        "id": "87d0d448-d07e-4c20-9e4c-c35513357ed8",
+        "name": "Azure IAM Over Privileged Contributor Role Assignment Operation Started",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "d8a870ef-c29e-48d5-82e4-62079905d2e3.correlationId equals 87d0d448-d07e-4c20-9e4c-c35513357ed8.correlationId"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/06/02",
+  "lastUpdate": "2025-07-16T07:28:13.000Z"
+}

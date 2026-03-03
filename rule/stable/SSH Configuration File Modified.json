@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0190c292-3ca5-7669-9ce9-33a7079e3baa",
+  "name": "SSH Configuration File Modified",
+  "description": "Intergrity Monitor detection - SSH configuration has been modified. Attacker may modify SSH configuration for backdoor access.",
+  "filterSets": [
+    [
+      {
+        "id": "0190c166-74c4-77a5-b490-5e127f1bdd05",
+        "name": "SSH Configuration File Modified",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/07/17",
+  "lastUpdate": "2024-09-04T19:10:33.000Z"
+}

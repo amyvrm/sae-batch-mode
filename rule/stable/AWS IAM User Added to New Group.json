@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "453e63c8-ded9-46ad-9867-066c4cc118a6",
+  "name": "AWS IAM User Added to New Group",
+  "description": "This rule detects attempts when an IAM user is added to a new group within AWS IAM.",
+  "filterSets": [
+    [
+      {
+        "id": "57c76ee8-1308-43d9-9d76-5344ed7461ff",
+        "name": "AWS IAM User Added to New Group",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/06/13",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

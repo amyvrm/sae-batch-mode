@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "65d638e4-0d6d-4652-856c-f7d6fcaef827",
+  "name": "NetSupportRAT Usage",
+  "description": "Detection of NetSupportRAT being used on a device",
+  "filterSets": [
+    [
+      {
+        "id": "b84a9cfe-f644-45e3-87cd-b555a71abd7f",
+        "name": "NetSupportRAT Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5b51048e-6909-4570-919c-2ce910d92b41",
+        "name": "NetSupportRAT File Creation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3523003b-6b86-4c72-9ab5-ca2d408f9dae",
+        "name": "NetSupportRAT AMSI Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/12",
+  "lastUpdate": "2024-06-18T05:05:43.000Z"
+}

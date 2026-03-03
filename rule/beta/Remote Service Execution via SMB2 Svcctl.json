@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2b13cb10-e4e5-485a-ab11-3d42e0c9cbe5",
+  "name": "Remote Service Execution via SMB2 Svcctl",
+  "description": "Network activity involving SMB2, which is associated with the Service Control Manager (SVCCTL), was observed. This behavior may indicate unauthorized remote service execution attempts within the network.",
+  "filterSets": [
+    [
+      {
+        "id": "066a2eec-fda9-52c5-8cf9-136f7967c04c",
+        "name": "Remote Service Execution Through SMB2 Svcctl Detected Variant 3",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "331700e7-bfc0-5cfd-96c4-945c27e22d48",
+        "name": "Remote Service Execution Through SMB2 Svcctl Detected Variant 2",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8a042fc7-8cee-5231-9dba-192c2f45c8dd",
+        "name": "Remote Service Execution Through SMB2 Svcctl Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/05/20",
+  "lastUpdate": "2025-05-30T05:04:42.000Z"
+}

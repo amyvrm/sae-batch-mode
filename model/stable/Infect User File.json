@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "12ce31aa-24c4-4705-a411-551e76d3233c",
+  "name": "Xcode Project Infection",
+  "description": "An infected Xcode developer project was detected.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "51ae5678-119c-4424-bb2e-41872955012f",
+      "name": "Infect Xcode Project",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1204.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/10/10",
+  "lastUpdate": "2024-05-13T00:34:30.000Z"
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7da79b7f-59ac-4df2-892c-3fddeea68e63",
+  "name": "Possible Suspicious Hidden PowerShell Command or Process",
+  "description": "A suspicious hidden PowerShell command or process without a Profile may have been created, opened, or executed on an endpoint.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7a69f15b-5eb9-446b-b4a0-e445abaef629",
+      "name": "Possible Suspicious Hidden PowerShell Command or Process",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1132",
+    "mitre.t1659"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Aaron Emdy",
+  "team": "US-IR",
+  "date": "2024/08/14",
+  "lastUpdate": "2025-03-10T09:09:35.000Z"
+}

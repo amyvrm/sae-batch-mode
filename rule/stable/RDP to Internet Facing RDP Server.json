@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "692d6cc7-ac62-44bd-af04-6d9fe3eebb98",
+  "name": "RDP to Internet Facing RDP Server",
+  "description": "RDP connect to Internet Facing RDP Server with port 3389",
+  "filterSets": [
+    [
+      {
+        "id": "0167d396-6ea5-4d33-bbfa-fbc1a1f21180",
+        "name": "Connect To Internet Facing RDP Server Via RDP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "PeiChi Cheng",
+  "team": "ddi",
+  "date": "2020/06/15",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

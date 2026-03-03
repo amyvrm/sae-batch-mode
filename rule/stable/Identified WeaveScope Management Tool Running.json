@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9f64c50f-3247-4e3c-93bb-e2f6b8c06b71",
+  "name": "Identified WeaveScope Management Tool Running",
+  "description": "WeaveScope is a legitimate tool used for monitoring Docker and Kubernetes deployments. However, we have observed threat actors abusing the tool to remotely control compromised hosts.",
+  "filterSets": [
+    [
+      {
+        "id": "40eac362-5e67-40f0-86e3-a9fd11f11fc5",
+        "name": "Identified Suspicious Use Of Namespace Wrapper",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "033c5ddf-e060-4c32-8de5-8c1cc96771af",
+        "name": "Identified Outbound Probe To WeaveScope Instance",
+        "highlight": true
+      },
+      {
+        "id": "3b2e4175-2c75-412b-bff9-5849fe7e77e2",
+        "name": "Identified WeaveScope Running On Linux Hosts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 240,
+    "dedupSeconds": 240
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/11/09",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

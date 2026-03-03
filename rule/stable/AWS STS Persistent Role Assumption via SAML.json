@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5a4a139e-3b41-4484-ad0e-f76b74a0d551",
+  "name": "AWS STS Persistent Role Assumption via SAML",
+  "description": "Detects a successful persistent role assumption with unusual assertion ID format.",
+  "filterSets": [
+    [
+      {
+        "id": "d34f51ff-2a9c-4e6c-b0d4-f23faede1046",
+        "name": "AWS STS Persistent Role Assumption via SAML",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/28",
+  "lastUpdate": "2025-09-01T08:38:50.000Z"
+}

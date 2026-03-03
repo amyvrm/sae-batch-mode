@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0dec401f-3842-4a50-af72-3cbe6ae25079",
+  "name": "Disabling of Trend Micro's Components",
+  "description": "Detection for terminating Trend Micro's modules and using different techniques",
+  "riskLevel": "high",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "8160e409-44dc-45e8-a936-ffa9b1535f1b",
+      "name": "Disabling of Trend Micro's Components",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/09/18",
+  "lastUpdate": "2025-01-22T05:14:23.000Z"
+}

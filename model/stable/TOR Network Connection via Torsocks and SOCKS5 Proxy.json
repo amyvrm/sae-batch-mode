@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a2abc1cc-9654-4e11-bcc0-f26ef8ec2b48",
+  "name": "TOR Network Connection via Torsocks and SOCKS5 Proxy",
+  "description": "Detected attempts to connect to TOR network using torsocks or SOCKS5 proxy to access .onion domains, which may indicate malicious communication or data exfiltration",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "99b643f9-0825-4926-8256-d9bcf6066bdc",
+      "name": "TOR Network Connection via Torsocks and SOCKS5 Proxy",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1090.003",
+    "mitre.t1071.001",
+    "mitre.t1041",
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jose Baena Cobos",
+  "team": "Cloud One",
+  "date": "2025/06/19",
+  "lastUpdate": "2025-08-07T08:18:16.000Z"
+}

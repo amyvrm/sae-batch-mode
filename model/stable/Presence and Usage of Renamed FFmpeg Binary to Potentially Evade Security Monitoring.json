@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9c553d20-27cb-4373-bbd8-86bc08e28441",
+  "name": "Presence and Usage of Renamed FFmpeg Binary to Potentially Evade Security Monitoring",
+  "description": "Detects suspicious dropping and execution of a renamed FFmpeg application which can be used in masquerading and collection by performing covert screenshots and screen recording.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d61414c2-d6a5-45ab-b4d0-3bc9269abc19",
+      "name": "Usage of Renamed FFmpeg Binary to Potentially Evade Security Monitoring",
+      "score": 1
+    },
+    {
+      "id": "6356904b-df5a-434b-b6f7-c87b0cf2b15e",
+      "name": "Dropping of Renamed FFmpeg Binary to Potentially Evade Security Monitoring",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1113",
+    "mitre.t1036",
+    "mitre.t1125"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/08/04",
+  "lastUpdate": "2025-12-11T09:04:25.000Z"
+}

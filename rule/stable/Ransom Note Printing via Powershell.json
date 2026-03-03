@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b8a4573c-cb8f-4365-9672-c034eb423a64",
+  "name": "Ransom Note Printing via Powershell",
+  "description": "Agenda ransomware has the capability of using connected printers to print Ransom note using powershell commands.",
+  "filterSets": [
+    [
+      {
+        "id": "e56050c5-41f5-4116-80c9-26979a5f2c92",
+        "name": "Ransom Note Printing via Powershell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Alvin Bacani",
+  "team": "CSG",
+  "date": "2024/05/21",
+  "lastUpdate": "2024-06-03T08:10:17.000Z"
+}

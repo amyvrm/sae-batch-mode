@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "23551734-c1a7-4cb6-a5cb-85c193e568b2",
+  "name": "Suspicious Registry Modifications",
+  "description": "Identifies suspicious registry modifications commonly employed by RedLine Stealer to ensure persistence.",
+  "filterSets": [
+    [
+      {
+        "id": "f9b9d3e7-3c4d-4112-b59a-fee5dc5bbe77",
+        "name": "Suspicious Registry Modifications",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA IR",
+  "date": "2024/12/09",
+  "lastUpdate": "2024-12-27T07:10:45.000Z"
+}

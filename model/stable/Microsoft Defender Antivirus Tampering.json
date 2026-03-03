@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "33dbccb3-8c43-43d8-9549-1e62222986c1",
+  "name": "Microsoft Defender Antivirus Tampering",
+  "description": "Detects disabling of Microsoft Defender through SC command-line utility.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "390ffc8b-dd9b-4de2-a362-95f29e275af8",
+      "name": "Microsoft Defender Antivirus Tampering",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/04/24",
+  "lastUpdate": "2025-09-01T03:18:40.000Z"
+}

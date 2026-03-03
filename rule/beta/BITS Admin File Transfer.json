@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b9b3d89c-5dd8-4306-bba8-5bcab5278ea1",
+  "name": "BITS Admin File Transfer",
+  "description": "Detects the use of BITS Admin to transfer files, which can be used for malicious purposes such as downloading malware or exfiltrating data.",
+  "filterSets": [
+    [
+      {
+        "id": "e66d0c68-4a02-4e2b-84b0-fdfc4b9064d9",
+        "name": "BITS Admin File Transfer",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/13",
+  "lastUpdate": "2025-08-13T08:35:51.000Z"
+}

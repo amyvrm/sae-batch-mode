@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "91ac948e-ab8f-42ba-b98a-4cf478ac7a9e",
+  "name": "Possible In-Memory Execution via MSBuild as SYSTEM",
+  "description": "Certain attacker groups execute MSBuild with SYSTEM privileges to inject malicious code into the memory of legitimate processes, effectively installing backdoors.",
+  "filterSets": [
+    [
+      {
+        "id": "62e4d40a-fbe2-4205-825b-b752ae8d33d5",
+        "name": "Suspicious MSBuild Execution by SYSTEM User",
+        "highlight": true
+      },
+      {
+        "id": "4e4eb66d-cb98-4fa4-8c04-59a4ae3dc61f",
+        "name": "Executable Binary in PowerShell Memory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Yoshihiro Nakaya",
+  "team": "JP-IR",
+  "date": "2024/04/16",
+  "lastUpdate": "2024-04-24T05:09:24.000Z"
+}

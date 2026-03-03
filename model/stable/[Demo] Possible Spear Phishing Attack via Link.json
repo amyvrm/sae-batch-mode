@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d48024c4-5a2a-4148-a2fe-e192283fe336",
+  "name": "Demo - Possible Spear Phishing Attack via Link",
+  "description": "A suspicious URL associated with phishing attacks was detected in an email message. [Delayed alert: Batch process detection]",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "cdeb2d15-a330-4ab0-b3ec-3f1c69e5e960",
+      "name": "Demo - Suspicious SpearPhishing Link in email",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 1500,
+    "dedupSeconds": 1500
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.002",
+    "bas.tmdemokit"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Vincent Lee",
+  "team": "Jaguar",
+  "date": "2023/01/09",
+  "lastUpdate": "2025-01-20T05:12:50.000Z"
+}

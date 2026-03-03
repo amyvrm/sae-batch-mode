@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "54f9bd20-56bc-410c-afee-97625873e1d6",
+  "name": "Suspicious Utilities Installation",
+  "description": "Detects installation of suspicious utilities like network scanners or anonymization tools",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f3e02f2d-ff6e-4824-aa29-4ab166ea085c",
+      "name": "Suspicious Utilities Installation",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1046",
+    "mitre.t1090.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jose Baena Cobos",
+  "team": "Cloud One",
+  "date": "2025/06/19",
+  "lastUpdate": "2025-08-07T08:18:16.000Z"
+}

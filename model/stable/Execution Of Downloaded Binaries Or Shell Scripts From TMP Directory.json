@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "12e5ed3d-8b9a-427b-b398-8d6a5243fadb",
+  "name": "Execution Of Downloaded Binaries Or Shell Scripts From TMP Directory",
+  "description": "This incident means linux binaries or shell scripts were downloaded and executed from the TMP directory",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6f342905-acac-4a84-b8a9-94cc43ded866",
+      "name": "Detected Process Originating From TMP Directory",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1222",
+    "mitre.t1071",
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/08/14",
+  "lastUpdate": "2025-07-14T07:44:49.000Z"
+}

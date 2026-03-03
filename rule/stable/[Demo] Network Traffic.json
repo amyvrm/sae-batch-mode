@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2f12551b-588f-48ee-a8ea-cf3e139866d2",
+  "name": "Demo - Network Traffic",
+  "description": "TCP and UDP test traffic detected in the network.",
+  "filterSets": [
+    [
+      {
+        "id": "1bcd0548-cc04-451a-933d-c2176295915c",
+        "name": "Demo - TCP Test Filter",
+        "highlight": true
+      },
+      {
+        "id": "8a9c2f22-c338-46aa-b333-6dd5867565a8",
+        "name": "Demo - UDP Test Filter",
+        "highlight": true
+      },
+      {
+        "id": "50de1cd8-673e-42c7-a845-28da44cf0fce",
+        "name": "Host Sweep",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/09/29",
+  "lastUpdate": "2024-03-18T09:33:33.000Z"
+}

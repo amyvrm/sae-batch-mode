@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "96900f18-2999-4402-8264-781001e689e3",
+  "name": "Obfuscated Script Execution Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that blocks execution of potentially obfuscated scripts including PowerShell, JavaScript, and VBScript that may contain hidden malicious code",
+  "filterSets": [
+    [
+      {
+        "id": "a12c0d0a-b45e-4c06-98ff-d5c8ed693db0",
+        "name": "Obfuscated Script Execution Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-21T03:31:42.000Z"
+}

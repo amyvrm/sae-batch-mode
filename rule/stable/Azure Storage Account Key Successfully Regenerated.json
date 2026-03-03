@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cfe450e4-d909-4b69-993f-5ce53e2caf31",
+  "name": "Azure Storage Account Key Successfully Regenerated",
+  "description": "Azure Storage Account Key Successfully Regenerated",
+  "filterSets": [
+    [
+      {
+        "id": "30e06b6f-49d7-42ca-ad9f-84a47cc19aba",
+        "name": "Azure Storage Account Key Successfully Regenerated",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/27",
+  "lastUpdate": "2025-12-03T08:25:35.000Z"
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e733a9c3-ddb7-498a-a1ab-579093c5e5ef",
+  "name": "Detection for Metasploit Meterpreter",
+  "description": "Metasploit Meterpreter detected in endpoint.",
+  "filterSets": [
+    [
+      {
+        "id": "923b684b-7270-5d5f-94c6-77f0a7866e98",
+        "name": "Identified TCP Meterpreter Payload",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "pao",
+      "pds",
+      "pdi"
+    ]
+  ],
+  "author": "Jose Baena Cobos",
+  "team": "Cloud One",
+  "date": "2023/05/22",
+  "lastUpdate": "2024-03-12T09:41:21.000Z"
+}

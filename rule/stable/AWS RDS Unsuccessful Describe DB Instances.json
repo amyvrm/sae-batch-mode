@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "687d579e-922b-49e1-b2e1-c305756322e9",
+  "name": "AWS RDS Unsuccessful Describe DB Instances",
+  "description": "AWS Event describes that provisioned RDS instances.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS RDS Unsuccessful Describe DB Instances",
+        "id": "839a7e47-a185-4212-affd-992f506131a9",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

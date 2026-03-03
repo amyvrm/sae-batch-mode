@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "183e906d-61c1-4521-88dd-ff86d26c4093",
+  "name": "Suspicious File and Drive Copy for System Discovery",
+  "description": "Detects copying of file and drive information into a suspicious file for system discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "a79e74c7-ee06-4769-b25f-41f2e71b12cb",
+        "name": "Suspicious Drive Information Copy to a Suspicious File",
+        "highlight": true
+      },
+      {
+        "id": "6af2fcb7-d0a4-417f-bf45-bafd881ed522",
+        "name": "Suspicious File Copy to Remote Drive via System32 Executable",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/04/24",
+  "lastUpdate": "2024-05-29T02:11:08.000Z"
+}

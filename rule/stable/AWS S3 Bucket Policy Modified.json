@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01809cde-84d2-418a-ba87-d92b4363385c",
+  "name": "AWS S3 Bucket Policy Modified",
+  "description": "he encryption settings or policy of an S3 bucket was modified, which may indicate a security enhancement or an attempt to weaken data protection.",
+  "filterSets": [
+    [
+      {
+        "id": "94f05805-3481-4427-9301-a4b16cba1fbd",
+        "name": "AWS S3 Bucket Encryption Configuration Modified",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ec3d3165-b956-487a-ba0d-41ece01ded17",
+        "name": "AWS S3 Bucket Policy Successfully Applied",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-06-17T10:36:27.000Z"
+}

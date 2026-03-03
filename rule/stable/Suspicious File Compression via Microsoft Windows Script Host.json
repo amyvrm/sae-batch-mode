@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9bd9a788-5889-4d20-aaaf-b28d8e5c902f",
+  "name": "Suspicious File Compression via Microsoft Windows Script Host",
+  "description": "Detects suspicious compression of files via Microsoft Windows Script Host(WSH) CScript via services.exe which indicates possible data collection.",
+  "filterSets": [
+    [
+      {
+        "id": "9dd6ecb1-87f5-450a-9777-ac19b678282e",
+        "name": "Suspicious File Compression via Microsoft Windows Script Host",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/08/18",
+  "lastUpdate": "2026-01-12T07:25:16.000Z"
+}

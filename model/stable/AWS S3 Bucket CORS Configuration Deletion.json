@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f59464bd-845b-4178-964f-82af9d3df60f",
+  "name": "AWS S3 Bucket CORS Configuration Deletion",
+  "description": "The deletion of a Cross-Origin Resource Sharing (CORS) configuration from an S3 bucket alters how external applications access stored data. While this may result from routine configuration changes, it could also indicate an attempt to disrupt application functionality or restrict legitimate cross-origin access. Monitoring such actions helps detect potential security risks or unintended access disruptions.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "b6c5ae33-13ac-4c26-844c-f797408897ce",
+      "name": "AWS S3 Bucket CORS Configuration Deletion",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-29T15:07:44.000Z"
+}

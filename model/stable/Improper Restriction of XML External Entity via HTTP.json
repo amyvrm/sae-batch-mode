@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1f747e5f-6867-4f1e-b890-f5b2e42db3d1",
+  "name": "Improper Restriction of XML External Entity via HTTP",
+  "description": "An improper restriction of xml external entity for a certain product that results to an exploit via HTTP",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "a57eb765-ca6d-4b9c-b209-cef5dde55f9b",
+      "name": "Improper Restriction of XML External Entity via HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "threat.exploit",
+    "cve.2024.37397"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "silent": false,
+  "globalModel": true,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2024/12/16",
+  "lastUpdate": "2024-12-16T06:14:08.000Z"
+}

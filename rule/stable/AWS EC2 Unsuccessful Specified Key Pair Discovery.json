@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "06ceefda-25e6-11ee-be56-0242ac120002",
+  "name": "AWS EC2 Unsuccessful Specified Key Pair Discovery",
+  "description": "Detected AWS EC2 Unsuccessful Specified Key Pair Discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "e38c5139-a0ac-43f1-b34e-733d85568a75",
+        "name": "AWS EC2 Unsuccessful Specified Key Pair Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/10",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

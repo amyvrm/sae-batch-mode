@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "380ec23e-e59f-4a8c-b783-a7d65a0d740d",
+  "name": "Unusual SSH Traffic over Port 80 or Port 443",
+  "description": "SSH Traffic has been observed over non-standard ports 80 and 443, which is normally for HTTP and HTTPS, respectively and the internet destination is not known to be using this type of traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "7b34af34-0d03-4db5-8fbd-b0a141c0c4a8",
+        "name": "Unusual SSH Traffic over Port 80 or Port 443",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2024/08/29",
+  "lastUpdate": "2024-09-12T15:11:21.000Z"
+}

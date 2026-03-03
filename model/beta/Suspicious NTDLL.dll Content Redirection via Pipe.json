@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19aaeb91-ce1a-44f9-9d36-629db9d9a397",
+  "name": "Suspicious NTDLL.dll Content Redirection via Pipe",
+  "description": "Identifies attempts to evade endpoint protection by redirecting the contents of ntdll.dll to another file or pipe, as demonstrated in the NtdllPipe proof of concept. This technique may be used by adversaries to bypass anti-virus or EDR detection by leveraging legitimate system resources in an unusual manner.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e3400e76-0b21-4d79-862c-7c8d09ad6359",
+      "name": "Suspicious NTDLL.dll Content Redirection via Pipe",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1559.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/11/14",
+  "lastUpdate": "2025-11-21T07:20:02.000Z"
+}

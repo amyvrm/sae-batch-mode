@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ad492cf5-ac48-42eb-b0b6-5aed7a26e384",
+  "name": "MeshAgent Command Execution",
+  "description": "Detects the use of MeshAgent to execute commands on the target host, particularly when threat actors might abuse it to execute commands directly.",
+  "filterSets": [
+    [
+      {
+        "id": "f57eb044-5eb2-45be-ac3e-6c55adf38bc1",
+        "name": "MeshAgent Command Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/11/17",
+  "lastUpdate": "2024-12-10T12:17:17.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8896aa58-a613-4299-8418-12fc0277fd43",
+  "name": "AWS IAM Multiple Failed MFA Requests For A Root",
+  "description": "This model identifies multiple failed Multi-Factor Authentication (MFA) attempts for the root user in AWS Identity and Access Management (IAM), indicating potential security threats or challenges with authentication. By detecting such events, organizations can promptly investigate and mitigate unauthorized access attempts, enhancing overall security posture.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "e9d983f3-3bd2-4d99-a9e8-c76b3e3b76a9",
+      "name": "AWS IAM Multiple Failed MFA Requests For A Root",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1621",
+    "mitre.t1556.006"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "lastUpdate": "2025-09-12T08:03:37.000Z"
+}

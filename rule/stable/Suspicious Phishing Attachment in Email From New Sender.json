@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "711b5421-73c6-4ce6-9dcb-d1cb33328e59",
+  "name": "Suspicious Phishing Attachment in Email From New Sender",
+  "description": "Suspicious Phishing Attachment in Email From New Sender",
+  "filterSets": [
+    [
+      {
+        "id": "38a23dcb-62db-4ebc-8213-7abe0bdbb88b",
+        "name": "Suspicious Phishing Attachment From New Sender",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Marshall Chen",
+  "team": "Jaguar",
+  "date": "2020/09/21",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

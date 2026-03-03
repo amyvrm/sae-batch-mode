@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4d6e4c4e-82a7-4b28-8089-90259d7f0130",
+  "name": "Suspicious Installation of Huorong Antivirus",
+  "description": "Detects suspicious installation of Huorong Antivirus which is capable of terminating security agent processes and services.",
+  "filterSets": [
+    [
+      {
+        "id": "70d868c9-baf1-4294-a1db-a8a03efea7da",
+        "name": "Suspicious Installation of Huorong Antivirus",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2025/03/06",
+  "lastUpdate": "2025-03-10T07:14:12.000Z"
+}

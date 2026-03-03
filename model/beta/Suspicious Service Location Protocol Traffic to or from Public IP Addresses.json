@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ce0b50ec-25a1-11ee-be56-0242ac120002",
+  "name": "Supicious Service Location Protocol Traffic to or from Public IP Addresses",
+  "description": "Service Location Protocol traffic was detected originating from or going to a public IP address. This is abnormal activity as SLP is an intranetwork protocol.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "1f0a2f6e-25a1-11ee-be56-0242ac120002",
+      "name": "Service Location Protocol Abnormal Service Type Reply to a Public IP",
+      "score": 1
+    },
+    {
+      "id": "1f0a322a-25a1-11ee-be56-0242ac120002",
+      "name": "Service Location Protocol Registration Request from Public IP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1210"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Brandon Shores",
+  "team": "Cloud One",
+  "date": "2023/07/18",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

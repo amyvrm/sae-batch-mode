@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ba8d263e-7377-4fb7-9fcb-0d7ed9ef22b2",
+  "name": "Web Application Firewall Blocked Application By Address List",
+  "description": "Fortinet detection - Web application firewall blocked application by address list",
+  "filterSets": [
+    [
+      {
+        "id": "e85ae598-9589-44f4-8e25-56a774570f77",
+        "name": "Web Application Firewall Blocked Application By Address List",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

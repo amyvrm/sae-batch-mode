@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "27ca0146-ec83-4daa-9b6e-d3fbc5245abb",
+  "name": "Possible Account Compromise by Sending Phishing(Hybrid)",
+  "description": "Found internal mailbox sending phishing to others(both steaming and batch)",
+  "filterSets": [
+    [
+      {
+        "id": "e81a467a-bace-5f2e-874b-c07114940c25",
+        "name": "Mail Activity Anomaly of AD Account via Sent Bulk of Phishing or Malicious Emails",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "94ba80fa-4548-44ea-b618-c1b30efa2048",
+        "name": "Possible Account Compromise - Suspicious Link in Internal Spear Phishing Email",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 86400,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2024/06/20",
+  "lastUpdate": "2024-12-16T10:13:33.000Z"
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e51590ac-eb79-4c1f-ad54-57f617f1026c",
+  "name": "Suspicious Container Execution After Abuse of Docker REST API",
+  "description": "adversaries may deploy a new container to execute processes associated with a particular image or deployment, such as processes that execute or download malware.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "fcc5c690-47e8-458c-9c77-c5ab8f9bae4b",
+      "name": "Identified Creation Of Container Over Docker REST API",
+      "score": 5,
+      "sequence": 1
+    },
+    {
+      "id": "dc473e37-5988-4f30-9883-d9c2f2e8c33f",
+      "name": "Identified Malcious API Calls Over Docker REST API",
+      "score": 3,
+      "sequence": 2
+    },
+    {
+      "id": "e8b8cfaa-326c-4dc2-91bf-2f0ea517e328",
+      "name": "Script Download Via Curl or Wget",
+      "score": 1,
+      "sequence": 2
+    },
+    {
+      "id": "2789b3a1-a68d-4c6d-871e-b48e0bfb947d",
+      "name": "Docker Root Filesystem Binding",
+      "score": 1,
+      "sequence": 2
+    },
+    {
+      "id": "06ec5b68-ea65-11ed-a05b-0242ac120003",
+      "name": "Malware Detected On Endpoint Or Server",
+      "score": 1,
+      "sequence": 2
+    },
+    {
+      "id": "6d4b606f-4076-43cd-a97e-a1b22bd70796",
+      "name": "Possible Post-Exploitation Activities Detected",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 6,
+    "withinSeconds": 1800,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "stp",
+      "xcs",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1610",
+    "mitre.t1190",
+    "mitre.t1059.004",
+    "mitre.t1610",
+    "mitre.t1570",
+    "mitre.t1190",
+    "mitre.t1204.002",
+    "mitre.t1204",
+    "mitre.t1059",
+    "mitre.t1071.001",
+    "mitre.t1071",
+    "mitre.t1546.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/05/30",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

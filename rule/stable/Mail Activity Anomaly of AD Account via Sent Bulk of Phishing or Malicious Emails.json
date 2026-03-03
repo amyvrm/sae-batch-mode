@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aaf0603e-d747-48ad-9246-76c438d742eb",
+  "name": "Mail Activity Anomaly of AD Account via Sent Bulk of Phishing or Malicious Emails",
+  "description": "Detect an account who sent bulk emails with phishing/malicious signatures in one day, and exceeds than past 30 days. [Delayed alert: Batch process detection]",
+  "filterSets": [
+    [
+      {
+        "id": "e81a467a-bace-5f2e-874b-c07114940c25",
+        "name": "Mail Activity Anomaly of AD Account via Sent Bulk of Phishing or Malicious Emails",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "sem"
+    ]
+  ],
+  "author": "RungChi Chen",
+  "team": "Jaguar",
+  "date": "2020/12/18",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

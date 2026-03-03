@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a8896021-0d42-47a8-a745-ea123e17838b",
+  "name": "AWS EBS Snapshot Deletion Activity",
+  "description": "Deletion of Amazon EBS snapshots may indicate routine cleanup, cost optimization, or an attempt to remove recovery points as part of disruptive behavior by an attacker. This activity can impact data availability and limit the ability to recover from incidents or conduct effective investigations.",
+  "filterSets": [
+    [
+      {
+        "id": "46405bc3-a6ed-44cd-82ec-82e877c23ff0",
+        "name": "AWS EBS Snapshot Deletion Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-14T05:47:04.000Z"
+}

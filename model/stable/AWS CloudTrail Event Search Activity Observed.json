@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "84a8602b-8ecf-4bbc-8033-0b613b5a6f93",
+  "name": "AWS CloudTrail Event Search Activity Observed",
+  "description": "Detected AWS CloudTrail event search activity, which might indicate an attacker attempting to discover sensitive events, investigate prior activity, or gather information for further malicious actions from the cloudtrail logs.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "ca38bc0a-cde4-409e-af16-dfc20172b9d4",
+      "name": "AWS CloudTrail Event Search Activity Observed",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1654"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-09-12T08:03:37.000Z"
+}

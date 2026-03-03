@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eba0726f-d97d-44f7-913b-b0e7d43365a3",
+  "name": "Anomalous GetMac File Creation",
+  "description": "Detection for anomalous file creations from getmac.exe",
+  "filterSets": [
+    [
+      {
+        "id": "7d20c927-76a9-48bd-b493-74fddebb1491",
+        "name": "Behavior Monitoring Detection of Anomalous GetMac File Creation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f829e625-fb05-44d7-967a-098a14a78409",
+        "name": "Anomalous GetMac File Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/11/09",
+  "lastUpdate": "2023-11-20T03:43:23.000Z"
+}

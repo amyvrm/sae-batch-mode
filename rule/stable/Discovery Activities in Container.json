@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "id": "df68287f-af39-4a97-a9d0-4d101196ab1e",
+  "name": "Discovery Activities in Container",
+  "description": "Discovery consists of techniques an adversary may use to gain knowledge about the system and internal network.",
+  "filterSets": [
+    [
+      {
+        "id": "8d786851-a57b-414e-b95f-42a740ecc614",
+        "name": "File and Directory Discovery In Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9d6c1e9c-7d94-4fe5-828e-18feed8d26d8",
+        "name": "Network Configuration and Internet Connection Discovery In Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d4a90485-5ed9-4e8c-9a07-cdd84730a5dd",
+        "name": "Process Discovery In Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "35b029dc-3887-4044-a8a3-be3a60bda719",
+        "name": "System User Discovery in Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "812e539f-dd14-46e3-8240-17d4f099e109",
+        "name": "System Information Discovery In Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e591dd6d-50ee-43cf-b39d-fa1d3c1c03df",
+        "name": "System Network Connections Discovery In Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2023/07/31",
+  "lastUpdate": "2024-08-19T07:08:52.000Z"
+}

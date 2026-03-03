@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a442d0bf-0cf6-4e6c-9e3b-04f9126abaf8",
+  "name": "Lateral Movement Via PsExec",
+  "description": "Detects PsExec Execution over the network",
+  "filterSets": [
+    [
+      {
+        "id": "8f9ad0ad-1e4b-42fe-9621-1e3fb6ba7a26",
+        "name": "PsExec Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b17ad82b-0db9-4c07-8984-5b49dc096442",
+        "name": "PsExec over SMB",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "pdi",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-06-21T05:14:40.000Z"
+}

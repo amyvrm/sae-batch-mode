@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d7c8fd12-2c6c-47ff-8ba8-b262cd26405a",
+  "name": "File Modification in Container",
+  "description": "Detects unexpected attribute changes or changes to configuration files the in container.",
+  "filterSets": [
+    [
+      {
+        "id": "934e3e0d-9b79-55a8-9551-dbca33a8f18f",
+        "name": "File Modification in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/07/19",
+  "lastUpdate": "2023-09-18T04:02:58.000Z"
+}

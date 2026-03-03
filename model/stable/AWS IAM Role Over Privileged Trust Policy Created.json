@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "49618eb4-edbf-4b2f-80ec-72fc48431e42",
+  "name": "AWS IAM Role Over Privileged Trust Policy Created",
+  "description": "Detected the creation of an excessively permissive trust policy for a role, which might indicate the installation of a backdoor by an attacker to assume that role from any external aws account later and potentially compromise the target aws account further.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "32e2efca-14c5-4ed5-a420-85facdbcf702",
+      "name": "AWS IAM Role Over Privileged Trust Policy Created",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1078.004",
+    "mitre.t1098.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

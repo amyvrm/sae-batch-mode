@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4ef712eb-151e-4c68-bcb6-4a84b78b7ee6",
+  "name": "Potential IT Workers APT Phishing Attempt",
+  "description": "Detects potential phishing attempts linked to North Korea IT workers, based on common tactics and techniques.",
+  "filterSets": [
+    [
+      {
+        "id": "0c7f7314-cb89-4972-9d34-1448fd07980d",
+        "name": "Potential IT Workers APT Phishing Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xms",
+      "sjg",
+      "sca",
+      "sem"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2025/10/28",
+  "lastUpdate": "2025-11-06T05:18:50.000Z"
+}

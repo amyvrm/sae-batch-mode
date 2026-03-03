@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e9d983f3-3bd2-4d99-a9e8-c76b3e3b76a9",
+  "name": "AWS IAM Multiple Failed MFA Requests For A Root",
+  "description": "Detects repeated failed Multi-Factor Authentication (MFA) attempts for the root user in AWS IAM, highlighting potential security risks and authentication issues",
+  "filterSets": [
+    [
+      {
+        "id": "9c96391d-6d8e-41a8-8f02-bccc37c43680",
+        "name": "AWS IAM Failed MFA Requests For A Root",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/04/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

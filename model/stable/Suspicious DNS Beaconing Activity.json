@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ae4590fd-4a58-4729-a717-a46afd3a3277",
+  "name": "Suspicious DNS Beaconing Activity",
+  "description": "Detects suspicious DNS queries known from Cobalt Strike beacons.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e9e4b4cc-799b-4276-8956-87610023795a",
+      "name": "Suspicious DNS Beaconing Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055",
+    "mitre.t1071",
+    "mitre.t1071.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Bahaa Yamany & Jack Walsh",
+  "team": "MENA-IR",
+  "date": "2024/11/12",
+  "lastUpdate": "2025-02-24T04:10:27.000Z"
+}

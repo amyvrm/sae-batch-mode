@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e4616804-bc7a-46f6-b4b6-84c1d60dc226",
+  "name": "AWS EC2 Key Pair Deletion Activity",
+  "description": "An EC2 key pair was deleted, which may impact access to associated instances.",
+  "filterSets": [
+    [
+      {
+        "id": "eddc2905-0128-4917-bcfc-809e6dda8348",
+        "name": "AWS EC2 Key Pair Deletion Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

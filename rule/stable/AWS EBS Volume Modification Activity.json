@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "75d4b079-fdea-42e4-9b80-a6c50e81e343",
+  "name": "AWS EBS Volume Modification Activity",
+  "description": "Monitors for modifications to Amazon EBS volumes, which could indicate legitimate resizing or performance tuning, or unauthorized changes attempting to disrupt storage configurations.",
+  "filterSets": [
+    [
+      {
+        "id": "066cfcfd-8b2c-45f1-a33b-9f70e30558a2",
+        "name": "AWS EBS Volume Modification Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/28",
+  "lastUpdate": "2025-09-08T06:00:50.000Z"
+}

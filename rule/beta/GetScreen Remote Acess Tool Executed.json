@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3d2a0fa9-2181-476d-86d2-44b67b4eea19",
+  "name": "GetScreen Remote Acess Tool Executed",
+  "description": "A Generic Remote Acess tools was executed on the endpoint.",
+  "filterSets": [
+    [
+      {
+        "id": "a8629984-3414-4332-ad2b-01c797adcddb",
+        "name": "Remote Connection via GetScreen",
+        "highlight": true
+      },
+      {
+        "id": "b3d3b637-1031-49fd-b3b7-6b0ed88f2a75",
+        "name": "GetScreen Process Executed",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Rafael Pereira",
+  "team": "US-IR",
+  "date": "2025/07/18",
+  "lastUpdate": "2025-11-14T05:42:39.000Z"
+}

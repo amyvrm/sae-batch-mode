@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0671ead5-da3e-482a-b303-5aa0ae67b7cf",
+  "name": "Windows Event Logs Clearing",
+  "description": "Detects clearing of Windows Event Logs invoked by command line cl with the 3 system-defined sources of events System, Application, and Security.",
+  "filterSets": [
+    [
+      {
+        "id": "c8bd52a9-cbef-40b0-b947-71e0215ab266",
+        "name": "Windows Event Logs Clearing",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/06/27",
+  "lastUpdate": "2025-07-07T08:48:15.000Z"
+}

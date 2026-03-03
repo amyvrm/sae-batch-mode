@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2d0d6991-0234-41a7-ad6d-e65765359d78",
+  "name": "Possible Usage of Port Scanning Tool",
+  "description": "Detects tools being used for scanning opened ports and reachable IP addresses.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6dbc22c2-37fe-4fda-a424-f90d2806d9f7",
+      "name": "Suspicious Tool for IP Address Discovery",
+      "score": 5
+    },
+    {
+      "id": "8c8e580a-bbbc-4888-b3f2-76b8ff4338f2",
+      "name": "Suspicious File Create After Tool Execution for IP Address Discovery",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 15,
+    "withinSeconds": 900,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1569.002",
+    "mitre.t1021.002",
+    "mitre.t1571",
+    "mitre.t1046",
+    "mitre.t1570"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Renzell David Barros & Albert Lance Mendoza",
+  "team": "AMEA-IR",
+  "date": "2024/10/30",
+  "lastUpdate": "2025-09-08T07:17:48.000Z"
+}

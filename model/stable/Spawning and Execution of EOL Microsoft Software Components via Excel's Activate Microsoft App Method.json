@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f62969d8-58e4-4f3b-b108-869c06b83957",
+  "name": "Spawning and Execution of EOL Microsoft Software Components via Excel's Activate Microsoft App Method",
+  "description": "Detects Activate Microsoft App method, one of Excel's Distributed Component Model (DCOM), to execute End-of-Life Microsoft software components.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "308a8046-744c-44bd-9295-064185110181",
+      "name": "Suspicious Execution of EOL Microsoft Software Components via Activate Microsoft App Method",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "3ef70103-aaa3-4213-b2c2-b589f2692bfa",
+      "name": "Spawning of EOL Microsoft Software Components via Excel.exe",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1036",
+    "mitre.t1036.005",
+    "mitre.t1072"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/06/05",
+  "lastUpdate": "2024-08-21T05:38:54.000Z"
+}

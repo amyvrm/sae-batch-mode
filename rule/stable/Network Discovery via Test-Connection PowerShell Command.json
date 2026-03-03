@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "205fe656-ceec-4e4a-9f8a-0b49eab33462",
+  "name": "Network Discovery via Test-Connection PowerShell Command",
+  "description": "It detects the usage of the PowerShell Test-Connection command to perform network discovery",
+  "filterSets": [
+    [
+      {
+        "id": "56d703dd-543f-44c6-976f-5ba83a43ad02",
+        "name": "Network Discovery via Test-Connection PowerShell Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/26",
+  "lastUpdate": "2024-04-03T17:36:18.000Z"
+}

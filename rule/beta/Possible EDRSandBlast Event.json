@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f431ec77-b606-4e63-90b4-49574e6ff339",
+  "name": "Possible EDRSandBlast Event",
+  "description": "Detects known vulnerable driver file creation related to EDRSandBlast and elavating it as a service which to disable kernel callbacks to evade EDR detections",
+  "filterSets": [
+    [
+      {
+        "id": "08e1953c-4755-421a-9a4b-c10ec2407af6",
+        "name": "Possible EDRSandBlast Registry Event",
+        "highlight": true
+      },
+      {
+        "id": "ab24e168-925d-4cb2-a028-28758ffc4676",
+        "name": "Suspicious Driver File Creation Event",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "ab24e168-925d-4cb2-a028-28758ffc4676.objectFilePath contains 08e1953c-4755-421a-9a4b-c10ec2407af6.objectRegistryData"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/10/04",
+  "lastUpdate": "2025-06-10T06:12:35.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0492b75c-5a14-11ef-b864-0242ac120002",
+  "name": "Possible Dropping of Vulnerable Antivirus Drivers",
+  "description": "Exploiting vulnerable drivers to deploy malicious payloads or hacking tools, thereby bypassing security measures and escalating its malicious activities.",
+  "filterSets": [
+    [
+      {
+        "id": "32eda12a-2418-11ef-9454-0242ac120002",
+        "name": "Possible Dropping of Vulnerable Twister Antivirus Drivers",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/08/19",
+  "lastUpdate": "2024-08-29T05:17:47.000Z"
+}

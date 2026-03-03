@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0190a2e4-4ba3-70b5-951d-5e39b317209e",
+  "name": "Privileged User Added to Passwd File",
+  "description": "A user with User ID and Group ID both set to 0 is added to /etc/passwd.",
+  "filterSets": [
+    [
+      {
+        "id": "0190a24b-15ce-7bcf-9a85-0592a98e9423",
+        "name": "Privileged User Added to Passwd File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/07/11",
+  "lastUpdate": "2024-07-16T05:40:37.000Z"
+}

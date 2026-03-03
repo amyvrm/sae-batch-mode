@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "51a68f78-fc50-4ae0-9e92-35ae4c20a782",
+  "name": "Jenkins Extra Columns Plugin Stored XSS Stage 1",
+  "description": "Jenkins Extra Columns Plugin Stored CSS Stage 1",
+  "filterSets": [
+    [
+      {
+        "id": "c25c2b18-b907-453b-a7f8-eb589a7bf3f1",
+        "name": "Jenkins Extra Columns Plugin Stored XSS Stage 1",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2021/08/19",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

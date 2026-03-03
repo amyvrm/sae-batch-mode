@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "673b0f65-7934-4886-b008-4c363bbc9eb3",
+  "name": "AWS S3 Server Access Logging Disabled For A Bucket",
+  "description": "Detects instances where server access logging is disabled for an Amazon S3 bucket. Indicates a potential security misconfiguration or an attempt to conceal access activities. Attacker can compromises visibility into S3 bucket access, hindering audit trails and accountability for data interactions.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS S3 Server Access Logging Disabled For A Bucket",
+        "id": "b9038053-9fe0-4ab9-a8a7-9e7d1b75bbc7",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2024/01/11",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

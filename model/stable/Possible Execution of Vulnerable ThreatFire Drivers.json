@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b960ff41-5e55-44ec-833f-763a2d0e1e4b",
+  "name": "Possible Execution of Vulnerable ThreatFire Drivers",
+  "description": "Detects presence and usage of ThreatFire drivers which is capable of terminating security agent processes and services",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2833b060-ddaf-4b3f-844e-360cfdc08ef6",
+      "name": "Disabling AV Security Product via Vulnerable ThreatFire Drivers",
+      "score": 1
+    },
+    {
+      "id": "d6010491-91fb-45dc-b75f-2f03d115618b",
+      "name": "Possible Installation of Vulnerable ThreatFire Drivers",
+      "score": 1
+    },
+    {
+      "id": "1e49313f-a1df-454b-bc48-7ca9d74c1c39",
+      "name": "Suspicious Dropping of Vulnerable ThreatFire Drivers",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001",
+    "threat.exploit"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/07",
+  "lastUpdate": "2025-05-28T01:43:15.000Z"
+}

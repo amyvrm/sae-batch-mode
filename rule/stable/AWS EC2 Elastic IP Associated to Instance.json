@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "da544930-4557-4255-8985-e45a2159f912",
+  "name": "AWS EC2 Elastic IP Associated to Instance",
+  "description": "Detects the association of an Elastic IP to an EC2 instance, which can be used for legitimate networking configurations or for malicious activities like evasion and persistence.",
+  "filterSets": [
+    [
+      {
+        "id": "94213dd2-4eee-409f-95c1-7671232d2f5e",
+        "name": "AWS EC2 Elastic IP Associated to Instance",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/03/20",
+  "lastUpdate": "2025-06-17T10:36:27.000Z"
+}

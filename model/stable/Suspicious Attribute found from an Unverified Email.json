@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "id": "23c2012f-fbf0-44d8-9c83-4c970e85c418",
+  "name": "Suspicious Attribute found from an Unverified Email",
+  "description": "Fortinet and Trend Micro Detection for Suspicious Attribute found from an Unverified Email",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "28408732-cc17-4fc1-bf53-4acfd77a2dd8",
+      "name": "Anti-Spam Couldnt Determine The Legitimacy Of The Email",
+      "score": 5
+    },
+    {
+      "id": "5f52d1f1-53e7-411a-b74f-745ee81fa30b",
+      "name": "Possible SpearPhishing Email",
+      "score": 1
+    },
+    {
+      "id": "6b6db77b-bb15-4304-a4f6-becab420d617",
+      "name": "Spearphishing Attachment",
+      "score": 1
+    },
+    {
+      "id": "4164a657-919a-44f0-b899-31b031bd6231",
+      "name": "HTML File from Email Attachment Archive",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 6,
+    "withinSeconds": 4000,
+    "dedupSeconds": 4000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet",
+      "xes",
+      "sca",
+      "xms",
+      "sao",
+      "sds",
+      "sem"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/19",
+  "lastUpdate": "2025-07-03T09:29:10.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6bd7b105-5bb2-41de-b442-084bb94c4217",
+  "name": "Download Suspicious File Via Python",
+  "description": "Adversaries can use these libraries to download and execute commands or other scripts as well as perform various malicious behaviors.",
+  "filterSets": [
+    [
+      {
+        "id": "735208ee-979b-41ec-9f9f-135a4cd8addb",
+        "name": "Download Suspicious File Via Python",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/06/04",
+  "lastUpdate": "2024-08-21T06:52:33.000Z"
+}

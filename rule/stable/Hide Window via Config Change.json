@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2a5102f8-a27e-48ef-bd79-273f8383bce4",
+  "name": "Hide Window via Config Change",
+  "description": "Change application config for hiding",
+  "filterSets": [
+    [
+      {
+        "id": "390714a4-ff07-41ea-875d-787b8ad91447",
+        "name": "Modifying Info Plist",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/09/30",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

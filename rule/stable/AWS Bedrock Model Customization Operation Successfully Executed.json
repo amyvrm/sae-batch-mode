@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "845ee5ac-2c9e-454a-8094-34b82e196564",
+  "name": "AWS Bedrock Model Customization Operation Successfully Executed",
+  "description": "Identifies successful execution of model customization operations in AWS Bedrock.",
+  "filterSets": [
+    [
+      {
+        "id": "7fa11229-f7d5-4377-b9ef-80b60767a11b",
+        "name": "AWS Bedrock Model Customization Operation Successfully Executed",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/13",
+  "lastUpdate": "2025-01-21T13:11:52.000Z"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1ef459a3-62f2-479d-8759-426eeb2e02a9",
+  "name": "AWS SageMaker Successful Notebook Instance Created or Updated with GitHub Code Repository",
+  "description": "Detects successful update or creation of a notebook instance in AWS SageMaker with an attached GitHub code repository",
+  "filterSets": [
+    [
+      {
+        "id": "a7a31fb8-d5b8-45cc-a678-6579aae89cb4",
+        "name": "AWS SageMaker Successful Notebook Instance Created with GitHub Code Repository",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f21d9ccb-7fc7-452c-bd14-0e0c29e566ec",
+        "name": "AWS SageMaker Successful Notebook Instance Updated with GitHub Code Repository",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/28",
+  "lastUpdate": "2025-01-21T13:11:52.000Z"
+}

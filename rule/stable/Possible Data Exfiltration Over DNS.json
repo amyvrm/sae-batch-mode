@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c4fb8b23-2f33-4a77-ad8e-151a3a240d30",
+  "name": "Possible Data Exfiltration Over DNS",
+  "description": "Possible Data Exfiltration over DNS has been detected over the network.",
+  "filterSets": [
+    [
+      {
+        "id": "f21a8e44-f065-4359-b5b4-d3458e0b369b",
+        "name": "Possible Data Exfiltration over DNS",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/04/07",
+  "lastUpdate": "2025-06-02T10:41:29.000Z"
+}

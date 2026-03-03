@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "93ac903e-48d4-4dcb-9a74-96cc5acd2fbd",
+  "name": "Nestea Teardrop Attack",
+  "description": "SonicWall Detection - Nestea/Teardrop attack dropped",
+  "filterSets": [
+    [
+      {
+        "id": "fd5e7b37-63ca-47a4-b53b-566dceaecb2c",
+        "name": "Nestea Teardrop Attack",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

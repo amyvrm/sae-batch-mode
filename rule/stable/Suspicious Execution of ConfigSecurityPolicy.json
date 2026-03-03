@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e221593f-f0f5-4595-87c1-0adb7a96815d",
+  "name": "Suspicious Execution of ConfigSecurityPolicy",
+  "description": "Possible data exfiltration or download of suspicious payload using the binary part of Windows Defender.",
+  "filterSets": [
+    [
+      {
+        "id": "ef7bc9a9-8aa4-468f-8e50-a04d6b509b1b",
+        "name": "Suspicious Execution of ConfigSecurityPolicy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2024/11/15",
+  "lastUpdate": "2025-06-16T05:58:18.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7a91332b-639f-4226-a330-9a3c613eb88f",
+  "name": "AWS IAM Create Login Profile Attempt Unsuccessful",
+  "description": "Detected AWS IAM Create Login Profile Attempt Unsuccessful to login through AWS Console.",
+  "filterSets": [
+    [
+      {
+        "id": "461145ed-fc35-4cac-8a08-51ba2f2a8c56",
+        "name": "AWS IAM Create Login Profile Attempt Unsuccessful",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/09/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

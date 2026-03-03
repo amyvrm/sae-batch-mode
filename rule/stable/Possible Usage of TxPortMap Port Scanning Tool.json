@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bfc753ac-a668-48cc-baa1-72f5470cb3ff",
+  "name": "Possible Usage of TxPortMap Port Scanning Tool",
+  "description": "A file attributed to TxPortMap scanning tool was created.",
+  "filterSets": [
+    [
+      {
+        "id": "6e55839c-efb7-4ac0-98f1-0568e212e68e",
+        "name": "Possible Usage of TxPortMap Port Scanning Tool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds",
+      "sds"
+    ]
+  ],
+  "author": "Gabriel Cardoso",
+  "team": "US-IR",
+  "date": "2025/03/10",
+  "lastUpdate": "2025-07-14T08:47:52.000Z"
+}

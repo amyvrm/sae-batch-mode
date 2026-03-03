@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d2a209cc-2046-4a81-9a27-c2158613adb7",
+  "name": "File Transfer via SQL Manipulation Tool and SQL Injection",
+  "description": "Detects usage of rundll.exe, which is used to insert copies of malicious files to the database server via SQL Injection.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3bd4c54d-6df8-4639-a775-c290895f8e23",
+      "name": "Execution of SQL Manipulation Tool for File Transfer",
+      "score": 1
+    },
+    {
+      "id": "d13e88f8-35a6-4922-87f4-a97f11661b43",
+      "name": "Execution of SQL Injection for Generating Malicious Files",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gerardo III Jonieca & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/11/04",
+  "lastUpdate": "2025-11-27T09:47:49.000Z"
+}

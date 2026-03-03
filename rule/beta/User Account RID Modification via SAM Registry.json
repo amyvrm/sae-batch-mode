@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3461ec0d-fa7b-4f58-8cbe-6832f42ed66e",
+  "name": "User Account RID Modification via SAM Registry",
+  "description": "Detects modifications to the Relative Identifier (RID) of user accounts in the Security Account Manager (SAM) registry. Such activity poses a significant risk as it can be used to escalate privileges or impersonate other accounts, potentially leading to unauthorized access and control over the system.",
+  "filterSets": [
+    [
+      {
+        "id": "130a4620-3265-4deb-8ed9-648b07bdc5de",
+        "name": "User Account RID Modification via SAM Registry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Shaun Eris Galura",
+  "team": "AMEA-IR",
+  "date": "2025/01/26",
+  "lastUpdate": "2025-03-05T06:42:54.000Z"
+}

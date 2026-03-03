@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "74afde4c-c80b-41ea-b247-3664750a3ec8",
+  "name": "Account Access Failure Analysis",
+  "description": "McAfee detection for failed logon attempts on Windows systems due to invalid domain usernames. These rules help identify potential unauthorized access or brute force attacks targeting domain accounts.",
+  "filterSets": [
+    [
+      {
+        "id": "1248e9e4-50c5-4925-a011-82801e9471db",
+        "name": "Windows Security Auditing - Failed Logon Due To Invalid Domain Username",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc|McAfee"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2026/02/10",
+  "lastUpdate": "2026-02-10T13:36:06.000Z"
+}

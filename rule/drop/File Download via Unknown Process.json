@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "edf2f944-78e7-4e3b-9989-29ba7c300288",
+  "name": "File Download via Unknown Process",
+  "description": "An unrecognized process was observed downloading and creating an executable file. This activity may indicate a typical software installation or potential malicious activity.",
+  "filterSets": [
+    [
+      {
+        "id": "615d0e70-fc84-4a75-b788-48f13f7537f1",
+        "name": "File Download via Unknown Process",
+        "highlight": true
+      },
+      {
+        "id": "b3f9d814-567d-525c-94fc-941039fffe67",
+        "name": "Ingress Tool Transfer",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "615d0e70-fc84-4a75-b788-48f13f7537f1.processFilePath equals b3f9d814-567d-525c-94fc-941039fffe67.processFilePath"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "author": "Benson Sy",
+  "team": "SAE Threat Expert",
+  "date": "2025/08/15",
+  "lastUpdate": "2025-12-12T07:38:26.000Z"
+}

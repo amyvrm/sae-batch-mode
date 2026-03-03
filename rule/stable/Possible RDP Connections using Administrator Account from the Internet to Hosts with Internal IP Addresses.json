@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2e416e20-048c-4271-b81c-d564909e0be9",
+  "name": "Possible RDP Connections using Administrator Account from the Internet to Hosts with Internal IP Addresses",
+  "description": "An external host has been observed connecting to an internal host with a private IP address using RDP and logging in as the BUILTIN Administrator account.",
+  "filterSets": [
+    [
+      {
+        "id": "9316d260-8041-42ba-b73d-4408f8ff5f35",
+        "name": "Connect to Internet Facing RDP Server with Private IP Using BUILTIN Administrator",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2024/04/10",
+  "lastUpdate": "2024-04-26T08:09:22.000Z"
+}

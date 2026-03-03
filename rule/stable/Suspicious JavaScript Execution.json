@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c9fbe568-47be-45d3-acc9-ab302ce39203",
+  "name": "Suspicious JavaScript Execution",
+  "description": "Invocation of a suspicious JavaScript, that may be indicative of a loader or downloader.",
+  "filterSets": [
+    [
+      {
+        "id": "c028e4a0-9052-4e2e-b5b9-4cf66df593eb",
+        "name": "Suspicious JavaScript Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b0df89b2-026d-4f19-bf15-7ec50aa9b353",
+        "name": "Suspicious JavaScript Execution - AMSI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/05/10",
+  "lastUpdate": "2024-05-17T01:20:59.000Z"
+}

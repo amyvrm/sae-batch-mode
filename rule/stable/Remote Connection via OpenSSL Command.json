@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0191c7cb-e171-77a3-bbf9-1845c70f9804",
+  "name": "Remote Connection via OpenSSL Command",
+  "description": "Detects Remote Connection via OpenSSL Command",
+  "filterSets": [
+    [
+      {
+        "id": "bb56409c-5832-43ac-98f7-0457333db4db",
+        "name": "Remote Connection via OpenSSL Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/09/06",
+  "lastUpdate": "2024-09-16T14:11:11.000Z"
+}

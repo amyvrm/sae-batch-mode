@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "79fb488e-77f8-40c7-8261-3ae6c968f401",
+  "name": "Illegal SPI",
+  "description": "SonicWall Detection - illegal IPsec SPI",
+  "filterSets": [
+    [
+      {
+        "id": "b1dbaff6-d456-4b2b-93e5-58a717c859e2",
+        "name": "Illegal SPI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "07952532-dc44-45fa-8866-15abb4187d04",
+  "name": "Suspicious DLL Side Loading via Renamed VLC Application",
+  "description": "Detects suspicious DLL side loading via renamed VLC media player application which indicates possible attack.",
+  "filterSets": [
+    [
+      {
+        "id": "7108f67a-91c2-4b3c-ad90-824b95600a8f",
+        "name": "Suspicious DLL Side Loading via Renamed VLC Application",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2026/01/27",
+  "lastUpdate": "2026-01-27T09:19:31.000Z"
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "04ee3845-a5b1-48d1-a5b7-0977343479d2",
+  "name": "Possible Command and Control Activity via Velociraptor",
+  "description": "Execution of Velociraptor DFIR tool which can be abused for C2 communication.",
+  "filterSets": [
+    [
+      {
+        "id": "4ec42730-8656-4532-8e8e-94b51d737a9e",
+        "name": "Possible Command and Control Activity via Velociraptor",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Mahmoud Soheem & Sherif Magdy",
+  "team": "MENA-IR",
+  "date": "2025/08/29",
+  "lastUpdate": "2025-12-29T13:49:53.000Z"
+}

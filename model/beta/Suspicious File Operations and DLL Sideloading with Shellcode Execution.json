@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f47cae32-9b1d-401e-97d2-7df57a6e21ce",
+  "name": "Suspicious File Operations and Dll Sideloading with Shellcode Execution",
+  "description": "Detects suspicious file operations in public directories using commands like xcopy, ren, and start, often linked to malware staging. Also flags execution of renamed executables and DLLs used for DLL sideloading and stealthy shellcode injection under legitimate-looking filenames.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2581d6ca-de5d-4c5b-bf22-5a8d6c364e3f",
+      "name": "Suspicious File Copying and Renaming in Public Directory",
+      "score": 1
+    },
+    {
+      "id": "ed5b6a5f-0a60-47fd-bc7e-ce8795eefbd4",
+      "name": "DLL Sideloading and Shellcode Execution",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1036.005",
+    "mitre.t1574.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mary Joy Ramos & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/08/07",
+  "lastUpdate": "2025-10-09T11:17:10.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bc0cef2b-1ef5-4533-8324-133eff99f874",
+  "name": "Suspicious Outbound Traffic From Print Spooler Service",
+  "description": "This rule detects outbound activity originating from Print Spooler service.",
+  "filterSets": [
+    [
+      {
+        "id": "23a2b7f8-7533-4178-9181-8baa392e37b5",
+        "name": "Suspicious Outbound Traffic From Print Spooler",
+        "highlight": true
+      }
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/07/19",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

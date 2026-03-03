@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cfbd6d41-6c4a-4d49-8c8a-c3e88f3cd3b9",
+  "name": "Possible ProcTerminator Activities",
+  "description": "Detects known process termination being done by ProcTerminator hacktool to AV products using the '-p' argument as well as the Persistence mechanism event of the tool wherein it registers the vulnerable system driver in the registry.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "a6719ce7-d259-439c-a95c-5b06d394ed54",
+      "name": "Possible Procterminator Registry Activity",
+      "score": 1
+    },
+    {
+      "id": "9f48de0a-29f8-46ba-9b1f-0795e60ac0ba",
+      "name": "Possible Process Termination via ProcTerminator",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001",
+    "mitre.t1068",
+    "mitre.t1547.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/06/24",
+  "lastUpdate": "2024-07-11T05:19:17.000Z"
+}

@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ad732eea-2ff8-4408-8967-4db91ac06b56",
+  "name": "Possible Ransomware Attack Indicators via Legitimate Tools - Beta",
+  "description": "Multiple endpoint detections were found which is a components before a possible ransomware attack.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "c8135d0d-f0d7-4d93-a29a-2bf9a334bcb3",
+      "name": "Mimikatz or LaZagne Detection",
+      "score": 2
+    },
+    {
+      "id": "b9c65695-af5a-413e-af09-d83289d6fada",
+      "name": "Process Hacker Detection",
+      "score": 1
+    },
+    {
+      "id": "8f34f9b8-1dac-4d47-84aa-e7c315408a79",
+      "name": "SMBTool Detection",
+      "score": 1
+    },
+    {
+      "id": "4cdb5667-32f8-45e2-8d98-b15c423759cc",
+      "name": "Password Recovery Hacking Tool Detection - Beta",
+      "score": 1
+    },
+    {
+      "id": "90912953-8615-4336-8a40-648dbeb53ab5",
+      "name": "Batch File Detection by Nefilim Malware",
+      "score": 1
+    },
+    {
+      "id": "ea77f2c1-3b81-48bb-864a-184b0fa03b3e",
+      "name": "Cobalt Strike Detections",
+      "score": 2
+    },
+    {
+      "id": "30784631-590f-43ce-9381-51238671b7d9",
+      "name": "AdFind Activities",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 86400,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "pdi",
+      "stp",
+      "ptp",
+      "pts",
+      "sts",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1204.002"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Jon Laurin",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2024-04-08T03:32:30.000Z"
+}

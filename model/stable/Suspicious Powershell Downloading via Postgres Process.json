@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "916aa160-3952-467d-80d2-34a82dd01a65",
+  "name": "Suspicious Powershell Downloading via Postgres Process",
+  "description": "Detects Powershell Downloading via Postgres Process",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1f92532e-a63f-4323-b101-3878bc6ba170",
+      "name": "Suspicious Powershell Downloading via Postgres Process",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1499.004",
+    "mitre.t1086"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2025/10/13",
+  "lastUpdate": "2025-11-11T09:50:19.000Z"
+}

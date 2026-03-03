@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "07dfe8ec-b820-4be2-9378-298c712cb6c0",
+  "name": "URL Blocked By Websense Service",
+  "description": "Fortinet detection - URL blocked by Websense service",
+  "filterSets": [
+    [
+      {
+        "id": "2d6989e0-6353-452f-b47f-8d9fd9dd4c98",
+        "name": "URL Blocked By Websense Service",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

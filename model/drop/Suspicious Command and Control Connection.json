@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "87fe4a02-b22a-456f-93fc-81040dfaa25b",
+  "name": "[DROP] Suspicious Command and Control Connection",
+  "description": "A suspicious connection to a known command and control server was detected.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "7147ad69-0cb1-4305-86c6-94aa8901806f",
+      "name": "Suspicious Command and Control Connection",
+      "score": 10
+    },
+    {
+      "id": "cb34c5de-d134-49ef-a8c6-2a7f06633033",
+      "name": "Possible Command and Control Connection via DNS TXT",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Carmi Mora",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2023-04-12T03:15:34.000Z"
+}

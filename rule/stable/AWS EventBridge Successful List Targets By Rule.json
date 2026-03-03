@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aac0c75a-9b58-4dd1-98bf-85d45801a6a5",
+  "name": "AWS EventBridge Successful List Targets By Rule",
+  "description": "Detects listing of targets for a specific EventBridge rule, which may help attackers identify event-driven resources that can be exploited or disrupted.",
+  "filterSets": [
+    [
+      {
+        "id": "964b2d2b-3ade-4174-a073-0b08d9d29751",
+        "name": "AWS EventBridge Successful List Targets By Rule",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-07-31T08:55:45.000Z"
+}

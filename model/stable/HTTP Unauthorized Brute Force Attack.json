@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "57981f51-345e-4b25-89cb-9231a3b27090",
+  "name": "HTTP Unauthorized Brute Force Attack",
+  "description": "Palo Alto Networks detection for HTTP Unauthorized Brute Force Attack",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3dab1687-7f11-4365-b9c4-7fa47c9bbb45",
+      "name": "HTTP Unauthorized Brute Force Attack",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2025/02/05",
+  "lastUpdate": "2025-04-07T00:29:38.000Z"
+}

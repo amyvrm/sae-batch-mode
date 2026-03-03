@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e922b571-6f11-4c60-9d67-05c3fe87bc4f",
+  "name": "AWS SageMaker Unsuccessful Code Repository Enumeration Detected",
+  "description": "Detects unsuccessful enumeration of code repository in AWS SageMaker service, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "a19c7b48-8960-4af3-a8bd-0b626337f1b7",
+        "name": "AWS SageMaker Unsuccessful Code Repository Enumeration Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/17",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

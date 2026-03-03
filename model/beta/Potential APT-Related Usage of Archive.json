@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "id": "93636651-cd29-42dd-ab30-4183e58be517",
+  "name": "Potential APT-Related Usage of Archive",
+  "description": "Detection of a shortcut in an archive that uses CMD to reconstruct a payload from an environment variable and persists via a scheduled task. Usually related to the Kimsuky group.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2159fad1-5ea8-4a79-b01b-6b07ae89d37e",
+      "name": "Suspicious Shortcut File",
+      "score": 1
+    },
+    {
+      "id": "361bce76-51a1-41e5-a4d2-871f3aba79bd",
+      "name": "Scheduled Task Executed From A Suspicious Location",
+      "score": 1
+    },
+    {
+      "id": "98518c81-fa9d-4dd1-b181-e44d661f1726",
+      "name": "Encrypted/Compressed String in Command Line",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1204.002",
+    "mitre.t1059.003",
+    "mitre.t1053.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "ac93f324-42ee-4947-bc73-22e9a726f3ae",
+      "name": "Network Enrichment Playbook",
+      "provider": "WORKBENCH",
+      "type": "NETWORK_ENRICHMENT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Simon Dulude",
+  "team": "Cloud One",
+  "date": "2025/10/30",
+  "lastUpdate": "2026-01-12T06:43:19.000Z"
+}

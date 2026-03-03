@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b171a3b9-c8aa-484d-9dd7-5567dc60d2e2",
+  "name": "SSL VPN Login Fail",
+  "description": "Fortinet detection - SSL VPN login fail",
+  "filterSets": [
+    [
+      {
+        "id": "984e78f9-dcd8-428a-8f03-7670186a8bea",
+        "name": "SSL VPN Login Fail",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-10-21T07:47:08.000Z"
+}

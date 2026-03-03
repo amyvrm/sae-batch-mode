@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "413d6be3-cc73-4893-ac70-e07619bd1fda",
+  "name": "Azure IAM Over Privileged Contributor Role Assigned To A User",
+  "description": "This model detects successful assignment of over-privileged Azure IAM Contributor role to a user which may indicate an attacker trying to escalate privileges to create and manage all resources in the Azure account to further compromise it.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "f5d3b5f7-ff59-4eac-a3e7-7edf7de110fa",
+      "name": "Azure IAM Over Privileged Contributor Role Assigned To A User",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2024/06/02",
+  "lastUpdate": "2025-07-16T07:28:13.000Z"
+}

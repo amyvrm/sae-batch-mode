@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dc5825d8-34e7-41aa-a458-15c2c12d9f52",
+  "name": "Azure Storage Account Successfully Deleted",
+  "description": "Detected successful deletion of an Azure Storage Account.",
+  "filterSets": [
+    [
+      {
+        "id": "00f6ab8f-5485-4a57-8701-c8d66bbd4cbd",
+        "name": "Azure Storage Account Successfully Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/04/29",
+  "lastUpdate": "2025-05-05T12:49:23.000Z"
+}

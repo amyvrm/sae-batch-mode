@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "53f9bd33-d1b7-44c9-90a1-a84be0ecdbe0",
+  "name": "Suspicious Packed Executable Execution",
+  "description": "Detects execution of potentially packed executables, which may indicate use of packer-as-a-service like Shanya.",
+  "filterSets": [
+    [
+      {
+        "id": "0b8e116f-b87b-4eca-b96c-be4d83b87fc0",
+        "name": "Suspicious Packed Executable Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Bien Joshua Philip De Leon & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/12/24",
+  "lastUpdate": "2026-01-13T08:04:48.000Z"
+}

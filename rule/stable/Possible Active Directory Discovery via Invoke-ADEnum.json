@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b46b06a0-9c3c-4612-a4f7-79647e49b913",
+  "name": "Possible Active Directory Discovery via Invoke-ADEnum",
+  "description": "Detects gathering AD information via ADEnum",
+  "filterSets": [
+    [
+      {
+        "id": "50174f61-0363-4ac3-87d4-ad5ce04fed10",
+        "name": "Possible Active Directory Discovery via Invoke-ADEnum",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2024/10/31",
+  "lastUpdate": "2025-05-13T09:44:59.000Z"
+}

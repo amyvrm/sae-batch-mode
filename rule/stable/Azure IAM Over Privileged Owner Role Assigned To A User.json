@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f5946113-9747-4c44-beb8-f108e1cf7f6e",
+  "name": "Azure IAM Over Privileged Owner Role Assigned To A User",
+  "description": "Detects the assignment of an over-privileged owner role to a user within Azure IAM",
+  "filterSets": [
+    [
+      {
+        "id": "d8a870ef-c29e-48d5-82e4-62079905d2e3",
+        "name": "Azure IAM Role Assigned To A User",
+        "highlight": true
+      },
+      {
+        "id": "379588e5-9aad-4f1a-a4b5-c704d4ab6ee6",
+        "name": "Azure IAM Over Privileged Owner Role Assignment Operation Started",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "d8a870ef-c29e-48d5-82e4-62079905d2e3.correlationId equals 379588e5-9aad-4f1a-a4b5-c704d4ab6ee6.correlationId"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/06/02",
+  "lastUpdate": "2025-07-16T07:28:13.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "17c166a3-67c4-4f1a-8347-32238163b80d",
+  "name": "Registry Entry Creation from Compromised VPN Installer for Persistence",
+  "description": "Upon execution of the compromised VPN Installer, the malicious files will create a registry entry to maintain its persistence.",
+  "filterSets": [
+    [
+      {
+        "id": "5072e6b3-6590-4a56-a8ec-310e327ab83d",
+        "name": "Registry Entry Creation from Compromised Vpn Installer for Persistence",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros and Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/01/23",
+  "lastUpdate": "2025-03-19T10:18:13.000Z"
+}

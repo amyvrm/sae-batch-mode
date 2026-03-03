@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c3730d77-58ad-45ff-b9f8-f01efd6e16dd",
+  "name": "Network Activity Involving TCP for Comprehensive Tool",
+  "description": "Network activity associated with Comprehensive Tool was identified via TCP request, indicating potential interaction with the tool on the network layer.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c1f5d1a2-26eb-43c6-a9c8-2e440b336160",
+      "name": "Network Activity Involving TCP for Comprehensive Tool",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "threat.hacktool",
+    "mitre.t1505.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/06/16",
+  "lastUpdate": "2025-06-16T03:45:05.000Z"
+}

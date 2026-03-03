@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.1",
+  "id": "e8fe4ad0-17a9-4ce8-be49-4e0be8daccf3",
+  "name": "[Heuristic Attribute] Windows Command Line and PowerShell Execution",
+  "description": "Detects commands from windows command line and powershell",
+  "filterSets": [
+    [
+      {
+        "id": "2ff3da29-b117-4d12-8cb4-b976a9819d65",
+        "condition": {
+          "tags": [
+            "mitre.t1059.001",
+            "mitre.t1059.003"
+          ],
+          "level": [
+            "critical",
+            "high",
+            "medium"
+          ]
+        },
+        "exemption": {
+          "or": {
+            "tags": [
+              "bas.tmdemokit"
+            ],
+            "falsepositives": [
+              "Designed for non-heuristic detection."
+            ]
+          }
+        },
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "objectCmd": {
+      "2ff3da29-b117-4d12-8cb4-b976a9819d65": "objectCmd"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sca",
+      "sds",
+      "xes",
+      "pds",
+      "pao"
+    ]
+  ],
+  "author": "Inno Endriga",
+  "team": "TAD Service Ops",
+  "date": "2023/02/07",
+  "lastUpdate": "2025-04-25T02:25:18.000Z"
+}

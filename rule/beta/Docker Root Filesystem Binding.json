@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2789b3a1-a68d-4c6d-871e-b48e0bfb947d",
+  "name": "Docker Root Filesystem Binding",
+  "description": "Detects the root directory of a host system mounted to a new container.",
+  "filterSets": [
+    [
+      {
+        "id": "3aa7bfde-15c7-4f5b-ae03-dddd19d8179f",
+        "name": "Docker Root Filesystem Binding",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/03/21",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

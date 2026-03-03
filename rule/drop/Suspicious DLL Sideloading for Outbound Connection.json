@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "073dbb13-ff0f-47dd-80b1-3eaf52e89c10",
+  "name": "Suspicious DLL Sideloading for Outbound Connection",
+  "description": "Detects possible GHOSTSPIDER C2 Connection.",
+  "filterSets": [
+    [
+      {
+        "id": "6f01e2a4-d409-473f-bec5-48e60811efd9",
+        "name": "Suspicious DLL Sideloading for Outbound Connection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Bien Joshua Philip De Leon",
+  "team": "AMEA-IR",
+  "date": "2024/11/20",
+  "lastUpdate": "2025-11-11T08:26:35.000Z"
+}

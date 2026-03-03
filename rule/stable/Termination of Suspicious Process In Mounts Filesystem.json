@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4c93b8f6-bede-4339-9eef-d965f25aa7c7",
+  "name": "Termination of Suspicious Process In Mounts Filesystem",
+  "description": "Some cryptocurrency mining malware identify then kill off processes for competing malware to ensure it is not competing for resources.",
+  "filterSets": [
+    [
+      {
+        "id": "03d620a7-019f-48d4-b471-78f13a62376b",
+        "name": "Termination of Suspicious Process Via Xargs Utility",
+        "highlight": true
+      },
+      {
+        "id": "4b8b0a5b-5886-4cce-917b-84c91c6202c9",
+        "name": "Discovery For Mounts Filesystem",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/05/01",
+  "lastUpdate": "2024-09-04T19:10:33.000Z"
+}

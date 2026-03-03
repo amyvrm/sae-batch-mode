@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c7b39d1f-6946-419e-ac97-fe7369174458",
+  "name": "Possible Malicious DNS Tunneling",
+  "description": "Multiple detections of potentially malicious DNS tunneling network traffic have been observed.",
+  "filterSets": [
+    [
+      {
+        "id": "56ff2358-a399-4324-92d0-24e7c5b2e993",
+        "name": "DNS Tunneling",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 360,
+    "dedupSeconds": 10000
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Nora Bowden & Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/12/17",
+  "lastUpdate": "2025-10-09T02:55:42.000Z"
+}

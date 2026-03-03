@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7f0e2cbb-a4f0-45a9-b841-0c51949b281b",
+  "name": "Suspect Execution from a Possibly Vulnerable CenterStage File Sharing Software",
+  "description": "Detection of suspect activities from a possibly vulnerable CenterStage File Sharing Software",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "5a17a118-b242-4fd2-81f1-9393b05550df",
+      "name": "Suspect Execution from Possibly Vulnerable Centerstage File Sharing Software",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1190",
+    "cve.2025.30406"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/04/22",
+  "lastUpdate": "2025-04-23T05:43:14.000Z"
+}

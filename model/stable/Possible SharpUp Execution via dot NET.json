@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2649aa74-ad54-4d41-9d2a-7d5b9af6c5c2",
+  "name": "Possible SharpUp Execution via dot NET",
+  "description": "Possible SharpUp Execution via dot NET.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3116cf49-097c-4697-aff4-1ffe703d1be6",
+      "name": "Possible SharpUp Execution via dot NET",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1082"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Kazuya Sugiura",
+  "team": "JP-MDR",
+  "date": "2024/03/12",
+  "lastUpdate": "2025-12-03T13:19:23.000Z"
+}

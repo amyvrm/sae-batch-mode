@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2fbc5b05-9964-4cf9-ab33-18ff77a1e969",
+  "name": "iOS Application Detection for Operation Triangulation",
+  "description": "Operation Triangulation iOS devices targeted with previously unknown malware",
+  "filterSets": [
+    [
+      {
+        "id": "b4d6a587-2122-4d85-b5d2-90b5c13d939c",
+        "name": "iOS Application Detection for Operation Triangulation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "ams"
+    ]
+  ],
+  "author": "Chunbo Song",
+  "team": "MTRT",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

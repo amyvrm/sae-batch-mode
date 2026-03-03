@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2d0ca10a-72de-4a03-ab07-d73d967e01a9",
+  "name": "RDP Connection via Advanced IP Scanner",
+  "description": "Suspicious remote desktop connection using the Advanced IP Scanner RDP functionality.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "5a1b33dc-5334-46f0-8ea7-501ddc6bcc9a",
+      "name": "RDP Connection via Advanced IP Scanner",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.001",
+    "mitre.t1018"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/08/15",
+  "lastUpdate": "2025-11-18T06:55:29.000Z"
+}

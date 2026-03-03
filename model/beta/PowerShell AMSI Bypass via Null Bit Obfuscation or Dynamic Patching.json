@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ab5a04db-47be-45fc-b73a-d26bb11d2ec7",
+  "name": "PowerShell AMSI Bypass via Null Bit Obfuscation or Dynamic Patching",
+  "description": "Detects PowerShell commands attempting to bypass AMSI using null bit obfuscation and dynamic memory patching techniques.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "680bc6c7-bfa4-4cec-8945-24aaccdd5eb6",
+      "name": "PowerShell AMSI Bypass via Null Bit Obfuscation or Dynamic Patching",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/11/19",
+  "lastUpdate": "2025-11-20T08:51:29.000Z"
+}

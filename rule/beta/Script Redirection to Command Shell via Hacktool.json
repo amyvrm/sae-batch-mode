@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dc71547b-5a78-485f-9d40-54aacb1ba800",
+  "name": "Script Redirection to Command Shell via Hacktool",
+  "description": "Detects a script invoked by Windows Script Host (WSH) that spawns the Command Prompt (cmd.exe) and redirects command output into a user profile file.",
+  "filterSets": [
+    [
+      {
+        "id": "e35892a5-738e-4d78-a790-c25d20030f02",
+        "name": "Script Redirection to Command Shell via Hacktool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gabriel Cardoso",
+  "team": "US-IR",
+  "date": "2025/12/03",
+  "lastUpdate": "2025-12-04T10:17:54.000Z"
+}

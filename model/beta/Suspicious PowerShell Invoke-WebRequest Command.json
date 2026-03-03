@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "853fa867-eab1-4adf-9953-88f2b6d96477",
+  "name": "Suspicious PowerShell Invoke-WebRequest Command",
+  "description": "Detects the use of Invoke-WebRequest (IWR) in conjunction with system discovery commands or IEX for the purpose of downloading and executing files. This behavior may indicate reconnaissance data collection or the delivery of malware.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "4ea91664-eef2-47bc-b6c2-56f510f2fca6",
+      "name": "Suspicious PowerShell Invoke-WebRequest Command",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2026/01/08",
+  "lastUpdate": "2026-01-13T09:40:06.000Z"
+}

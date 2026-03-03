@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6fb986a4-388b-4e6a-a3ab-094935aa5b79",
+  "name": "Suspicious File Execution via Possible Social Engineering Technique",
+  "description": "Detects suspicious file execution related to Filefix attack leading to interlock RAT",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "60267862-c4bd-432e-8fdc-c561ec6b5e69",
+      "name": "Suspicious File Execution via Possible Social Engineering Technique",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1086",
+    "mitre.t1059.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Jehhan Marcelo & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/07/16",
+  "lastUpdate": "2025-08-01T08:02:25.000Z"
+}

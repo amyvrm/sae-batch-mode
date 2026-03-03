@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "459e1c4d-6b1e-4898-a772-fd7adc5539e2",
+  "name": "Suspicious ConHost Execution with Headless Argument",
+  "description": "Detection of a conhost process with headless argument leading to a possible malicious browser credential access.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "fde13b5d-10d7-43b5-8022-78b3e7cf6555",
+      "name": "Suspicious ConHost Execution with Headless Argument",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1553",
+    "mitre.t1036.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Lorenzo Laureano",
+  "team": "TAD Service Ops",
+  "date": "2024/11/21",
+  "lastUpdate": "2024-12-18T05:35:06.000Z"
+}

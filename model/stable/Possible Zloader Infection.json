@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d8f95acf-7c61-49fd-8963-5a34209074ad",
+  "name": "Possible Zloader Infection",
+  "description": "Behaviour related to the Zloader infection chain was detected.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f081a559-2e60-4759-bed2-28a8dff0bec6",
+      "name": "Possible Zloader Infection",
+      "score": 1
+    },
+    {
+      "id": "14849327-2c35-473c-8b6f-aef0f7003ac0",
+      "name": "Zbot Communication",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sao",
+      "sds",
+      "pdi",
+      "xes",
+      "pao",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1204.002"
+  ],
+  "playbooks": [
+    {
+      "id": "ac93f324-42ee-4947-bc73-22e9a726f3ae",
+      "name": "Network Enrichment Playbook",
+      "provider": "WORKBENCH",
+      "type": "NETWORK_ENRICHMENT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christopher Ordonez",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2024-01-24T13:34:09.000Z"
+}

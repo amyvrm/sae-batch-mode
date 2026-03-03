@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "47dddb45-4b14-4af8-9327-7f5d7c404012",
+  "name": "Suspicious Execution of File Downloaded via SQLPS",
+  "description": "A suspicious execution of downloaded file via SQLPS (SQL Server Powershell Module) was detected",
+  "filterSets": [
+    [
+      {
+        "id": "2c32f492-b8f2-4243-820f-bdae29caa8df",
+        "name": "Suspicious SQLPS Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Gaspar Jr Monoten",
+  "team": "TAD Service Ops",
+  "date": "2024/02/27",
+  "lastUpdate": "2024-02-29T03:07:02.000Z"
+}

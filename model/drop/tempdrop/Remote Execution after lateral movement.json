@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b39b692d-ce19-44d6-943f-3dae806a6830",
+  "name": "Remote Execution after lateral movement",
+  "description": "Remote execution observed after possible lateral movement",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "fb0b1aa3-edf3-4f20-b022-d50ce844d97f",
+      "name": "Suspicious File Landing",
+      "score": 2
+    },
+    {
+      "id": "fac3a0c2-4de8-4f79-9884-d7ff60d1f5e6",
+      "name": "File Propagation Via SMB",
+      "score": 2
+    },
+    {
+      "id": "2ff14565-5439-4eab-8e5f-40faa047c094",
+      "name": "Remote Process Execution",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "sao",
+      "xes",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105",
+    "mitre.t1569.002",
+    "mitre.t1047"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Carmi Mora",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2023-04-12T03:15:34.000Z"
+}

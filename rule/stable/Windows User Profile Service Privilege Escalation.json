@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "35751e53-d8c3-42f2-a2c0-079acc331faf",
+  "name": "Windows User Profile Service Elevation of Privilege Vulnerability",
+  "description": "Detected Exploitation of Microsoft Windows Privilege Escalation Vulnerability (CVE-2022-26904)",
+  "filterSets": [
+    [
+      {
+        "id": "2d2793d2-d98a-4ed0-854c-3c7c80bda2b2",
+        "name": "Possible (CVE-2022-26904) DLL Dropped in AppData Temp Folder",
+        "highlight": true
+      },
+      {
+        "id": "29d0ba2c-8728-44d6-81b0-c037aa3ea756",
+        "name": "Privilege Escalation via icacls",
+        "highlight": true
+      },
+      {
+        "id": "102da7c7-139f-4742-8b4d-518b0a11d7bf",
+        "name": "Narrator execution to start remote process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2022/10/19",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

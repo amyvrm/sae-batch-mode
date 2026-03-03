@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6453a94d-8728-4ba5-b2d4-0728e769c7f0",
+  "name": "AWS S3 Data Encrypted with Imported Key and Key Material Deleted",
+  "description": "Detects encryption of S3 data using an imported KMS key, followed by deletion of the key material, which can lead to permanent data loss and might indicate a possible S3 ransomware activity.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "7199cccb-9fc0-43e7-868b-825aecf61176",
+      "name": "AWS S3 Data Encrypted with Imported Key and Key Material Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1567.002",
+    "mitre.t1530",
+    "mitre.t1485"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-09-08T06:00:50.000Z"
+}

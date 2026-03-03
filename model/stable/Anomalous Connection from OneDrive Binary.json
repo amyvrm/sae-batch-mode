@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dcca0992-7641-4a41-acd7-facc47fe3131",
+  "name": "Anomalous Connection from OneDrive Binary",
+  "description": "Detection of an anomalous connection from a OneDrive binary",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "86990d40-63e7-4748-9c0b-c46461f66d98",
+      "name": "Anomalous Connection from Onedrive Binary",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1036",
+    "mitre.t1482",
+    "mitre.t1018"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/02/13",
+  "lastUpdate": "2025-09-03T10:08:11.000Z"
+}

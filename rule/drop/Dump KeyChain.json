@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "63c78273-1812-4117-91b1-cf55fe2925ea",
+  "name": "Dump Keychain",
+  "description": "Dump Keychain on Mac",
+  "filterSets": [
+    [
+      {
+        "id": "6fdbfc7a-d52f-4a72-8568-f0ef88a1fcf2",
+        "name": "Keychain Dumping",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/11/04",
+  "lastUpdate": "2024-07-22T06:05:51.000Z"
+}

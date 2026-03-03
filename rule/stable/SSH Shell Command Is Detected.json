@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "68c49355-52ae-4dff-93e2-053c3fefd7b2",
+  "name": "SSH Shell Command Is Detected",
+  "description": "Fortinet detection - SSH shell command is detected",
+  "filterSets": [
+    [
+      {
+        "id": "9d14ceba-f8b8-40a3-9050-14205f190d34",
+        "name": "SSH Shell Command Is Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

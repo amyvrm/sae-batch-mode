@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "750ffdb1-e36f-4624-95bf-60944ea519d0",
+  "name": "Suspicious Container Creation With Root Filesystem Binding via Socket",
+  "description": "Detects the root directory of a host system mounted to a new container via unix socket.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "69950eb4-283c-44b2-bb1d-957391827df7",
+      "name": "Docker Root Filesystem Binding via Docker Socket",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1610"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/19",
+  "lastUpdate": "2025-07-14T07:44:49.000Z"
+}

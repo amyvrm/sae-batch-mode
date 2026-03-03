@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f627bef6-8331-4ae9-920a-e0b253395512",
+  "name": "Rubeus Golden Ticket Creation",
+  "description": "Detection of rubeus being used to generate a golden ticket",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e7b2345c-3d91-41b9-8fd5-279f27b22b4e",
+      "name": "Rubeus Golden Ticket Creation",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1558"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/04/11",
+  "lastUpdate": "2025-02-12T04:27:24.000Z"
+}

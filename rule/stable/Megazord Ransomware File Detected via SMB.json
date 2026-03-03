@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "007750cb-70b2-4203-af38-48eb3d4cb254",
+  "name": "Megazord Ransomware File Detected via SMB",
+  "description": "An attempt to transfer the Megazord Ransomware file via SMB protocol was detected.",
+  "filterSets": [
+    [
+      {
+        "id": "c467c241-9f17-4447-9843-0dff0ffdab45",
+        "name": "Megazord Ransomware File Detected via SMB",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Lucas Silva & Scott Burden",
+  "team": "US-IR",
+  "date": "2024/02/02",
+  "lastUpdate": "2024-02-14T15:36:32.000Z"
+}

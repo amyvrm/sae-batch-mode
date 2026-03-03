@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "015ed8cf-2ffa-4b0a-ad6a-b404ef53848d",
+  "name": "Possible Backdoor Dropping by Suspicious File Creation in User Temp Directory",
+  "description": "Detects the creation of a file named server.exe in the %TEMP% directory, indicative of potential njRAT (Bladabindi) backdoor activity. Its presence suggests malicious behavior, including unauthorized remote access and possible data exfiltration.",
+  "filterSets": [
+    [
+      {
+        "id": "a4c16b52-e54e-4bc6-8c8b-76d46c9d4f8e",
+        "name": "Possible Backdoor Dropping by Suspicious File Creation in User Temp Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/05/15",
+  "lastUpdate": "2025-07-14T08:55:08.000Z"
+}

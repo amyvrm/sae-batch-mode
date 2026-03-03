@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1bf68a51-c95a-4236-9c1d-57c57c2f4205",
+  "name": "AWS S3 Object Sync",
+  "description": "Detects AWS S3 Object Sync",
+  "filterSets": [
+    [
+      {
+        "id": "e55661c0-e46c-4356-909e-b938acbb66a4",
+        "name": "AWS S3 Object Sync",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/06",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

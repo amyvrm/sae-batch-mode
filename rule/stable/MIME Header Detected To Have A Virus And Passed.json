@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3987e5ba-27a8-420b-b85f-8bbde8395650",
+  "name": "MIME Header Detected To Have A Virus And Passed",
+  "description": "Fortinet detection - MIME header detected to have a virus and passed",
+  "filterSets": [
+    [
+      {
+        "id": "967e3e44-cf04-4241-92d0-54523e12fe54",
+        "name": "MIME Header Detected To Have A Virus And Passed",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

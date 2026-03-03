@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dc35c8b1-54ab-49bd-9e25-29ba73c08720",
+  "name": "AWS EC2 Instance Metadata Options Modified",
+  "description": "This model detects the use of the ModifyInstanceMetadataOptions API call, which indicates a change to the instance metadata configuration for an EC2 instance. Such modifications can weaken or disable the Instance Metadata Service (IMDSv2) security settings, potentially allowing unauthorized access to instance credentials or sensitive configuration data. This activity is critical to monitor because it may represent an attempt to enable metadata exploitation or credential harvesting from EC2 instances.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "81048ac6-2fc8-47ee-a04a-084cedbc1d7f",
+      "name": "AWS EC2 Instance Metadata Options Modified",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1552.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/10/27",
+  "lastUpdate": "2026-02-11T08:35:44.000Z"
+}

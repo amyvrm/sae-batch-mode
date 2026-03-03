@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8efa0b84-2abc-4e88-95ba-36a1df2f0cc3",
+  "name": "Suspicious Execution of Huorong Antivirus-related Processes",
+  "description": "Detects suspicious process of Huorong Antivirus which is capable of terminating security agent processes and services.",
+  "filterSets": [
+    [
+      {
+        "id": "44bff3fc-6424-4f5c-b5a5-39f92145739c",
+        "name": "Suspicious Execution of Huorong Antivirus-related Processes",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2025/03/06",
+  "lastUpdate": "2025-03-10T07:14:12.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "53f23c8f-02f5-4a50-95c6-c3cd0a96b787",
+  "name": "File Reported Infected By EMS Threat Feed (Notice)",
+  "description": "Fortinet detection - File reported infected by EMS threat feed (notice)",
+  "filterSets": [
+    [
+      {
+        "id": "6d0764a7-d35a-47d4-9c6f-6d1ac448d9ba",
+        "name": "File Reported Infected By EMS Threat Feed (Notice)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

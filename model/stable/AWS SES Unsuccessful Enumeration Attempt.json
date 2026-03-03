@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a82094e5-589c-4f1a-9b69-6801da7494f2",
+  "name": "AWS SES Unsuccessful Enumeration Attempt",
+  "description": "Detected unsuccessful enumeration of AWS SES which might indicate attacker trying to collect info on email addresses, sending limits, SMTP credentials, configurations, and bounce/complaint data. This information aids phishing, spamming, and identity theft.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "119e2e01-4e9b-4c6e-9bf7-a7d2bfd0c3b1",
+      "name": "AWS SES Unsuccessful Get Account Sending Enabled",
+      "score": 1
+    },
+    {
+      "id": "a37beb52-1d1b-48a2-856e-6017e92fdd15",
+      "name": "AWS SES Unsuccessful Get Account",
+      "score": 1
+    },
+    {
+      "id": "8036168b-e754-493f-a7fb-342a1ec552a4",
+      "name": "AWS SES Unsuccessful Get Identity Verification Attribute",
+      "score": 1
+    },
+    {
+      "id": "eeb27193-c2b9-43ff-b4e7-d9459504120b",
+      "name": "AWS SES Unsuccessful Get Send Quota",
+      "score": 1
+    },
+    {
+      "id": "88a42a9b-d2e0-43f5-ab82-c05998f475ca",
+      "name": "AWS SES Unsuccessful List Email Identities",
+      "score": 1
+    },
+    {
+      "id": "8c24d6a2-4e06-4b97-b024-da43db54d9f8",
+      "name": "AWS SES Unsuccessful List Identities",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1087.003",
+    "mitre.t1526"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

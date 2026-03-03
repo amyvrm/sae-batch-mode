@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f941d985-0e84-4f4a-8c17-5bf0f40248f9",
+  "name": "Suspicious Updater Added to Run Registry",
+  "description": "Adversaries may add autostarter entries to the Windows registry to maintain persistence. The use of 'reg.exe' to add such entries is suspicious, especially when the entry name is 'updaters', which is commonly used by malware to masquerade as legitimate update processes.",
+  "filterSets": [
+    [
+      {
+        "id": "720d2f58-a0f3-4c2c-a8b5-3929bc7442b5",
+        "name": "Suspicious Updater Added to Run Registry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/10/14",
+  "lastUpdate": "2025-11-17T08:51:59.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "70283fe0-90de-4315-b8ab-d24d149f1125",
+  "name": "AWS EventBridge Successful List Event Bus Rules",
+  "description": "Detects listing of EventBridge rules, which may indicate enumeration activity by a threat actor exploring rule-based automation or triggering mechanisms in the environment.",
+  "filterSets": [
+    [
+      {
+        "id": "55990894-f541-4364-b247-2dd498011a6b",
+        "name": "AWS EventBridge Successful List Event Bus Rules",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-07-31T08:55:45.000Z"
+}

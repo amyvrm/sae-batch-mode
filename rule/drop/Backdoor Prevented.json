@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e3b46164-fc52-4c10-8bee-797603d60575",
+  "name": "Backdoor Prevented",
+  "description": "Microsoft Detection for Prevented Backdoor",
+  "filterSets": [
+    [
+      {
+        "id": "ad2540a2-e183-4fcc-bbcb-468682e6efdd",
+        "name": "Backdoor Prevented",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/13",
+  "lastUpdate": "2025-07-28T20:43:16.000Z"
+}

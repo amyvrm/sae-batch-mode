@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bbe23b92-5666-4c38-8ad2-23def33ea139",
+  "name": "Initial Access via Public Facing Application",
+  "description": "initial access via vulnerable public-facing application is detected in network",
+  "filterSets": [
+    [
+      {
+        "id": "f90d68d2-ab0b-4aaa-b80b-5461ab440f94",
+        "name": "Shellshock Exploit Detection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "80161758-944a-5bf2-82b5-bdfe25553512",
+        "name": "CVE-2014-6271 Shellshock HTTP Request - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bd4ae8d6-bfc5-5037-9ee5-340ddf3bde72",
+        "name": "CVE-2014-6271 Shellshock HTTP Request - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e15377a2-1b7f-5f97-b27b-1e7f1970f701",
+        "name": "CVE-2014-6278 Shellshock HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a720195e-194f-5dca-97fe-8bd819114224",
+        "name": "CVE-2014-6278 Shellshock HTTP (Request) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "dcb0dea2-3f79-44b4-a934-4941a7ab7235",
+        "name": "Exploit Network Traffic Detection",
+        "highlight": false
+      }
+    ],
+    [
+      {
+        "id": "71cdb665-cf86-4dd7-8c1b-994c1f3689c8",
+        "name": "Webshell Detection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ec268067-81ec-41ee-a5f7-c5b768137c12",
+        "name": "Web Vulnerability Scanner",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "306f93e4-7f56-427f-ab66-2197e843d061",
+        "name": "Identified Remote File Inclusion (RFI) Over HTTP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "22a7e233-6537-4e79-818a-609067593d5a",
+        "name": "Drupal Vulnerability Exploitation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ab7b267d-0cd4-41d1-a150-eca263f3ff72",
+        "name": "Apache Struts Vulnerability Exploitation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e1f32066-ab1b-41bb-b18f-0f77afce335e",
+        "name": "Vulnerability Scanner",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "interestedIp": {
+      "f90d68d2-ab0b-4aaa-b80b-5461ab440f94": "interestedIp",
+      "80161758-944a-5bf2-82b5-bdfe25553512": "interestedIp",
+      "bd4ae8d6-bfc5-5037-9ee5-340ddf3bde72": "interestedIp",
+      "e15377a2-1b7f-5f97-b27b-1e7f1970f701": "interestedIp",
+      "a720195e-194f-5dca-97fe-8bd819114224": "interestedIp",
+      "dcb0dea2-3f79-44b4-a934-4941a7ab7235": "interestedIp",
+      "ec268067-81ec-41ee-a5f7-c5b768137c12": "interestedIp"
+    },
+    "dst": {
+      "306f93e4-7f56-427f-ab66-2197e843d061": "dst",
+      "e1f32066-ab1b-41bb-b18f-0f77afce335e": "dst",
+      "22a7e233-6537-4e79-818a-609067593d5a": "dst",
+      "71cdb665-cf86-4dd7-8c1b-994c1f3689c8": "dst",
+      "ab7b267d-0cd4-41d1-a150-eca263f3ff72": "dst"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sds",
+      "pds",
+      "pdi",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/05/20",
+  "lastUpdate": "2024-08-21T06:18:24.000Z"
+}

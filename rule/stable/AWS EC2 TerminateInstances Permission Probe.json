@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "658b5a23-21c0-4ec1-8184-82fdd1b9a794",
+  "name": "AWS EC2 TerminateInstances Permission Probe",
+  "description": "Detects EC2 TerminateInstances calls that return DryRunOperation, indicating permission testing.",
+  "filterSets": [
+    [
+      {
+        "id": "c3ad075b-48ea-4b1d-a02d-ef998806840c",
+        "name": "AWS EC2 TerminateInstances Permission Probe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2026/01/22",
+  "lastUpdate": "2026-02-11T08:35:44.000Z"
+}

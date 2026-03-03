@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0b1334d7-b7b1-4111-9ec6-449139ecf75f",
+  "name": "AWS SSM Session Started for Instance",
+  "description": "This rule detects the initiation of an AWS Systems Manager (SSM) session on a specific EC2 instance.",
+  "filterSets": [
+    [
+      {
+        "id": "9980f570-3618-48aa-a0fe-c88736ce5d37",
+        "name": "AWS SSM Session Started for Instance",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/05/15",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

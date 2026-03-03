@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81e7dcde-e8f2-4d18-9eca-e4c8a8b3c69e",
+  "name": "Possible Persistence Implementation",
+  "description": "Rule used to detect creation of scheduled task via command-line",
+  "filterSets": [
+    [
+      {
+        "id": "67ab4732-1b9c-4a57-8c1d-16eba959b04e",
+        "name": "Creation of Scheduled Task",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "34e8005e-485c-42b6-8f5b-4bbd7c5b50d7",
+        "name": "Uncommon Run/RunOnce Registry Entry Creation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bdfddece-d1e7-4e8c-98eb-98475350c3ea",
+        "name": "Possible WMI Persistence",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "processCmd": {
+      "67ab4732-1b9c-4a57-8c1d-16eba959b04e": "processCmd",
+      "34e8005e-485c-42b6-8f5b-4bbd7c5b50d7": "processCmd"
+    },
+    "parentCmd": {
+      "bdfddece-d1e7-4e8c-98eb-98475350c3ea": "parentCmd"
+    },
+    "processFilePath": {
+      "67ab4732-1b9c-4a57-8c1d-16eba959b04e": "processFilePath",
+      "34e8005e-485c-42b6-8f5b-4bbd7c5b50d7": "processFilePath"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "lastUpdate": "2024-09-24T11:39:25.000Z"
+}

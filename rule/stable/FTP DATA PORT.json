@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dabbc32a-7229-42cb-958c-1c130e4c3a9a",
+  "name": "FTP DATA PORT",
+  "description": "SonicWall Detection - FTP Data connection from non default port dropped",
+  "filterSets": [
+    [
+      {
+        "id": "db7fa7e8-81a2-4c2a-9657-79f1b374d7b9",
+        "name": "FTP DATA PORT",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

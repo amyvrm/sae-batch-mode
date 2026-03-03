@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b85bd28a-a7e3-4124-9e4c-19bcc3e10d66",
+  "name": "AD File and Directory Discovery via SMB2",
+  "description": "Network activity associated with AD File and Directory Discovery using the SMB2 protocol has been observed. This activity may indicate an attempt to gather information about files and directories on a network.",
+  "filterSets": [
+    [
+      {
+        "id": "5d365e63-0ec7-5786-973f-2526a7b979be",
+        "name": "Ad File And Directory Discovery SMB2 (Request) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9ff6903c-c36b-51a6-bbd7-ec3e93efbcb5",
+        "name": "Ad File And Directory Discovery SMB2 (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/02/23",
+  "lastUpdate": "2025-02-28T01:53:21.000Z"
+}

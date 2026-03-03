@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6a07cab0-0155-11eb-b2ce-787b8ad91447",
+  "name": "Possible Collected Data Upload",
+  "description": "Some collected data file, like zip is uploaded to the server silently",
+  "filterSets": [
+    [
+      {
+        "id": "6c040680-0143-41eb-a24d-787b8ad91447",
+        "name": "Uploading of Collected Information",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/09/25",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

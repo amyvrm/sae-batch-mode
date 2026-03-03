@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aee027b4-c289-49e8-87d0-63789a2f8d85",
+  "name": "File Meta - New Executable File",
+  "description": "A newly observed executable file was written to disk. This may indicate software installation, but could also be a potentially malicious activity such as malware dropper execution.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "73639044-ef3c-4472-95d0-782d895e0a59",
+      "name": "File Meta - New Executable File",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105",
+    "mitre.t1204.002"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": false,
+  "silent": true,
+  "clpId": [
+    "7aefaf2a-26cf-4555-9091-785012728f7a",
+    "196ca037-13a8-4417-b1af-698029340bff",
+    "47bf430f-a0d0-4be7-bd32-6f5ee9474eef",
+    "a0aa0666-e0a1-4049-85b0-1f6fa3fdb8f3",
+    "26513ef5-f886-41a0-b746-028c9755b279",
+    "f6e5e328-fe75-4524-983d-b2bc6e24b60a"
+  ],
+  "author": "Benson Sy",
+  "team": "SAE Threat Expert",
+  "date": "2025/09/05",
+  "lastUpdate": "2025-09-05T01:40:31.000Z"
+}

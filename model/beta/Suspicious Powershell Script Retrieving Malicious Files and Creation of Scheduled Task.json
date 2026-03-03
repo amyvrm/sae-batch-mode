@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "489304c8-f030-48d8-a6a6-dc5bdab9947c",
+  "name": "Suspicious Powershell Script Retrieving Malicious Files and Creation of Scheduled Task",
+  "description": "Detects PowerShell fetching components from external URLs and creating persistent scheduled tasks",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "bccb6a1a-1f57-403b-b03f-782a5ca015ea",
+      "name": "Suspicious Powershell Script Retrieving Malicious Files",
+      "score": 1
+    },
+    {
+      "id": "598e9d68-d14c-4258-bcd0-caca45df7aff",
+      "name": "Establishing Persistence via Scheduled Task Creation",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1053.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Lance Albert Mendoza & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2025/09/17",
+  "lastUpdate": "2025-09-17T02:55:17.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "83472821-ea3d-46dc-bc59-0f66309bc08d",
+  "name": "Inittab File Modified in Container",
+  "description": "Detects the initiation of a persistent process in a container through process respawn.",
+  "filterSets": [
+    [
+      {
+        "id": "9b135aa4-180a-4d14-a38c-3eb9d47d0f75",
+        "name": "Inittab File Modified in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/11/22",
+  "lastUpdate": "2024-01-12T18:07:44.000Z"
+}

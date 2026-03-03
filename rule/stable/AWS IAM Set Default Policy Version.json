@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4cbf4cfc-4918-4ae4-b4fe-d3b8879fbc35",
+  "name": "AWS IAM Set Default Policy Version",
+  "description": "Detected policy version set to default",
+  "filterSets": [
+    [
+      {
+        "id": "389cad84-1c84-42ff-8669-df63db355131",
+        "name": "AWS IAM Set Default Policy Version",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/09/09",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

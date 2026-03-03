@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c8f9847f-aba1-48f3-a3f1-88797cbd4157",
+  "name": "SSH Reconnaissance Activity Detected",
+  "description": "This model identifies reconnaissance activities related to SSH, including potential break-in attempts, SSH server version gathering, and insecure connection attempts indicative of scanning activities.",
+  "filterSets": [
+    [
+      {
+        "id": "a21135a6-28d6-4940-b750-99cbb27e29e6",
+        "name": "SSH Reconnaissance",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/01/10",
+  "lastUpdate": "2024-02-06T09:58:21.000Z"
+}

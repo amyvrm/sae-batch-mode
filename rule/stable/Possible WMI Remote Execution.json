@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ab914edd-331c-49e3-967c-b2a7145aa6e3",
+  "name": "Possible WMI Remote Execution",
+  "description": "Microsoft Process Telemetry for Possible WMI Remote Execution",
+  "filterSets": [
+    [
+      {
+        "id": "2e1d9526-3522-48f2-97d9-4450efea81eb",
+        "name": "Possible WMI Remote Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-27T09:17:05.000Z"
+}

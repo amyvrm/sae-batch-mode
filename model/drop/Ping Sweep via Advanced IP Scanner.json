@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "98c9d7b6-64fb-4be3-8ff3-cc75b12fb57e",
+  "name": "Ping Sweep via Advanced IP Scanner",
+  "description": "Ping sweep via Advanced IP Scanner tool, was detected on the network via ICMP and HTTP.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3a9bdbd5-54eb-4176-b753-a184c4e3f2e0",
+      "name": "Ping Sweep via Advanced IP Scanner",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "tags": [
+    "mitre.t1016",
+    "mitre.t1018",
+    "threat.pua"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Cedric Trinidad",
+  "team": "DDI",
+  "date": "2025/01/16",
+  "lastUpdate": "2025-10-30T06:54:31.000Z"
+}

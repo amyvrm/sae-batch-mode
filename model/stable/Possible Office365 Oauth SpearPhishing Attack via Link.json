@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ecdda15f-2bcf-4cef-96c8-9248a757424f",
+  "name": "Possible Office365 Oauth Spear Phishing Attack via Link",
+  "description": "A suspicious URL associated with Office365 Oauth phishing attacks was detected in an email message.",
+  "riskLevel": "high",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "98df92b6-5c58-4b71-9bb9-660c818eb47c",
+      "name": "Suspicious Office365 Oauth SpearPhishing Link in Email",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1528"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Peter L Chang",
+  "team": "Jaguar",
+  "date": "2020/09/24",
+  "lastUpdate": "2024-02-21T22:19:33.000Z"
+}

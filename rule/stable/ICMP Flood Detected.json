@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "77049287-1d8b-4269-a55f-068ee74bfbff",
+  "name": "ICMP Flood Detected",
+  "description": "SonicWall Detection - ICMP Flood Attack detected by firewall settings",
+  "filterSets": [
+    [
+      {
+        "id": "3f79e155-9f89-4d51-9e79-fb2bfa618198",
+        "name": "ICMP Flood Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

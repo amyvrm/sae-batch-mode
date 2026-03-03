@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cb534c55-5b99-4891-bf27-845ee9f39ffb",
+  "name": "AWS Organization Successful List Roots",
+  "description": "AWS api to list organization roots",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Organization Successful List Roots",
+        "id": "881d8441-5f53-4f07-9dc8-44fd26479b05",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/20",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

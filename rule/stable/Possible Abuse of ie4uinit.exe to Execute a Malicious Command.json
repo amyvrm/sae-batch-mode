@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0c82c220-480a-45ff-9da8-c363bf98ac81",
+  "name": "Possible Abuse of ie4uinit.exe to Execute a Malicious Command",
+  "description": "Detect use of ie4uinit.exe to execute commands from a specially crafted inf file",
+  "filterSets": [
+    [
+      {
+        "id": "fc21b36c-6eb5-4b89-a056-4853332ad1ef",
+        "name": "Possible Abuse of ie4uinit.exe to Execute a Malicious Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2024/12/09",
+  "lastUpdate": "2025-02-13T07:43:53.000Z"
+}

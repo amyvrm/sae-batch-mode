@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ae64ed06-6209-4ce3-85b7-b618f85d1ea4",
+  "name": "AWS S3 Bucket Public ACL Applied",
+  "description": "Detects when a public ACL is applied to an S3 bucket, potentially exposing the bucket's contents to unauthorized users.",
+  "filterSets": [
+    [
+      {
+        "id": "50a36e3a-e46b-4e09-848c-fae326d5066e",
+        "name": "AWS S3 Bucket Public ACL Applied",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

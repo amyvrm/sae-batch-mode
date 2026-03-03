@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8a3615f3-036a-430b-82fb-24a54d1cf212",
+  "name": "AWS Service Enumeration",
+  "description": "Detect Enumeration Attempts Of AWS Service Using AWS CLI",
+  "filterSets": [
+    [
+      {
+        "id": "b08a5038-e227-4381-8bc4-222bd3df2fa3",
+        "name": "AWS EC2 Service Enumeration",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "478057cc-fe26-4272-83bd-c8c7c6c7630e",
+        "name": "AWS S3 Bucket Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/05/17",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

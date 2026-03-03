@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4b436b74-64f4-492f-bca2-b07e01089ef0",
+  "name": "Suspicious Behavior related to Administrative Share",
+  "description": "Detecting behavior related to administrative share",
+  "filterSets": [
+    [
+      {
+        "id": "baa92f75-1d3d-4541-873c-0350679a561c",
+        "name": "Suspicious File Creation in Administrative Share",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3de4900f-7b47-4ab5-b776-925b9d97e612",
+        "name": "Suspicious Connection from Administrative Share",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6100bfea-78b8-47ef-bcc1-5c6bc53326d7",
+        "name": "Suspicious Process Creation from Administrative Share",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/11/09",
+  "lastUpdate": "2023-11-17T17:52:22.000Z"
+}

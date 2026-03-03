@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a06d876f-c308-4737-b6ea-c1bee5857a01",
+  "name": "Usage of Renamed Ngrok to Potentially Bypass Security Monitoring",
+  "description": "Detection of a renamed Ngrok file that may be used to bypass security monitoring.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "584d5387-ede5-4e11-9f15-0775c30d6ed4",
+      "name": "Usage of Renamed Ngrok to Potentially Bypass Security Monitoring",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/07",
+  "lastUpdate": "2024-06-25T15:09:16.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "46b0af75-7ad4-49c3-a592-0c5b6cad8370",
+  "name": "Potential Persistence via TypedPaths",
+  "description": "TypedPaths key has been modified from a non standard application, which might indicate persistence attempt.",
+  "filterSets": [
+    [
+      {
+        "id": "8c3d9bac-33aa-46f2-b4b5-86f969987573",
+        "name": "Potential Persistence via TypedPaths",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Ian Kenefick & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/09/14",
+  "lastUpdate": "2025-09-15T00:33:48.000Z"
+}

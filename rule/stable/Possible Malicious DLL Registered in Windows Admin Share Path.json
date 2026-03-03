@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fd8ad1b7-fcee-425b-8920-d7c2784dead3",
+  "name": "Possible Malicious DLL Registered in Windows Admin Share Path",
+  "description": "Detects suspicious installation of potential malicious dll on shared drive. Verify the dll if expected for possible compromise.",
+  "filterSets": [
+    [
+      {
+        "id": "23c63278-a2ff-4260-844a-b120082be495",
+        "name": "Possible Malicious DLL Registered in Windows Admin Share Path",
+        "highlight": true
+      },
+      {
+        "id": "9fd59a06-6858-4959-8544-c1b0af77841d",
+        "name": "Access Windows Admin Shares",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "23c63278-a2ff-4260-844a-b120082be495.objectCmd equals 9fd59a06-6858-4959-8544-c1b0af77841d.objectCmd"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/06/28",
+  "lastUpdate": "2024-11-07T21:30:09.000Z"
+}

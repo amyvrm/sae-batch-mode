@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "082c2502-bb01-4669-9cc7-e5e116234ab9",
+  "name": "AWS EC2 terminate the specified instances",
+  "description": "The filter detects termination of specified instances",
+  "filterSets": [
+    [
+      {
+        "id": "59013596-23bb-4e3e-9fac-c859464c0e73",
+        "name": "AWS EC2 terminate the specified instances",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

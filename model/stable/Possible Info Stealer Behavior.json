@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "12b08bd0-6ddb-4bd5-815c-fbb48e097344",
+  "name": "Possible Info Stealer Behavior",
+  "description": "Detects a variant of Lumma infostealer which exhibits specific patterns when using the AutoIt interpreter and/or batch scripts. These stealers exfiltrate browser credentials and cryptocurrency wallet information, posing significant security risks.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e146309d-4188-47a7-b904-3b1a798add1a",
+      "name": "Possible Info Stealer via Misnamed AutoIt Interpreter",
+      "score": 1
+    },
+    {
+      "id": "68a8f934-a006-4931-af57-341c50ed8e07",
+      "name": "Possible Info Stealer via Uncompressing and Executing Batch Files",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059",
+    "mitre.t1555.003",
+    "mitre.t1020"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/02/11",
+  "lastUpdate": "2025-07-18T03:07:06.000Z"
+}

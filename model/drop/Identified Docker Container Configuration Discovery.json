@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c69bd567-a51c-4f8d-aa09-961979e260df",
+  "name": "Identified Docker Container Configuration Discovery",
+  "description": "Adversaries may attempt to discover containers configurations and other resources that are available within a containers environment.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "ddae35ff-a9fc-41e3-82e7-fded6987dea1",
+      "name": "Discovery Docker Containers Configurations",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1613"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/06/11",
+  "lastUpdate": "2025-05-08T09:57:31.000Z"
+}

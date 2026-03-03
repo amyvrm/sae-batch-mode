@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81a3771c-efd0-4581-9ae2-852062de30e9",
+  "name": "Bitsadmin Upload via HTTP",
+  "description": "Detects files upload using Bitsadmin via HTTP protocol",
+  "filterSets": [
+    [
+      {
+        "id": "930d148f-3585-56ad-9504-79c56ebc10f2",
+        "name": "Tool Bitsadmin Post HTTP (Request) - Inbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Carl Jayson Pelina",
+  "team": "CSG",
+  "date": "2024/09/19",
+  "lastUpdate": "2024-09-20T02:12:45.000Z"
+}

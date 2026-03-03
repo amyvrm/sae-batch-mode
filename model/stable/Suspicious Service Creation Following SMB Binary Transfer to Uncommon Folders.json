@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "075afeba-eb72-4a0b-b16b-51c539903406",
+  "name": "Suspicious Service Creation Following SMB Binary Transfer to Uncommon Folders",
+  "description": "Detects suspicious service creation that occurs after the transfer of executable binaries via SMB to uncommon folders, such as C:\\Users\\Public\\. Such behavior may indicate lateral movement and persistence tactics employed by attackers, warranting further investigation.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "a3b5c100-db3d-4af6-a41f-3352dfa26f1a",
+      "name": "Suspicious Service Creation Following SMB Binary Transfer to Uncommon Folders",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1608.001",
+    "mitre.t1021.002",
+    "mitre.t1569.002",
+    "mitre.t1112"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/04/09",
+  "lastUpdate": "2025-07-17T06:00:04.000Z"
+}

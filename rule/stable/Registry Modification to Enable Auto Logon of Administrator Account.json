@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4035a3e9-3f15-4d87-99f6-e14db6698ab8",
+  "name": "Registry Modification to Enable Auto Logon of Administrator Account",
+  "description": "Modify windows registry settings to configure automatic administrator login.",
+  "filterSets": [
+    [
+      {
+        "id": "91791e32-ec43-46cc-8e6f-27532bebdb5b",
+        "name": "Registry Modification to Enable Auto Logon of Administrator Account",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/07/14",
+  "lastUpdate": "2025-11-18T06:23:15.000Z"
+}

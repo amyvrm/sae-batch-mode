@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6abbc483-db54-4360-9535-745dd3b02dae",
+  "name": "Identified Attempts To Stop Or Disable Linux Service",
+  "description": "Adversaries may modify and/or disable security tools to avoid possible detection of their malware/tools and activities.",
+  "filterSets": [
+    [
+      {
+        "id": "7bffede0-e829-4e75-9342-f36379b1670b",
+        "name": "Disable Cloud Service Agents",
+        "highlight": true
+      },
+      {
+        "id": "c471404c-c249-4c04-840d-3e95c330b843",
+        "name": "Disabling of Linux Services",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b2c8459b-afd0-4716-bb8d-0e112be84200",
+        "name": "Identified Attempts To Stop A Linux Service",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/06/04",
+  "lastUpdate": "2024-08-21T06:52:33.000Z"
+}

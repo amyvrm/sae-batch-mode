@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a0bed602-368a-418e-a20c-bc32311c24bb",
+  "name": "Possible GTFOBin Abuse",
+  "description": "Detects possible use of misconfigured system binaries to execute privileged commands.",
+  "filterSets": [
+    [
+      {
+        "id": "63de2ace-62b7-4766-b74f-7be607b8bc90",
+        "name": "Possible GTFOBin Abuse - Apt",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fd47ec0c-d8c7-4e50-b753-e03876dc2ca6",
+        "name": "Possible GTFOBin Abuse - Find",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d257eb02-f228-4705-aa06-0a68a7977bae",
+        "name": "Possible GTFOBin Abuse - More",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "71b48766-00fb-4a8c-a348-fbfdeaef9fe4",
+        "name": "Possible GTFOBin Abuse - Rpm",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cc73fbd0-a592-48c6-b361-678db4b27153",
+        "name": "Possible GTFOBin Abuse - Awk",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fc0d1485-8cfd-4874-a71d-53c349674755",
+        "name": "Possible GTFOBin Abuse - Vim",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2ea7c93b-063e-4ea5-a7da-d418a6eeba41",
+        "name": "Possible GTFOBin Abuse - Less",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2024/08/15",
+  "lastUpdate": "2024-09-20T06:27:56.000Z"
+}

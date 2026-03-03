@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "53e64581-53cc-4192-be19-6dc58a56b370",
+  "name": "Azure Account Security Policy Deleted Successfully",
+  "description": "Detects successful deletion of an Azure account security policy which may indicate an attacker deliberately removing critical security controls",
+  "filterSets": [
+    [
+      {
+        "id": "c5f4534d-dad4-4b57-8518-e16a3ed11128",
+        "name": "Azure Account Security Policy Deleted Successfully",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Nathaniel Ragasa",
+  "team": "SAE Threat Expert",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-23T02:21:40.000Z"
+}

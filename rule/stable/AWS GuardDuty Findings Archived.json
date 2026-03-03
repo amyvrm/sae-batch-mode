@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "736658ea-f918-466c-89c7-098b2dfb489f",
+  "name": "AWS GuardDuty Findings Archived",
+  "description": "Detects the use of the GuardDuty ArchiveFindings API, which can be used to mute or hide security findings (potential defense evasion).",
+  "filterSets": [
+    [
+      {
+        "id": "6973f06d-f64f-4a69-a451-5f066d2377af",
+        "name": "AWS GuardDuty Findings Archived",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/10/27",
+  "lastUpdate": "2026-02-11T08:35:44.000Z"
+}

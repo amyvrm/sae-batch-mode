@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "41028d79-fe8c-4749-95d9-605d20a62adb",
+  "name": "Java Execution Bash Script After Downloading Suspicious Download",
+  "description": "Detect bash shell script execution by exploiting Java based Web Application",
+  "filterSets": [
+    [
+      {
+        "id": "b3616e5c-08c8-401e-9f31-846f5fddc3bd",
+        "name": "Script Download Via Curl/Wget",
+        "highlight": true
+      },
+      {
+        "id": "b3bbffd1-ec31-4ada-a991-44f5a4135c01",
+        "name": "Java Executing Bash Shell Script",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/04/25",
+  "lastUpdate": "2024-05-21T19:09:02.000Z"
+}

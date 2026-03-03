@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c4273f4d-309a-4cd7-ad28-05263783cb18",
+  "name": "CrowdStrike Pattern Disposition - Detection",
+  "description": "CrowdStrike Standard Detection Only",
+  "filterSets": [
+    [
+      {
+        "id": "2a3c2a0c-72e9-4ef5-bf14-4edb8dd0cf3f",
+        "name": "CrowdStrike Pattern Disposition - Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-27T09:17:05.000Z"
+}

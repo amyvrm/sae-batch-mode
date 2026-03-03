@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7bc209ef-d005-44e5-a38b-6c7a5706dc55",
+  "name": "Suspicious Mailbox Rule Forwards All Email to an Untrusted External Location",
+  "description": "A suspicious mailbox rule was created that forwards all email messages (which may contain sensitive or confidential information) to an untrusted location external to the company network [Delayed alert: Batch process detection]",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "a4d04d59-cee7-4dcc-9f0e-521c7b9a388a",
+      "name": "Suspicious Mailbox Rule Forwards All Email to an Untrusted External Location",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "aad",
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1114.003",
+    "mitre.t1078.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Zachary Lee",
+  "team": "Jaguar",
+  "date": "2022/05/16",
+  "lastUpdate": "2024-07-05T03:08:32.000Z"
+}

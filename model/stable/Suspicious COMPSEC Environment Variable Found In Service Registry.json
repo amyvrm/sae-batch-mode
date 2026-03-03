@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6434f8a9-c975-41cd-97f1-c90abca6ab39",
+  "name": "Suspicious COMPSEC Environment Variable Found In Service Registry",
+  "description": "A suspicious COMPSEC Environment Variable was added and found in service registry.",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "13a170cb-577a-4670-86f7-d060330ef963",
+      "name": "Suspicious COMPSEC Environment Variable Found In Service Registry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1546.012",
+    "mitre.t1574.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Aira Marcelo",
+  "team": "MDR",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

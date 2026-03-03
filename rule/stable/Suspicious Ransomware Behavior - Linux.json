@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "281cbb55-a88f-41b0-a3c7-9f8f41a67bee",
+  "name": "Suspicious Ransomware Behavior - Linux",
+  "description": "A process performed a ransomware behavior to encrypt files in the system.",
+  "filterSets": [
+    [
+      {
+        "name": "Suspicious Ransomware Behavior - Linux",
+        "id": "3ed2e7c1-1ff9-46b5-bf1c-9550a15b18ff",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Shawn Liou",
+  "team": "Walzer",
+  "date": "2025/07/11",
+  "lastUpdate": "2025-07-24T07:19:03.000Z"
+}

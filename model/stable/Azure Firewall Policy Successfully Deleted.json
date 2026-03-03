@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4cc536b4-fe63-4742-ba8e-1978e7860ea9",
+  "name": "Azure Firewall Policy Successfully Deleted",
+  "description": "Detects successful deletions of Azure Firewall policies, which may indicate attempts to disable network security controls and evade defenses.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "0865aada-cf44-44a6-bd3e-8120363af6a5",
+      "name": "Azure Firewall Policy Successfully Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.007"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Arun Shaji and Kim Folloso",
+  "team": "SAE Threat Expert",
+  "date": "2025/12/05",
+  "lastUpdate": "2025-12-11T02:43:11.000Z"
+}

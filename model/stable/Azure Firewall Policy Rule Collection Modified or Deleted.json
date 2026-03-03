@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "caf8d37b-2e45-4269-8bd6-bfaeb1042aa8",
+  "name": "Azure Firewall Policy Rule Collection Modified or Deleted",
+  "description": "Detects changes or deletion of Azure Firewall Policy rule collections that could weaken network security or enable unauthorized traffic.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "1a892153-1ef4-44d0-9800-8053eb8433e8",
+      "name": "Azure Firewall Policy Rule Collection Modified or Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.004"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/12/31",
+  "lastUpdate": "2026-01-28T18:17:30.000Z"
+}

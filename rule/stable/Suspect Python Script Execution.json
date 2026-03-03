@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c120d821-eb6f-4ba5-a0bd-ac39b5182ac6",
+  "name": "Suspect Python Script Execution",
+  "description": "Detection of a python script being executed in a potentially malicious manner",
+  "filterSets": [
+    [
+      {
+        "id": "7fc808e0-fa35-48c1-9918-d720d0b98e68",
+        "name": "Suspect Python Script Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/02/07",
+  "lastUpdate": "2025-02-20T09:16:53.000Z"
+}

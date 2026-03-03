@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e4756326-d0dc-4588-b7b9-185cdcb424ec",
+  "name": "File detection - ZIP",
+  "description": "Palo Alto File detection - ZIP",
+  "filterSets": [
+    [
+      {
+        "id": "72a51ced-2b34-4dc3-b679-2574bed63823",
+        "name": "File detection - ZIP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

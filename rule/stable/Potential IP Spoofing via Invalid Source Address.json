@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3cb2305a-d9ff-424e-8dfa-289b5aa50241",
+  "name": "Potential IP Spoofing via Invalid Source Address",
+  "description": "Cisco detection for packets with invalid source addresses (loopback, broadcast, or internal network sources) arriving at the Secure Firewall ASA interface.",
+  "filterSets": [
+    [
+      {
+        "id": "20362ac2-af8e-53d0-a314-1583b9c92404",
+        "name": "Potential IP Spoofing via Invalid Source Address",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-03T09:21:48.000Z"
+}

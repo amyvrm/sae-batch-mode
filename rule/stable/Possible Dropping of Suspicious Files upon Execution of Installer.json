@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b9c52e4c-164f-4828-8329-dac2d6cbc286",
+  "name": "Possible Dropping of Suspicious Files upon Execution of Installer",
+  "description": "Possible dropping of suspicious files after executing an installer potentially obtained from a malicious source.",
+  "filterSets": [
+    [
+      {
+        "id": "cbc970ca-5503-4e39-bbbf-e1a9764921f4",
+        "name": "Possible Dropping of Suspicious Files upon Execution of Installer",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/02/18",
+  "lastUpdate": "2025-03-19T10:18:13.000Z"
+}

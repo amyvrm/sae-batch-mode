@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e50a2cbe-2df7-4e1f-b9bf-bf524d391eac",
+  "name": "Anomalous DNS Connections",
+  "description": "Detects anomalous DNS requests from rundll32.exe or winlogon.exe",
+  "filterSets": [
+    [
+      {
+        "id": "168c0a58-5669-4e3c-b80a-96df953f60f5",
+        "name": "Anomalous DNS Connections",
+        "highlight": true,
+        "maxAmount": 20
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 20,
+    "withinSeconds": 10800,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/12/05",
+  "lastUpdate": "2023-12-21T01:06:17.000Z"
+}

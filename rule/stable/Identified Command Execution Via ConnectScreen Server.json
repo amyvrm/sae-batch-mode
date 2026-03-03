@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0c3ba9b3-e902-4ee5-8366-cd5430fb8e03",
+  "name": "Identified Command Execution Via ConnectScreen Server",
+  "description": "Detection for possible exploitation on ScreenConnect vulnerability and remote execution",
+  "filterSets": [
+    [
+      {
+        "id": "80b4a5e5-dd93-4a23-af05-00432eea6284",
+        "name": "Identified Executing Of PowerShell Commands Using ConnectScreen Server",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e58647ae-f965-4e99-afee-5a946e621771",
+        "name": "Identified Suspicious Command Execution Via ConnectScreen Server",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8844ac80-1e21-4edc-b14b-4eb2acc252a1",
+        "name": "Identified File Copy Using Legitimate Tools Via ConnectScreen Server",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bf14ff40-d1c5-11ee-a506-0242ac120002",
+        "name": "ScreenConnect Invoking Commands",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/02/27",
+  "lastUpdate": "2024-02-28T09:48:38.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5f4dca1b-9330-4ded-92b3-3ec971727cad",
+  "name": "Webshell Script Creation on Server Roles Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that prevents creation of webshell scripts such as ASP and PHP shells on server roles including Exchange servers.",
+  "filterSets": [
+    [
+      {
+        "id": "bff58f9d-96dc-4abd-b286-f50a298da95b",
+        "name": "Webshell Script Creation on Server Roles Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-14T08:49:59.000Z"
+}

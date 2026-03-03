@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8e44dde1-e033-4d4e-93bf-31f17dad2e8b",
+  "name": "Spear Phishing Email Target High Profile User via Attachment",
+  "description": "Spear Phishing Email Target High Profile User via Attachment",
+  "filterSets": [
+    [
+      {
+        "id": "23e69fd2-3c5e-4766-8c84-10c9c701dbb3",
+        "name": "Spear Phishing Email Target High Profile User via Attachment",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Marshall Chen",
+  "team": "Jaguar",
+  "date": "2020/12/28",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

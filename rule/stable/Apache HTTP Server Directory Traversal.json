@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4d719984-b617-4ef6-aece-ab7900203ad6",
+  "name": "Apache HTTP Server Directory Traversal",
+  "description": "Check Point Security detection for Apache HTTP Server Directory Traversal",
+  "filterSets": [
+    [
+      {
+        "id": "6d3df8bc-e0c1-518e-a4dd-18d0d6e5623d",
+        "name": "Apache HTTP Server Directory Traversal",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/12/11",
+  "lastUpdate": "2026-01-15T01:11:52.000Z"
+}

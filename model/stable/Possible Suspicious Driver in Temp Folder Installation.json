@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "97445929-8127-499d-9fad-b1a54731f6ef",
+  "name": "Possible Suspicious Driver in Temp Folder Installation",
+  "description": "Detects file and service registry creation for a .sys file in Temp folder.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "219d90ec-eddf-4579-a550-ed5f2114fc7c",
+      "name": "Possible Suspicious Driver in Temp Folder Installation",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1112",
+    "mitre.t1569.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/06/20",
+  "lastUpdate": "2025-07-14T01:53:47.000Z"
+}

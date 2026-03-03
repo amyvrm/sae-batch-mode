@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b0168ffa-37b5-433c-9219-46bd12f88bb0",
+  "name": "Cabinet File Expanded via Lolbin",
+  "description": "Detects a cabinet file being expanded as part of a masquerading mechanism",
+  "filterSets": [
+    [
+      {
+        "id": "e3ff6c73-8d21-4a25-bdae-cb09dcd6c184",
+        "name": "Cabinet File Expanded via Lolbin",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ac9b0cc2-e9a8-4506-a91a-ad2655275e8f",
+        "name": "Cabinet File Expansion via Lolbin",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/01/28",
+  "lastUpdate": "2025-01-30T02:15:03.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c14cce1d-7b32-4e78-80af-4e021dd71bfe",
+  "name": "AWS Redshift Successful Cluster Parameter Groups Enumeration",
+  "description": "Detects enumeration of Redshift cluster parameter groups, which may indicate reconnaissance.",
+  "filterSets": [
+    [
+      {
+        "id": "f85ad79e-94ed-4cc2-8258-c7b448fa5294",
+        "name": "AWS Redshift Successful Cluster Parameter Groups Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

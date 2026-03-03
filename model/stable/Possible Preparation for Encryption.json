@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ff8a3ea5-af3c-4208-8687-4b07c9872877",
+  "name": "Possible Preparation for Encryption",
+  "description": "Disabling Windows recovery mode and deleting shadow copy while increasing maximum connection attempts to suspicious level that could be an indicator in preparation for encryption.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d9aa905a-885f-4bf6-8bf3-583bc4549951",
+      "name": "Suspicious Lanmanserver Registry Modification for Network Request Service",
+      "score": 2
+    },
+    {
+      "id": "4114c793-7a98-4796-9051-53aba2531a94",
+      "name": "Stopping IIS via Iisreset.exe or Disabling Boot-Time Recovery Measures via BCDEdit",
+      "score": 1
+    },
+    {
+      "id": "09cbe92e-f4ac-42a5-882f-0d858678ac01",
+      "name": "Delete Volume Shadow Copy",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1112",
+    "attack.s1068",
+    "mitre.t1489",
+    "mitre.t1490"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/02/16",
+  "lastUpdate": "2024-05-08T06:53:39.000Z"
+}

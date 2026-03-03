@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "09e5a47b-fb11-4ee1-b09b-a639aff118ab",
+  "name": "Defined File Size Limit Was Exceeded",
+  "description": "Fortinet detection - Defined file size limit was exceeded",
+  "filterSets": [
+    [
+      {
+        "id": "2a2a1fb4-0369-491d-80b1-c534f314e86d",
+        "name": "Defined File Size Limit Was Exceeded",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

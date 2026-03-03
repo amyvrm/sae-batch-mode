@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "698441dd-b2f2-4f57-8ca9-0ecf8ed84345",
+  "name": "Process Creation from foomatic-rip",
+  "description": "foomatic spawned shell process. This may indicate the exploitation of the CUPS vulnerability (CVE-2024-47176)",
+  "filterSets": [
+    [
+      {
+        "id": "01924466-007b-79bf-8c1a-98b0bcb20a49",
+        "name": "Process Creation from foomatic-rip",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 200,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/09/30",
+  "lastUpdate": "2024-10-15T18:22:44.000Z"
+}

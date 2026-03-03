@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eaa965b5-8dde-42c5-8590-b1911e432a9a",
+  "name": "Cryptocurrency Mining Traffic",
+  "description": "Detection for cryptocurrency mining network traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "6123f77f-195c-4b9f-ba5a-9ad6a5f25ad3",
+        "name": "Crypto mining traffic",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2022/08/22",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

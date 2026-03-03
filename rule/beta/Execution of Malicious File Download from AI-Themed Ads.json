@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0ffb13da-7ab3-4d5d-adf1-5046feea4bff",
+  "name": "Execution of Malicious File Download from AI-Themed Ads",
+  "description": "Detects malicious files downloaded from AI-themed ads.",
+  "filterSets": [
+    [
+      {
+        "id": "7c29fe01-7ca4-4645-8d10-7790a4104505",
+        "name": "Malicious File Downloads Related to AI-Themed Ads",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA IR",
+  "date": "2024/12/09",
+  "lastUpdate": "2024-12-27T07:10:45.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c22714bd-0ac8-4474-ab2a-f28ba665ee6a",
+  "name": "Suspect Powershell Download Crade Invocation towards Github",
+  "description": "Detection of a powershell download cradle invocation towards github",
+  "filterSets": [
+    [
+      {
+        "id": "37b9eabd-08fe-4eee-88b1-87795a6a3ade",
+        "name": "Suspect Powershell Download Crade Invocation towards Github",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/05",
+  "lastUpdate": "2024-06-06T10:37:02.000Z"
+}

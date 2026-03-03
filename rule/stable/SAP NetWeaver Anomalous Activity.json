@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "321b7e98-d56b-40c0-be09-5b8689251998",
+  "name": "SAP NetWeaver Anomalous Activity",
+  "description": "Detection of anomalous activity from SAP NetWeaver",
+  "filterSets": [
+    [
+      {
+        "id": "1b75f6b3-6028-49f6-b8cb-4eb515e29916",
+        "name": "SAP NetWeaver Anomalous Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/04/08",
+  "lastUpdate": "2025-05-05T10:19:06.000Z"
+}

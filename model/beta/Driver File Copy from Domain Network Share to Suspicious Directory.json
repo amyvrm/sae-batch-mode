@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9a30ff3e-2623-4d39-a016-a3ac17d63de8",
+  "name": "Driver File Copy from Domain Network Share to Suspicious Directory",
+  "description": "A driver file (.sys) was copied from a domain controller network share to a public or temporary directory. This behavior may indicate staging of malicious drivers for privilege escalation or defense evasion.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "95ee219f-cd69-42e7-b507-288f75bd93d8",
+      "name": "Driver File Copy from Domain Network Share to Suspicious Directory",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1039",
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "ac93f324-42ee-4947-bc73-22e9a726f3ae",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "NETWORK_ENRICHMENT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/02/03",
+  "lastUpdate": "2026-02-11T08:45:21.000Z"
+}

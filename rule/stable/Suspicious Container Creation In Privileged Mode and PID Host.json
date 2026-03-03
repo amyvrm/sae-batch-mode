@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b4a50fba-af02-4005-a526-8187ca571839",
+  "name": "Suspicious Container Creation In Privileged Mode and PID Host",
+  "description": "Detects container creation in Privileged mode or Sharing Host Resources via Remote API.",
+  "filterSets": [
+    [
+      {
+        "id": "26c71371-3f56-4a41-b49f-220365349adf",
+        "name": "Creation Of Container in Privileged mode via Remote API",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fbbc0c28-4f22-43d2-bc76-d8ac032a4074",
+        "name": "Creation Of Container in Privileged mode or Sharing Host Resources",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/06",
+  "lastUpdate": "2024-09-16T19:06:45.000Z"
+}

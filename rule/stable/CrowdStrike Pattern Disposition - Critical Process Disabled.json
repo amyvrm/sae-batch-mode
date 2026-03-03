@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "36a39882-1ebf-4569-b4e3-8883b9b8336c",
+  "name": "CrowdStrike Pattern Disposition - Critical Process Disabled",
+  "description": "CrowdStrike Detection for Disabled Critical Process.",
+  "filterSets": [
+    [
+      {
+        "id": "b780a96a-399f-4a9d-a822-17fd1d5180f7",
+        "name": "CrowdStrike Pattern Disposition - Critical Process Disabled",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-27T09:17:05.000Z"
+}

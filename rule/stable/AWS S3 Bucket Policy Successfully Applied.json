@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "07a557dc-58fe-4f63-9abb-bea81d4b26bc",
+  "name": "AWS S3 Bucket Policy Successfully Applied",
+  "description": "Detects successful modification AWS S3 Bucket Policy",
+  "filterSets": [
+    [
+      {
+        "id": "ec3d3165-b956-487a-ba0d-41ece01ded17",
+        "name": "AWS S3 Bucket Policy Successfully Applied",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/04/08",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

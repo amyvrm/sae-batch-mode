@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "370b869b-8a49-448c-ae2a-5a9fcbac941f",
+  "name": "PowerShell Base64 Decoding Command Execution Identified via Microsoft Telemetry",
+  "description": "Microsoft detection for PowerShell processes executing Base64 decoded commands, which is a common obfuscation technique used by attackers to hide malicious payloads and evade security controls. It detects suspicious process execution events where Base64 decoding functions are invoked, indicating potential malware deployment or unauthorized command execution.",
+  "filterSets": [
+    [
+      {
+        "id": "e2857442-78d8-472d-a61f-b622b8b424a9",
+        "name": "PowerShell Base64 Decoding Command Execution Identified via Microsoft Telemetry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/05",
+  "lastUpdate": "2025-09-11T07:27:07.000Z"
+}

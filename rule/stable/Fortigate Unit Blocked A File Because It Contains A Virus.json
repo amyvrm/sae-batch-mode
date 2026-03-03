@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f9a9befe-8aad-42f2-932c-522e6c09ccf8",
+  "name": "Fortigate Unit Blocked A File Because It Contains A Virus",
+  "description": "Fortinet detection - FortiGate unit blocked a file because it contains a virus",
+  "filterSets": [
+    [
+      {
+        "id": "2f0eda1d-d69b-4e0a-9706-65b2c1afc50a",
+        "name": "Fortigate Unit Blocked A File Because It Contains A Virus",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

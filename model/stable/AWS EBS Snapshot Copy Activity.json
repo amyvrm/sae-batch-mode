@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "05696e9b-7760-4751-b408-acb80427dbec",
+  "name": "AWS EBS Snapshot Copy Activity",
+  "description": "Copying of Amazon EBS snapshots may indicate routine backup operations, data migration, or an attempt by an attacker to exfiltrate data or create unauthorized backups. This activity can impact data security and may be a precursor to further malicious actions.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "7d57c8c6-bbab-4074-94ca-23f6de3fabe4",
+      "name": "AWS EBS Snapshot Copy Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1537"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/28",
+  "lastUpdate": "2025-09-10T03:33:47.000Z"
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "04d82903-7dad-4dc6-90d4-6053f041d1f6",
+  "name": "Suspicious Tool Execution on PyArk Folder",
+  "description": "Detects suspicious tool execution on PyArk path",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "4aaddb95-8089-45b8-beda-b21040a20b71",
+      "name": "Hacktool and Powertool Detection",
+      "score": 1
+    },
+    {
+      "id": "6c9c2f50-e8d9-4336-a6b8-ed751611cb97",
+      "name": "Suspicious Tool Execution on PyArk Folder",
+      "score": 1
+    }
+  ],
+  "condition": [
+    [
+      "6c9c2f50-e8d9-4336-a6b8-ed751611cb97.objectCmd contains 4aaddb95-8089-45b8-beda-b21040a20b71.fullPath"
+    ]
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1204.002",
+    "mitre.t1068",
+    "mitre.t1211"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/02/14",
+  "lastUpdate": "2024-03-15T03:35:55.000Z"
+}

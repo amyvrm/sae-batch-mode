@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81048ac6-2fc8-47ee-a04a-084cedbc1d7f",
+  "name": "AWS EC2 Instance Metadata Options Modified",
+  "description": "Detects successful changes to the metadata options configuration",
+  "filterSets": [
+    [
+      {
+        "id": "435ae057-e89c-457e-b020-23b2b5b20d48",
+        "name": "AWS EC2 Instance Metadata Options Modified",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/10/27",
+  "lastUpdate": "2026-02-11T08:35:44.000Z"
+}

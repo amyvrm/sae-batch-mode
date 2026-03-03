@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "09d76f0a-a758-4233-9ad7-0da412d42142",
+  "name": "Potential Rootkit Installation",
+  "description": "Detect Execution of Rundll32.exe with SmartFilter.inf, Indicating Potential Rootkit Installation",
+  "filterSets": [
+    [
+      {
+        "id": "a5281b49-3a8a-4cc3-8764-99d17f3b51b7",
+        "name": "Potential Rootkit Installation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Mary Joy Ramos & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/01/21",
+  "lastUpdate": "2025-05-13T07:21:03.000Z"
+}

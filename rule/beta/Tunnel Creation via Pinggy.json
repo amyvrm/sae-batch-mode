@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8e2ab453-9fb4-4274-9620-7e8bee275085",
+  "name": "Tunnel Creation via Pinggy",
+  "description": "Detects network tunnel creation using pinggy, which may be used for command and control communication, and data exfiltration",
+  "filterSets": [
+    [
+      {
+        "id": "69184c82-ebb3-441d-851f-7e2360360ac4",
+        "name": "DNS Query Request to Pinggy Tunnel Services",
+        "highlight": true
+      },
+      {
+        "id": "228f4662-b323-49ac-ac6c-5c2756382f55",
+        "name": "Possible Tunnel Creation via Pinggy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Mahmoud Soheem & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/02/17",
+  "lastUpdate": "2025-03-05T09:40:21.000Z"
+}

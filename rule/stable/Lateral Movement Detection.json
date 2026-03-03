@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01c2575e-90bb-458a-af7d-03f6cd53e87f",
+  "name": "Lateral Movement Detection",
+  "description": "Detects Lateral Movement activity",
+  "filterSets": [
+    [
+      {
+        "id": "1f84206c-7f96-4b11-8e7b-b6f1d18378c0",
+        "name": "File Transfer Via SMB",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cd4eb4d2-4a84-4588-aa2e-c934d61cf8e7",
+        "name": "Remote Execution Via WMI",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1f3f9bd3-60a4-4bae-9266-d5e49847b459",
+        "name": "PSEXEC Execution By Process",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8f9ad0ad-1e4b-42fe-9621-1e3fb6ba7a26",
+        "name": "PsExec Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "be84c3b7-354c-4486-9954-219653684e6c",
+        "name": "Possible Brute Force - RDP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ce86394d-95ea-4691-93e8-faac11c133f8",
+        "name": "Suspicious WMI Command Execution from Remote Machine - Windows Event Logs",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b7a00bf9-e8f1-414f-a073-2ff897778ec1",
+        "name": "Remote Command Execution via Impacket Module",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1fc0c3f7-348d-4c22-b9c8-39a8bf267c35",
+        "name": "Possible Impacket`s Smbexec.py Script Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f98198fb-2858-5a5c-a64e-49b682919435",
+        "name": "DCERPC Wmiexecpy   (Request)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0f55a768-a6ee-4d73-862b-857ecacb1884",
+        "name": "Possible Impacket wmiexec.py Script Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "942b1ce8-b8c6-55ce-82cd-d94fed2f465e",
+        "name": "Powershell Remote Command Execution Via WinRM HTTP (Request)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pdi",
+      "xes",
+      "xns"
+    ]
+  ],
+  "author": "Kazuya Sugiura, Toru Yamashige",
+  "team": "JP-MDR",
+  "date": "2023/09/19",
+  "lastUpdate": "2024-09-23T08:12:48.000Z"
+}

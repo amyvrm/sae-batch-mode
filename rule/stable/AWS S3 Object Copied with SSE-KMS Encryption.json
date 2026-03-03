@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "393c8f22-de3b-4431-9a8d-da5a15a57e6e",
+  "name": "AWS S3 Object Copied with SSE-KMS Encryption",
+  "description": "An S3 object was copied using SSE-KMS encryption, which may indicate controlled data access but could also be part of data exfiltration attempt.",
+  "filterSets": [
+    [
+      {
+        "id": "a96f1b94-b6bb-4b1c-bfa1-729b4cb626be",
+        "name": "AWS S3 Object Copied with SSE-KMS Encryption",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-08-01T04:11:59.000Z"
+}

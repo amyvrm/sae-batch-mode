@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "41ff21bc-ec25-47e5-9e94-b3b28415a8d1",
+  "name": "Identified Docker Daemon API Misconfiguration",
+  "description": "Detected Docker Daemon REST API socket misconfigurations which could lead to full server takeover.",
+  "filterSets": [
+    [
+      {
+        "id": "569d556c-fd5d-4336-9760-48ef1e21801c",
+        "name": "Identified Unencrypted Docker REST API Port Listening",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3efa0b76-56bf-456c-9e91-cb95b13a13d6",
+        "name": "Identified Exposed Docker Daemon API Without Authentication",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "dda835f3-122e-48fc-b081-a8c1f4b7c750",
+        "name": "Identified Exposed Docker Daemon API Without Encryption",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "32d3b03f-1ed5-4fc3-be17-3a00dc7ee419",
+        "name": "Identified Exposed Docker Daemon API With Root Access",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/04/19",
+  "lastUpdate": "2024-05-21T19:09:02.000Z"
+}

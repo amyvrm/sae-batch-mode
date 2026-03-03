@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "98c7bb69-ce1b-44b3-bfbc-a43db1573843",
+  "name": "AWS MFA Disabled For a User With Serial Number",
+  "description": "Detected AWS MFA Disabled For a User With Serial Number",
+  "filterSets": [
+    [
+      {
+        "id": "f7ac3a1f-d629-48e0-9bc8-b098d9f4c07b",
+        "name": "AWS IAM MFA Disabled For a User With Serial Number",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/18",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

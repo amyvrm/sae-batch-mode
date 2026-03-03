@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "db48903b-31ad-406b-8459-6532d3657435",
+  "name": "Possible Downloading of Backdoor via Powershell",
+  "description": "Detects PowerShell commands used to download multiple backdoors from a remote server.",
+  "filterSets": [
+    [
+      {
+        "id": "1a599ffd-3c6e-4349-be3a-9cba4690ddde",
+        "name": "Possible Downloading of Backdoor via Powershell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Shaun Galura & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/06/05",
+  "lastUpdate": "2025-08-13T06:38:36.000Z"
+}

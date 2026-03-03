@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cf9e6e26-8a4f-4403-9932-ff510f2c2d1d",
+  "name": "Suspicious Traffic From Windows Media Player",
+  "description": "Detection of suspicious outbound traffic from Windows Media Player",
+  "filterSets": [
+    [
+      {
+        "id": "270a203f-a822-4ca6-a6f1-3e554874ddc9",
+        "name": "Suspicious Traffic From Windows Media Player",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh & Yusuf Ahmed",
+  "team": "EU-IR",
+  "date": "2024/12/12",
+  "lastUpdate": "2025-01-10T03:27:11.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0c168c43-e2ce-471b-95e0-a673b780493d",
+  "name": "WebSocket SSH Tunnel Activity",
+  "description": "Suspicious network activity was observed involving HTTP traffic associated with Secure Shell (SSH) tunneling conducted via WebSocket protocol. This behavior may indicate the use of WebSocket for establishing SSH connections to bypass traditional network controls.",
+  "filterSets": [
+    [
+      {
+        "id": "f457ac77-97b5-5f9e-a434-369ac35b5c7e",
+        "name": "Websocket Ssh Tunnel HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/12/02",
+  "lastUpdate": "2025-12-04T03:02:26.000Z"
+}

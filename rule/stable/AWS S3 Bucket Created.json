@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d4d98334-4799-474c-9eef-59fb3400be8b",
+  "name": "AWS S3 Bucket Created",
+  "description": "A new S3 bucket was created, which may indicate legitimate storage provisioning or unauthorized resource usage.",
+  "filterSets": [
+    [
+      {
+        "id": "2dedf6a0-8d53-4145-92df-3fe6e98b6764",
+        "name": "AWS S3 Bucket Created",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-06-17T10:36:27.000Z"
+}

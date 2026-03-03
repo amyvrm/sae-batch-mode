@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "21807112-abd6-4075-b3cc-0fc4379af25f",
+  "name": "URL detection - URL filtering log",
+  "description": "Palo Alto URL detection - URL filtering log",
+  "filterSets": [
+    [
+      {
+        "id": "b39eee56-9179-4be6-8b4b-7339e1ef2f68",
+        "name": "URL detection - URL filtering log",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-04-02T10:15:14.000Z"
+}

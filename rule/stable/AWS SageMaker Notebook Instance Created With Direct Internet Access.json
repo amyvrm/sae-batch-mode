@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7f3768de-0046-49b5-b8bd-e03a97d645b1",
+  "name": "AWS SageMaker Notebook Instance Created With Direct Internet Access",
+  "description": "This rule identifies the creation of a SageMaker Notebook instance with direct internet access",
+  "filterSets": [
+    [
+      {
+        "id": "273befc5-7ff3-4b88-95c9-e1e81addb818",
+        "name": "AWS SageMaker Notebook Instance Created With Direct Internet Access",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/08/29",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

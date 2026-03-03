@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1da4a7dc-ccdb-4f11-adfa-6fb4e3d773d8",
+  "name": "Suspicious Account Creates New Mailbox Rule - Forward To Another Email Account",
+  "description": "A suspicious account creates a new mailbox rule that forwards all incoming emails to another email account.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "8acd5e18-ce86-4644-b789-d65903679271",
+      "name": "Suspicious Account Sign-In from Unfamiliar Location or Device",
+      "score": 1
+    },
+    {
+      "id": "efbd2dfb-7788-42ce-9d5e-1971caebbf5c",
+      "name": "New Mailbox Rule which Forwards or Redirect Incoming Messages to Other Email Addresses",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xca",
+      "aad"
+    ]
+  ],
+  "tags": [
+    "mitre.t1586.003",
+    "mitre.t1114.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2025/03/15",
+  "lastUpdate": "2025-06-23T09:18:33.000Z"
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "375c72ff-883c-472a-b04d-984ad38cafa7",
+  "name": "Remote Command Execution via SMB",
+  "description": "Network activity involving SMB traffic associated with WINEXE Remote Command Execution (RCE) was observed, indicating potential exploitation behavior.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "36934c9a-d6db-4d59-b352-c01ee74d2e0e",
+      "name": "Remote Command Execution via SMB",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1570",
+    "threat.hacktool",
+    "mitre.t1021.002",
+    "attack.s0191",
+    "mitre.t1569.002"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/05/20",
+  "lastUpdate": "2025-06-03T03:45:26.000Z"
+}

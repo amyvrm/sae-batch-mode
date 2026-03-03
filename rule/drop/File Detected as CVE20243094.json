@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "03c801ac-aa32-4c67-aad8-488f9704af48",
+  "name": "File Detected as CVE20243094",
+  "description": "File Detection for CVE20243094 Trojan in Linux system.",
+  "filterSets": [
+    [
+      {
+        "id": "d285680f-af0e-520b-827e-4894b854f9e0",
+        "name": "File Detected as CVE20243094",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/05/06",
+  "lastUpdate": "2024-06-03T03:37:07.000Z"
+}

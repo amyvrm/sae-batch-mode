@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3d85253a-3eb4-4889-8b59-267d6209cc40",
+  "name": "Ransomware Traffic Detected",
+  "description": "Ransomware Traffic Detected",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "f6d08b52-9cf9-4788-a6f2-417ae219f225",
+      "name": "Ransomware Traffic Detected",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1486"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "PeiChi Cheng",
+  "team": "ddi",
+  "date": "2020/06/30",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d78d3add-5cb8-4bf8-a8a5-a6ee5973f7e7",
+  "name": "Suspicious Network Activities",
+  "description": "Suspicious network activities associated with initial access, lateral movement, and asset or data discovery were detected on a host.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "2378b534-eb36-4863-a8c0-27b6e5f33c32",
+      "name": "Network Analytics Correlation Detection",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "6935078f-e4ad-4de3-8bcf-bc08ebfa4912",
+      "name": "Network Analytics Playbook",
+      "provider": "WORKBENCH",
+      "type": "NA"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": false,
+  "silent": false,
+  "author": "XDR-NA Team",
+  "team": "XDR-NA Team",
+  "date": "2021/07/21",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

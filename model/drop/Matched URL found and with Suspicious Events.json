@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "34b71290-1070-42b3-a54b-b04432c2a41d",
+  "name": "Matched URL found and with Suspicious Events",
+  "description": "Fortinet and Trend Micro Detection for Matched URL found and with Suspicious Events",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "5dcbc0ff-01bd-4bee-ab15-913bb7d52376",
+      "name": "Antiphishing Matched A Url",
+      "score": 5
+    },
+    {
+      "id": "66573498-4e82-460d-9274-97b811a8712a",
+      "name": "Browser Leading to Suspicious Script Execution",
+      "score": 1
+    },
+    {
+      "id": "4396f8f2-dc04-481f-9263-802635bd256b",
+      "name": "Suspicious Download via Curl In Uncommon Folder",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 6,
+    "withinSeconds": 300,
+    "dedupSeconds": 4000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet",
+      "xes",
+      "sao",
+      "sds"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/20",
+  "lastUpdate": "2025-10-30T06:54:31.000Z"
+}

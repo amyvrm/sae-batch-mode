@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cfa6bc49-671f-4638-a6cf-ef0757dc125b",
+  "name": "Visual Basic And AutoIT Scripting",
+  "description": "Detects the use of Visual Basic and AutoIT scripting",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "4e1eea8a-6bef-4899-ae61-764042ca1334",
+      "name": "Arbitrary AutoIt Script Execution via Remote Downloaded Script",
+      "score": 5
+    },
+    {
+      "id": "15ae6585-2f87-4033-a2c8-ee567082ed5d",
+      "name": "Network Discovery Post Remote VBScript Download via Curl",
+      "score": 5
+    },
+    {
+      "id": "2f000913-d709-44cc-8c89-9a0992610034",
+      "name": "Remote VBScript Download via Curl",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.005",
+    "mitre.t1140"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/09/21",
+  "lastUpdate": "2025-10-30T07:43:34.000Z"
+}

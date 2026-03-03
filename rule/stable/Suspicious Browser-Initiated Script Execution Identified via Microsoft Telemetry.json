@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eb9c54ab-2ac6-4c4f-8238-8d79325ad4f2",
+  "name": "Suspicious Browser-Initiated Script Execution Identified via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection identifying instances where a web browser launches command-line or scripting interpreters including PowerShell, CMD, WScript, CScript, or MSHTA. Such behavior is uncommon for legitimate browsing activity and may indicate malicious drive-by downloads, script injection, or abuse of browser-based execution chains.",
+  "filterSets": [
+    [
+      {
+        "id": "84ce05ab-30d5-439d-9b95-0bed5eb617ca",
+        "name": "Suspicious Browser-Initiated Script Execution Identified via Microsoft Telemetry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/17",
+  "lastUpdate": "2025-11-20T07:23:03.000Z"
+}

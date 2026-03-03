@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bb6ab04a-ae4f-41a0-9de9-51e7a65e18f3",
+  "name": "Ransomware Communication with C2 Server Detected",
+  "description": "Network activity involving HTTP, which is associated with MIMIC, was detected.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "7bcee042-657c-4ebc-97e9-e2af75901a2f",
+      "name": "Ransomware Communication with C2 Server Detected",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "silent": false,
+  "globalModel": true,
+  "author": "James Vargas",
+  "team": "DDI Purple",
+  "date": "2024/06/25",
+  "lastUpdate": "2025-04-03T08:28:58.000Z"
+}

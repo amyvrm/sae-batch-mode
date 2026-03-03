@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8bb61f2e-877a-4953-b55f-5d04a4583848",
+  "name": "AWS Redshift Unsuccessful Cluster Subnet Groups Enumeration",
+  "description": "Detects unsuccessful attempts to list Redshift cluster subnet groups, which may indicate reconnaissance for security misconfigurations.",
+  "filterSets": [
+    [
+      {
+        "id": "6f53cc50-3c13-45f2-8fb1-80b3af1fb36c",
+        "name": "AWS Redshift Unsuccessful Cluster Subnet Groups Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

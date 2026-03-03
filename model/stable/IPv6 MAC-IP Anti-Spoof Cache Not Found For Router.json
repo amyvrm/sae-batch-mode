@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "25bdc4a9-0cf4-48f8-b02c-bda2af203451",
+  "name": "IPv6 MAC-IP Anti-Spoof Cache Not Found For Router",
+  "description": "SonicWall Detection - IPv6 Mac-IP Anti-spoof cache not found for this router",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "ceb5aa2f-e171-42b5-b5ee-c6694ac44f42",
+      "name": "IPv6 MAC-IP Anti-Spoof Cache Not Found For Router",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2025-01-02T06:14:24.000Z"
+}

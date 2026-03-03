@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "396682d4-51da-46d2-b478-cfab3676cbc0",
+  "name": "Suspicious Notepad++ Outbound Connection",
+  "description": "Detects DNS query requests from Notepad++ to potentially malicious domains.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3b8dd519-d498-4db9-9575-277b5b69d819",
+      "name": "Suspicious Notepad++ Outbound Connection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Lucas Silva & Jack Walsh & Jehhan Marcelo",
+  "team": "US-IR",
+  "date": "2026/02/03",
+  "lastUpdate": "2026-02-12T15:25:53.000Z"
+}

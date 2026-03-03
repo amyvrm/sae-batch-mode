@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "204ac327-d994-4382-bd50-aa2125787d39",
+  "name": "Teamviewer Remote Access via UDP protocol",
+  "description": "Aims to detect Teamviewer activity over UDP protocol",
+  "filterSets": [
+    [
+      {
+        "id": "b4a959f2-8f45-42c5-acf2-70cb9870e709",
+        "name": "Connect To Internet Facing RMM Tool using TeamViewer over UDP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "CSG",
+  "date": "2024/02/29",
+  "lastUpdate": "2025-04-03T08:28:58.000Z"
+}

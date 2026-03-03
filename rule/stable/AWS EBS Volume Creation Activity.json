@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "edb790a7-d7e8-4b83-ad9d-9bebb12d53bf",
+  "name": "AWS EBS Volume Creation Activity",
+  "description": "Monitors for the creation of Amazon EBS volumes, which could indicate legitimate provisioning of storage resources or unauthorized activities attempting to create additional storage for data exfiltration or other malicious purposes.",
+  "filterSets": [
+    [
+      {
+        "id": "d2d71688-8b2b-460a-94c0-86fd0d3dea58",
+        "name": "AWS EBS Volume Creation Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/28",
+  "lastUpdate": "2025-09-08T06:00:50.000Z"
+}

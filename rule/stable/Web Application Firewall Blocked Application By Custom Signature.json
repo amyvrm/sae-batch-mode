@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ef9dd69c-daa5-473d-a855-7b09ec199cdd",
+  "name": "Web Application Firewall Blocked Application By Custom Signature",
+  "description": "Fortinet detection - Web application firewall blocked application by custom signature",
+  "filterSets": [
+    [
+      {
+        "id": "0e4d5199-ec3c-45f9-ab7d-f2e522c43d1f",
+        "name": "Web Application Firewall Blocked Application By Custom Signature",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

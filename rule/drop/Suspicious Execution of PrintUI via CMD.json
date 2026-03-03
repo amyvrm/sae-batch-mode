@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "512b46ce-e2dc-45ec-9701-d474832ec1c9",
+  "name": "Suspicious Execution of PrintUI via CMD",
+  "description": "Proxy execution of PrintUI.exe via CMD to execute a binary which are unusual and should be investigated",
+  "filterSets": [
+    [
+      {
+        "id": "67c90d86-d728-457e-bdea-4b0c8299fea7",
+        "name": "PrintUI Execution of an EXE file via CMD",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/10/29",
+  "lastUpdate": "2025-01-16T03:40:35.000Z"
+}

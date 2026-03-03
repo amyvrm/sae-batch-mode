@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "089cb153-aaf7-4da5-92f2-b9e2eb9ec34a",
+  "name": "AWS SES Successful List Email Identities",
+  "description": "A successful attempt to list all the email identities associated to an account was observed.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS SES Successful List Email Identities",
+        "id": "fa00dfb9-11ef-411a-a15b-c3b3b16b91de",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

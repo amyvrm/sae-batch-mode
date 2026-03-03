@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "86717647-3467-4098-8930-23c4abc861b7",
+  "name": "Add Account to Local Administrators Group",
+  "description": "Detects Account Addition Into Local Administrators Group",
+  "filterSets": [
+    [
+      {
+        "id": "0beeecb3-80a8-4301-b763-7d452b0abea6",
+        "name": "Add Account to Local Administrators Group",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "parentFilePath": {
+      "86717647-3467-4098-8930-23c4abc861b7": "parentFilePath"
+    },
+    "parentCmd": {
+      "86717647-3467-4098-8930-23c4abc861b7": "parentCmd"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Kentaro Yoshida",
+  "team": "JP-IR",
+  "date": "2021/09/22",
+  "lastUpdate": "2025-11-06T06:37:56.000Z"
+}

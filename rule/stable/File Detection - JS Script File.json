@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "80c1a979-92f0-47af-bbe7-b124379368a9",
+  "name": "File Detection - JS Script File",
+  "description": "JS Script File",
+  "filterSets": [
+    [
+      {
+        "id": "87ffebd5-7b74-4fe5-a790-3c5ecb1ef6cc",
+        "name": "File Detection - JS Script File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

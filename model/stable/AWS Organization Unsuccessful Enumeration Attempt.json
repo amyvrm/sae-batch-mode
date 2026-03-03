@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0",
+  "id": "38adf036-1e36-48fa-993c-bbdec0275f7a",
+  "name": "AWS Organization Unsuccessful Enumeration Attempt",
+  "description": "Detected unsuccessful enumeration of AWS Organization service which might indicate attacker trying to collect information on the targeted AWS account structure, IDs, permissions, resources, network setup, billing, service configurations, and user/group info that might aid attackers to have targeted attacks on the account.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "name": "AWS Organization Unsuccessful List Parents",
+      "id": "10a2181e-93de-41e0-af9d-184ac574f031",
+      "score": 1
+    },
+    {
+      "name": "AWS Organization Unsuccessful Describe Organization",
+      "id": "ae70d5cc-b253-4ff1-8bdb-dc4e2647afbf",
+      "score": 1
+    },
+    {
+      "name": "AWS Organization Unsuccessful List Organizational Units For Parents",
+      "id": "29543fe6-a75c-4126-a715-4d404631ad62",
+      "score": 1
+    },
+    {
+      "name": "AWS Organization Unsuccessful List Delegated Administrator",
+      "id": "39bfb108-1aba-434d-b50a-87249671f490",
+      "score": 1
+    },
+    {
+      "name": "AWS Organization Unsuccessful List Roots",
+      "id": "21abdddb-b63e-4072-9567-71cc14c8950b",
+      "score": 1
+    },
+    {
+      "name": "AWS Organization Unsuccessful List Accounts",
+      "id": "61ea23cc-d790-42fd-a5cd-a408c4cace4d",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580",
+    "mitre.t1087.004",
+    "mitre.t1526"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/22",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

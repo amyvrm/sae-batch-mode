@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6e6ed518-8fb6-4bd2-bdcc-137ef72a83fa",
+  "name": "Azure Recovery Services Resource Deleted",
+  "description": "Detects deletion of Azure Recovery Services resources which might indicate an attacker attempting to disable backup and recovery capabilities",
+  "filterSets": [
+    [
+      {
+        "id": "0bdef101-43d8-4de6-a1a5-b1293d26dd41",
+        "name": "Azure Recovery Services Resource Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Nathaniel Ragasa",
+  "team": "SAE Threat Expert",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-23T02:21:40.000Z"
+}

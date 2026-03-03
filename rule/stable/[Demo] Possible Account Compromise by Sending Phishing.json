@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b42a10d3-4db2-56e1-97e0-d60aa048ccf3",
+  "name": "[Demo] Possible Account Compromise by Sending Phishing",
+  "description": "Found internal mailbox sending phishing to others",
+  "filterSets": [
+    [
+      {
+        "id": "8a55a458-6b9d-52e6-b489-3994ea251a39",
+        "name": "(Demo) Internal Spear Phishing Email via Link",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1500,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2024/12/12",
+  "lastUpdate": "2025-01-20T05:12:50.000Z"
+}

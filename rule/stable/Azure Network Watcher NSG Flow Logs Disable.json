@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19e50f79-27ee-4cbd-8a91-9ec317784ea0",
+  "name": "Azure Network Watcher NSG Flow Logs Disable",
+  "description": "Detects an attempt to disable Azure Network Watcher NSG Flow Logs",
+  "filterSets": [
+    [
+      {
+        "id": "d582ffec-45d6-4235-bedd-2c78c0e49c13",
+        "name": "Azure Network Watcher NSG Flow Logs Disable Started",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Ashish Verma and Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/11/17",
+  "lastUpdate": "2025-12-17T09:15:45.000Z"
+}

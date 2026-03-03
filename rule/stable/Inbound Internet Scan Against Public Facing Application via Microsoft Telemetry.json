@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "08d3fc57-d73b-46a1-b418-3e4414b362df",
+  "name": "Inbound Internet Scan Against Public Facing Application via Microsoft Telemetry",
+  "description": "Microsoft network detection for inbound internet scanning activities targeting public facing applications as identified by Microsoft Defender for Endpoint telemetry. This rule identifies potential reconnaissance attempts where external actors are probing network services and applications for vulnerabilities or exposed attack surfaces.",
+  "filterSets": [
+    [
+      {
+        "id": "2223f1f7-2a9e-4455-8967-930b9872033a",
+        "name": "Inbound Internet Scan Against Public Facing Application via Microsoft Telemetry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/19",
+  "lastUpdate": "2025-09-24T02:24:53.000Z"
+}

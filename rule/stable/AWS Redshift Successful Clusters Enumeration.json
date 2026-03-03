@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "16002d8b-a2bb-401c-8307-ca8a90661d5a",
+  "name": "AWS Redshift Successful Clusters Enumeration",
+  "description": "Detects enumeration of Redshift cluster, a potential sign of environment discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "3c4e211b-d49d-4cb9-a5e3-d184622ba9c3",
+        "name": "AWS Redshift Successful Clusters Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

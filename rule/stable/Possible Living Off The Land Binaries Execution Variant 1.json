@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "1.0",
+  "id": "75615dda-681f-4b58-896f-21dfffa60740",
+  "name": "Possible Living Off The Land Binaries Execution Variant 1",
+  "description": "Living Off the Land Binaries are binaries of a non-malicious nature, local to the operating system, that have been utilised and exploited by cyber criminals and crime groups to camouflage their malicious activity.",
+  "filterSets": [
+    [
+      {
+        "id": "511909f0-0820-42c7-8b69-14d7d97c9aa1",
+        "name": "Executable Loaded via CertOC",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "433861a2-5cb2-42de-8d05-ffe731226106",
+        "name": "File Execution via Conhost",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e89c44c4-8b13-4128-9c60-b932bbd16550",
+        "name": "Suspicious CommandLine Execution via AddinUtil",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a4684c07-b90f-4285-9217-87b5e76d71ea",
+        "name": "Suspicious Execution via Atbroker",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e802f80c-2957-48d4-bceb-bb4581634292",
+        "name": "Suspicious Script Execution via WSL Bash",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "44cdc792-c25f-4468-bdad-df3cbe3a7dcb",
+        "name": "Registry Change via Atbroker",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "74e4cf60-5f20-481d-ad20-a0cc57966ba4",
+        "name": "Suspicious Certutil Execution in Windows",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9a449456-d454-49f9-b543-73b4b269e1d2",
+        "name": "Decode File via Certutil",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7511fd89-9e7e-4546-ad94-5d0aeaea7f4d",
+        "name": "Suspicious Process Launched via MSPAINT",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "04f2de5e-87d3-45ad-9a8c-0ce7750adfb7",
+        "name": "Suspicious Process Execution via HFS",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d725e563-c8c6-4482-a540-1a068145ea19",
+        "name": "Modify WAB Dll To Launch Via Wab.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "929d8d6d-2fa4-4d54-bd40-1954ddab982f",
+        "name": "Download File Via MpCmdRun",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a6a7f290-600e-4937-8a3d-5488bfedbd7d",
+        "name": "Potential Adplus.exe Abuse",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "73d54bc9-7808-5b04-8170-7ed1fce7ea85",
+        "name": "Behavior Monitoring Detection - Suspicious lolbins process creation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ffb8e0a9-9a2e-5f6d-b14b-c03951f086db",
+        "name": "Behavior Monitoring Detection - Suspicious Cmdl32 Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes",
+      "sao",
+      "pao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/11/06",
+  "lastUpdate": "2024-11-18T21:06:35.000Z"
+}

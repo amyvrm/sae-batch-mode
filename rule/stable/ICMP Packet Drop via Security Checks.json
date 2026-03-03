@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "40f022ec-7039-4a96-a096-76ab71c656c7",
+  "name": "ICMP Packet Drop via Security Checks",
+  "description": "Cisco detection for ICMP packets were dropped by the Secure Firewall ASA because of security checks added by the stateful ICMP feature that are usually either ICMP echo replies without a valid echo request already passed across the Secure Firewall ASA or ICMP error messages not related to any TCP, UDP, or ICMP session already established in the Secure Firewall ASA.",
+  "filterSets": [
+    [
+      {
+        "id": "540014e5-841c-53d4-b097-42280ae6f688",
+        "name": "ICMP Packet DROP via Security Checks",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-03T09:21:48.000Z"
+}

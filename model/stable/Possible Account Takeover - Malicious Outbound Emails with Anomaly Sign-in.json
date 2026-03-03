@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "41f9425c-2463-5551-848b-aeb880209586",
+  "name": "Possible Account Takeover - Malicious Outbound Emails with Anomaly Sign-in",
+  "description": "Account has sent one or more malicious emails with anomaly sign-in, indicating a possible account takeover.",
+  "riskLevel": "high",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "a6e3f520-8de0-5678-962a-d4c415c2e578",
+      "name": "Possible Account Takeover - Malicious Outbound Emails",
+      "score": 1
+    },
+    {
+      "id": "af3e47c5-60cc-4fcd-9841-12158921db74",
+      "name": "Anomaly sign-in activity without trying(Batch job)",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 86400,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "xms",
+      "aad"
+    ]
+  ],
+  "tags": [
+    "mitre.t1586.002",
+    "mitre.t1586.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2024/12/17",
+  "lastUpdate": "2025-01-06T04:13:14.000Z"
+}

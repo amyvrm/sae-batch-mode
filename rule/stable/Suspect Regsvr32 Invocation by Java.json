@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bf5d025b-6b47-4f00-a175-38116c7fe85a",
+  "name": "Suspect Regsvr32 Invocation by Java",
+  "description": "Detection of a suspicious regsrv32 invocation by java.",
+  "filterSets": [
+    [
+      {
+        "id": "2acdfe27-1b8e-4f1d-a857-3ddcd3b255cc",
+        "name": "Suspect Regsvr32 Invocation by Java",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/02/13",
+  "lastUpdate": "2024-02-19T17:08:40.000Z"
+}

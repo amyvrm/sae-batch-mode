@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7f0ad052-1def-4893-87a6-20f9eb812244",
+  "name": "Suspicious Windows Sandbox Execution by SYSTEM User via Task Scheduler",
+  "description": "SprintCSP.dll will be used for local privilege escalation abusing DLL Search Order Hijacking of StorSvc service.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "366f6ce3-f828-4f3c-bf46-76a8b32afa31",
+      "name": "Suspicious Windows Sandbox Execution by SYSTEM User via Task Scheduler",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1560.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yoshihiro Nakaya",
+  "team": "JP-IR",
+  "date": "2025/04/07",
+  "lastUpdate": "2025-04-16T06:33:47.000Z"
+}

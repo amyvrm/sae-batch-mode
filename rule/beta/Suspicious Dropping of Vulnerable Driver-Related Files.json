@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a1eca59a-6fa6-4a52-8ba7-a46b1526c126",
+  "name": "Suspicious Dropping of Vulnerable Driver-Related Files",
+  "description": "Detects process termination using GhostDriver which is a Rust-built Antivirus killer tool that leverages Bring Your Own Vulnerable Driver(BYOVD).",
+  "filterSets": [
+    [
+      {
+        "id": "487f548e-dfdd-4fa8-a0ff-b4496aa31523",
+        "name": "Suspicious Dropping of Vulnerable Driver-Related Files",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/03/20",
+  "lastUpdate": "2025-05-26T05:07:23.000Z"
+}

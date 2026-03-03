@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b1269c65-41d2-4e26-8ab9-2ed49f7c1f7a",
+  "name": "AWS SageMaker Over Permissive Model Package Group Policy Created",
+  "description": "Detects the creation of an overly permissive model package group policy, resulting in excessive exposure of ML artifacts within the AWS account or organization.",
+  "filterSets": [
+    [
+      {
+        "id": "e9030d3b-ccc7-4d5e-bdb8-863728aaa653",
+        "name": "AWS SageMaker Over Permissive Model Package Group Policy Created",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/11/28",
+  "lastUpdate": "2025-01-21T13:11:52.000Z"
+}

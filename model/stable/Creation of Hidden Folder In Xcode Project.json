@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1c094512-11f7-4cb1-ba7c-021d415f6243",
+  "name": "Creation of Hidden Folder In Xcode Project",
+  "description": "A hidden folder was created in an Xcode Project to evade detection.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "3ece1582-0abe-11eb-b768-787b8ad91447",
+      "name": "Drop Hidden Folder In Xcode Project",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1564.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/10/10",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

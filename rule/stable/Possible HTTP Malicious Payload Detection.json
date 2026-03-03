@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0993284a-5d7a-4b24-a6e2-b3448d34789f",
+  "name": "Possible HTTP Malicious Payload Detection",
+  "description": "Palo Alto Vulnerability detection - Possible HTTP Malicious Payload Detection",
+  "filterSets": [
+    [
+      {
+        "id": "999f7884-8641-40b6-9f7c-3c649ca8b9de",
+        "name": "Possible HTTP Malicious Payload Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-03-24T01:49:14.000Z"
+}

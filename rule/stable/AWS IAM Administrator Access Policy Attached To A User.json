@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "98390846-351c-4458-8e82-bd68c6def7e7",
+  "name": "AWS IAM Administrator Access Policy Attached To A User",
+  "description": "Detects AWS IAM Administrator Access Policy Attachment to a User.",
+  "filterSets": [
+    [
+      {
+        "id": "09e78fc5-a2aa-454f-89bf-f51cb869dd91",
+        "name": "AWS IAM Administrator Access Policy Attached To A User",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/09/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

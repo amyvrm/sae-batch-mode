@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "241c9cfd-8127-4cf6-9851-fe67b1406248",
+  "name": "Possible DLL Search Order Hijacking via StorSvc",
+  "description": "SprintCSP.dll will be used for local privilege escalation abusing DLL Search Order Hijacking of StorSvc service.",
+  "filterSets": [
+    [
+      {
+        "id": "d3a40a88-829a-4290-99f2-d1ff928c2ef2",
+        "name": "Possible DLL Search Order Hijacking via StorSvc",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Yoshihiro Nakaya",
+  "team": "JP-IR",
+  "date": "2024/09/11",
+  "lastUpdate": "2024-09-30T17:10:28.000Z"
+}

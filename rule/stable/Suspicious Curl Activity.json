@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7e1cf996-492a-43b6-9e3e-d4e58890c091",
+  "name": "Suspicious Curl Activity",
+  "description": "Detection of suspicious curl activity, leading to a file download.",
+  "filterSets": [
+    [
+      {
+        "id": "2ce3c13c-9a69-4174-a027-c416ec08b57c",
+        "name": "Suspicious Curl Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/02/13",
+  "lastUpdate": "2024-02-15T11:06:20.000Z"
+}

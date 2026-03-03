@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "88f34bbe-dced-4919-9f00-65d139d6da02",
+  "name": "AWS GuardDuty Unsuccessful Enumeration Attempt",
+  "description": "A rule that identifies unsuccessful attempts to enumerate GuardDuty detectors, configurations, and findings, potentially indicating reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "8de56299-8f4e-416a-a884-ccf2b657c55f",
+        "name": "AWS GuardDuty Unsuccessful Enumeration Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-06-18T09:26:53.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bd26be77-da95-4dbb-abe0-ceb7fd64f83f",
+  "name": "Initial Access By Abusing Docker REST API",
+  "description": "Detected Creation Of Container Over Docker REST API",
+  "filterSets": [
+    [
+      {
+        "id": "8fbd05e5-0d03-4966-b28f-727850206ea5",
+        "name": "Identified Creation Of Container Over Docker REST API",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/10/28",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

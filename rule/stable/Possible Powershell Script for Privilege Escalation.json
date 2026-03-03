@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3eb1fa7e-fe93-11ee-92c8-0242ac120002",
+  "name": "Possible Powershell Script for Privilege Escalation",
+  "description": "Detects a script that identifies Local Privilege Escalation (LPE) vulnerabilities",
+  "filterSets": [
+    [
+      {
+        "id": "05e93292-fe8f-11ee-92c8-0242ac120002",
+        "name": "Possible Windows Powershell Script of PrivesCheck",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e2832372-01b7-11ef-86d8-0242ac120002",
+        "name": "Possible Windows Powershell Execution of SharpHound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/04/19",
+  "lastUpdate": "2024-05-14T10:44:40.000Z"
+}

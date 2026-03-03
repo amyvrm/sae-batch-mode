@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f929ced7-3b47-4333-86bb-ec6b66076d46",
+  "name": "Bruteforce Activity Over SMB",
+  "description": "Observed network activity involving Server Message Block (SMB) protocol, which is associated with bruteforce attempts over SMB. The behavior was identified in inbound or outbound traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "d2cfcd19-8a94-50d7-874c-e44a96b0e586",
+        "name": "Bruteforce SMB (Response) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5e7578f4-bb16-5518-907f-bec460be7a99",
+        "name": "Bruteforce SMB (Response) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/05/21",
+  "lastUpdate": "2025-05-21T02:21:03.000Z"
+}

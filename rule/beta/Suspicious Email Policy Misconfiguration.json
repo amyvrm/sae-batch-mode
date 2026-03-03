@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "44644e95-da89-41d2-98f9-bcf9f3236f60",
+  "name": "Suspicious Email Policy Misconfiguration",
+  "description": "Suspicious emails were not blocked due to suspected email policy misconfiguration, which may indicate malicious behavior.",
+  "filterSets": [
+    [
+      {
+        "id": "a71b07f5-e787-4afb-8ba9-cb0f220c64ac",
+        "name": "Suspicious Email Policy Misconfiguration (Cloud Application Mail Metadata)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "906ca9a1-c2ff-4bd7-8daf-bc1b2b5c9248",
+        "name": "Suspicious Email Policy Misconfiguration (Email Service Mail Metadata)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "xms"
+    ]
+  ],
+  "author": "Fran Hong",
+  "team": "Jaguar",
+  "date": "2024/09/12",
+  "lastUpdate": "2024-11-12T22:27:28.000Z"
+}

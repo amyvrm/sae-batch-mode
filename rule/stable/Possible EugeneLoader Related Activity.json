@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bd7ce860-cc59-4b4d-8c4c-402bcfa58b2b",
+  "name": "Possible EugeneLoader Related Activity",
+  "description": "Detection of a suspect file creation activity that is most likely related to EugenLoader",
+  "filterSets": [
+    [
+      {
+        "id": "cfb5c916-6de3-44b7-a156-26a3b7d0249c",
+        "name": "Possible EugeneLoader Related Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/04/02",
+  "lastUpdate": "2024-04-08T21:09:29.000Z"
+}

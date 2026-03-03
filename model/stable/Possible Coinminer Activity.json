@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "id": "208b0e4e-cfcd-4211-8bfb-d0aa7ac25b07",
+  "name": "Possible Coinminer Activity",
+  "description": "Detects possible execution or connection of a suspicious executable indicative of coinminer activity.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "70a35a4d-5343-44de-ac1e-22b38cb59960",
+      "name": "Suspicious Executable and DLL Loading Indicative of Coinminer Activity",
+      "score": 1
+    },
+    {
+      "id": "37c050ed-3121-40bd-a2c0-bbd80e3f3e7e",
+      "name": "Possible Coinminer Outbound Connection",
+      "score": 1
+    },
+    {
+      "id": "183b7455-043d-4799-931d-2646b2b18259",
+      "name": "Possible Coinminer Process Injection via WmiPrvSE",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1496"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/03/24",
+  "lastUpdate": "2025-05-27T15:53:15.000Z"
+}

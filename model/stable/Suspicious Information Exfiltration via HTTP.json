@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "226f0d45-7b78-4927-8dc9-6861e9db5436",
+  "name": "Suspicious Information Exfiltration via HTTP",
+  "description": "An act of gathering private information was detected via HTTP.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1e3ed805-59a1-42ba-a130-8496158e6c56",
+      "name": "Suspicious Information Exfiltration via HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1588.002",
+    "threat.pua"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/11/21",
+  "lastUpdate": "2024-12-11T11:10:06.000Z"
+}

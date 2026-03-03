@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1cab8f2d-0198-4987-9bfc-dcdc035da02b",
+  "name": "Potential Malicious Domain Access via Greylist",
+  "description": "Traffic to a domain name, which is on a grey list in the dynamic filter database, has appeared.",
+  "filterSets": [
+    [
+      {
+        "id": "582a6779-e3b0-5211-8756-927186661970",
+        "name": "Potential Malicious Domain Access via Greylist",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/06",
+  "lastUpdate": "2026-02-11T03:25:20.000Z"
+}

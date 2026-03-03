@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "71480d4e-692f-4d7d-93f9-f6e893e89125",
+  "name": "Deployment of APT-related Files via Admin Shares",
+  "description": "The following are the adversary's (Earth Kasha) actual commands to deploy malicious components over admin shares.",
+  "filterSets": [
+    [
+      {
+        "id": "d02a448c-e5f8-49ec-9bfa-93f268d22520",
+        "name": "Deployment of APT-related Files via Admin Shares",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/01/28",
+  "lastUpdate": "2025-11-11T08:26:35.000Z"
+}

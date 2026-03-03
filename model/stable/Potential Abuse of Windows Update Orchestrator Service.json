@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7b8ac6d0-95b3-4974-b3ec-7b4a768b0f20",
+  "name": "Potential Abuse of Windows Update Orchestrator Service",
+  "description": "This model identifies potential misuse of the Windows Update Orchestrator Service (UsoSVC). Malicious actors may exploit this service to perform unauthorized actions or elevate privileges on the compromised machine. Such behavior is commonly associated with various cyber threats targeting system security, including the exploitation of CVE-2019-1405 and CVE-2019-1322.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d4a751f2-0e44-4a56-a248-ed7854c2ba31",
+      "name": "Possible Abuse of Windows Update Orchestrator Service",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1543.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "silent": false,
+  "globalModel": true,
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/12/11",
+  "lastUpdate": "2025-02-20T17:13:02.000Z"
+}

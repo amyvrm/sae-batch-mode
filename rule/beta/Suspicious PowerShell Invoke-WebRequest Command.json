@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4ea91664-eef2-47bc-b6c2-56f510f2fca6",
+  "name": "Suspicious PowerShell Invoke-WebRequest Command",
+  "description": "Detects the use of Invoke-WebRequest (IWR) in conjunction with system discovery commands or IEX for the purpose of downloading and executing files. This behavior may indicate reconnaissance data collection or the delivery of malware.",
+  "filterSets": [
+    [
+      {
+        "id": "8bbce4df-2aae-4e55-a9c3-09ab9a1d9d5a",
+        "name": "Suspicious PowerShell Invoke-WebRequest Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2026/01/08",
+  "lastUpdate": "2026-01-13T09:40:06.000Z"
+}

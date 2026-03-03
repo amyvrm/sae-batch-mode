@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b3c05b94-328f-425b-b0cf-9bb5416fe631",
+  "name": "Execution Of Multiple Discovery Commands On Linux Or Unix Systems",
+  "description": "This incident means multiple discovery commands were observed on an endpoint.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "1a43599d-4672-44f8-bd2b-7c0464ed45b9",
+      "name": "Execution Of File Or Folder Discovery Commands",
+      "score": 1
+    },
+    {
+      "id": "9672af51-944e-4d62-8a55-2e1245480553",
+      "name": "Execution Of Process Discovery Commands",
+      "score": 1
+    },
+    {
+      "id": "989b24d4-b2a5-45fa-a6f5-40326ebb2a08",
+      "name": "Execution Of User Discovery Commands",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 1800,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1083",
+    "mitre.t1057",
+    "mitre.t1033"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 10,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/05/18",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

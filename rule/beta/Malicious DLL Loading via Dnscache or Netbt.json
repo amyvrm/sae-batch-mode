@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "066b2660-0a1d-42c3-ad9d-b5e4a87f0b47",
+  "name": "Malicious DLL Loading via Dnscache or Netbt",
+  "description": "Adversaries may load a malicious DLL by taking advantage of the Network Configuration Operators group to create or set registry keys, which could lead to executing commands as SYSTEM.",
+  "filterSets": [
+    [
+      {
+        "id": "f66df346-622b-43c8-a288-3b44f2d1799b",
+        "name": "Malicious DLL Loading via Dnscache or Netbt",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "98f4105d-83a7-4f48-97a6-6199d91f888c",
+        "name": "Suspicious DLL Loading via Performance Counter Registry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/10",
+  "lastUpdate": "2026-02-11T08:14:56.000Z"
+}

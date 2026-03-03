@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bc394ae7-44ae-412a-9f03-f1580f856e30",
+  "name": "AWS SNS Successful List Topics",
+  "description": "A successful attempt to list the requester's topics was observed.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS SNS Successful List Topics",
+        "id": "531f9262-b059-4cdd-8c2e-390b7b12d99b",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2023/11/22",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

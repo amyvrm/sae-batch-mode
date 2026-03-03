@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3a0e2389-cc8a-42a3-9a68-bb020442eb7d",
+  "name": "Possible RDP Server Connections from Internet",
+  "description": "Remote Desktop (RDP) connections have been observed on the network from public IP address to internal hosts",
+  "filterSets": [
+    [
+      {
+        "id": "07d613c2-5d94-4b5b-875d-5813db2d5820",
+        "name": "Possible RDP Server Connections from Internet",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/05/16",
+  "lastUpdate": "2025-08-14T10:17:54.000Z"
+}

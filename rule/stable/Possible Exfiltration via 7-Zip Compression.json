@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bddbf9ed-24bf-4495-a30c-32a57219841a",
+  "name": "Possible Exfiltration via 7-Zip Compression",
+  "description": "Detection of possible exfiltration via 7-Zip compression in a suspicious location.",
+  "filterSets": [
+    [
+      {
+        "id": "899f9adf-0d74-436c-a311-f2aab4e38623",
+        "name": "Possible Exfiltration via 7-Zip Compression",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva & Jack Walsh",
+  "team": "US-IR",
+  "date": "2024/03/19",
+  "lastUpdate": "2024-03-27T14:07:40.000Z"
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ecf98d54-816f-4ceb-a8b3-7ca4e1c6d4d6",
+  "name": "Add Account to Local Administrators Group",
+  "description": "Detects Account Addition Into Administrators Group",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "86717647-3467-4098-8930-23c4abc861b7",
+      "name": "Add Account to Local Administrators Group",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1136"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Kentaro Yoshida",
+  "team": "JP-IR",
+  "date": "2021/09/22",
+  "lastUpdate": "2025-07-08T06:54:00.000Z"
+}

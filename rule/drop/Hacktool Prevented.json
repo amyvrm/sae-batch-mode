@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3339a8f2-72a9-44ec-b511-18229b0f54a4",
+  "name": "Hacktool Prevented",
+  "description": "Microsoft Detection for Prevented Hacktool",
+  "filterSets": [
+    [
+      {
+        "id": "be86a058-a0b0-4107-9e5d-433c06bc2a36",
+        "name": "Hacktool Prevented",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/13",
+  "lastUpdate": "2025-07-28T20:43:16.000Z"
+}

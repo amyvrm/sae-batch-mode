@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4a286783-3250-4e76-a00b-20e78ce90ec4",
+  "name": "AWS EC2 TerminateInstances Permission Probe",
+  "description": "This model detects the use of the EC2 TerminateInstances API call with the DryRun flag enabled, which results in the Client.DryRunOperation error code in AWS CloudTrail. This behavior indicates that the caller is testing whether they have permission to terminate EC2 instances without actually performing the destructive action.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "658b5a23-21c0-4ec1-8184-82fdd1b9a794",
+      "name": "AWS EC2 TerminateInstances Permission Probe",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1485",
+    "mitre.t1578.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2026/01/22",
+  "lastUpdate": "2026-02-11T08:35:44.000Z"
+}

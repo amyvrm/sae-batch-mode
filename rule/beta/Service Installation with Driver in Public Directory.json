@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8680c0e3-a809-4dd4-864b-e4cdfbb726cb",
+  "name": "Service Installation with Driver in Public Directory",
+  "description": "A Windows service was installed with an ImagePath pointing to a driver file (.sys) in a public directory (C:\\Users\\Public). This behavior may indicate malicious driver installation for privilege escalation or defense evasion via BYOVD attacks.",
+  "filterSets": [
+    [
+      {
+        "id": "f4deef00-255c-416a-a9a7-7efb5699799e",
+        "name": "Service Installation with Driver in Public Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes",
+      "sao",
+      "pao"
+    ]
+  ],
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/02/09",
+  "lastUpdate": "2026-02-11T09:21:22.000Z"
+}

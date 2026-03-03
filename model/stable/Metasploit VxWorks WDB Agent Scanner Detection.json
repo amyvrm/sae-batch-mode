@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "07afbe70-e86d-4d27-b90a-cb4b969f7982",
+  "name": "Metasploit VxWorks WDB Agent Scanner Detection",
+  "description": "Palo Alto Vulnerability detection - Metasploit VxWorks WDB Agent Scanner Detection",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e4d2163a-532f-4b72-bc7e-57a30d5ddf6b",
+      "name": "Metasploit VxWorks WDB Agent Scanner Detection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "John Paul Lim",
+  "team": "Third Party Operations",
+  "date": "2025/09/25",
+  "lastUpdate": "2025-10-02T10:20:17.000Z"
+}

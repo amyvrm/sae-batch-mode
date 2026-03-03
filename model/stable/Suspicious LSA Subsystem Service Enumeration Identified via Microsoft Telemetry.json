@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c92f451-3768-41cb-b0f8-14576c553df0",
+  "name": "Suspicious LSA Subsystem Service Enumeration Identified via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection identifying CMD executions that enumerate LSASS using tasklist with filtering arguments. This technique is commonly used during credential harvesting or reconnaissance to verify the presence of LSASS prior to targeted process access or memory dumping.",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "44a748b9-9489-4267-adf1-94bb09eaa6f9",
+      "name": "Suspicious LSA Subsystem Service Enumeration Identified via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1057",
+    "mitre.t1003.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/17",
+  "lastUpdate": "2026-01-14T22:47:08.000Z"
+}

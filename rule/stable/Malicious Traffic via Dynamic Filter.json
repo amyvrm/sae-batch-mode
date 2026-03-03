@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b9fdf7e2-4b4a-4e31-b66b-8b3234109366",
+  "name": "Malicious Traffic via Dynamic Filter",
+  "description": "Traffic to an IP address, which is on a blocklist in the dynamic filter database, has appeared.",
+  "filterSets": [
+    [
+      {
+        "id": "1a307477-9274-57a2-9642-de99b7b42378",
+        "name": "Malicious Traffic via Dynamic Filter",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/06",
+  "lastUpdate": "2026-02-11T03:25:20.000Z"
+}

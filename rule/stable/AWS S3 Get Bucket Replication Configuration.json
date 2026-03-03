@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aa99874a-3ff6-11ee-be56-0242ac120002",
+  "name": "AWS S3 Get Bucket Replication Configuration",
+  "description": "This rule detects AWS S3 Get Bucket Replication Configuration.",
+  "filterSets": [
+    [
+      {
+        "id": "a72d4cfc-3cf6-11ee-be56-0242ac120002",
+        "name": "AWS S3 Get Bucket Replication Configuration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/08/21",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

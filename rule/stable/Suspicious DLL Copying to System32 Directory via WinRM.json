@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "071a6aee-2dff-4752-8fe6-dfc7aebfe76e",
+  "name": "Suspicious DLL Copying to System32 Directory via WinRM",
+  "description": "Detects suspicious copying of DLL file to System32 directory via Windows Remote Management(WinRM) that might an indicator of possible compromised or lateral movement.",
+  "filterSets": [
+    [
+      {
+        "id": "b9301dea-9011-4aae-b1ce-f80d92851926",
+        "name": "Suspicious DLL Copying to System32 Directory via WinRM",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/07/23",
+  "lastUpdate": "2024-09-02T08:19:34.000Z"
+}

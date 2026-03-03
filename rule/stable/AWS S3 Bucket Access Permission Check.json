@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bbd7b2ac-ca3a-41a7-be88-434aac1cf8ac",
+  "name": "AWS S3 Bucket Access Permission Check",
+  "description": "Monitors S3 bucket access permission checks to determine if bucket exists and user has access permissions, which could indicate legitimate bucket operations or reconnaissance attempts to understand account S3 structure and access permissions for potential data exfiltration attacks.",
+  "filterSets": [
+    [
+      {
+        "id": "df7f3b88-85c5-4b82-a9c8-e7257230f6fb",
+        "name": "AWS S3 Bucket Access Permission Check",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/11/03",
+  "lastUpdate": "2025-09-16T11:20:55.000Z"
+}

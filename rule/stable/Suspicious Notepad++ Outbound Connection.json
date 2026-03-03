@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3b8dd519-d498-4db9-9575-277b5b69d819",
+  "name": "Suspicious Notepad++ Outbound Connection",
+  "description": "Detects DNS query requests from Notepad++ to potentially malicious domains.",
+  "filterSets": [
+    [
+      {
+        "id": "21e3d1d4-e6f6-4493-9219-e31faab01f13",
+        "name": "Suspicious Notepad++ Outbound Connection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva & Jack Walsh & Jehhan Marcelo",
+  "team": "US-IR",
+  "date": "2026/02/03",
+  "lastUpdate": "2026-02-12T15:25:53.000Z"
+}

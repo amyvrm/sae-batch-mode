@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "34871820-da12-4492-bb57-309711d9e6e1",
+  "name": "Shadowcopy Backup Deletion via WMIC",
+  "description": "Microsoft Detection for Shadowcopy Backup Deletion via WMIC",
+  "filterSets": [
+    [
+      {
+        "id": "131f7189-eff3-46b1-b02f-aab5b2fdf71e",
+        "name": "Shadowcopy Backup Deletion via WMIC",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/07/01",
+  "lastUpdate": "2025-07-07T02:52:32.000Z"
+}

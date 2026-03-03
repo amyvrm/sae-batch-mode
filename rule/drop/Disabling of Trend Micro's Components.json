@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8160e409-44dc-45e8-a936-ffa9b1535f1b",
+  "name": "Disabling of Trend Micro's Components",
+  "description": "Detection for terminating Trend Micro's modules and using different techniques",
+  "filterSets": [
+    [
+      {
+        "id": "0660c51e-329b-420d-8fd0-427e28e11997",
+        "name": "Disabling of Trend Micro Components",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b7972e94-19f2-450a-a3ea-1719e2628fa3",
+        "name": "Uninstallation of Trend Micro Driver via Netcfg",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/10/15",
+  "lastUpdate": "2025-01-22T05:14:23.000Z"
+}

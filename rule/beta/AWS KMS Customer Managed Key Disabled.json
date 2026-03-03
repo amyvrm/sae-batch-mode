@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d31816f8-7c3f-4afc-a061-821940fb9d46",
+  "name": "AWS KMS Customer Managed Key Disabled",
+  "description": "This rule detects attempts to disable or schedule the deletion of an AWS Key Management Service (KMS) Customer Managed Key (CMK).",
+  "filterSets": [
+    [
+      {
+        "name": "AWS KMS Customer Managed Key Disabled",
+        "id": "b437d748-ee7c-4809-8f11-9825b20558ff",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/02/12",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

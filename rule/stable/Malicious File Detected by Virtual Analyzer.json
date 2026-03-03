@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bb322f20-c459-412c-beac-c4a4d8533de4",
+  "name": "Malicious File Detected by Virtual Analyzer",
+  "description": "A unknown malware is detected by Virtual Analyzer",
+  "filterSets": [
+    [
+      {
+        "id": "3cd0d920-ea4b-4935-a9f4-fbf4cda53384",
+        "name": "Possible Malicious File Detected by Virtual Analyzer",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi"
+    ]
+  ],
+  "lastUpdate": "2024-03-27T14:38:28.000Z"
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d0f97abe-0cb5-4b03-b282-4578be86568f",
+  "name": "Suspicious Anydesk Configuration to Enable Unattended Access",
+  "description": "Suspicious anydesk setting that can lead to unattended remote access.",
+  "filterSets": [
+    [
+      {
+        "id": "ad317c80-000b-4c39-922a-c645f2f3420c",
+        "name": "Suspicious Anydesk Configuration to Enable Unattended Access",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/09/15",
+  "lastUpdate": "2025-11-05T03:21:38.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eeb27193-c2b9-43ff-b4e7-d9459504120b",
+  "name": "AWS SES Unsuccessful Get Send Quota",
+  "description": "An unsuccessful attempt to obtain the sending limits of an account was observed.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS SES Unsuccessful Get Send Quota",
+        "id": "0b9501a2-dee1-47b4-b113-83e869ed4022",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

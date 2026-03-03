@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f5ed45aa-5531-11ef-b864-0242ac120002",
+  "name": "Possible Dropping of Vulnerable Antivirus Drivers",
+  "description": "Exploiting vulnerable drivers to deploy malicious payloads or hacking tools, thereby bypassing security measures and escalating its malicious activities.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0492b75c-5a14-11ef-b864-0242ac120002",
+      "name": "Possible Dropping of Vulnerable Antivirus Drivers",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1203",
+    "threat.exploit",
+    "cve.2023.1445"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/08/19",
+  "lastUpdate": "2024-08-29T14:37:51.000Z"
+}

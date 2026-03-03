@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7bcee042-657c-4ebc-97e9-e2af75901a2f",
+  "name": "Ransomware Communication with C2 Server Detected",
+  "description": "Network activity involving HTTP, which is associated with MIMIC, was detected.",
+  "filterSets": [
+    [
+      {
+        "id": "b9522663-197a-49cf-b7aa-e207cd634fa0",
+        "name": "Ransomware Communication with C2 Server Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/06/25",
+  "lastUpdate": "2025-04-03T08:28:58.000Z"
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2b0f47a9-fe7f-4968-be43-874861977e55",
+  "name": "Windows Defender Termination via Defender Control",
+  "description": "Detects Windows Defender Termination using open source application Defender Control and Toggle Control",
+  "filterSets": [
+    [
+      {
+        "id": "781d04c8-ac6c-4333-9064-41df1bb02cb8",
+        "name": "Defender Control Detection for AV Termination",
+        "highlight": true
+      },
+      {
+        "id": "fe39b187-3836-4bbc-827e-a90927d08a88",
+        "name": "Toggle Defender Detection for Windows Defender Termination",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "781d04c8-ac6c-4333-9064-41df1bb02cb8",
+        "name": "Defender Control Detection for AV Termination",
+        "highlight": true
+      },
+      {
+        "id": "57c041ac-aca9-48a0-ad46-02b3819abcb0",
+        "name": "Disabling of Windows Defender via Defender Control",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fe39b187-3836-4bbc-827e-a90927d08a88",
+        "name": "Toggle Defender Detection for Windows Defender Termination",
+        "highlight": true
+      },
+      {
+        "id": "c568d2b4-60c8-4ea9-9608-f5eba8d9a74c",
+        "name": "Disable Windows Defender by Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "pdi",
+      "xes"
+    ]
+  ],
+  "author": "2024-03-06T04:57:51.000Z",
+  "team": "TAD Service Ops",
+  "date": "2024/03/06",
+  "lastUpdate": "2024-03-13T01:35:41.000Z"
+}

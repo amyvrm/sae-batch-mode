@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01913357-b1b3-7dd6-98c2-7ee89278b5b2",
+  "name": "Special Privileges Assigned To New Logon",
+  "description": "Windows Event for Special privileges assigned to new logon",
+  "filterSets": [
+    [
+      {
+        "id": "dc4c674d-9a24-450d-87a6-2eee3407ebb5",
+        "name": "Special Privileges Assigned To New Logon Session",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/08/08",
+  "lastUpdate": "2024-10-17T17:39:33.000Z"
+}

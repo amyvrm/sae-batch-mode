@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c32b1927-fee6-4fbf-8529-9d4a713066dc",
+  "name": "SSH Based Lateral Movement in Container",
+  "description": "Suspicious SSH activity detected which can be an indicator of scripted SSH lateral movement within containerized environment.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "1eeaee16-26bc-425d-8337-384a999dde5b",
+      "name": "Suspicious SSH Activity in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1200,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.004",
+    "mitre.t1552.004",
+    "mitre.t1018"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/08/10",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d468b473-ab42-48d6-a1fc-f127c46a34f2",
+  "name": "AWS EC2 Successful Specified Subnets Discovery",
+  "description": "AWS EC2 Successful Specified Subnets Discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "b8bbb382-000c-4e95-ab4e-aa8924a02cb9",
+        "name": "AWS EC2 Successful Specified Subnets Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

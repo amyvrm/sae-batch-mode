@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "742419ae-60fa-11ed-9b6a-0242ac120002",
+  "name": "AWS Service Unsuccessful Enumeration Attempt",
+  "description": "This rule detects possible unsuccessful Recon/Enumeration attempts across different aws services.",
+  "filterSets": [
+    [
+      {
+        "id": "7ab2a34d-39a1-4b8c-bdd0-b85376836b78",
+        "name": "AWS Service Unsuccessful Enumeration Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 8,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sct"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/11/11",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

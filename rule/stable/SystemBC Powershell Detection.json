@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f0ba5201-8293-4f69-b4ca-8d527d143b1c",
+  "name": "SystemBC Powershell Detection",
+  "description": "Powershell events that are likely related to SystemBC",
+  "filterSets": [
+    [
+      {
+        "id": "79da5f6f-58fd-45b3-b7f6-4f85b2622920",
+        "name": "SystemBC Powershell Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/08/11",
+  "lastUpdate": "2023-09-05T01:58:45.000Z"
+}

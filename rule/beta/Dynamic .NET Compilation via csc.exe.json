@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6f24e2cb-4c58-4a12-87ee-10f9bba26f97",
+  "name": "Dynamic .NET Compilation via csc.exe",
+  "description": "Detects the launch of a child process via conhost.exe with the --headless flag.",
+  "filterSets": [
+    [
+      {
+        "id": "ce9f3ffc-2210-4744-8f38-2daf29a35783",
+        "name": "Dynamic .NET Compilation via csc.exe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/08/28",
+  "lastUpdate": "2025-09-23T09:45:57.000Z"
+}

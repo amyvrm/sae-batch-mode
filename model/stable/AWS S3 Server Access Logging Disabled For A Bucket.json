@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "198d56c7-7853-4d66-9dc0-53a9683e5931",
+  "name": "AWS S3 Server Access Logging Disabled For A Bucket",
+  "description": "Detects instances where server access logging is disabled for an Amazon S3 bucket. Indicates a potential security misconfiguration or an attempt to conceal access activities. Attacker can compromises visibility into S3 bucket access, hindering audit trails and accountability for data interactions.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "673b0f65-7934-4886-b008-4c363bbc9eb3",
+      "name": "AWS S3 Server Access Logging Disabled For A Bucket",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.008"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/01/11",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

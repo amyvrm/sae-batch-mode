@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "37c559be-97e1-11ed-a8fc-0242ac120002",
+  "name": "AWS EC2 Successful Service Enumeration Attempt",
+  "description": "Detected EC2 Successful Service Enumeration Attempt",
+  "filterSets": [
+    [
+      {
+        "id": "f7f476b3-f7ad-44d9-be2f-2686c73ccef4",
+        "name": "AWS EC2 Successful Service Enumeration Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/01/19",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

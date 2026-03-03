@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eddf8cd7-4857-4a31-adef-1186dee87645",
+  "name": "HTTP Directory Traversal Request Attempt",
+  "description": "Palo Alto Vulnerability detection - HTTP Directory Traversal Request Attempt",
+  "filterSets": [
+    [
+      {
+        "id": "cad84e6d-c8e5-44cb-93f0-a5ae3b5806a3",
+        "name": "HTTP Directory Traversal Request Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-19T07:13:13.000Z"
+}

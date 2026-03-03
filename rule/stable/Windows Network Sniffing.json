@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f214dd63-1cae-46d8-845e-598a96fdaeb4",
+  "name": "Windows Network Sniffing",
+  "description": "Microsoft Detection for Windows Network Sniffing",
+  "filterSets": [
+    [
+      {
+        "id": "95c81b9a-9a9d-4fe7-b2db-85346c688b25",
+        "name": "Windows Network Sniffing",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/03",
+  "lastUpdate": "2025-06-11T04:11:03.000Z"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e99e078c-6f1f-4f94-ade2-8c14a9ec9267",
+  "name": "Java Executing Bash Shell Script - Variant 2",
+  "description": "Java Executing Bash Shell Script",
+  "filterSets": [
+    [
+      {
+        "id": "b3bbffd1-ec31-4ada-a991-44f5a4135c01",
+        "name": "Java Executing Bash Shell Script",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "objectCmd": {
+      "b3bbffd1-ec31-4ada-a991-44f5a4135c01": "objectCmd"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sds",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Mark Vicente",
+  "team": "SAE Threat Expert",
+  "date": "2023/07/03",
+  "lastUpdate": "2024-10-24T03:03:14.000Z"
+}

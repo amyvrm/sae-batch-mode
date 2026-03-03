@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3a6c0e51-4a5c-45b1-9371-6be2806a0e55",
+  "name": "Demo - Palo Alto URL Filtering Detection of EICAR Test File Download Attempt",
+  "description": "Detects Palo Alto firewall URL filtering events of attempted EICAR test file downloads.",
+  "filterSets": [
+    [
+      {
+        "name": "Demo - Palo Alto URL Filtering Detection of EICAR Test File Download Attempt",
+        "id": "efad9551-1350-4592-98b7-9235f9c9e839",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc"
+    ]
+  ],
+  "author": "Marcus Pang",
+  "team": "SAE Threat Expert",
+  "date": "2025/09/01",
+  "lastUpdate": "2025-09-08T10:56:33.000Z"
+}

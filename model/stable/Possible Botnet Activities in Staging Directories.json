@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2b9fe8a4-6d9d-4a44-80ea-cd8a3cf95d54",
+  "name": "Possible Botnet Activities in Staging Directories",
+  "description": "Monitors suspicious file and process modifications in directories typically used by Prometei Botnet for staging malicious components.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f8cbcbbd-d690-4fc4-80cd-8dc782713a1b",
+      "name": "Possible Botnet Activities in Staging Directories",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105",
+    "mitre.t1036.005",
+    "mitre.t1543.003",
+    "mitre.t1564.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Bahaa Yamany & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-03-24T10:42:02.000Z"
+}

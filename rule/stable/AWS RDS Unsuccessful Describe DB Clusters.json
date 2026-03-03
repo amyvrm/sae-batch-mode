@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6d782737-1cce-485e-9808-d3bf1a7c6e20",
+  "name": "AWS RDS Unsuccessful Describe DB Clusters",
+  "description": "AWS Event that retrieves information about existing Amazon Aurora DB clusters and Multi-AZ DB clusters.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS RDS Unsuccessful Describe DB Clusters",
+        "id": "cd7106fa-2e02-4c0a-b2fa-3179c12e780d",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ba55dbe0-c535-4781-8fc2-715cc26d7e77",
+  "name": "Suspicious Remote File Download Activity via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection identifying command-line utilities such as curl.exe, bitsadmin.exe, certreq.exe, desktopimgdownldr.exe, MpCmdRun.exe, nimgrab.exe, or Sqlcmd.exe performing remote file downloads over HTTP or HTTPS. This may indicate potential data exfiltration, payload retrieval, or script-based delivery of malicious content.",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "9e57d0d1-486a-423e-a470-c565c0ac9e82",
+      "name": "Suspicious Remote File Download Activity via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105",
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/11",
+  "lastUpdate": "2025-11-17T03:21:21.000Z"
+}

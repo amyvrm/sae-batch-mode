@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bbd62977-2421-4fc8-897e-3c32706f1e8e",
+  "name": "Potential APT-related DLL Loading",
+  "description": "Detects potential execution sequence of LODEINFO malware which is commonly used by APT groups.",
+  "filterSets": [
+    [
+      {
+        "id": "1c87c080-6138-42f6-a184-d95520f1e05f",
+        "name": "Potential APT-related DLL Loading",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/01/28",
+  "lastUpdate": "2025-05-16T07:12:33.000Z"
+}

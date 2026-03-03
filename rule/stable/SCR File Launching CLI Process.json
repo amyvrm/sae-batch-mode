@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a48ddacd-d90a-42e8-a125-cdf361b28150",
+  "name": "SCR File Launching CLI Process",
+  "description": "Detects an SCR process executed commands on the system.",
+  "filterSets": [
+    [
+      {
+        "id": "27123be9-a5a4-4ffa-b4de-c86b0851bc90",
+        "name": "SCR File Launching CLI Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds"
+    ]
+  ],
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2025/09/16",
+  "lastUpdate": "2026-01-20T19:45:41.000Z"
+}

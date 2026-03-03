@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4acbd06-b7be-4665-87fc-8b855f336db5",
+  "name": "UDPv6 Flood Detected",
+  "description": "SonicWall Detection - Possible UPDv6 flood attack detected",
+  "filterSets": [
+    [
+      {
+        "id": "9cd8306e-f341-4668-a4fa-a2ade4f9fca5",
+        "name": "UDPv6 Flood Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

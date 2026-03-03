@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8e6ef4dd-4584-4efc-ab96-49dfd0a6f712",
+  "name": "DNS ANY Request Malformed Payload Denial of Service",
+  "description": "Check Point Security detection for DNS ANY Request Malformed Payload Denial of Service",
+  "filterSets": [
+    [
+      {
+        "id": "2a169610-2e2b-5633-b4d0-e10bb262a069",
+        "name": "DNS ANY Request Malformed Payload Denial of Service",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/12/11",
+  "lastUpdate": "2026-01-15T01:45:40.000Z"
+}

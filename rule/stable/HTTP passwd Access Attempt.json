@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0cbec79b-5cf1-4b20-bf8b-fcfbde985817",
+  "name": "HTTP passwd Access Attempt",
+  "description": "Palo Alto Vulnerability detection - HTTP passwd Access Attempt",
+  "filterSets": [
+    [
+      {
+        "id": "b1b7c2c1-2956-4147-852e-6506a5d59a38",
+        "name": "HTTP passwd Access Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-04-07T00:29:38.000Z"
+}

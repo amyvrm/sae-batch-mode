@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "557e6dd3-6655-48fa-91d5-7fad12d3e614",
+  "name": "Application Control IM (SSH) (block)",
+  "description": "Fortinet detection - Application control IM (SSH) (block)",
+  "filterSets": [
+    [
+      {
+        "id": "5d61d301-dce0-4b86-8937-4ac11e5b97cf",
+        "name": "Application Control IM (SSH) (block)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

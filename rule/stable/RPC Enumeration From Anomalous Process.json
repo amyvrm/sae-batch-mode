@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "250efe1a-4636-43a3-924d-5b029952801f",
+  "name": "RPC Enumeration From Anomalous Process",
+  "description": "SocGholish Enumeration from WScript",
+  "filterSets": [
+    [
+      {
+        "id": "0e38d98f-1996-4809-81f7-2e9d9e3be41c",
+        "name": "RPC Enumeration From Anomalous Process",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ce0c34f2-412b-468e-a159-370f30c78a56",
+        "name": "Behavior Monitoring of RPC Enumeration From Anomalous Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/12/07",
+  "lastUpdate": "2024-03-19T20:07:38.000Z"
+}

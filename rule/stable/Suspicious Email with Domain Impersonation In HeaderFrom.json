@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f5d9c9d4-0e56-4e45-8d02-417b3ade099d",
+  "name": "Suspicious Email with Domain Impersonation In HeaderFrom",
+  "description": "Suspicious Email with Domain Impersonation In HeaderFrom",
+  "filterSets": [
+    [
+      {
+        "id": "06c6dcc5-5079-45c0-9b92-fb7ca12937db",
+        "name": "Suspicious Email With Domain Impersonation In HeaderFrom",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Marshall Chen",
+  "team": "Jaguar",
+  "date": "2020/10/20",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

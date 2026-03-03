@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "52ef541f-ee5f-4aeb-a160-f4cec709646b",
+  "name": "Office Application Code Injection into Other Processes Blocked",
+  "description": "Microsoft attack surface reduction rule that prevents Office applications from injecting code into other processes. This detection identifies when Office apps attempt to use process injection techniques commonly employed by attackers to hide malicious payloads or migrate code execution to other processes.",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "1d80fc54-7329-4469-8e61-cbf933ca7706",
+      "name": "Office Application Code Injection into Other Processes Blocked",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055",
+    "mitre.t1055.012"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2026-02-02T08:25:37.000Z"
+}

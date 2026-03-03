@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d7a61541-5741-4ea0-837d-6c67100e56cf",
+  "name": "Adobe Reader Child Process Creation Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that prevents Adobe Reader from creating child processes which could be exploited by malware to execute malicious payloads.",
+  "filterSets": [
+    [
+      {
+        "id": "b314aaf7-ff6e-464b-9ccb-361a8453da70",
+        "name": "Adobe Reader Child Process Creation Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-21T03:31:42.000Z"
+}

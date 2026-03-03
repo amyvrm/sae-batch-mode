@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2378b534-eb36-4863-a8c0-27b6e5f33c32",
+  "name": "Network Analytics Correlation Detection",
+  "description": "Network Analytics Correlation Detection",
+  "filterSets": [
+    [
+      {
+        "id": "39bee68d-1a89-4663-a920-7656aaa3b6cd",
+        "name": "Network Threat Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 0
+  },
+  "author": "XDR-NA Team",
+  "team": "XDR-NA Team",
+  "date": "2021/06/23",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

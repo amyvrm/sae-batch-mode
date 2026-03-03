@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "22e13956-1a88-4db0-9765-4ae75a061fe1",
+  "name": "AWS IAM Get Policy Version",
+  "description": "Detected policy version fetching",
+  "filterSets": [
+    [
+      {
+        "id": "bedd4cb5-708d-414d-9a41-1b8d3b929b65",
+        "name": "AWS IAM Get Policy Version",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/09/09",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

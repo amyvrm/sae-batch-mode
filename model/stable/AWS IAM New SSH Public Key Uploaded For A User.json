@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "54a3364a-201e-4218-bd16-a414a825059b",
+  "name": "AWS IAM New SSH Public Key Uploaded For A User",
+  "description": "A new SSH public key uploaded for an IAM user means that a new authentication method has been enabled, providing secure access to AWS resources. This action could be part of regular administrative tasks like key rotation or provisioning but requires monitoring to ensure it's part of a legitimate process.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "ed371707-e01e-4113-a9d6-ba66951d85eb",
+      "name": "AWS IAM SSH Public Key Updated for a User",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-29T15:07:44.000Z"
+}

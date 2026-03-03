@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5bdce6ee-36b6-4893-9141-49306918b1ea",
+  "name": "AWS EC2 SSH Public Key Push Detection",
+  "description": "This rule detects the activity of pushing an SSH public key to a specified EC2 instance for use by a specified user.",
+  "filterSets": [
+    [
+      {
+        "id": "5237a498-6036-4c80-8891-701a3e233307",
+        "name": "AWS EC2 Public SSH Key Push Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/06/13",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

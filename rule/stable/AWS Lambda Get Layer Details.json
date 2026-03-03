@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3ab1f29c-0918-11ee-be56-0242ac120002",
+  "name": "AWS Lambda Get Layer Details",
+  "description": "Detected AWS Lambda Get Layer Details",
+  "filterSets": [
+    [
+      {
+        "id": "3c0c9676-abf1-4f5a-8c70-474c52a28bb7",
+        "name": "AWS Lambda Get Layer Details",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/06/12",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

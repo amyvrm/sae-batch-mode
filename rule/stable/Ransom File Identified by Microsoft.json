@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e41571f8-2ae4-4a01-b5b8-99cbf3e2ed03",
+  "name": "Ransom File Identified by Microsoft",
+  "description": "Microsoft Antivirus File Detection for Ransom",
+  "filterSets": [
+    [
+      {
+        "id": "2b6a7eba-6a4a-4b1c-9483-890728f88d16",
+        "name": "Ransom File Identified by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mohammed Malubay",
+  "team": "Third Party Operations",
+  "date": "2025/07/28",
+  "lastUpdate": "2025-07-28T21:32:31.000Z"
+}

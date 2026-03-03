@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0190c26a-6856-7eda-86e8-ba996c8b7b88",
+  "name": "Authorized Key File Attribute Changed via Chmod",
+  "description": "The attributes of file authroized_keys has been changed by chmod.",
+  "filterSets": [
+    [
+      {
+        "id": "0190c21e-dd58-7d8d-a5e8-57db00fff369",
+        "name": "Authorized Key File Attribute Changed via Chmod",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/07/17",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2aa6f230-8eff-48fa-828d-0c24baf8fd45",
+  "name": "Suspiciously Named Artefact Created in a Possible Staging Directory",
+  "description": "Detection of a suspiciously named artefact in a possible staging directory",
+  "filterSets": [
+    [
+      {
+        "id": "c21882cd-5090-4137-9f30-44b1d39e5b0a",
+        "name": "Suspiciously Named File Created in a Possible Staging Directory",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c872c2a6-9541-4df7-bfa8-883c5c78f016",
+        "name": "Suspiciously Named Process Spawned from a Possible Staging Directory",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9f19983f-038a-402a-b11e-5ea0a33ab769",
+        "name": "Suspicious Named Registry Creation from a Possible Staging Directory",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0b9454d9-f2e6-4a2d-ac73-8cef49b81a7e",
+        "name": "Suspicious DNS Query from a Possible Staging Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh & Lucas Silva",
+  "team": "EU-IR",
+  "date": "2024/01/16",
+  "lastUpdate": "2024-01-24T11:37:14.000Z"
+}

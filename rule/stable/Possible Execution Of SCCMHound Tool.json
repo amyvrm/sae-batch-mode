@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "18c0ee4f-75da-455b-a829-7ff5663573ee",
+  "name": "Possible Execution of SCCMHound Tool",
+  "description": "Execution of SCCMHound tool which is a bloodhound collector for Microsoft Configuration Manager",
+  "filterSets": [
+    [
+      {
+        "id": "ff8850ae-81a9-4369-970a-343eca2d3d50",
+        "name": "Possible Execution Of SCCMHound Tool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/01/08",
+  "lastUpdate": "2025-02-27T11:13:07.000Z"
+}

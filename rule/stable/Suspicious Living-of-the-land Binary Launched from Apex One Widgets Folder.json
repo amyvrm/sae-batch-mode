@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1e4272a9-1197-4b10-a0eb-6d5a992f2e5b",
+  "name": "Suspicious Living-of-the-land Binary Launched from Apex One Widgets Folder",
+  "description": "The rule detects a command injection via remote code execution (RCE) vulnerabilities on the Apex One Management Console (on-premise) via CVE-2025-54948 or CVE-2025-54987.",
+  "filterSets": [
+    [
+      {
+        "id": "b4c7ca4c-bef3-4ab4-ba0e-d53c0a131a8f",
+        "name": "Suspicious Living-of-the-land Binary Launched from Apex One Widgets Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva & Jack Walsh",
+  "team": "US-IR",
+  "date": "2025/08/19",
+  "lastUpdate": "2025-08-19T20:14:41.000Z"
+}

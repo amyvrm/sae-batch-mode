@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c43a5e85-9387-4a54-b545-a66c428fb04c",
+  "name": "Possible AWS Data Exfiltration in Container",
+  "description": "Adversaries may exfiltrate sensitive files or data; such as aws credentials, aws tokens, account names, passwords, or SSH keys via command-line tools.",
+  "riskLevel": "critical",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "5af3e44b-dd89-4d8b-9633-c3f1d73cdaaa",
+      "name": "Exfiltration via Commandline in Container",
+      "score": 3
+    },
+    {
+      "id": "231ca737-baef-4e85-8838-e9a2f4cffc70",
+      "name": "AWS Credentials Searched in Container",
+      "score": 1
+    },
+    {
+      "id": "208c048c-bfa7-478e-a30b-ae3f06c8c141",
+      "name": "Suspicious Credential Access Activity in Container",
+      "score": 1
+    },
+    {
+      "id": "e1cea429-4207-4bb8-9597-ba6ccd3abd9f",
+      "name": "Cloud Resources and Services Enumerated in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.004",
+    "mitre.t1095"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/01/11",
+  "lastUpdate": "2024-04-22T09:37:49.000Z"
+}

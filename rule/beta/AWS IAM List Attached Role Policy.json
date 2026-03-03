@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "83a69f45-7519-4770-a1c3-3067ce4996ad",
+  "name": "AWS IAM List Attached Role Policy",
+  "description": "Detected AWS IAM Attached Role Policies Discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "42a6a2fb-e293-4784-bb23-e7b4a0354976",
+        "name": "AWS IAM List Attached Role Policy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/09/08",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

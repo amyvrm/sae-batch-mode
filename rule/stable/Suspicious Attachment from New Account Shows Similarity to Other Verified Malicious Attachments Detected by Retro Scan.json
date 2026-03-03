@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c76d6b94-728d-4a7b-82a4-602168660d48",
+  "name": "Suspicious Attachment from New Account Shows Similarity to Other Verified Malicious Attachments Detected by Retro Scan",
+  "description": "Suspicious attachments sent from new email accounts that are similar to multiple, verified malicious email attachments may indicate additional attack attempts. [Delayed alert: Batch process detection]",
+  "filterSets": [
+    [
+      {
+        "id": "0fce1f99-d8f5-4c8c-b15c-b8c301aff611",
+        "name": "Suspicious Attachment from New Account Shows Similarity to Other Verified Malicious Attachments Detected by Retro Scan",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2021/08/11",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

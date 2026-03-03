@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8076f194-5ea2-408a-b385-c9362571f4cb",
+  "name": "Possible SID History Injection - High-Privilege SID with Same Domain",
+  "description": "A high-privilege Microsoft Security Identifier (SID) with the same domain as the current SID was found in the history of an Active Directory object, indicating a possible SID history injection attack. (This model can be triggered only if Active Directory Connector is installed on the Domain Controller.)",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "80cc59c3-769c-484a-81bd-2b5f73413789",
+      "name": "Possible SID History Injection - High-Privilege SID with Same Domain",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "opa"
+    ]
+  ],
+  "tags": [
+    "mitre.t1134.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Johnny Tu",
+  "team": "Jaguar",
+  "date": "2022/12/22",
+  "lastUpdate": "2025-01-02T07:38:03.000Z"
+}

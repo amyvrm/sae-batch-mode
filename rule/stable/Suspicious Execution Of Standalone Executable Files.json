@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ccc035b9-6027-49a6-a316-2388be2e32f6",
+  "name": "Suspicious Execution of Standalone Executable Files",
+  "description": "A standalone Portable Executable (PE) file was dropped or executed.",
+  "filterSets": [
+    [
+      {
+        "id": "86cec2f8-6144-4e59-bbc4-4ff418b199f4",
+        "name": "Executable Binary Downloaded Via MS Office",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9b876e80-0201-4338-afb3-4805e32da9ef",
+        "name": "Execution Of EXE File In Uncommon Directories",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "46542936-c57c-4f82-a00e-f998a6629f99",
+        "name": "Suspicious Executable Arrival Via Microsoft Equation Editor",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pao"
+    ]
+  ],
+  "lastUpdate": "2022-11-29T10:33:23.000Z"
+}

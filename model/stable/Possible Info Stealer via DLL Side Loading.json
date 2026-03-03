@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "48f1fff3-6c62-46c7-b169-d7cd47ed4dfe",
+  "name": "Possible Info Stealer via DLL Side Loading",
+  "description": "Detects DLL side loading associated with the OpenVPN executable, which launches a Chromium-based browser with the remote debugging port set. This behavior is linked to information stealers, such as Lumma Stealer, and may indicate attempts to exfiltrate sensitive data.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b851afe9-46d6-4953-bb32-5d9c3eb3a998",
+      "name": "Possible Info Stealer via DLL Side Loading",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1574.001",
+    "mitre.t1217"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal & Mohamed Fahmy",
+  "team": "MENA-IR",
+  "date": "2025/12/14",
+  "lastUpdate": "2026-01-20T09:46:50.000Z"
+}

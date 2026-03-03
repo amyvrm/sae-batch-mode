@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a3b5c100-db3d-4af6-a41f-3352dfa26f1a",
+  "name": "Suspicious Service Creation Following SMB Binary Transfer to Uncommon Folders",
+  "description": "Detects suspicious service creation that occurs after the transfer of executable binaries via SMB to uncommon folders, such as C:\\Users\\Public\\. Such behavior may indicate lateral movement and persistence tactics employed by attackers, warranting further investigation.",
+  "filterSets": [
+    [
+      {
+        "id": "f7af89ae-4b5f-43c6-b206-7f536d495277",
+        "name": "Executable File Transfer via SMB to Suspicious Folders",
+        "highlight": true
+      },
+      {
+        "id": "583a8d07-cbe4-4a4a-a42f-e89fa1988dea",
+        "name": "Suspicious Registry Key Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "583a8d07-cbe4-4a4a-a42f-e89fa1988dea.objectRegistryData contains f7af89ae-4b5f-43c6-b206-7f536d495277.objectFilePath"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/04/09",
+  "lastUpdate": "2025-06-17T01:03:34.000Z"
+}

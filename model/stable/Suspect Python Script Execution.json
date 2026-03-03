@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dd462d27-96e9-4874-8140-f247ad4f120d",
+  "name": "Suspect Python Script Execution",
+  "description": "Detection of a python script being executed in a potentially malicious manner",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c120d821-eb6f-4ba5-a0bd-ac39b5182ac6",
+      "name": "Suspect Python Script Execution",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.006",
+    "mitre.t1036",
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/02/07",
+  "lastUpdate": "2025-02-25T09:11:09.000Z"
+}

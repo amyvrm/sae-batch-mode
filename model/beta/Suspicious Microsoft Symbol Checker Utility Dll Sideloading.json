@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e18e8d18-30be-4462-aa27-c17d76193acd",
+  "name": "Suspicious Microsoft Symbol Checker Utility DLL Sideloading",
+  "description": "Detects suspicious Microsoft Symbol Checker utility (symchk.exe) DLL Sideloading of file - symbolcheck.dll.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "44f3d6a0-0193-4481-826b-50b7e4e10f33",
+      "name": "Suspicious Ftp.exe File Transfer from Windows Installer",
+      "score": 1
+    },
+    {
+      "id": "447282c5-332e-46f7-a9e4-3616edc9e76a",
+      "name": "Suspicious Microsoft Symbol Checker Utility DLL Sideloading",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1574.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gerardo III Jonieca & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/11/04",
+  "lastUpdate": "2025-11-27T09:47:49.000Z"
+}

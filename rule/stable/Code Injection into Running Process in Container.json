@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2fa07406-a484-4965-a842-9cd83dc806c7",
+  "name": "Code Injection into Running Process in Container",
+  "description": "Detects code injection into process via ptrace or directly using file descriptor.",
+  "filterSets": [
+    [
+      {
+        "id": "c8cf2e40-41cf-5d19-a8e0-33ca5c685f20",
+        "name": "Ptrace Code Injection in the Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d4191cc4-317c-541b-91ca-d7fac59026bd",
+        "name": "Inject File to Process Memory Virtual Space",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2023/10/10",
+  "lastUpdate": "2023-11-23T09:00:27.000Z"
+}

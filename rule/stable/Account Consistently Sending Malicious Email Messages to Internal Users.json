@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9ba0f0a8-af71-446c-a6d9-8b5a1ea3478e",
+  "name": "Account Consistently Sending Malicious Email Messages to Internal Users",
+  "description": "The account has consistently sent malicious emails to internal users for a duration exceeding three days.",
+  "filterSets": [
+    [
+      {
+        "id": "683490f3-fe44-5542-b8a0-ba9231357d5b",
+        "name": "Account Consistently Sending Malicious Email Messages to Internal Users",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "aad"
+    ]
+  ],
+  "author": "Baker Yang",
+  "team": "Jaguar",
+  "date": "2024/01/18",
+  "lastUpdate": "2024-02-15T02:08:02.000Z"
+}

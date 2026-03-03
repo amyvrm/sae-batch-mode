@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "44a748b9-9489-4267-adf1-94bb09eaa6f9",
+  "name": "Suspicious LSA Subsystem Service Enumeration Identified via Microsoft Telemetry",
+  "description": "Microsoft telemetry detection identifying CMD executions that enumerate LSASS using tasklist with filtering arguments. This technique is commonly used during credential harvesting or reconnaissance to verify the presence of LSASS prior to targeted process access or memory dumping.",
+  "filterSets": [
+    [
+      {
+        "id": "681dd3af-92a6-4314-b438-dad1615e7a08",
+        "name": "Suspicious LSA Subsystem Service Enumeration Identified via Microsoft Telemetry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/11/17",
+  "lastUpdate": "2025-11-20T07:23:03.000Z"
+}

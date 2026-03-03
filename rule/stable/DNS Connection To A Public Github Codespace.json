@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "id": "06ec79ea-ea65-11ed-a05b-0242ac120003",
+  "name": "DNS Connection To A Public Github Codespace",
+  "description": "Malware Detection on Endpoint or Server",
+  "filterSets": [
+    [
+      {
+        "id": "8e42e97d-b3b4-4d7f-affd-d4971414d95d",
+        "name": "DNS Connection To A Public Github Codespace",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds"
+    ]
+  ],
+  "lastUpdate": "2023-06-30T05:14:25.000Z"
+}

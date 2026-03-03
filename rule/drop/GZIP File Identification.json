@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ee702fdc-c56c-4149-8c56-fde0bd9de369",
+  "name": "GZIP File Identification",
+  "description": "Palo Alto File detection - GZIP",
+  "filterSets": [
+    [
+      {
+        "id": "d31f1f0f-d0f8-4478-8fd6-0856d7f8af8c",
+        "name": "GZIP File Identification",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-11-06T10:51:13.000Z"
+}

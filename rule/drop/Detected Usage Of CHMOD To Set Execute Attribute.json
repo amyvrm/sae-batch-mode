@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cead1b3f-51ca-451b-bf83-ef69e73660a6",
+  "name": "Detected Usage Of CHMOD To Set Execute Attribute",
+  "description": "This rule detects usage of 'chmod' to set the execute attribute to scripts/executables",
+  "filterSets": [
+    [
+      {
+        "id": "ccaa44ac-9bd2-4673-b062-9ff6e55add21",
+        "name": "Set Execute Attribute Via Chmod",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/08/14",
+  "lastUpdate": "2025-02-24T11:05:39.000Z"
+}

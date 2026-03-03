@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4bb4d581-09a0-490e-96c3-b5fb5f114e4b",
+  "name": "Process Termination and Registry Activity via Procterminator with Hacktool Detection",
+  "description": "Detects process termination and registry activity via Procterminator with detected hacking tool files.",
+  "filterSets": [
+    [
+      {
+        "id": "6646b359-5662-4c0e-b579-5e739e259e55",
+        "name": "Possible Process Termination via ProcTerminator",
+        "highlight": true
+      },
+      {
+        "id": "c03c73fe-976f-4043-b82f-26f6b8301c8a",
+        "name": "Possible Procterminator Registry Activity",
+        "highlight": true
+      },
+      {
+        "id": "a665ee2c-1568-466c-8a99-4744e02b180e",
+        "name": "Hacking Tool Detection - Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "6646b359-5662-4c0e-b579-5e739e259e55.processFilePath equals a665ee2c-1568-466c-8a99-4744e02b180e.fullPath",
+      "c03c73fe-976f-4043-b82f-26f6b8301c8a.processFilePath equals a665ee2c-1568-466c-8a99-4744e02b180e.fullPath"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/09/30",
+  "lastUpdate": "2024-10-04T05:40:20.000Z"
+}

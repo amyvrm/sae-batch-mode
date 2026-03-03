@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e971f98d-4b87-45df-bc99-01c553834ceb",
+  "name": "Deletion of Crontab",
+  "description": "This incident means a cronjob has been deleted.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "81ed7542-3e7b-44df-b6dc-008bfe13dde4",
+      "name": "Deletion of Cronjob",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1070.004",
+    "mitre.t1053.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/08/19",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2819bd74-0a26-4b66-b022-e1914d0beb85",
+  "name": "AWS Bedrock Unsuccessful Agent Enumeration Detected",
+  "description": "Detects unsuccessful enumeration of agents in AWS Bedrock services, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "4cdcc859-f632-407f-9a03-ab74d5313723",
+        "name": "AWS Bedrock Unsuccessful Agent Enumeration Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/15",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

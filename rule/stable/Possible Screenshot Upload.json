@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ccb5c680-0154-11eb-9a04-787b8ad91447",
+  "name": "Possible Screenshot Upload",
+  "description": "Some images uploaded from endpoint without permission, likely to be screenshot",
+  "filterSets": [
+    [
+      {
+        "id": "04d4372c-ff05-41ea-aeca-787b8ad91447",
+        "name": "Uploading of Screenshot",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/09/25",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "84ebd853-069c-51e6-a359-f709b671b616",
+  "name": "Possible RDP connections using Administrator account from the internet",
+  "description": "Detect RDP connections using Administrator account from the internet",
+  "filterSets": [
+    [
+      {
+        "id": "48285391-5601-54ce-9168-377d5ecc0730",
+        "name": "Connect To Internet Facing RDP Server Using BUILTIN Administrator",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "pdi"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2023/08/22",
+  "lastUpdate": "2024-05-03T05:35:05.000Z"
+}

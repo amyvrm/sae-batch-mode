@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "id": "742e77ae-21ca-11ef-9262-0242ac120002",
+  "name": "Suspicious Linux Service Manipulation",
+  "description": "Detects linux service manipulation via the systemd manager. Adversaries can leverage this capability to apply changes to system service configurations, potentially enabling malicious services.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8062b898-21c8-11ef-9262-0242ac120002",
+      "name": "Suspicious Linux Systemd Service Created",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "f4d3c036-21c4-11ef-9262-0242ac120002",
+      "name": "Suspicious System Daemon Configuration Reload",
+      "score": 1,
+      "sequence": 2
+    },
+    {
+      "id": "f85fb44c-21c6-11ef-9262-0242ac120002",
+      "name": "Suspicious Linux Service Start",
+      "score": 1,
+      "sequence": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1543.002",
+    "mitre.t1489"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/07/11",
+  "lastUpdate": "2025-10-30T06:54:31.000Z"
+}

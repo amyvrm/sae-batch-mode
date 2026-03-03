@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e3c8772b-7361-49da-ac80-9bc2f9f57af0",
+  "name": "Local Privilege Escalation via Windows Rollback Deletion",
+  "description": "Adversaries may establish persistence and elevate privileges by using an installer to trigger the execution of malicious content during system uninstallation on backup directiry C:/Config.msi.",
+  "filterSets": [
+    [
+      {
+        "id": "bfe07469-f482-4f4e-b391-764d1321af13",
+        "name": "Suspicious Rollback Configuration Deletion",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "04a1c94c-bc4c-419c-9f84-a591f1dca62f",
+        "name": "Suspicious Rollback Configuration Deletion via Command Line",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a09040f9-d08b-4739-936d-ed98c80bcc07",
+        "name": "Suspicious Rollback Configuration Deletion via Powershell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/09/17",
+  "lastUpdate": "2024-10-18T05:32:01.000Z"
+}

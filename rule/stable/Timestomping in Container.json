@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "431ff126-2e9f-4b20-baad-cbcd63078bbb",
+  "name": "Timestomping in Container",
+  "description": "Detects attempts to manipulate file timestamps, a common technique for covering malicious activities.",
+  "filterSets": [
+    [
+      {
+        "id": "1abc37fc-f8fa-466c-9ad5-5727c68de18e",
+        "name": "Detected Timestomping Using Touch Command in Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "067fc61f-3c8b-4dbc-b2c9-c7dd65936cf8",
+        "name": "Timestamp Tampering in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/11/21",
+  "lastUpdate": "2024-03-27T01:57:08.000Z"
+}

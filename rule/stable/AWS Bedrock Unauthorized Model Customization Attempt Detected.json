@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "365e4ced-aa5a-4c16-ac26-eac21f54f779",
+  "name": "AWS Bedrock Unauthorized Model Customization Attempt Detected",
+  "description": "Detects unauthorized attempts to customize AWS Bedrock models, ensuring only authorized users or roles can modify model settings.",
+  "filterSets": [
+    [
+      {
+        "id": "848d7d6d-abf5-46e7-ad84-2e7c3235020f",
+        "name": "AWS Bedrock Unauthorized Model Customization Attempt Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/13",
+  "lastUpdate": "2025-01-21T13:11:52.000Z"
+}

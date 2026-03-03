@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2d9dea8e-9649-4d31-bebc-8e5ccc785549",
+  "name": "Suspicious PowerShell AES Decryption and Execution",
+  "description": "Detects PowerShell commands using AES-CBC decryption with file-based payload, This behavior is associated with info stealer.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2411875a-8fe3-4909-9089-3db463aad5cf",
+      "name": "Suspicious PowerShell AES Decryption and Execution",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1140",
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/04/30",
+  "lastUpdate": "2025-07-16T09:44:33.000Z"
+}

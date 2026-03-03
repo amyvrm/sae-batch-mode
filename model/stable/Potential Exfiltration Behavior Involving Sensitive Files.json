@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a99d4d35-770b-4aad-a798-14c924b457c3",
+  "name": "Potential Exfiltration Behavior Involving Sensitive Files",
+  "description": "A potential exfiltration behavior which involves Sensitive Files was detected",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "8811d7c1-7b9a-4af4-9c3a-29b0ead4d15b",
+      "name": "Possible Exfiltration of Sensitive Files",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "ddr"
+    ]
+  ],
+  "tags": [
+    "mitre.t1567",
+    "mitre.t1052"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "ddr",
+  "team": "DDR",
+  "date": "2024/12/11",
+  "lastUpdate": "2025-12-02T04:44:16.000Z"
+}

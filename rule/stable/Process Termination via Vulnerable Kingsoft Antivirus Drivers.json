@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7ff871ae-f97a-41e1-800e-35a1e66bea7f",
+  "name": "Process Termination via Vulnerable Kingsoft Antivirus Drivers",
+  "description": "Detects process termination using vulnerable Kingsoft Antivirus drivers.",
+  "filterSets": [
+    [
+      {
+        "id": "b21aab52-0cc6-4ad3-b167-72da3dee0ceb",
+        "name": "Process Termination via Vulnerable Kingsoft Antivirus Drivers",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-03-19T09:17:49.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b702daef-42ce-4ef9-a7db-200a2476e398",
+  "name": "Hacktool Outbound Traffic to Internet",
+  "description": "Rclone outgoing traffic from internal network to the internet have been identified in the network. Review if the usage of rclone is valid.",
+  "filterSets": [
+    [
+      {
+        "id": "af88b3a7-1a8d-4b2e-8b5d-cabe14fc525d",
+        "name": "Hacktool Outbound Traffic to Internet",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/04/14",
+  "lastUpdate": "2025-06-11T05:23:10.000Z"
+}

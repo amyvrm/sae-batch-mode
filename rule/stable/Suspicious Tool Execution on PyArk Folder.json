@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6c9c2f50-e8d9-4336-a6b8-ed751611cb97",
+  "name": "Suspicious Tool Execution on PyArk Folder",
+  "description": "Detects suspicious tool execution on PyArk path",
+  "filterSets": [
+    [
+      {
+        "id": "2e1722e6-6808-421a-b317-931ccdb3b840",
+        "name": "Possible Execution of Suspicious Tool in PyArk Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "objectCmd": {
+      "2e1722e6-6808-421a-b317-931ccdb3b840": "objectCmd"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/02/20",
+  "lastUpdate": "2024-03-15T03:35:55.000Z"
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ef96c55f-e50d-4335-bc49-c737d7e16398",
+  "name": "Ivanti Endpoint Manager SQL Injection - May 2024 Security Bulletin",
+  "description": "Detected Exploitation of Ivanti Endpoint Manager SQL Injection Vulnerability in Cloud One Workload Security from the Ivanti May 2024 Security Bulletin.",
+  "filterSets": [
+    [
+      {
+        "id": "9ca58301-7ae1-489d-b8e8-6f9df86a168c",
+        "name": "Ivanti Endpoint Manager 2022 SQL Injection Vulnerability - CVE-2024-29822",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fbd37126-714f-47f3-9ff6-14200c7de2bb",
+        "name": "Ivanti Endpoint Manager 2022 SQL Injection Vulnerability - CVE-2024-29826",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "17a5bf29-9a6f-4030-8773-052030b92155",
+        "name": "Ivanti Endpoint Manager 2022 SQL Injection Vulnerability - CVE-2024-29827",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bf363ed0-0d5d-43a9-8562-774d0e1b0070",
+        "name": "Ivanti Endpoint Manager 2022 SQL Injection Vulnerability - CVE-2024-29828 & CVE-2024-29829",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a0a0dbca-67f7-4cf4-acc3-7622379021e8",
+        "name": "Ivanti Endpoint Manager 2022 SQL Injection Vulnerability - CVE-2024-29830",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "57b3e7c8-8a84-43a4-8d16-d6a9300eef60",
+        "name": "Ivanti Endpoint Manager 2022 SQL Injection Vulnerability - CVE-2024-29846",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2024/07/12",
+  "lastUpdate": "2024-07-16T08:11:19.000Z"
+}

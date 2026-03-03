@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "14990655-f0ca-4b21-8248-128e58e87e92",
+  "name": "AWS SageMaker Notebook Instance Creation or Update with Default Execution Role",
+  "description": "Identifies when a SageMaker notebook instance is assigned the default execution role while updating or creating the notebook.",
+  "filterSets": [
+    [
+      {
+        "id": "f48ac18f-8c5f-425d-9a75-330837aeb134",
+        "name": "AWS SageMaker Notebook Instance Updated with Default Execution Role",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b916057d-f269-4b77-a322-393d6c26d23c",
+        "name": "AWS SageMaker Notebook Instance Created with Default Execution Role",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/08",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

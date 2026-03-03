@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1f26d9ab-a3cd-4e20-b8e1-edbefe7c9309",
+  "name": "AWS EventBridge Cross Account Target Has Been Set",
+  "description": "Detects creation of EventBridge rules to send or receive the events for the eventbus from a different AWS account.",
+  "filterSets": [
+    [
+      {
+        "id": "6b7223c4-4865-49ba-9f5f-ac015284e2f4",
+        "name": "AWS EventBridge Cross Account Target Has Been Set",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-07-31T08:55:45.000Z"
+}

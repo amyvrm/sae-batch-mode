@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "21be1d4e-ba91-4f79-8de5-2786bf95ed64",
+  "name": "TrustedPath UAC Bypass Pattern",
+  "description": "Detects indicators of a UAC bypass method by mocking directories",
+  "filterSets": [
+    [
+      {
+        "id": "06f53c90-beb6-427b-b812-af94e6e9b899",
+        "name": "TrustedPath UAC Bypass Pattern",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/05/05",
+  "lastUpdate": "2025-05-09T06:56:09.000Z"
+}

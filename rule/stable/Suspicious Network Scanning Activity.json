@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "id": "563e0a4d-fb5b-4022-ac32-4c0a06f3564a",
+  "name": "Suspicious Network Scanning Activity",
+  "description": "Identified unusual network traffic patterns, unauthorized access attempts, and the execution of suspicious commands that indicate the presence of ROMCOM malware.",
+  "filterSets": [
+    [
+      {
+        "id": "36308979-4e7f-41b5-abad-a1687dcd3697",
+        "name": "Suspicious Network Port Scanning via PowerShell",
+        "highlight": true
+      },
+      {
+        "id": "339347bf-a151-4bae-8683-4e8824cd3bcc",
+        "name": "Suspicious Network Resource Enumeration",
+        "highlight": true
+      },
+      {
+        "id": "db50d129-76f9-4984-a547-b3071aae8b3d",
+        "name": "Suspicious Network Scanning via PowerShell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Shaun Eris Galura",
+  "team": "AMEA-IR",
+  "date": "2024/11/21",
+  "lastUpdate": "2025-05-14T04:28:04.000Z"
+}

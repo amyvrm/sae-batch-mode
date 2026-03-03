@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d5846ca2-b4a9-438a-9461-ce26c75958da",
+  "name": "Tunnel Creation via Tmate",
+  "description": "Detects network tunnel creation using tmate, which may be used for command and control communication, and data exfiltration",
+  "filterSets": [
+    [
+      {
+        "id": "a0992473-a904-4c6c-96c0-0b5254dcfa0a",
+        "name": "DNS Query Request to Tmate Tunnel Services",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3833eb88-32c4-419f-8e23-21a98fadd48d",
+        "name": "Possible Tunnel Creation via Tmate",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Mahmoud Soheem & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/02/24",
+  "lastUpdate": "2025-03-07T07:54:28.000Z"
+}

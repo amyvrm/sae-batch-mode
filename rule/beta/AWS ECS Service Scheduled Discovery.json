@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "50148777-5223-4c2f-82ce-567ad6068011",
+  "name": "AWS ECS Service Scheduled Discovery",
+  "description": "This Rule detects AWS ECS service scheduled discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "e428b88d-5068-4465-8e1d-a0048ce5c8a1",
+        "name": "AWS ECS Service Scheduled Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/06",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

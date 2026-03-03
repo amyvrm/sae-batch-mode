@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4592a42-7838-41be-b27d-93a9e5f158c3",
+  "name": "Fragment Queue Threshold Exceeded - Packet Processing 2",
+  "description": "Cisco detection for the Secure Firewall ASA drops the fragmented packets when the fragment database threshold, that is 2/3 of the queue size per interface, has exceeded.",
+  "filterSets": [
+    [
+      {
+        "id": "e6f4d903-d8c5-5297-bf53-71361b2e145e",
+        "name": "Fragment Queue Threshold Exceeded - Packet Processing 2",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-03T09:21:48.000Z"
+}

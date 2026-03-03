@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2bb2dfe2-3f97-406c-9749-39501780cba4",
+  "name": "Zscaler ZPA Multiple Authentication Failures",
+  "description": "Detects multiple authentication failures from Zscaler Private Access (ZPA) indicating potential brute force attack.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7dc8e060-12f3-437a-85ae-34f143ce0ed5",
+      "name": "Zscaler ZPA Multiple Authentication Failures",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Zscaler"
+    ]
+  ],
+  "tags": [
+    "mitre.t1110"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mohammed Malubay",
+  "team": "Third Party Operations",
+  "date": "2025/12/02",
+  "lastUpdate": "2025-12-16T03:18:03.000Z"
+}

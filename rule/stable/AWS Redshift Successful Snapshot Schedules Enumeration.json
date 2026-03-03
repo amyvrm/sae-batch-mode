@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "63a65779-b3a9-4582-9da4-5e8bc114a815",
+  "name": "AWS Redshift Successful Snapshot Schedules Enumeration",
+  "description": "Identifies attempts to list Redshift snapshot schedules, possibly to understand backup policies.",
+  "filterSets": [
+    [
+      {
+        "id": "cc4e8db6-4839-4e93-9f04-cf935a78009c",
+        "name": "AWS Redshift Successful Snapshot Schedules Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

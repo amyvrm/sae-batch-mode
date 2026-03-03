@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2fe61fa9-786f-4797-89b2-8c378200aa84",
+  "name": "AWS IAM Over Privileged Policy Created",
+  "description": "Detected IAM Over Privileged Policy being Created",
+  "filterSets": [
+    [
+      {
+        "id": "d398ea2d-82d7-4a7f-8ef6-fcd405c63982",
+        "name": "AWS IAM Create Over Privileged Policy",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "123dbb83-3b82-4be1-95dc-13dc330cc469",
+        "name": "AWS IAM Create Over Privileged Policy Version",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2022/09/09",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

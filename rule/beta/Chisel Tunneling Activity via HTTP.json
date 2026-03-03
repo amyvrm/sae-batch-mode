@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "242dbb42-af64-4730-a5b0-7627d890120d",
+  "name": "Chisel Tunneling Activity via HTTP",
+  "description": "Network activity involving HTTP associated with the Chisel tunneling tool was observed. This indicates potential use of tunneling mechanisms for data transmission or evasion.",
+  "filterSets": [
+    [
+      {
+        "id": "f937654d-2d93-5c0a-970b-d8ed564c94d5",
+        "name": "Chisel Tunneling HTTP (Response) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "caab3652-8f7d-5fad-9ab7-1b10b9566a98",
+        "name": "Chisel Tunneling HTTP (Response) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/06/04",
+  "lastUpdate": "2025-06-18T10:16:57.000Z"
+}

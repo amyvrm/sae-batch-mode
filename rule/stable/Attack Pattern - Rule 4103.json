@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9200a3ac-e8bc-4f53-a338-4af04ad479db",
+  "name": "Attack Pattern for rule 4103",
+  "description": "Detects attack pattern for DDI Rule 4103",
+  "filterSets": [
+    [
+      {
+        "id": "2989914f-91d3-5444-a488-8eb19e84d8a6",
+        "name": "Daemon Dd-Wrt Unauthenticated RCE Exploit HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0a2303ed-9b37-595d-849d-e6d5d491c259",
+        "name": "Daemon Dd-Wrt Unauthenticated RCE Exploit HTTP (Request) - Inbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Harshali Mugutrao",
+  "team": "Cloud One",
+  "date": "2022/12/06",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

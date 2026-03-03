@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d347a239-edf6-4a6a-89ba-613a8c6f0842",
+  "name": "AWS Lambda Function Creation",
+  "description": "Creation of a new AWS Lambda function detected, which could indicate a new deployment or unauthorized activity.",
+  "filterSets": [
+    [
+      {
+        "id": "2f96d6e2-abdf-49cd-9514-3c62f1fcba8c",
+        "name": "AWS Lambda Function Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

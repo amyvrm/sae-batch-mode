@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "70a35a4d-5343-44de-ac1e-22b38cb59960",
+  "name": "Suspicious Executable and DLL Loading Indicative of Coinminer Activity",
+  "description": "Detects the loading of a suspicious executable and DLL indicative of coinminer activity.",
+  "filterSets": [
+    [
+      {
+        "id": "0babf812-d515-47d8-b8d3-2db3be05da60",
+        "name": "Suspicious Executable and DLL Loading Indicative of Coinminer Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/03/24",
+  "lastUpdate": "2025-05-27T15:53:15.000Z"
+}

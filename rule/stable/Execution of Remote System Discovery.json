@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "83ba0be0-28a1-49bd-adeb-441494ae3bb0",
+  "name": "Execution of Remote System Discovery Command",
+  "description": "Detected execution of remote system discovery command to obtain IP address, hostname, and other identifiers for lateral movement.",
+  "filterSets": [
+    [
+      {
+        "id": "1005e43e-e1d0-4c2f-9212-e86a64436119",
+        "name": "Remote System Discovery Via Nltest",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2021/03/19",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

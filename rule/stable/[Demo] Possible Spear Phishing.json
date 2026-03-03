@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2011dac4-3717-5bc8-9793-508d30e72cfa",
+  "name": "[Demo] Possible Spear Phishing",
+  "description": "An account/mailbox received an possible spear phishing",
+  "filterSets": [
+    [
+      {
+        "id": "1bbc3d45-9365-4002-8225-21fcd860fb07",
+        "name": "(Demo) Spearphishing Link Addressed by RetroScan",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1500,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2024/12/12",
+  "lastUpdate": "2025-01-20T05:12:50.000Z"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f3e02f2d-ff6e-4824-aa29-4ab166ea085c",
+  "name": "Suspicious Utilities Installation",
+  "description": "Detects installation of suspicious utilities like network scanners or anonymization tools",
+  "filterSets": [
+    [
+      {
+        "id": "55561a19-77c0-43a1-936a-83fdd9693c0a",
+        "name": "Network Discovery and Scanning Tools Installation - Linux",
+        "highlight": true
+      },
+      {
+        "id": "b324a021-b324-441b-b5dc-5ba9086c1143",
+        "name": "Anonymization Tools Installation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "55561a19-77c0-43a1-936a-83fdd9693c0a",
+        "name": "Network Discovery and Scanning Tools Installation- Linux",
+        "highlight": true
+      },
+      {
+        "id": "2bc1d292-60df-4f4c-b540-bfbf9e2a3c00",
+        "name": "Proxy Tools Installation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 10
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jose Baena cobos",
+  "team": "Cloud One",
+  "date": "2025/06/29",
+  "lastUpdate": "2025-12-29T09:37:44.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "696e5530-3765-403b-b919-82d561a7cebd",
+  "name": "Potential Pnscan Network Binary Data Activity",
+  "description": "This detection identifies command line patterns associated with the use of Pnscan for transmitting and receiving binary data over the network. This behavior is typically observed during the lateral movement phase of an attack, where Pnscan is employed to scan and communicate with various network services. Such activity has been commonly associated with threat actors targeting Docker, Apache Hadoop, Redis, and Confluence environments. The detection is designed to flag potential misuse of Pnscan, indicating a possible compromise or malicious network activity.",
+  "filterSets": [
+    [
+      {
+        "id": "d0a2f599-850a-4fc6-be15-83addf27bc48",
+        "name": "Potential Pnscan Network Binary Data Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gabriel Cardoso",
+  "team": "US-IR",
+  "date": "2025/10/15",
+  "lastUpdate": "2025-11-18T18:24:15.000Z"
+}

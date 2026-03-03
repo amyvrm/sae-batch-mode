@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "366f6ce3-f828-4f3c-bf46-76a8b32afa31",
+  "name": "Suspicious Windows Sandbox Execution by SYSTEM User via Task Scheduler",
+  "description": "By using Windows Sandbox, an adversary could hide malicious activity as a legitimate process and bypass security measures.",
+  "filterSets": [
+    [
+      {
+        "id": "f3a48d67-2a30-4bff-abc7-4dbf25fa9356",
+        "name": "Suspicious Windows Sandbox Execution by SYSTEM User via Task Scheduler",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Yoshihiro Nakaya",
+  "team": "JP-IR",
+  "date": "2025/04/07",
+  "lastUpdate": "2025-04-16T06:33:47.000Z"
+}

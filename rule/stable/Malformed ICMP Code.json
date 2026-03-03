@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81fcd485-8418-4672-927e-564a7d76fdc3",
+  "name": "Malformed ICMP Code",
+  "description": "Cisco detection for an ICMP echo request/reply packet was received with a malformed code (non-zero).",
+  "filterSets": [
+    [
+      {
+        "id": "e50e0684-8f07-5c0a-962f-4e20589f01d1",
+        "name": "Malformed ICMP Code",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-03T09:21:48.000Z"
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "10d34e64-a655-4dcb-b18e-b9d7cdcd05ce",
+  "name": "Possible Remote Code Execution via WebDav Client",
+  "description": "A remote file named route.exe has been executed via WebDAV client, which is associated with a vulnerability for Internet shortcut file RCE CVE-2025-33053.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7b208070-214d-4041-9b7c-28ce9ec17b90",
+      "name": "Possible Remote Code Execution via WebDav Client",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1203",
+    "mitre.t1204"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/09/14",
+  "lastUpdate": "2026-02-09T00:39:18.000Z"
+}

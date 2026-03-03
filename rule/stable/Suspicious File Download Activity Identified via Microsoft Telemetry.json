@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f85e0b0e-65e6-46ca-a366-f8dbd7483ff3",
+  "name": "Suspicious File Download Activity Identified via Microsoft Telemetry",
+  "description": "Several interconnecting events found in Microsoft telemetry indicate a suspicious file download activity. This rule is designed to detect such activities and alert the user.",
+  "filterSets": [
+    [
+      {
+        "id": "59c18d37-f2c8-4159-8dd9-8c88b61ba82c",
+        "name": "Microsoft Antivirus Matched with a File",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "53a36965-3534-4c5f-a33d-547c4a9071e1",
+        "name": "Suspicious File Downloaded via Powershell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "dcf446ae-e160-4372-8260-a1f806106eef",
+        "name": "Suspicious File Downloaded via Powershell - Network",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "requests": {
+      "dcf446ae-e160-4372-8260-a1f806106eef": "requests"
+    },
+    "src": {
+      "dcf446ae-e160-4372-8260-a1f806106eef": "src"
+    },
+    "endpointHostName": {
+      "59c18d37-f2c8-4159-8dd9-8c88b61ba82c": "endpointHostName",
+      "53a36965-3534-4c5f-a33d-547c4a9071e1": "endpointHostName",
+      "dcf446ae-e160-4372-8260-a1f806106eef": "endpointHostName"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/07/17",
+  "lastUpdate": "2025-11-05T00:29:00.000Z"
+}

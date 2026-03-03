@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c6d49214-bb27-43a5-9289-372d175416da",
+  "name": "SSH Lateral Movement via Shell Script",
+  "description": "Detects SSH lateral movement via shell script",
+  "filterSets": [
+    [
+      {
+        "id": "ca70f24d-e651-4281-9ff7-5c12ed5a58da",
+        "name": "SSH Lateral Movement via Shell Script",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Josh Morrison",
+  "team": "Cloud One",
+  "date": "2022/12/30",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "921f56d0-3432-43f5-a2d0-97e36f822e1e",
+  "name": "Arcserve Unified Data Protection getLocalHostAsTrust Request",
+  "description": "An encrypted request for the password of an administrator user for the Arcserve UDP WebService was observed over HTTP(s).",
+  "filterSets": [
+    [
+      {
+        "id": "c9c57456-4df8-4b4f-9104-de3fdeb77b35",
+        "name": "Arcserve Unified Data Protection getLocalHostAsTrust Request",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2024/06/17",
+  "lastUpdate": "2024-06-17T19:36:10.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4ca3f4a1-4846-404c-9a7b-37cc67a219e5",
+  "name": "Suspicious Executable Download Activity via HTTP",
+  "description": "Network monitoring identified HTTP protocol usage for downloading suspicious executable files, indicating adversaries may be transferring malicious tools or remote management software to compromised hosts.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "31d86e9d-0f9a-4751-bb2b-178fac955b65",
+      "name": "Suspicious Executable Download Activity via HTTP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/12/08",
+  "lastUpdate": "2025-12-10T22:12:51.000Z"
+}

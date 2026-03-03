@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c45819e-cb72-45a3-9338-2d414b452008",
+  "name": "Archived File Is Oversized",
+  "description": "Fortinet detection - Archived file is oversized",
+  "filterSets": [
+    [
+      {
+        "id": "004f13fe-edd6-480d-91b9-6f84fddd9f69",
+        "name": "Archived File Is Oversized",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

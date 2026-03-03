@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "05948ade-f0ed-485e-940f-68471032cd9a",
+  "name": "Suspicious Usage of AutoIt Scripts to Potentially Evade Detection",
+  "description": "Detection of suspicious usage of AutoIt scripts in an anomalous location, scheduled task creation, or enumeration commands.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "08bf447a-3567-498a-830c-109b9f50b510",
+      "name": "Suspicious Usage of AutoIt Scripts to Potentially Evade Detection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sao",
+      "pao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.010",
+    "mitre.t1547.001",
+    "mitre.t1140"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh & Lucas Silva",
+  "team": "EU-IR",
+  "date": "2024/08/01",
+  "lastUpdate": "2025-02-07T18:41:47.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c6b4467f-0264-415c-acc5-c0a509f78723",
+  "name": "Handlekatz Usage",
+  "description": "Detection of Handlekatz usage which is a tool used to dump credentials from memory, similar to Mimikatz",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "52d75b25-5a86-4b59-a5e7-485a5bc3a3e2",
+      "name": "Handlekatz Usage",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/11",
+  "lastUpdate": "2025-02-12T10:36:42.000Z"
+}

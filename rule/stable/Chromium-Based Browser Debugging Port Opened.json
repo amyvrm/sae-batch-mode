@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "207a4eef-8733-4302-b5ce-90a88b32c343",
+  "name": "Chromium-Based Browser Debugging Port Opened",
+  "description": "Detects Chromium-based browsers is launched with the remote debugging port set.",
+  "filterSets": [
+    [
+      {
+        "id": "6b586782-9de6-444a-9553-a4f0556e381d",
+        "name": "Chromium-Based Browser Debugging Port Opened",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2025-02-13T22:39:45.000Z",
+  "author": "Bahaa Yamany & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2024/11/20"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e244a2be-7de0-4771-af7b-3abcb1f089a1",
+  "name": "Switching Protocols Request (Warning)",
+  "description": "Fortinet detection - Switching protocols request (warning)",
+  "filterSets": [
+    [
+      {
+        "id": "8e936076-864c-47f3-8f3d-be8f539caf79",
+        "name": "Switching Protocols Request (Warning)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

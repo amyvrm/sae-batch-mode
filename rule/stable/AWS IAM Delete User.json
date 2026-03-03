@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "207623de-0a72-11ee-be56-0242ac120002",
+  "name": "AWS IAM Delete User",
+  "description": "Detected AWS IAM Delete User.",
+  "filterSets": [
+    [
+      {
+        "id": "e2eb8a9d-43c1-4a48-a769-9245a1074f08",
+        "name": "AWS IAM Delete User",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/09/08",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

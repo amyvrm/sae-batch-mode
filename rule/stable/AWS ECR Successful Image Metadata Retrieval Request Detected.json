@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bfd53f5d-5777-4bf8-a67c-f31aeb4682b9",
+  "name": "AWS ECR Successful Image Metadata Retrieval Request Detected",
+  "description": "This rule detects retrieval of container images from ECR repositories.",
+  "filterSets": [
+    [
+      {
+        "id": "9f31a493-b09a-47dd-8cff-82a7b823550b",
+        "name": "AWS ECR Successful Image Metadata Retrieval Request Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/05/15",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

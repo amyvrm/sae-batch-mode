@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0d2c008a-003b-4949-9fdf-c1c4e8c189e4",
+  "name": "AWS EC2 Instance Termination",
+  "description": "Detected AWS EC2 Instance Termination",
+  "filterSets": [
+    [
+      {
+        "id": "59013596-23bb-4e3e-9fac-c859464c0e73",
+        "name": "AWS EC2 Instance Termination",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/09/08",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

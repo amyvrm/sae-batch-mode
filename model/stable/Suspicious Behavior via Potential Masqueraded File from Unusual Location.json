@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f72e003a-6f29-472e-be1e-77316a9acf05",
+  "name": "Suspicious Behavior via Potential Masqueraded File from Unusual Location",
+  "description": "Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "enable": false,
+  "rules": [
+    {
+      "id": "7fa204e0-8118-4b3b-844e-96d6223ea98c",
+      "name": "Suspicious Behavior via Potential Masqueraded File from Unusual Location",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1074",
+    "mitre.t1574",
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lucas Silva & Jack Walsh",
+  "team": "US-IR",
+  "date": "2025/03/19",
+  "lastUpdate": "2025-06-26T06:44:03.000Z"
+}

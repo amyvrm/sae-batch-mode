@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6f028095-1fb5-4362-a428-cdaa8b9de307",
+  "name": "Multiple AWS S3 Object Deletion",
+  "description": "Detects the use of the S3 Delete Object API call, which indicates an attempt to delete an object from an S3 bucket.",
+  "filterSets": [
+    [
+      {
+        "id": "2b6eecb0-1f15-4472-87a9-9aa4e4fae61b",
+        "name": "AWS S3 Object Deletion",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-18T07:18:48.000Z"
+}

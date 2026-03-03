@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5ab62e89-f1e5-4676-976b-33eace6608f2",
+  "name": "Potential SIP Brute Force via UDP",
+  "description": "Network activity indicative of a potential SIP Brute Force attack was observed utilizing UDP. This type of activity is commonly associated with unauthorized attempts to access SIP services.",
+  "filterSets": [
+    [
+      {
+        "id": "fc20cdd8-70dd-57fe-8dee-97e086804ed5",
+        "name": "Sip Possible Bruteforce UDP (Response)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2025/05/05",
+  "lastUpdate": "2025-06-17T10:49:43.000Z"
+}

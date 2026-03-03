@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d5123ff0-014e-4964-8c08-352e990e6030",
+  "name": "Suspicious Execution of Word Document via Lnk",
+  "description": "Detects the execution of a Word document via the WinWord Start Menu shortcut. This behavior was observed being used by KamiKakaBot samples in order to initiate the 2nd stage of the infection.",
+  "filterSets": [
+    [
+      {
+        "id": "705e3f1d-b8a9-4bab-8025-03fcc8520b52",
+        "name": "Suspicious Execution of Word Document via Lnk",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/06/09",
+  "lastUpdate": "2025-08-04T06:23:01.000Z"
+}

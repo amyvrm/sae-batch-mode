@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f02c7f8b-6dc2-4142-be4c-6bc86f307b9f",
+  "name": "Potential Crushftp Lolbin Execution",
+  "description": "Detection of possible lolbin spawning by CrushFTP service",
+  "filterSets": [
+    [
+      {
+        "id": "0f71fc52-3c7f-457c-a80e-bb4f9b5c8c5c",
+        "name": "Potential Crushftp Lolbin Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/06/11",
+  "lastUpdate": "2025-11-03T15:20:34.000Z"
+}

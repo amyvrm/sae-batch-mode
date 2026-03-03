@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0c733dbe-ba4a-4f7b-9765-04100059b345",
+  "name": "Teamviewer Remote Access via DNS protocol",
+  "description": "Aims to detect Teamviewer activity over DNS protocol",
+  "filterSets": [
+    [
+      {
+        "id": "56ab2d20-0e48-5f7a-bebe-630ab61035cb",
+        "name": "Teamviewer Rmm DNS (Response) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8661d7a0-b672-566c-b302-941712ab5920",
+        "name": "Teamviewer Rmm DNS (Response) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "CSG",
+  "date": "2024/02/29",
+  "lastUpdate": "2025-04-03T08:28:58.000Z"
+}

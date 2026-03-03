@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01916c36-3dc0-7612-86bc-b484d4a0343f",
+  "name": "Read Sensitive SSH Config File via grep Command",
+  "description": " Adversaries may use grep to extract sensitive information from SSH configuration file. Adversaries may use these information for lateral movement.",
+  "filterSets": [
+    [
+      {
+        "id": "01916c17-4869-71c4-acef-1d690d589653",
+        "name": "Read Sensitive SSH Config File via grep Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/08/19",
+  "lastUpdate": "2024-09-04T19:10:33.000Z"
+}

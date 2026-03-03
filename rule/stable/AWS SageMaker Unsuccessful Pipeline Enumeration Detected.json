@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f6ca77db-38bf-4c38-b23f-42f64141a0e7",
+  "name": "AWS SageMaker Unsuccessful Pipeline Enumeration Detected",
+  "description": "Detects unsuccessful enumeration of pipelines in AWS SageMaker service, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "09942d2f-cd53-4df6-97dc-08abb101f9c7",
+        "name": "AWS SageMaker Unsuccessful Pipeline Enumeration Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/17",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

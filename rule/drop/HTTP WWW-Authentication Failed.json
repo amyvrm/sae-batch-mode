@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dba08448-ab33-41f8-a46e-8946cc79245b",
+  "name": "HTTP WWW-Authentication Failed",
+  "description": "Palo Alto Vulnerability detection - HTTP WWW-Authentication Failed",
+  "filterSets": [
+    [
+      {
+        "id": "eb61dd80-57b6-4b16-82f4-cf546fa65718",
+        "name": "HTTP WWW-Authentication Failed",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-07-31T10:41:34.000Z"
+}

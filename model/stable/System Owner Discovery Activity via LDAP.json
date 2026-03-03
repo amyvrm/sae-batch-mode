@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "63d16474-61d1-4643-b081-e52193033d9c",
+  "name": "System Owner Discovery Activity via LDAP",
+  "description": "Network activity involving LDAP, associated with the behavior of discovering System Owner or User Accounts.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "51c91803-74e3-4e22-9195-92a7cfc43c44",
+      "name": "System Owner Discovery Activity via LDAP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1033",
+    "threat.hacktool"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/03/20",
+  "lastUpdate": "2025-03-20T08:22:06.000Z"
+}

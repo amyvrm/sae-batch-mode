@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7733208f-f740-458f-aab6-8c78f86a3a80",
+  "name": "Antiphishing Reached Default Action And Blocked The Request",
+  "description": "Fortinet detection - Antiphishing reached default action and blocked the request",
+  "filterSets": [
+    [
+      {
+        "id": "27dc654e-1352-4c9c-b3de-f62f6c129cfc",
+        "name": "Antiphishing Reached Default Action And Blocked The Request",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

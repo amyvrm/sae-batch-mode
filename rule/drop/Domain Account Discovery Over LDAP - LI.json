@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9529de77-6906-432d-8b02-06b1b995facf",
+  "name": "Domain Account Discovery Over LDAP via LI",
+  "description": "Detects Domain Account Discovery Over LDAP via LI",
+  "filterSets": [
+    [
+      {
+        "id": "b40ba0b3-04df-4ce4-9442-dacf03579cba",
+        "name": "Identified Domain Account Discovery Over LDAP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2022/03/14",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

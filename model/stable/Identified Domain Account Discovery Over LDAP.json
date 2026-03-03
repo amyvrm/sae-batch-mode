@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7c3a4bfe-9dff-4004-bb83-562de08a7cf6",
+  "name": "Identified Domain Account Discovery Over LDAP",
+  "description": "This incident means that Windows Domain Account Discovery was observed using LDAP triggering IPS and LI modules.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d1f3ba35-1ebc-4a25-b510-98646e951437",
+      "name": "Domain Account Discovery Over LDAP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1087.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 8,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2022/03/14",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3655317e-eff0-4afe-9d03-2cd4706c8581",
+  "name": "ARP Attack Detected",
+  "description": "SonicWall Detection - Possible ARP attack from MAC address %s",
+  "filterSets": [
+    [
+      {
+        "id": "a0ce961e-c484-459e-aa4c-5169bb26afcd",
+        "name": "ARP Attack Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

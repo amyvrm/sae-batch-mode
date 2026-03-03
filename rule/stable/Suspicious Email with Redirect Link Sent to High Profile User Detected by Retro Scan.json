@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c2d456c7-046b-4724-ab05-5a405b78d833",
+  "name": "Suspicious Email with Redirect Link Sent to High Profile User Detected by Retro Scan",
+  "description": "A link that redirected to phishing or malware site was detected in an email message sent to a high-profile user by Retro Scan. [Delayed alert: Batch process detection]",
+  "filterSets": [
+    [
+      {
+        "id": "2ea59a9a-a1e3-4397-a069-aa7b11cff3de",
+        "name": "Suspicious Email with Redirect Link Sent to High Profile User Detected by Retro Scan",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Jim W Hsu",
+  "team": "Jaguar",
+  "date": "2021/02/17",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

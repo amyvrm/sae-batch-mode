@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "93e79a8e-64f3-471a-8774-1250eadd2668",
+  "name": "AWS SSM Unsuccessful Patch Baseline Enumeration",
+  "description": "Identifies unsuccessful attempts to retrieve details about patch baselines, which could be used to understand system vulnerabilities.",
+  "filterSets": [
+    [
+      {
+        "id": "1dfc0011-32b1-440b-8cc3-219d21c5c132",
+        "name": "AWS SSM Unsuccessful Patch Baseline Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0e10ddb1-5947-45c0-a7b8-4b6a9d05fea3",
+  "name": "Antiphishing Matched A Fortiguard Category Rule And Blocked The Request",
+  "description": "Fortinet detection - Antiphishing matched a Fortiguard category rule and blocked the request",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "70ad0d22-993c-425c-bdf8-b39c2cdb27ec",
+      "name": "Antiphishing Matched A Fortiguard Category Rule And Blocked The Request",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

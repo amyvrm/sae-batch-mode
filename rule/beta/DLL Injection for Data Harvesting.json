@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7c671b2c-4144-4235-8516-e54b80d1929c",
+  "name": "DLL Injection for Data Harvesting",
+  "description": "DLL side loading associated with Katz Stealer malware.",
+  "filterSets": [
+    [
+      {
+        "id": "b928aed5-2e6c-44a8-80eb-ba85a7cac86c",
+        "name": "DLL Injection for Data Harvesting",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/06/12",
+  "lastUpdate": "2025-08-08T07:46:29.000Z"
+}

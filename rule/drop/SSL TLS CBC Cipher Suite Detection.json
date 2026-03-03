@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4ce568d4-5507-438d-9b46-38badd301575",
+  "name": "SSL TLS CBC Cipher Suite Detection",
+  "description": "Palo Alto Vulnerability detection - SSL TLS CBC Cipher Suite Detection",
+  "filterSets": [
+    [
+      {
+        "id": "0d7b567a-c840-4e19-a350-f9b1b71b2aae",
+        "name": "SSL TLS CBC Cipher Suite Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-07-31T10:41:34.000Z"
+}

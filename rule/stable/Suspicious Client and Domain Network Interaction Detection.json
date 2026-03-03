@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2c33d912-6cae-495f-a28f-2c4f6d6920f2",
+  "name": "Suspicious Client and Noteworthy Domain Detection",
+  "description": "A network interaction involving a newly registered domain and a suspicious client was identified, indicating potential evasion tactics.",
+  "filterSets": [
+    [
+      {
+        "id": "f8215454-c4d8-4698-8f2e-2389ad75983f",
+        "name": "Noteworthy Web Reputation Services Network Detection From a Suspicious Client",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi"
+    ]
+  ],
+  "author": "Arjun Baltazar",
+  "team": "DDI",
+  "date": "2025/03/13",
+  "lastUpdate": "2025-03-14T06:15:06.000Z"
+}

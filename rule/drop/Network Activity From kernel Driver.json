@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "551f8d12-e074-4626-ac1c-368186412c35",
+  "name": "Network Activity From kernel Driver",
+  "description": "Network Activity From kernel Driver",
+  "filterSets": [
+    [
+      {
+        "id": "5f0335df-cae1-4019-853e-5a027c30ffda",
+        "name": "Outbound kernel Connection Attempt",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b28e55ee-c685-4f82-9466-c4a748393662",
+        "name": "Inbound kernel Connection Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Mahmoud Zohdy",
+  "team": "MENA-IR",
+  "date": "2024/01/09",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f22f0356-c744-4b68-b49a-6a3fa11a4764",
+  "name": "AWS SageMaker Unsuccessful Service Enumeration Detected",
+  "description": "This model detected unsuccessful enumeration of Amazon SageMaker service indicating an attacker trying to collect information on resources And permissions on SageMaker service to carry out further attacks.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "e922b571-6f11-4c60-9d67-05c3fe87bc4f",
+      "name": "AWS SageMaker Unsuccessful Code Repository Enumeration Detected",
+      "score": 1
+    },
+    {
+      "id": "112530dd-966f-41a6-8e97-91f5e561fc3c",
+      "name": "AWS SageMaker Unsuccessful Endpoints Enumeration Detected",
+      "score": 1
+    },
+    {
+      "id": "ca8eb722-08ef-474c-82a1-2f1462119b91",
+      "name": "AWS SageMaker Unsuccessful Notebook Enumeration Detected",
+      "score": 1
+    },
+    {
+      "id": "f6ca77db-38bf-4c38-b23f-42f64141a0e7",
+      "name": "AWS SageMaker Unsuccessful Pipeline Enumeration Detected",
+      "score": 1
+    },
+    {
+      "id": "87279cbd-e71f-48a1-ba3c-fc03ea8df266",
+      "name": "AWS SageMaker Unsuccessful Jobs Enumeration Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 120,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1526",
+    "atlas.aml.t0007"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

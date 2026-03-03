@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cb34c5de-d134-49ef-a8c6-2a7f06633033",
+  "name": "Possible Command and Control Connection via DNS TXT",
+  "description": "Detect suspicious C2 traffic via DNS protocol",
+  "filterSets": [
+    [
+      {
+        "id": "be7e8029-5695-4673-9fe2-9f6383d03589",
+        "name": "Possible DNS Command And Control",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-03-30T04:57:51.000Z"
+}

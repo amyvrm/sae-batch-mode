@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "098a0692-3ef9-11ef-9454-0242ac120002",
+  "name": "Suspicious Linux File Lock Execution",
+  "description": "Detects the execution of file lock in a Linux environment.",
+  "filterSets": [
+    [
+      {
+        "id": "1f3d0b22-3eec-11ef-9454-0242ac120002",
+        "name": "Linux File Lock Executed via Flock",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/07/10",
+  "lastUpdate": "2025-01-22T19:14:24.000Z"
+}

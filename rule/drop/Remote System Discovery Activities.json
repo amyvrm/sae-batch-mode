@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "816571ac-fd37-4150-8aa1-2ec9ddc3acb0",
+  "name": "Remote System Discovery Activities",
+  "description": "Adversaries may attempt to get a system information over protocols such as LDAP or LSARP. This information can help adversaries  in discovery and to collect the information about compromised system.",
+  "filterSets": [
+    [
+      {
+        "id": "e69bdd18-d97c-5596-8ed9-9c833f99ed8a",
+        "name": "Identified Remote System Discovery Via LDAP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c6eabf17-140b-49ec-b34e-881fec849046",
+        "name": "Remote System Discovery Over LSARP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9eeb48e8-d38c-4705-893d-0bd3653d1832",
+        "name": "Remote System Discovery Over LDAP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

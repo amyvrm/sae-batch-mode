@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f1a02636-8840-4d43-aca6-7e4327d59224",
+  "name": "Account Logon Failure Monitoring",
+  "description": "McAfee detection for Windows Security Auditing Restricted Domain Account Failed Logon identifies and alerts on failed login attempts made with restricted domain accounts. These rules help organizations monitor for potential unauthorized access or misuse of privileged credentials.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "bf870d8f-0054-431d-95fb-1eb0a89597c9",
+      "name": "Account Logon Failure Monitoring",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc|McAfee"
+    ]
+  ],
+  "tags": [
+    "mitre.t1110"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2026/02/10",
+  "lastUpdate": "2026-02-10T13:36:07.000Z"
+}

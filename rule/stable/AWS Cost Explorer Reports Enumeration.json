@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5b5ffb4e-d630-42df-815b-23f0c7c81eae",
+  "name": "AWS Cost Explorer Reports Enumeration",
+  "description": "Monitors enumeration of cost and usage reports, which could indicate legitimate cost analysis activities or reconnaissance attempts to understand account reporting structure and cost visibility configurations for potential data exfiltration or cost-based attacks.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Cost Explorer Reports Enumeration",
+        "id": "15d2b1c6-ce99-4ab5-ab4a-63114c4d7860",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T11:20:55.000Z"
+}

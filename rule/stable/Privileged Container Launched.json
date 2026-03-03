@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e7f86e2d-bebd-4f53-9e23-8aa5b2488abe",
+  "name": "Privileged Container Launched",
+  "description": "Detects new privileged container.",
+  "filterSets": [
+    [
+      {
+        "id": "c7273800-431f-4fa6-9de5-77c373827024",
+        "name": "Launch Privileged Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/07/19",
+  "lastUpdate": "2024-07-19T08:11:20.000Z"
+}

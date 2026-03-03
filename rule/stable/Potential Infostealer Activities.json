@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2e5459a6-1c4d-4f0f-9b24-aac28e00f070",
+  "name": "Potential Infostealer Activities",
+  "description": "Information stored in the browser or related to the cryptocurrency wallet may have been collected by the Infostealer.",
+  "filterSets": [
+    [
+      {
+        "id": "ca86c32f-eb1b-4846-ac3a-e6976e1ce693",
+        "name": "Potential Infostealer Copying Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Yoshihiro Nakaya",
+  "team": "JP-IR",
+  "date": "2023/11/21",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8bb5be46-3f62-4bf1-8a35-e8230c3be3fa",
+  "name": "Spearphishing Email With Known Phishkit Url Template Via Link",
+  "description": "Spearphishing Email With Known Phishkit Url Template Via Link",
+  "filterSets": [
+    [
+      {
+        "id": "756a0505-d67e-4471-a7cb-cdd9f5df2e63",
+        "name": "Spearphishing Email With Known Phishkit Url Template Via Link",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Peter L Chang",
+  "team": "Jaguar",
+  "date": "2020/10/27",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

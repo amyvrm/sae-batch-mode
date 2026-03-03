@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0b5d1530-7b93-4074-936a-d0f02bcb3368",
+  "name": "Encoded Powershell Execution From SysAid Server",
+  "description": "Detection of encoded powershell execution from SysAid Server",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "23d7ebf2-3871-41cd-a225-c2249b4c1fcd",
+      "name": "Encoded Powershell Execution From SysAid Server",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1140"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/11/09",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

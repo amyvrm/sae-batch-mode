@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cd31fb44-b056-4d9d-9abc-d106fd8a1924",
+  "name": "AWS Project Information Enumeration To Get Environment Variables",
+  "description": "This Rule detects AWS project information enumeration to get environment variables including AWS access keys.",
+  "filterSets": [
+    [
+      {
+        "id": "e6838855-b662-49ee-858f-7296106e99f1",
+        "name": "AWS Project Information Enumeration To Get Environment Variables",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/06",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

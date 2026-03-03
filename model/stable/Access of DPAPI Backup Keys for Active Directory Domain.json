@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c7d95b5e-a00d-4096-b65f-d9c00fce1219",
+  "name": "Access of DPAPI Backup Keys for Active Directory Domain",
+  "description": "An Active Directory object has accessed one or more of the domain's DPAPI backup keys, which may indicate a possible attack if the object is not authorized to perform the action.",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "c7d95b5e-a00d-4096-b65f-d9c00fce1219",
+      "name": "Access of DPAPI Backup Keys for Active Directory Domain",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "opa"
+    ]
+  ],
+  "tags": [
+    "mitre.t1555"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Johnny Tu",
+  "team": "Jaguar",
+  "date": "2023/08/08",
+  "lastUpdate": "2025-01-02T07:38:03.000Z"
+}

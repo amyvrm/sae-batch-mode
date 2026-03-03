@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7196fd9a-d61b-4a4c-967e-01c5f4c0fb07",
+  "name": "AWS EventBridge Unsuccessful List Event Buses",
+  "description": "Detects unsuccessful listing of EventBridge event buses, which may indicate an adversary enumerating available event buses to understand inter-service communication or integration points.",
+  "filterSets": [
+    [
+      {
+        "id": "4671ab1e-c8c7-4dd9-8ffc-68b84b30aa19",
+        "name": "AWS EventBridge Unsuccessful List Event Buses",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-07-31T08:55:45.000Z"
+}

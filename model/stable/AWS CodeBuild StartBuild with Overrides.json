@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "da6b0cfa-fa26-4498-b071-91c210c114b9",
+  "name": "AWS CodeBuild StartBuild with Overrides",
+  "description": "This model detects the use of the StartBuild API call with overridden parameters in AWS CodeBuild. Overrides such as modified buildspecs, environment variables, source versions, or service roles allow the caller to change build behavior at runtime without updating the underlying project configuration. This activity is critical to monitor because it may be used to execute unauthorized code, inject malicious commands, or abuse build infrastructure for persistence or data exfiltration.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "d01d537c-dcbd-4058-ad87-f5d73748e73c",
+      "name": "AWS CodeBuild StartBuild with Overrides",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1648"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/12/16",
+  "lastUpdate": "2026-02-11T08:35:44.000Z"
+}

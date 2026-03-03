@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8b9f49c4-0aa8-49dc-af02-9d7f1a2c2180",
+  "name": "Suspicious Execution and DLL Side Loading of Renamed VLC Application",
+  "description": "Detects suspicious execution and DLL side loading of renamed VLC media player application which indicates possible attack.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e01dac12-abce-4cf3-93e9-25c4d9ad08c5",
+      "name": "Suspicious Execution of Renamed VLC Application",
+      "score": 1
+    },
+    {
+      "id": "07952532-dc44-45fa-8866-15abb4187d04",
+      "name": "Suspicious DLL Side Loading via Renamed VLC Application",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1036.003",
+    "mitre.t1574.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2026/01/27",
+  "lastUpdate": "2026-01-27T09:19:31.000Z"
+}

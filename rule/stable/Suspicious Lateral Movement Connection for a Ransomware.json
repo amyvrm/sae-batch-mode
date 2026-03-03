@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "736e249f-aa2e-4a64-ba60-d94eb5e7fe72",
+  "name": "Suspicious Lateral Movement Connection for a Ransomware",
+  "description": "The presence of various lateral movement connections that is linked to a ransomware",
+  "filterSets": [
+    [
+      {
+        "id": "1c1c79a4-ad3d-543f-8af9-18d55e4cf7e1",
+        "name": "Psexec SMB2 (Request) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1ab69377-60c8-552f-9185-3530ef484908",
+        "name": "Atera Rmm HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a1485836-8b22-5245-9a95-c427ce355e56",
+        "name": "Splashtop Business Access Remote Desktop Rmm DNS (Response) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "interestedIp": {
+      "1c1c79a4-ad3d-543f-8af9-18d55e4cf7e1": "interestedIp",
+      "1ab69377-60c8-552f-9185-3530ef484908": "interestedIp"
+    },
+    "peerIp": {
+      "a1485836-8b22-5245-9a95-c427ce355e56": "peerIp"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/11/20",
+  "lastUpdate": "2025-04-04T04:43:10.000Z"
+}

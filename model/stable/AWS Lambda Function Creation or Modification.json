@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3937fae0-fb9b-4431-9be2-995645077031",
+  "name": "AWS Lambda Function Creation or Modification",
+  "description": "The creation or modification of an AWS Lambda function has been detected. Changes to Lambda functions can introduce new behaviors, update existing logic, or modify permissions. While this may be part of routine development or deployment activities, unauthorized modifications could indicate an attempt to execute malicious code or escalate privileges. Monitoring such events helps detect potential security risks.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "d347a239-edf6-4a6a-89ba-613a8c6f0842",
+      "name": "AWS Lambda Function Creation",
+      "score": 1
+    },
+    {
+      "id": "67de9124-018d-4d9a-a07b-3a53dfab98b2",
+      "name": "AWS Lambda Function Code Updated",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1648"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-29T15:07:44.000Z"
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2dc32a84-37b4-4939-bc34-1794a3342fc2",
+  "name": "AWS SageMaker Notebook Instance Configured With Admin Role",
+  "description": "Detects if SageMaker notebook configured with admin role while notebook creation or updation.",
+  "filterSets": [
+    [
+      {
+        "id": "1f45e819-2d41-476a-a3dc-22635759f320",
+        "name": "AWS SageMaker Notebook Instance Created With Admin Role",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "18b3ef55-d25a-42f7-af2b-83278e0d5ea9",
+        "name": "AWS SageMaker Notebook Instance Updated With Admin Role",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/09/13",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

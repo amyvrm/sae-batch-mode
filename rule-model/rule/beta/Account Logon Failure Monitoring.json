@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bf870d8f-0054-431d-95fb-1eb0a89597c9",
+  "name": "Account Logon Failure Monitoring",
+  "description": "McAfee detection for Windows Security Auditing Restricted Domain Account Failed Logon identifies and alerts on failed login attempts made with restricted domain accounts. These rules help organizations monitor for potential unauthorized access or misuse of privileged credentials.",
+  "filterSets": [
+    [
+      {
+        "id": "6fc047a9-d456-4217-9c6d-d84fd1d97b48",
+        "name": "Windows Security Auditing - Restricted Domain Account Failed Logon",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc|McAfee"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2026/02/10",
+  "lastUpdate": "2026-02-10T13:36:07.000Z"
+}

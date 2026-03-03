@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c24fca07-f131-4a95-bc8d-ad6f7fc16bd4",
+  "name": "AWS CloudFormation Template Exfiltration Attempt",
+  "description": "Detects unauthorized retrieval of CloudFormation templates, which may contain sensitive infrastructure configurations, resource definitions, and deployment logic that could be used for attack planning.",
+  "filterSets": [
+    [
+      {
+        "id": "b3cd458b-8e4a-4160-98cd-8e24c8986aa2",
+        "name": "AWS CloudFormation Template Exfiltration Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1200,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-09-05T05:08:42.000Z"
+}

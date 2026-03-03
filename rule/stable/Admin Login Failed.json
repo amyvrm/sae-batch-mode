@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "54d191bf-48da-4f74-b4eb-dcaec45bd970",
+  "name": "Admin Login Failed",
+  "description": "Fortinet detection - Admin login failed",
+  "filterSets": [
+    [
+      {
+        "id": "9a4dc784-f268-4a58-8f56-4a467b8abdee",
+        "name": "Admin Login Failed",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

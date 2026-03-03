@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2462f13f-ebaa-4abe-a1e3-05c3c0651dc1",
+  "name": "Possible Dropping of Vulnerable Avast Driver",
+  "description": "Detects the deployment of the Avast anti-rootkit kernel driver, which has been leveraged by threat actors as a privilege escalation technique to terminate EDR/EPP processes.",
+  "filterSets": [
+    [
+      {
+        "id": "537f2885-b651-4546-b3a1-6add7cfe1059",
+        "name": "Possible Dropping of Vulnerable Avast Driver",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Ahmed Kamal & Ahmed Hussein",
+  "team": "MENA-IR",
+  "date": "2026/01/04",
+  "lastUpdate": "2026-01-14T11:17:18.000Z"
+}

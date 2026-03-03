@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3e40bca2-9948-4575-abfd-087f75fc8b09",
+  "name": "Tunnel Creation via LocalToNet",
+  "description": "Detects network tunnel creation using Localtonet, which may be used for command and control communication, and data exfiltration",
+  "filterSets": [
+    [
+      {
+        "id": "9448f63e-3d60-47cf-923d-e4fbdc07042a",
+        "name": "DNS Query Request to Localtonet Tunneling Service",
+        "highlight": true
+      },
+      {
+        "id": "910c28b2-612f-4587-8314-d18b493f166b",
+        "name": "Localtonet Tunnel Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2024/11/20",
+  "lastUpdate": "2025-01-22T11:11:19.000Z"
+}

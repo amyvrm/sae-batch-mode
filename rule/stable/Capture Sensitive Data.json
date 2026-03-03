@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "71ba3b4c-02e9-11eb-9c4b-787b8ad91447",
+  "name": "Capture Sensitive Data",
+  "description": "Capture sensitive user data, like screenshot, audio",
+  "filterSets": [
+    [
+      {
+        "id": "d7c98d38-fefd-41ea-995a-787b8ad91447",
+        "name": "Screen Capture via Command Line",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/09/30",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

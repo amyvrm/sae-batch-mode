@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4264110c-e3d9-40e0-b982-e8df04a8f92b",
+  "name": "Bluetooth Driver Loaded in Uncommon Path",
+  "description": "Detects bluetooth driver being loaded in uncommon path.",
+  "filterSets": [
+    [
+      {
+        "id": "4e891324-cdfd-452f-811a-a2d9440ed019",
+        "name": "Bluetooth Driver Loaded in Uncommon Path",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/11/21",
+  "lastUpdate": "2025-01-27T06:55:29.000Z"
+}

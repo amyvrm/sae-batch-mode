@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "75efd90c-9286-496a-b96f-75d4f02ba068",
+  "name": "IPv6 MAC-IP Anti-Spoof Check Enforced For Hosts",
+  "description": "SonicWall Detection - IPv6 Mac-IP Anti-spoof check enforced for hosts",
+  "filterSets": [
+    [
+      {
+        "id": "5a6fa79f-3014-4017-84bf-7802583edb60",
+        "name": "IPv6 MAC-IP Anti-Spoof Check Enforced For Hosts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

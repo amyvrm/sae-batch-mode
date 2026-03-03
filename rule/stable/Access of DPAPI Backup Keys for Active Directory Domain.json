@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c7d95b5e-a00d-4096-b65f-d9c00fce1219",
+  "name": "Access of DPAPI Backup Keys for Active Directory Domain",
+  "description": "An Active Directory object has accessed one or more of the domain's DPAPI backup keys, which may indicate a possible attack if the object is not authorized to perform the action.",
+  "filterSets": [
+    [
+      {
+        "id": "a03f3b9e-fd83-5f4c-b2b8-76965cedfa65",
+        "name": "Access of DPAPI Backup Keys for Active Directory Domain",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "opa"
+    ]
+  ],
+  "author": "Johnny Tu",
+  "team": "Jaguar",
+  "date": "2023/08/08",
+  "lastUpdate": "2025-01-02T07:38:03.000Z"
+}

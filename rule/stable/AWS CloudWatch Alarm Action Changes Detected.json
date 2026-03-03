@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7982efcb-2c04-4ae0-9fdd-4f0276c40647",
+  "name": "AWS CloudWatch Alarm Action Changes Detected",
+  "description": "Detects actions to disable CloudWatch alarms",
+  "filterSets": [
+    [
+      {
+        "id": "e9f799e6-25d2-4852-9a54-5a232b34293b",
+        "name": "AWS CloudWatch Alarm Actions Disabled",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/04/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

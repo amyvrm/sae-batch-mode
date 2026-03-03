@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0190c278-bfff-7c04-b20a-4f9c3d446d5b",
+  "name": "Identified Access of SSH Authorized Keys",
+  "description": "Adversaries may modify SSH authorized_keys files directly with scripts or shell commands to add their own adversary-supplied public keys. This ensures that an adversary possessing the corresponding private key may log in as an existing user via SSH.",
+  "filterSets": [
+    [
+      {
+        "id": "4cad8af5-ff93-4a8b-af3b-edd5f10d2dd9",
+        "name": "Identified Access of SSH Authorized Keys",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2024/07/17",
+  "lastUpdate": "2024-09-04T19:10:33.000Z"
+}

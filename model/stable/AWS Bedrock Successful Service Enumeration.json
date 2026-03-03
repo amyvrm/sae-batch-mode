@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9eac11eb-4f37-4585-8130-4f12c01e54ee",
+  "name": "AWS Bedrock Successful Service Enumeration",
+  "description": "This model detected successful enumeration of amazon bedrock service indicating an attacker trying to collect information on resources and permissions on bedrock service to carry out further attacks.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "11e8b776-76c2-459e-a1a5-4b6db5b783a8",
+      "name": "AWS Bedrock Successful Agent Enumeration",
+      "score": 1
+    },
+    {
+      "id": "9b4981bb-4eea-415f-8781-acf6d8d0f6a5",
+      "name": "AWS Bedrock Successful Datasource Enumeration",
+      "score": 1
+    },
+    {
+      "id": "64f1c664-f258-4015-a076-f1f9181d8d16",
+      "name": "AWS Bedrock Successful Guardrails Enumeration",
+      "score": 1
+    },
+    {
+      "id": "b3d2db91-528e-45cf-a562-7ab122c68c89",
+      "name": "AWS Bedrock Successful Knowledge-Base Enumeration",
+      "score": 1
+    },
+    {
+      "id": "3f8979ae-d82e-4ba4-a411-ca0999f9471b",
+      "name": "AWS Bedrock Successful Models Enumeration",
+      "score": 1
+    },
+    {
+      "id": "fc999d07-83cf-4c79-82e0-b4642c37d21f",
+      "name": "AWS Bedrock Successful Prompt Enumeration",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 180,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1526",
+    "atlas.aml.t0007"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/17",
+  "lastUpdate": "2026-01-19T02:05:18.000Z"
+}

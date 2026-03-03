@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "073e27e5-cd1d-4240-9416-5d343a85f3fe",
+  "name": "Azure Compute Restore Point Collections Successfully Deleted",
+  "description": "Detects successful deletion of Azure Compute Restore Point Collections, which may indicate attempts to remove VM recovery points and hinder incident remediation.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "afb737c4-fe4f-4629-9048-e1731b534b10",
+      "name": "Azure Compute Restore Point Collections Successfully Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1490"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Arun Shaji and Kim Folloso",
+  "team": "SAE Threat Expert",
+  "date": "2025/12/05",
+  "lastUpdate": "2025-12-11T02:43:11.000Z"
+}

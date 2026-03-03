@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "67c25299-7988-4285-8441-3a0844fae587",
+  "name": "Application Control (IPS) (Reset)",
+  "description": "Fortinet detection - Application control (IPS) (reset)",
+  "filterSets": [
+    [
+      {
+        "id": "081874de-82a4-48ad-9019-ed2ae57c5a9d",
+        "name": "Application Control (IPS) (Reset)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

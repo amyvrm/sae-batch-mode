@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cee5bbe4-c989-412f-a98e-11d3650cf6aa",
+  "name": "Chrome Remote Acess Tool Executed",
+  "description": "A Generic Remote Acess tools was executed on the endpoint.",
+  "filterSets": [
+    [
+      {
+        "id": "35028b43-a473-43fc-986c-c1f7334efd62",
+        "name": "Remote Connection via Chrome Remote Desktop",
+        "highlight": true
+      },
+      {
+        "id": "81ada0e3-9407-4c04-adca-27ee89070b0f",
+        "name": "Tool Execution - Chrome Remote Desktop",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Rafael Pereira",
+  "team": "US-IR",
+  "date": "2025/07/18",
+  "lastUpdate": "2025-11-14T05:42:39.000Z"
+}

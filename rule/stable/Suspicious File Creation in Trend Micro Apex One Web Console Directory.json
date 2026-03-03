@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "51ee2c8e-4601-47dc-8791-f47a8f9501ce",
+  "name": "Suspicious File Creation in Trend Micro Apex One Web Console Directory",
+  "description": "Detects creation or modification of files within the Trend Micro Apex One Web Console crypt directory, except for legitimate files (crypt.key, readme.txt). This may indicate exploitation of CVE-2025-54948 to drop or modify files in protected web server directories.",
+  "filterSets": [
+    [
+      {
+        "id": "24cece52-2e70-4120-8af8-d76e878ebdec",
+        "name": "Suspicious File Creation in Trend Micro Apex One Web Console Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Colin Crowley, Marc Lanzendorfer",
+  "team": "EU-IR",
+  "date": "2025/08/21",
+  "lastUpdate": "2025-08-27T04:43:02.000Z"
+}

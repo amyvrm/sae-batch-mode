@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7105c405-659f-4910-9697-a3b91bcacc18",
+  "name": "Registry Modification to Disable Protected Process Light",
+  "description": "Disabling Protected Process Light (PPL), a security feature for the Local Security Authority (LSA) process which can lead to Credential Dumping",
+  "filterSets": [
+    [
+      {
+        "id": "8eef391d-ec88-43d7-ae67-f8ebcf7a314c",
+        "name": "Registry Modification to Disable Protected Process Light",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-29T09:44:33.000Z"
+}

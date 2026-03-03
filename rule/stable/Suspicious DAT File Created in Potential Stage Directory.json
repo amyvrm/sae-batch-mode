@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f0a508c7-4981-4ebb-a6e5-ad22ab23d358",
+  "name": "Suspicious DAT File Created in Potential Stage Directory",
+  "description": "This rule detects the creation or copy of suspicious DAT file in potential stage directories in an attempt to evade detection.",
+  "filterSets": [
+    [
+      {
+        "id": "be2c529b-9aed-4739-a2eb-0a8d6d10ae18",
+        "name": "Suspicious DAT File Created in Potential Stage Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva & Jack Walsh",
+  "team": "US-IR",
+  "date": "2025/03/19",
+  "lastUpdate": "2025-05-26T06:38:53.000Z"
+}

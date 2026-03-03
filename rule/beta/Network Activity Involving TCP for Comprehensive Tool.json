@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c1f5d1a2-26eb-43c6-a9c8-2e440b336160",
+  "name": "Network Activity Involving TCP for Comprehensive Tool",
+  "description": "Network activity associated with Comprehensive Tool was identified via TCP request, indicating potential interaction with the tool on the network layer.",
+  "filterSets": [
+    [
+      {
+        "id": "ddf8bc28-6133-50fc-945e-b5784dc4a05a",
+        "name": "Comprehensive Tool TCP (Request)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/06/16",
+  "lastUpdate": "2025-06-16T03:45:05.000Z"
+}

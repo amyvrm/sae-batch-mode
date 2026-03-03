@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c0d177db-5fbe-4653-b3b9-4f941c6c6d93",
+  "name": "Discovery Commands Spawned By Rundll32",
+  "description": "Detection of suspect discovery commands from rundll32",
+  "filterSets": [
+    [
+      {
+        "id": "b7a22f4f-a6ed-4dae-bcdf-a8640d08c6a2",
+        "name": "Detection of suspect discovery commands from Rundll32",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/12/19",
+  "lastUpdate": "2025-01-21T09:13:07.000Z"
+}

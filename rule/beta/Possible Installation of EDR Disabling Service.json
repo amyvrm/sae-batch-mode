@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "001d269d-48c3-481a-8b95-8656fb0b05bd",
+  "name": "Possible Installation of EDR Disabling Service",
+  "description": "Detects service installation of EDRSilencer tool that can disable EDR systems",
+  "filterSets": [
+    [
+      {
+        "id": "406621c8-5714-41f7-b97b-c7855e21faad",
+        "name": "Possible Installation of EDR Disabling Service",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c453239a-8044-417b-9523-48d4c72327bf",
+        "name": "Possible Kernel Type Installation of EDR Disabling Service via Command Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2025/05/09",
+  "lastUpdate": "2025-06-10T15:15:26.000Z"
+}

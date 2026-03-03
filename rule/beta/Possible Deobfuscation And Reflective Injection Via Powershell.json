@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9330e30d-ab6d-411b-9887-0508a3dea92a",
+  "name": "Possible Deobfuscation And Reflective Injection From AMSI",
+  "description": "Adversaries may reflectively load code into a process in order to conceal the execution of malicious payloads. Reflective loading involves allocating then executing payloads directly within the memory of the process.",
+  "filterSets": [
+    [
+      {
+        "id": "2ed1baf5-846f-4ea4-808c-63a08497ba00",
+        "name": "Deobfuscation And Reflective Injection Via PowerShell",
+        "highlight": true
+      },
+      {
+        "id": "034daf1c-5794-4d56-9446-bd9a1cce228c",
+        "name": "Suspicious Powershell Parameters From AMSI",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3a8ddcf6-6194-4709-a945-1be551fc410e",
+        "name": "PowerShell Deobfuscation And Reflective Injection via Registry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/07/09",
+  "lastUpdate": "2024-08-23T16:38:15.000Z"
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a3f8e2c1-5179-42ff-a37b-bc6e38b6d2d3",
+  "name": "Remote Access Application Detected",
+  "description": "Detects known RATs connections in network traffic.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "cf125a2c-fd61-4cc8-bdf0-982bab59095c",
+      "name": "Remote Access Application Connection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1219"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2022/02/11",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

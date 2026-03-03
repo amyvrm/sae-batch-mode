@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "25482f98-19dc-11ec-9621-0242ac130002",
+  "name": "Remote Command Execution After Server Breach",
+  "description": "This rule is triggered on Activity Monitoring events detecting critical Command Execution attempts on the server",
+  "filterSets": [
+    [
+      {
+        "id": "b3bbffd1-ec31-4ada-a991-44f5a4135c01",
+        "name": "Bash Shell Script Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8ab1b8a9-b2db-49b8-8b8b-949e8bb28150",
+        "name": "Initial Access via Weblogic Process Spawning Suspicious Powershell Command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6f8e4c5e-0291-40df-976a-a8336dc0d7b1",
+        "name": "Suspicious Powershell Download Command via Weblogic Exploit",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2021/09/16",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2b00c7cf-eeab-4ba9-8997-2c477533440e",
+  "name": "Attack Pattern for Rule 706",
+  "description": "Detects attack pattern for DDI rule 706",
+  "filterSets": [
+    [
+      {
+        "id": "310d0456-52d9-5621-87f2-fca38a628fe2",
+        "name": "File via HTTP Analyzed by Virtual Analyzer - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "4d4dd578-06e1-5fe4-a21a-522cd89aa9a6",
+        "name": "File via HTTP Analyzed by Virtual Analyzer - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ba000d73-30b4-5714-aaf1-e78deccbb7f0",
+        "name": "File via SMTP Analyzed by Virtual Analyzer - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "4b05fa1e-3f56-5529-b0e8-aaf1b3fb3161",
+        "name": "File via SMTP Analyzed by Virtual Analyzer - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "4217944f-ec92-504f-a838-4deecd2bdfbc",
+        "name": "File via SMB Analyzed by Virtual Analyzer - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8775e7c1-6fc5-5f41-8a4d-59a1ed868c8a",
+        "name": "File via SMB Analyzed by Virtual Analyzer - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f7a6b8c0-032b-5e73-975d-534bd9f8dc6f",
+        "name": "File via SMB2 Analyzed by Virtual Analyzer - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9bbd175f-ec19-5bb8-b11d-3b9608746c89",
+        "name": "File via SMB2 Analyzed by Virtual Analyzer - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f8b120fe-d590-585a-ab17-b3618530ea84",
+        "name": "File via FTP Analyzed by Virtual Analyzer - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "46f01525-bef0-5339-aed7-137e6d222f88",
+        "name": "File via FTP Analyzed by Virtual Analyzer - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Harshali Mugutrao",
+  "team": "NS",
+  "date": "2022/09/02",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "469975c5-e0ec-41cf-b4dc-ded0bff52b3b",
+  "name": "Windows Event Log Access Tampering via Registry",
+  "description": "This detection module identifies changes to the Windows EventLog channel permission values, specifically focusing on modifications to the Security Descriptor Definition Language (SDDL) string. Alterations to these values can restrict access to specific users or groups, potentially aiding in defense evasion by controlling who can view or modify an event log channel.",
+  "filterSets": [
+    [
+      {
+        "id": "9b83e8f2-9dbe-4551-a08b-d2189ca3d1ad",
+        "name": "Windows Event Log Access Tampering via Registry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gabriel Cardoso",
+  "team": "US-IR",
+  "date": "2025/09/09",
+  "lastUpdate": "2025-09-09T19:17:08.000Z"
+}

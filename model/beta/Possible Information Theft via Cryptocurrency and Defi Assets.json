@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "354282a4-ebf1-43f2-8897-5e7030556941",
+  "name": "Possible Information Theft via Cryptocurrency and Defi Assets",
+  "description": "Detects suspicious activities related to the Crazy Evil gang's use of StealC, AMOS, and Angel Drainer malware targeting cryptocurrency and decentralized finance (DeFi) assets",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "efad39b2-d0db-4cbe-a95a-765b5f97dee9",
+      "name": "Possible Information Theft via Cryptocurrency and Defi Assets",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1589",
+    "mitre.t1657",
+    "mitre.t1213",
+    "mitre.t1566",
+    "mitre.t1598.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Bien Joshua Philip De Leon",
+  "team": "AMEA-IR",
+  "date": "2025/02/07",
+  "lastUpdate": "2025-08-20T03:17:26.000Z"
+}

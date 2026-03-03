@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4bf8c37c-a4f3-4e52-be59-3f64ecf05736",
+  "name": "AWS CloudWatch Log Group and Stream Creation Activity",
+  "description": "A new CloudWatch log group or stream was created, which could be part of routine logging or an attempt to redirect log data for evasion.",
+  "filterSets": [
+    [
+      {
+        "id": "e93dcc55-ec11-4d8d-a454-28ae0aa320a8",
+        "name": "AWS CloudWatch Log Group Setup",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0a40996e-47ef-43f2-ab8f-d89b5bcd3cfb",
+        "name": "AWS CloudWatch Log Stream Setup",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-07-30T15:40:57.000Z"
+}

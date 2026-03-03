@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f09cf541-8126-41ef-a04d-122ff8338ff7",
+  "name": "Suspicious Use of Visual Studio Code Remote",
+  "description": "Detects potentially malicious use of Visual Studio Code Remote features which may indicate unauthorized access or activity.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "ece01b7a-f571-4870-881e-3d6e2064c759",
+      "name": "Suspicious Use of Visual Studio Code Remote",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1021"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mary Joy Ramos & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/09/18",
+  "lastUpdate": "2025-09-18T03:45:41.000Z"
+}

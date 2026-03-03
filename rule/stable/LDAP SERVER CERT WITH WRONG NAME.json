@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2d13181a-6ea7-4737-83a5-f6fe7ba8f7a2",
+  "name": "LDAP SERVER CERT WITH WRONG NAME",
+  "description": "SonicWall Detection - Allowed LDAP server certificate with wrong host name",
+  "filterSets": [
+    [
+      {
+        "id": "2f483ab1-66c0-4559-846e-f154d23cda19",
+        "name": "LDAP SERVER CERT WITH WRONG NAME",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c4968da5-470a-4d87-9fae-ef8ef85b87dc",
+  "name": "Drop Android Payload to External Storage",
+  "description": "Detects dropped or downloaded android payload.",
+  "filterSets": [
+    [
+      {
+        "id": "8aa93299-371d-4d30-bd83-da0c09059baa",
+        "name": "Drop Android Payload to External Storage",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "ams"
+    ]
+  ],
+  "author": "Chunbo Song",
+  "team": "MTRT",
+  "date": "2023/03/19",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3be288e2-a54e-4896-a3cf-683f3844bc6c",
+  "name": "ARP Failure",
+  "description": "SonicWall Detection - ARP Timeout",
+  "filterSets": [
+    [
+      {
+        "id": "8bc12986-a282-4a65-aecd-1d08e9fb24c0",
+        "name": "ARP Failure",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

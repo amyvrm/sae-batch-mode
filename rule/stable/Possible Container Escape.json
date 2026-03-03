@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "06f8caec-09da-4d67-928d-ce17e4531d2e",
+  "name": "Possible Container Escape",
+  "description": "Detects escape to host attempt.",
+  "filterSets": [
+    [
+      {
+        "id": "05debb6c-ef79-4d77-aa37-4c61219049ae",
+        "name": "Possible Break Out Attempt in Privileged Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/02/22",
+  "lastUpdate": "2024-07-19T08:11:20.000Z"
+}

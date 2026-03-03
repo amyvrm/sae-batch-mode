@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8811bb75-89a1-4c03-bf31-384658af7589",
+  "name": "Untrusted USB Process Execution Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that blocks execution of unsigned or untrusted processes launched from USB removable drives to prevent malware propagation and unauthorized code execution.",
+  "filterSets": [
+    [
+      {
+        "id": "7e7fb5e1-9d46-4cc2-90e4-bb1648ae4cc1",
+        "name": "Untrusted USB Process Execution Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-14T08:49:59.000Z"
+}

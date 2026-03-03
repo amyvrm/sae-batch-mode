@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2a30386a-b2e2-4b2b-8aee-242c804edc70",
+  "name": "Remote Code Execution Attempt on Microsoft Windows (Zdi-25-148)",
+  "description": "A remote code execution attempt, which targets the Windows LNK File, was observed on the network via HTTP.",
+  "filterSets": [
+    [
+      {
+        "id": "fcede886-e997-552b-a220-ba7afbc523fe",
+        "name": "Microsoft Windows Zero Day Vulnerability (Zdi-25-148) HTTP (Response) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d2c6edbd-1229-5556-b9bb-01acdab038d8",
+        "name": "Microsoft Windows Zero Day Vulnerability (Zdi-25-148) HTTP (Response) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Bersamira",
+  "team": "DDI",
+  "date": "2025/03/27",
+  "lastUpdate": "2025-04-04T04:48:55.000Z"
+}

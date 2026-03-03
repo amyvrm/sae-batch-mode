@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5beea18f-3732-4253-a921-c6a58aaeceb6",
+  "name": "Email Containing Malicious Attachment Observed by Microsoft",
+  "description": "Spear phishing email with attachment was detected as a malicious file by Microsoft.",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "fa1299d7-69c1-4e0b-96ed-7b7ac02325f5",
+      "name": "Spear Phishing Email Containing Malicious Attachment Observed by Microsoft",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "d7983ec7-255a-44b9-84d1-d5f8505a9852",
+      "name": "Microsoft Antivirus Matched with a File",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft",
+      "sjg",
+      "xms"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": false,
+  "silent": false,
+  "clpId": [
+    "93769505-9066-4c20-8510-e6b36af10892"
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2025/07/17",
+  "lastUpdate": "2025-07-30T01:08:22.000Z"
+}

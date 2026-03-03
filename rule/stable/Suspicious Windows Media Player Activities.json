@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7b48e98a-ae93-4726-a41b-ef4908f29c58",
+  "name": "Suspicious Windows Media Player Activities",
+  "description": "Detection of suspicious activities from Windows Media Player",
+  "filterSets": [
+    [
+      {
+        "id": "b1b85497-5d9d-40b2-a746-e222e11367ec",
+        "name": "Suspicious Process Created by Windows Media Player",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1d78526e-af2f-4ac0-ac43-3123314ffd4e",
+        "name": "Suspicious File Created By Windows Media Player",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh & Yusuf Madkour",
+  "team": "EU-IR",
+  "date": "2024/12/12",
+  "lastUpdate": "2025-02-12T09:14:22.000Z"
+}

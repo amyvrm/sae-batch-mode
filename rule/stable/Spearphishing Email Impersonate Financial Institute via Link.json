@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "74961a22-d227-4c9b-9e1b-0373be033515",
+  "name": "Spearphishing Email Impersonate Financial Institute via Link",
+  "description": "Spearphishing Email Impersonate Financial Institute via Link",
+  "filterSets": [
+    [
+      {
+        "id": "f63a1dac-b238-447a-ac9c-8f6f0116b4ec",
+        "name": "Spearphishing Email Impersonate Financial Institute Via Link",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Ashlie Lin",
+  "team": "Jaguar",
+  "date": "2020/10/16",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fccb7cc7-f0ab-4c36-ad35-2e3e4e975913",
+  "name": "Disabling System Restore",
+  "description": "Detects attempts to disable System Restore using schtasks and rundll32.",
+  "filterSets": [
+    [
+      {
+        "id": "034c49f1-3c72-45b3-8dbb-e91dea3418d0",
+        "name": "Disabling System Restore",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-27T09:17:05.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7c2ea83a-b05a-4a4e-8f5c-58f136db7cea",
+  "name": "AWS SageMaker Endpoint Configuration Created With Disable Data Capture Config",
+  "description": "AWS SageMaker endpoint configuration created with data capture disabled, potentially limiting monitoring and audit capabilities.",
+  "filterSets": [
+    [
+      {
+        "id": "5ea5bf14-7235-451a-b342-8fb16bf863d3",
+        "name": "AWS SageMaker Endpoint Configuration Created With Disable Data Capture Config",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/09/13",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "92d7df57-94ba-4e33-9550-805530d624fa",
+  "name": "DLL File Download via Curl",
+  "description": "Detects DLL file download via curl command line tool",
+  "filterSets": [
+    [
+      {
+        "id": "7e69ac80-6090-4852-8288-b161d6e84f94",
+        "name": "DLL File Download Via Curl",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2024/11/21",
+  "lastUpdate": "2025-02-13T13:11:04.000Z"
+}

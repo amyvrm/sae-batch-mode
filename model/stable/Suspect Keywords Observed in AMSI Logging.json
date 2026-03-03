@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2c9d8d36-cee3-44e8-ad19-70506b4473ff",
+  "name": "Suspect Keywords Observed in AMSI Logging",
+  "description": "Detection of suspect keywords associated with malicious powershell use observed in AMSI logs",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6f66af21-d0e5-4dbc-aaee-32d55c3893da",
+      "name": "Suspect Keywords Observed in AMSI Logging",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/11/25",
+  "lastUpdate": "2025-12-10T16:22:02.000Z"
+}

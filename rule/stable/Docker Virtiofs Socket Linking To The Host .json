@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8ebd31ba-c81d-4324-953e-9d8dfabdc706",
+  "name": "Docker Virtiofs Socket Linking To The Host",
+  "description": "Adversaries may use the information from Process Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.",
+  "filterSets": [
+    [
+      {
+        "id": "63365101-9c27-4bad-b77b-fe8b97aac2a6",
+        "name": "Docker Virtiofs Socket Linking To The Host",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/07/24",
+  "lastUpdate": "2024-08-27T08:40:11.000Z"
+}

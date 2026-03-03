@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9d1ddb6e-ced1-4ddb-a24c-e627c431f8ea",
+  "name": "Execution Of China Chopper Webshell",
+  "description": "Detected execution of China Chopper Webshell.",
+  "filterSets": [
+    [
+      {
+        "id": "b73633aa-d596-415b-91e2-fbf3ed1b6f28",
+        "name": "Identified Suspicious China Chopper Webshell Communication",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fe171f41-ca3f-4cc0-8666-8d80d5fefdaf",
+        "name": "Potential Chopper Webshell Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0ca12e2f-ca84-4811-baf7-d339c50b78d1",
+        "name": "China Chopper Webshell Traffic Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sds",
+      "stp",
+      "ptp",
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2021/03/19",
+  "lastUpdate": "2024-09-04T19:10:33.000Z"
+}

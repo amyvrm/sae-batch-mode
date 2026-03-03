@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "531dcf62-acc9-4149-bbb3-419407fd1a06",
+  "name": "Execution of Network Tool Variants for Data Exfiltration Command",
+  "description": "Detects use of various netcat variants for data exfiltration to a non-local IP",
+  "filterSets": [
+    [
+      {
+        "id": "8b928520-83d3-443f-ab2e-8cb6a1b614c6",
+        "name": "Execution of Network Tool Variants for Data Exfiltration Command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2025/04/29",
+  "lastUpdate": "2026-01-16T16:20:16.000Z"
+}

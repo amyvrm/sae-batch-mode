@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "51adae26-2ab7-11ee-be56-0242ac120002",
+  "name": "AWS S3 Successful Get Public Access Configuration",
+  "description": "Detected AWS S3 Successful Get Public Access Configuration.",
+  "filterSets": [
+    [
+      {
+        "id": "5fcf2ca5-b8b5-4c73-a6a4-80ed59179f10",
+        "name": "AWS S3 Successful Get Public Access Configuration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/10",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

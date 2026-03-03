@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "361bce76-51a1-41e5-a4d2-871f3aba79bd",
+  "name": "Scheduled Task Executed From A Suspicious Location",
+  "description": "Detects the execution of Scheduled Tasks where the Program being run is located in a suspicious location or it's an unusale program to be run from a Scheduled Task.",
+  "filterSets": [
+    [
+      {
+        "id": "48e2ce0a-7a6e-4338-940a-930a4949c632",
+        "name": "Scheduled Task Executed From A Suspicious Location",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/12",
+  "lastUpdate": "2024-03-22T15:07:20.000Z"
+}

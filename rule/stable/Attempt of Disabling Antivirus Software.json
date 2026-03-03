@@ -1,0 +1,335 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c843792e-9081-442b-b2e3-0102d86e1306",
+  "name": "Attempt of Disabling Antivirus Software",
+  "description": "Detects trials of disabling antivirus software",
+  "filterSets": [
+    [
+      {
+        "id": "c568d2b4-60c8-4ea9-9608-f5eba8d9a74c",
+        "name": "Disable Windows Defender by Command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8d64f7fc-62ce-4087-b7cf-665edf78e642",
+        "name": "Disable Antivirus Via Net Command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "639c1dcc-5f3d-47b2-aeca-f83a99848dea",
+        "name": "Disable Trend Micro Antivirus via Net Command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b7712d61-bd53-4604-9dea-2d34a3283fe7",
+        "name": "Disable Antivirus Via Taskkill",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d766bf70-8bc1-45ab-ac0c-9418f6a7b200",
+        "name": "Disabling Of MS Defender Via Powershell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5028f9a4-1bde-4a52-9c64-d6610321af55",
+        "name": "Windows Defender Disable",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "093d98cb-ae02-4e4a-a198-98f996e2db8b",
+        "name": "Disabling Windows Defender Via AMSI Provider Reg Key",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "50affe75-bff6-4ca1-8d72-3aff6d491567",
+        "name": "Recon Service Information Via Powershell",
+        "highlight": true
+      },
+      {
+        "id": "431563bc-32ca-46a8-baa6-8278b15eebca",
+        "name": "Disable AV tools via Powershell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b694356a-7a89-11ec-90d6-0242ac120003",
+        "name": "Disable Trend Micro Software Autorun via Registry",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9ba57564-0614-49a1-a036-89150030dd2a",
+        "name": "Trend Micro Product Uninstall Attempt via Reg.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "042f5187-4ba1-4c21-afc4-a3620f4e43c7",
+        "name": "Trend Micro Files Rename Attempt via Reg.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "84922e87-9069-40f9-9ee2-04cfe99e2cf0",
+        "name": "Possible Deletion of Trend Micro Services via Windows Service Controller",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "864c794b-5aad-473b-a56d-018f08ac52a1",
+        "name": "Disabling of Windows Defender via PowerShell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a50fd79f-ce54-4619-8f31-6612f97fa0c5",
+        "name": "File Detection for KillAV",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1af01c5b-7467-4e00-8a43-201b61329dcf",
+        "name": "Uninstall AntiVirus Via Msiexec",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8571c747-4722-422b-9a9b-a136a1caf9d0",
+        "name": "Disable Windows Defender via Dism",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a5e26927-e08e-4703-ba6f-ea90a3dd9f44",
+        "name": "Disabling of Windows Defender via Reg",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d8d5bca6-dab5-49e9-9064-ce0af3969df8",
+        "name": "Disable Windows Defender with PowerShell Disable-WindowsOptionalFeature",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "eba70d31-fe1e-412d-b591-9c583a245865",
+        "name": "Disable Windows Defender Realtime Monitoring Using Powershell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6e14d870-6804-4321-b2e3-8c2f2064d8b2",
+        "name": "Windows Defender Definition Files Removal",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "598b2551-0c78-4494-94be-3718ce5f784b",
+        "name": "Windows Defender Registry Tampering via Powershell",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "076ce962-3241-40da-97c3-74c8274a7b6c",
+        "name": "Disable Windows Defender From Starting After A Reboot",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ed391aa9-154d-40eb-9708-5f26d8f72369",
+        "name": "Removal of Windows Defender Definition Files",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "32c28ab2-50a8-4f52-a0a7-de3e194af25b",
+        "name": "Disabling Microsoft Defender via Powershell Encoded Command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "316a3ec8-70ad-4af4-84a7-7ce40cc20b87",
+        "name": "Disable Windows Defender Service via Reg.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b8b85c48-b59b-4cee-8045-d14db215e9f5",
+        "name": "Disabling AV Tools via Taskkill Or Net Command",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2317d502-4a7d-455e-bd77-748a116f51de",
+        "name": "Detection of Third-Party Tool Capable of Disabling Security Products",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c9b66672-a67a-4fab-96f1-2f4a8eed0f50",
+        "name": "Behavioral Detection of Third-Party Tool Capable of Disabling Security Products",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e3787f78-0c25-464f-b4aa-b5b21fda0dfe",
+        "name": "Behavioral Detection of Third-Party Tool Capable of Disabling Security Products - Variant 2",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "636b7046-7964-4f41-9f2a-92cc748d2782",
+        "name": "Disabling AV Security Product using Process Explorer Driver",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5daee576-348a-4296-94b0-057a822d0b7c",
+        "name": "Suspicious Service Installation for Disabling AV Security Product using Genshin Driver",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "48f252e2-761f-4277-946a-1ef3429b7d88",
+        "name": "Disabling AV Security Product abusing RTCore64 driver",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a6d1ebd8-fea6-4c43-ac48-d0adeac94746",
+        "name": "Disabling AV Security Product using Avast Driver",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "10d5d2eb-8d97-42a2-96fb-f14b7f5cbd5b",
+        "name": "Suspicious Service Installation for Disabling AV Security Product via Zemana Anti-Malware Driver",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "9e370ad0-f5b1-4696-b152-88a3426cbe0f",
+        "name": "Suspicious Service Installation for Disabling AV Security Product using HRSword Driver",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f2e75cf0-f7db-4eab-a07d-94b385c022e0",
+        "name": "Possible Disabling of Security Programs via Third-Party Tool",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7f2874bd-f2c1-408c-afed-8124e2c670b3",
+        "name": "Disabling Security Tools via Registry Modification",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "35c32ad3-c02d-47a2-b790-dc2bd5e7bcb5",
+        "name": "Disabling of Anti-Virus Service via ImagePath Registry Modification",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "69282566-5db7-5145-a059-17c91111f882",
+        "name": "Behavior Monitoring Detection - Impair Defenses for Safeboot",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "390eb590-9b34-502b-b9a8-9a37c7b95f7d",
+        "name": "Behavior Monitoring Detection - Malicious AV Disabling with forced gpupdate",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a5887c76-d44c-5473-a6e7-1bd88774f453",
+        "name": "Behavior Monitoring Detection - DISM Disable WinDefender",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0674a472-7d41-5375-9ebc-9ed4b4d0b87d",
+        "name": "Disable or Modify Tools",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0abb568c-60ec-5604-b450-85704f90373d",
+        "name": "File Detected as KILLAV",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e55852ac-7153-58e7-881f-6d8345ef8300",
+        "name": "Behavior Monitoring Detection - Malicious AV Termination via Powershell command",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pao"
+    ]
+  ],
+  "lastUpdate": "2026-02-02T08:54:42.000Z"
+}

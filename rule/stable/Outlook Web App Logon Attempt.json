@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f019c388-4c39-4499-b237-14ac19c189c6",
+  "name": "Outlook Web App Logon Attempt",
+  "description": "A network module observed a user attempting to access the Outlook Web App via web protocols. This activity indicates a user-initiated authentication request over the network.",
+  "filterSets": [
+    [
+      {
+        "id": "5daf0acb-f91f-4bf4-ad13-33936f4d834a",
+        "name": "Attempt to Logon to the Outlook Web App",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/12/02",
+  "lastUpdate": "2025-12-04T10:02:52.000Z"
+}

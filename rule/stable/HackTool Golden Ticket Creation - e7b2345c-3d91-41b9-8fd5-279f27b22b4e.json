@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e7b2345c-3d91-41b9-8fd5-279f27b22b4e",
+  "name": "Rubeus Golden Ticket Creation",
+  "description": "Detection of rubeus being used to generate a golden ticket",
+  "filterSets": [
+    [
+      {
+        "id": "b4cf1f01-e5fa-49cc-af5d-463d9239b48f",
+        "name": "Rubeus Golden Ticket Creation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "25de3f84-8402-4fde-a6dd-87f6f138ad22",
+        "name": "Rubeus Golden Ticket Creation - AMSI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/04/11",
+  "lastUpdate": "2025-02-12T04:24:54.000Z"
+}

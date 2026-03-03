@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "013822f2-daa4-11ef-9cd2-0242ac120002",
+  "name": "Linux Trend Micro Deep Security Service Disabled",
+  "description": "Detects a command that stops or disables the agent via command line in Linux.",
+  "filterSets": [
+    [
+      {
+        "id": "8ed05996-daa3-11ef-9cd2-0242ac120002",
+        "name": "Linux Trend Micro Deep Security Agent Service Disabled",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2025/01/24",
+  "lastUpdate": "2025-02-14T01:44:44.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "167b56cb-ad0b-42c9-8ddf-5b7c57f72946",
+  "name": "Suspicious Link in Email Sent From Malicious IP",
+  "description": "A suspicious link to a low reputation domain was detected in an email message sent from a malicious IP address.",
+  "filterSets": [
+    [
+      {
+        "id": "20bbd9f4-39a7-4bb6-9896-c55803e13836",
+        "name": "Suspicious Link in Email Sent From Malicious IP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Zachary Lee",
+  "team": "Jaguar",
+  "date": "2022/08/10",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

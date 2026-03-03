@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2c0a0549-7141-4b46-86b8-9d8291d10be1",
+  "name": "AWS EC2 Instance Creation With a New Key",
+  "description": "Detected Creation of a EC2 instance with a new key pair. This could indicate an attacker suing this instance for malicious activity.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "a20b6565-698b-4c96-b7e5-ae27d3630dfa",
+      "name": "AWS EC2 Key Pair Creation",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "c510c134-1a40-4ae4-b551-03b9b5f19fae",
+      "name": "AWS EC2 Instance Creation",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 1000,
+    "dedupSeconds": 1000
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098",
+    "mitre.t1578"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

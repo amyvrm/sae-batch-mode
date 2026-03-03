@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9c52392a-45da-4f77-8441-b303f89de86d",
+  "name": "AWS EC2 Network ACL Entry Creation",
+  "description": "Identifies when a new rule is added to an existing Network ACL, potentially modifying traffic flow permissions.",
+  "filterSets": [
+    [
+      {
+        "id": "abb30af6-92d0-4b4c-b982-f87a508e557a",
+        "name": "AWS EC2 Network ACL Entry Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

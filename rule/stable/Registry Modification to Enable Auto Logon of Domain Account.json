@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2cd0977d-1b82-4743-86bb-268db00217d2",
+  "name": "Registry Modification to Enable Auto Logon of Domain Account",
+  "description": "Modify windows registry settings to configure automatic administrator login.",
+  "filterSets": [
+    [
+      {
+        "id": "ca7c55b6-6578-4ff0-bb7a-15fa5c3004db",
+        "name": "Registry Modification to Enable Auto Logon of Domain Account",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Evelyn Valenzuela & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/07/14",
+  "lastUpdate": "2025-11-18T06:23:15.000Z"
+}

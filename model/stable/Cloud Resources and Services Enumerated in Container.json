@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9145ece5-330f-49bc-bc4e-f97bbb93741e",
+  "name": "Cloud Resources and Services Enumerated in Container",
+  "description": "Enumeration of cloud services and resources, including 'IAM roles,' 'security groups,' 'identity credentials,' and 'public IPv4 address,' was detected and initiated by a Kubernetes pod. Further investigation is needed to confirm the legitimacy or malicious intent of this activity.",
+  "riskLevel": "low",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "e1cea429-4207-4bb8-9597-ba6ccd3abd9f",
+      "name": "Cloud Resources and Services Enumerated in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1082",
+    "mitre.t1098.003",
+    "mitre.t1016",
+    "mitre.t1552.005"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 8,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/08/22",
+  "lastUpdate": "2025-05-28T16:38:32.000Z"
+}

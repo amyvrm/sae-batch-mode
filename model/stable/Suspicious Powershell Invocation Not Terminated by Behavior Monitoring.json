@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "68b89d66-1186-48d0-b340-539e058539fe",
+  "name": "Suspicious Powershell Invocation Not Terminated by Behavior Monitoring",
+  "description": "A suspicious powershell invocation was executed and not blocked by behavior monitoring. This could be indicative of a CobaltStrike beacon download attempt. As the result is pass it suggests that there is a possible product misconfigurtion.",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c5949256-1d3d-4453-8a5e-306d8e81705b",
+      "name": "Suspicious Powershell Invocation Not Terminated by Behavior Monitoring",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pao",
+      "pds",
+      "sao",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/01",
+  "lastUpdate": "2024-05-27T14:08:59.000Z"
+}

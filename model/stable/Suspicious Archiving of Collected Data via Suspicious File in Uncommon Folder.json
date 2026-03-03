@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "46adfe8f-dc59-466a-9f3c-0a8a45ff8ceb",
+  "name": "Suspicious Archiving of Collected Data via Suspicious File in Uncommon Folder",
+  "description": "Detects a suspicious file located in an uncommon folder archiving generic database files.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6d4011bd-6237-4edb-8cc6-933a426fcaa3",
+      "name": "Suspicious Archiving of Collected Data via Suspicious File in Uncommon Folder",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1560",
+    "mitre.t1560.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/08/06",
+  "lastUpdate": "2024-09-23T09:11:37.000Z"
+}

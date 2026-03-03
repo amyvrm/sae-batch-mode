@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0442e499-1ddf-447d-b081-bdb371971e21",
+  "name": "Suspicious Execution of PrintUI via CMD",
+  "description": "Proxy execution of PrintUI.exe via CMD to execute a binary which are unusual and should be investigated",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "512b46ce-e2dc-45ec-9701-d474832ec1c9",
+      "name": "Suspicious Execution of PrintUI via CMD",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/10/29",
+  "lastUpdate": "2025-01-16T03:40:35.000Z"
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8b5e9519-7f2c-4d5d-ae93-1caf22d673f9",
+  "name": "AWS S3 Bucket Data Exfiltration",
+  "description": "A possible data exfiltration from AWS S3 bucket that may result to stolen confidential data was identified.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "a255fc9e-47da-40ba-a266-c87e38dc1c84",
+      "name": "AWS S3 Bucket Listing",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "1bf68a51-c95a-4236-9c1d-57c57c2f4205",
+      "name": "AWS S3 Object Sync",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1619",
+    "mitre.t1530"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/06",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5ba59d2c-5784-11ee-8c99-0242ac120002",
+  "name": "PaperCut NG Authentication Bypass Detected From Server Logs",
+  "description": "PaperCut NG Authentication Bypass Detected From Server Logs",
+  "filterSets": [
+    [
+      {
+        "id": "293a8496-b8e4-554d-8c44-626b871cad72",
+        "name": "PaperCut NG/MF Authentication Bypass Vulnerability",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f508c937-f165-5e74-ae2c-7d52cf3f5548",
+        "name": "PaperCut NG/MF Authentication Bypass Vulnerability - 1",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ad466000-dc9f-5aac-b7ef-395bf03b2b6a",
+        "name": "PaperCut NG/MF Authentication Bypass Vulnerability - 2",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cd4160de-3dbf-5a3c-a124-99af593216ee",
+        "name": "PaperCut NG/MF Authentication Bypass Vulnerability - 3",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b6e0b4fc-d1d8-5611-9ba9-f5d2f2f8f11e",
+        "name": "PaperCut NG/MF Authentication Bypass Vulnerability - 4",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud one",
+  "date": "2021/06/10",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

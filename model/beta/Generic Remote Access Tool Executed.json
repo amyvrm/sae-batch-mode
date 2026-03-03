@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aded2ab9-c4e0-48ad-a583-d33f9b5a9547",
+  "name": "Generic Remote Access Tool Executed",
+  "description": "Generic remote acess tool executed based on Browser Extension and/or Local Application",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3d2a0fa9-2181-476d-86d2-44b67b4eea19",
+      "name": "GetScreen Remote Acess Tool Executed",
+      "score": 10
+    },
+    {
+      "id": "cee5bbe4-c989-412f-a98e-11d3650cf6aa",
+      "name": "Chrome Remote Acess Tool Executed",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1092"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Rafael Pereira",
+  "team": "US-IR",
+  "date": "2025/07/18",
+  "lastUpdate": "2025-11-14T05:42:39.000Z"
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "id": "daef2227-1311-4f4b-8e7f-a3cb1e0a6f48",
+  "name": "Possible Data Exfiltration via Integrated Products",
+  "description": "Palo Alto Networks and Trend Micro Detection for possible data exfiltration attempts.",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "e75b5f04-6e07-4e0a-bb96-a9dc49af56ae",
+      "name": "File Upload via File Transfer Tools",
+      "score": 1
+    },
+    {
+      "id": "8120ac0e-1a18-4c52-bb2f-2061fe36222d",
+      "name": "Possible Data Exfiltration identified by Palo Alto Networks",
+      "score": 5
+    },
+    {
+      "id": "f8744469-9ddb-4a74-9edd-67d5aaa059ad",
+      "name": "Suspicious WinRAR Usage from Unusual Location",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 6,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1552.001",
+    "mitre.t1048.003"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/19",
+  "lastUpdate": "2025-07-03T09:29:10.000Z"
+}

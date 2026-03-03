@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4b49115c-0205-11eb-afe1-787b8ad91447",
+  "name": "Land Payload via Apple Script",
+  "description": "Download and compiled to app via Apple script",
+  "filterSets": [
+    [
+      {
+        "id": "9935590c-014c-41eb-9dc9-787b8ad91447",
+        "name": "Download And Compile Apple Scripts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/09/29",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

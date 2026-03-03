@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "096451ef-91a5-4326-95fc-6bda00535558",
+  "name": "Suspicious Tool Detected in Container",
+  "description": "Suspicious tool download or execution.",
+  "riskLevel": "high",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "7931fb88-90de-4a5d-98d2-2c76cc9c729c",
+      "name": "Suspicious Tool in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/02/22",
+  "lastUpdate": "2024-12-02T21:55:34.000Z"
+}

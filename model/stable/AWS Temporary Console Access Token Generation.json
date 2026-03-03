@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bd813f44-da20-4e65-8223-5e70086e5243",
+  "name": "AWS Temporary Console Access Token Generation",
+  "description": "Temporary console access tokens are generated to enable short-lived access to the AWS Management Console, commonly during federated authentication. Unexpected or anomalous token generation can indicate misuse of temporary credentials or unauthorized attempts to access resources. Monitoring this behavior helps identify potential account compromise or lateral movement activities early.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "ed84106d-6ec7-4cd2-b679-f266d2517a2c",
+      "name": "AWS Temporary Console Access Token Generation",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.007",
+    "mitre.t1550.001",
+    "mitre.t1078.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-08-01T07:06:38.000Z"
+}

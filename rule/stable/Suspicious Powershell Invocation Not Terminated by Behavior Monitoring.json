@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c5949256-1d3d-4453-8a5e-306d8e81705b",
+  "name": "Suspicious Powershell Invocation Not Terminated by Behavior Monitoring",
+  "description": "A suspicious powershell invocation was executed and not blocked by behavior monitoring. This could be indicative of a CobaltStrike beacon download attempt. As the result is pass it suggests that there is a possible product misconfigurtion.",
+  "filterSets": [
+    [
+      {
+        "id": "5bc35f81-8231-4f59-9401-9fac74d3513d",
+        "name": "Suspicious Powershell Invocation Not Terminated by Behavior Monitoring",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pao",
+      "pds",
+      "sao",
+      "sds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/01",
+  "lastUpdate": "2024-05-14T09:37:13.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "39d63bdc-9b29-470e-bfdb-425bfdda13d5",
+  "name": "WebSocket SSH Tunnel Activity",
+  "description": "Suspicious network activity was observed involving HTTP traffic associated with Secure Shell (SSH) tunneling conducted via WebSocket protocol. This behavior may indicate the use of WebSocket for establishing SSH connections to bypass traditional network controls.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0c168c43-e2ce-471b-95e0-a673b780493d",
+      "name": "WebSocket SSH Tunnel Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.004",
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/12/02",
+  "lastUpdate": "2025-12-10T14:18:03.000Z"
+}

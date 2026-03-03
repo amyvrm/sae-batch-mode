@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9fdc929f-2b3f-4ae2-ab87-217560661c1f",
+  "name": "AWS S3 Get Bucket Location",
+  "description": "This rule detects bucket location retrieval",
+  "filterSets": [
+    [
+      {
+        "id": "1623ecc9-11e7-495f-970c-4ed9857bfb78",
+        "name": "AWS S3 Get Bucket Location",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/09/17",
+  "lastUpdate": "2025-09-17T02:29:38.000Z"
+}

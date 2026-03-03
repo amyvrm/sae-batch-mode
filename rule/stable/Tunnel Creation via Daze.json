@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "251ddbbf-4913-4844-b209-46a5b7cd0de3",
+  "name": "Tunnel Creation via Daze",
+  "description": "Detects possible attempt to open a tunnel for command and control via Daze",
+  "filterSets": [
+    [
+      {
+        "id": "d902f512-9881-40f7-aa0e-9ecb628883ff",
+        "name": "Possible Tunnel Creation via Daze",
+        "highlight": true
+      },
+      {
+        "id": "721214da-4ff5-4d93-8480-30ddb487bd46",
+        "name": "Possible RDP Connection via Daze Tunnel",
+        "highlight": true
+      },
+      {
+        "id": "b5977678-764b-4645-ac50-df7e1908f406",
+        "name": "Possible Exfiltration Tool DNS Query",
+        "highlight": true
+      },
+      {
+        "id": "d10d8922-b4a9-4306-b704-aa081f4d403d",
+        "name": "Possible Daze Tunnel Listener",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2025-12-16T08:26:22.000Z",
+  "author": "Bahaa Yamany & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/03/06"
+}

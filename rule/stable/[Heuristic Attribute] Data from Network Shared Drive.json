@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.1",
+  "id": "4908d086-02ac-405c-98b7-79a1165a929a",
+  "name": "[Heuristic Attribute] Data from Network Shared Drive",
+  "description": "Detects access or collection of files from network shared drives. Unauthorized access may lead to exfiltration of sensitive information.",
+  "filterSets": [
+    [
+      {
+        "id": "2eb024d6-b969-436d-b76b-8d23c4c29bbb",
+        "condition": {
+          "tags": [
+            "mitre.t1039"
+          ]
+        },
+        "exemption": {
+          "or": {
+            "tags": [
+              "bas.tmdemokit"
+            ],
+            "falsepositives": [
+              "Designed for non-heuristic detection."
+            ]
+          }
+        },
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pao",
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Mohammed Malubay",
+  "team": "TAD Service Ops",
+  "date": "2024/08/07",
+  "lastUpdate": "2025-04-25T02:25:18.000Z"
+}

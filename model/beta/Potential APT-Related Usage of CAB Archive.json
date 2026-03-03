@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c14a4eed-5488-4c5f-a352-98c6077827ab",
+  "name": "Potential APT-Related Usage of CAB Archive",
+  "description": "Detects suspicious AutoIt script execution, CAB file downloads, and scheduled task creation, typically associated with Kimsuky group activities.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f4458dae-f7b4-4459-9055-1c0a492b4d55",
+      "name": "Execution of Suspicious AutoIt Script",
+      "score": 2
+    },
+    {
+      "id": "76f296d5-bc53-4a4c-9a69-f430068cac3f",
+      "name": "CAB File Downloaded via Curl on Windows",
+      "score": 2
+    },
+    {
+      "id": "9de3b153-9725-40ec-b07f-8561c2d6185f",
+      "name": "Suspicious Execution via Task Scheduling or Unsigned Binary",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.010",
+    "mitre.t1105",
+    "mitre.t1053.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Simon Dulude",
+  "team": "Cloud One",
+  "date": "2025/10/31",
+  "lastUpdate": "2025-12-22T02:21:33.000Z"
+}

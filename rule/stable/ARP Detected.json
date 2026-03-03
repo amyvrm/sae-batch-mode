@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "59b5d8aa-7a27-497b-8094-f6fc0ffd63ed",
+  "name": "ARP Detected",
+  "description": "SonicWall Detection - Too Many Gratuitous ARPs Detected",
+  "filterSets": [
+    [
+      {
+        "id": "0cd87f8d-6cb0-4b12-839f-4943bf73e6f4",
+        "name": "ARP Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

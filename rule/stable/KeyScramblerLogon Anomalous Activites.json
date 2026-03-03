@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cd3288ea-d17c-4737-ba43-06a2a6856067",
+  "name": "KeyScramblerLogon Anomalous Activites",
+  "description": "Detection of KeyScramblerLogon anomalous activites, that may relate to DarkGate",
+  "filterSets": [
+    [
+      {
+        "id": "21e20cff-99e5-435d-9106-cbde1266171f",
+        "name": "KeyScramblerLogon Invocation from Powershell",
+        "highlight": true
+      },
+      {
+        "id": "868e10e4-5855-4d89-95e7-8efddcf9ac67",
+        "name": "KeyScramblerLogon Anomalous File Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/04/02",
+  "lastUpdate": "2024-04-11T10:08:54.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a34560a8-8bf5-4044-902f-c34be86101f8",
+  "name": "AWS RDS DB Snapshot Shared Publicly Or To External Account",
+  "description": "AWS RDS DB snapshot shared to external account or made public which might indicate attacker trying to exfiltrate data resulting in data exposure, compliance violations , and reputation damage.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS RDS DB Snapshot Shared Publicly Or To External Account",
+        "id": "21cc61e5-385b-433c-84e4-fd14f2af0c52",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/01/11",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "800561c2-e0e0-4c92-ac64-dffa539a98d7",
+  "name": "AWS SageMaker Unauthorized Code Repository Creation Detected",
+  "description": "Monitors for unauthorized code repository creation in Amazon SageMaker, a key activity that could indicate an attacker attempting to establish or modify a development environment for malicious purposes. This could be used to deploy unauthorized code, exfiltrate data, or compromise machine learning environments.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "15957a01-7885-466a-8099-d93141c7c5bf",
+      "name": "AWS SageMaker Unauthorized Code Repository Creation Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.009",
+    "atlas.aml.t0018.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/28",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

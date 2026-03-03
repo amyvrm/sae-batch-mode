@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6b5ceff1-6085-49de-9113-86a3dc50592a",
+  "name": "Land Attack",
+  "description": "SonicWall Detection - Land attack dropped",
+  "filterSets": [
+    [
+      {
+        "id": "999fc204-483d-4577-a3dd-12dd896086cc",
+        "name": "Land Attack",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

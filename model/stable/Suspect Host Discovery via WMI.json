@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "82b0df9e-3f79-4a75-b031-e0ed1f149b91",
+  "name": "Suspect Host Discovery via WMI",
+  "description": "Suspect host enumeration via WMI",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0000b1df-1098-4df7-956f-4106aa2242e9",
+      "name": "Suspect Host Discovery via WMI",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1047",
+    "mitre.t1059.001",
+    "mitre.t1082"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/04/02",
+  "lastUpdate": "2024-04-11T11:36:08.000Z"
+}

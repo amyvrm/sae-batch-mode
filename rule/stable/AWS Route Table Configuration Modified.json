@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "933eca85-67ca-4c60-a621-0b4a05d5641f",
+  "name": "AWS Route Table Configuration Modified",
+  "description": "Changes to route table configurations were observed in the environment. Such modifications can alter network traffic paths and access, potentially impacting security or connectivity. These changes may be part of routine network maintenance but can also indicate malicious intent, such as redirecting traffic to attacker-controlled infrastructure.",
+  "filterSets": [
+    [
+      {
+        "id": "9ed2588b-913f-49f7-bec7-94b6ae632bf8",
+        "name": "AWS Route Replaced in Route Table",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f000afa8-c3f3-420b-be60-356ffedaf4bd",
+        "name": "AWS Route Table Associated With Resource",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6f416088-cae5-4003-b0ed-5ec3fd045401",
+        "name": "AWS Route Table Disassociation Observed",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0a788b30-b87b-40d6-a3b2-40d55213873a",
+        "name": "AWS Route Table Association Replaced",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-14T05:47:04.000Z"
+}

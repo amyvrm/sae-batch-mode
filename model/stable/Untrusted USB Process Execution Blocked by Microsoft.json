@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "475da1e5-559a-4b50-91a0-5f54a8f9e7e4",
+  "name": "Untrusted USB Process Execution Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that blocks execution of unsigned or untrusted processes launched from USB removable drives to prevent malware propagation and unauthorized code execution.",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "8811bb75-89a1-4c03-bf31-384658af7589",
+      "name": "Untrusted USB Process Execution Blocked by Microsoft",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1091",
+    "mitre.t1204"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-11-11T15:20:53.000Z"
+}

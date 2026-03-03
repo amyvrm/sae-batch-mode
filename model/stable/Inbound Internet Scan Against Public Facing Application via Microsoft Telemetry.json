@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7f11fd3a-2a28-43e3-9066-a770e8384d5a",
+  "name": "Inbound Internet Scan Against Public Facing Application via Microsoft Telemetry",
+  "description": "Microsoft network detection for inbound internet scanning activities targeting public facing applications as identified by Microsoft Defender for Endpoint telemetry. This rule identifies potential reconnaissance attempts where external actors are probing network services and applications for vulnerabilities or exposed attack surfaces.",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "08d3fc57-d73b-46a1-b418-3e4414b362df",
+      "name": "Inbound Internet Scan Against Public Facing Application via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1595",
+    "mitre.t1046"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/19",
+  "lastUpdate": "2025-10-07T02:23:03.000Z"
+}

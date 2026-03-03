@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ee842900-614e-4c70-aa67-a53a122b2fc0",
+  "name": "Possible AnyDesk Installation to ProgramData Through PowerShell",
+  "description": "Detects connection to AnyDesk download URL and dropping of executable in ProgramData root through PowerShell.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6c0525d3-b4b0-4933-a771-5e03d7347880",
+      "name": "Possible AnyDesk Installation to ProgramData Through PowerShell",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/06/11",
+  "lastUpdate": "2025-07-14T01:53:47.000Z"
+}

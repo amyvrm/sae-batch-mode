@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aac00589-bf0e-4dfd-acff-f70d1f761b3f",
+  "name": "Suspicious Installation of Driver-Based Browser Hijacker",
+  "description": "RedDriver malware utilizes HookSignTool to forge its signature timestamp to bypass Windows driver-signing policies and uses Windows Filtering Platform(WFP) to intercept browser traffic.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "12356ec0-2697-4039-8b4e-e5f00a1a9dda",
+      "name": "Suspicious Installation of Driver-Based Browser Hijacker",
+      "score": 10
+    },
+    {
+      "id": "ebdae1cb-3da0-4381-955b-942751535513",
+      "name": "Suspicious Dropping of Driver-Based Browser Hijacker",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 20,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001",
+    "mitre.t1547.006",
+    "mitre.t1543.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2024/11/14",
+  "lastUpdate": "2025-11-14T07:48:30.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "48bc1b8c-0e6a-4af7-afec-43530199be77",
+  "name": "Possible Suspicious Tunneling via HTTPS",
+  "description": "A suspicious tunneling was used by a certain tool via HTTPS",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "a5648f1f-56fb-4e6c-bee4-445a1dd0b810",
+      "name": "Possible Suspicious Tunneling via HTTPS",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 900,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "tags": [
+    "mitre.t1090.002",
+    "threat.ransom"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "silent": true,
+  "globalModel": true,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/11/21",
+  "lastUpdate": "2024-12-11T11:05:35.000Z"
+}

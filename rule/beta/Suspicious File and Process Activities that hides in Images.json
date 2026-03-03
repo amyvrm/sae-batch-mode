@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2ea045e9-c109-43b8-a7ad-556783cd4721",
+  "name": "Suspicious File and Process Activities that hides in Images",
+  "description": "Detects suspicious file and process activities that are indicative of the Koske Linux malware, including modifications to startup scripts, downloading and executing malicious code, and the presence of specific file names and directories.",
+  "filterSets": [
+    [
+      {
+        "id": "2434ca32-0436-46f8-86db-2b519b9b6748",
+        "name": "Suspicious File and Process Activities that Hides in Images",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Mary Joy Ramos & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/08/12",
+  "lastUpdate": "2025-08-19T09:25:21.000Z"
+}

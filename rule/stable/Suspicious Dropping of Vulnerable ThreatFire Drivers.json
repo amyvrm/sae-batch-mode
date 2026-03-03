@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1e49313f-a1df-454b-bc48-7ca9d74c1c39",
+  "name": "Suspicious Dropping of Vulnerable ThreatFire Drivers",
+  "description": "Detects suspicious dropping of ThreatFire drivers which is capable of terminating security agent processes and services.",
+  "filterSets": [
+    [
+      {
+        "id": "0c93ef3a-11cf-48a1-bf0f-b577c227c4da",
+        "name": "Suspicious Dropping of Vulnerable ThreatFire Drivers",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/07",
+  "lastUpdate": "2025-03-20T10:43:56.000Z"
+}

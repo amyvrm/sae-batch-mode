@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6142ad82-9570-11ed-a1eb-0242ac120002",
+  "name": "AWS S3 Suspicious Public Access Block Removal",
+  "description": "Detects S3 Suspicious Public Access Block Removal",
+  "filterSets": [
+    [
+      {
+        "id": "cce75fb2-ec91-4201-a025-a94a6554c71a",
+        "name": "AWS S3 Suspicious Public Access Block Removal",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/01/16",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

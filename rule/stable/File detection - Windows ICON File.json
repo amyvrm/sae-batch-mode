@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fe863d53-8c83-402d-bf4a-89c7a4c7e85d",
+  "name": "File detection - Windows ICON File",
+  "description": "Palo Alto File detection - Windows ICON File",
+  "filterSets": [
+    [
+      {
+        "id": "203b8414-a7e5-4b61-a518-4f50a72b4cf8",
+        "name": "File detection - Windows ICON File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

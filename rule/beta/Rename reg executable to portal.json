@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7707132c-0be2-4261-b124-256ba6c07478",
+  "name": "Rename Reg Executable to Portal",
+  "description": "Adversaries may rename executables to portal via REG command. This tactic might be used to evade detection or mislead analysis by security personnel.",
+  "filterSets": [
+    [
+      {
+        "id": "9ca30293-45da-4d87-bd22-f1c69f7d1f73",
+        "name": "Rename Reg Executable to Portal",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/08/20",
+  "lastUpdate": "2025-08-20T17:15:16.000Z"
+}

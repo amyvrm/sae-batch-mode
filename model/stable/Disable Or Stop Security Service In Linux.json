@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "51c7be32-7b42-4299-b787-f99b4bca3092",
+  "name": "Disable Or Stop Security Service In Linux",
+  "description": "Adversaries may create or modify systemd services to repeatedly execute malicious payloads as part of persistence.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1d490578-f503-4b81-a0fe-2cfe186fe542",
+      "name": "Disabling Of SELinux Enforcement",
+      "score": 1
+    },
+    {
+      "id": "fc9c2fe8-9714-4be8-af2a-d4bb62a27a81",
+      "name": "Disabling Linux System Firewall",
+      "score": 1
+    },
+    {
+      "id": "6abbc483-db54-4360-9535-745dd3b02dae",
+      "name": "Identified Attempts To Stop Or Disable Linux Service",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1543.002",
+    "mitre.t1489",
+    "mitre.t1562.001",
+    "mitre.t1562.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/03/06",
+  "lastUpdate": "2024-08-27T10:04:26.000Z"
+}

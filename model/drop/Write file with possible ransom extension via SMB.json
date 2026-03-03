@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ba49acac-6ea9-4dda-bc98-94bf7e7da0b1",
+  "name": "Write File with Possible Ransom Extension via SMB",
+  "description": "Detect Ransomware Write File with Possible Ransom Extension via SMB",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "9330592b-7abe-4227-8e86-f9deaa023a69",
+      "name": "Write File with Possible Ransom Extension via SMB",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1486",
+    "mitre.t1210"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "ChunHsing Su",
+  "team": "LWE",
+  "date": "2023/01/19",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

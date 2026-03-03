@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a25094f4-6531-4a5b-bf62-22c88d80ee3b",
+  "name": "AWS IAM Successful List Attached Group Policies",
+  "description": "Detected AWS IAM Attached Group Policies Successful Discovery.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS IAM Successful List Attached Group Policies",
+        "id": "781e6116-2d48-11ee-be56-0242ac120002",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T11:20:55.000Z"
+}

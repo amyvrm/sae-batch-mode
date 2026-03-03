@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "41108d29-d9b5-4cbc-a923-14088a4a3f88",
+  "name": "Generic Trojan Detection",
+  "description": "A generic Trojan malware was detected in the system",
+  "filterSets": [
+    [
+      {
+        "id": "6fd3df81-d03f-4e51-b08b-e23a50327152",
+        "name": "Generic Malware Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-03-30T04:57:51.000Z"
+}

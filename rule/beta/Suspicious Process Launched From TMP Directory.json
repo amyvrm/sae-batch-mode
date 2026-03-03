@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dba27a34-d1f6-11ef-9cd2-0242ac120002",
+  "name": "Suspicious Process Launched From TMP Directory",
+  "description": "Detects a process launched from the /tmp directory in linux.",
+  "filterSets": [
+    [
+      {
+        "id": "2b2f89be-7f82-476a-a444-5d2c5ebb24d5",
+        "name": "Unknown Process Launched From TMP Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2025/01/13",
+  "lastUpdate": "2025-01-21T01:50:42.000Z"
+}

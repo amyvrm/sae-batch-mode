@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "419c9083-0a41-4005-b7cb-6a63605716dd",
+  "name": "Suspicious Execution on Public Folder via SQL Process",
+  "description": "Detects file execution on Users\\\\Public folder via sqlservr.exe.",
+  "filterSets": [
+    [
+      {
+        "id": "27537127-0c39-4ac1-b351-296224822251",
+        "name": "Suspicious Execution on Public Folder via SQL Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/04/24",
+  "lastUpdate": "2025-12-01T10:06:44.000Z"
+}

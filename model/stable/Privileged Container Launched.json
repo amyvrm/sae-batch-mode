@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2dafd2f4-b1c0-4ed1-901a-e6a59dccfba8",
+  "name": "Privileged Container Launched",
+  "description": "New privileged container launched.",
+  "riskLevel": "high",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "e7f86e2d-bebd-4f53-9e23-8aa5b2488abe",
+      "name": "Privileged Container Launched",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1610"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/07/19",
+  "lastUpdate": "2025-06-17T12:21:23.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "526b471a-564c-4acf-ab92-b7785f92467f",
+  "name": "Suspect Service Execution Spawning PowerShell",
+  "description": "Detection of encoded powershell being spawned by services, which is indicative of a possible SMB cobaltstrike beacon",
+  "filterSets": [
+    [
+      {
+        "id": "a69ae23f-8e2a-4e1d-ad43-1f14e717ba68",
+        "name": "Suspect Service Execution Spawning PowerShell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/07/15",
+  "lastUpdate": "2025-08-29T05:27:28.000Z"
+}

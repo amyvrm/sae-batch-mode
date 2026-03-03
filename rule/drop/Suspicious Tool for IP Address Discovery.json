@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6dbc22c2-37fe-4fda-a424-f90d2806d9f7",
+  "name": "Suspicious Tool for IP Address Discovery",
+  "description": "Detects tools being used for scanning opened ports and reachable IP addresses.",
+  "filterSets": [
+    [
+      {
+        "id": "eacafef2-d1c8-4771-8a52-12ef77ced933",
+        "name": "Suspicious Tool for IP Address Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros & Shaun Eris Galura",
+  "team": "AMEA-IR",
+  "date": "2024/10/30",
+  "lastUpdate": "2025-09-08T07:17:48.000Z"
+}

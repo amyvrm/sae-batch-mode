@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9ab4c8af-6d06-4e8c-9696-4dd2b65fe8f0",
+  "name": "Suspicious Scheduled Task Created",
+  "description": "Detection of a suspect task creation occurring which may be indicative of an oysterloader infection",
+  "filterSets": [
+    [
+      {
+        "id": "f96a88c7-8b3c-4481-8ac7-9ee499b26938",
+        "name": "Suspicious Scheduled Task Created",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/07/03",
+  "lastUpdate": "2025-07-15T15:16:55.000Z"
+}

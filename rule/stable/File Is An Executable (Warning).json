@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "70b91f11-8e4c-41d3-94b0-b9410d18b028",
+  "name": "File Is An Executable (Warning)",
+  "description": "Fortinet detection - File is an executable (warning)",
+  "filterSets": [
+    [
+      {
+        "id": "444050b9-1b4f-41a2-9839-30675fb2c890",
+        "name": "File Is An Executable (Warning)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

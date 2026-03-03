@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f3a1906c-bf9e-487d-8b18-0f9bb58ee929",
+  "name": "Suspect Service Creation Using COMSPEC Variable",
+  "description": "Detection of a suspect service creation observed in log inspection events",
+  "filterSets": [
+    [
+      {
+        "id": "2f169c9c-ba97-4969-bcb6-a3a2c36a33ed",
+        "name": "Suspect Service Creation Using COMSPEC Variable",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/07/17",
+  "lastUpdate": "2024-07-26T09:38:23.000Z"
+}

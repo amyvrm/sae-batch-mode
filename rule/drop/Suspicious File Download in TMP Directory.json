@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3719812c-a390-11ef-b864-0242ac120002",
+  "name": "Suspicious File Download in TMP Directory",
+  "description": "Detects the use of curl or wget to download files into the /tmp directory in linux.",
+  "filterSets": [
+    [
+      {
+        "id": "370e5456-a376-11ef-b864-0242ac120002",
+        "name": "File Download in TMP Directory via Curl",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "945ea926-a38f-11ef-b864-0242ac120002",
+        "name": "File Download in TMP Directory via Wget",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/11/15",
+  "lastUpdate": "2025-05-13T15:44:28.000Z"
+}

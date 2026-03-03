@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3a6d38d8-4c6f-4af7-9532-38bde66e8686",
+  "name": "SAP NetWeaver Anomalous Activity - Linux",
+  "description": "Detection of anomalous activity from SAP NetWeaver",
+  "filterSets": [
+    [
+      {
+        "id": "f81f33d2-9ad6-4282-948f-0cd80c2f0382",
+        "name": "SAP NetWeaver Anomalous Activity - Linux",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f1dfeb75-d428-484b-aecd-4821d4719280",
+        "name": "Possible SAP NetWeaver Web Shell Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/04/29",
+  "lastUpdate": "2025-04-30T11:11:38.000Z"
+}

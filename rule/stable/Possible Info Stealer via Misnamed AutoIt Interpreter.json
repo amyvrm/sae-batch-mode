@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e146309d-4188-47a7-b904-3b1a798add1a",
+  "name": "Possible Info Stealer via Misnamed AutoIt Interpreter",
+  "description": "Detects AutoIt interpreter ending with '.com' or '.pif' or running from suspicious paths associated with Lumma Stealer. These stealers exfiltrate browser credentials and cryptocurrency wallet information, posing significant security risks.",
+  "filterSets": [
+    [
+      {
+        "id": "47d4f29c-8346-45d7-a8ce-b69b72475add",
+        "name": "Possible Info Stealer via Misnamed AutoIt Interpreter",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/02/11",
+  "lastUpdate": "2025-04-10T14:42:03.000Z"
+}

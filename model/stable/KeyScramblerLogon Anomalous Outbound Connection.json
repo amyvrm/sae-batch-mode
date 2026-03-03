@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "35a5e34f-98be-4967-8f48-4c408b8bfec2",
+  "name": "KeyScramblerLogon Anomalous Outbound Connection",
+  "description": "Detection of KeyScramblerLogon anomalous activites, that may relate to DarkGate",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "44d0bce7-d8f0-4a0b-8146-633b06219d65",
+      "name": "KeyScramblerLogon Anomalous Outbound Connection",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055",
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/04/02",
+  "lastUpdate": "2024-04-17T06:17:49.000Z"
+}

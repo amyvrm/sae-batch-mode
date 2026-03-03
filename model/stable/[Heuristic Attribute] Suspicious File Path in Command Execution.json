@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "id": "adecec4c-14dc-4f4b-a410-e0a3f4716f53",
+  "name": "[Heuristic Attribute] Suspicious File Path in Command Execution",
+  "description": "Detects commands containing the file path of suspicious files",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1a90a23e-5b42-4a95-8f1f-2bf842ea80b2",
+      "name": "[Heuristic Attribute] Suspicious File Telemetry",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "e8fe4ad0-17a9-4ce8-be49-4e0be8daccf3",
+      "name": "[Heuristic Attribute] Windows Command Line and PowerShell Execution",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "condition": [
+    [
+      "e8fe4ad0-17a9-4ce8-be49-4e0be8daccf3.objectCmd contains 1a90a23e-5b42-4a95-8f1f-2bf842ea80b2.objectFilePath"
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "sao",
+      "sca",
+      "sds",
+      "xes",
+      "pds",
+      "pao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059",
+    "mitre.t1204"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Inno Endriga",
+  "team": "TAD Service Ops",
+  "date": "2023/02/07",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

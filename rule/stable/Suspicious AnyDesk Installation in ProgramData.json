@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "533c998a-0c86-487e-a887-5f6360387645",
+  "name": "Suspicious AnyDesk Installation in ProgramData",
+  "description": "Detects AnyDesk executable dropped in the root folder of ProgramData.",
+  "filterSets": [
+    [
+      {
+        "id": "dc5139ed-7265-40e6-8055-6c0d251085bd",
+        "name": "Non-default Installation Directory of AnyDesk",
+        "highlight": true
+      },
+      {
+        "id": "2cd2b636-eaed-4899-9a34-b46c8735894b",
+        "name": "Suspicious Executable Dropped in ProgramData Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "condition": [
+    [
+      "dc5139ed-7265-40e6-8055-6c0d251085bd.objectFilePath equals 2cd2b636-eaed-4899-9a34-b46c8735894b.objectFilePath"
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/06/09",
+  "lastUpdate": "2025-06-17T10:53:41.000Z"
+}

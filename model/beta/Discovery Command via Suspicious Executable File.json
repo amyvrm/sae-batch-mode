@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6bb447d9-3300-4fa6-8dd7-076c21273bf0",
+  "name": "Discovery Command via Suspicious Executable File",
+  "description": "Identifies the discovery command through a suspicious executable file dropped by the Sql Server Service.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "9b29cf9f-2217-4d6e-a3fc-3a439daffed0",
+      "name": "Discovery Command via Suspicious Executable File",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1518",
+    "mitre.t1033"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/05/19",
+  "lastUpdate": "2025-08-12T08:01:42.000Z"
+}

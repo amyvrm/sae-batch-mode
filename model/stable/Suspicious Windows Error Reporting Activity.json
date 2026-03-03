@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "20ab6313-7e77-42ff-97c2-997b7b17608e",
+  "name": "Suspicious Windows Error Reporting Activity",
+  "description": "Network access to Windows DLL files or Windows Error Reporting listening for connections. Can indicate local privilege escalation attempt.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "a4525a07-71c4-4c5b-8ca8-dbd72316aa9b",
+      "name": "Remote Access to Windows DLL Files",
+      "score": 1
+    },
+    {
+      "id": "f40c48f7-02a0-431f-ba84-632069cf5ab0",
+      "name": "Windows Error Reporting Listening for Connections",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp",
+      "sao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1569"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/03/09",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

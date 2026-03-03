@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "887c3bc2-d7c7-487e-a0f4-1cfb33ab7e4b",
+  "name": "System Binary Network Activity in Container",
+  "description": "Identifies network activity originating from system binary within container environment. This atypical behavior may indicate unauthorized data exfiltration or other malicious activity.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "09f2e120-6c0a-4536-af44-c6c86075dffb",
+      "name": "System Binary Network Activity in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1020"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/07/23",
+  "lastUpdate": "2026-01-20T09:00:45.000Z"
+}

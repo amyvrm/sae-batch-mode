@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "617b27da-9beb-47a2-a2d6-f5a8cf29a8e6",
+  "name": "Suspicious Behavior via Perception Simulation Binary",
+  "description": "Detects a suspicious execution of the Perception Simulation Service in an attempt to circumvent security measures.",
+  "filterSets": [
+    [
+      {
+        "id": "c333d921-405a-4e75-847a-6978a6ea8c5e",
+        "name": "Suspicious Perception Simulation Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "49b815f9-3d32-43a0-8510-5efee43b7d6d",
+        "name": "Suspicious Process Created by Perception Simulation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva & Jack Walsh",
+  "team": "US-IR",
+  "date": "2025/03/19",
+  "lastUpdate": "2025-05-26T06:38:53.000Z"
+}

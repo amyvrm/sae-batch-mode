@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "15e2fc4f-1a00-4290-a32e-d3312c0f22ac",
+  "name": "TEST - Python clean start via Commandline",
+  "description": "Detects the creation python process creation with -Es parameter.",
+  "filterSets": [
+    [
+      {
+        "id": "56fb756d-ed9d-4c81-bb15-082a58f794b1",
+        "name": "TEST - Python clean start via Commandline",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/03/18",
+  "lastUpdate": "2025-05-07T06:22:43.000Z"
+}

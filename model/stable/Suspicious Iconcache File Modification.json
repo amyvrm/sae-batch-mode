@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "91a8e30e-90c7-4fe8-8616-15d5978490d2",
+  "name": "Suspicious Iconcache File Modification",
+  "description": "Adversaries may attempt to steal NTLM hashes by crafting a malicious icon which forces the iconcache file to update. This activity is commonly associated with initial access phase.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1763349c-fc7e-450e-847e-965f404b0930",
+      "name": "Suspicious iconcache File Modification",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 30,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1003",
+    "cve.2025.21377",
+    "cve.2025.24071"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "silent": false,
+  "globalModel": true,
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/02/05",
+  "lastUpdate": "2025-05-27T05:57:34.000Z"
+}

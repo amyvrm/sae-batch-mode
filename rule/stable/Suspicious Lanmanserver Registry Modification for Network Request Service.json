@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d9aa905a-885f-4bf6-8bf3-583bc4549951",
+  "name": "Suspicious Lanmanserver Registry Modification for Network Request Service",
+  "description": "Detects suspicious behavior to edit registry value of MaxMpxCt to increase the maximum number of network requests that the Server Service can handle that could allow malware to access enough files during an encryption process without fail.",
+  "filterSets": [
+    [
+      {
+        "id": "f5dead3a-5bca-42e1-8209-106f5b7d3dc7",
+        "name": "Suspicious Lanmanserver Registry Modification for Network Request Service",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2b926974-3fb2-4701-89ae-8701fa79c0a3",
+        "name": "Modify Maximum LanmanServer Connections Registry",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/02/16",
+  "lastUpdate": "2024-06-27T08:05:02.000Z"
+}

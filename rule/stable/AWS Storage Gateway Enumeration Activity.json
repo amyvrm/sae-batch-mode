@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d5988f4c-ab67-4092-97ee-f675975b6cf0",
+  "name": "AWS Storage Gateway Enumeration Activity",
+  "description": "A request to list Storage Gateways was observed, which could indicate routine administration or potential reconnaissance.",
+  "filterSets": [
+    [
+      {
+        "id": "47b000fd-e675-4e2c-8d03-7e6d60c529c9",
+        "name": "AWS Storage Gateway Enumeration Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 10800,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-07-30T15:40:57.000Z"
+}

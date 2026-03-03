@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8132ffb4-395e-4b72-a3e5-d7d1a24fff7f",
+  "name": "Suspicious MSI Installation via Service",
+  "description": "Detects Windows service creation/modification leveraging MSI files executed from suspicious directories (e.g., C:\\Users\\Public\\), a tactic used by APT groups for privilege escalation and defense evasion",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "eaad3174-7f9b-4512-8d3b-64cf20552603",
+      "name": "Service Creation or Modification for MSI Execution",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "8fec6227-9bd2-4df5-83f7-92e055d3e538",
+      "name": "MSI Execution from Suspicious Directory",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218.007",
+    "mitre.t1569.002",
+    "mitre.t1218"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/03/17",
+  "lastUpdate": "2025-09-05T09:33:30.000Z"
+}

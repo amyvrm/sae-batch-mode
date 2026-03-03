@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7df1b724-4056-4979-8d04-8fbdcc6193af",
+  "name": "Possible Execution Of Fake Windows Login",
+  "description": "Possible Execution of Social Engineering tool used to harvest credentials",
+  "filterSets": [
+    [
+      {
+        "id": "feec4a3d-c7f4-4308-a2b2-71819dd8e2cd",
+        "name": "Possible Execution Of Fake Windows Login",
+        "highlight": true
+      },
+      {
+        "id": "b439f08c-619b-4186-be3a-0ecc2ca11350",
+        "name": "Possible Creation Of Text File From Fake Windows Login",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/12/09",
+  "lastUpdate": "2025-03-11T04:03:01.000Z"
+}

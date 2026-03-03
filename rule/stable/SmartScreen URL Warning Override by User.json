@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dde3b0d6-712c-4551-a620-a9f709a3f0ce",
+  "name": "SmartScreen URL Warning Override by User",
+  "description": "Detects when users bypass Microsoft SmartScreen URL warnings by clicking \"Run anyway\" or similar override options. This identifies potential exposure to malicious websites or downloads that SmartScreen flagged as potentially unsafe, indicating risky user behavior or possible malware delivery attempts.",
+  "filterSets": [
+    [
+      {
+        "id": "1014b250-496e-4e39-90dc-500a709bdd55",
+        "name": "SmartScreen URL Warning Override by User",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/05",
+  "lastUpdate": "2025-09-11T07:27:07.000Z"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b8d20c75-6469-45e5-822c-df43bfb3e0a5",
+  "name": "Possible Connection to Rouge RDP Server",
+  "description": "Identifies the download of an RDP file as an attachment, followed by an outbound RDP connection, which could indicate a rogue RDP session.",
+  "filterSets": [
+    [
+      {
+        "id": "22fd2181-f825-4e97-98d2-bd2a70df5e77",
+        "name": "Possible Spearphishing Attachment - RDP File",
+        "highlight": true
+      },
+      {
+        "id": "596f38cd-7dd7-448f-a3f3-733f48dbb67f",
+        "name": "Outbound RDP Connection via Outlook ",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2024-11-20T07:39:03.000Z",
+  "author": "Mahmoud Soheem & Bahaa Yamany & Ahmed Hussein",
+  "team": "MENA-IR",
+  "date": "2024/11/11"
+}

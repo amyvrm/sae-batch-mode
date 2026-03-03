@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3ab1ee5a-0918-11ee-be56-0242ac120002",
+  "name": "AWS Lambda Get Function Details",
+  "description": "Detected AWS Lambda Get Function Details",
+  "filterSets": [
+    [
+      {
+        "id": "141a8a22-8148-4be2-b1f5-747689b06e3a",
+        "name": "AWS Lambda Get Function Details",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/06/12",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8471816d-1b12-4c6f-82f4-a5a4e6062b68",
+  "name": "Possible Comodo KillSwitch Installation",
+  "description": "Detects installation of Comodo KillSwitch which is capable of terminating security agent processes and services",
+  "filterSets": [
+    [
+      {
+        "id": "a079c800-a217-4ecf-a0e2-3ed047af4cbf",
+        "name": "Possible Comodo KillSwitch Installation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Matthew Calata & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/01/03",
+  "lastUpdate": "2024-02-12T03:34:52.000Z"
+}

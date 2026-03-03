@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "15957a01-7885-466a-8099-d93141c7c5bf",
+  "name": "AWS SageMaker Unauthorized Code Repository Creation Detected",
+  "description": "Detects unauthorized attempts to create a code repository in AWS SageMaker, which may indicate malicious activity or unauthorized access.",
+  "filterSets": [
+    [
+      {
+        "id": "cb452b44-983c-462d-9c0c-d40dc2a96399",
+        "name": "AWS SageMaker Unauthorized Code Repository Creation Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/28",
+  "lastUpdate": "2025-01-21T13:11:52.000Z"
+}

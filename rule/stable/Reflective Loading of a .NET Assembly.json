@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2ad89b8a-cdd1-46d5-92ab-0b700a18ccc6",
+  "name": "Reflective Loading of a .NET Assembly",
+  "description": "Detection of a .NET assembly being loaded reflectively",
+  "filterSets": [
+    [
+      {
+        "id": "1a49a45a-de7f-4ed0-828b-a744922141ad",
+        "name": "Reflective Loading of a .NET Assembly",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1666f932-5f93-46aa-bffc-e7130d68de8f",
+        "name": "Reflective Loading of a .NET Assembly - AMSI",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c3b3350d-9628-416a-91b7-0edefe7da7ed",
+        "name": "Reflective Loading of a .NET Assembly - Outbound Communicaton",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/10",
+  "lastUpdate": "2024-06-13T15:14:15.000Z"
+}

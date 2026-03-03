@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c790ad16-175d-4f0a-8e7e-b258b90d05ec",
+  "name": "Network Activity From kernel Driver",
+  "description": "Kernel Driver communicat with Public IP",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "551f8d12-e074-4626-ac1c-368186412c35",
+      "name": "Network Activity From kernel Driver",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1219"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "author": "Mahmoud Zohdy",
+  "team": "MENA-IR",
+  "date": "2024/01/09",
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "lastUpdate": "2025-10-30T06:54:31.000Z"
+}

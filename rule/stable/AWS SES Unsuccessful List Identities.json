@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8c24d6a2-4e06-4b97-b024-da43db54d9f8",
+  "name": "AWS SES Unsuccessful List Identities",
+  "description": "An unsuccessful attempt to list all the identities of an account was observed.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS SES Unsuccessful List Identities",
+        "id": "43899db7-cbbc-4213-b4ae-aa176715b5d9",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

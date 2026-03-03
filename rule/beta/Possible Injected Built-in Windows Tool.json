@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5438e116-128a-463d-a2e5-834456550eb8",
+  "name": "Possible Injected Built-in Windows Tool",
+  "description": "Detects execution of a possibly injected built-in Windows tool by an executable in programdata folder. Adversaries may inject malicious shellcode into known windows tools for defense evasion purposes.",
+  "filterSets": [
+    [
+      {
+        "id": "1d50e32e-dc32-4e9e-8316-781a6a38a0db",
+        "name": "Possible Injected Built-in Windows Tool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Mohammed Malubay",
+  "team": "TAD Service Ops",
+  "date": "2024/11/19",
+  "lastUpdate": "2024-12-03T10:47:44.000Z"
+}

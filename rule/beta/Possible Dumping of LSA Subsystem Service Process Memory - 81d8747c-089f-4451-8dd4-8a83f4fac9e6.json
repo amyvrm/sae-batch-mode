@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "81d8747c-089f-4451-8dd4-8a83f4fac9e6",
+  "name": "Possible Dumping of LSASS Process Memory",
+  "description": "Possible dumping of Lsass Process Memory using signed legitimate processes and low prevalance processes, etc",
+  "filterSets": [
+    [
+      {
+        "id": "320694dd-9b93-4eca-abe1-fda039e5717e",
+        "name": "Dumping of LSASS Process Memory to a Dump File",
+        "highlight": true
+      },
+      {
+        "id": "438479c4-be86-4cb6-9423-367089319fc9",
+        "name": "Possible Dumping of LSASS and Read Memory of LSASRV",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao"
+    ]
+  ],
+  "author": "Alvin Bacani",
+  "team": "CSG",
+  "date": "2024/05/14",
+  "lastUpdate": "2025-02-11T06:51:53.000Z"
+}

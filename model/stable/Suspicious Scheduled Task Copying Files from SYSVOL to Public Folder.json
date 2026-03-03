@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "abbe8055-bbc9-4c93-80da-fe45f4b50ece",
+  "name": "Suspicious Scheduled Task Copying Files from SYSVOL to Public Folder",
+  "description": "Detects the execution of a scheduled task that copies files from the domain's SYSVOL share to the local C:\\Users\\Public directory. This behavior is highly suspicious and is a known technique used by threat actors to distribute malicious payloads, scripts, or staging tools across an entire domain. This activity is frequently automated by pushing the scheduled task through a Group Policy Object (GPO) to ensure persistence and wide-scale deployment.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "42bf7071-7630-4b6f-99a5-8eed83e95151",
+      "name": "Suspicious Scheduled Task Copying Files from SYSVOL to Public Folder",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1570",
+    "mitre.t1053.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2026/02/01",
+  "lastUpdate": "2026-02-11T06:15:56.000Z"
+}

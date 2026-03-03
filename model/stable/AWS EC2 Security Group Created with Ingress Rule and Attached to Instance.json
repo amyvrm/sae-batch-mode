@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1382c348-4695-4b04-8750-894fe72ea88e",
+  "name": "AWS EC2 Security Group Created with Ingress Rule and Attached to Instance",
+  "description": "Detects the creation of a new EC2 security group with ingress rules that is then attached to an instance. This means the instance's network access permissions have been modified, potentially allowing inbound traffic. ",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "9a381be0-8e36-4f61-965e-8ab4f8f592c5",
+      "name": "AWS EC2 Security Group Creation",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "baae9797-c50e-401a-ba67-5eb3f589ce88",
+      "name": "AWS EC2 Security Group Ingress Rule Modification",
+      "score": 1,
+      "sequence": 2
+    },
+    {
+      "id": "f4b51ae9-b7b1-4193-a909-986935c19d2e",
+      "name": "AWS EC2 Security Group Attachment to Instance",
+      "score": 1,
+      "sequence": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.007"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christopher Ordonez & Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-09-12T08:03:37.000Z"
+}

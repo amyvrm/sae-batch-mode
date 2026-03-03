@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ec613182-746a-4a1a-b145-6abaeafe7f59",
+  "name": "AWS Bedrock Unauthorized Guardrail Deletion Attempt",
+  "description": "This model alerts when someone tries to delete guardrails in Amazon Bedrock without proper authorization. This indicates someone trying to evade defenses which warn of potential security breaches or policy violations that could disrupt AI model settings or expose sensitive data.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "abc20c7d-76c6-4cf0-9040-f5af6cf00eb4",
+      "name": "AWS Bedrock Unauthorized Guardrail Deletion Attempt",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.008",
+    "atlas.aml.t0015"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2159fad1-5ea8-4a79-b01b-6b07ae89d37e",
+  "name": "Suspicious Shortcut File",
+  "description": "Detects potentially malicious activity involving Windows shortcut files, including shortcut creation from archive files, execution of embedded executables and suspicious command usage indicative of adversarial techniques such as DLL sideloading or payload execution.",
+  "filterSets": [
+    [
+      {
+        "id": "6b928560-66ab-442e-b7dd-e2b704abbd67",
+        "name": "Shortcut File Creation from Archive File",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "75990f1e-f54a-4a8b-94c3-8e97770912da",
+        "name": "Suspicious Commands In Shortcut File",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e08e0aa8-162e-4e94-9df8-6f5126371b44",
+        "name": "Execution of Embedded Executable via Windows Shortcut File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Simon Dulude",
+  "team": "Cloud One",
+  "date": "2025/10/30",
+  "lastUpdate": "2026-01-12T06:43:19.000Z"
+}

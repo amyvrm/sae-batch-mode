@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7d7ec3ed-4075-422b-ae91-8abcfc31ab3e",
+  "name": "Trojan File Identified by Microsoft",
+  "description": "Microsoft Antivirus File Detection for Trojan",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "6b7a1c1b-33dc-494f-a768-504f13d979df",
+      "name": "Trojan File Identified by Microsoft",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mohammed Malubay",
+  "team": "Third Party Operations",
+  "date": "2025/07/28",
+  "lastUpdate": "2025-07-28T21:32:14.000Z"
+}

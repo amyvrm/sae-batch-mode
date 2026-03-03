@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1ed2bfa3-08b0-49be-9d4c-7aef0782a082",
+  "name": "Potential Compromised 3CXDesktopApp Beaconing Activity",
+  "description": "Detects potential beaconing activity to domains related to 3CX 3CXDesktopApp compromise.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "6c31b87c-658b-4f39-8740-d20111cf4b73",
+      "name": "Potential Compromised 3CXDesktopApp Beaconing Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1071.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/01/04",
+  "lastUpdate": "2026-01-20T10:21:34.000Z"
+}

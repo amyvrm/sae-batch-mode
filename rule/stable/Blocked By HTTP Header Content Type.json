@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d3478e47-935e-48ba-9c27-9c4ada66064e",
+  "name": "Blocked By HTTP Header Content Type",
+  "description": "Fortinet detection - Blocked by HTTP header content type",
+  "filterSets": [
+    [
+      {
+        "id": "75116987-6e55-43ff-b410-6a8a986952bc",
+        "name": "Blocked By HTTP Header Content Type",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

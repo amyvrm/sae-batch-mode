@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e9e2152a-92df-4301-af1f-1806172f65a6",
+  "name": "Possible JavaScript Obfuscation",
+  "description": "Detection of a command line containing potentially obfuscated Javascript",
+  "filterSets": [
+    [
+      {
+        "id": "74b5b649-1667-4595-8ec9-3550a0993803",
+        "name": "Possible JavaScript Obfuscation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/11/17",
+  "lastUpdate": "2025-01-03T12:46:21.000Z"
+}

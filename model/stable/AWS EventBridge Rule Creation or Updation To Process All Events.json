@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a96a35c4-c30e-4891-a761-269506a41589",
+  "name": "AWS EventBridge Rule Creation or Updation To Process All Events",
+  "description": "Detects creation or updation of EventBridge rule pattern to match all events across any AWS service or account which is quite unusual and might indicate an attacker trying to perform reconnaissance on the events, exfiltration to attacker controlled account or lateral movement to other victim AWS accounts.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "984f2f61-2e89-415a-b7ce-46f5d2bfb0e6",
+      "name": "AWS EventBridge Rule Creation or Updation To Process All Events",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1526",
+    "mitre.t1530"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-08-07T09:31:17.000Z"
+}

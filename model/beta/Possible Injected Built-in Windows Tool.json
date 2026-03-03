@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "647a70c1-7529-480e-aa6a-614b1c48f181",
+  "name": "Possible Injected Built-in Windows Tool",
+  "description": "Detects execution of a possibly injected built-in Windows tool by an executable in programdata folder. Adversaries may inject malicious shellcode into known windows tools for defense evasion purposes.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "5438e116-128a-463d-a2e5-834456550eb8",
+      "name": "Possible Injected Built-in Windows Tool",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mohammed Malubay",
+  "team": "TAD Service Ops",
+  "date": "2024/11/19",
+  "lastUpdate": "2024-12-03T10:47:44.000Z"
+}

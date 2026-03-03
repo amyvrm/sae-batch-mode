@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f3ae4f94-4378-4e02-a711-1be147743025",
+  "name": "ICMP Flood Detected",
+  "description": "SonicWall Detection for ICMP Flood Attack detected by firewall settings",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "defaultEnabled": false,
+  "rules": [
+    {
+      "id": "77049287-1d8b-4269-a55f-068ee74bfbff",
+      "name": "ICMP Flood Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christian Jason Geollegue",
+  "team": "Third Party Operations",
+  "date": "2024/12/05",
+  "lastUpdate": "2025-11-05T06:19:42.000Z"
+}

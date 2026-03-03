@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "id": "10d52dee-618f-11ed-9b6a-0242ac120002",
+  "name": "AWS Services Enumeration Successful Attempt",
+  "description": "Detected possible successful Recon/Enumeration across different AWS services. Adversary can use the running services information for later phase in the Attack chain.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "37c559be-97e1-11ed-a8fc-0242ac120002",
+      "name": "AWS EC2 Successful Service Enumeration Attempt",
+      "score": 1
+    },
+    {
+      "id": "37c57a02-97e1-11ed-a8fc-0242ac120002",
+      "name": "AWS IAM Successful Service Enumeration Attempt",
+      "score": 1
+    },
+    {
+      "id": "37c60256-97e1-11ed-a8fc-0242ac120002",
+      "name": "AWS S3 Successful Service Enumeration Attempt",
+      "score": 1
+    },
+    {
+      "id": "37c5fec8-97e1-11ed-a8fc-0242ac120002",
+      "name": "AWS STS Successful Service Enumeration Attempt",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 4,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1526"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/11/11",
+  "lastUpdate": "2025-10-30T06:54:31.000Z"
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "75d7366e-784a-4e01-8fe8-3c2e590c53c9",
+  "name": "Suspicious Invocation of Misnamed AutoIT Script",
+  "description": "Detects potential suspicious anomalous commands related to WMIC, Nltest and NET process from a possibly malicious misnamed AutoIT script",
+  "filterSets": [
+    [
+      {
+        "id": "60c38521-0cd9-4179-adc1-60011efaf14b",
+        "name": "Misnamed Executable",
+        "highlight": true
+      },
+      {
+        "id": "9335ccaf-6830-488c-b482-c96bd296c205",
+        "name": "AutoIt Anomalous Enumeration Commands",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "60c38521-0cd9-4179-adc1-60011efaf14b.processFilePath equals 9335ccaf-6830-488c-b482-c96bd296c205.parentFilePath"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/10/10",
+  "lastUpdate": "2024-10-18T14:37:48.000Z"
+}

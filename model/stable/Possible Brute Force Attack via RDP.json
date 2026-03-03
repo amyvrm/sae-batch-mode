@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a3d5146d-2a3a-4988-8e20-81bfe60f122a",
+  "name": "Possible Brute Force Attack via RDP",
+  "description": "Possible Brute Force Attack via Remote Desktop Protocol.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "367f89d5-bcce-4eed-9732-8a12c74fac4b",
+      "name": "Possible Brute Force via RDP",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 3600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.001",
+    "mitre.t1110.001",
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "JP-MDR",
+  "team": "JP-MDR",
+  "date": "2022/08/31",
+  "lastUpdate": "2024-05-14T08:24:40.000Z"
+}

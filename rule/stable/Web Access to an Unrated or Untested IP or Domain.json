@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e14e3d5e-82ac-11ea-bc55-0242ac130003",
+  "name": "Web Access to an Unrated or Untested IP or Domain",
+  "description": "Access unrated or untested IP or Domain.",
+  "filterSets": [
+    [
+      {
+        "id": "aa226811-34b0-4f70-871b-7105278e09d7",
+        "name": "Untested Domain Detections Of Web Reputation Services",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-03-30T04:57:51.000Z"
+}

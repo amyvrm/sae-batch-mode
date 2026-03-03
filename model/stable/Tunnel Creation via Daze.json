@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fa5db115-ec80-4698-8e1f-32fae88b2634",
+  "name": "Tunnel Creation via Daze",
+  "description": "Detects possible attempt to open a tunnel for command and control via Daze",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "251ddbbf-4913-4844-b209-46a5b7cd0de3",
+      "name": "Tunnel Creation via Daze",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1572"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ahmed Kamal & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2025/03/06",
+  "lastUpdate": "2026-01-14T15:20:57.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2dd6ee27-3a9e-4335-9aa3-1e0691e84155",
+  "name": "Wireless Event Key-Reinstall-Attack-FT-Reassoc",
+  "description": "Fortinet detection - Wireless Event Key Reinstall Attack (FT-Reassoc)",
+  "filterSets": [
+    [
+      {
+        "id": "5ad71fa2-31dd-4dfe-ade0-fa74bd24aa74",
+        "name": "Wireless Event Key-Reinstall-Attack-FT-Reassoc",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "John Lim",
+  "team": "Third Party Operations",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-29T06:07:06.000Z"
+}

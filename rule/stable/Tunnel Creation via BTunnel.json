@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d177ac94-c16b-41f8-9708-fa269b2417ad",
+  "name": "Tunnel Creation via BTunnel",
+  "description": "Detects network tunnel creation using BTuunel, which may be used for command and control communication, and data exfiltration",
+  "filterSets": [
+    [
+      {
+        "id": "0aa77f0f-97b5-4939-b07f-660ef1b26460",
+        "name": "DNS Query Request to BTunnel Services",
+        "highlight": true
+      },
+      {
+        "id": "53a57f94-f8b6-4747-b2e7-ae66f3af2dc8",
+        "name": "Tunnel Creation via BTunnel",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2024/11/19",
+  "lastUpdate": "2025-02-27T07:49:17.000Z"
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "13773186-485e-4381-b7bf-50efd466f690",
+  "name": "Azure Network Security Group Rule Successful Deletion",
+  "description": "This model detects successful deletion of azure network security group rule which may indicate an attacker trying to disable cloud firewall protection to further compromise the azure compute associated with it.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "864150aa-85fb-4411-a1f7-361b53b010e3",
+      "name": "Azure Network Security Group Rule Successfully Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.007"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/04/15",
+  "lastUpdate": "2025-05-09T07:17:46.000Z"
+}

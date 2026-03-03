@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fca5ed8b-31d0-4d84-9f02-c8108aa3ae24",
+  "name": "Dns Query to Malicious Domains and Possible Dll Side Loading",
+  "description": "Detect suspicious connection to malicious domain that drops DLL payload and sideload to legitimate executable.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "17dcd7ec-8d90-4fa4-8a9c-4bccb8d76365",
+      "name": "Dns Queries to Malicious Domains",
+      "score": 30
+    },
+    {
+      "id": "7c671b2c-4144-4235-8516-e54b80d1929c",
+      "name": "DLL Injection for Data Harvesting",
+      "score": 30
+    }
+  ],
+  "threshold": {
+    "targetScore": 60,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.004",
+    "mitre.t1574.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/06/12",
+  "lastUpdate": "2025-08-08T07:46:29.000Z"
+}

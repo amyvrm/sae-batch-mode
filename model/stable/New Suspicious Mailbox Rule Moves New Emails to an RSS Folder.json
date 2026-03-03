@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ee5c67a1-7657-4c31-8659-ad7e86aba9aa",
+  "name": "New Suspicious Mailbox Rule Moves New Emails to an RSS Folder",
+  "description": "A suspicious mailbox rule was created that moves all incoming emails to an RSS folder and marks them as read.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "8def2cb2-b865-4ded-b15d-a69c185ff9d8",
+      "name": "New Suspicious Mailbox Rule Moves New Emails to an RSS Folder",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xca"
+    ]
+  ],
+  "tags": [
+    "mitre.t1564.008"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2025/03/15",
+  "lastUpdate": "2025-04-04T04:24:10.000Z"
+}

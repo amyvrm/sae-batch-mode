@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1e6f2561-82e3-4bf5-8066-1f771882aace",
+  "name": "Suspicious New Domain Connection and Suspicious Client Detection",
+  "description": "A network model flagged an HTTP connection to a newly registered domain initiated by a suspicious client. This activity could suggest an attempt to bypass detection mechanisms by exploiting the fresh domain reputation.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "defaultEnabled": false,
+  "rules": [
+    {
+      "id": "25eb0e8e-6b52-4200-a2cc-100c90223463",
+      "name": "Suspicious New Domain Connection Alert",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "pdi"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Arjun Baltazar",
+  "team": "DDI",
+  "date": "2025/03/13",
+  "lastUpdate": "2025-03-20T01:03:59.000Z"
+}

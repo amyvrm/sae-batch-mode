@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "86ff7185-3f7a-49b4-8f52-9bcc8b0166d5",
+  "name": "Suspicious Svchost Activities",
+  "description": "Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed binaries.",
+  "filterSets": [
+    [
+      {
+        "id": "3c54a375-6f01-47d4-98e0-a9d4cd238905",
+        "name": "Svchost Executes Iexplorer",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "12108212-8795-4599-ad0b-36ec1735078c",
+        "name": "Svchost Executes Mshta",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/07/02",
+  "lastUpdate": "2024-07-03T18:09:26.000Z"
+}

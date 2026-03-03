@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "99b643f9-0825-4926-8256-d9bcf6066bdc",
+  "name": "TOR Network Connection via Torsocks and SOCKS5 Proxy",
+  "description": "Detected attempts to connect to TOR network using torsocks or SOCKS5 proxy to access .onion domains, which may indicate malicious communication or data exfiltration",
+  "filterSets": [
+    [
+      {
+        "id": "1237b11f-0cb4-47c5-bda5-61eafe4dbc04",
+        "name": "TOR Network Connection via Torsocks and SOCKS5 Proxy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jose Baena cobos",
+  "team": "Cloud One",
+  "date": "2025/06/29",
+  "lastUpdate": "2025-07-30T04:44:50.000Z"
+}

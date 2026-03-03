@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "10de92e6-fdb9-4fa2-a0c0-ef0a488ca764",
+  "name": "Possible Evasive Operations",
+  "description": "Detects possible attempts to hide or hinder detection of the threat such as disabling security and log clearing.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0671ead5-da3e-482a-b303-5aa0ae67b7cf",
+      "name": "Windows Event Logs Clearing",
+      "score": 1
+    },
+    {
+      "id": "390ffc8b-dd9b-4de2-a362-95f29e275af8",
+      "name": "Microsoft Defender Antivirus Tampering",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.001",
+    "mitre.t1070"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/06/27",
+  "lastUpdate": "2025-07-14T01:53:47.000Z"
+}

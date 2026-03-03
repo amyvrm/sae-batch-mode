@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "237884ec-a869-4428-bfdf-5292ca8f9225",
+  "name": "DWAgent Service Installation",
+  "description": "DWService is a remote admin tool. It can be abused by an attacker to remotely control the victim's environment.",
+  "filterSets": [
+    [
+      {
+        "id": "62b85854-286d-47eb-9edb-2d9530221550",
+        "name": "DWAgent Service Installation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "12147719-5386-4a37-93ba-035bafdc27a5",
+        "name": "DWAgent Service Installation 2",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/05",
+  "lastUpdate": "2024-03-11T18:07:58.000Z"
+}

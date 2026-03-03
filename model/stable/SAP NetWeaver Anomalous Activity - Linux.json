@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "972b1fc0-5de3-4d00-8dc2-26f36c7fcf84",
+  "name": "SAP NetWeaver Anomalous Activity - Linux",
+  "description": "Detection of anomalous activity from SAP NetWeaver",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "3a6d38d8-4c6f-4af7-9532-38bde66e8686",
+      "name": "SAP NetWeaver Anomalous Activity - Linux",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "cve.2025.31324"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/04/29",
+  "lastUpdate": "2025-05-02T14:42:23.000Z"
+}

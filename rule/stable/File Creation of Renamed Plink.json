@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c0e10b0d-bb11-4f0a-95f4-5e6c47120001",
+  "name": "File Creation of Renamed Plink",
+  "description": "Detection of a file being created that has been renamed to potentially evade detection.",
+  "filterSets": [
+    [
+      {
+        "id": "feaf8dc4-293c-4b87-8143-4243864f3f07",
+        "name": "File Creation of Renamed Plink",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/01/19",
+  "lastUpdate": "2024-01-24T11:37:03.000Z"
+}

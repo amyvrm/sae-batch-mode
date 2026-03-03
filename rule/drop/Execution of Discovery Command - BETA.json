@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d2ce3faa-5d6a-477a-aea9-eba772272339",
+  "name": "Execution of Discovery Command - BETA",
+  "description": "Detected execution of one or more discovery command.",
+  "filterSets": [
+    [
+      {
+        "id": "6bd817d5-8298-4a80-990a-0dd1b403aa44",
+        "name": "System Owner or User Discovery",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ef6c473b-ba82-43c9-b866-c572d219f696",
+        "name": "Hostname Discovery (Windows)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1005e43e-e1d0-4c2f-9212-e86a64436119",
+        "name": "Remote System Discovery Via Nltest",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Govind Sarda",
+  "team": "Cloud One",
+  "date": "2021/03/19",
+  "lastUpdate": "2025-05-08T09:57:31.000Z"
+}

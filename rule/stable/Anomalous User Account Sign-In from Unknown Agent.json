@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "423a57bd-cef7-447d-9f8a-a9e1a83faf41",
+  "name": "Anomalous User Account Sign-In from Unknown Agent",
+  "description": "An anomalous sign-in of a user account from an unknown agent may indicate a compromised account. [Delayed alert: Batch process detection]",
+  "filterSets": [
+    [
+      {
+        "id": "83fdcad6-f580-59ea-859f-f8b977152295",
+        "name": "Anomalous User Account Sign-In from Unknown Agent",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "aad"
+    ]
+  ],
+  "author": "Zachary Lee",
+  "team": "Jaguar",
+  "date": "2021/03/09",
+  "lastUpdate": "2023-11-06T03:32:24.000Z"
+}

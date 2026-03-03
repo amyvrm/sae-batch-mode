@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ba83bbc3-e42e-4474-8a27-5cc421cf85b1",
+  "name": "Suspicious Powershell Obfuscation",
+  "description": "Detection of obfuscated PowerShell commands using a format operator to potentially bypass signatures",
+  "filterSets": [
+    [
+      {
+        "id": "1cfb5d20-8697-40da-9004-8b3ee0170a0c",
+        "name": "Suspicious Powershell Obfuscation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8afb8d81-2644-4d82-b19a-210ecab878d0",
+        "name": "Suspicious Powershell Obfuscation - Outbound Communication",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ba901458-f9b7-41d6-bba2-9178938bef5c",
+        "name": "Suspicious Powershell Obfuscation - AMSI",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "dc820e0c-163a-4535-9920-c77e2ae458f0",
+        "name": "Suspicious Powershell Obfuscation - Log Inspection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0bb5f5aa-e4cb-449c-9453-52820bef054e",
+        "name": "Suspicious Powershell Obfuscation - Remote Thread Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/04/26",
+  "lastUpdate": "2024-06-06T14:52:01.000Z"
+}

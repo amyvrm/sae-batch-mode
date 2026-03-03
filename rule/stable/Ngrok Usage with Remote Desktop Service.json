@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2285abbd-cdbc-4081-ba27-d2ef2841ef67",
+  "name": "Ngrok Usage with Remote Desktop Service",
+  "description": "Detects cases in which ngrok, a reverse proxy tool, forwards events to the local RDP port, which could be a sign of malicious behaviour.",
+  "filterSets": [
+    [
+      {
+        "id": "f0acd317-fb13-49c6-97d1-93fd34e5b609",
+        "name": "Ngrok Usage with Remote Desktop Service",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/12",
+  "lastUpdate": "2024-03-22T15:07:20.000Z"
+}

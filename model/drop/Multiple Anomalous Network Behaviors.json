@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "id": "71728848-0a00-45ab-acfe-f6eda2ab5ea7",
+  "name": "Multiple Anomalous Network Behaviors",
+  "description": "Multiple anomalous network behavioral activities including initial access, C&C, lateral and exfiltration behaviors were detected",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "5cbc5d15-5ccd-40d9-bd92-a6cba151f1d0",
+      "name": "Anomalous Initial Access Behaviors",
+      "score": 1
+    },
+    {
+      "id": "98000332-09f7-43f3-98e0-9916ce8e4bab",
+      "name": "Anomalous Command and Control (C&C) Behaviors",
+      "score": 1
+    },
+    {
+      "id": "e3c78150-c168-4f6d-962a-3d6c06b4c208",
+      "name": "Anomalous Internal Network Activities",
+      "score": 1
+    },
+    {
+      "id": "ebc1d4cd-a937-4acd-a2f6-237be544a82b",
+      "name": "Anomalous Exfiltration Behaviors",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1048",
+    "mitre.t1071",
+    "mitre.t1190",
+    "mitre.t1133"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Liang Seng Koh",
+  "team": "XNA",
+  "date": "2022/08/19",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

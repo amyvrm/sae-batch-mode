@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7576ed5e-4181-482e-9616-56b7542fcb8d",
+  "name": "Possible Osmosis Backdoor Installation via Registry Modification",
+  "description": "This model identifies activities that may relate to adversaries attempting to establish persistence by modifying the Windows registry. Such activities can include creating startup entries and renaming executables. These techniques are often used to ensure that malicious programs are automatically executed upon system startup and to evade detection by security mechanisms.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d8273266-f391-4132-9fc5-2f5130715364",
+      "name": "Suspicious Creation of Startup Entry in Registry",
+      "score": 1
+    },
+    {
+      "id": "7707132c-0be2-4261-b124-256ba6c07478",
+      "name": "Rename Reg Executable to Portal",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1547.001",
+    "mitre.t1036.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "silent": false,
+  "globalModel": true,
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/08/20",
+  "lastUpdate": "2025-08-20T18:16:38.000Z"
+}

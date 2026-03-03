@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4fd34100-9f83-4b38-859d-5c17eac47ef1",
+  "name": "Suspicious Email Sent from Newly-Created Domain",
+  "description": "Email containing a suspicious image attachment was sent from a new domain with no history of receiving emails within the past 30 days. (This model may generate false positives.)",
+  "filterSets": [
+    [
+      {
+        "id": "a8ab4465-87a5-5753-af8b-864740901dad",
+        "name": "Suspicious Email Sent from Newly-Created Domain",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Johnson Jao",
+  "team": "Jaguar",
+  "date": "2024/03/27",
+  "lastUpdate": "2024-04-10T03:08:42.000Z"
+}

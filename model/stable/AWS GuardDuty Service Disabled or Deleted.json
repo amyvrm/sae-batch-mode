@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6227e02e-2c83-4692-a1c3-23ebd8431f36",
+  "name": "AWS GuardDuty Service Disabled or Deleted",
+  "description": "Detected deletion or disablement of AWS GuardDuty detector which might indicate an attacker trying to evade GuardDuty detection leading to further undetected security incidents and compromises, potentially disrupting operational workflows.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "d0041421-a5b2-48ed-9311-c22d46a0b31b",
+      "name": "AWS GuardDuty Detector Deleted",
+      "score": 1
+    },
+    {
+      "id": "719394ec-8fc7-4db4-9ffe-92f004a464fc",
+      "name": "AWS GuardDuty Detector Disabled",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.008"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/01/11",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

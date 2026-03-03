@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "723c05a7-3e36-4975-92a3-0ac7963d120b",
+  "name": "Possible Ransomware Infection",
+  "description": "Suspicious execution of svchost.exe followed by ransom note creation. These two in succession are indicative of potential Charon ransomware infection.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "56c836b8-1110-4009-8ece-76700bd1247a",
+      "name": "Possible Ransomware Infection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "threat.ransom",
+    "mitre.t1486",
+    "mitre.t1055.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2025/07/23",
+  "lastUpdate": "2026-01-14T15:20:54.000Z"
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b1116a9f-4494-42a1-8d71-52715cf28937",
+  "name": "Remotely Execute Commands Via WMI",
+  "description": "Remotely Execute Commands Via WMI",
+  "filterSets": [
+    [
+      {
+        "id": "5ed77fbf-038d-4513-90b6-1ed08f6bb497",
+        "name": "WMI Execute Method",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-03-30T04:57:51.000Z"
+}

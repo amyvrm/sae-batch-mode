@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "016cfce5-a221-4503-abeb-6b5c3e25236d",
+  "name": "Azure Privileged ElevateAccess Operation Started",
+  "description": "Detects use of ElevateAccess, which may indicate an attacker with Entra GA privileges escalating access to gain control over all Azure subscriptions.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "8f9becfa-2ac7-45a1-9403-84e9e1e97912",
+      "name": "Azure Privileged ElevateAccess Operation Started",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Arun Shaji & Dexter Esteves",
+  "team": "Cloud One",
+  "date": "2025/12/08",
+  "lastUpdate": "2025-12-11T06:51:04.000Z"
+}

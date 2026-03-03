@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5df2cbc0-d81d-4315-8dd6-76a7ae2117dd",
+  "name": "Remote Command Shell Activity via TCP",
+  "description": "Network activity associated with a remote command shell has been identified utilizing TCP protocol. This activity indicates potential unauthorized command execution or control over the network.",
+  "filterSets": [
+    [
+      {
+        "id": "56357f0a-d2f5-5fe3-8a9e-5a80d0ea4dce",
+        "name": "Remote Command Shell TCP - Outbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "19238f55-8ecb-5cb9-aff7-6d5e281c9ce3",
+        "name": "Remote Command Shell TCP - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b47b0ee9-67e4-55e2-8f67-a131e9dd2299",
+        "name": "Remote Powershell TCP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7538a49f-4e2e-5b2e-b19e-653e91e23568",
+        "name": "Suspicious Shell Command Sensor TCP - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bb7e47c1-6353-5f1d-a844-f15144ec6531",
+        "name": "Suspicious Shell Command Sensor TCP - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 3600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2025/03/25",
+  "lastUpdate": "2025-04-02T01:30:38.000Z"
+}

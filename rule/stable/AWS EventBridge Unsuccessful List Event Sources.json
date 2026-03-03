@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "246258ed-abb6-4052-aa72-f8e4fc991c0d",
+  "name": "AWS EventBridge Unsuccessful List Event Sources",
+  "description": "Detects unsuccessful listing of EventBridge event sources, which may indicate a reconnaissance attempt by an attacker to identify available service integrations or third-party sources configured in the account.",
+  "filterSets": [
+    [
+      {
+        "id": "efad3fb4-25e2-47dc-ba56-7e3d4b64cd60",
+        "name": "AWS EventBridge Unsuccessful List Event Sources",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-07-31T08:55:45.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9e967c69-edaf-42e5-932d-fb1eb74030c8",
+  "name": "Suspicious Traffic Upstyle Backdoor",
+  "description": "This alert is triggered when traffic matching a known Command and Control pattern related to Traffic Backdoor.Python.UPSTYLE.A is observed. Backdoor.Python.UPSTYLE.A is a Backdoor that targets the Palo Alto Networks PAN-OS. It is reported that this malware has been used in targeted attack(s), arriving onto the infected system via the exploitation of the 0-day tracked under CVE-2024-3400.",
+  "filterSets": [
+    [
+      {
+        "id": "ebaabc65-a755-47e8-a461-362a6caa8fe1",
+        "name": "Suspicious Traffic Upstyle Backdoor",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2024/04/29",
+  "lastUpdate": "2024-05-06T08:38:18.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d0041421-a5b2-48ed-9311-c22d46a0b31b",
+  "name": "AWS GuardDuty Detector Deleted",
+  "description": "Detected deletion of AWS GuardDuty detector which might indicate an attacker trying to disable GuardDuty defenses to evade detection which might lead to further undetected security incidents and compromises, potentially disrupting operational workflows.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS GuardDuty Detector Deleted",
+        "id": "e3cd40dd-f4d8-44c6-86f1-bd06acf646a5",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/01/11",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

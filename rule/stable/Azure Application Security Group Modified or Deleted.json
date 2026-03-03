@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "75e0132c-2e9d-449e-9818-d347aeb99afb",
+  "name": "Azure Application Security Group Modified or Deleted",
+  "description": "Detects modification or deletion of an Azure Application Security Group that may weaken network isolation and enable lateral movement.",
+  "filterSets": [
+    [
+      {
+        "id": "c0f2a771-d87b-44fc-ab94-397cc9f096b5",
+        "name": "Azure Application Security Group Modified or Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/12/31",
+  "lastUpdate": "2026-01-20T13:37:23.000Z"
+}

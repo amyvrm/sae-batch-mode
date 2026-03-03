@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "112530dd-966f-41a6-8e97-91f5e561fc3c",
+  "name": "AWS SageMaker Unsuccessful Endpoints Enumeration Detected",
+  "description": "Detects unsuccessful enumeration of endpoints in AWS SageMaker service, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "f5f32055-5d20-4517-b06b-81474175f41c",
+        "name": "AWS SageMaker Unsuccessful Endpoints Enumeration Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/17",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

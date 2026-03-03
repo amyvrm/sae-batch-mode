@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e5f5e70b-068b-49cb-a3b3-eb93965fc66e",
+  "name": "Identified Malicious File in Cloud Storage",
+  "description": "A malicious software was detected on the cloud storage. Attackers may upload malicious files to cloud storage with the intent to infect users and distribute malware more broadly.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8f4d0f23-e3bf-4479-9452-211446a3bd45",
+      "name": "Identified Malicious File in Cloud Storage",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 3600,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "sfc"
+    ]
+  ],
+  "tags": [
+    "mitre.t1486"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yoshihiro Nakaya",
+  "team": "JP-IR",
+  "date": "2025/07/25",
+  "lastUpdate": "2025-10-17T00:29:16.000Z"
+}

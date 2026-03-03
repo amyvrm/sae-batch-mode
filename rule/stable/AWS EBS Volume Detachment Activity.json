@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c3fa91f0-8485-4aa0-93af-6def38c4897d",
+  "name": "AWS EBS Volume Detachment Activity",
+  "description": "Monitors for detachment of Amazon EBS volumes, which could indicate legitimate decommissioning of resources or unauthorized activities attempting to disrupt storage configurations or access data.",
+  "filterSets": [
+    [
+      {
+        "id": "6c67ddb6-b9c0-44ce-80ff-3acd2fb78d63",
+        "name": "AWS EBS Volume Detachment Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/28",
+  "lastUpdate": "2025-09-08T06:00:50.000Z"
+}

@@ -1,0 +1,162 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9ef74d0b-4dbf-4fbe-997e-9ead5f2ce6b1",
+  "name": "Possible Spear Phishing (Hybrid)",
+  "description": "An account/mailbox received an possible spear phishing(both steaming and batch)",
+  "filterSets": [
+    [
+      {
+        "id": "ef75138c-52be-451e-a041-9abb03de63b2",
+        "name": "Spearphishing Attachment",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c694f355-e819-41bf-b6b7-feaa6321d0e8",
+        "name": "Spearphishing Link Addressed by RetroScan - High Profile User",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "be307a99-4986-4e6b-912a-bce283ab643d",
+        "name": "Spearphishing Link Addressed by RetroScan",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0fce1f99-d8f5-4c8c-b15c-b8c301aff611",
+        "name": "Suspicious Attachment from New Account Shows Similarity to Other Verified Malicious Attachments Detected by Retro Scan",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3b945749-ff65-48ad-9980-76ae6e44e131",
+        "name": "Suspicious Email with Redirect Link Detected by Retro Scan",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2ea59a9a-a1e3-4397-a069-aa7b11cff3de",
+        "name": "Suspicious Email with Redirect Link Sent to High Profile User Detected by Retro Scan",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "38a23dcb-62db-4ebc-8213-7abe0bdbb88b",
+        "name": "Suspicious Phishing Attachment From New Sender",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "20bbd9f4-39a7-4bb6-9896-c55803e13836",
+        "name": "Suspicious Link in Email Sent From Malicious IP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "26a6beb3-3c9e-4679-922d-b5ebf511d062",
+        "name": "Forge Brand With Low Confidence Domain Url",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "15314515-fea0-4917-a300-9ff3558582eb",
+        "name": "Forge Business Partner With Low Confidence Domain Url",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cd9d27a9-f816-424f-aa1a-04fc60630c70",
+        "name": "Forge Sender With Urgent Intention",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "57573f48-6298-4ff8-ac48-e6af74e956ed",
+        "name": "Office365 OAuth Spearphishing Link",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "23e69fd2-3c5e-4766-8c84-10c9c701dbb3",
+        "name": "Spear Phishing Email Target High Profile User via Attachment",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "05442a46-6caf-4978-abec-b5ea338429e9",
+        "name": "Spear Phishing Link Addressed By LinearRegressionModel",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "051401ef-1138-4be9-bcd7-bc4891f0e1b7",
+        "name": "Spear Phishing Mail Addressed By AutoRuleset",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f63a1dac-b238-447a-ac9c-8f6f0116b4ec",
+        "name": "Spearphishing Email Impersonate Financial Institute Via Link",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "756a0505-d67e-4471-a7cb-cdd9f5df2e63",
+        "name": "Spearphishing Email With Known Phishkit Url Template Via Link",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "11ff6d1f-a9f3-4829-a166-5a709ff0f6cd",
+        "name": "Spearphishing Email With Recent Phishkit Url Keyword Via Link",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cb737419-9dd0-41a2-acd1-5896f366b96d",
+        "name": "Spearphishing Link Addressed By Phishing URL Pattern",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "06c6dcc5-5079-45c0-9b92-fb7ca12937db",
+        "name": "Suspicious Email With Domain Impersonation In HeaderFrom",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 86400,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2024/06/20",
+  "lastUpdate": "2024-12-16T10:13:33.000Z"
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "987c3be5-be64-49c8-84df-202a35791b1b",
+  "name": "AWS Bedrock Knowledge Base Updated",
+  "description": "The model detects updates to the Amazon Bedrock Knowledge Base. The alert indicates potential tampering or unauthorized changes that could compromise the integrity of AI model management. This impacts the reliability and security of AI-driven processes within the AWS environment.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "name": "AWS Bedrock Knowledge Base Updated",
+      "id": "adb3d561-8db2-4bf3-a835-69f5764b272d",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.009",
+    "atlas.aml.t0031"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ddae35ff-a9fc-41e3-82e7-fded6987dea1",
+  "name": "Discovery Docker Containers Configurations",
+  "description": "Adversaries may attempt to discover containers configurations and other resources that are available within a containers environment.",
+  "filterSets": [
+    [
+      {
+        "id": "101d03b1-55d3-4e5c-9392-d49769e7d173",
+        "name": "Docker Containers Configuration Discovery",
+        "highlight": true
+      },
+      {
+        "id": "41a11848-25e2-4a26-b3ab-bda7ff895c56",
+        "name": "Docker Containers IDs Discovery",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/06/11",
+  "lastUpdate": "2025-05-08T09:57:31.000Z"
+}

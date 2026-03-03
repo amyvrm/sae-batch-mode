@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e75fef94-d385-4f84-be79-c262a9425747",
+  "name": "AWS EC2 Possible Enumeration Of VPC",
+  "description": "This rule detects possible enumeration of a VPC.",
+  "filterSets": [
+    [
+      {
+        "id": "075cafdf-45c6-4c5e-a6ca-794a629c9dbc",
+        "name": "AWS EC2 Possible Enumeration Of VPC",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/09/17",
+  "lastUpdate": "2025-09-17T02:29:38.000Z"
+}

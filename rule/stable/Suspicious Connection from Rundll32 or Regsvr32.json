@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5077ab30-3346-4443-868c-77004a4440cb",
+  "name": "Suspicious Connection from Rundll32 or Regsvr32",
+  "description": "Detects suspicious connection attemps from rundll32 and regsvr32 processes",
+  "filterSets": [
+    [
+      {
+        "id": "a663c00d-f546-4bfa-9c7e-83acee9460cb",
+        "name": "Suspicious Connection from Rundll32.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "eebfbbb6-d9a2-4e09-bb38-87f951a38621",
+        "name": "Suspicious Connection from Regsvr32.exe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Toru Yamashige",
+  "team": "JP-IR",
+  "date": "2023/03/28",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

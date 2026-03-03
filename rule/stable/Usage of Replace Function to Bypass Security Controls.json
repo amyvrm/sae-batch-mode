@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "457c0db1-1cf2-4a0b-8370-615e0643293e",
+  "name": "Usage of Replace Function to Bypass Security Controls",
+  "description": "Detection of the Replace function being used to bypass security controls and evade detection mechanisms.",
+  "filterSets": [
+    [
+      {
+        "id": "ced725a3-e16b-4ff0-ab6e-f39ca63bb8d1",
+        "name": "Usage of Replace Function to Bypass Security Controls",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/08/05",
+  "lastUpdate": "2024-05-14T09:43:52.000Z"
+}

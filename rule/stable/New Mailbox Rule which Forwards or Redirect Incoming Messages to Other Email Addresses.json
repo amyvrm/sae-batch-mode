@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "efbd2dfb-7788-42ce-9d5e-1971caebbf5c",
+  "name": "New Mailbox Rule which Forwards or Redirect Incoming Messages to Other Email Addresses",
+  "description": "Detects a new mailbox rule to forward or redirect the incoming messages.",
+  "filterSets": [
+    [
+      {
+        "id": "6a171bf3-6906-403c-885f-638dcde2ad22",
+        "name": "New Mailbox Rule which Forwards Incoming Messages to Other Email Addresses",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7c4a0799-9f34-4358-a54e-d2da5523cab1",
+        "name": "New Mailbox Rule which Redirects Incoming Messages to Other Email Addresses",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "xca"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2025/03/15",
+  "lastUpdate": "2025-03-21T09:14:04.000Z"
+}

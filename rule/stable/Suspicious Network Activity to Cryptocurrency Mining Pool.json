@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9151307c-16e6-11ef-9262-0242ac120002",
+  "name": "Suspicious Network Activity to Cryptocurrency Mining Pool",
+  "description": "Detects potential unauthorized resource usage for cryptocurrency mining.",
+  "filterSets": [
+    [
+      {
+        "id": "049ad474-12f1-11ef-9262-0242ac120002",
+        "name": "Suspicious Network Activity to Cryptocurrency Mining Pool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/05/20",
+  "lastUpdate": "2025-01-22T19:14:24.000Z"
+}

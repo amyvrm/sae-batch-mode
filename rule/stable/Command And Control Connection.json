@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c3e8bb0-d581-491a-8722-8cda2826a8a9",
+  "name": "Command And Control Connection",
+  "description": "Connection to the Command and Control Server",
+  "filterSets": [
+    [
+      {
+        "id": "c82e4811-34b0-4f70-871b-7105278ef1d9",
+        "name": "C&C Connection via Common Protocol",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d45bceaa-136c-4a1b-b510-4ac589b9e6eb",
+        "name": "Koadic RAT Communication",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 900,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "pdi",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2025-07-17T10:35:46.000Z"
+}

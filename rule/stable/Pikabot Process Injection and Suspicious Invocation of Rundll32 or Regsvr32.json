@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fce6bce7-7eec-4cc0-afe9-3cb7278683d7",
+  "name": "Pikabot Process Injection and Suspicious Invocation of Rundll32 or Regsvr32",
+  "description": "Detects potential process injection of ctfmon.exe together with suspicious execution of regsvr32 or rundll32 associated with Pikabot",
+  "filterSets": [
+    [
+      {
+        "id": "9b6e06f9-871f-47af-8148-9b667a285b74",
+        "name": "Ctfmon Process Injection",
+        "highlight": true
+      },
+      {
+        "id": "2acdfe27-1b8e-4f1d-a857-3ddcd3b255cc",
+        "name": "Suspect Regsvr32 Invocation by Java",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0ac7116c-dc93-11ee-a506-0242ac120002",
+        "name": "Possible Pikabot DLL Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/04/24",
+  "lastUpdate": "2024-07-29T08:12:10.000Z"
+}

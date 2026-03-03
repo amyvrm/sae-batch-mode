@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0",
+  "id": "10eca59d-0db0-45d9-9947-8950fd39565a",
+  "name": "DFSCoerce Attack",
+  "description": "Successful attack leading to domain controller compromise.",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "81be02c5-4921-47ce-96d9-1efff3397a1e",
+      "name": "DFS namespace modification",
+      "score": 20
+    },
+    {
+      "id": "0dd1f989-dd18-4023-aab5-1147429d5c75",
+      "name": "ADFS Dumping via ADFSDump",
+      "score": 1
+    },
+    {
+      "id": "267eb54e-dd99-4130-91c4-c0d96c3e0d80",
+      "name": "(T1003) Credential Dumping",
+      "score": 1
+    },
+    {
+      "id": "2d8f826d-c9af-430f-93dd-985faa7ea38d",
+      "name": "Suspicious Script Execution",
+      "score": 1
+    },
+    {
+      "id": "406ddcd1-399e-4ebe-9ff7-43734d3498a4",
+      "name": "Pass The Hash Detection",
+      "score": 1
+    },
+    {
+      "id": "47bf5627-0c00-453f-ba52-ef172d0cffcc",
+      "name": "Windows Security Modified",
+      "score": 1
+    },
+    {
+      "id": "c843792e-9081-442b-b2e3-0102d86e1306",
+      "name": "Attempt of Disabling Antivirus Software",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 22,
+    "withinSeconds": 10800,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "sao",
+      "xes",
+      "pao",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2022/10/12",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

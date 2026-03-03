@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0f210f4c-a66a-42f6-9d56-e415f0aa3665",
+  "name": "Scheduled Task Creation Prevented by CrowdStrike",
+  "description": "This CrowdStrike alert indicates that an attempt to create a scheduled task was prevented, typically by blocking the execution of schtasks.exe with the '/create' command, which may be associated with suspicious or unauthorized activity.",
+  "filterSets": [
+    [
+      {
+        "id": "6c76fde8-31bc-4c57-a786-8ae8e95bdb8b",
+        "name": "Scheduled Task Creation Prevented by CrowdStrike",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/08",
+  "lastUpdate": "2025-08-12T06:43:13.000Z"
+}

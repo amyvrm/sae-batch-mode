@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "49299a32-fcb9-425a-949c-865c21b766a1",
+  "name": "File Created in Container",
+  "description": "New file created in the container.",
+  "filterSets": [
+    [
+      {
+        "id": "93756a96-ebd1-43cf-b227-d508a0d06efc",
+        "name": "File Created in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/07/20",
+  "lastUpdate": "2023-09-07T06:22:57.000Z"
+}

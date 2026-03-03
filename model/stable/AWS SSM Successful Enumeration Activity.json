@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ef963222-7282-4d3a-94f6-0e84d8e24eb9",
+  "name": "AWS SSM Successful Enumeration Activity",
+  "description": "This indicates that an entity successfully accessed AWS Systems Manager (SSM) resources, including session details, patch baselines, patch groups, or automation executions. While this may be part of routine administrative activity, frequent or unexpected access should be reviewed for potential unauthorized exploration.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "faa8e8b1-b63b-4878-98ae-295dc19f2ba5",
+      "name": "AWS SSM Successful Session Enumeration",
+      "score": 1
+    },
+    {
+      "id": "c571409f-c021-439c-bd34-735cb68be329",
+      "name": "AWS SSM Successful Patch Baseline Enumeration",
+      "score": 1
+    },
+    {
+      "id": "b7e8fc10-9449-4db3-89a1-39c6bac10a0d",
+      "name": "AWS SSM Successful Patch Group Enumeration",
+      "score": 1
+    },
+    {
+      "id": "e91c5dd2-e278-4232-a6b4-d0492e9e38d2",
+      "name": "AWS SSM Successful Automation Execution Enumeration",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-23T08:52:30.000Z"
+}

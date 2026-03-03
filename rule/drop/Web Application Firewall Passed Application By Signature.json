@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a5983318-1162-4dd0-8f32-00b9b10d27dd",
+  "name": "Web Application Firewall Passed Application By Signature",
+  "description": "Fortinet detection - Web application firewall passed application by signature",
+  "filterSets": [
+    [
+      {
+        "id": "5b580074-78f9-4c13-b944-64a8af151a49",
+        "name": "Web Application Firewall Passed Application By Signature",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-11-07T13:45:44.000Z"
+}

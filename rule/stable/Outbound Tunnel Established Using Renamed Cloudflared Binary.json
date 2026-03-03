@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "332c40ad-01d8-473e-a7ad-29a56db374c0",
+  "name": "Outbound Tunnel Established Using Renamed Cloudflared Binary",
+  "description": "Detection of a cloudflared tunnel being created with a renamed binary",
+  "filterSets": [
+    [
+      {
+        "id": "188743bb-1432-4423-897c-9f10cf596a0c",
+        "name": "Outbound Tunnel Established Using Renamed Cloudflared Binary",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2023/03/14",
+  "lastUpdate": "2024-03-19T09:36:03.000Z"
+}

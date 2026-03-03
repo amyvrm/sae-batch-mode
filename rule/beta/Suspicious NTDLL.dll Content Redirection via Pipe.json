@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e3400e76-0b21-4d79-862c-7c8d09ad6359",
+  "name": "Suspicious NTDLL.dll Content Redirection via Pipe",
+  "description": "Identifies attempts to evade endpoint protection by redirecting the contents of ntdll.dll to another file or pipe, as demonstrated in the NtdllPipe proof of concept. This technique may be used by adversaries to bypass anti-virus or EDR detection by leveraging legitimate system resources in an unusual manner.",
+  "filterSets": [
+    [
+      {
+        "id": "1c2b4d17-fb0f-4d02-bdfd-a8847535e3e5",
+        "name": "Suspicious NTDLL.dll Content Redirection via Pipe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/10/10",
+  "lastUpdate": "2025-11-21T07:20:02.000Z"
+}

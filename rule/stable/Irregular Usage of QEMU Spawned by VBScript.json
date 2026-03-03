@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "40370de4-a180-4c9f-aa84-1b79e8b39371",
+  "name": "Irregular Usage of QEMU Spawned by VBScript",
+  "description": "Detection of irregular usage of QEMU being created by a VBScript",
+  "filterSets": [
+    [
+      {
+        "id": "7eb43b96-3247-4a78-998f-3745db0e08e8",
+        "name": "Irregular Usage of QEMU Spawned by VBScript",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3f41d097-4e75-4933-be02-197f628d4b9a",
+        "name": "Execution of Renamed QEMU via VBScript",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/06/06",
+  "lastUpdate": "2026-01-26T02:58:49.000Z"
+}

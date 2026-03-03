@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "06b3546c-0bba-49e6-96b3-9a41f1e32b40",
+  "name": "Possible DLL Sideloading via Google Updater File",
+  "description": "Detects suspicious DLL Sideloading via Google Updater File leading to C2 connection",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f633e237-ff9c-4e6f-9890-c92bab3d0c66",
+      "name": "Possible DLL Sideloading via Google Updater File",
+      "score": 2
+    },
+    {
+      "id": "ea5c319f-d44e-4592-8050-e8cbcfc9bc75",
+      "name": "Suspicious Connection via Google Updater File",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1574.001",
+    "mitre.t1211"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/05/22",
+  "lastUpdate": "2025-07-08T08:46:37.000Z"
+}

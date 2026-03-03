@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ee3c2883-3b3a-4473-b65d-3606cee73a9f",
+  "name": "Possible Dropping of Vulnerable ITM System Co Mini Filter Driver",
+  "description": "Embargo ransomware observed technique of utilizing vulnerable drivers to deploy payload or hacktools.",
+  "filterSets": [
+    [
+      {
+        "id": "8f7213b8-ba33-456e-afb1-a3270323fe63",
+        "name": "Possible Dropping of Vulnerable ITM System Co Mini Filter Driver",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/11/08",
+  "lastUpdate": "2024-12-10T16:02:43.000Z"
+}

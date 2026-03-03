@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c8468e4f-9b3b-402b-a8f4-292494e6a54b",
+  "name": "AWS IAM Successful Attachment of Policy to a User",
+  "description": "Detects a change in access permissions where an IAM policy was successfully attached to a specific IAM user. Attackers who gain valid credentials or abuse existing access may attach permissive policies to escalate their privileges and gain broader control over resources.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "48965986-59fd-448b-8dee-ff6037914a27",
+      "name": "AWS IAM Successful Attachment Of Policy To A User",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098.003",
+    "mitre.t1548.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2023/07/26",
+  "lastUpdate": "2025-09-10T03:33:47.000Z"
+}

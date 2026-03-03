@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f61f8445-cff3-4d3d-b844-a6dbaaeccc3e",
+  "name": "Possible Curl Execution via QuickAssist Remote Session",
+  "description": "Detects execution of curl to download a suspicious file shortly after a QuickAssist session is created. This behavior is commonly associated with Black Basta ransomware.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "06df847a-5944-4323-ba8a-f47698a2a252",
+      "name": "QuickAssist Remote Session Established",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "db91471b-4dab-4834-868f-b2fd41bd64d9",
+      "name": "File Downloaded via Curl on Windows",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1219",
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2024/05/30",
+  "lastUpdate": "2025-01-28T15:11:04.000Z"
+}

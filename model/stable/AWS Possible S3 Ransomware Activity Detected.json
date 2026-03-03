@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e20a3818-7222-4e23-ae56-06dd8a426778",
+  "name": "AWS Possible S3 Ransomware Activity Detected",
+  "description": "Detected possible ransomware activity on a S3 bucket which can lead to important data encryption, loss or corruption, operational disruption, financial losses and much more.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "35271edb-6720-44cc-ab5d-28e5b221a995",
+      "name": "AWS S3 Buckets Scanning for Object Versioning",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "a07c9422-9d1d-49d6-83b5-5f7a7d0e3fab",
+      "name": "AWS S3 Encrypting Objects using a CMK",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1486",
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2023/02/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

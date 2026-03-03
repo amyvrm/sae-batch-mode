@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d1da9d54-2aa5-4447-b09c-72b4c13fe32b",
+  "name": "Virus File Identified by Microsoft",
+  "description": "Microsoft Antivirus File Detection for Virus",
+  "filterSets": [
+    [
+      {
+        "id": "e6da7eea-90de-41c4-918f-166d8a66fa45",
+        "name": "Virus File Identified by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mohammed Malubay",
+  "team": "Third Party Operations",
+  "date": "2025/07/28",
+  "lastUpdate": "2025-07-28T21:33:21.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "44a6ba99-f887-4b1c-94c3-a71c6267610f",
+  "name": "FTP Passive Attack",
+  "description": "SonicWall Detection - FTP PASV response spoof attack dropped",
+  "filterSets": [
+    [
+      {
+        "id": "da5a5a4d-5dff-4887-a0c5-bbf2d3460538",
+        "name": "FTP Passive Attack",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

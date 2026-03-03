@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1295daff-94b2-46d7-a075-0cb60c6bbd1e",
+  "name": "Suspicious Powershell Terminated by Behavior Monitoring",
+  "description": "A highly suspicious powershell invocation was executed and blocked by behavior monitoring. This could be indicative of a CobaltStrike beacon download attempt.",
+  "filterSets": [
+    [
+      {
+        "id": "5c6732cd-4217-4174-9e52-9c249cc06dff",
+        "name": "Suspicious Powershell Terminated by Behavior Monitoring",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pao",
+      "pds",
+      "sao",
+      "sds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/01",
+  "lastUpdate": "2024-05-14T09:37:13.000Z"
+}

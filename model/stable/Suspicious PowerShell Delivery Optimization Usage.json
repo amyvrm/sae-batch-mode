@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "70484946-46a2-43f3-9c61-5a98699b90de",
+  "name": "Suspicious PowerShell Delivery Optimization Usage",
+  "description": "Detects PowerShell commands used to configure delivery optimization from local servers.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8bb2ee4c-96f0-45da-9037-9825eeb64eb0",
+      "name": "Suspicious PowerShell Delivery Optimization Usage",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mary Joy Ramos & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/08/11",
+  "lastUpdate": "2025-09-08T09:50:40.000Z"
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "49268ea5-365c-4fbd-b58b-58977a03236a",
+  "name": "Detected Process Execution Using Screen Utility",
+  "description": "Adversaries may use utilities such as screen utility to hide and persist their access to the affected systems.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f16edab0-4d3c-4b0c-b4c7-269b678ac5ee",
+      "name": "Detected Process Execution Using Screen Utility",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/04/25",
+  "lastUpdate": "2024-06-13T13:40:18.000Z"
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8057b8c7-0c34-4e81-bddc-47161ae51df5",
+  "name": "Powershell - TicketDump",
+  "description": "Execution of dumper.ps1 which facilitates the dumping of Kerberos Tickets",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d37d57fb-57d2-4aba-9f80-a7cafa6ed392",
+      "name": "Powershell - TicketDump",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1558"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "David Walsh and Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2024/03/20",
+  "lastUpdate": "2024-05-23T14:08:57.000Z"
+}

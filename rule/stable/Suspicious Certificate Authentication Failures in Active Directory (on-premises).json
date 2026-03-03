@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "58bcbcc6-3c18-4630-9226-6e868c1df6a6",
+  "name": "Suspicious Certificate Authentication Failures in Active Directory (on-premises)",
+  "description": "Suspicious certificate authentication failures in Active Directory (on-premises) were detected, which indicates possible attack attempts.",
+  "filterSets": [
+    [
+      {
+        "id": "b4e507d5-66ca-5acd-b338-254f155de1a3",
+        "name": "Suspicious Certificate Authentication Failures in Active Directory (on-premises)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "opa"
+    ]
+  ],
+  "author": "Hazel Kao",
+  "team": "Jaguar",
+  "date": "2025/11/13",
+  "lastUpdate": "2025-12-11T09:49:02.000Z"
+}

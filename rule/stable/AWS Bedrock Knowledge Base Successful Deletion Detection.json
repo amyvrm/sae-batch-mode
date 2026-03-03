@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d352a043-e35b-46f8-af9a-c9eaf77c5ece",
+  "name": "AWS Bedrock Knowledge Base Successful Deletion Detection",
+  "description": "Detects the successful deletion of AWS Bedrock Knowledge Base.",
+  "filterSets": [
+    [
+      {
+        "id": "8316e9d1-129e-437c-b8c8-c616e55e75a3",
+        "name": "AWS Bedrock Knowledge Base Successful Deletion Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/07/24",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

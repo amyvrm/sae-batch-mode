@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "197a925d-5900-4c64-8d84-edc571a01a54",
+  "name": "AWS EventBridge Successful List Event Buses",
+  "description": "Detects successful listing of EventBridge event buses, which may indicate an adversary enumerating available event buses to understand inter-service communication or integration points.",
+  "filterSets": [
+    [
+      {
+        "id": "33cbe4df-00c7-4cf2-8f43-4c7ebff91e73",
+        "name": "AWS EventBridge Successful List Event Buses",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-07-31T08:55:45.000Z"
+}

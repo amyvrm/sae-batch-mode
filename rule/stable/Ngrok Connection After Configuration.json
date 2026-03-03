@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "182cbba4-6bd4-42af-9204-da9329d76a85",
+  "name": "Ngrok Connection After Configuration",
+  "description": "Ngrok tunneling services connection after configuring it. These services may be used by attackers to bypass firewalls or NAT restrictions and establish covert communication channels with compromised hosts",
+  "filterSets": [
+    [
+      {
+        "id": "36d3b77b-a2a2-41c5-b88c-1b70ec7c36ef",
+        "name": "Configuration File Creation During Tunneling Setup",
+        "highlight": true
+      },
+      {
+        "id": "0d060344-2f3b-4e58-878a-87cfb938485e",
+        "name": "Suspicious Connections via Ngrok Tunneling",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/03/11",
+  "lastUpdate": "2025-06-16T07:13:37.000Z"
+}

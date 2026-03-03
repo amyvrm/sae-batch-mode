@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "02b2dc4e-648d-4255-a81f-61f422d2c817",
+  "name": "Unusual Activity Within Container Environment",
+  "description": "Detects suspicious actions in the container.",
+  "filterSets": [
+    [
+      {
+        "id": "33595e76-2376-4d20-8ac7-0257c4ab7db0",
+        "name": "Process Initiated From tmp Directory in Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "55bce842-a187-571e-a15e-0531ceebbbc9",
+        "name": "Suspicious Tool in the Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "30d9d016-565f-581c-b546-a087e0ee6c30",
+        "name": "Access Sensitive File After Startup in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/07/31",
+  "lastUpdate": "2024-10-08T10:07:13.000Z"
+}

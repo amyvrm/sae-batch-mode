@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b320ca05-9637-47ef-afbc-5f518e09a27f",
+  "name": "Possible Network Discovery Command Execution via Cron",
+  "description": "Possible execution of 'ifconfig' command via Cron for Network Discovery",
+  "filterSets": [
+    [
+      {
+        "id": "a46c9d83-b30b-406b-bf22-cf8cc0d34562",
+        "name": "Possible Network Discovery Command Execution via Cron",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Felix Gregorio III & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2024/11/14",
+  "lastUpdate": "2025-03-26T05:17:00.000Z"
+}

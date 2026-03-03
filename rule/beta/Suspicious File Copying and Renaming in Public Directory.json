@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2581d6ca-de5d-4c5b-bf22-5a8d6c364e3f",
+  "name": "Suspicious File Copying and Renaming in Public Directory",
+  "description": "Detects the use of file operation commands (`xcopy`, `ren`, `start`) to manipulate files in public directories. This behavior is indicative of malware staging, where benign-looking files are renamed to executable formats and launched, often without user awareness.",
+  "filterSets": [
+    [
+      {
+        "id": "3e3cc85d-e5d2-4bb8-92ca-3743906d3812",
+        "name": "Suspicious File Copying and Renaming in Public Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Mary Joy Ramos & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/08/07",
+  "lastUpdate": "2025-08-14T10:17:37.000Z"
+}

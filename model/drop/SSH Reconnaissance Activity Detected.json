@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "26bd2ac7-4ebb-4cc0-ab26-a5dd77ec8579",
+  "name": "SSH Reconnaissance Activity Detected",
+  "description": "This model identifies reconnaissance activities related to SSH, including potential break-in attempts, SSH server version gathering, and insecure connection attempts indicative of scanning activities.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "c8f9847f-aba1-48f3-a3f1-88797cbd4157",
+      "name": "SSH Reconnaissance Activity Detected",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1046"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/01/10",
+  "lastUpdate": "2024-02-06T09:58:21.000Z"
+}

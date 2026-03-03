@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d46044e2-d52b-4183-8cf6-2504c49cc970",
+  "name": "Copying Of NTDS File",
+  "description": "Detects copy operation of ntds.dit file for possible credential dumping.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e1d69308-0e3e-43a6-ba55-47da7c4729b7",
+      "name": "Copying Of NTDS File",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 10800,
+    "dedupSeconds": 10800
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1003.002",
+    "mitre.t1003",
+    "mitre.t1003.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Julian Daquigan",
+  "team": "CSG",
+  "date": "2024/11/13",
+  "lastUpdate": "2024-11-27T09:43:38.000Z"
+}

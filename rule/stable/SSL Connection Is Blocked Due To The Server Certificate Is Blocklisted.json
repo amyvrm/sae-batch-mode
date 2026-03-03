@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "280a05f5-6076-4e49-84ae-968a0fcc530f",
+  "name": "SSL Connection Is Blocked Due To The Server Certificate Is Blocklisted",
+  "description": "Fortinet detection - SSL connection is blocked due to the server certificate is blocklisted",
+  "filterSets": [
+    [
+      {
+        "id": "2d27db7f-c33f-4abd-af2b-0e4e0c88432f",
+        "name": "SSL Connection Is Blocked Due To The Server Certificate Is Blocklisted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

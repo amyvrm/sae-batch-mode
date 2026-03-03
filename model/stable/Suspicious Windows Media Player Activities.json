@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19895515-1fa6-4dec-a025-28ad89a3629c",
+  "name": "Suspicious Windows Media Player Activities",
+  "description": "Detection of suspicious activities from Windows Media Player",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7b48e98a-ae93-4726-a41b-ef4908f29c58",
+      "name": "Suspicious Windows Media Player Activities",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1036",
+    "mitre.t1055"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh & Yusuf Madkour",
+  "team": "EU-IR",
+  "date": "2024/12/12",
+  "lastUpdate": "2026-02-09T00:42:44.000Z"
+}

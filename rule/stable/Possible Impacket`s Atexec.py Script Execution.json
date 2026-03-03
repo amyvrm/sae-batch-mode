@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7364eca2-b98c-4bc9-8437-dbeaf6a669d8",
+  "name": "Possible Impacket`s Atexec.py Script Execution",
+  "description": "This detection identifies Impacket\u2019s atexec.py script on a target host. atexec.py remotely run on an attacker machine to execute commands on the victim via scheduled task. The command is commonly executed by a non-interactive cmd.exe with the output redirected to an eight-character TMP file.",
+  "filterSets": [
+    [
+      {
+        "id": "6c9a8257-dee9-450c-859e-e9cc5482d125",
+        "name": "Possible Impacket`s Atexec.py Script Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "2ccfd448-7678-421d-a046-48e299c03351",
+        "name": "Process Spawned via Possible Impacket`s Atexec.py Script Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/26",
+  "lastUpdate": "2024-04-03T17:36:18.000Z"
+}

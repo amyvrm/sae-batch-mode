@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c5b20b5a-9c83-4f8a-8f2c-30687247dd6f",
+  "name": "AWS Service Information Discovery From ECS Target Task Through AWS Console Successful",
+  "description": "Detected detects AWS ECS service information discovery through AWS Console.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "enable": true,
+  "rules": [
+    {
+      "id": "a4352524-8399-4df4-ade9-b41cdf0a8332",
+      "name": "AWS Service Information Discovery From ECS Target Task",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 8,
+  "globalModel": true,
+  "silent": false,
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/06",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

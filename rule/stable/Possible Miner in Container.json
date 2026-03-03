@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b542243e-7641-4ecc-85ff-90365019d361",
+  "name": "Possible Miner in Container",
+  "description": "Detects crypto miner related activity.",
+  "filterSets": [
+    [
+      {
+        "id": "b0fd996e-512e-50d9-8590-60de92f8c6f9",
+        "name": "Possible Miner in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/02/22",
+  "lastUpdate": "2025-09-02T08:24:09.000Z"
+}

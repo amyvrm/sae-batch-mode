@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2a590308-468e-4dae-b549-b63525846cc2",
+  "name": "Remote Download via HTTP (Request) - Outbound - Simulation",
+  "description": "Network activity involving HTTP, which is associated with TinyNuke downloader, was detected.",
+  "filterSets": [
+    [
+      {
+        "id": "687c17f8-e5c5-4065-9cf8-ddd794706f53",
+        "name": "Remote Download via HTTP (Request) - Outbound - Simulation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/07/25",
+  "lastUpdate": "2025-07-25T09:16:28.000Z"
+}

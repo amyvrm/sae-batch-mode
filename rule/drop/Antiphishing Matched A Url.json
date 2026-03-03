@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5dcbc0ff-01bd-4bee-ab15-913bb7d52376",
+  "name": "Antiphishing Matched A Url",
+  "description": "Fortinet detection for Matched Antiphishing URL",
+  "filterSets": [
+    [
+      {
+        "id": "8e0fdebf-d954-4537-9c48-3556e9e91e09",
+        "name": "Antiphishing Matched A Url Filter Rule And Blocked The Request",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "299c93b6-e68f-5d32-8b05-22315c67758a",
+        "name": "Antiphishing Matched URL Filter Rule Allowed Request",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/06/20",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

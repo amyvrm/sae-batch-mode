@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "283daa10-ea90-43a5-9f60-bc592fc9e8cf",
+  "name": "Azure Vnet Traffic with Highly Suspicious Reputation",
+  "description": "Detected Azure virtual network traffic associated with a phishing page or a potential source of malware or spyware.",
+  "filterSets": [
+    [
+      {
+        "id": "cc7abf00-71e7-40bd-9766-154a9ff3d37c",
+        "name": "Azure Vnet Source IP Address with Highly Suspicious Reputation",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "0e96b0ac-5ade-45be-a4a3-c81381f0bdd1",
+        "name": "Azure Vnet Destination IP Address with Highly Suspicious Reputation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "azv"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/12",
+  "lastUpdate": "2025-11-27T15:11:26.000Z"
+}

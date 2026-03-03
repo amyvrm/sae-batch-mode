@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c46e284b-ccb7-4467-ada2-0997dc1d415c",
+  "name": "Suspicious PowerShell Microsoft Edge Appx Package Manipulation",
+  "description": "Detects the execution of a PowerShell command that registers the Microsoft Edge Appx package while forcing the shutdown of applications and handling package configurations using specific parameters. This activity may indicate potentially unauthorized or unusual modifications to Appx packages.",
+  "filterSets": [
+    [
+      {
+        "id": "9459b7b4-670c-11ef-b864-0242ac120002",
+        "name": "PowerShell Microsoft Edge Appx Package Manipulation",
+        "highlight": true
+      },
+      {
+        "id": "6698b16c-3f88-43e6-bd16-5d34877adf66",
+        "name": "Fsutil Hardlink Created in Microsoft Windows",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/09/05",
+  "lastUpdate": "2025-01-22T19:14:24.000Z"
+}

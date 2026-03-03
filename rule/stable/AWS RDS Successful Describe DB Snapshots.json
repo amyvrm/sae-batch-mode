@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f8a519cd-cb86-4e0f-9a81-960d7dce558e",
+  "name": "AWS RDS Successful Describe DB Snapshots",
+  "description": "AWS Event that retrieves information about DB snapshots",
+  "filterSets": [
+    [
+      {
+        "name": "AWS RDS Successful Describe DB Snapshots",
+        "id": "0cdb314f-56bd-4311-af9a-11ad578f6b92",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

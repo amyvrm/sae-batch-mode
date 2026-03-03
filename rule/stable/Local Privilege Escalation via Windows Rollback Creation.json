@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "60387959-9fa0-407b-9660-1e86ac1c891f",
+  "name": "Local Privilege Escalation via Windows Rollback Creation",
+  "description": "Adversaries may establish persistence and elevate privileges by using an installer to trigger the execution of malicious content during system intallation on backup directiry C:/Config.msi.",
+  "filterSets": [
+    [
+      {
+        "id": "bfe58445-87fe-478d-b49b-5f45a47d7135",
+        "name": "Suspicious Rollback Configuration Creation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/09/17",
+  "lastUpdate": "2024-10-18T05:32:01.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f176776b-6ef0-44be-9605-42724ca8bcde",
+  "name": "Prevented Possible LSA Subsystem Service Dump Hacktool Execution in PowerShell via AMSI",
+  "description": "Detects microsoft detection for the alert An active 'Lsassdump' hacktool in a PowerShell script was prevented from executing via AMSI.",
+  "filterSets": [
+    [
+      {
+        "id": "be7d6310-759d-48d2-899b-1242d5fa124e",
+        "name": "Prevented Possible LSA Subsystem Service Dump Hacktool Execution in PowerShell via AMSI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc"
+    ]
+  ],
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/05/07",
+  "lastUpdate": "2025-07-28T10:22:06.000Z"
+}

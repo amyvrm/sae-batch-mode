@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "86407779-5ecc-42d8-a9a7-63bc6bab328f",
+  "name": "Malicious File Identified After Suspicious Remote File Download Activity",
+  "description": "Detection for Microsoft matched with a file after a detection for suspicious remote file download activity via command-line utilities.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "9e57d0d1-486a-423e-a470-c565c0ac9e82",
+      "name": "Suspicious Remote File Download Activity via Microsoft Telemetry",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "d7983ec7-255a-44b9-84d1-d5f8505a9852",
+      "name": "Microsoft Antivirus Matched with a File",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1105",
+    "mitre.t1059",
+    "mitre.t1518.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2026/01/29",
+  "lastUpdate": "2026-02-05T03:49:41.000Z"
+}

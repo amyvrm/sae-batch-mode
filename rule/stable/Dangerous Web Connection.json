@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1f95620d-8d93-4a47-a3c7-8844641dd780",
+  "name": "Dangerous Web Connection",
+  "description": "An endpoint connects to a Dangerous domain or URL",
+  "filterSets": [
+    [
+      {
+        "id": "6220ae59-eced-4229-8284-670418248875",
+        "name": "Dangerous Web Reputation Services Detection On Non Browser Application",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d783f345-6a81-4820-afed-0338dee6da00",
+        "name": "Malicious Domain Connection via Common Protocol",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c82e4811-34b0-4f70-871b-7105278ef1d9",
+        "name": "C&C Connection via Common Protocol",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c7dac1f8-11ef-41eb-adc1-0242ac120002",
+        "name": "HTTP Connection To Gamarue Malwares",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pdi",
+      "pao",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2025-07-17T10:35:46.000Z"
+}

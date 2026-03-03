@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b8eaef2f-a6fa-4b3a-95b2-bd9a3bdab0bd",
+  "name": "MS Exchange ProxyLogon and Command Execution",
+  "description": "This incident means Microsoft Exchange Server is under attack and an attacker was able to successfully execute commands.",
+  "riskLevel": "critical",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "db120c93-7307-4083-8593-db7df709f6e8",
+      "name": "Exploit MS Exchange Vulnerability (CVE-2021-26855) And upload A Web Shell",
+      "score": 5
+    },
+    {
+      "id": "d8a71709-a539-4267-9f9f-919e9896b874",
+      "name": "Download And Execution Of Credential Dumping Tool",
+      "score": 2
+    },
+    {
+      "id": "aa079a4f-69d4-43eb-a9a8-17995211e88d",
+      "name": "Execution of Discovery Command",
+      "score": 1
+    },
+    {
+      "id": "9d1ddb6e-ced1-4ddb-a24c-e627c431f8ea",
+      "name": "Execution Of China Chopper Webshell",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 9,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "xcs",
+      "stp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190",
+    "mitre.t1059",
+    "mitre.t1136",
+    "mitre.t1505",
+    "mitre.t1003",
+    "mitre.t1033",
+    "mitre.t1082",
+    "mitre.t1018",
+    "mitre.t1505.003"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/03/19",
+  "lastUpdate": "2024-09-09T19:11:23.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3a2446e7-207b-4e85-b340-ac3a7d5b1666",
+  "name": "Possible AMSI Bypass via Powershell",
+  "description": "Detects Usage of Powershell to bypass AMSI which may results in bypassing any Powershell detections.",
+  "filterSets": [
+    [
+      {
+        "id": "682def13-0582-4358-ac23-9552ab0f43c4",
+        "name": "Possible AMSI Bypass via Powershell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2026-01-05T11:44:43.000Z",
+  "author": "Bahaa Yamany & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2025/01/26"
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ad80a24d-4d24-48b6-8207-0426c2561312",
+  "name": "File Copy to Suspicious Location via Group Policy Script",
+  "description": "A Group Policy script (gpscript.exe) executed a command that copies files to a suspicious location. Threat actors abuse Group Policy scripts to distribute malicious files during logon or startup.",
+  "filterSets": [
+    [
+      {
+        "id": "49ad4a6a-d240-49dd-b8a4-28e2878853c0",
+        "name": "File Copy to Suspicious Location via Group Policy Script",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/02/02",
+  "lastUpdate": "2026-02-02T08:50:23.000Z"
+}

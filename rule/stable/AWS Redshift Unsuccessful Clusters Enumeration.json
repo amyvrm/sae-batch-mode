@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e41ffb2d-77c8-44c0-b472-fe8be576c5ae",
+  "name": "AWS Redshift Unsuccessful Clusters Enumeration",
+  "description": "Detects unsuccessful enumeration of Redshift cluster, a potential sign of environment discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "d695a953-a5ef-4629-921e-6035c0e9c572",
+        "name": "AWS Redshift Unsuccessful Clusters Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

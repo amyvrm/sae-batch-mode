@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3ab21d12-0918-11ee-be56-0242ac120002",
+  "name": "AWS S3 Get Bucket Logging Status",
+  "description": "Detected AWS S3 Get Bucket Logging Status",
+  "filterSets": [
+    [
+      {
+        "id": "edbd0855-fc02-46a1-bebd-fe66b90eeb31",
+        "name": "AWS S3 Get Bucket Logging Status",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/06/12",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

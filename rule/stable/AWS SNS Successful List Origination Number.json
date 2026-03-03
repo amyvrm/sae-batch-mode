@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dc794194-c8b6-4497-87bc-0b49e0d606f2",
+  "name": "AWS SNS Successful List Origination Number",
+  "description": "A successful attempt to list the account's origination number and its metadata was observed.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS SNS Successful List Origination Number",
+        "id": "b9bd1acb-21cb-47c8-bf8d-394296378a1f",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2023/11/22",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

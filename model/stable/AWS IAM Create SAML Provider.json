@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "00b129eb-8ad3-481e-bf90-8a4a5f385a1c",
+  "name": "AWS IAM Create SAML Provider",
+  "description": "Detects the successful creation of a new SAML identity provider. Malicious actors may configure the provider to accept assertions from their own identity system, enabling them to impersonate legitimate users and escalate privileges.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "40ac036e-2221-4872-86b3-0d943c7f8327",
+      "name": "AWS IAM Create SAML Provider",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1484.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2023/07/26",
+  "lastUpdate": "2025-09-08T06:00:50.000Z"
+}

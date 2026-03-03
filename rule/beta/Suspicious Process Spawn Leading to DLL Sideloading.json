@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4d35da32-47a9-46b6-83b6-045563db9a9f",
+  "name": "Suspicious Process Spawn Leading to DLL Sideloading",
+  "description": "Detects the execution of potentially malicious executables and related artifacts indicative of DLL side-loading behavior, often leveraging trusted parent processes.",
+  "filterSets": [
+    [
+      {
+        "id": "b8647138-f0ff-4d63-8850-de6654353e96",
+        "name": "Suspicious Process Spawn Leading to DLL Sideloading",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Mary Joy Ramos & Lance Albert Mendoza",
+  "team": "AMEA-IR",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-11-05T07:32:38.000Z"
+}

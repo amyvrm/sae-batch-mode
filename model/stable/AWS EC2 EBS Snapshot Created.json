@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c23e6aa-422c-4210-bbe9-a0b3231f98a4",
+  "name": "AWS EC2 EBS Snapshot Created",
+  "description": "This model detect when AWS EBS snapshots are created. It helps keep an eye on normal backup tasks or any possible data breaches. While making snapshots is usually routine, if it happens unexpectedly or out of the ordinary, it could signal someone accessing data without permission or trying to steal it. By spotting these events early, organizations can act fast to investigate and prevent data breaches, making their systems more secure.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "f5996f4c-5b73-11ee-8c99-0242ac120002",
+      "name": "AWS EC2 EBS Snapshot Created",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1578.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S and Sunil Bharti",
+  "team": "Cloud One",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

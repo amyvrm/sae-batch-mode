@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "50d866cd-16a4-4ff3-a96f-45f1f3de62a5",
+  "name": "Possible Tunneling via Ligolo-ng",
+  "description": "Detects possible tunneling connection via Ligolo-ng which is commonly used by APT groups.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "01fb5fa3-684d-4d6c-8066-5bb078717273",
+      "name": "Possible Tunneling via Ligolo-ng",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.001",
+    "mitre.t1571",
+    "mitre.t1090"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Gerardo III Jonieca & Bien Joshua Philip De Leon",
+  "team": "AMEA-IR",
+  "date": "2024/10/31",
+  "lastUpdate": "2025-02-14T03:40:20.000Z"
+}

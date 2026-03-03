@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "51db5414-44b4-44a8-85f1-d4f94440332f",
+  "name": "Startup Scripts Modification Detected",
+  "description": "This rule detects the modification in Linux 'rc' scripts, which is commonly used for persistence.",
+  "filterSets": [
+    [
+      {
+        "id": "f0fda593-6873-4acd-bc5d-7da7134880f0",
+        "name": "Identified Tampering Of Run Control Scripts",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2021/10/01",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

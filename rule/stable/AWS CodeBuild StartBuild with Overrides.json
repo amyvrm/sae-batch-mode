@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d01d537c-dcbd-4058-ad87-f5d73748e73c",
+  "name": "AWS CodeBuild StartBuild with Overrides",
+  "description": "Detects successful AWS CodeBuild StartBuild API calls that include overridden configuration parameters, which may indicate abuse of build pipelines to run unauthorized code or modify build behavior.",
+  "filterSets": [
+    [
+      {
+        "id": "9e7c02f1-2d73-4d5a-9d23-32ae0483f52d",
+        "name": "AWS CodeBuild StartBuild with Overrides",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/12/16",
+  "lastUpdate": "2026-02-11T08:35:44.000Z"
+}

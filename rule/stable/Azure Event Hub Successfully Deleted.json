@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8f0fc889-2d44-491d-948e-991f07a3358b",
+  "name": "Azure Event Hub Successfully Deleted",
+  "description": "Azure Event Hub Successfully Deleted",
+  "filterSets": [
+    [
+      {
+        "id": "38058c58-1760-4db4-a4b3-2775298a2449",
+        "name": "Azure Event Hub Successfully Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/27",
+  "lastUpdate": "2025-12-03T08:25:35.000Z"
+}

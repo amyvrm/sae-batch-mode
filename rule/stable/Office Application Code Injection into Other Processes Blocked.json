@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1d80fc54-7329-4469-8e61-cbf933ca7706",
+  "name": "Office Application Code Injection into Other Processes Blocked",
+  "description": "Microsoft attack surface reduction rule that prevents Office applications from injecting code into other processes. This detection identifies when Office apps attempt to use process injection techniques commonly employed by attackers to hide malicious payloads or migrate code execution to other processes.",
+  "filterSets": [
+    [
+      {
+        "id": "42e88ad7-65f4-4d50-a355-0c54af489155",
+        "name": "Office Application Code Injection into Other Processes Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-21T03:31:42.000Z"
+}

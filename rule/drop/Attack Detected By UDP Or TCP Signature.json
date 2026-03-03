@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "71cd6ae9-e89e-4d9f-94d5-6e0bbf603824",
+  "name": "Attack Detected By UDP Or TCP Signature",
+  "description": "Fortinet detection - Attack detected by UDP/TCP signature",
+  "filterSets": [
+    [
+      {
+        "id": "0470e6c1-2d22-4f17-91c6-b97082d0d0ee",
+        "name": "Attack Detected By UDP Or TCP Signature",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-03-19T01:35:38.000Z"
+}

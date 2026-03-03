@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "157a267e-2f11-11ee-be56-0242ac120002",
+  "name": "AWS IAM Successful Get Attached Role Policy",
+  "description": "Detected AWS IAM Successful Get Attached Role Policy.",
+  "filterSets": [
+    [
+      {
+        "id": "781e5e1e-2d48-11ee-be56-0242ac120002",
+        "name": "AWS IAM Successful Get Attached Role Policies",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|AWS|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/30",
+  "lastUpdate": "2025-06-10T05:33:36.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c8b08ee-e6da-4e08-878c-3bd869cfd600",
+  "name": "Cryptocurrency Mining Traffic",
+  "description": "Crypto mining, miner login request traffic detected",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "eaa965b5-8dde-42c5-8590-b1911e432a9a",
+      "name": "Crypto mining traffic",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1496"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2022/08/23",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

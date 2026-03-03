@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bcd92b9a-0aee-4085-a6e1-055493d6ff96",
+  "name": "Simulation URL Observed",
+  "description": "Detects testing URL for Palo Alto detection.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "18e5f8d6-e483-406f-a4d0-d8b574ee5e62",
+      "name": "Simulation URL Observed",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-08-19T07:43:46.000Z"
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e6f3695e-a35f-4d24-840d-b1a4ce574856",
+  "name": "Azure Storage Account Successful Creation Or Updation With Anonymous Access To Blob Containers",
+  "description": "Detects successful creation or updation of an Azure storage account with anonymous access to blob containers",
+  "filterSets": [
+    [
+      {
+        "id": "40f2b0cf-f579-4b73-89b5-5defca51608f",
+        "name": "Azure Storage Account Successful Creation Or Updation",
+        "highlight": true
+      },
+      {
+        "id": "726312b4-c787-401b-84fe-833658dfec7b",
+        "name": "Azure Storage Account Creation Or Updation With Anonymous Access To Blob Containers Started",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "40f2b0cf-f579-4b73-89b5-5defca51608f.correlationId equals 726312b4-c787-401b-84fe-833658dfec7b.correlationId"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Yash Verma and Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/06/02",
+  "lastUpdate": "2025-07-16T07:28:13.000Z"
+}

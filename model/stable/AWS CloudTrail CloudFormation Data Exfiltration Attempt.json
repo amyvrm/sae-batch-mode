@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "id": "23eea997-e6c6-4c79-9e9b-965260e8962a",
+  "name": "AWS CloudTrail CloudFormation Data Exfiltration Attempt",
+  "description": "This model detects AWS CloudTrail CloudFormation Data Exfiltration Attempts by monitoring API calls like DescribeStacks, GetTemplate, and ListExports. These calls are used by adversaries to access infrastructure details, such as stack configurations, templates, and exports, which can be exploited for further attacks or data exfiltration.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "c24fca07-f131-4a95-bc8d-ad6f7fc16bd4",
+      "name": "AWS CloudFormation Template Exfiltration Attempt",
+      "score": 1
+    },
+    {
+      "id": "ff9538c2-8fa3-420e-8648-b69ad82fe230",
+      "name": "AWS CloudFormation Bulk Resource Discovery",
+      "score": 1
+    },
+    {
+      "id": "560110b1-5bd4-40c7-b9d4-5cc4f81b4837",
+      "name": "AWS CloudFormation Cross Stack Export Discovery",
+      "score": 1
+    },
+    {
+      "id": "c2a5cfac-07ed-4694-9f3b-d30039ecb2dd",
+      "name": "AWS CloudFormation Individual Resource Reconnaissance",
+      "score": 1
+    },
+    {
+      "id": "2b90ac50-50c7-4144-92d9-85f383136540",
+      "name": "AWS CloudFormation Stack Enumeration Activity",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 1200,
+    "dedupSeconds": 1200
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-09-10T03:33:47.000Z"
+}

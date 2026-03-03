@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "915c2b1b-80b8-40cd-b1a7-8b1d51a8daf9",
+  "name": "Potentially Unwanted Application Identified by Microsoft",
+  "description": "Microsoft Antivirus File Detection for Potentially Unwanted Software",
+  "filterSets": [
+    [
+      {
+        "id": "8ac22f12-356d-42cf-a6cb-12fe57177dd3",
+        "name": "Potentially Unwanted Application Identified by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/06",
+  "lastUpdate": "2025-08-26T02:21:03.000Z"
+}

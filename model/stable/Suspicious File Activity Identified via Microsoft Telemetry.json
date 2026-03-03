@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aceead73-30fe-40c0-8451-1645d5e57bac",
+  "name": "Suspicious File Activity Identified via Microsoft Telemetry",
+  "description": "Microsoft Detection for Suspicious Activity within Microsoft's Telemetry",
+  "scope": "endpoint",
+  "riskLevel": "high",
+  "rules": [
+    {
+      "id": "f85e0b0e-65e6-46ca-a366-f8dbd7483ff3",
+      "name": "Suspicious File Download Activity Identified via Microsoft Telemetry",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 8000,
+    "dedupSeconds": 8000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1204.002"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/07/25",
+  "lastUpdate": "2025-11-05T04:18:28.000Z"
+}

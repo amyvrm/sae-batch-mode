@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d6a37524-67d7-48df-8c30-d04175f49262",
+  "name": "Suspected Attack Chain of a Ransomware via Lateral Movement",
+  "description": "An attempt to track the path of ransomware from credential access to lateral movement",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "060e1d73-b560-426f-87eb-184e7dd3fe46",
+      "name": "Suspicious Authentication Bypass via TCP",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "736e249f-aa2e-4a64-ba60-d94eb5e7fe72",
+      "name": "Suspicious Lateral Movement Connection for a Ransomware",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "condition": [
+    [
+      "060e1d73-b560-426f-87eb-184e7dd3fe46.interestedIp equals 736e249f-aa2e-4a64-ba60-d94eb5e7fe72.interestedIp"
+    ],
+    [
+      "060e1d73-b560-426f-87eb-184e7dd3fe46.interestedIp equals 736e249f-aa2e-4a64-ba60-d94eb5e7fe72.peerIp"
+    ]
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 9000,
+    "dedupSeconds": 9000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.001",
+    "mitre.t1021.002",
+    "mitre.t1190",
+    "mitre.t1588.002",
+    "mitre.t1569.002",
+    "threat.pua",
+    "threat.exploit",
+    "cve.2023.27532",
+    "attack.s0029"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/11/20",
+  "lastUpdate": "2025-04-04T04:43:10.000Z"
+}

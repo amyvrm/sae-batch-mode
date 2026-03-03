@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a4d04d59-cee7-4dcc-9f0e-521c7b9a388a",
+  "name": "Suspicious Mailbox Rule Forwards All Email to an Untrusted External Location",
+  "description": "A suspicious mailbox rule was created that forwards all email messages (which may contain sensitive or confidential information) to an untrusted location external to the company network [Delayed alert: Batch process detection]",
+  "filterSets": [
+    [
+      {
+        "id": "a417808c-245f-5b1c-9ef5-729e87584978",
+        "name": "Suspicious Mailbox Rule Forwards All Email to an Untrusted External Location",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sca",
+      "aad"
+    ]
+  ],
+  "author": "Zachary Lee",
+  "team": "Jaguar",
+  "date": "2022/05/16",
+  "lastUpdate": "2023-11-06T03:32:24.000Z"
+}

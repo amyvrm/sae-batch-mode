@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a7c6b3c6-7655-4622-b27f-65e129a15475",
+  "name": "AWS RDS Account Attributes Enumeration",
+  "description": "Detects attempts to retrieve AWS account attributes, which may indicate enumeration activities by an attacker or unauthorized access.",
+  "filterSets": [
+    [
+      {
+        "id": "180bdde4-f1df-4212-81f1-32f840a8e53e",
+        "name": "AWS RDS Account Attributes Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/03/10",
+  "lastUpdate": "2025-07-28T08:21:42.000Z"
+}

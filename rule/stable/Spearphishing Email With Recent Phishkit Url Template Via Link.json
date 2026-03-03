@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "49484e5d-af8c-4213-bc75-f274a6b85615",
+  "name": "Spearphishing Email With Recent Phishkit Url Template Via Link",
+  "description": "Spearphishing Email With Recent Phishkit Url Template Via Link",
+  "filterSets": [
+    [
+      {
+        "id": "11ff6d1f-a9f3-4829-a166-5a709ff0f6cd",
+        "name": "Spearphishing Email With Recent Phishkit Url Keyword Via Link",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Peter L Chang",
+  "team": "Jaguar",
+  "date": "2020/11/12",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

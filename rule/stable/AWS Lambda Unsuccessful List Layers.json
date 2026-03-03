@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aa5c483c-27b2-11ee-be56-0242ac120002",
+  "name": "AWS Lambda Unsuccessful List Layers",
+  "description": "Detected AWS Lambda Successful List Layers.",
+  "filterSets": [
+    [
+      {
+        "id": "9cf78637-7260-4af0-916f-5e0b6624c444",
+        "name": "AWS Lambda Unsuccessful List Layers",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/07/10",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

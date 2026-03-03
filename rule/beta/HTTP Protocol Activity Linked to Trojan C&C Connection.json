@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3541c22e-bef0-47f9-b28b-3088be2d5b26",
+  "name": "HTTP Protocol Activity Linked to Trojan C&C Connection",
+  "description": "Network activity involving HTTP Protocol, which is associated with a trojan connecting to a command and control (C&C) server, was observed.",
+  "filterSets": [
+    [
+      {
+        "id": "964c87d1-2fc0-5c66-90af-8ab427f825bc",
+        "name": "Private Loader Status HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/12/09",
+  "lastUpdate": "2024-12-09T14:15:39.000Z"
+}

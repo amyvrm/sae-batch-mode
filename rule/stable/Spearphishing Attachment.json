@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6b6db77b-bb15-4304-a4f6-becab420d617",
+  "name": "Spearphishing Attachment",
+  "description": "A suspicious attachment associated with phishing attacks was detected in an email message. [Delayed alert: Batch process detection]",
+  "filterSets": [
+    [
+      {
+        "id": "ef75138c-52be-451e-a041-9abb03de63b2",
+        "name": "Spearphishing Attachment",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "sca",
+      "sem",
+      "xms"
+    ]
+  ],
+  "lastUpdate": "2023-09-13T05:55:09.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "07552984-b225-4278-8bdf-a13f5e5c363a",
+  "name": "AWS EC2 IAM Instance Profile Enumeration Attempt",
+  "description": "Identifies attempts to enumerate IAM instance profile associations, which may indicate reconnaissance or privilege escalation attempts.",
+  "filterSets": [
+    [
+      {
+        "id": "502dc8a7-a953-4be8-8e89-354871f8c73c",
+        "name": "AWS EC2 IAM Instance Profile Enumeration Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/08/21",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

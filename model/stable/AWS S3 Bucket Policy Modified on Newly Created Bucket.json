@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cc4ccff8-28a4-44e8-9ee3-4338dbdd75af",
+  "name": "AWS S3 Bucket Policy Modified on Newly Created Bucket",
+  "description": "A policy change was detected on a newly created S3 bucket, potentially indicating an attempt to alter access controls or establish unauthorized access. This could be used for data exfiltration, persistence, or bypassing security measures. Review the change to ensure it aligns with security policies.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "d4d98334-4799-474c-9eef-59fb3400be8b",
+      "name": "AWS S3 Bucket Created",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "01809cde-84d2-418a-ba87-d92b4363385c",
+      "name": "AWS S3 Bucket Policy Modified",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1530"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-07-23T08:52:30.000Z"
+}

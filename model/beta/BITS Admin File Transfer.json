@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7281ab29-5ace-461e-ac70-4f3de4111cb1",
+  "name": "BITS Admin File Transfer",
+  "description": "Detects the use of BITS Admin to transfer files, which can be used for malicious purposes such as downloading malware or exfiltrating data.",
+  "scope": "endpoint",
+  "riskLevel": "low",
+  "rules": [
+    {
+      "id": "b9b3d89c-5dd8-4306-bba8-5bcab5278ea1",
+      "name": "BITS Admin File Transfer",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "tags": [
+    "mitre.t1197"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/13",
+  "lastUpdate": "2025-08-13T08:35:51.000Z"
+}

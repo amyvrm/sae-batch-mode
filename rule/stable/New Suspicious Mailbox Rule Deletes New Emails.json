@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0e9a03c3-2b4d-4179-be21-25121d9754fc",
+  "name": "New Suspicious Mailbox Rule Deletes New Emails",
+  "description": "A suspicious mailbox rule was created that moves all incoming emails to the deleted items folder and marks them as read.",
+  "filterSets": [
+    [
+      {
+        "id": "4cea4d01-1b8d-42f2-9032-a7e69e9e8b64",
+        "name": "New Suspicious Mailbox Rule Deletes New Emails",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 1
+  },
+  "requiredProducts": [
+    [
+      "xca"
+    ]
+  ],
+  "author": "Ray C Lin",
+  "team": "Jaguar",
+  "date": "2025/03/15",
+  "lastUpdate": "2025-04-04T04:24:10.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "216a64ac-feac-4fe6-b60b-d73e714488d3",
+  "name": "Custom Botnet Response Blocked",
+  "description": "SonicWall Detection - Suspected Botnet responder blocked %s, Source Custom List",
+  "filterSets": [
+    [
+      {
+        "id": "82e5cdc5-67d8-4519-a484-6ec9875f71fb",
+        "name": "Custom Botnet Response Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

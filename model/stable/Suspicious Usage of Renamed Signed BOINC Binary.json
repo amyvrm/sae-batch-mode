@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fd799481-7ed6-4e8b-9ea6-fcb3c069e42a",
+  "name": "Suspicious Usage of Renamed Signed BOINC Binary",
+  "description": "Detects suspicious usage of a legitimately signed but renamed BOINC binary.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "db334fbd-7492-485f-bd58-7e72adfd95fa",
+      "name": "Suspicious Usage of Renamed Signed BOINC Binary",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1553",
+    "mitre.t1036.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Lorenzo Laureano",
+  "team": "TAD Service Ops",
+  "date": "2024/11/21",
+  "lastUpdate": "2025-01-20T08:14:41.000Z"
+}

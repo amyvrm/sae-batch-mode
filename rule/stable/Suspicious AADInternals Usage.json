@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3676079c-992f-4eed-89e9-cc888a21f58c",
+  "name": "Suspicious AADInternals Usage",
+  "description": "AADInternals commands to access or manipulate Azure AD",
+  "filterSets": [
+    [
+      {
+        "id": "5fe804d7-3ade-4238-b6bf-0cdb97efd120",
+        "name": "Identified AADInternal Suite Commands To Access Azure AD Credentials",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "89585dcc-62fd-47de-bd69-6c65476a1998",
+        "name": "Identified Credential Operation Using Azure AD Internals Tool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2022/03/16",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

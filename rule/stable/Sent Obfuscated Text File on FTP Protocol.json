@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4e8706bb-5b11-438b-b799-b93ef33a8943",
+  "name": "Sent Obfuscated Text File on FTP Protocol",
+  "description": "Network activity involving FTP, which contains obfuscated text file was detected.",
+  "filterSets": [
+    [
+      {
+        "id": "e63932e0-1f79-4dec-aa68-7c6d98fe637f",
+        "name": "Sent Obfuscated Text File on FTP Protocol",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2025/08/07",
+  "lastUpdate": "2025-08-07T08:18:56.000Z"
+}

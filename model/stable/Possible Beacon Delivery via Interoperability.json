@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c39fc508-8260-403d-b5fe-dc0686c49bd3",
+  "name": "Possible Beacon Delivery via Interoperability",
+  "description": "Network activity associated with possible Cobalt Strike beacon delivery via the Metasploit Framework",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7bea07f0-3844-408d-b143-434f77bbba6a",
+      "name": "Possible Beacon Delivery via Interoperability",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1573.001",
+    "mitre.t1071.004",
+    "attack.s0154"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "silent": true,
+  "globalModel": true,
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2024/11/14",
+  "lastUpdate": "2025-03-27T02:19:20.000Z"
+}

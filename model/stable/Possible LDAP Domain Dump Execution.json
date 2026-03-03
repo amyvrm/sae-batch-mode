@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "db1277a3-fffe-4cb5-a7a7-2e9dcf312de1",
+  "name": "Possible LDAP Domain Dump Execution",
+  "description": "Detects execution and creation of output files by hacktool LDAP Domain Dump which is utilized for reconnaissance against a compromised Active Directory domain.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "bcadd6ac-b574-4575-a0ec-db2615167e85",
+      "name": "Possible LDAP Domain Dump Execution",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1482",
+    "mitre.t1087.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2024/10/24",
+  "lastUpdate": "2025-04-07T07:10:57.000Z"
+}

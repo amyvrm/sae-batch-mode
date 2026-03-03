@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f6d08b52-9cf9-4788-a6f2-417ae219f225",
+  "name": "Ransomware Traffic Detected",
+  "description": "Ransomware Traffic Detected",
+  "filterSets": [
+    [
+      {
+        "id": "6c67ef2e-4aaf-46a2-ba85-28469bb44999",
+        "name": "Ransomware URL Detected",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e0fc2ec6-cd31-416c-94d0-999d296c128d",
+        "name": "Ransomware Traffic Propagated",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "65924cf2-2d99-41ff-be75-f341cbbaf5f9",
+        "name": "Ransomware File Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "PeiChi Cheng",
+  "team": "ddi",
+  "date": "2020/06/24",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

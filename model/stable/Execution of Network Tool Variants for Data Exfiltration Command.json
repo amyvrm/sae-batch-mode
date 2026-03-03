@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9359dac1-c238-4ea6-93cb-9285de33c354",
+  "name": "Execution of Network Tool Variants for Data Exfiltration Command",
+  "description": "Detects use of various netcat variants for data exfiltration to a non-local IP",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "531dcf62-acc9-4149-bbb3-419407fd1a06",
+      "name": "Execution of Network Tool Variants for Data Exfiltration Command",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1048"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2025/04/29",
+  "lastUpdate": "2026-01-16T16:20:16.000Z"
+}

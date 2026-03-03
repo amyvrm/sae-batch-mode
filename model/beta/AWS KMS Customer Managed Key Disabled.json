@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "19f9040c-746c-4c0f-bec7-5b3519b72e95",
+  "name": "AWS KMS Customer Managed Key Disabled",
+  "description": "This model monitors and detects attempts to disable or schedule the deletion of an AWS Key Management Service (KMS) Customer Managed Key (CMK). Disabling or deleting a KMS key can result in the permanent loss of key material and metadata, which can lead to serious consequences such as data loss, unrecoverable encryption, and potential service disruptions.",
+  "riskLevel": "critical",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "d31816f8-7c3f-4afc-a061-821940fb9d46",
+      "name": "AWS KMS Customer Managed Key Disabled",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1070",
+    "mitre.t1485"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Nikki Madayag & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/02/12",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

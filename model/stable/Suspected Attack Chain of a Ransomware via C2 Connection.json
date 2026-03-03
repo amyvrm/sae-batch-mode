@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "id": "832efeb7-ceec-46f3-b4e8-17d5d13c053a",
+  "name": "Suspected Attack Chain of a Ransomware via C2 Connection",
+  "description": "An attempt to track the path of ransomware from credential access to C2 connection",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "060e1d73-b560-426f-87eb-184e7dd3fe46",
+      "name": "Suspicious Authentication Bypass via TCP",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "cbf85879-180a-4bef-b5ce-edccad256ae0",
+      "name": "Suspicious C2 connection for a ransomware",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "condition": [
+    [
+      "060e1d73-b560-426f-87eb-184e7dd3fe46.interestedIp equals cbf85879-180a-4bef-b5ce-edccad256ae0.interestedIp"
+    ],
+    [
+      "060e1d73-b560-426f-87eb-184e7dd3fe46.interestedIp equals cbf85879-180a-4bef-b5ce-edccad256ae0.peerIp"
+    ]
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 9000,
+    "dedupSeconds": 9000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.001",
+    "mitre.t1090.002",
+    "mitre.t1190",
+    "mitre.t1588.002",
+    "threat.pua",
+    "threat.ransom",
+    "threat.exploit",
+    "cve.2023.27532"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/11/20",
+  "lastUpdate": "2025-04-04T04:43:10.000Z"
+}

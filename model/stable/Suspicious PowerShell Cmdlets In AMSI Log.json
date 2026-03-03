@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b5e23b22-ff38-4fdd-9e3a-f3220ce9841f",
+  "name": "Suspicious PowerShell Cmdlets In AMSI Log",
+  "description": "Detects Cmdlet names from PowerView of the PowerSploit exploitation framework.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "2f47c59a-e075-4d3a-894c-e347465d84e0",
+      "name": "Suspicious PowerShell Cmdlets In AMSI Log",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/11/17",
+  "lastUpdate": "2025-01-03T12:46:51.000Z"
+}

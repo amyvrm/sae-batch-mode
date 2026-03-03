@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0ddab3f1-a4a3-4051-8dfa-9848a05f762b",
+  "name": "Usage of Renamed Rclone Binary to Potentially Evade Security Monitoring",
+  "description": "Detection of the usage of a renamed rclone binary, which can be done as  a means to evade detection",
+  "filterSets": [
+    [
+      {
+        "id": "38dcb449-6d97-4f8e-8d1d-849d4850195c",
+        "name": "Usage of Renamed Rclone Binary to Potentially Evade Security Monitoring",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/07/15",
+  "lastUpdate": "2025-10-20T05:08:35.000Z"
+}

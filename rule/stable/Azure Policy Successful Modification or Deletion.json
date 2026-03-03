@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "834ed63d-bfa4-4d70-8d84-d8705626eccd",
+  "name": "Azure Policy Successful Modification or Deletion",
+  "description": "Detects successful modification or deletion of an Azure Policy.",
+  "filterSets": [
+    [
+      {
+        "id": "e03bca4f-25fe-4ac9-a030-622ea5aedc9c",
+        "name": "Azure Policy Successful Modification or Deletion",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Ashish Verma and Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/10/10",
+  "lastUpdate": "2025-11-28T06:35:17.000Z"
+}

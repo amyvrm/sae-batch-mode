@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0d18ca0c-e93c-425d-b591-32c56f65979d",
+  "name": "AWS S3 Potential Ransomware Activity via Bulk Download and Deletion",
+  "description": "Identifies potential ransomware behavior involving bulk download and subsequent deletion of S3 objects, indicating possible data exfiltration and destruction.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "c414432d-e946-4502-9254-e5aa1a689f3c",
+      "name": "AWS S3 Potential Ransomware Activity via Bulk Download and Deletion",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1567.002",
+    "mitre.t1530",
+    "mitre.t1485"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-09-08T06:00:50.000Z"
+}

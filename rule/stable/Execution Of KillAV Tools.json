@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c28fbe4e-5844-4ae4-8f57-882d7cf7d837",
+  "name": "Execution of Kill AV Tools",
+  "description": "Kill AV tool execution is detected.",
+  "filterSets": [
+    [
+      {
+        "id": "e00afbe7-6e47-4df0-90b0-d986ad75347a",
+        "name": "Suspicious Tool (GMER) Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "27e0e065-3634-49ad-9fc5-338e8b60c167",
+        "name": "Suspicious Tool (PCHunter) Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f2e04eba-6030-4af2-8e73-56164833e73e",
+        "name": "Suspicious Tool (HRSword) Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "fa7b9e82-0933-4de3-bcb9-85cbab3c7945",
+        "name": "Suspicious Tool ProcessHacker Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "67e52fe7-a07e-45c3-9d49-e21ef0a80b78",
+        "name": "Driver Installation via Suspicious Tool Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "4adac17a-493e-4299-a6f7-612ffe11ab81",
+        "name": "Advanced Process Termination Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "144d3774-02c7-8008-e02a-53591f1b9f71",
+        "name": "Suspicious Tool (PowerTool) Execution",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "6221acf3-c2eb-4e9f-aecd-85e57ecbef26",
+        "name": "Service Deletion via TDSSKiller",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "83cc338c-2d20-4004-a2a8-3cb6d4d02754",
+        "name": "Disable Service via TDSSKiller",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Toru Yamashige",
+  "team": "JP-IR",
+  "date": "2022/02/25",
+  "lastUpdate": "2026-01-16T05:40:55.000Z"
+}

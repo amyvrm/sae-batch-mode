@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e3b59f8a-9e11-4a76-9f4f-fcabcd200984",
+  "name": "Domain Account Enumeration via LDAP",
+  "description": "Network activity involving LDAP, associated with Account Discovery behavior, has been observed. This activity may indicate an attempt to gather information about user accounts on a network.",
+  "filterSets": [
+    [
+      {
+        "id": "5b76ca26-6f4a-50be-a4a3-704c23d24f1d",
+        "name": "Account Discovery LDAP (Request) - Inbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/02/28",
+  "lastUpdate": "2025-04-03T07:24:32.000Z"
+}

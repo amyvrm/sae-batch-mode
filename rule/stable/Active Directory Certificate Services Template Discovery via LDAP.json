@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c223d662-f9a9-4bdb-a4fc-e9d466f26bf1",
+  "name": "Active Directory Certificate Services Template Discovery via LDAP",
+  "description": "Network activity involving LDAP, associated with Active Directory Certificate Services template discovery, has been observed.",
+  "filterSets": [
+    [
+      {
+        "id": "2866ed1e-1a10-5bd1-b95b-8390bd471cd3",
+        "name": "Active Directory Certificate Services Template Discovery- LDAP (Request)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "dfd11a3d-3414-5ec5-ae5e-6adc30b4f4a6",
+        "name": "Active Directory Certificate Services Template Discovery LDAP (Request) Variant 2",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/03/19",
+  "lastUpdate": "2025-05-08T05:07:42.000Z"
+}

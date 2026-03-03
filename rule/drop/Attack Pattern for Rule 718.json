@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6751d822-30c9-4fbc-87f3-b43bcf8ad831",
+  "name": "Attack Pattern for Rule 718",
+  "description": "Detects attack pattern for DDI rule 718",
+  "filterSets": [
+    [
+      {
+        "id": "ddbbe692-3e24-5b2e-8e2a-d7c3a85f5046",
+        "name": "Executable file - Email - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "62229ba2-a223-54c9-ad7b-9923adbdbf77",
+        "name": "Executable file - Email - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Harshali Mugutrao",
+  "team": "NS",
+  "date": "2022/09/02",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

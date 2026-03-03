@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ec6cec13-9f7c-4676-8a8d-27a037fd86c1",
+  "name": "AWS EC2 Key Pair Imported",
+  "description": "Detects the import of key pair into Amazon Elastic Compute Cloud (EC2). Indicates a change in the authentication method for EC2 instances, possibly for secure access. Which influences the security of EC2 instances by managing access credentials or altering authentication mechanisms for secure remote communication.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS EC2 Key Pair Imported",
+        "id": "a0578750-807c-4206-b021-9c52bddbc043",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Yash Verma",
+  "team": "SAE Threat Expert",
+  "date": "2024/01/11",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

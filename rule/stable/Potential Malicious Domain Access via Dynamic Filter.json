@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0ecec681-d037-442c-80b7-eed4d00992fb",
+  "name": "Potential Malicious Domain Access via Dynamic Filter",
+  "description": "Traffic to a domain name, which is on an allow list in the dynamic filter database, has appeared.",
+  "filterSets": [
+    [
+      {
+        "id": "70143c3f-0f2d-5171-9200-d2b2cf6d237e",
+        "name": "Potential Malicious Domain Access via Dynamic Filter",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/02/06",
+  "lastUpdate": "2026-02-11T03:25:20.000Z"
+}

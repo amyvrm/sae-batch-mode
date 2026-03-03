@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "475232ea-e2e2-4cb5-a517-331f5bb0ec30",
+  "name": "Lateral Movement After Collection of Logon Session Data",
+  "description": "Logon session data was collected and possibly used to discover remote systems.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8961e092-3427-4cd3-8762-b40e0630dc10",
+      "name": "Identify Logon Users And Session Via Powershell",
+      "score": 1
+    },
+    {
+      "id": "a442d0bf-0cf6-4e6c-9e3b-04f9126abaf8",
+      "name": "Lateral Movement Via PsExec",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "stp",
+      "ptp",
+      "xns"
+    ],
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1018"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "davidag",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2024-01-24T13:34:09.000Z"
+}

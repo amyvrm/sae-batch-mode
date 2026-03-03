@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9d65c8cf-4f40-4248-b1f7-a652b3d493dc",
+  "name": "Suspicious Rundll32 parameter",
+  "description": "Suspicious Rundll32 parameter detected by Machine Learning",
+  "filterSets": [
+    [
+      {
+        "id": "f1c0da69-f0b9-4ae5-a13b-7eb60f73fec3",
+        "name": "Uncommon DLL Loaded / DLL Loaded with Uncommon Parameters",
+        "highlight": true
+      }
+    ]
+  ],
+  "public": {
+    "processCmd": {
+      "f1c0da69-f0b9-4ae5-a13b-7eb60f73fec3": "processCmd"
+    }
+  },
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds"
+    ]
+  ],
+  "lastUpdate": "2024-09-27T15:47:19.000Z"
+}

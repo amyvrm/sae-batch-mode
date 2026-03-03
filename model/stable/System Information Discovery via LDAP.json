@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d070d04f-337a-4617-a5c6-f129ec07cf8c",
+  "name": "System Information Discovery via LDAP",
+  "description": "Network activity involving LDAP, associated with System Information Discovery, has been observed. This activity may indicate an attempt to gather sensitive system information without authorization.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b0f0eed4-ce37-4bfa-b625-27bdf9c31ab0",
+      "name": "System Information Discovery via LDAP",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1082",
+    "threat.hacktool"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/03/20",
+  "lastUpdate": "2025-03-20T08:21:30.000Z"
+}

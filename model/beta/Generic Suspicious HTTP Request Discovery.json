@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aab28e36-f9ea-4f96-8007-8288b4f81e84",
+  "name": "Generic Suspicious HTTP Request Discovery",
+  "description": "Palo Alto Networks detection for Generic Suspicious HTTP Request Detection. This signature detects invalid chunk body size in HTTP traffic.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "81f4317a-940f-47b9-b7dd-ed8771311d66",
+      "name": "Generic Suspicious HTTP Request Discovery",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "John Paul Lim",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-10T09:45:33.000Z"
+}

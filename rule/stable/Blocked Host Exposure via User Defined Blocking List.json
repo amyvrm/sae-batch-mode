@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8c8b9f4b-c31e-4ea5-84e4-ee0a73e94e0f",
+  "name": "Blocked Host Exposure via User Defined Blocking List",
+  "description": "Triggers on host network connections matching entries in a user-defined blocking list, indicating potential suspicious activity logic.",
+  "filterSets": [
+    [
+      {
+        "id": "eb6a292b-616a-4b1c-89ec-1fa981f5b2cd",
+        "name": "Blocked Host Exposure via User Defined Blocking List",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2026/01/23",
+  "lastUpdate": "2026-01-22T17:45:03.000Z"
+}

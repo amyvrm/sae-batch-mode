@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8e4d602f-ee22-434f-93b8-c58fb45fe7ff",
+  "name": "Azure Application Gateway Modified or Deleted",
+  "description": "Detects modification or deletion of Azure Application Gateways, which may indicate attempts to disrupt traffic routing or remove critical network protection layers.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "4dad860d-5f2c-45b6-b857-b763bc006afa",
+      "name": "Azure Application Gateway Modified or Deleted",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.007"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 9,
+  "globalModel": true,
+  "silent": false,
+  "author": "Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/12/31",
+  "lastUpdate": "2026-01-28T18:17:30.000Z"
+}

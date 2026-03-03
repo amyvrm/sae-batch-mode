@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0f205718-361d-47de-80ae-eee8864b555b",
+  "name": "Vulnerable ltmdm64 Library added to Service",
+  "description": "An adversary may add a vulnerable version of a specific library, such as ltmdm64, to a service. This tactic can be part of a broader strategy to gain persistence or escalate privileges by leveraging vulnerable software components within a system.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "98e4f832-dbd7-40f4-beff-0703ccfdbc45",
+      "name": "Vulnerable ltmdm64 Library added to Service",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1574.010",
+    "cve.2025.24990"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/10/23",
+  "lastUpdate": "2026-01-21T19:50:14.000Z"
+}

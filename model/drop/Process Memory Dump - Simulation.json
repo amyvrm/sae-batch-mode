@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dcfd4543-4140-42f6-a00c-e23efbaf9e11",
+  "name": "Process Memory Dump - Simulation",
+  "description": "Microsoft Detection for Process Memory Dump",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1942ec20-f182-460f-ba0d-22a06bf5a1f3",
+      "name": "Process Memory Dump",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 900,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/04/29",
+  "lastUpdate": "2025-07-28T20:43:16.000Z"
+}

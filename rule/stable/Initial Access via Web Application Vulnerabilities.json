@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2196e74c-02d7-4b04-9033-a2f9a07d7580",
+  "name": "Initial Access via Web Application Vulnerabilities",
+  "description": "Network detection of web injection and remote code execution attempts over HTTP",
+  "filterSets": [
+    [
+      {
+        "id": "e8cf1cec-43df-43f6-930c-aa9021211e4c",
+        "name": "Presence of Web Injection via HTTP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "dd7713d5-9235-4a2d-a2fc-4dcccb5d1d08",
+        "name": "Presence of Remote Code Execution via HTTP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2024/11/25",
+  "lastUpdate": "2025-04-02T05:27:36.000Z"
+}

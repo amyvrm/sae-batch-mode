@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d1e20ab8-9bc7-11ec-b909-0242ac120002",
+  "name": "AWS IAM Policy Attached To User Or Role Or Group",
+  "description": "An attachment of an AWS IAM policy to user or group or role was detected.",
+  "filterSets": [
+    [
+      {
+        "id": "cb286a4a-8e05-4376-96ca-a0904e0d60a4",
+        "name": "AWS IAM Policy Attached To A User",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "504c87a3-7be6-41d3-8a1a-5a3d0ea31b4b",
+        "name": "AWS IAM Policy Attached To A Role",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "8044eeb3-c875-40ae-87b7-b4afbe0b4bfc",
+        "name": "AWS IAM Policy Attached To A Group",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/03/07",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

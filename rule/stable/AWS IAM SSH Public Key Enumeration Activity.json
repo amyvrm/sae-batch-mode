@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c87c5b1e-9d24-4bf2-9a42-a47ddc056f84",
+  "name": "AWS IAM SSH Public Key Enumeration Activity",
+  "description": "Identifies attempts to enumerate SSH public keys associated with an IAM user account.",
+  "filterSets": [
+    [
+      {
+        "id": "94011654-1d58-4ab3-a0c4-e0e62ac95605",
+        "name": "AWS IAM SSH Public Key Enumeration Activity",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

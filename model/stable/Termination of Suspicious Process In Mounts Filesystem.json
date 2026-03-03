@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "42c11214-0d2f-48a5-880c-c1ab401076e9",
+  "name": "Termination of Suspicious Process In Mounts Filesystem",
+  "description": "Some cryptocurrency mining malware identify then kill off processes for competing malware to ensure it is not competing for resources.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "4c93b8f6-bede-4339-9eef-d965f25aa7c7",
+      "name": "Termination of Suspicious Process In Mounts Filesystem",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1083",
+    "mitre.t1496"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/05/01",
+  "lastUpdate": "2024-09-09T19:11:23.000Z"
+}

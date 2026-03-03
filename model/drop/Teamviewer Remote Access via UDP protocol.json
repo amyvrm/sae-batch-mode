@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "42e893de-d1a0-42f1-ac6b-ea6f2cf60321",
+  "name": "Teamviewer Remote Access via UDP protocol",
+  "description": "Remote access software using TeamViewer detected via DNS protocol",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "204ac327-d994-4382-bd50-aa2125787d39",
+      "name": "Teamviewer Remote Access via UDP protocol",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "CSG",
+  "date": "2024/02/29",
+  "lastUpdate": "2025-04-03T08:28:58.000Z"
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7683b4d4-3e1a-414b-bb67-3cf446c77d0a",
+  "name": "Suspicious Connection Through Hidden Tor Proxy",
+  "description": "Detect Tor SOCKS connection through a hidden Tor proxy",
+  "filterSets": [
+    [
+      {
+        "id": "62675b95-85b4-45bf-a132-35d597d58ce4",
+        "name": "Tor SOCKS Proxy Connection",
+        "highlight": true
+      },
+      {
+        "id": "f8c84b8b-53ab-4c5a-9860-82e2d2df8d00",
+        "name": "Tor Proxy Executable Masquerading",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "62675b95-85b4-45bf-a132-35d597d58ce4",
+        "name": "Tor SOCKS Proxy Connection",
+        "highlight": true
+      },
+      {
+        "id": "c70927eb-5a98-4e58-8756-0922064b55bd",
+        "name": "Tor Proxy Execution With Unusual Executable Names",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao"
+    ]
+  ],
+  "author": "Joseph C Chen",
+  "team": "CSS",
+  "date": "2020/07/23",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

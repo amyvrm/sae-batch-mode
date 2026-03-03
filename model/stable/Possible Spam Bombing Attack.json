@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7bec8e8b-1964-43e6-b550-d11c093011fd",
+  "name": "Possible Spam Bombing Attack",
+  "description": "Detects unusually high volume of spam mails from an external domain in a short period of time, which may indicate a spam bombing attack.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "0a8af5d8-5762-42de-aeb0-5e3179260337",
+      "name": "Possible Spam Bombing Attack",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1667"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Fran Hong",
+  "team": "Jaguar",
+  "date": "2026/01/19",
+  "lastUpdate": "2026-02-06T08:54:51.000Z"
+}

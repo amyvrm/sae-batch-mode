@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e4627b25-9352-43d3-aace-045eef1dd53c",
+  "name": "Process Execution From Memory in Container",
+  "description": "Process executed directly from memory or shared memory which indicate to fileless attack.",
+  "filterSets": [
+    [
+      {
+        "id": "961ff63f-98db-5a79-b931-6fc3cdf7632a",
+        "name": "File Executed from Memory",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bd44ceb4-fec5-5cc6-b6d9-4dbeafdecc9d",
+        "name": "Shared Memory Execution in the Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2023/10/10",
+  "lastUpdate": "2025-01-21T02:05:28.000Z"
+}

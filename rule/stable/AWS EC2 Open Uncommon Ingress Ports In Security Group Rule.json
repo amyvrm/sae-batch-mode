@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "96363e99-ac0b-407c-8cd3-eaea5aeb7d3c",
+  "name": "AWS EC2 Open Uncommon Ingress Ports In Security Group Rule",
+  "description": "Detected addition of rule in security group containing open ingress traffic on uncommon ports.",
+  "filterSets": [
+    [
+      {
+        "id": "e4c3823a-f32b-4276-a9e0-ee9b96d56b5a",
+        "name": "AWS EC2 Open Uncommon Ingress Ports In Security Group Rule",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/10/19",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1131604b-146a-4bd1-ba46-b51150c521fd",
+  "name": "Possible Hacktool TCP Traffic to Internet",
+  "description": "Possible Remcos TCP traffic to the internet detected on the network. Review if the usage of remcos is valid.",
+  "filterSets": [
+    [
+      {
+        "id": "b301f16f-9887-41c2-aa54-c05cddb5aa25",
+        "name": "Possible Hacktool TCP Traffic to Internet",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/04/15",
+  "lastUpdate": "2025-05-14T09:07:28.000Z"
+}

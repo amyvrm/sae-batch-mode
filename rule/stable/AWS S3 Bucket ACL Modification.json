@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1de3a4ff-2934-43fb-b1f1-672e3057bcd7",
+  "name": "AWS S3 Bucket ACL Modification",
+  "description": "Modifications to an S3 bucket's ACL detected, potentially indicating unauthorized access attempts, privilege escalation, or potential data exposure.",
+  "filterSets": [
+    [
+      {
+        "id": "14b6bcbc-683e-4ade-8bdd-425bf2c07e54",
+        "name": "AWS S3 Bucket ACL Modification",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/03/20",
+  "lastUpdate": "2025-06-17T10:36:27.000Z"
+}

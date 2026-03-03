@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e8cdb938-12b3-4867-9813-7bb1e79f00ba",
+  "name": "Windows Remote Desktop Access",
+  "description": "An attempt to access a machine using Microsoft Windows Remote Desktop Protocol was detected.",
+  "filterSets": [
+    [
+      {
+        "id": "734b81ee-13e1-4391-879c-136d686d9f49",
+        "name": "Windows Remote Desktop Access",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2024/04/16",
+  "lastUpdate": "2024-04-20T04:55:26.000Z"
+}

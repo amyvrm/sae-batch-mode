@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5aeff471-ad15-4937-801c-acdd17be1847",
+  "name": "Cabinet File Expanded via Lolbin",
+  "description": "Detects a cabinet file being expanded as part of a masquerading mechanism",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "b0168ffa-37b5-433c-9219-46bd12f88bb0",
+      "name": "Cabinet File Expanded via Lolbin",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.003",
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/01/28",
+  "lastUpdate": "2025-02-07T18:15:43.000Z"
+}

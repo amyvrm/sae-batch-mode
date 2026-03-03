@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "568ccf86-14df-4c0d-bc44-b8f16835b24d",
+  "name": "Usage of Renamed WinRar to Potentially Bypass Security Monitoring",
+  "description": "Detection of a renamed WinRAR file that may be used to bypass security monitoring.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "d69d7d32-2a41-4422-a120-97c79a458983",
+      "name": "Usage of Renamed WinRar to Potentially Bypass Security Monitoring",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1036"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/06/06",
+  "lastUpdate": "2024-06-10T09:08:56.000Z"
+}

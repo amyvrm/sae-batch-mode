@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2cea1cd2-6ec6-47e2-9ccb-59fe69a6c961",
+  "name": "Execution of Binary from System32 via CMD using Svchost",
+  "description": "Suspicious behavior of Svchost executing files in Windows System32 Folder via CMD",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "45bdcb6c-5cf6-4dab-b562-e0c9866248f1",
+      "name": "Execution of Binary from System32 via CMD using Svchost",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1218"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/10/31",
+  "lastUpdate": "2024-12-03T06:44:48.000Z"
+}

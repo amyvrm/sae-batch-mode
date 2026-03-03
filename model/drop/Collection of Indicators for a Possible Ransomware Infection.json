@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d8022643-359e-4131-bd0f-14f9de7c650e",
+  "name": "Collection of Indicators for a Possible Ransomware Infection",
+  "description": "Collection of behaviors possibly leading to LOCKBIT Ransomware.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "33f6b1d9-073d-487e-8f37-8f1693a3a149",
+      "name": "Possible Multiple Lateral Movement Attempt via SMB Protocol",
+      "score": 1
+    },
+    {
+      "id": "47d05f4b-6685-4030-b2b3-8b7f4654cc8b",
+      "name": "Identified Creation Or Modification Of Windows Services",
+      "score": 1
+    },
+    {
+      "id": "169f82ae-d64b-4dfc-b030-aca8c9a2b388",
+      "name": "Account Discovery on Local System via Net.exe",
+      "score": 1
+    },
+    {
+      "id": "7f8c886a-a008-4480-b7ec-6258976893e9",
+      "name": "Password Modification via Net user",
+      "score": 1
+    },
+    {
+      "id": "86717647-3467-4098-8930-23c4abc861b7",
+      "name": "Add Account to Local Administrators Group",
+      "score": 1
+    },
+    {
+      "id": "1c153e6d-1ad5-416e-8c9d-519dd51c98fe",
+      "name": "Terminate Security Application Processes",
+      "score": 2
+    },
+    {
+      "id": "66cb8a43-9d50-4fd6-ae81-1ec7e099f5eb",
+      "name": "Multiple Failed Logons via Windows Event",
+      "score": 2
+    },
+    {
+      "id": "f2d58893-ba20-44f9-993e-6e209a40fb73",
+      "name": "Multiple Failed Logons via Network",
+      "score": 2
+    },
+    {
+      "id": "86e2a43b-9d0c-4e70-b3db-fafe2f126c4e",
+      "name": "Remote System Discovery via GetCurrentDomain",
+      "score": 2
+    },
+    {
+      "id": "44a61697-5bb1-451c-92bb-331f952652c6",
+      "name": "RDP Connection",
+      "score": 2
+    },
+    {
+      "id": "11b2c87d-c98b-4a40-b944-ba6e28d7a644",
+      "name": "Mshta Executing Suspicious Powershell",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 8,
+    "withinSeconds": 86400,
+    "dedupSeconds": 86400
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1210",
+    "mitre.t1543.003",
+    "mitre.t1087.001",
+    "mitre.t1531",
+    "mitre.t1136",
+    "mitre.t1562.001",
+    "mitre.t1110",
+    "mitre.t1059.001",
+    "mitre.t1018",
+    "mitre.t1021",
+    "mitre.t1218",
+    "mitre.t1218.005"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Andre Filipe Codod",
+  "team": "TAD Service Ops",
+  "date": "2024/08/12",
+  "lastUpdate": "2025-10-30T06:54:31.000Z"
+}

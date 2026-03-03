@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f39b4bc8-f38a-413b-bf5f-8f689a97d88c",
+  "name": "Possible Early Indicator of RansomHub Ransomware related to Defense Evasion",
+  "description": "Detects possible early indication of RansomHub tactics utilizing legitimate system administration processes to evade defenses.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "ffc44c41-df1f-4110-8ca3-b6fb72c2ddf7",
+      "name": "Persistence via Auto Logon and Safe Boot Setting Modification",
+      "score": 1
+    },
+    {
+      "id": "54c432c7-b179-4a28-a718-85d9793a42cd",
+      "name": "Defense Evasion via Event Log Clearing and Remote Symlinks",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562.009",
+    "mitre.t1070.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "TAD Service Ops",
+  "date": "2024/08/20",
+  "lastUpdate": "2024-09-12T23:12:39.000Z"
+}

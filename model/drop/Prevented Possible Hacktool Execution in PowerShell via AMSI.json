@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e4eadb86-f025-48ea-b15b-9520cdf94bb3",
+  "name": "Prevented Possible LSA Subsystem Service Dump Hacktool Execution in PowerShell via AMSI",
+  "description": "Detects microsoft detection for the alert An active 'Lsassdump' hacktool in a PowerShell script was prevented from executing via AMSI.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f176776b-6ef0-44be-9605-42724ca8bcde",
+      "name": "Prevented Possible LSA Subsystem Service Dump Hacktool Execution in PowerShell via AMSI",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc"
+    ]
+  ],
+  "tags": [
+    "mitre.t1003.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/05/07",
+  "lastUpdate": "2025-07-28T10:22:06.000Z"
+}

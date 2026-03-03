@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e1a7d474-7750-4f71-a86b-13c769abe189",
+  "name": "ESXi Admin Permissions Assigned To Account via ESXCLI",
+  "description": "Detects execution of esxcli command for system or network discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "2a795f2c-f1be-40d1-9517-6e58a8ac413b",
+        "name": "ESXi Admin Permissions Assigned To Account via ESXCLI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Nora Bowden & Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/05/21",
+  "lastUpdate": "2024-06-13T03:27:16.000Z"
+}

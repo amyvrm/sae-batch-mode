@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3072db28-c5d4-4ce0-b8c8-d71d1c182583",
+  "name": "TOR Network Traffic",
+  "description": "Detection of TOR network traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "39b3e034-6404-4923-8f33-786f7c649789",
+        "name": "TOR network traffic",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2022/08/22",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

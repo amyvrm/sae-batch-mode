@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4e7c4855-e2b1-426d-ac86-15e0e46787f7",
+  "name": "Cronjob Creation via Docker API",
+  "description": "Detects the creation or modification of cron jobs via Docker API, which could be used by attackers for persistence.",
+  "filterSets": [
+    [
+      {
+        "id": "8304d678-3544-495e-b7b0-53c8669b5591",
+        "name": "Cronjob Creation via Docker API",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/09",
+  "lastUpdate": "2025-10-01T07:09:57.000Z"
+}

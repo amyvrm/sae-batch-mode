@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ae67ea11-b7d3-4dde-b176-8f5f69f1daa8",
+  "name": "A User With Admin Privileges Has Successfully Logged In",
+  "description": "Fortinet detection - A user with Admin privileges has successfully logged in",
+  "filterSets": [
+    [
+      {
+        "id": "2ab8b50a-b7ef-46b9-a748-e170f3adafe8",
+        "name": "A User With Admin Privileges Has Successfully Logged In",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

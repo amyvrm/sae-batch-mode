@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "00c4ec51-037b-40a5-8c4c-b171f9e12567",
+  "name": "Azure Network Security Group Successfully Created or Updated",
+  "description": "Detects successful updation of security admin rule  which may indicate an attacker trying to allow certain traffic to further compromise the azure compute associated with it.",
+  "filterSets": [
+    [
+      {
+        "id": "9c8afb4d-45d6-4235-bedd-541dfdc80f2d",
+        "name": "Azure Network Security Group Successfully Updated",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Arun Shaji & Dexter Esteves",
+  "team": "Cloud One",
+  "date": "2025/12/08",
+  "lastUpdate": "2025-12-10T08:42:59.000Z"
+}

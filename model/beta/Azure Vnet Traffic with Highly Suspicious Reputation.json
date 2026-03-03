@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "47848f3e-34de-427e-ad07-02cf9a79ed7b",
+  "name": "Azure Vnet Traffic with Highly Suspicious Reputation",
+  "description": "Detected Azure virtual network traffic associated with a phishing page or a potential source of malware or spyware",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "283daa10-ea90-43a5-9f60-bc592fc9e8cf",
+      "name": "Azure Vnet Traffic with Highly Suspicious Reputation",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "azv"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/12",
+  "lastUpdate": "2025-11-27T15:11:26.000Z"
+}

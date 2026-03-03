@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2be75f88-84f4-44f1-9519-8dd40dd6b915",
+  "name": "Linux Service Created in Container",
+  "description": "Identifies the creation of a Linux service within a containerized environment.",
+  "filterSets": [
+    [
+      {
+        "id": "0ddea2b7-3cf1-4896-8dfd-fb5d0af41ce8",
+        "name": "RC Scripts Updated in Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "d06dbcff-9a5a-40d8-81d8-2c73df8b9601",
+        "name": "Linux Systemd Service Created in Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "c1c4a2cb-df96-48a5-93af-b57e8d2a1037",
+        "name": "Init.d Script Creation in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2023/10/11",
+  "lastUpdate": "2024-01-31T21:52:25.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "970771f0-2eae-4366-801d-f703f0507a1d",
+  "name": "Possible Active Directory Discovery via ShadowHound",
+  "description": "ShadowHound is a set of PowerShell scripts for Active Directory enumeration without the need for introducing known-malicious binaries like SharpHound",
+  "filterSets": [
+    [
+      {
+        "id": "73904b84-0693-48b1-a0c6-f5722f676f6f",
+        "name": "Possible Active Directory Discovery via Shadowhound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2024/12/02",
+  "lastUpdate": "2025-02-14T07:06:11.000Z"
+}

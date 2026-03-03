@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ed84106d-6ec7-4cd2-b679-f266d2517a2c",
+  "name": "AWS Temporary Console Access Token Generation",
+  "description": "Monitors generation of temporary authentication tokens that enable access to the AWS Management Console.",
+  "filterSets": [
+    [
+      {
+        "id": "652eee7f-7a79-440d-bd48-c036908ac149",
+        "name": "AWS Temporary Console Access Token Generation",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

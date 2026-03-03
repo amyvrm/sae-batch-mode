@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "914127bc-5fbf-4502-bc9a-991088ecc6c0",
+  "name": "Suspicious Execution of ConfigSecurityPolicy",
+  "description": "Possible data exfiltration or download of suspicious payload using the binary part of Windows Defender.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e221593f-f0f5-4595-87c1-0adb7a96815d",
+      "name": "Suspicious Execution of ConfigSecurityPolicy",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1567",
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Evelyn Valenzuela & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2024/11/15",
+  "lastUpdate": "2025-09-09T08:20:57.000Z"
+}

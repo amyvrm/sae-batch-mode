@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "047a6d18-cbc8-4011-9564-6127a2b88a30",
+  "name": "Spearphishing Email Impersonating Financial Institute via Link",
+  "description": "A suspicious URL associated with impersonated financial institutions was detected in an email message.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "74961a22-d227-4c9b-9e1b-0373be033515",
+      "name": "Spearphishing Email Impersonate Financial Institute via Link",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Ashlie Lin",
+  "team": "Jaguar",
+  "date": "2020/10/16",
+  "lastUpdate": "2025-07-31T02:21:34.000Z"
+}

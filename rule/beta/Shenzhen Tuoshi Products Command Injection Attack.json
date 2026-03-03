@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "56841a8e-c101-4f8b-88a3-705b50b162a2",
+  "name": "Shenzhen Tuoshi Products Command Injection Attack",
+  "description": "Detects command injection attacks targeting Shenzhen Tuoshi products through Check Point SmartDefense, specifically monitoring for CVE-2024-53944 exploitation attempts.",
+  "filterSets": [
+    [
+      {
+        "id": "7636bcee-9290-40b5-b783-8835514acfee",
+        "name": "Shenzhen Tuoshi Products Command Injection Attack",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Check Point"
+    ]
+  ],
+  "author": "Sigma Protocol AI",
+  "team": "Third Party Operations",
+  "date": "2026/01/21",
+  "lastUpdate": "2026-01-21T07:48:31.000Z"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "23d7ebf2-3871-41cd-a225-c2249b4c1fcd",
+  "name": "Encoded Powershell Execution From SysAid Server",
+  "description": "Detection of encoded powershell execution from SysAid Server",
+  "filterSets": [
+    [
+      {
+        "id": "931d8710-fca3-42e2-acdd-e35faa8029c6",
+        "name": "Encoded Powershell Execution From SysAid Server 1",
+        "highlight": true
+      },
+      {
+        "id": "9cfd1b8b-712d-48dc-9df3-4fc9fc324c21",
+        "name": "Encoded Powershell Execution From SysAid Server 2",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh & Junesthery Dela Cruz",
+  "team": "EU-IR",
+  "date": "2023/11/09",
+  "lastUpdate": "2024-01-23T03:08:09.000Z"
+}

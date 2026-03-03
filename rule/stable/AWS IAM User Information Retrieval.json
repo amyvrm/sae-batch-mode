@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8533ac1b-c3f9-472c-830e-fc6c4924bf99",
+  "name": "AWS IAM User Information Retrieval",
+  "description": "Monitors retrieval of IAM user information including creation date, path, ID, and ARN, which could indicate legitimate user management activities or reconnaissance attempts to understand account user structure and details for potential privilege escalation or lateral movement attacks.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS IAM User Information Retrieval",
+        "id": "6eabef12-edd3-42bb-89c5-aa8a7bc19d2b",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T11:20:55.000Z"
+}

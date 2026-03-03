@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "244d2faa-7b38-424b-9562-97d61ebbf8eb",
+  "name": "Port Sweep via Advanced Port Scanner",
+  "description": "Port sweep via Advanced Port Scanner tool, was detected on the network via TCP and HTTP.",
+  "filterSets": [
+    [
+      {
+        "id": "91ac8b5e-df67-5d88-9b6c-1c0d01c82995",
+        "name": "Advanced Port Scanner HTTP (Request)",
+        "highlight": true
+      },
+      {
+        "id": "65738ce4-50e5-5c4f-863e-c32fde208628",
+        "name": "Port Sweep",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "91ac8b5e-df67-5d88-9b6c-1c0d01c82995.peerIp equals 65738ce4-50e5-5c4f-863e-c32fde208628.peerIp"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Aeron Lloyd Bacierto",
+  "team": "DDI",
+  "date": "2025/01/23",
+  "lastUpdate": "2025-03-19T08:46:25.000Z"
+}

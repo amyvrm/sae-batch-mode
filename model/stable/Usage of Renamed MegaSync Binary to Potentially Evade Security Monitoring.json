@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4a563899-b694-4659-b345-9454470681ab",
+  "name": "Usage of Renamed MegaSync Binary to Potentially Evade Security Monitoring",
+  "description": "Detection of the usage of a renamed MegaSync binary, which can be done as a means to evade security monitoring",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "fb41aba0-0ec9-45b1-bc9b-8785b411ac85",
+      "name": "Usage of Renamed Megasync Binary to Potentially Evade Security Monitoring",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1036",
+    "mitre.t1567"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/07/15",
+  "lastUpdate": "2025-11-03T15:20:21.000Z"
+}

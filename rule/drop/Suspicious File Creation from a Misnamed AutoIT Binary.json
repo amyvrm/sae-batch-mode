@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d5fbdb3c-1b57-454f-9570-89c2b46c6a4e",
+  "name": "Suspicious File Creation from a Misnamed AutoIT Binary",
+  "description": "Detects suspicious file creation from a misnamed AutoIT binary which could lead to system compromise",
+  "filterSets": [
+    [
+      {
+        "id": "60c38521-0cd9-4179-adc1-60011efaf14b",
+        "name": "Misnamed Executable",
+        "highlight": true
+      },
+      {
+        "id": "a4e432d7-b9b1-4b9a-ae01-6d54e2971b85",
+        "name": "Executable Dropped Via Non-Executable Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "60c38521-0cd9-4179-adc1-60011efaf14b.processCmd equals a4e432d7-b9b1-4b9a-ae01-6d54e2971b85.processCmd"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "John Paul Lim",
+  "team": "TAD Service Ops",
+  "date": "2024/09/24",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

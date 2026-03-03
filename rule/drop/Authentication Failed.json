@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d5e19e5b-137c-488f-8118-e48ea7320035",
+  "name": "Authentication Failed",
+  "description": "Fortinet detection - Authentication failed",
+  "filterSets": [
+    [
+      {
+        "id": "2ad6f1f2-731f-4c36-9cf0-b106f68a7274",
+        "name": "Authentication Failed",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

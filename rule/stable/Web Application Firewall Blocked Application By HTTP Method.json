@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c7c98967-9a1d-411e-8ed2-92eb053e7bd4",
+  "name": "Web Application Firewall Blocked Application By HTTP Method",
+  "description": "Fortinet detection - Web application firewall blocked application by HTTP method",
+  "filterSets": [
+    [
+      {
+        "id": "eecac7f3-2fa6-464b-b860-7aeff4090299",
+        "name": "Web Application Firewall Blocked Application By HTTP Method",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5af3e44b-dd89-4d8b-9633-c3f1d73cdaaa",
+  "name": "Exfiltration via Commandline in Container",
+  "description": "Adversaries may exfiltrate files after the collection stage, such as AWS credentials within the container via commandline tools.",
+  "filterSets": [
+    [
+      {
+        "id": "dece1407-f69d-4b7c-a2dd-86be9d309635",
+        "name": "File Upload via curl in Container",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "489e107f-27b1-4509-b3cf-d314f7e736c4",
+        "name": "File Upload via wget in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/01/11",
+  "lastUpdate": "2025-07-09T09:17:02.000Z"
+}

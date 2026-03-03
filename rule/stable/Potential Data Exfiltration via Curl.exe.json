@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ee75f03e-ce18-4125-8ec4-61f8bcd2243c",
+  "name": "Potential Data Exfiltration via Curl.exe",
+  "description": "Detects the execution of the 'curl' process with 'upload' flags. Which might indicate potential data exfiltration.",
+  "filterSets": [
+    [
+      {
+        "id": "3e2a03fb-4d37-47e0-9190-ee65d22712f8",
+        "name": "Potential Data Exfiltration via Curl.exe",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/15",
+  "lastUpdate": "2024-03-22T15:07:20.000Z"
+}

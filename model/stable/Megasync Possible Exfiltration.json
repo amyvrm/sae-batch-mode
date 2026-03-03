@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8f8e2c0a-465d-410a-98bf-c0c021fac283",
+  "name": "MEGA Possible Exfiltration",
+  "description": "Detects multiple files uploaded to MEGA",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "1310c0f8-448a-4019-b492-5a7bd88a4b9f",
+      "name": "Megasync Multiple Files Uploaded",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "stp",
+      "ptp"
+    ]
+  ],
+  "tags": [
+    "mitre.t1219"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2022/03/14",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

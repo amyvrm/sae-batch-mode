@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e38dab87-2598-4a6e-bd0b-071ff8e62ee0",
+  "name": "Files Deleted in Container",
+  "description": "Large number of files deleted in the container.",
+  "riskLevel": "high",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "a20d1c3e-d458-4b4d-aaf9-e77698c51d20",
+      "name": "Files Deleted in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1070.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2023/09/19",
+  "lastUpdate": "2025-05-28T16:38:32.000Z"
+}

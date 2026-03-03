@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f6119ffd-9dc1-4e01-a5cb-0a7d1609826e",
+  "name": "AWS Root User Login",
+  "description": "Detects Successful Root User Signin Attempts based on AWS CloudTrail logs",
+  "filterSets": [
+    [
+      {
+        "id": "32039c89-0232-48f1-b759-ca36bd49bef2",
+        "name": "AWS Root User Login",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 10,
+    "dedupSeconds": 10
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2022/09/09",
+  "lastUpdate": "2025-06-27T07:15:43.000Z"
+}

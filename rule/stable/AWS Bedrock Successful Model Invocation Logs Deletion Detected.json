@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "85810ce1-0798-44b3-9229-c4f88c90ebbd",
+  "name": "AWS Bedrock Successful Model Invocation Logs Deletion Detected",
+  "description": "This rule identifies the deletion of AWS Bedrock model invocation logs.",
+  "filterSets": [
+    [
+      {
+        "id": "1fb585c5-d1c9-4e4b-a982-4a95eaae2aa4",
+        "name": "AWS Bedrock Successful Model Invocation Logs Deletion Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/07/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

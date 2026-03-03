@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e953b47e-ce13-4849-a5f9-d65f08e0906c",
+  "name": "AWS Bedrock Unsuccessful Models Enumeration Detected",
+  "description": "Detects unsuccessful enumeration of models in AWS Bedrock services, indicating potential reconnaissance activity.",
+  "filterSets": [
+    [
+      {
+        "id": "ae4d701c-e2ba-4e69-93b2-99de4ffc9174",
+        "name": "AWS Bedrock Unsuccessful Models Enumeration Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti and Yash Verma",
+  "team": "Cloud One",
+  "date": "2024/10/15",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

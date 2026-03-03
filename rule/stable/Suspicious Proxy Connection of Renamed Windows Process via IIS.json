@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8566a78e-f35d-4848-a14a-bc2049ed47c3",
+  "name": "Suspicious Proxy Connection of Renamed Windows Process via IIS",
+  "description": "Detects proxy connection of renamed windows process via IIS which indicates possible compromise.",
+  "filterSets": [
+    [
+      {
+        "id": "7f9957c9-0707-41f9-9841-827c537d184c",
+        "name": "Suspicious Proxy Connection of Renamed Windows Process via IIS",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/04/22",
+  "lastUpdate": "2025-06-02T07:05:50.000Z"
+}

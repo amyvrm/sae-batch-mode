@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8f94bec7-3ea3-4d1b-93ca-e876a012a593",
+  "name": "AWS S3 Bucket Tag Deletion",
+  "description": "This model detects the use of the S3 DeleteBucketTagging API call, which indicates an attempt to remove tags from an S3 bucket. The removal of bucket tags can disrupt these processes, impact resource management policies, or obscure the purpose and ownership of the bucket.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "b34f363b-26a3-4559-b694-9d59613af69d",
+      "name": "AWS S3 Bucket Tag Deletion",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "tags": [
+    "mitre.t1098"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/03/24",
+  "lastUpdate": "2025-09-10T03:33:47.000Z"
+}

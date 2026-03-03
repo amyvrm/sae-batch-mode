@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ab5adbd2-9aa5-4a42-8687-0311382e4107",
+  "name": "Possible AMSI Bypass via Powershell",
+  "description": "Detects Usage of Powershell to bypass AMSI which may results in bypassing any Powershell detections.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "3a2446e7-207b-4e85-b340-ac3a7d5b1666",
+      "name": "Possible AMSI Bypass via Powershell",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055.001",
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Bahaa Yamany & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2025/01/26",
+  "lastUpdate": "2026-01-05T11:44:43.000Z"
+}

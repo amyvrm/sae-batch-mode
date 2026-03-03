@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a994f61c-9d75-48d5-ba2a-9f251ef145d9",
+  "name": "Possible FlowCloud Process Execution",
+  "description": "Detection of FlowCloud backdoor being executed. FlowCloud is related to APT Group Earth Harpy.",
+  "filterSets": [
+    [
+      {
+        "id": "2c81010e-82ee-415f-9d6a-dbd7ddb2231c",
+        "name": "FlowCloud Process Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2024/06/12",
+  "lastUpdate": "2024-06-18T08:07:56.000Z"
+}

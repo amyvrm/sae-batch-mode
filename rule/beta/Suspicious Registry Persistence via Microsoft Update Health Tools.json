@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5b1644da-e428-4df1-b0c6-dcb6371d8487",
+  "name": "Suspicious Registry Persistence via Microsoft Update Health Tools",
+  "description": "Detects suspicious registry modification related to Microsoft Update Health Tools which will load suspicious file.",
+  "filterSets": [
+    [
+      {
+        "id": "867d1209-2fbe-4b86-be39-49a4857551d9",
+        "name": "Suspicious Registry Persistence via Microsoft Update Health Tools",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/06/02",
+  "lastUpdate": "2025-06-10T08:53:25.000Z"
+}

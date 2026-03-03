@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f9d96234-3fa0-4dde-bacd-5a6b168bb473",
+  "name": "Potential SMB2 NetShareEnum API Discovery Activity",
+  "description": "Network activity involving the SMB2 protocol, associated with the use of the NetShareEnum API, indicates a potential discovery attempt.",
+  "filterSets": [
+    [
+      {
+        "id": "84dd51b8-e734-5baa-9cb4-0f3825d03f72",
+        "name": "Possible Discovery Using Netshareenum Api SMB2 (Request) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "24e5a002-b69e-50bb-b296-db61d3ec2750",
+        "name": "Possible Discovery Using Netshareenum Api SMB2 (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Aeron Lloyd Bacierto",
+  "team": "DDI",
+  "date": "2025/01/23",
+  "lastUpdate": "2025-02-14T07:38:36.000Z"
+}

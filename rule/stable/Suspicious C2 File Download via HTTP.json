@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e0b72616-d797-493a-926a-ca1787397f9e",
+  "name": "Suspicious C2 File Download via HTTP",
+  "description": "A C2 connection linked to a ransomware was used to download files via HTTP",
+  "filterSets": [
+    [
+      {
+        "id": "b582612d-c9d8-5893-9c78-f05fb647646e",
+        "name": "Python Download HTTP (Response)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cb68a838-90aa-5a30-a80a-36af5b45f486",
+        "name": "Pyc Download HTTP (Response)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/11/11",
+  "lastUpdate": "2024-11-21T07:40:02.000Z"
+}

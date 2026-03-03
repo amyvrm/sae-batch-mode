@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "211082fd-4ae5-4590-9e9a-1abb20bdccd0",
+  "name": "Possible NetExec Tool Execution",
+  "description": "Detects execution of NetExec tool to perform credential dumping and discovery which commonly associated with Lockbit ransomware.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "15fe2c44-982d-44bd-ada0-90ee6432bb63",
+      "name": "Possible NetExec Tool Execution",
+      "score": 10
+    },
+    {
+      "id": "3780cb98-7ba0-4237-b4b7-b1e920d57ed5",
+      "name": "Possible NetExec Related Dropped File",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 15,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1003.001",
+    "mitre.t1082"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jehhan Marcelo & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2024/10/23",
+  "lastUpdate": "2025-04-16T08:49:04.000Z"
+}

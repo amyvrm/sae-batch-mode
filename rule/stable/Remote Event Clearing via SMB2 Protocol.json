@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3759b6ef-c875-4d6d-8050-f27ad54ada1e",
+  "name": "Remote Event Clearing via SMB2 Protocol",
+  "description": "Network activity involving the SMB2 protocol, indicative of an operation to clear event logs, has been observed.",
+  "filterSets": [
+    [
+      {
+        "id": "6d81d19b-776e-5573-8dad-d54c0fdb3b0c",
+        "name": "Remote Clear Event Through SMB2 Protocol Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-11T10:49:36.000Z"
+}

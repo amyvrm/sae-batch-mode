@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a427d808-209a-423d-9830-ca27407ec2f6",
+  "name": "File Download From Tmpfiles[.]org",
+  "description": "Detection of a file being downloaded from tmpfiles[.]org which is a notorious file sharing site used by threat actors to host malicious files.",
+  "filterSets": [
+    [
+      {
+        "id": "05940903-e560-4810-ad7b-2a67656357c3",
+        "name": "File Download From Tmpfiles[.]org",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2024/05/13",
+  "lastUpdate": "2024-05-27T09:10:29.000Z"
+}

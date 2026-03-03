@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "31c6b46b-1686-4a58-9aaf-89a354e20dad",
+  "name": "Domain Blocked Because It Is In The Domain-Filter List",
+  "description": "Fortinet detection - Domain blocked because it is in the domain-filter list",
+  "filterSets": [
+    [
+      {
+        "id": "27c6ff54-0635-426c-8cee-9bc0dbdb9116",
+        "name": "Domain Blocked Because It Is In The Domain-Filter List",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

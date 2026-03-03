@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3dab1687-7f11-4365-b9c4-7fa47c9bbb45",
+  "name": "HTTP Unauthorized Brute Force Attack",
+  "description": "Palo Alto Networks detection for HTTP Unauthorized Brute Force Attack",
+  "filterSets": [
+    [
+      {
+        "id": "c1fd641e-932d-4425-b400-9fdfd02db2c5",
+        "name": "HTTP Unauthorized Brute Force Attack",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 43200,
+    "dedupSeconds": 43200
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2025/02/05",
+  "lastUpdate": "2025-04-02T10:15:14.000Z"
+}

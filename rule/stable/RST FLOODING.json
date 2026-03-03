@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "49a8ab03-3891-4a48-9560-d84474ed39c5",
+  "name": "RST FLOODING",
+  "description": "SonicWall Detection - Possible RST flood",
+  "filterSets": [
+    [
+      {
+        "id": "d3b83ea6-b4bf-4479-af80-4f442dc91bd4",
+        "name": "RST FLOODING",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

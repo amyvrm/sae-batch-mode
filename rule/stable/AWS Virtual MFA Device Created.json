@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e0c8f00d-8c2e-4dd7-a203-953a6aed1936",
+  "name": "AWS Virtual MFA Device Created",
+  "description": "Detects creation of a new virtual MFA device in AWS.",
+  "filterSets": [
+    [
+      {
+        "id": "625ebe74-12d1-414d-b6d5-6ee534f550ef",
+        "name": "AWS Virtual MFA Device Created",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/07/31",
+  "lastUpdate": "2025-07-31T08:55:45.000Z"
+}

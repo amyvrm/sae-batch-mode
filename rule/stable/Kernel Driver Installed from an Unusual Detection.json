@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8fee1cf2-da24-43a4-ac04-14c3e9048d0c",
+  "name": "Kernel Driver Installed from an Unusual Location",
+  "description": "A registry key for kernel driver from an unusual localtion was created.",
+  "filterSets": [
+    [
+      {
+        "id": "93994d30-ff2c-444d-9c73-aaa44116bcdb",
+        "name": "Kernel Driver Installed from an Unusual Location",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "date": "2023/09/18",
+  "lastUpdate": "2025-04-02T03:40:10.000Z"
+}

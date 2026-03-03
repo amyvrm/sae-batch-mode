@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6fa50eda-3171-425a-b161-134f91925e99",
+  "name": "Possible Botnet Registry Modifications",
+  "description": "Monitors registry changes indicative of Prometei\u2019s credential dumping activities for lateral movement and add Windows Defender exclusion paths",
+  "filterSets": [
+    [
+      {
+        "id": "386eb3b0-f735-40f6-a54b-c98d92e359aa",
+        "name": "Botnet Registry Modifications for Defender Exclusion Path",
+        "highlight": true
+      },
+      {
+        "id": "78493801-7f73-42d5-96d3-eca51d0bfa96",
+        "name": "Botnet Registry Modifications to Store Logon Credential",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes"
+    ],
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2025-03-24T10:42:02.000Z",
+  "author": "Bahaa Yamany & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2025/02/20"
+}

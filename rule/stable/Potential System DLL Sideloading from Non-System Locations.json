@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0d4fb730-7bc3-4bbd-a53c-ffc7ec89dfd9",
+  "name": "Potential System DLL Sideloading from Non-System Locations",
+  "description": "Detects DLL sideloading of system DLLs (like SystemSettings.dll) from non-standard directories.",
+  "filterSets": [
+    [
+      {
+        "id": "50037aa1-bb5d-41c5-9b87-3f834c729c93",
+        "name": "Potential System DLL Sideloading from Non-System Locations",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/08/15",
+  "lastUpdate": "2025-09-22T09:20:28.000Z"
+}

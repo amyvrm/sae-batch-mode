@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a3e2d907-359b-4d0c-b0be-8e9f0b72ef7d",
+  "name": "AWS IAM Policy Attached To A Group",
+  "description": "This filter detects the AWS IAM Policy Attachment to a group",
+  "filterSets": [
+    [
+      {
+        "id": "8044eeb3-c875-40ae-87b7-b4afbe0b4bfc",
+        "name": "AWS IAM Policy Attached To A Group",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/02/19",
+  "lastUpdate": "2025-06-17T10:36:27.000Z"
+}

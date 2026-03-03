@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9941be58-77e0-4712-acd5-f7089b0a49c0",
+  "name": "Local Privilege Escalation via Process Tracking",
+  "description": "Adversaries may exploit running process with low privileges to execute program flow to elevate to SYSTEM privilege.",
+  "filterSets": [
+    [
+      {
+        "id": "a2461cce-85c0-4742-bed4-71ceac0064f1",
+        "name": "Low Privilege Process Spawns SYSTEM Process via Parent-Child Chaining",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "dbc4b794-95d5-4cbc-9c9a-53c88fa2d602",
+        "name": "New Process Running with SYSTEM Privileges From Low Privilege Process - Child Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 5,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2025/03/04",
+  "lastUpdate": "2025-12-05T12:20:43.000Z"
+}

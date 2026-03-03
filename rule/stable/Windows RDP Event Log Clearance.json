@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bb9351ec-a636-470b-9a0b-40c27fac92e4",
+  "name": "Windows RDP Event Log Clearance",
+  "description": "Windows RDP event logs have been cleared. Adversaries may clear event logs to hide lateral movement evidence.",
+  "filterSets": [
+    [
+      {
+        "id": "f09ebd76-25ee-40f2-9667-d0b4599a9e62",
+        "name": "Windows RDP Event Log Clearance",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 21600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-14T05:30:06.000Z"
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "01b6adda-45a2-4fa1-99be-db077b7b06eb",
+  "name": "Possible Data Exfiltration Over DNS",
+  "description": "Possible Data Exfiltration over DNS has been detected over the network.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c4fb8b23-2f33-4a77-ad8e-151a3a240d30",
+      "name": "Possible Data Exfiltration over DNS",
+      "score": 30
+    }
+  ],
+  "threshold": {
+    "targetScore": 30,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1048"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2025/04/07",
+  "lastUpdate": "2025-06-02T10:41:29.000Z"
+}

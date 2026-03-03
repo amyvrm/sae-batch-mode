@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "835f3389-5c5f-477b-8355-564a4d5cfbee",
+  "name": "AWS IAM Instance Profile Associated With an Instance",
+  "description": "This rule detects the association of an IAM instance profile with an instance in AWS.",
+  "filterSets": [
+    [
+      {
+        "id": "29170987-0741-48a2-993c-104254d6240b",
+        "name": "AWS IAM Instance Profile Associated With an Instance",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa HS and Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/06/13",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "416b0464-4226-4aa3-95ca-921f92a07d42",
+  "name": "AWS Redshift Unsuccessful Snapshot Schedules Enumeration",
+  "description": "Identifies unsuccessful attempts to list Redshift snapshot schedules, possibly to understand backup policies.",
+  "filterSets": [
+    [
+      {
+        "id": "f352c0a6-c8cf-4a58-af85-aef7019c6964",
+        "name": "AWS Redshift Unsuccessful Snapshot Schedules Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-01T09:59:39.000Z"
+}

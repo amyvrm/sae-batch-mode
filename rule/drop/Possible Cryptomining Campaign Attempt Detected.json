@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "25481b3e-19dc-11ec-9621-0242ac130002",
+  "name": "Possible Cryptomining Campaign Attempt Detected",
+  "description": "This rule detects a series of Anti-Malware Events that depicts Cryptomining Campaign",
+  "filterSets": [
+    [
+      {
+        "id": "5e71da79-102e-4412-a1c5-3c76a9beb921",
+        "name": "TrojanSpy And Backdoor Malware Detection",
+        "highlight": true
+      },
+      {
+        "id": "48812983-ca1d-439f-86c8-4ea552b817e7",
+        "name": "Cryptocurrency Mining Malware Detection",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "7502a34e-59d5-4bd4-9e6c-c53088dfaa88",
+        "name": "Exploit Document Detection",
+        "highlight": true
+      },
+      {
+        "id": "48812983-ca1d-439f-86c8-4ea552b817e7",
+        "name": "Cryptocurrency Mining Malware Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 30
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "pdi",
+      "xns",
+      "sts",
+      "pts"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2021/03/19",
+  "lastUpdate": "2024-07-25T20:31:13.000Z"
+}

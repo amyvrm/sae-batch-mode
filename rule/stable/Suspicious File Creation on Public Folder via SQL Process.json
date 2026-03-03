@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1e660873-94dd-46a7-8bea-33e6d347bd9a",
+  "name": "Suspicious File Creation on Public Folder via SQL Process",
+  "description": "Detects file creation on Users\\Public folder via sqlservr.exe.",
+  "filterSets": [
+    [
+      {
+        "id": "64b1e587-c062-4e2b-b751-b47947c32482",
+        "name": "Suspicious File Creation on Public Folder via SQL Process",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Renzell David Barros & Gerardo III Jonieca",
+  "team": "AMEA-IR",
+  "date": "2025/04/24",
+  "lastUpdate": "2025-12-01T10:06:44.000Z"
+}

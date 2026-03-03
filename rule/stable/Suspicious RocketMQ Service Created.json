@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bc5fb5f6-96fa-11ef-b864-0242ac120002",
+  "name": "Suspicious RocketMQ Service Created",
+  "description": "Detects the creation of a RocketMQ broker service with a specified name server while using `$@` (a parameter representing all passed arguments) in a way that potentially allows dynamically injected commands to be executed via the shell.",
+  "filterSets": [
+    [
+      {
+        "id": "7a4ee2cc-96fa-11ef-b864-0242ac120002",
+        "name": "RocketMQ Broker Startup Command Detected",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/10/30",
+  "lastUpdate": "2025-01-22T19:13:46.000Z"
+}

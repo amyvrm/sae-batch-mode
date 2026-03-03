@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f06427de-58fb-4f44-94da-44cd51966667",
+  "name": "Identified AWS S3 ListBuckets API In Endpoint",
+  "description": "Detects the AWS api call to list AWS S3 buckts from an endpoint which could be an enumeration for aws s3 service.",
+  "filterSets": [
+    [
+      {
+        "id": "d0bccd60-3ea1-4177-a234-a05d24b8bcf2",
+        "name": "Identified AWS S3 ListBuckets API In Endpoint",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/06/15",
+  "lastUpdate": "2024-06-24T08:41:58.000Z"
+}

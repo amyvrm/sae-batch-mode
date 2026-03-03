@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "09da1dc8-c2a6-430a-85c6-6f514d263d8c",
+  "name": "Suspicious Forge Brand With Low Confidence Domain Url",
+  "description": "Suspicious Forge Brand With Low Confidence Domain Url",
+  "filterSets": [
+    [
+      {
+        "id": "26a6beb3-3c9e-4679-922d-b5ebf511d062",
+        "name": "Forge Brand With Low Confidence Domain Url",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Zachary Lee",
+  "team": "Jaguar",
+  "date": "2020/09/22",
+  "lastUpdate": "2023-09-29T04:38:13.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4f198fe0-1248-40d4-a73d-81a3fc89d386",
+  "name": "Office Communication Application Child Process Creation Blocked",
+  "description": "Microsoft attack surface reduction rule that prevents Office communication applications like Outlook from creating child processes to block potential exploit chains initiated through email or messaging applications.",
+  "scope": "endpoint",
+  "riskLevel": "medium",
+  "rules": [
+    {
+      "id": "e39076b4-1de2-4ec7-80eb-0d9a5e9b2b7e",
+      "name": "Office Communication Application Child Process Creation Blocked",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566",
+    "mitre.t1055",
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-22T04:19:56.000Z"
+}

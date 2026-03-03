@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9aa68357-69e6-4626-a4a0-b1c16c6af75c",
+  "name": "Interpreted Procs Inbound Network Activity in Container",
+  "description": "Interpreted program received inbound network activity. This behavior is uncommon for standard container operations.",
+  "riskLevel": "medium",
+  "scope": "container",
+  "rules": [
+    {
+      "id": "11386568-f3ce-451d-8050-00a289a7e691",
+      "name": "Interpreted Procs Inbound Network Activity in Container",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "tags": [
+    "mitre.t1552"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/07/23",
+  "lastUpdate": "2024-07-25T07:33:29.000Z"
+}

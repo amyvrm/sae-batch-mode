@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6bcca1bd-d6cb-4d60-a84b-5018f806b006",
+  "name": "Powershell ADRecon Execution",
+  "description": "Detects the execution of ADRecon.ps1, a tool used for gathering and reporting information about Active Directory environments. This tool is known to be actively used by FIN7 for reconnaissance purposes.",
+  "filterSets": [
+    [
+      {
+        "id": "62ca432c-224e-4b32-a4b5-7c52a40851a7",
+        "name": "Powershell ADRecon Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/11/14",
+  "lastUpdate": "2026-01-19T01:54:27.000Z"
+}

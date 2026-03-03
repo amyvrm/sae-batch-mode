@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8add41ce-6937-435a-83bb-5735bb961915",
+  "name": "Possible Unauthorized Access on Remote Host Via SMB Client NamedPipe",
+  "description": "Detect SYSTEM user access on a remote computer by using NTLM hash and smb admin share.",
+  "filterSets": [
+    [
+      {
+        "id": "b9e53824-25ca-461a-b5ba-a96b8a4de444",
+        "name": "Identified Logon Attempt Over Network",
+        "highlight": true
+      },
+      {
+        "id": "7b3156ba-2a4e-44ee-a667-ac6dcbec77c9",
+        "name": "Identified Access To Admin SMB Share",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 100,
+    "dedupSeconds": 100
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/11/24",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

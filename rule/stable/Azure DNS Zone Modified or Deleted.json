@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8676a7dd-d5f8-40f4-94eb-7aa25bae037f",
+  "name": "Azure DNS Zone Modified or Deleted",
+  "description": "Detects modification or deletion of Azure DNS zones that could disrupt domain resolution, redirect traffic, or weaken service security.",
+  "filterSets": [
+    [
+      {
+        "id": "91b3ff03-5a3b-438c-8970-cff19f0cb7ad",
+        "name": "Azure DNS Zone Modified or Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/12/31",
+  "lastUpdate": "2026-01-20T13:37:23.000Z"
+}

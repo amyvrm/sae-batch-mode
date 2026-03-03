@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c6d7cde5-823a-48a5-a41c-392be240ffa5",
+  "name": "Execute from Email Attachment",
+  "description": "Process launch from email attachment",
+  "filterSets": [
+    [
+      {
+        "id": "5558341c-95e2-44b2-934b-5c8654c1f1e8",
+        "name": "Launch Mail Attachment In MAC",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/11/04",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

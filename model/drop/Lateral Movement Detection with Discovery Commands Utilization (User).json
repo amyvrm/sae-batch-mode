@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c731e344-a26b-4437-bc2b-80872bd465f3",
+  "name": "Lateral Movement Detection with Discovery Commands Utilization (User)",
+  "description": "Detects Lateral Movement activity with discovery commands",
+  "riskLevel": "medium",
+  "scope": "user",
+  "enable": true,
+  "rules": [
+    {
+      "id": "fae8f565-fec0-4bc4-b3ed-57f74f3d4ca1",
+      "name": "Sequential Discovery Commands Execution - BETA",
+      "score": 10
+    },
+    {
+      "id": "9b0e9f51-4dd6-488e-8f3e-770cc4c5cd56",
+      "name": "Discovery Command Execution",
+      "score": 20
+    },
+    {
+      "id": "01c2575e-90bb-458a-af7d-03f6cd53e87f",
+      "name": "Lateral Movement Detection",
+      "score": 30
+    }
+  ],
+  "threshold": {
+    "targetScore": 40,
+    "withinSeconds": 1800,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pdi",
+      "xes",
+      "sao",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021",
+    "mitre.t1210",
+    "mitre.t1570",
+    "mitre.t1105",
+    "mitre.t1047",
+    "mitre.t1569",
+    "mitre.t1110",
+    "mitre.t1071",
+    "mitre.t1059",
+    "mitre.t1078"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Kazuya Sugiura",
+  "team": "Managed Service Team",
+  "date": "2023/09/19",
+  "lastUpdate": "2025-04-07T00:32:23.000Z"
+}

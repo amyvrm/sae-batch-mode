@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c7eca4ab-870f-41e6-a57f-137923bf2c81",
+  "name": "Suspicious Docker Root Filesystem Binding in Container",
+  "description": "Detects the root directory of a host system mounted to a new container.",
+  "filterSets": [
+    [
+      {
+        "id": "cc717012-df21-4078-bbb9-37c2defa21cd",
+        "name": "Docker Root Filesystem Binding in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2023/09/21",
+  "lastUpdate": "2023-10-13T02:32:09.000Z"
+}

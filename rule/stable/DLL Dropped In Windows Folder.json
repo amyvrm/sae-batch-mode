@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cf5ca45c-af6c-459e-b420-f522b9aba0fb",
+  "name": "DLL Dropped In Windows Folder",
+  "description": "This rule checks for DLL creation in Windows Folder for Print Spooler",
+  "filterSets": [
+    [
+      {
+        "id": "4dada3b2-be51-4167-afe3-1f9cd52bf424",
+        "name": "Suspicious DLL Created In Print Spooler Driver Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "sao"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2021/07/20",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

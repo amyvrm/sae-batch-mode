@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6a8b4e8f-f3b3-44c5-b92c-3edadbf72e32",
+  "name": "SSH Shell Command Is Blocked",
+  "description": "Fortinet detection - SSH shell command is blocked",
+  "filterSets": [
+    [
+      {
+        "id": "b89f5fca-1b3e-40a6-934c-9a9ec1b0a0af",
+        "name": "SSH Shell Command Is Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

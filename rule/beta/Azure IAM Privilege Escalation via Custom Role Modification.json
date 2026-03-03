@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7a1e4553-0a85-4a6a-a94c-d92ee2c47692",
+  "name": "Azure IAM Privilege Escalation via Custom Role Modification",
+  "description": "Detects suspicious Azure custom role definitions that grant over-privileged access",
+  "filterSets": [
+    [
+      {
+        "id": "d8a870ef-c29e-48d5-82e4-62079905d2e3",
+        "name": "Azure IAM Role Assigned To A User",
+        "highlight": true
+      },
+      {
+        "id": "579588e5-9aad-4f1a-a4b5-3b7fe8e74483",
+        "name": "Azure IAM Create or Update Custom Role Definition Operation Started",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Ashish Verma and Arun Shaji",
+  "team": "Cloud One",
+  "date": "2025/11/17",
+  "lastUpdate": "2025-11-26T17:25:26.000Z"
+}

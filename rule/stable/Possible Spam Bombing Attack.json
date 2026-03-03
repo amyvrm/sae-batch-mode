@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0a8af5d8-5762-42de-aeb0-5e3179260337",
+  "name": "Possible Spam Bombing Attack",
+  "description": "Detects unusually high volume of spam mails from an external domain in a short period of time, which may indicate a spam bombing attack.",
+  "filterSets": [
+    [
+      {
+        "id": "6bbce720-d7d8-4fec-b7a1-8dcaee429a48",
+        "name": "Possible Spam Bombing Attack",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "author": "Fran Hong",
+  "team": "Jaguar",
+  "date": "2026/01/05",
+  "lastUpdate": "2026-02-03T08:44:06.000Z"
+}

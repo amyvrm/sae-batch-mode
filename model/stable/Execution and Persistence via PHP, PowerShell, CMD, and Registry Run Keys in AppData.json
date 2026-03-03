@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5565527b-1125-42d9-b9b3-76e696dad641",
+  "name": "Execution and Persistence via PHP, PowerShell, CMD, and Registry Run Keys in AppData",
+  "description": "Detects Interlock RAT behavior including automated and interactive discovery, and persistence via Registry Run key referencing PHP in AppData\\\\Roaming",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "46c6d9af-a8b5-402f-98a1-cad0a49671ef",
+      "name": "Execution and Persistence via PHP, PowerShell, CMD, and Registry Run Keys in AppData",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1035",
+    "mitre.t1218",
+    "mitre.t1059.001",
+    "mitre.t1086",
+    "mitre.t1112",
+    "mitre.t1060"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Bien Joshua Philip De Leon & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/11/28",
+  "lastUpdate": "2026-01-21T08:48:28.000Z"
+}

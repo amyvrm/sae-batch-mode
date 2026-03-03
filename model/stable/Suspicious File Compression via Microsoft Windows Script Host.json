@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "83a3347f-34a0-415f-a392-3f7363597ac8",
+  "name": "Suspicious File Compression via Microsoft Windows Script Host",
+  "description": "Detects suspicious compression of files via Microsoft Windows Script Host(WSH) CScript via services.exe which indicates possible data collection.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "9bd9a788-5889-4d20-aaaf-b28d8e5c902f",
+      "name": "Suspicious File Compression via Microsoft Windows Script Host",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059",
+    "mitre.t1560"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2025/08/18",
+  "lastUpdate": "2026-01-12T07:25:16.000Z"
+}

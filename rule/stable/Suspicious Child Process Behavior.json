@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "978c429a-e62f-4d2a-854e-6c99921ca80f",
+  "name": "Suspicious Child Process Behavior",
+  "description": "A Genereic process launch a Suspicious Child Process Behavior.",
+  "filterSets": [
+    [
+      {
+        "id": "6c2219a9-a1b2-4ebf-a416-492f38f5bc91",
+        "name": "Suspicious MSI Launch and Child Process Behavior",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Rafael Pereira",
+  "team": "US-IR",
+  "date": "2025/09/09",
+  "lastUpdate": "2025-12-10T06:23:34.000Z"
+}

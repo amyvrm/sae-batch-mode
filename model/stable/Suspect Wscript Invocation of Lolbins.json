@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bdd7ebf3-eda6-4128-a51d-2ea93eb6111e",
+  "name": "Suspect Wscript Invocation of Lolbins",
+  "description": "Detection of Wscript invoking a lolbin in a suspect manner",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7a61c5be-afb4-46a2-9c74-128fd888bbe7",
+      "name": "Suspect Wscript Invocation of Lolbins",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/02/07",
+  "lastUpdate": "2025-02-28T02:28:39.000Z"
+}

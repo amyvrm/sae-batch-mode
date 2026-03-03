@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b1e5e883-9e7d-431d-9d2b-a474d079ecb1",
+  "name": "Dynamic DNS Update via DNS",
+  "description": "Cisco detection for a dynamic DNS update succeeded in the DNS server.",
+  "filterSets": [
+    [
+      {
+        "id": "ac5de6ac-4b45-5882-913c-ba124c874544",
+        "name": "Dynamic DNS Update via DNS",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Cisco"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "Third Party Operations",
+  "date": "2026/01/30",
+  "lastUpdate": "2026-02-03T09:21:48.000Z"
+}

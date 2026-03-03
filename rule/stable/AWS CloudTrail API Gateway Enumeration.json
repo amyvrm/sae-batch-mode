@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1e619320-b93f-4d22-89be-2f9009620ddf",
+  "name": "AWS CloudTrail API Gateway Enumeration",
+  "description": "A rule that detects unauthorized or suspicious access to list all the REST APIs in an AWS account.",
+  "filterSets": [
+    [
+      {
+        "id": "067c2c07-ae57-4ed1-ae2e-3826deff9186",
+        "name": "AWS CloudTrail API Gateway Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/02/27",
+  "lastUpdate": "2025-06-17T10:36:27.000Z"
+}

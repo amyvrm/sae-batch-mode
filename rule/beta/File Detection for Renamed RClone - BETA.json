@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9d043994-0bc1-11ef-9262-0242ac120002",
+  "name": "File Detection for Renamed RClone - BETA",
+  "description": "A file detected as RClone but with a different name was observed being downloaded or created in the environment.",
+  "filterSets": [
+    [
+      {
+        "id": "dd59fa8f-2575-4404-a5ba-c7f025cd434f",
+        "name": "File Detection for Renamed RClone",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bbc9dbba-aa4e-11ee-a506-0242ac120002",
+        "name": "Masquerading Rclone Commands Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/05/06",
+  "lastUpdate": "2024-05-07T08:10:09.000Z"
+}

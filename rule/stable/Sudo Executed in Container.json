@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cc72aaf4-a530-49bf-a59d-7c3ecc136d9d",
+  "name": "Sudo Executed in Container",
+  "description": "Grants users the ability to execute programs with the security privileges of another user.",
+  "filterSets": [
+    [
+      {
+        "id": "1c409ee6-4155-43c8-a8d9-b564a1a16e51",
+        "name": "Sudo Executed in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2025/10/02",
+  "lastUpdate": "2025-10-08T09:07:10.000Z"
+}

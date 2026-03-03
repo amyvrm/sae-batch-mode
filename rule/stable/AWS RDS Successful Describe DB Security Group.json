@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "785a565a-233d-4b2f-ae7d-24993ed1808d",
+  "name": "AWS RDS Successful Describe DB Security Group",
+  "description": "AWS Event that lists the budgets that are associated with an account.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS RDS Successful Describe DB Security Group",
+        "id": "51a67b5d-6ab8-4743-8a6c-48bf58a99091",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni & Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/11/23",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

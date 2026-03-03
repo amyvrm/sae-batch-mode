@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7298ce54-0bc1-11ef-9262-0242ac120002",
+  "name": "Renamed RClone Detection - BETA",
+  "description": "A renamed executable of RClone, a command line utility to manage files for cloud storage applications that can be potentially abused by threat actors to exfiltrate data, was observed being downloaded or created in the environment.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "9d043994-0bc1-11ef-9262-0242ac120002",
+      "name": "File Detection for Renamed RClone - BETA",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1588.002",
+    "mitre.t1030"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/05/06",
+  "lastUpdate": "2024-05-07T08:10:09.000Z"
+}

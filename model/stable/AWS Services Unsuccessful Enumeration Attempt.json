@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "id": "beda0af8-a619-11ed-afa1-0242ac120002",
+  "name": "AWS Services Unsuccessful Enumeration Attempt",
+  "description": "Detected possible unsuccessful Recon/ Enumeration across different AWS services.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "beda0ee0-a619-11ed-afa1-0242ac120002",
+      "name": "AWS EC2 Unsuccessful Service Enumeration Attempt",
+      "score": 1
+    },
+    {
+      "id": "bed9faea-a619-11ed-afa1-0242ac120002",
+      "name": "AWS IAM Unsuccessful Service Enumeration Attempt",
+      "score": 1
+    },
+    {
+      "id": "beda09cc-a619-11ed-afa1-0242ac120002",
+      "name": "AWS S3 Unsuccessful Service Enumeration Attempt",
+      "score": 1
+    },
+    {
+      "id": "beda0c38-a619-11ed-afa1-0242ac120002",
+      "name": "AWS STS Unsuccessful Service Enumeration Attempt",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1526"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/11/11",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

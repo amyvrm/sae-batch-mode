@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c7aee2ea-f73e-47f7-b843-54c5fff0b665",
+  "name": "Ransomware with C&C Communication",
+  "description": "Ransomware, along with C&C communication, was detected on a host.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "2378b534-eb36-4863-a8c0-27b6e5f33c32",
+      "name": "Network Analytics Correlation Detection",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "6935078f-e4ad-4de3-8bcf-bc08ebfa4912",
+      "name": "Network Analytics Playbook",
+      "provider": "WORKBENCH",
+      "type": "NA"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "XDR-NA Team",
+  "team": "XDR-NA Team",
+  "date": "2022/03/23",
+  "lastUpdate": "2023-08-23T02:42:36.000Z"
+}

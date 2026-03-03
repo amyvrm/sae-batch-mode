@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "febeaede-fcba-42a5-910d-4c42bfd392f9",
+  "name": "Possible Token Manipulation via Invoke-GrabTheHash",
+  "description": "Detects the execution of Invoke-GrabTheHash script used for extracting password hashes from a compromised system. It leverages various techniques to capture these hashes, which can then be used for further attacks such as lateral movement or privilege escalation within a network.",
+  "filterSets": [
+    [
+      {
+        "id": "0a692063-9b32-476f-9655-5a108864885f",
+        "name": "Possible Token Manipulation via Invoke-GrabTheHash",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Mary Joy Ramos & Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2024/10/31",
+  "lastUpdate": "2025-05-19T09:18:09.000Z"
+}

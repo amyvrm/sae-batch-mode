@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1763349c-fc7e-450e-847e-965f404b0930",
+  "name": "Suspicious iconcache File Modification",
+  "description": "Adversaries may steal NTLM hash by crafting a malicious icon. The icon will cause iconcache file to update.",
+  "filterSets": [
+    [
+      {
+        "id": "0194d7d7-12b8-7e9e-b8f9-54a62aef2928",
+        "name": "Suspicious iconcache File Modification",
+        "highlight": true
+      },
+      {
+        "id": "0196872c-ddc2-711a-9f2a-8471911a3490",
+        "name": "Identified Transfer Of Suspicious URL Files Over Network",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Letian Cheng",
+  "team": "Cloud One",
+  "date": "2025/02/05",
+  "lastUpdate": "2025-05-20T15:59:36.000Z"
+}

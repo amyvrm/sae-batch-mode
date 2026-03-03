@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "id": "570a1d4d-c7a3-4f5b-b47d-722937b21ca4",
+  "name": "Possible Execution of EDR Disabling Tool",
+  "description": "Detects execution of possible EDRSilencer tool that can disable EDR systems",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "9d189233-9ff2-454e-b43b-d1afffe6052c",
+      "name": "Possible Dropping of EDR Disabling File",
+      "score": 1
+    },
+    {
+      "id": "001d269d-48c3-481a-8b95-8656fb0b05bd",
+      "name": "Possible Installation of EDR Disabling Service",
+      "score": 1
+    },
+    {
+      "id": "c773e8f1-7718-4524-8107-5172439af8f2",
+      "name": "Possible Execution of EDR Disabling Tool",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Jehhan Marcelo & Mary Joy Ramos",
+  "team": "AMEA-IR",
+  "date": "2025/05/09",
+  "lastUpdate": "2025-06-10T15:15:26.000Z"
+}

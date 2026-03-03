@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "cfa3704b-1869-411a-ab15-49ee5602e34c",
+  "name": "Command Blocked",
+  "description": "Fortinet detection - Command blocked",
+  "filterSets": [
+    [
+      {
+        "id": "bf3a1a2e-c66a-4844-8510-8304ad20d5fd",
+        "name": "Command Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

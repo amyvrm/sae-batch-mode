@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aa8d1bd7-47be-4c1f-89d5-8c2a032db207",
+  "name": "User Launched Suspicious SpearPhishing Link in Email",
+  "description": "User or Endpoint Application Launched Suspicious SpearPhishing Link in Email.",
+  "filterSets": [
+    [
+      {
+        "id": "44e3d697-1f97-4898-929e-c81859db68ef",
+        "name": "Clicking on Highly Suspicious Url in Email (Internet Event)",
+        "highlight": true
+      },
+      {
+        "id": "8021a379-658b-454e-b8e2-221e5af1a499",
+        "name": "Clicking on Highly Suspicious Url in Email (Jaguar Event)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "sao",
+      "sem",
+      "sca",
+      "xms"
+    ]
+  ],
+  "lastUpdate": "2023-09-13T05:55:09.000Z"
+}

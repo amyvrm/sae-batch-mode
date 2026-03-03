@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "be467e7c-95e5-49cf-b92f-1f85eb3df5cf",
+  "name": "Possible Palo Alto Firewall Authentication Bypass",
+  "description": "Detects possible exploitation of Palo Alto Firewall authentication bypass.",
+  "filterSets": [
+    [
+      {
+        "id": "2b44b649-f1dd-47aa-8de9-9096449270c9",
+        "name": "Possible Palo Alto Firewall Authentication Bypass",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2025/03/04",
+  "lastUpdate": "2025-05-14T10:18:40.000Z"
+}

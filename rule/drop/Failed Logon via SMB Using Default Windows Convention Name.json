@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5093d487-ef47-4c5b-96f6-e64cdbbbaaa0",
+  "name": "Failed Logon via SMB Using Default Windows Convention Name",
+  "description": "Failed logon via SMB from a host using the windows default convention name has been detected",
+  "filterSets": [
+    [
+      {
+        "id": "d5fb0832-878e-4418-a0f8-53db328ac20a",
+        "name": "Failed Logon via SMB Using Default Windows Convention Name",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/03/21",
+  "lastUpdate": "2025-10-30T08:07:23.000Z"
+}

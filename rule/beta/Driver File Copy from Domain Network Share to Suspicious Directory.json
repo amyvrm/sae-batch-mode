@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "95ee219f-cd69-42e7-b507-288f75bd93d8",
+  "name": "Driver File Copy from Domain Network Share to Suspicious Directory",
+  "description": "A driver file (.sys) was copied from a domain controller network share to a public or temporary directory. This behavior may indicate staging of malicious drivers for privilege escalation or defense evasion.",
+  "filterSets": [
+    [
+      {
+        "id": "7990582f-ae50-4367-8218-bbc80a190e52",
+        "name": "Driver File Copy from Domain Network Share to Suspicious Directory",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/02/03",
+  "lastUpdate": "2026-02-11T08:45:21.000Z"
+}

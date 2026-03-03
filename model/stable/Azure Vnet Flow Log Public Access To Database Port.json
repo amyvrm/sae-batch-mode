@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "878b600b-bf78-4d05-8ccc-be6f9bc54101",
+  "name": "Azure Vnet Flow Log Public Access To Database Port",
+  "description": "Detected access to sensitive database ports from public ip which might indicate an attacker trying to exfiltrate sensitive data from the database.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "14af53a7-54c6-428b-860c-dc5b9c4e0347",
+      "name": "Azure Vnet Flow Log Public Access To Database Port",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "azv"
+    ]
+  ],
+  "tags": [
+    "mitre.t1190"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Arun Shaji and Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/11/12",
+  "lastUpdate": "2026-02-03T10:21:57.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c5ac81e1-09b5-43f6-a9b5-70403bad05a5",
+  "name": "ESXi Syslog Configuration Change via ESXCLI",
+  "description": "Detects execution of esxcli command for system or network discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "8ed8e630-525d-4041-a087-37fdc1b640ad",
+        "name": "ESXi Syslog Configuration Change via ESXCLI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pds",
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Nora Bowden & Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/05/21",
+  "lastUpdate": "2024-06-13T03:27:16.000Z"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "128ec634-4be5-4ef3-8c99-e9c53ba092d9",
+  "name": "IPv6 MAC-IP Anti-Spoof Check Enforced For Hosts",
+  "description": "SonicWall Detection - IPv6 Mac-IP Anti-spoof check enforced for hosts",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "75efd90c-9286-496a-b96f-75d4f02ba068",
+      "name": "IPv6 MAC-IP Anti-Spoof Check Enforced For Hosts",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2025-01-02T06:14:24.000Z"
+}

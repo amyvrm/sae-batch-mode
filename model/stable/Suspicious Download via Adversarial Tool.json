@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "928f6dfb-e93f-4c7d-a707-1015bb8d84e3",
+  "name": "Suspicious Download via Adversarial Tool",
+  "description": "Suspicious file download via HTTP, which is associated with Adversarial Tool C2 Connection was detected.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "fae38294-f499-4fc6-84aa-a943c56a8d2b",
+      "name": "Suspicious Download via Adversarial Tool",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 900,
+    "dedupSeconds": 900
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "silent": true,
+  "globalModel": true,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2024/10/25",
+  "lastUpdate": "2024-11-13T10:13:34.000Z"
+}

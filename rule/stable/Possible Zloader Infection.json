@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f081a559-2e60-4759-bed2-28a8dff0bec6",
+  "name": "Possible Zloader Infection",
+  "description": "Detects behaviour related to Zloader infection chain",
+  "filterSets": [
+    [
+      {
+        "id": "b459272b-c7b8-4182-b3b1-0bbce3b3a0e9",
+        "name": "Potential Dropping of Zloader Components",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a25a4ed3-2342-4c6a-98fe-fc5c269beed0",
+        "name": "Injection To Svchost Explorer.exe Or Msiexec.exe",
+        "highlight": true
+      },
+      {
+        "id": "d346e1dd-c00c-4914-960c-358d9156e6f5",
+        "name": "Install Certificate via Certutil",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a25a4ed3-2342-4c6a-98fe-fc5c269beed0",
+        "name": "Injection To Svchost Explorer.exe Or Msiexec.exe",
+        "highlight": true
+      },
+      {
+        "id": "6c6adae0-9a10-4045-9542-a44af9c6d989",
+        "name": "Accessing Web Session Cookies via File",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a25a4ed3-2342-4c6a-98fe-fc5c269beed0",
+        "name": "Injection To Svchost Explorer.exe Or Msiexec.exe",
+        "highlight": true
+      },
+      {
+        "id": "bd58051d-89fe-46b3-b286-856971f0a258",
+        "name": "ZBOT Network Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 7200,
+    "dedupSeconds": 7200
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pdi",
+      "xes",
+      "pao",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2025-04-15T10:35:04.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b5237c69-1efe-48a7-b43d-fe4261312345",
+  "name": "IPv6 MAC-IP Anti-Spoof Cahce Not Router",
+  "description": "SonicWall Detection - IPv6 MAC-IP Anti-spoof cache found, but it is not a router",
+  "filterSets": [
+    [
+      {
+        "id": "04e5d7f3-c4a3-4e3d-bfcf-71e822a4e27b",
+        "name": "IPv6 MAC-IP Anti-Spoof Cahce Not Router",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

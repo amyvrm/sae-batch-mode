@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "5c8fa5ec-deb8-4073-ac27-ef4d8323ab8f",
+  "name": "AWS Cost Explorer Dimension Value Enumeration",
+  "description": "Monitors retrieval of available filter values for cost dimensions, which could indicate legitimate cost analysis activities or reconnaissance attempts to understand account structure and resource organization for potential cost-based attacks.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS Cost Explorer Dimension Value Enumeration",
+        "id": "299f8e94-104e-496f-b98b-50e998021660",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Yash Verma",
+  "team": "Cloud One",
+  "date": "2025/09/16",
+  "lastUpdate": "2025-09-16T11:20:55.000Z"
+}

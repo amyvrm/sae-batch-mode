@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b836d8a5-3c44-44c1-9012-5cb6b81cc8e5",
+  "name": "AWS IAM Login MFA Deactivated For A Root",
+  "description": "Detects AWS IAM login events where multi-factor authentication (MFA) is deactivated for the root user.",
+  "filterSets": [
+    [
+      {
+        "id": "beda06a8-83db-4222-a464-dc2ae64979b6",
+        "name": "AWS IAM Login MFA Deactivated For A Root",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni",
+  "team": "Cloud One",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

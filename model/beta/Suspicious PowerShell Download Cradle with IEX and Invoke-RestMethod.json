@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f0693eac-cb0a-403e-b71c-6fb244ebd7b9",
+  "name": "Suspicious PowerShell Download Cradle with IEX and Invoke-RestMethod",
+  "description": "PowerShell commands using Invoke-RestMethod (IRM) and Invoke-Expression (IEX) to download and execute payloads, a technique commonly leveraged by malware and threat actors for initial-stage payload delivery.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "19f5cf06-6385-4689-894d-30f5393efd9f",
+      "name": "Suspicious PowerShell Download Cradle with IEX and Invoke-RestMethod",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1059.001"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Ahmed Kamal & Yusuf Madkdour",
+  "team": "MENA-IR",
+  "date": "2025/12/09",
+  "lastUpdate": "2025-12-11T06:42:42.000Z"
+}

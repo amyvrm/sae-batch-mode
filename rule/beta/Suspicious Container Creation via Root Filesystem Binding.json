@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "3487cb0f-43b7-43af-81ab-40ece2263caf",
+  "name": "Suspicious Container Creation via Root Filesystem Binding",
+  "description": "Adversaries may deploy a container into an environment to facilitate execution or evade defenses. In some cases, adversaries may deploy a new container to execute processes associated with a particular image or deployment, such as processes that execute or download malware.",
+  "filterSets": [
+    [
+      {
+        "id": "0f4a8b2c-c72a-4c10-a5ac-320ae2973e40",
+        "name": "Identified Creation Of Container With Root Filesystem Via Docker API",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "3aa7bfde-15c7-4f5b-ae03-dddd19d8179f",
+        "name": "Docker Root Filesystem Binding",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Ben Solomon",
+  "team": "Cloud One",
+  "date": "2024/09/04",
+  "lastUpdate": "2025-10-29T03:42:20.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "23b77bd6-40d4-4c0d-83b4-0532ab9713fd",
+  "name": "Possible ESXi VM Termination - Linux",
+  "description": "Force termination of ESXi VM Process via commandline arguments by Cactus Ransomware",
+  "filterSets": [
+    [
+      {
+        "id": "0c313e07-8773-4d03-81b0-1bccac75ca5a",
+        "name": "Possible ESXi VM Termination - Linux",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Alvin Bacani",
+  "team": "CSG",
+  "date": "2024/05/27",
+  "lastUpdate": "2024-06-03T09:23:40.000Z"
+}

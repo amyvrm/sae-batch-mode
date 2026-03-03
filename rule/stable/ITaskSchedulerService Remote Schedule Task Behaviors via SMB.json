@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "id": "196dcc86-f350-446a-9017-67c24abc24b8",
+  "name": "ITaskSchedulerService Remote Schedule Task Behaviors via SMB",
+  "description": "Network activity involving the Server Message Block (SMB) protocol is indicative of ITaskSchedulerService being used for remote scheduled tasks via SMB.",
+  "filterSets": [
+    [
+      {
+        "id": "41f46356-687d-5693-8cb9-68ff47d0595f",
+        "name": "Itaskschedulerservice Remote Schedule Tasks (Create) SMB (Request)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "be9777a4-95b0-511e-9800-87d611a28334",
+        "name": "Itaskschedulerservice Remote Schedule Tasks (Run) SMB (Request)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e6a79d79-cad6-5397-8963-013572c6fe94",
+        "name": "Itaskschedulerservice Remote Schedule Tasks (Delete) SMB (Request)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "36beb5ad-3d2a-52fd-9203-e8a59af76d5c",
+        "name": "Itaskschedulerservice Remote Schedule Tasks (Create) SMB2 (Request)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "4b42b6eb-ac8d-5a68-be29-ad84ab3bc075",
+        "name": "Itaskschedulerservice Remote Schedule Tasks (Run) SMB2 (Request)",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "355d943c-1059-5ded-948f-d8874316ebec",
+        "name": "Itaskschedulerservice Remote Schedule Tasks (Delete) SMB2 (Request)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/03/19",
+  "lastUpdate": "2025-05-08T06:42:49.000Z"
+}

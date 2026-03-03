@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "1025d352-f1b2-414a-a1be-38ab6c676a96",
+  "name": "Python Reverse Shell Payload Detection",
+  "description": "Matches are typically indicative of network activity from a breached host. Python reverse shells on compromised networks allow for the execution of arbitrary shell commands.",
+  "filterSets": [
+    [
+      {
+        "id": "911b8088-894d-47be-979f-ee1ea8b36b24",
+        "name": "Python Reverse Shell Payload Detection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "stp",
+      "ptp"
+    ]
+  ],
+  "author": "Brandon Shores",
+  "team": "DV Labs",
+  "date": "2024/04/16",
+  "lastUpdate": "2024-04-20T04:55:26.000Z"
+}

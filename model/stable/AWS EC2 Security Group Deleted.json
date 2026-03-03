@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "768109b4-5b77-11ee-8c99-0242ac120002",
+  "name": "AWS EC2 Security Group Deleted",
+  "description": "Detected removal of an EC2 security group, suggesting a potential attempt by an unauthorized party to establish unrestricted access to EC2 instances, thereby raising the risk of compromising instances.",
+  "riskLevel": "medium",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "f5996a2e-5b73-11ee-8c99-0242ac120002",
+      "name": "AWS EC2 Delete Security Group",
+      "score": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1082",
+    "mitre.t1562.004"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2023/09/25",
+  "lastUpdate": "2025-08-22T09:27:18.000Z"
+}

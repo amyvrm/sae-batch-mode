@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "afa0acdc-299a-4ac6-966f-dc3974dcda8c",
+  "name": "Suspicious Windows Update Service Child",
+  "description": "Detects the activity of a suspicious child spawning from Windows Update Service (WSUS) via wsusservice process, potential exploitaton of CVE-2025-59287",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "85ce8291-3494-4720-9179-4f7581e9dda5",
+      "name": "Suspicious Windows Update Service Child",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059",
+    "mitre.t1190"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Mahmoud Soheem & Ahmed Hussein",
+  "team": "MENA-IR",
+  "date": "2025/10/26",
+  "lastUpdate": "2025-11-11T02:35:01.000Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e7099330-2bc2-446b-9fd1-d5a9dcd84a59",
+  "name": "Bruteforce Activity Over SMB",
+  "description": "Observed network activity involving Server Message Block (SMB) protocol, which is associated with bruteforce attempts over SMB. The behavior was identified in inbound or outbound traffic.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f929ced7-3b47-4333-86bb-ec6b66076d46",
+      "name": "Bruteforce Activity Over SMB",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1110.001",
+    "threat.pua",
+    "attack.s0488"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2025/05/21",
+  "lastUpdate": "2025-06-03T04:18:10.000Z"
+}

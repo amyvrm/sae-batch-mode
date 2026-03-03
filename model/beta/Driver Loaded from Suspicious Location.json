@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f79ee351-241a-4990-a621-3bb5e5bcd619",
+  "name": "Driver Loaded from Suspicious Location",
+  "description": "A driver file (.sys) located in a suspicious temporary or world-writable directory (e.g., Temp folders, C:\\Users\\Public, C:\\ProgramData) was loaded into kernel memory. This behavior may indicate successful exploitation via BYOVD attacks or malicious driver execution.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "c482f440-dc54-49f2-9cba-3e1aac1a5186",
+      "name": "Driver Loaded from Suspicious Location",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes",
+      "sao",
+      "pao"
+    ]
+  ],
+  "tags": [
+    "mitre.t1068",
+    "mitre.t1014"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Yusuf Madkour & Ahmed Kamal",
+  "team": "MENA-IR",
+  "date": "2026/02/09",
+  "lastUpdate": "2026-02-11T08:14:15.000Z"
+}

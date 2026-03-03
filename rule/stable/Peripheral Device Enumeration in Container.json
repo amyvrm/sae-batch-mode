@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "266d386b-9e92-481d-8eaa-5f51681e3085",
+  "name": "Peripheral Device Enumeration in Container",
+  "description": "Executing specific commands to gather information about connected peripheral devices.",
+  "filterSets": [
+    [
+      {
+        "id": "c085408d-c4f7-48f6-a08d-b9e2efa5ad37",
+        "name": "Peripheral Device Enumeration in Container",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "scs"
+    ]
+  ],
+  "author": "Jiri Sykora",
+  "team": "Cloud One",
+  "date": "2024/02/05",
+  "lastUpdate": "2024-02-23T16:29:29.000Z"
+}

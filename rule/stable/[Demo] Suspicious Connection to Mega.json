@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f368b2bf-8fd0-423d-9705-fd506af89e3f",
+  "name": "Demo - Suspicious Connection to Mega",
+  "description": "A suspicious connection to download a file from Mega, a cloud storage service, was observed.",
+  "filterSets": [
+    [
+      {
+        "id": "8d25480e-377c-4e3e-91a8-8586fb301df9",
+        "name": "Demo - DNS Resolve Mega",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "PeiChi Cheng",
+  "team": "ddi",
+  "date": "2020/06/15",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

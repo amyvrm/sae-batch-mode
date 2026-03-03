@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "46ec7861-1ccf-4ebe-84bf-210976c829ad",
+  "name": "AWS S3 Object Copied with SSE-KMS Encryption",
+  "description": "An S3 object was copied using AWS Key Management Service (SSE-KMS) encryption, which provides additional security through access-controlled encryption keys. While this method ensures secure storage, an attacker with sufficient privileges could use it to exfiltrate or re-encrypt stolen data. It is essential to review the source, destination, and initiator of this action to confirm its legitimacy.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "393c8f22-de3b-4431-9a8d-da5a15a57e6e",
+      "name": "AWS S3 Object Copied with SSE-KMS Encryption",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580",
+    "mitre.t1486"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-11-07T04:42:24.000Z"
+}

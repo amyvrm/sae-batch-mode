@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ebd6dae0-0720-4690-95c1-b4adcdeb8717",
+  "name": "Add Windows Capability via Powershell Script",
+  "description": "Detects usage of the 'Add-WindowsCapability' cmdlet to add Windows capabilities. Notable capabilities could be 'OpenSSH' and others.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "49a13b2e-b962-49b4-9810-b5694a07e85c",
+      "name": "Add Windows Capability via Powershell Script",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1653"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/11/19",
+  "lastUpdate": "2025-11-20T08:51:29.000Z"
+}

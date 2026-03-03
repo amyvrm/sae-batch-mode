@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "fecb1db3-5498-42fa-8ce7-d48878845433",
+  "name": "Blocked Host Exposure via User Defined Blocking List",
+  "description": "Triggers on host network connections matching entries in a user-defined blocking list, indicating potential suspicious activity logic.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8c8b9f4b-c31e-4ea5-84e4-ee0a73e94e0f",
+      "name": "Blocked Host Exposure via User Defined Blocking List",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": false,
+  "silent": true,
+  "author": "Joshua Villaluz",
+  "team": "DDI",
+  "date": "2026/01/23",
+  "lastUpdate": "2026-01-22T17:45:03.000Z"
+}

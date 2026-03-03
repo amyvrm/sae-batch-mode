@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4d3c036-21c4-11ef-9262-0242ac120002",
+  "name": "Suspicious System Daemon Configuration Reload",
+  "description": "Detects the reloading of the systemd manager. Adversaries can leverage this capability to apply changes to system service configurations, potentially enabling malicious services.",
+  "filterSets": [
+    [
+      {
+        "id": "b1268d31-4fff-4953-8bfa-aa3f19478e72",
+        "name": "Reloading of System Daemon Configuration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/06/03",
+  "lastUpdate": "2024-07-11T15:09:50.000Z"
+}

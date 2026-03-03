@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "93d5d6da-f6c0-4027-b806-ed52e68f6be8",
+  "name": "Office Application Child Process Creation Blocked by Microsoft",
+  "description": "Microsoft attack surface reduction rule that prevents Office applications such as Word, Excel, and PowerPoint from creating child processes to block macro-based attacks and exploit propagation.",
+  "filterSets": [
+    [
+      {
+        "id": "db8d6e42-63d6-4114-bfef-e7f30aa28b0d",
+        "name": "Office Application Child Process Creation Blocked by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/09/26",
+  "lastUpdate": "2025-10-21T03:31:42.000Z"
+}

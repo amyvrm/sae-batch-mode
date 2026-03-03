@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e8d8acf7-288a-4fbd-9061-42357b5fcab3",
+  "name": "AWS IAM Successful User Console Login Without MFA",
+  "description": "Detects successful user console logins in AWS IAM without Multi-Factor Authentication (MFA).",
+  "filterSets": [
+    [
+      {
+        "id": "94cd2102-ed1f-480d-9cb0-763d9bb87098",
+        "name": "AWS IAM Successful User Console Login Without MFA",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni",
+  "team": "Cloud One",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

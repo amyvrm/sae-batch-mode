@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8aaba3ff-a232-41c4-af4b-4063e994e8dd",
+  "name": "Clfs.SYS Loaded by Process in Unusual Location",
+  "description": "Detects the loading of Clfs.sys by a process running from a potentially suspicious location. Clfs.sys is commonly exploited in various CVEs targeting the Common Log File System.",
+  "filterSets": [
+    [
+      {
+        "id": "31d9751a-f8d6-4bf1-8477-ed052dbc3d1f",
+        "name": "Clfs.SYS Loaded by Process in Unusual Location",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gabriel Cardoso",
+  "team": "US-IR",
+  "date": "2025/09/09",
+  "lastUpdate": "2025-09-10T19:43:03.000Z"
+}

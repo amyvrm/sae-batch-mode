@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4bb655e9-d951-4759-845d-0e16938f5f1c",
+  "name": "Suspicious Compression of NTDS.dit via 7zip",
+  "description": "Detects suspicious compression of NTDS.dit file via 7zip",
+  "filterSets": [
+    [
+      {
+        "id": "ff0dc6ae-67b1-4091-a8eb-32e7afeeae9c",
+        "name": "Suspicious Compression of NTDS.dit via 7zip",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Krisford Macalalad",
+  "team": "AMEA-IR",
+  "date": "2025/10/14",
+  "lastUpdate": "2025-11-11T09:20:55.000Z"
+}

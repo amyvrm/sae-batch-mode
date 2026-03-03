@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6fde2401-5b1c-4846-a1dd-c2cd763827b5",
+  "name": "AWS RDS Certificate Authority Certificates Enumeration",
+  "description": "Detects attempts to list he set of certificate authority (CA) certificates provided by Amazon RDS for this AWS account, which may indicate reconnaissance for potential SSL/TLS certificate abuse.",
+  "filterSets": [
+    [
+      {
+        "id": "23e3a225-3789-45b9-ad0e-958bb0886d0d",
+        "name": "AWS RDS Certificate Authority Certificates Enumeration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/03/10",
+  "lastUpdate": "2025-07-28T08:21:42.000Z"
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7d0ae028-6cca-4748-b953-cb267e0302f4",
+  "name": "Suspicious Rundll32 or Regsvr32 Execution By Office Applications",
+  "description": "Detects suspicious rundll32 or regsvr32 execution by MS office applications",
+  "filterSets": [
+    [
+      {
+        "id": "65c45d4e-a50b-4944-84f6-c4a67b42cb0a",
+        "name": "Suspicious Rundll32 Execution by Office Applications",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1acca500-591b-46a0-8617-73043a7cac4c",
+        "name": "MS Office Application Executing Regsvr32.exe",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "1f863d86-2abd-4a9d-8b63-250594b81cb5",
+        "name": "Suspicious RegSvr32 Execution via DDE",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Keiko Kobayashi / Kentaro Yoshida / Toru Yamashige",
+  "team": "JP-IR",
+  "date": "2022/01/26",
+  "lastUpdate": "2024-04-11T07:58:56.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "13f5b5e7-6bb2-4642-8bad-68a505f7a2e8",
+  "name": "Possible Tampering of Sensitive Files for Impact",
+  "description": "A Possible Tampering of Sensitive Files for Impact  was detected",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "enable": true,
+  "rules": [
+    {
+      "id": "f55bc96a-ce43-4e93-8fa8-8f044dfe2f5a",
+      "name": "Possible Sensitive Files Access for Impact",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 21600
+  },
+  "requiredProducts": [
+    [
+      "ddr"
+    ]
+  ],
+  "tags": [
+    "mitre.t1565",
+    "mitre.t1485"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "ddr",
+  "team": "DDR",
+  "date": "2024/12/11",
+  "lastUpdate": "2025-12-02T04:47:27.000Z"
+}

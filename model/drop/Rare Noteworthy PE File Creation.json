@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "75213b7c-c5bd-4740-8bc5-c42fce8457c7",
+  "name": "Rare Noteworthy PE File Creation",
+  "description": "A rare Portable Executable (PE) file deemed noteworthy was detected through data stacking and machine learning methods.",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "8412f714-3ca8-47fb-bdc1-c1d34522d522",
+      "name": "Uncommon PE File Detection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1204"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jake Wu",
+  "team": "SAE",
+  "date": "2020/09/24",
+  "lastUpdate": "2025-05-15T07:31:14.000Z"
+}

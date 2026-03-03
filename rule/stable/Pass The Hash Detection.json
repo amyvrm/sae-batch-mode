@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "406ddcd1-399e-4ebe-9ff7-43734d3498a4",
+  "name": "Pass The Hash Detection",
+  "description": "Detected Pass the Hash attack attempt",
+  "filterSets": [
+    [
+      {
+        "id": "b9e53824-25ca-461a-b5ba-a96b8a4de444",
+        "name": "Identified Logon Attempt Over Network",
+        "highlight": true
+      },
+      {
+        "id": "784059a1-9cd6-4589-b060-2f262ab815a9",
+        "name": "Identified Validation Of Credentials Event On Domain Controller",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2021/09/29",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

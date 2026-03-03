@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "id": "bb0fccb3-c5d8-4758-9400-a09f2d2c9920",
+  "name": "Possible Discovery Activity via Netscan Tool",
+  "description": "An attempt to discover writable shares using netscan tool.",
+  "filterSets": [
+    [
+      {
+        "id": "390f22a6-d7a5-4d8c-9e0b-c7a4d47f84a3",
+        "name": "Possible Discovery Activity via Netscan Tool",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Mahmoud Soheem & Mercy Wafula",
+  "team": "MENA-IR",
+  "date": "2026/01/13",
+  "lastUpdate": "2026-01-13T14:48:07.000Z"
+}

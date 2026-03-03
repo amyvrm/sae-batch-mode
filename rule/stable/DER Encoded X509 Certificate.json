@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "99b3a44d-4bc7-4d45-8509-9480bd5bd24b",
+  "name": "DER Encoded X509 Certificate",
+  "description": "Palo Alto File detection - DER Encoded X509 Certificate",
+  "filterSets": [
+    [
+      {
+        "id": "023a6355-f394-435b-a73d-8c6a888d0c19",
+        "name": "DER Encoded X509 Certificate",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

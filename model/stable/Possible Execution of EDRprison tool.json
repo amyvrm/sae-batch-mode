@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "16715999-bf0d-494a-8106-dfbe2ad66255",
+  "name": "Possible Execution of EDRprison Tool",
+  "description": "Possible execution of EDRPrison files which can be used to disable EDR systems",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "146f184a-2f1d-44b8-a650-44b5f46dcddd",
+      "name": "Possible Dropping of EDRprison Tool",
+      "score": 1
+    },
+    {
+      "id": "1d812c6c-2864-4cad-8004-24185baf4490",
+      "name": "Possible Execution of EDRprison Tool",
+      "score": 1
+    },
+    {
+      "id": "5070bc83-f249-4ffa-8ae8-5098e4a56d0a",
+      "name": "Possible Installation of EDRprison Driver",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1562",
+    "mitre.t1073"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/20",
+  "lastUpdate": "2025-04-16T05:40:43.000Z"
+}

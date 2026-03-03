@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6bcecaea-e16f-45c9-90c7-a43b621662c6",
+  "name": "Detect Android Remote Access Trojan",
+  "description": "Detect Ahmyth based android remote access trojan",
+  "filterSets": [
+    [
+      {
+        "id": "352fa0ac-402e-524d-8633-ce6422558886",
+        "name": "Android Application Detection for AhMythRat",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "a5e0b845-0fc3-503f-9383-b294f639229f",
+        "name": "Android Application Detection for L3MON",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bb43ddb2-2d80-5939-bb65-906838306a0a",
+        "name": "Android Application Detection for XploitSpy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "ams"
+    ]
+  ],
+  "author": "Chunbo Song",
+  "team": "MTRT",
+  "date": "2023/03/19",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

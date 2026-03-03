@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "40ac036e-2221-4872-86b3-0d943c7f8327",
+  "name": "AWS IAM Create SAML Provider",
+  "description": "Detects the successful creation of a new SAML identity provider. Malicious actors may configure the provider to accept assertions from their own identity system, enabling them to impersonate legitimate users and escalate privileges.",
+  "filterSets": [
+    [
+      {
+        "id": "0434ac76-6836-4d87-b408-a04688ee7fc1",
+        "name": "AWS IAM Create SAML Provider",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Yash Verma & Christopher Ordonez",
+  "team": "Cloud One",
+  "date": "2025/08/22",
+  "lastUpdate": "2025-08-22T08:41:48.000Z"
+}

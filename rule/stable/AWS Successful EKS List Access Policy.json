@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7d1c0323-7f83-4e02-921d-e72c483a263c",
+  "name": "AWS Successful EKS List Access Policy",
+  "description": "Detects successful listing the access policies associated with an access entry in EKS",
+  "filterSets": [
+    [
+      {
+        "id": "7e89ad21-e043-4f3c-b221-34aab1a4f5e5",
+        "name": "AWS Successful EKS List Access Policy",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "David Agni",
+  "team": "Cloud One",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

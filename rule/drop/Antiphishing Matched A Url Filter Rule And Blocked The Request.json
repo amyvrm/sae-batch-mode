@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "b80dc3fa-5122-4c50-aca8-bcfdd5fb8637",
+  "name": "Antiphishing Matched A Url Filter Rule And Blocked The Request",
+  "description": "Fortinet detection - Antiphishing matched a URL filter rule and blocked the request",
+  "filterSets": [
+    [
+      {
+        "id": "8e0fdebf-d954-4537-9c48-3556e9e91e09",
+        "name": "Antiphishing Matched A Url Filter Rule And Blocked The Request",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

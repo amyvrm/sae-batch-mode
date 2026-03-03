@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "id": "012c44af-6d64-4438-afcf-80405f55a585",
+  "name": "Possible DLL Hijacking of Msedge.dll",
+  "description": "Detects suspicious image loads of msedge.dll from locations outside the expected Microsoft Edge directories.",
+  "filterSets": [
+    [
+      {
+        "id": "2fb95c6a-fd3a-42c0-abb4-42b6fd03ab0c",
+        "name": "Possible DLL Hijacking of Msedge.dll",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds",
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Gerardo III Jonieca & Shaun Galura",
+  "team": "AMEA-IR",
+  "date": "2025/08/15",
+  "lastUpdate": "2025-09-22T09:20:28.000Z"
+}

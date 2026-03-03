@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0d475157-c55b-4b13-907d-c468336daf23",
+  "name": "Suspicious Qemu Execution",
+  "description": "This rule detects a suspicious execution of Qemu containing unusual parameters and an executable name.",
+  "filterSets": [
+    [
+      {
+        "id": "cb2428cc-617c-4dc7-b5df-a175efeb4418",
+        "name": "Suspicious Process Loaded by Qemu Execution via Wscript",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e18d5cee-b7c5-41dc-8881-4c748086f0d6",
+        "name": "Suspicious Qemu Execution via Wscript",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-06-26T14:42:59.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "34da7d29-659d-4bd6-9e13-8275a6c0a801",
+  "name": "Network Discovery via WMI Execution",
+  "description": "Network activity has been detected involving the utilization of Network discovery through WMI Execution.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "e46770a8-bb69-4038-af5d-32d609a4127e",
+      "name": "Network Discovery via WMI Execution",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1069.002",
+    "mitre.t1047"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Arjun Baltazar",
+  "team": "CSG",
+  "date": "2023/09/19",
+  "lastUpdate": "2024-05-10T07:02:51.000Z"
+}

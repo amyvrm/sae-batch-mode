@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4f1c31bd-6734-461b-a4e7-8ae4580bf8eb",
+  "name": "AWS EC2 Instance Metadata Defaults Modified",
+  "description": "Detects when default Instance Metadata Service (IMDS) settings are modified for an EC2 instance.",
+  "filterSets": [
+    [
+      {
+        "id": "6753434e-d80b-4ecd-8fb8-388d2056dafc",
+        "name": "AWS EC2 Instance Metadata Defaults Modified",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2025/12/16",
+  "lastUpdate": "2026-02-11T08:35:44.000Z"
+}

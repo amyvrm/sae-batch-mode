@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "473d5b86-baa5-4986-aef4-d968572f127d",
+  "name": "Stream-Based Uncompression Reached Size Limit",
+  "description": "Fortinet detection - Stream-based uncompression reached size limit",
+  "filterSets": [
+    [
+      {
+        "id": "229e99fe-b2bc-4b83-a3c2-04d04c6c806d",
+        "name": "Stream-Based Uncompression Reached Size Limit",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:15:40.000Z"
+}

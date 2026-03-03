@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f633e237-ff9c-4e6f-9890-c92bab3d0c66",
+  "name": "Possible DLL Sideloading via Google Updater File",
+  "description": "Detects suspicious DLL Sideloading via Google Updater File leading to C2 connection",
+  "filterSets": [
+    [
+      {
+        "id": "2bb558c0-4f8f-4f24-8c46-bd1c78d703aa",
+        "name": "Possible DLL Sideloading via Google Updater File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Jehhan Marcelo & Renzell David Barros",
+  "team": "AMEA-IR",
+  "date": "2025/05/21",
+  "lastUpdate": "2025-06-19T05:20:15.000Z"
+}

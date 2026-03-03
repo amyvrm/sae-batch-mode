@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c43b844d-280d-424c-a507-0b416bd6a5a5",
+  "name": "Screen Capture",
+  "description": "A possible screen capture attempt by a malware was detected.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "71ba3b4c-02e9-11eb-9c4b-787b8ad91447",
+      "name": "Capture Sensitive Data",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1113"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sam Li",
+  "team": "MacTRT",
+  "date": "2020/09/30",
+  "lastUpdate": "2024-05-09T05:32:29.000Z"
+}

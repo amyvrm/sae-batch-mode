@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f99bb57e-3798-4444-beaf-ba0d74dc64e6",
+  "name": "Vulnerable Software Identified by Microsoft",
+  "description": "Microsoft Antivirus File Detection for Vulnerable Software",
+  "filterSets": [
+    [
+      {
+        "id": "23287061-f037-49fa-b8a2-1fc51851b13f",
+        "name": "Vulnerable Software Identified by Microsoft",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/06",
+  "lastUpdate": "2025-08-26T02:21:03.000Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "98bb79fb-1964-47cb-b33d-08ce22c52182",
+  "name": "AWS EC2 IAM Instance Profile Disassociation Attempt",
+  "description": "This Rule detects attempts to remove an IAM instance profile from an EC2 instance, which may indicate privilege escalation or evasion.",
+  "filterSets": [
+    [
+      {
+        "id": "4a95bbf3-1cdb-4fcd-8d83-130cd0bfc765",
+        "name": "AWS EC2 IAM Instance Profile Disassociation Attempt",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Christopher Ordonez & Srivathsa H S",
+  "team": "Cloud One",
+  "date": "2022/10/26",
+  "lastUpdate": "2025-06-20T03:23:39.000Z"
+}

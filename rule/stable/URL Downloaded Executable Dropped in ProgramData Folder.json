@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0bc293d0-6c44-40d0-a0ed-1ad47837cb9c",
+  "name": "URL Downloaded Executable Dropped in ProgramData Folder",
+  "description": "Detects executable file dropped in ProgramData folder after suspicious file extension detected in a URL.",
+  "filterSets": [
+    [
+      {
+        "id": "d156e72f-eb89-4c8d-8900-68e52f9e8968",
+        "name": "Suspicious File Extension Included In a URL",
+        "highlight": true
+      },
+      {
+        "id": "2cd2b636-eaed-4899-9a34-b46c8735894b",
+        "name": "Suspicious Executable Dropped in ProgramData Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "d156e72f-eb89-4c8d-8900-68e52f9e8968.requests contains 2cd2b636-eaed-4899-9a34-b46c8735894b.objectFileName"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks",
+      "tlc|Microsoft"
+    ]
+  ],
+  "author": "Andre Filipe Codod",
+  "team": "Third Party Operations",
+  "date": "2025/06/24",
+  "lastUpdate": "2025-06-26T01:08:46.000Z"
+}

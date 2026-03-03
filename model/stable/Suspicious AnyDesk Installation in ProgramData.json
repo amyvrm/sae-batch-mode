@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d2878fe3-72d2-4feb-9ecb-3a2e4bdb02fc",
+  "name": "Suspicious AnyDesk Installation in ProgramData",
+  "description": "Detects AnyDesk executable dropped in the root folder of ProgramData.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "533c998a-0c86-487e-a887-5f6360387645",
+      "name": "Suspicious AnyDesk Installation in ProgramData",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|Microsoft"
+    ]
+  ],
+  "tags": [
+    "mitre.t1219.002",
+    "mitre.t1105"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Miguel Carlo Ang",
+  "team": "Third Party Operations",
+  "date": "2025/06/09",
+  "lastUpdate": "2025-07-14T01:53:47.000Z"
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "54c432c7-b179-4a28-a718-85d9793a42cd",
+  "name": "Defense Evasion via Event Log Clearing and Remote Symlinks",
+  "description": "Detection of Event Log Clearing via Wevtutil and Suspicious Enabling of Windows Remote Symlinks via Fsutil",
+  "filterSets": [
+    [
+      {
+        "id": "5f22cc9a-1fc0-4537-8083-f3cbb0b239a3",
+        "name": "System-Defined Event Logs Clearing via Wevtutil",
+        "highlight": true
+      },
+      {
+        "id": "de207540-7bc3-4ed9-ad7d-b189828b836f",
+        "name": "Enabling Windows Remote Symlinks via Fsutil",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "pao",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "TAD Service Ops",
+  "date": "2024/08/20",
+  "lastUpdate": "2024-10-29T01:41:20.000Z"
+}

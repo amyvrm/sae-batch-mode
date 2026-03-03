@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ce648274-4a47-46b2-8637-605293a64717",
+  "name": "ShadowDumper LSA Subsystem Service Memory Dump Files Dropped in Public Folder",
+  "description": "Shadow Dumper is a powerful tool used to dump LSASS memory, often needed in penetration testing and red teaming. It uses multiple advanced techniques to dump memory, allowing to access sensitive data in LSASS memory.",
+  "filterSets": [
+    [
+      {
+        "id": "1018df75-a367-4a01-9c09-f3438b14b974",
+        "name": "ShadowDumper LSASS Memory Dump Files Dropped in Public Folder",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "lastUpdate": "2024-12-02T17:29:07.000Z",
+  "author": "Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2024/11/13"
+}

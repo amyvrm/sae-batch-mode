@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2ce058a3-56c3-4ef6-a55f-f38a875343f5",
+  "name": "ESXCLI Discovery Command Executed",
+  "description": "Detects execution of esxcli command for system or network discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "95706fef-a906-4958-aa83-ac11d5a4bad5",
+        "name": "ESXi VM List Discovery via ESXCLI",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "877d1242-62fb-4055-9683-341a1c7b926c",
+        "name": "ESXi Network Configuration Discovery via ESXCLI",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5bc1e262-ad08-4033-9f90-a279fe9cd1a8",
+        "name": "ESXi System Information Discovery via ESXCLI",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "5984a176-02e1-4cf0-8569-7d599b933567",
+        "name": "ESXi VSAN Information Discovery via ESXCLI",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Nora Bowden & Lucas Silva",
+  "team": "US-IR",
+  "date": "2024/05/21",
+  "lastUpdate": "2025-07-07T08:18:28.000Z"
+}

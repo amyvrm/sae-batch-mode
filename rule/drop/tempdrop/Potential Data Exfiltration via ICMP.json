@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9a51d8f3-f7f3-4950-ba22-4ae03be337dc",
+  "name": "Potential Data Exfiltration via ICMP",
+  "description": "Potential Data Exfiltration via ICMP leveraging padding option",
+  "filterSets": [
+    [
+      {
+        "id": "42b1a8e7-2b4c-4e25-a596-1e9b30db8b2d",
+        "name": "Potential Data Exfiltration via ICMP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sao",
+      "sds"
+    ]
+  ],
+  "author": "Colin Crowley",
+  "team": "EU-IR",
+  "date": "2025/04/17",
+  "lastUpdate": "2025-11-28T06:49:09.000Z"
+}

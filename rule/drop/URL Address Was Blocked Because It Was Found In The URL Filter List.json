@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a27cb39e-e7f8-4fe8-87eb-8d8b6aa176c1",
+  "name": "URL Address Was Blocked Because It Was Found In The URL Filter List",
+  "description": "Fortinet detection - URL address was blocked because it was found in the URL filter list",
+  "filterSets": [
+    [
+      {
+        "id": "24d7b2f7-a8a9-4ec9-8181-9d65ff8e795c",
+        "name": "URL Address Was Blocked Because It Was Found In The URL Filter List",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-02-05T07:13:43.000Z"
+}

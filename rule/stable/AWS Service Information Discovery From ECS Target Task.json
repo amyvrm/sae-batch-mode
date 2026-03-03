@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a4352524-8399-4df4-ade9-b41cdf0a8332",
+  "name": "AWS Service Information Discovery From ECS Target Task",
+  "description": "This Rule detects AWS ECS service information discovery.",
+  "filterSets": [
+    [
+      {
+        "id": "7edcc2a8-c143-4264-b456-4d55b37bea7b",
+        "name": "AWS ECS Service Information Discovery From ECS Target Task",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 600
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Deep Patel",
+  "team": "Cloud One",
+  "date": "2022/10/06",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

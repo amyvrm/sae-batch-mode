@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e2dc6a24-49b0-4f08-aebd-ac8a2e51c6cb",
+  "name": "Adversarial Tool HTTP C2 Connection",
+  "description": "Network activity involving HTTP, which is associated with the detection of suspicious cookie and Cobalt Strike C2 connection.",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "f4138c4c-0089-47b0-928a-b1b7afd09ee6",
+      "name": "Adversarial Tool HTTP C2 Connection",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071.001",
+    "mitre.t1573.001",
+    "attack.s0154"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "silent": false,
+  "globalModel": true,
+  "author": "Gwyneth Rose Moster",
+  "team": "DDI",
+  "date": "2024/12/12",
+  "lastUpdate": "2024-12-12T04:14:28.000Z"
+}

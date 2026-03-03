@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "639cb500-7767-4f29-855e-28fd4eaa12a3",
+  "name": "Remote Job Execution",
+  "description": "Remote File Copy and execute via Schedule Tasks",
+  "filterSets": [
+    [
+      {
+        "id": "b39b44d6-8aa6-4c93-944a-a518c5f220e0",
+        "name": "Remote File Copy Via SMB",
+        "highlight": true
+      },
+      {
+        "id": "e3860848-4ed2-4b4e-b004-1cd0e93f60b6",
+        "name": "Scheduled Tasks Via SMB",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "b39b44d6-8aa6-4c93-944a-a518c5f220e0",
+        "name": "Remote File Copy Via SMB",
+        "highlight": true
+      },
+      {
+        "id": "d722e21a-7070-497a-8f2b-b549850987c3",
+        "name": "Remote Scheduled Task via SMB",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "pdi",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2023-06-21T05:14:40.000Z"
+}

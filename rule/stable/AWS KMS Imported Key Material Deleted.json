@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c062a1bb-9334-40ba-b200-0d0b802c5356",
+  "name": "AWS KMS Imported Key Material Deleted",
+  "description": "Monitors the deletion of imported key material from a KMS key, which can render encrypted data permanently inaccessible.",
+  "filterSets": [
+    [
+      {
+        "id": "816a6e6b-64fc-4631-b2a4-1cf7147eba45",
+        "name": "AWS KMS Imported Key Material Deleted",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2025/07/09",
+  "lastUpdate": "2025-07-14T05:47:04.000Z"
+}

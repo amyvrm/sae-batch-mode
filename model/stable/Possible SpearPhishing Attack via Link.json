@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "id": "04c81e8a-2d16-42f9-aa29-86cbb2784e6b",
+  "name": "Possible Spear Phishing Attack via Link",
+  "description": "A suspicious URL associated with phishing attacks was detected in an email message. (Delayed alert: Batch process detection)",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "0d31cb79-74fb-47b7-9514-e7e107350b36",
+      "name": "Suspicious SpearPhishing Link in email",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.002"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "SAE Threat Expert",
+  "team": "SAE Threat Expert",
+  "lastUpdate": "2024-01-24T13:34:09.000Z"
+}

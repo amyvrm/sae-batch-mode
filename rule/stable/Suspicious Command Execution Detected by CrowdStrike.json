@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "7ed55c6a-9081-4197-a13e-c0b814cc829d",
+  "name": "Suspicious Command Execution Detected by CrowdStrike",
+  "description": "This CrowdStrike alert indicates that a suspicious command was executed on the endpoint.",
+  "filterSets": [
+    [
+      {
+        "id": "b7a14653-cac0-4a89-becf-5f90a6b9ef35",
+        "name": "Suspicious Command Execution Detected by CrowdStrike",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Lorenzo Laureano",
+  "team": "Third Party Operations",
+  "date": "2025/08/11",
+  "lastUpdate": "2025-08-12T08:49:19.000Z"
+}

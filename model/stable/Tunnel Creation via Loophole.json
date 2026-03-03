@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "08524e2b-c9f1-47be-a742-8abd845ad4b4",
+  "name": "Tunnel Creation via Loophole",
+  "description": "Detects network tunnel creation using Loophole, which may be used for command and control communication, and data exfiltration",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "be67a5dc-1633-4d40-a668-61e8b3c3f8e3",
+      "name": "Tunnel Creation via Loophole",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "pao",
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "tags": [
+    "mitre.t1071",
+    "mitre.t1071.004"
+  ],
+  "playbooks": [
+    {
+      "id": "ac93f324-42ee-4947-bc73-22e9a726f3ae",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "NETWORK_ENRICHMENT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Mahmoud Soheem & Bahaa Yamany",
+  "team": "MENA-IR",
+  "date": "2025/02/16",
+  "lastUpdate": "2025-11-25T09:47:51.000Z"
+}

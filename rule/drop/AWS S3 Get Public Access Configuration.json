@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2c526b0c-a3ae-11ed-a8fc-0242ac120002",
+  "name": "AWS S3 Get Public Access Configuration",
+  "description": "Detected S3 Get Public Access Configuration",
+  "filterSets": [
+    [
+      {
+        "id": "2ef97726-cd14-494e-93a1-374d771ae304",
+        "name": "AWS S3 Get Public Access Configuration",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 60,
+    "dedupSeconds": 60
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "author": "Yash Verma",
+  "team": "Cloud One",
+  "date": "2022/01/19",
+  "lastUpdate": "2024-03-08T03:20:51.000Z"
+}

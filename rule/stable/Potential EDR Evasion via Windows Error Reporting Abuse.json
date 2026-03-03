@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "98dd82cd-bc79-44d7-998a-e3b689460833",
+  "name": "Potential EDR Evasion via Windows Error Reporting Abuse",
+  "description": "Detects potential abuse of WerFaultSecure.exe for remote thread injection and memory analysis, often linked to defense evasion tactics like potential EDR evasion or process injection attempts.",
+  "filterSets": [
+    [
+      {
+        "id": "5faa24bd-3fd8-4a0f-a2d1-4a80ab774879",
+        "name": "Potential EDR Evasion via Windows Error Reporting Abuse",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 1,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Alyssa Ramos & Mahmoud Soheem",
+  "team": "MENA-IR",
+  "date": "2025/09/22",
+  "lastUpdate": "2025-09-24T12:25:55.000Z"
+}

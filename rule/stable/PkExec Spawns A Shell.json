@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6145bf2c-1e3f-488a-b82e-65168104d656",
+  "name": "PkExec Spawns A Shell",
+  "description": "This rule detects when a shell is spawned from pkexec.",
+  "filterSets": [
+    [
+      {
+        "id": "74748c4f-5690-47ca-876f-329bfe0e2190",
+        "name": "Potential Exploitation Of Polkit Vulnerability CVE-2021-4034",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "f306b4b4-b6c4-4fbb-a03c-ecae6daf5afc",
+        "name": "Potential PwnKit CVE-2021-4034 Exploitation Traces Logged",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Nitesh Surana",
+  "team": "Cloud One",
+  "date": "2022/01/31",
+  "lastUpdate": "2024-07-25T20:20:21.000Z"
+}

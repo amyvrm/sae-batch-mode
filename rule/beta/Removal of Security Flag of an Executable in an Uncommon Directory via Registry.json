@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "269d69d3-df08-4c99-b7d8-aaca88c7fcdb",
+  "name": "Removal of Security Flag of an Executable in an Uncommon Directory via Registry",
+  "description": "Registry Modification that made the system recognizing the associated file as trusted or is not actively blocking its execution",
+  "filterSets": [
+    [
+      {
+        "id": "5fd83357-1d9a-463d-bd6f-1c811c8c233a",
+        "name": "Setting of SAFER Policy of an Executable with Uncommon Directory",
+        "highlight": true
+      },
+      {
+        "id": "a25c5635-24cb-4f86-9f9d-cf62a85267f9",
+        "name": "Removing the Restrictions Setting of a SAFER Policy in Registry",
+        "highlight": true
+      }
+    ]
+  ],
+  "condition": [
+    [
+      "5fd83357-1d9a-463d-bd6f-1c811c8c233a.objectRegistryKeyHandle equals a25c5635-24cb-4f86-9f9d-cf62a85267f9.objectRegistryKeyHandle"
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds",
+      "xes"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/12/12",
+  "lastUpdate": "2024-12-12T14:38:45.000Z"
+}

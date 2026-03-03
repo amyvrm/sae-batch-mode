@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "91991827-ac11-4290-8cf8-3c459ad4249b",
+  "name": "File detection - Google Chrome Extension CRX File",
+  "description": "Palo Alto File detection - Google Chrome Extension CRX File",
+  "filterSets": [
+    [
+      {
+        "id": "48e48c42-dd8e-47a3-8e49-6eb0c250bad1",
+        "name": "File detection - Google Chrome Extension CRX File",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:17:43.000Z"
+}

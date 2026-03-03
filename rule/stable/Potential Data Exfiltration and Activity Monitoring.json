@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4b32248e-0391-4767-84bf-ca048099c569",
+  "name": "Potential Data Exfiltration and Activity Monitoring",
+  "description": "Detects concurrent use of SytecaClient (activity monitoring/keylogging) and rclone (cloud data transfer), tools abused by attackers to harvest sensitive data and exfiltrate it via cloud services. Legitimate utilities, when executed together in unexpected contexts, signal potential compromise.",
+  "filterSets": [
+    [
+      {
+        "id": "677fe4c5-17b0-4d50-9ca7-be8f12a215be",
+        "name": "Usage of SytecaClient for Activity Monitoring",
+        "highlight": true
+      },
+      {
+        "id": "737276ab-164c-4adf-a4c1-f062a53df77d",
+        "name": "Data Upload via Rclone",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Ahmed Kamal & Yusuf Madkour",
+  "team": "MENA-IR",
+  "date": "2025/09/25",
+  "lastUpdate": "2026-02-03T12:24:37.000Z"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f5af3b17-2ada-4622-bf32-353beccdfe0e",
+  "name": "Possible RDP Connections using Administrator Account from the Internet to Internal Hosts with Public IP Addresses",
+  "description": "An RDP connection from the internet to an internal host with public IP address using the builtin administrator account has been identified.",
+  "riskLevel": "medium",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "0aedc560-23fb-4e15-b9f1-4b2cc7119644",
+      "name": "Possible RDP Connections using Administrator Account from the Internet to Internal Hosts with Public IP Addresses",
+      "score": 30
+    }
+  ],
+  "threshold": {
+    "targetScore": 30,
+    "withinSeconds": 14400,
+    "dedupSeconds": 14400
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "tags": [
+    "mitre.t1021.001",
+    "mitre.t1021"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2024/05/27",
+  "lastUpdate": "2024-06-07T15:26:03.000Z"
+}

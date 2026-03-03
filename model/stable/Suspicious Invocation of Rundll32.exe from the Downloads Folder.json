@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "6b32b7dc-9146-4528-bfbd-7d10e125b678",
+  "name": "Suspicious Invocation of Rundll32.exe from the Downloads Folder",
+  "description": "Detection of a suspect invocation of rundll32.exe from the downloads folder, which may be indicative of an infection",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "82500a21-dddc-47b3-b3a6-96b24bff1d31",
+      "name": "Suspicious Invocation of Rundll32.exe from the Downloads Folder",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1085",
+    "mitre.t1218.011"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/10/08",
+  "lastUpdate": "2025-12-09T10:45:43.000Z"
+}

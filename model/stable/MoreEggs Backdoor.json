@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f06f13f0-71b3-44ed-90e4-852297e79c47",
+  "name": "More Eggs Backdoor",
+  "description": "More Eggs Backdoor",
+  "riskLevel": "high",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "9f5096d5-4a5f-4a3c-9c86-806d57f0443b",
+      "name": "More Eggs Backdoor",
+      "score": 5
+    }
+  ],
+  "threshold": {
+    "targetScore": 5,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.001",
+    "mitre.t1140"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Lucas Silva",
+  "team": "US-IR",
+  "date": "2023/07/31",
+  "lastUpdate": "2024-01-19T05:25:34.000Z"
+}

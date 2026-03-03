@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ecf5c94e-3aa6-43fb-9385-906753c05e6a",
+  "name": "Suspicious Command and Control Connection",
+  "description": "A connection to a possible C&C server which indicates the host is compromised.",
+  "filterSets": [
+    [
+      {
+        "id": "2663b69f-446a-4b74-b474-810e1327be56",
+        "name": "Possible Command and Control Communication via DNS",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "25fee0cd-fd1b-411c-aa92-026478232e20",
+        "name": "Possible Command and Control Communication via HTTP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "32983ec0-aa2b-4d9c-b3f4-b800c9fb6be8",
+        "name": "Possible Command and Control Communication via HTTPS",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "bd15a321-9d26-4143-b228-b2f538893914",
+        "name": "Possible Command and Control Communication via TCP",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "e18cec75-963b-4046-8793-808304d3931b",
+        "name": "PSEmpire Checkin Request",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "4c039972-377f-4431-99c7-d246a1a62a6b",
+        "name": "Monkif Trojan Communication",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "156df177-7532-4fe5-bdd9-2b11f14d14a2",
+        "name": "Carbanak Traffic",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cade1c74-13ea-4b89-b291-35c2f39e226c",
+        "name": "Possible Command and Control Communication via IRC",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "cb309e79-7488-4d9a-9ba6-c707464ee57e",
+        "name": "Possible Command and Control Communication via UDP",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 3,
+    "withinSeconds": 300,
+    "dedupSeconds": 1800
+  },
+  "requiredProducts": [
+    [
+      "xcs",
+      "pdi",
+      "stp",
+      "ptp",
+      "xns"
+    ]
+  ],
+  "lastUpdate": "2024-03-12T05:54:28.000Z"
+}

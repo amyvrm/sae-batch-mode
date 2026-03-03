@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "id": "070b9765-3f13-435f-9a2a-007df0a9fff2",
+  "name": "SharpHound Data Collector Activity",
+  "description": "Detection of the usage of sharphound being used to enumerate active directory",
+  "filterSets": [
+    [
+      {
+        "id": "fd5477e7-53cb-4fa9-a3e3-27e9b59e5ae2",
+        "name": "SharpHound Data Collector Activity",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "4e0447c2-cc28-4daf-aa5f-f48a440793f8",
+        "name": "SharpHound Data Collector Activity 2",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "author": "Jack Walsh",
+  "team": "EU-IR",
+  "date": "2025/11/27",
+  "lastUpdate": "2026-01-15T10:23:13.000Z"
+}

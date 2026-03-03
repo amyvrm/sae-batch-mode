@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "12356ec0-2697-4039-8b4e-e5f00a1a9dda",
+  "name": "Suspicious Installation of Driver-Based Browser Hijacker",
+  "description": "RedDriver malware utilizes HookSignTool to forge its signature timestamp to bypass Windows driver-signing policies and uses Windows Filtering Platform(WFP) to intercept browser traffic.",
+  "filterSets": [
+    [
+      {
+        "id": "4a251aa9-f8a6-4931-a498-f9ba6aa6c646",
+        "name": "Suspicious Installation of Driver-Based Browser Hijacker",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Felix Gregorio III",
+  "team": "AMEA-IR",
+  "date": "2024/11/14",
+  "lastUpdate": "2025-03-25T03:17:24.000Z"
+}

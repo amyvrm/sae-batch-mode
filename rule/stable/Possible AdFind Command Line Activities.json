@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9961f942-1074-48f0-b8b8-8376d85bfd7f",
+  "name": "Possible AdFind Command Line Activities",
+  "description": "Detecting AdFind execution along with suspicious file location which considred anomaly and may lead to traversing of threat actor within network.",
+  "filterSets": [
+    [
+      {
+        "id": "829092e5-5474-4c2f-b2a7-cd849b00fb52",
+        "name": "Possible AdFind Command Line Activities",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "TAD Service Ops",
+  "date": "2024/09/04",
+  "lastUpdate": "2024-10-16T06:44:57.000Z"
+}

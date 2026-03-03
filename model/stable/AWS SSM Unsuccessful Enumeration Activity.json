@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "id": "2aa4dc4c-194e-436c-87d5-83c4b20037ce",
+  "name": "AWS SSM Unsuccessful Enumeration Activity",
+  "description": "Events signifies failed attempts to retrieve AWS Systems Manager (SSM) resource details. Repeated failures could indicate misconfigurations, unauthorized access attempts, or enumeration activity by an attacker trying to gather insights into SSM configurations.",
+  "riskLevel": "high",
+  "scope": "cloudIdentity",
+  "rules": [
+    {
+      "id": "d1ae4e9a-07e9-4dae-b5ce-f138d9dc3a17",
+      "name": "AWS SSM Unsuccessful Session Enumeration",
+      "score": 1
+    },
+    {
+      "id": "93e79a8e-64f3-471a-8774-1250eadd2668",
+      "name": "AWS SSM Unsuccessful Patch Baseline Enumeration",
+      "score": 1
+    },
+    {
+      "id": "f641db56-769c-4c75-be97-3db192a4b83e",
+      "name": "AWS SSM Unsuccessful Patch Group Enumeration",
+      "score": 1
+    },
+    {
+      "id": "9e8aa953-e80c-4de4-8932-152686186421",
+      "name": "AWS SSM Unsuccessful Automation Execution Enumeration",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 360,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "tags": [
+    "mitre.t1580"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti & David Agni",
+  "team": "Cloud One",
+  "date": "2025/06/23",
+  "lastUpdate": "2025-07-23T08:52:30.000Z"
+}

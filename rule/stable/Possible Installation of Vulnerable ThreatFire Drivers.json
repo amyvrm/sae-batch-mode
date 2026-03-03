@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d6010491-91fb-45dc-b75f-2f03d115618b",
+  "name": "Possible Installation of Vulnerable Threatfire Drivers",
+  "description": "Detects suspicious installation of ThreatFire drivers which is capable of terminating security agent processes and services.",
+  "filterSets": [
+    [
+      {
+        "id": "2a74201d-8b01-4b56-92f9-fd4c6deeb71a",
+        "name": "Possible Installation of Vulnerable ThreatFire Drivers",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Krisford Macalalad & Jehhan Marcelo",
+  "team": "AMEA-IR",
+  "date": "2025/02/07",
+  "lastUpdate": "2025-03-20T10:43:56.000Z"
+}

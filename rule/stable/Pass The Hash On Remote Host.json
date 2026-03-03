@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "c5e79287-8ce9-45cc-9303-e2a6daf62bea",
+  "name": "Pass The Hash On Remote Host",
+  "description": "Detected Pass the Hash attack attempt",
+  "filterSets": [
+    [
+      {
+        "id": "b9e53824-25ca-461a-b5ba-a96b8a4de444",
+        "name": "Identified Logon Attempt Over Network",
+        "highlight": true
+      },
+      {
+        "id": "dc4c674d-9a24-450d-87a6-2eee3407ebb5",
+        "name": "Special Privileges Assigned To New Logon Session",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 30,
+    "dedupSeconds": 1440
+  },
+  "requiredProducts": [
+    [
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Abdelrahman Esmail",
+  "team": "Cloud One",
+  "date": "2024/10/11",
+  "lastUpdate": "2026-01-13T15:55:30.000Z"
+}

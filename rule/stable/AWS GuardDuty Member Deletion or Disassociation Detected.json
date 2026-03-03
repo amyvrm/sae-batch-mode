@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "aeb13fda-e7d0-4a6e-b3ef-d5558940a02b",
+  "name": "AWS GuardDuty Member Deletion or Disassociation Detected",
+  "description": "This rule detects when GuardDuty members are deleted or disassociated. It may indicate attempts to alter monitoring settings or avoid detection. This could lead to reduced monitoring effectiveness and increased risk of undetected threats.",
+  "filterSets": [
+    [
+      {
+        "name": "AWS GuardDuty Member Deletion Detected",
+        "id": "eb81f7f2-a934-4ba6-981a-dbe24fa5d508",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "name": "AWS GuardDuty Master Account Disassociation Detected",
+        "id": "5532cbb3-0e82-4626-b1f6-b3ad06a54a0a",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "name": "AWS GuardDuty Member Disassociation Detected",
+        "id": "91f14331-1e3e-45df-b3ba-0c26ad596083",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "name": "AWS GuardDuty Member Monitoring Stopped Detected",
+        "id": "8f3ca40d-3b52-40d5-9beb-c8bbbde19682",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm",
+      "tlc|aws|XDR for Cloud - AWS CloudTrail"
+    ]
+  ],
+  "author": "Nikki Madayag & Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/02/12",
+  "lastUpdate": "2024-11-29T03:00:35.000Z"
+}

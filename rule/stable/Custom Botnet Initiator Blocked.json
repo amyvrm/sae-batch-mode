@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "eb5d3a2d-db8b-4969-9794-13ec23b3cdf2",
+  "name": "Custom Botnet Initiator Blocked",
+  "description": "SonicWall Detection - Suspected Botnet initiator blocked %s, Source Custom List",
+  "filterSets": [
+    [
+      {
+        "id": "cef68caf-625e-43c6-a28f-e4be5b24361d",
+        "name": "Custom Botnet Initiator Blocked",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|SonicWall"
+    ]
+  ],
+  "author": "Christian Jason Geollegue",
+  "team": "TERT",
+  "date": "2024/12/05",
+  "lastUpdate": "2024-12-06T04:17:10.000Z"
+}

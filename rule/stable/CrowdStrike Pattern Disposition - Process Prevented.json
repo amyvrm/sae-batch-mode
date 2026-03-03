@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8d2fd549-b63e-48b8-b65b-a8d7aa261b7d",
+  "name": "CrowdStrike Pattern Disposition - Process Prevented",
+  "description": "CrowdStrike detection for Prevented Process",
+  "filterSets": [
+    [
+      {
+        "id": "202b20fe-44e6-4a58-b26f-15f2d1f8ea26",
+        "name": "CrowdStrike Pattern Disposition - Process Prevented",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "tlc|CrowdStrike"
+    ]
+  ],
+  "author": "Mark Chester De Quiroz",
+  "team": "Third Party Operations",
+  "date": "2025/08/18",
+  "lastUpdate": "2025-08-27T09:17:05.000Z"
+}

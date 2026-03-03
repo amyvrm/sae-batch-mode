@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ae9f3c29-d440-4c70-b849-2eaa1bfa7e72",
+  "name": "Possible Backdoor Download via Windows Powershell",
+  "description": "A backdoor was detected in network traffic that was requested using Windows Powershell.",
+  "filterSets": [
+    [
+      {
+        "id": "93a7225b-434a-49a4-bd70-ff8dd1a839d9",
+        "name": "Possible Backdoor Download via Windows Powershell",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Nora Bowden",
+  "team": "US-IR",
+  "date": "2024/10/16",
+  "lastUpdate": "2024-11-07T20:44:57.000Z"
+}

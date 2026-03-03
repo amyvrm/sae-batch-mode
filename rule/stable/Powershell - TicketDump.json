@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "d37d57fb-57d2-4aba-9f80-a7cafa6ed392",
+  "name": "Powershell - TicketDump",
+  "description": "Execution of dumper.ps1 which facilitates the dumping of Kerberos Tickets",
+  "filterSets": [
+    [
+      {
+        "id": "b9b128f4-ac5f-47be-b287-8b09d504c735",
+        "name": "Powershell - TicketDump",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes"
+    ]
+  ],
+  "author": "David Walsh and Cenen Enalbes",
+  "team": "EU-IR",
+  "date": "2024/03/20",
+  "lastUpdate": "2024-05-23T14:08:57.000Z"
+}

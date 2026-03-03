@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "f4d798b1-eeab-4657-9583-491a8a0bf267",
+  "name": "HTTP Request Anomalies Indicating Content-Type Mismatch",
+  "description": "Network activity involving HTTP, associated with mismatched content and content type, has been observed. This activity suggests a potential discrepancy between declared and actual content types in HTTP requests.",
+  "filterSets": [
+    [
+      {
+        "id": "709255b0-7a36-585b-b709-e73c031b577b",
+        "name": "Anomalies HTTP (Request) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 2,
+    "withinSeconds": 300,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "pdi",
+      "xns"
+    ]
+  ],
+  "author": "Joshua Bersamira",
+  "team": "DDI",
+  "date": "2025/07/22",
+  "lastUpdate": "2025-08-11T11:40:53.000Z"
+}

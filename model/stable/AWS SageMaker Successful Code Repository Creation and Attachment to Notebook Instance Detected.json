@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "id": "441dca3f-8d6d-4458-ad95-656ca72ae3a2",
+  "name": "AWS SageMaker Successful Code Repository Creation and Attachment to Notebook Instance Detected",
+  "description": "Monitors the successful creation and attachment of a code repository to a notebook instance in Amazon SageMaker. While this action is common during legitimate configuration of ML environments, it also opens potential attack vectors if misused. Detecting this event ensures that only authorized users are setting up their environments and helps identify any unauthorized attempts to manipulate or exploit notebook instances for malicious purposes.",
+  "riskLevel": "low",
+  "scope": "cloudIdentity",
+  "defaultEnabled": true,
+  "rules": [
+    {
+      "id": "092eb09f-4650-47bc-a4ff-923c27fd7054",
+      "name": "AWS SageMaker Successful Code Repository Creation Detected",
+      "score": 1,
+      "sequence": 1
+    },
+    {
+      "id": "1ef459a3-62f2-479d-8759-426eeb2e02a9",
+      "name": "AWS SageMaker Successful Notebook Instance Created or Updated with GitHub Code Repository",
+      "score": 1,
+      "sequence": 2
+    }
+  ],
+  "threshold": {
+    "targetScore": 2,
+    "withinSeconds": 60,
+    "dedupSeconds": 360
+  },
+  "requiredProducts": [
+    [
+      "sct",
+      "scm"
+    ]
+  ],
+  "tags": [
+    "mitre.t1059.009",
+    "atlas.aml.t0018.001"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Sunil Bharti",
+  "team": "Cloud One",
+  "date": "2024/11/28",
+  "lastUpdate": "2025-10-30T10:21:41.000Z"
+}

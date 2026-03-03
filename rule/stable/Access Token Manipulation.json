@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "4398fd5c-09bc-11ee-be56-0242ac120002",
+  "name": "Access Token Manipulation",
+  "description": "Access token manipulation via token stealing and granting privileges to new process with stolen token.",
+  "filterSets": [
+    [
+      {
+        "id": "2e7bda45-fb3d-4c84-ac7d-61264d6c4606",
+        "name": "Behavior Monitoring Detection - Access Token Manipulation - Step 2",
+        "highlight": true
+      },
+      {
+        "id": "1f5e4499-f18f-4b86-bbc5-a86f2abfede9",
+        "name": "Behavior Monitoring Detection - Access Token Manipulation - Step 1",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "condition": [
+    [
+      "2e7bda45-fb3d-4c84-ac7d-61264d6c4606.processFileHashSha1 equals 1f5e4499-f18f-4b86-bbc5-a86f2abfede9.processFileHashSha1"
+    ]
+  ],
+  "requiredProducts": [
+    [
+      "sds"
+    ]
+  ],
+  "author": "Peggy Mai",
+  "team": "LWE",
+  "date": "2023/06/14",
+  "lastUpdate": "2023-08-23T02:42:04.000Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "id": "51cccb39-f9f9-4728-9ad2-7e3fba8277d6",
+  "name": "Anomalous Werfault Outbound Connection",
+  "description": "Detection for anomalous outbound connections from Wefault.exe",
+  "filterSets": [
+    [
+      {
+        "id": "17a2d4ed-8e3d-4f60-9d50-5df79f0916d6",
+        "name": "Anomalous Werfault Outbound Connection",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "sds",
+      "pds"
+    ]
+  ],
+  "author": "Jack Walsh & Lucas Silva",
+  "team": "EU-IR",
+  "date": "2023/10/30",
+  "lastUpdate": "2024-01-23T03:08:09.000Z"
+}

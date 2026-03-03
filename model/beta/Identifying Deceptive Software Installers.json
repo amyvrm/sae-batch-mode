@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "0fb18ca1-5054-489d-803e-2e480a6633ac",
+  "name": "Identifying Deceptive Software Installers",
+  "description": "Detects suspicious activities related to fake software installers that distribute malware",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "df59fd4f-bc42-4488-8dc1-03a30b91e6fb",
+      "name": "Identifying Deceptive Software Installers",
+      "score": 10
+    }
+  ],
+  "threshold": {
+    "targetScore": 10,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "sds",
+      "xes",
+      "pds"
+    ]
+  ],
+  "tags": [
+    "mitre.t1055",
+    "mitre.t1566",
+    "mitre.t1071",
+    "mitre.t1204"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Bien Joshua Philip De Leon & Evelyn Valenzuela",
+  "team": "AMEA-IR",
+  "date": "2025/01/20",
+  "lastUpdate": "2025-08-14T05:00:05.000Z"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ded5579a-0479-4cb0-b814-c3b4f28c26d2",
+  "name": "HTTP OPTIONS Method",
+  "description": "Palo Alto Vulnerability detection - HTTP OPTIONS Method",
+  "filterSets": [
+    [
+      {
+        "id": "d3105e08-6ab7-4373-88fc-0e0d5ede6c7f",
+        "name": "HTTP OPTIONS Method",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Palo Alto Networks"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-07-31T10:41:34.000Z"
+}

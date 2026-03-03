@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "13315d13-f8f9-412f-9a9c-484ecf4a0510",
+  "name": "Suspicious Certificate Authentication Failures in Active Directory (on-premises)",
+  "description": "Suspicious certificate authentication failures in Active Directory (on-premises) were detected, which indicates possible attack attempts.",
+  "riskLevel": "medium",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "58bcbcc6-3c18-4630-9226-6e868c1df6a6",
+      "name": "Suspicious Certificate Authentication Failures in Active Directory (on-premises)",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3600,
+    "dedupSeconds": 3600
+  },
+  "requiredProducts": [
+    [
+      "opa"
+    ]
+  ],
+  "tags": [
+    "mitre.t1649",
+    "mitre.t1110.001",
+    "mitre.t1110"
+  ],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 1,
+  "globalModel": true,
+  "silent": false,
+  "author": "Hazel Kao",
+  "team": "Jaguar",
+  "date": "2025/11/13",
+  "lastUpdate": "2025-12-16T08:26:22.000Z"
+}

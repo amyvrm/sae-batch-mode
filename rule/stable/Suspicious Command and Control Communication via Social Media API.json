@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "69a605e8-9d28-11ef-b864-0242ac120002",
+  "name": "Suspicious Command and Control Communication via Social Media API",
+  "description": "Detects potential Command and Control (C2) communications leveraging common messaging platform APIs for remote command execution and data exfiltration.",
+  "filterSets": [
+    [
+      {
+        "id": "5f489626-9c86-11ef-b864-0242ac120002",
+        "name": "Potential Command and Control Communication via Social Media API",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "xes",
+      "sds"
+    ]
+  ],
+  "author": "Vib Chhabra",
+  "team": "Cloud One",
+  "date": "2024/11/07",
+  "lastUpdate": "2025-01-22T19:13:46.000Z"
+}

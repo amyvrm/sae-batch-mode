@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "id": "9bded8d1-2ffd-4ce0-bbc2-15b4d9995b5a",
+  "name": "Spear Phishing Email with Known Phishing Behaviors",
+  "description": "A suspicious mail exhibiting phishing behaviors was detected using known phishing patterns.",
+  "riskLevel": "low",
+  "scope": "user",
+  "rules": [
+    {
+      "id": "d195bc9e-0062-445d-a6df-a8d06186bfea",
+      "name": "Spear Phishing Email with Known Phishing Behaviors",
+      "score": 3
+    }
+  ],
+  "threshold": {
+    "targetScore": 3,
+    "withinSeconds": 3600,
+    "dedupSeconds": 0
+  },
+  "requiredProducts": [
+    [
+      "xms"
+    ]
+  ],
+  "tags": [
+    "mitre.t1566.002"
+  ],
+  "playbooks": [
+    {
+      "id": "bd6c9ef1-965d-4204-b9f2-d39003708f18",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DEFAULT"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "Peter Y Tseng",
+  "team": "Jaguar",
+  "date": "2022/01/04",
+  "lastUpdate": "2024-08-27T11:01:01.000Z"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "id": "dac67c6a-0f0f-4e26-86f7-c4077282d1c2",
+  "name": "Fortigate Unit Blocked A File Because It Contains A Virus (MIME)",
+  "description": "Fortinet detection - FortiGate unit blocked a file because it contains a virus (MIME)",
+  "riskLevel": "low",
+  "scope": "endpoint",
+  "rules": [
+    {
+      "id": "7b1b1e39-a539-4876-9322-b001490c8a66",
+      "name": "Fortigate Unit Blocked A File Because It Contains A Virus (MIME)",
+      "score": 1
+    }
+  ],
+  "threshold": {
+    "targetScore": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "tags": [],
+  "playbooks": [
+    {
+      "id": "a4c36882-115b-4296-a5e3-051fc303e0ca",
+      "name": "Default Playbook",
+      "provider": "WORKBENCH",
+      "type": "DETECTION"
+    },
+    {
+      "id": "f87e38bc-b0a9-4997-8b6a-d0762a7bcace",
+      "name": "Generic file/ip/url/email investigation",
+      "provider": "AIR",
+      "type": "AUTOMATED_RESPONSE"
+    }
+  ],
+  "visibleLevel": 51,
+  "globalModel": true,
+  "silent": true,
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2025-01-06T03:41:40.000Z"
+}

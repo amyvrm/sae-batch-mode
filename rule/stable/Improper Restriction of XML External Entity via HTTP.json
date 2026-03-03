@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "a57eb765-ca6d-4b9c-b209-cef5dde55f9b",
+  "name": "Improper Restriction of XML External Entity via HTTP",
+  "description": "An improper restriction of xml external entity for a certain product that results to an exploit via HTTP",
+  "filterSets": [
+    [
+      {
+        "id": "40b369db-55b5-5267-814b-3dcc9e1d062d",
+        "name": "CVE-2024-37397 Ivanti Epm Improper Restriction Of Xml External Entity Exploit HTTP (Response) - Inbound",
+        "highlight": true
+      }
+    ],
+    [
+      {
+        "id": "ef9066e1-35fc-5ff5-8245-2dd871129a91",
+        "name": "CVE-2024-37397 Ivanti Epm Improper Restriction Of Xml External Entity Exploit HTTP (Response) - Outbound",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 120,
+    "dedupSeconds": 120
+  },
+  "requiredProducts": [
+    [
+      "xns",
+      "pdi"
+    ]
+  ],
+  "author": "Salman Solaiman",
+  "team": "DDI",
+  "date": "2024/11/12",
+  "lastUpdate": "2024-12-02T08:48:54.000Z"
+}

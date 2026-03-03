@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "665c87e6-572c-4d95-a926-dd97eaafc0d1",
+  "name": "Botnet C&C Communication (Notice)",
+  "description": "Fortinet detection - Botnet C&C Communication (notice)",
+  "filterSets": [
+    [
+      {
+        "id": "c45234a5-3176-4104-9b61-abf1bf4fca7b",
+        "name": "Botnet C&C Communication (Notice)",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 3000,
+    "dedupSeconds": 3000
+  },
+  "requiredProducts": [
+    [
+      "tlc|Fortinet"
+    ]
+  ],
+  "author": "James Vargas",
+  "team": "DDI",
+  "date": "2024/12/04",
+  "lastUpdate": "2024-12-05T04:16:58.000Z"
+}

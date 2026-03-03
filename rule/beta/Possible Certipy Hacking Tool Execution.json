@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "id": "736bc8d8-b82b-4a40-aab9-286fe2403356",
+  "name": "Possible Certipy Hacking Tool Execution",
+  "description": "Detects the possible execution of Certipy, a tool for Active Directory Certificate Services enumeration and abuse based on PE metadata characteristics and common command line arguments.",
+  "filterSets": [
+    [
+      {
+        "id": "0373b4e6-8feb-4d60-8014-f9525025658e",
+        "name": "Possible Certipy Hacking Tool Execution",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "sao",
+      "xes",
+      "pds"
+    ]
+  ],
+  "author": "Gabriel Cardoso",
+  "team": "US-IR",
+  "date": "2025/07/08",
+  "lastUpdate": "2025-11-04T05:32:54.000Z"
+}

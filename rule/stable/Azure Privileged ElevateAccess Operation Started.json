@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "id": "8f9becfa-2ac7-45a1-9403-84e9e1e97912",
+  "name": "Azure Privileged ElevateAccess Operation Started",
+  "description": "Detects use of elevateAccess, which may indicate an attacker with Entra GA privileges escalating access to gain control over all Azure subscriptions.",
+  "filterSets": [
+    [
+      {
+        "id": "0cc191a7-f4d9-426a-bc50-c5973e0dc1c0",
+        "name": "Azure Privileged ElevateAccess Operation Started",
+        "highlight": true
+      }
+    ]
+  ],
+  "threshold": {
+    "targetOccurrence": 1,
+    "withinSeconds": 300,
+    "dedupSeconds": 300
+  },
+  "requiredProducts": [
+    [
+      "aml"
+    ]
+  ],
+  "author": "Arun Shaji & Dexter Esteves",
+  "team": "Cloud One",
+  "date": "2025/12/08",
+  "lastUpdate": "2025-12-10T08:42:59.000Z"
+}
